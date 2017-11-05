@@ -15,9 +15,31 @@ namespace IGN
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                url: "{controller}/{action}/{tagName}",
+                defaults: new { controller = "Home", action = "Index", tagName = UrlParameter.Optional }
             );
+
+
+            routes.MapRoute(
+                "Routingfa", // Route name
+                "{controller}/{action}/{CategoryName}/{NewsID}/{Title}",  // URL with parameters
+                defaults:  new { controller = "fa", action = "category" }
+                );  // Parameter defaults);
+
+            routes.MapRoute(
+               "Routingen", // Route name
+               "{controller}/{action}/{CategoryName}/{NewsID}/{Title}",  // URL with parameters
+               defaults: new { controller = "en", action = "category" }
+               );  // Parameter defaults);
+
+            routes.MapRoute(
+               "Routingen", // Route name
+               "{controller}/{action}/{CategoryName}/{NewsID}/{Title}",  // URL with parameters
+               defaults: new { controller = "ar", action = "category" }
+               );  // Parameter defaults);
+
+
+
         }
     }
 }

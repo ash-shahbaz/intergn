@@ -26,6 +26,30 @@ namespace IGN.Controllers
 
             return View();
         }
+
+        public ActionResult cat(string CategoryName,string NewsID,string Title)
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+        public ActionResult tags(string tagName)
+        {
+            ViewBag.Message = "Your contact page.";
+            return View();
+        }
+
+
+        public ActionResult source(string tagName)
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+
+
+
     }
 
 
