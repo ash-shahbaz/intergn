@@ -13,20 +13,6 @@ namespace IGN.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
         public ActionResult cat(string CategoryName,string NewsID,string Title)
         {
             ViewBag.Message = "Your contact page.";
@@ -48,6 +34,64 @@ namespace IGN.Controllers
         }
 
 
+        //public ActionResult Login()
+        //{
+           
+        //}
+
+        //public ActionResult Register()
+        //{
+
+        //}
+
+        public ActionResult MyProfile(string id)
+        {
+            
+            return View();
+        }
+
+        public ActionResult AboutUs(string id)
+        {
+            return View();
+        }
+
+        public ActionResult ContactUs(string id)
+        {
+            return View();
+        }
+
+        public ActionResult NewsResource(string id)
+        {
+            return View();
+        }
+        public ActionResult Setting(string id)
+        {
+            return View();
+        }
+        public ActionResult MyFriends(string id)
+        {
+            return View();
+        }
+
+
+        public ActionResult BackLinks(string id)
+        {
+            return View();
+        }
+
+        public ActionResult BackLinkAdd(string id)
+        {
+            return View();
+        }
+
+        public ActionResult PostSent(string id)
+        {
+            return View();
+        }
+        public ActionResult NewsFavorites(string id)
+        {
+            return View();
+        }
 
 
     }

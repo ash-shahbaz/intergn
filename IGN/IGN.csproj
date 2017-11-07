@@ -327,6 +327,39 @@
   <ItemGroup>
     <Content Include="Views\Fa\cat.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fa\AboutUs.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fa\ContactUs.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fa\NewsResource.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fa\tags.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fa\Setting.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fa\MyFriends.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fa\BackLinks.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fa\PostSent.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fa\BackLinkAdd.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fa\NewsFavorites.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fa\MyProfile.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
