@@ -156,12 +156,14 @@
     <Content Include="css\animate.min.css" />
     <Content Include="css\app.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\categories.css" />
     <Content Include="css\chartist.min.css" />
     <Content Include="css\flexslider.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\icomoon.css" />
     <Content Include="css\ie.css" />
     <Content Include="css\jquery-ui.css" />
+    <Content Include="css\pagination.css" />
     <Content Include="css\SideBarmenu.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\style.css" />
@@ -201,6 +203,7 @@
     <Content Include="js\jquery.timeago.js" />
     <Content Include="js\jquery.validate.min.js" />
     <Content Include="js\CircleUserJS.js" />
+    <Content Include="js\pagination.js" />
     <Content Include="js\PIE_IE678.js" />
     <Content Include="js\superfish.js" />
     <Content Include="js\tweetable.jquery.js" />

@@ -33,7 +33,7 @@ namespace IGN
                );  // Parameter defaults);
 
             routes.MapRoute(
-               "Routingen", // Route name
+               "Routingar", // Route name
                "{controller}/{action}/{CategoryName}/{NewsID}/{Title}",  // URL with parameters
                defaults: new { controller = "ar", action = "category" }
                );  // Parameter defaults);

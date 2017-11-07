@@ -4,5 +4,2363 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>cat</h2>
+@section Head
+{
 
+<link href="~/css/pagination.css" rel="stylesheet" />
+
+<link href="~/css/categories.css" rel="stylesheet" />
+
+    <link href="~/css/chartist.min.css" rel="stylesheet" />
+    <link href="~/css/animate.min.css" rel="stylesheet" />
+
+
+}
+
+
+
+<div class="row">
+    <div class="col-md-2">
+
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="col-md-10">
+
+        <div class="widget widget-news card">
+
+            <h2 class="widget-title"><span class="icon-list pull-left"></span>پربیننده ترین اخبار ورزشی در 24 ساعت گذشته</h2>
+            <div class="widget-content">
+                <ul class="list-unstyled">
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">               
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+            </div>
+            <!-- widget content -->
+        </div>
+
+
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-2">
+
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="col-md-10">
+
+        <div class="widget widget-news card">
+
+            <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار ورزشی</h2>
+            <div class="widget-content">
+                <ul class="list-unstyled">
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item clearfix">
+
+                            <div class="row">
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-up Like" aria-hidden="true"></i>
+                                            <span class="font-size-12">5+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="float-left cursor-pointer">
+                                            <i class="fa fa-thumbs-o-down UnLike" aria-hidden="true"></i>
+                                            <span class="font-size-12">5-</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-11">12 ساعت قبل</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-1 col-xs-1 col-sm-1 no-padding">
+                                    <ul class="CategoriesNews">
+                                        <li class="font-size-12">مشرق نیوز</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8  no-padding">
+                                    <div>
+                                        <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                        <h1 class="titleNews">
+                                            <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                        </h1>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+            </div>
+            <!-- widget content -->
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-2">
+
+        <div class="row">
+            <div class="col-md-12">
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="col-md-10">
+
+        <div class="align-center">
+
+            <div class="example">
+                <div>
+                    <div id="altLists"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+@section Script
+    {
+
+
+    <script src="~/js/jquery.cxslide.min.js"></script>
+    <script src="~/js/chartist.min.js"></script>
+    <script src="~/js/superfish.js"></script>
+    <script src="~/js/jquery.carousel-6.2.1.js"></script>
+    <script src="~/js/tweetable.jquery.js"></script>
+    <script src="~/js/jquery.timeago.js"></script>
+    <script src="~/js/jquery.form.js"></script>
+    <script src="~/js/jquery.validate.min.js"></script>
+    <script src="~/js/imagesloaded.js"></script>
+    <script src="~/js/custom.js"></script>
+
+
+<script src="~/js/pagination.js"></script>
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#altLists").asPaginator(200, {
+            currentPage: 8,
+            visibleNum: {
+                0: 2,
+                480: 3,
+                960: 5
+            },
+            tpl: function () {
+                return '<ul>{{first}}{{prev}}{{altLists}}{{next}}{{last}}</ul>';
+            },
+            components: {
+                first: true,
+                prev: true,
+                next: true,
+                last: true,
+                altLists: true
+            },
+            onChange: function (page) {
+                var url = '' + page;
+                console.log('ajax request')
+                $.ajax({
+                    url: url,
+                    dataType: 'json',
+                    success: function (data) {
+                    }
+                })
+            }
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+    $(document).ready(function () {
+        $('#cxslide_x').cxSlide({
+            plus: true,
+            minus: true
+        });
+
+        new Chartist.Line('.ct-chart', {
+            labels: ['1', '5', '10', '15', '20', '25', '30'],
+            series: [
+                [0, 20, 22, 0, 100, 23, 50]
+            ]
+        }, {
+                width: 350,
+                height: 250
+            });
+    });
+
+
+
+    </script>
+
+
+}
