@@ -1191,7 +1191,7 @@ ul.page-numbers li:hover {
             #main-menu > li > a:hover {
                 border-color: transparent;
                 border-radius: 0;
-                color: #fff !important;
+                color: #FF9800 !important;
             }
 
     #main-menu .current-item-menu > a {

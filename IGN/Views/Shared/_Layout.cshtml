@@ -4,6 +4,14 @@
     <meta charset="utf-8" />
     <link href="~/css/app.css" rel="stylesheet" />
     <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+
+    @*-L0gin-*@
+    <link href="~/css/material.min.css" rel="stylesheet" />
+    <link href="~/css/styleLogin.css" rel="stylesheet" />
+    <link href="~/css/main-color-login.css" rel="stylesheet" />
+
+
+
     <link href="~/css/SideBarmenu.css" rel="stylesheet" />
     <link href="~/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/css/jquery-ui.css" rel="stylesheet" />
@@ -12,6 +20,12 @@
     <link rel="stylesheet" href="~/css/superfish.css" />
     <link rel="stylesheet" href="~/css/style.css" />
     <link rel="stylesheet" href="~/css/responsive.css" />
+
+
+
+
+
+
 
 
     @RenderSection("Head",true)
@@ -42,6 +56,9 @@
                         </li>
                         <li>
                             <a href="/Ar">العربیه</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-toggle="modal" data-target="#loginFormModal"><i class="login-icon fa fa-user"></i>ورود</a>
                         </li>
                     </ul>
                     <div id="mobile-menu">
@@ -472,7 +489,204 @@
 
 
 
+    <!-- Login Form Start -->
+    <div class="modal fade" id="loginFormModal" tabindex="-1" role="dialog" aria-labelledby="loginForm">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="loginForm">
+                    <div class="mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <div class="modal--logo">
+                                <img src="img/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <form action="#" method="post" id="loginForm">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" name="loginUsername" id="loginUsername">
+                                    <label class="mdl-textfield__label" for="loginUsername">Username</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="password" name="loginPassword" id="loginPassword">
+                                    <label class="mdl-textfield__label" for="loginPassword">Password</label>
+                                </div>
 
+                                <button type="submit" class="login-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">ورود</button>
+                            </form>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border clearfix">
+                            <a href="#" class="pull-left mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#forgotFormModal" data-dismiss="modal">
+                                رمز عبور خود را فراموش کرده اید؟
+                            </a>
+                            <a href="#" class="pull-right mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#signupFormModal" data-dismiss="modal">
+                                ساخت اکانت کاربری
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login Form End -->
+    <!-- Signup Form Start -->
+    <div class="modal fade" id="signupFormModal" tabindex="-1" role="dialog" aria-labelledby="signupFormModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="signupForm">
+                    <div class="mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <div class="modal--logo">
+                                <img src="img/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <form action="#" method="post" id="signupForm">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" name="singupName" id="singupName">
+                                    <label class="mdl-textfield__label" for="singupName">Full Name</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" name="singupUsername" id="singupUsername">
+                                    <label class="mdl-textfield__label" for="singupUsername">Username</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" name="singupEmail" id="singupEmail">
+                                    <label class="mdl-textfield__label" for="singupEmail">E-mail Address</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="password" name="singupPassword" id="singupPassword">
+                                    <label class="mdl-textfield__label" for="singupPassword">Password</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="password" name="singupPasswordAgain" id="singupPasswordAgain">
+                                    <label class="mdl-textfield__label" for="singupPasswordAgain">Re-Type Password</label>
+                                </div>
+
+                                <button type="submit" class="singup-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Singup</button>
+                            </form>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border clearfix">
+                            <p class="pull-left">Already Have An Account?</p>
+                            <a href="#" class="pull-right mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#loginFormModal" data-dismiss="modal">
+                                Login
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Signup Form End -->
+    <!-- Forgot Form Start -->
+    <div class="modal fade" id="forgotFormModal" tabindex="-1" role="dialog" aria-labelledby="signupFormModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="forgotForm">
+                    <div class="mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <div class="modal--logo">
+                                <img src="img/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <form action="#" method="post" id="forgotForm">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" name="forgotEmail" id="forgotEmail">
+                                    <label class="mdl-textfield__label" for="forgotEmail">E-mail Address</label>
+                                </div>
+
+                                <button type="submit" class="forgot-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Recover</button>
+                            </form>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border clearfix">
+                            <p class="pull-left">No Account?</p>
+                            <a href="#" class="pull-right mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#signupFormModal" data-dismiss="modal">
+                                Create An Account
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Forgot Form End -->
+    <!-- Subscribe Form Start -->
+    <div class="modal fade" id="subscribeFormModal" tabindex="-1" role="dialog" aria-labelledby="subscribeFormModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="subscribeForm">
+                    <div class="mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <div class="modal--logo">
+                                <img src="img/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <form action="#" method="post" id="subscribeForm">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" name="subscribeEmail" id="subscribeEmail">
+                                    <label class="mdl-textfield__label" for="subscribeEmail">E-mail Address</label>
+                                </div>
+
+                                <button type="submit" class="subscribe-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Subscribe Form End -->
+    <!-- Contact Form Start -->
+    <div class="modal fade" id="contactFormModal" tabindex="-1" role="dialog" aria-labelledby="contactFormModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="contactForm">
+                    <div class="mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <div class="modal--logo">
+                                <img src="img/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <form action="sendmail.php" method="post" id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mdl-textfield mdl-js-textfield">
+                                            <input class="mdl-textfield__input" type="text" name="contactName" id="contactName">
+                                            <label class="mdl-textfield__label" for="contactName">Full Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mdl-textfield mdl-js-textfield">
+                                            <input class="mdl-textfield__input" type="text" name="contactEmail" id="contactEmail">
+                                            <label class="mdl-textfield__label" for="contactEmail">E-mail Address</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" name="contactSubject" id="contactSubject">
+                                    <label class="mdl-textfield__label" for="contactSubject">Subject</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <textarea class="mdl-textfield__input" name="contactMessage" id="contactMessage"></textarea>
+                                    <label class="mdl-textfield__label" for="contactMessage">Message</label>
+                                </div>
+
+                                <button type="submit" class="contact-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Form End -->
 
 
    
@@ -484,6 +698,15 @@
 
 <script src="~/js/jquery.min.js"></script>
 <script src="~/js/jquery-ui.min.js"></script>
+
+
+
+<script src="~/js/bootstrap.min.js"></script>
+<script src="~/js/material.min.js"></script>
+<script src="~/js/jquery.validate.min.js"></script>
+<script src="~/js/mainlogin.js"></script>
+
+
 
 
 
