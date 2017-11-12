@@ -163,10 +163,13 @@
     <Content Include="css\icomoon.css" />
     <Content Include="css\ie.css" />
     <Content Include="css\jquery-ui.css" />
+    <Content Include="css\main-color-login.css" />
+    <Content Include="css\material.min.css" />
     <Content Include="css\pagination.css" />
     <Content Include="css\SideBarmenu.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\style.css" />
+    <Content Include="css\styleLogin.css" />
     <Content Include="css\superfish.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -203,6 +206,8 @@
     <Content Include="js\jquery.timeago.js" />
     <Content Include="js\jquery.validate.min.js" />
     <Content Include="js\CircleUserJS.js" />
+    <Content Include="js\mainlogin.js" />
+    <Content Include="js\material.min.js" />
     <Content Include="js\pagination.js" />
     <Content Include="js\PIE_IE678.js" />
     <Content Include="js\superfish.js" />
