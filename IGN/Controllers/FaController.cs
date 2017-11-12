@@ -19,6 +19,15 @@ namespace IGN.Controllers
 
             return View();
         }
+
+        public ActionResult Cat(string CategoryName)
+        {
+
+            return View();
+        }
+
+
+
         public ActionResult tags(string tagName)
         {
             ViewBag.Message = "Your contact page.";

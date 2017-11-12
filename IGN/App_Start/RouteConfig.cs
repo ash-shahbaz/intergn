@@ -23,7 +23,7 @@ namespace IGN
             routes.MapRoute(
                 "Routingfa", // Route name
                 "{controller}/{action}/{CategoryName}/{NewsID}/{Title}",  // URL with parameters
-                defaults:  new { controller = "fa", action = "category" }
+                defaults:  new { controller = "fa", action = "cat" }
                 );  // Parameter defaults);
 
             routes.MapRoute(
