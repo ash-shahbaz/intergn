@@ -11,7 +11,7 @@
 {
 
 
-<link href="~/css/chartist.min.css" rel="stylesheet" />
+
 <link href="~/css/animate.min.css" rel="stylesheet" />
 
 
@@ -540,21 +540,6 @@
         <div class="col-md-4">
 
 
-
-
-            <div class="wrap">
-                <div id="cxslide_x" class="cxslide_x">
-                    <div class="box">
-                        <ul class="list">
-                            <li><a href="#1"><img src="img/_pic/slide_1.jpg" class="slider-size"></a><p>111</p></li>
-                            <li><a href="#2"><img src="img/_pic/slide_2.jpg" class="slider-size"></a><p>222</p></li>
-                            <li><a href="#3"><img src="img/_pic/slide_3.jpg" class="slider-size"></a><p>333</p></li>
-                            <li><a href="#4"><img src="img/_pic/slide_4.jpg" class="slider-size"></a><p>444</p></li>
-                            <li><a href="#5"><img src="img/_pic/slide_5.jpg" class="slider-size"></a><p>555</p></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
 
 
 
@@ -1167,7 +1152,8 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="ct-chart "></div>
+                      
+
                         </div>
                     </div>
 
@@ -5984,8 +5970,6 @@
     {
 
 
-<script src="~/js/jquery.cxslide.min.js"></script>
-<script src="~/js/chartist.min.js"></script>
 <script src="~/js/superfish.js"></script>
 <script src="~/js/jquery.carousel-6.2.1.js"></script>
 <script src="~/js/tweetable.jquery.js"></script>
@@ -5998,24 +5982,7 @@
 <script type="text/javascript">
 
 
-
-    $(document).ready(function () {
-        $('#cxslide_x').cxSlide({
-            plus: true,
-            minus: true
-        });
-
-        new Chartist.Line('.ct-chart', {
-            labels: ['1', '5', '10', '15', '20', '25', '30'],
-            series: [
-                [0, 20, 22, 0, 100, 23, 50]
-            ]
-        }, {
-                width: 350,
-                height: 250
-            });
-    });
-
+    
 
 
 </script>
