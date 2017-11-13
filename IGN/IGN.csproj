@@ -168,6 +168,7 @@
     <Content Include="css\pagination.css" />
     <Content Include="css\SideBarmenu.css" />
     <Content Include="css\responsive.css" />
+    <Content Include="css\SimpleChart.css" />
     <Content Include="css\style.css" />
     <Content Include="css\styleLogin.css" />
     <Content Include="css\superfish.css" />
@@ -210,6 +211,7 @@
     <Content Include="js\material.min.js" />
     <Content Include="js\pagination.js" />
     <Content Include="js\PIE_IE678.js" />
+    <Content Include="js\SimpleChart.js" />
     <Content Include="js\superfish.js" />
     <Content Include="js\tweetable.jquery.js" />
     <Content Include="placeholders\audio\adg3com_chuckedknuckles.mp3" />
