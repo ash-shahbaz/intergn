@@ -16,7 +16,8 @@ namespace IGN.Controllers
             return View();
         }
 
-        public ActionResult CaNews(string CategoryName,string NewsID,string Title)
+       
+        public ActionResult News(string CategoryName,string NewsID,string Title)
         {
             ViewBag.Message = "Your contact page.";
 
@@ -30,7 +31,11 @@ namespace IGN.Controllers
             ViewBag.CategoryID = name;
             return View();
         }
+        public ActionResult Search(string name)
+        {
 
+            return View();
+        }
 
 
         public ActionResult tags(string tagName)
@@ -46,6 +51,9 @@ namespace IGN.Controllers
 
             return View();
         }
+
+
+
 
 
         //public ActionResult Login()

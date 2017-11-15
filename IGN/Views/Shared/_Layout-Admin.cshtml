@@ -1,0 +1,714 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link href="~/css/app.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+
+    @*-L0gin-*@
+    <link href="~/css/material.min.css" rel="stylesheet" />
+    <link href="~/css/styleLogin.css" rel="stylesheet" />
+    <link href="~/css/main-color-login.css" rel="stylesheet" />
+
+
+
+    <link href="~/css/SideBarmenu.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/jquery-ui.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/css/icomoon.css" />
+    <link rel="stylesheet" href="~/css/superfish.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/responsive.css" />
+
+
+
+
+
+
+
+
+    @RenderSection("Head",true)
+
+    <title>Zoombi</title>
+
+
+
+
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body class="kp-home">
+    <header id="header-page">
+        <div class="top-header">
+            <div class="container">
+                <div id="logo">
+                    <a href=""><img src="~/images/logo.png" alt="logo" /></a>
+                </div>
+                <nav class="pull-right">
+                    <ul class="sf-menu" id="main-menu">
+                        <li class="current-item-menu">
+                            <a href="/Fa">فارسی</a>
+                        </li>
+                        <li>
+                            <a href="/En">English</a>
+                        </li>
+                        <li>
+                            <a href="/Ar">العربیه</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-toggle="modal" data-target="#loginFormModal"><i class="login-icon fa fa-user"></i>ورود</a>
+                        </li>
+                    </ul>
+                    <div id="mobile-menu">
+                        <span>Menu</span>
+                        <ul id="toggle-view-menu">
+                            <li class="clearfix">
+                                <h3><a href="#">Home</a></h3>
+                                <span>+</span>
+                                <div class="clearfix"></div>
+                                <div class="menu-panel clearfix">
+                                    <ul>
+                                        <li><a href="index.html">Index style 1</a></li>
+                                        <li><a href="index-2.html">Index style 2</a></li>
+                                        <li><a href="index-3.html">Index style 3</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <h3><a href="#">Pages</a></h3>
+                                <span>+</span>
+                                <div class="clearfix"></div>
+                                <div class="menu-panel clearfix">
+                                    <ul>
+                                        <li><a href="about.html">About page</a></li>
+                                        <li><a href="elements.html">Elements page</a></li>
+                                        <li><a href="404.html">404 page</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <h3><a href="#">Blog</a></h3>
+                                <span>+</span>
+                                <div class="clearfix"></div>
+                                <div class="menu-panel clearfix">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Blog style 1</a>
+                                            <ul>
+                                                <li><a href="blog-1-left-sidebar.html">Width left sidebar</a></li>
+                                                <li><a href="blog-1-right-sidebar.html">Width right sidebar</a></li>
+                                                <li><a href="blog-1-two-sidebar.html">Width two sidebar</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="blog-2.html">Blog style 2</a></li>
+                                        <li>
+                                            <a href="#">Blog style 3</a>
+                                            <ul>
+                                                <li><a href="blog-3-one-sidebar.html">Width one sidebar</a></li>
+                                                <li><a href="blog-3-two-sidebar.html">Width two sidebar</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">Blog single</a>
+                                            <ul>
+                                                <li><a href="single-1.html">Single style 1</a></li>
+                                                <li><a href="single-2.html">Single style 2</a></li>
+                                                <li><a href="single-3.html">Single style 3</a></li>
+                                                <li><a href="single-4.html">Single style 4</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="clearfix"><h3><a href="contact.html">Contact</a></h3></li>
+                        </ul><!--toggle-view-menu-->
+                    </div><!--mobile-menu-->
+                </nav>
+                <div class="clearfix"></div>
+            </div>
+            <!-- container -->
+        </div>
+        <!-- top-header -->
+        <div class="bottom-header">
+            <div class="container">
+                <div class="top-news pull-left">
+                    <span>آخرین اخبار</span>
+                    <div class="list_carousel">
+                        <ul class="carousel-1">
+                            <li><a href="#">مهاجم جدید استقلال از راه رسید</a></li>
+                            <li><a href="#">طراحی سایت بهینه ساز سبز</a></li>
+                            <li><a href="#">حکم دایی برای بازیکن پرسپولیس</a></li>
+                            <li><a href="#">طراحی سایت بهینه ساز سبز</a></li>
+                            <li><a href="#">طراحی سایت بهینه ساز سبز</a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- list_carousel -->
+
+                </div>
+                <!-- top news -->
+                <div class="search-box pull-right">
+                    <form action="/" method="post" />
+                    <div class="form-group">
+                        <input type="text" name="search-text" class="form-control" onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="جستجو..." />
+                    </div>
+                    <button type="submit"><span class="icon-search"></span></button>
+                    </form>
+                </div>
+            </div>
+            <!-- container -->
+        </div>
+        <!-- bottom-header -->
+    </header>
+    <!-- header-page -->
+    <div id="content" class="container clearfix">
+
+        <nav id="RightCol" class="Right-menu main-menu">
+            <div>
+                <a class="logo" href="http://startific.com">
+                </a>
+            </div>
+            <div class="scrollbar" id="style-1">
+
+                <ul>
+                    <li>
+                        <a href="http://startific.com">
+                            <i class="fa fa-home fa-lg"></i>
+                            <span class="nav-text">خانه</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://startific.com">
+                            <i class="fa fa-user fa-lg"></i>
+                            <span class="nav-text">ورود</span>
+                        </a>
+                    </li>
+                    <li class="darkerlishadow">
+                        <a href="http://startific.com">
+                            <i class="fa fa-user-circle-o fa-lg"></i>
+                            <span class="nav-text">صفحه من</span>
+                        </a>
+                    </li>
+                    <li class="darkerlishadowdown">
+                        <a href="http://startific.com">
+                            <i class="fa fa-heart fa-lg"></i>
+                            <span class="nav-text">علاقه مندی ها</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="http://startific.com">
+                            <i class="fa fa-link fa-lg"></i>
+                            <span class="nav-text">ثبت بک لینک</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://startific.com">
+                            <i class="fa fa-file-text fa-lg"></i>
+                            <span class="nav-text">ارسال پست</span>
+                        </a>
+                    </li>
+
+                    <li class="darkerlishadow">
+                        <a href="http://startific.com">
+                            <i class="fa fa-share-alt fa-lg"></i>
+                            <span class="nav-text">اشتراک گذاری</span>
+                        </a>
+                    </li>
+                    <li class="darkerlishadowdown">
+
+                        <a href="http://startific.com">
+                            <i class="fa fa-bullhorn fa-lg"></i>
+                            <span class="nav-text">اعلانات</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://startific.com">
+                            <i class="fa fa-users fa-lg"></i>
+                            <span class="nav-text">دوستان من</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://startific.com">
+                            <i class="fa fa-cog fa-lg"></i>
+                            <span class="nav-text">شخصی سازی</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <nav id="leftCol" class="main-menu">
+            <div>
+                <a class="logo" href="http://startific.com">
+                </a>
+            </div>
+
+            <div class="scrollbar" id="style-1">
+
+                <ul>
+                    <li>
+                        <a href="/fa/Cat/ورزشی/">
+                            <i class="fa fa-futbol-o fa-lg"></i>
+                            <span class="nav-text">ورزشی</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/fa/Cat/سیاسی/">
+                            <i class="fa fa-bomb fa-lg"></i>
+                            <span class="nav-text">سیاسی</span>
+                        </a>
+                    </li>
+                    <li class="darkerlishadow">
+                        <a href="/fa/Cat/حوادث/">
+                            <i class="fa fa-ambulance fa-lg"></i>
+                            <span class="nav-text">حوادث</span>
+                        </a>
+                    </li>
+                    <li class=" darkerlishadowdown">
+                        <a href="/fa/Cat/علمی پزشکی/">
+                            <i class="fa fa-medkit fa-lg"></i>
+                            <span class="nav-text">علمی پزشکی</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/fa/Cat/استخدام/">
+                            <i class="fa fa-address-card-o fa-lg"></i>
+                            <span class="nav-text">استخدام</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/fa/Cat/اقتصادی/">
+                            <i class="fa fa-money fa-lg"></i>
+                            <span class="nav-text">اقتصادی</span>
+                        </a>
+                    </li>
+                    <li class="darkerlishadow">
+                        <a href="/fa/Cat/فناوری/">
+                            <i class="fa fa-desktop fa-lg"></i>
+                            <span class="nav-text">فناوری</span>
+                        </a>
+                    </li>
+                    <li class="darkerlishadowdown">
+
+                        <a href="/fa/Cat/فرهنگ و هنر/">
+                            <i class="fa fa-book fa-lg"></i>
+                            <span class="nav-text">فرهنگ و هنر</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/fa/Cat/اجتماعی/">
+                            <i class="fa fa-puzzle-piece fa-lg"></i>
+                            <span class="nav-text">اجتماعی</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/fa/Cat/بین المللی/">
+                            <i class="fa fa-globe fa-lg"></i>
+                            <span class="nav-text">بین المللی</span>
+
+                        </a>
+                    </li>
+                    <li class="darkerlishadow">
+                        <a href="/fa/Cat/گوناگون/">
+                            <i class="fa fa-outdent fa-lg"></i>
+                            <span class="nav-text">گوناگون</span>
+
+                        </a>
+                    </li>
+                    <li class="darkerlishadowdown">
+                        <a href="/fa/Cat/تصویری/">
+                            <i class="fa fa-picture-o fa-lg"></i>
+                            <span class="nav-text">تصویری</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/fa/Cat/سینمایی/">
+                            <i class="fa fa-film fa-lg"></i>
+                            <span class="nav-text">سینمایی</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/fa/Cat/گردشگری/">
+                            <i class="fa fa-plane fa-lg"></i>
+                            <span class="nav-text">گردشگری</span>
+
+                        </a>
+                    </li>
+                    <li class="darkerlishadow">
+                        <a href="/fa/Cat/خودرو/">
+                            <i class="fa fa-car fa-lg"></i>
+                            <span class="nav-text">خودرو</span>
+
+                        </a>
+                    </li>
+                    <li class="darkerlishadowdown">
+                        <a href="/fa/Cat/دانلود/">
+                            <i class="fa fa-download fa-lg"></i>
+                            <span class="nav-text">دانلود</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/fa/Cat/اتاق طنز/">
+                            <i class="fa fa-smile-o fa-lg"></i>
+                            <span class="nav-text">اتاق طنز</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/fa/Cat/آشپزی/">
+                            <i class="fa fa-cutlery fa-lg"></i>
+                            <span class="nav-text">آشپزی</span>
+
+                        </a>
+                    </li>
+                </ul>
+
+                </div>
+
+        </nav>
+
+
+
+
+
+
+
+
+        @RenderBody()
+
+
+
+
+
+
+
+       
+
+    </div>
+    <!-- container -->
+    <div id="bottom-sidebar">
+        <div class="container clearfix">
+            <div class="row">
+                <div class="col-md-3">
+
+                    <a href="#"><img src="~/images/logo.png" alt="" /></a>
+                    <div class="widget widget-text">
+                        <p>وب سایت IGreenNews با هدف فزونی بخشی و سهولت دستیابی به اخبار توسط کارشناسان حرفه ای تاسیس گردیده است.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="widget widget_categories">
+                        <h2 class="widget-title"></h2>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">منابع خبری</a>
+                            </li>
+                            <li>
+                                <a href="#">موضوعات خبری</a>
+                            </li>
+                            <li>
+                                <a href="#">آخرین اخبار در سایت شما</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="widget widget_pages">
+                        <h2 class="widget-title"></h2>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">خدمات سئو</a>
+                            </li>
+                            <li>
+                                <a href="#">درباره ما</a>
+                            </li>
+                            <li>
+                                <a href="#">تماس با ما</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="widget widget-contact">
+                        <h2 class="widget-title">راه های ارتباطی</h2>
+                        <div class="widget-content">
+                            <ul class="list-unstyled">
+                                <li class="clearfix"><span class="icon-location pull-left"></span>تهران، میدان ونک</li>
+                                <li class="clearfix"><span class="icon-phone pull-left"></span>+98(021)77166964</li>
+                                <li class="clearfix"><span class="icon-mail pull-left"></span><a href="mailto:info@igreennews.com">info@igreennews.com</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- container -->
+    </div>
+    <!-- bottom-sidebar -->
+    <footer id="page-footer">
+        <div class="container">
+            <div class="">
+                <div class="copy pull-left">
+                    <p><span>تمامی حقوق این وبسایت متعلق به شرکت <a href="http://igreennews.com/">IGN</a> میباشد</span></p>
+                </div>
+                <div class="soc_icons pull-right">
+                    <ul class="list-unstyled text-center">
+                        <li><a href="http://instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="http://telegram.me/"><i class="fa fa-telegram"></i></a></li>
+                        <li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://plus.google.com/"><i class="fa fa-google"></i></a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </footer>
+    <!-- page footer -->
+
+    <span class="back-to-top icon-arrow-up"></span>
+
+
+
+
+
+
+
+
+
+    <!-- Login Form Start -->
+    <div class="modal fade" id="loginFormModal" tabindex="-1" role="dialog" aria-labelledby="loginForm">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="loginForm">
+                    <div class="mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <div class="modal--logo">
+                                <img src="img/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <form action="#" method="post" id="loginForm">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" name="loginUsername" id="loginUsername">
+                                    <label class="mdl-textfield__label" for="loginUsername">Username</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="password" name="loginPassword" id="loginPassword">
+                                    <label class="mdl-textfield__label" for="loginPassword">Password</label>
+                                </div>
+
+                                <button type="submit" class="login-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">ورود</button>
+                            </form>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border clearfix">
+                            <a href="#" class="pull-left mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#forgotFormModal" data-dismiss="modal">
+                                رمز عبور خود را فراموش کرده اید؟
+                            </a>
+                            <a href="#" class="pull-right mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#signupFormModal" data-dismiss="modal">
+                                ساخت اکانت کاربری
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login Form End -->
+    <!-- Signup Form Start -->
+    <div class="modal fade" id="signupFormModal" tabindex="-1" role="dialog" aria-labelledby="signupFormModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="signupForm">
+                    <div class="mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <div class="modal--logo">
+                                <img src="img/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <form action="#" method="post" id="signupForm">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" name="singupName" id="singupName">
+                                    <label class="mdl-textfield__label" for="singupName">Full Name</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" name="singupUsername" id="singupUsername">
+                                    <label class="mdl-textfield__label" for="singupUsername">Username</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" name="singupEmail" id="singupEmail">
+                                    <label class="mdl-textfield__label" for="singupEmail">E-mail Address</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="password" name="singupPassword" id="singupPassword">
+                                    <label class="mdl-textfield__label" for="singupPassword">Password</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="password" name="singupPasswordAgain" id="singupPasswordAgain">
+                                    <label class="mdl-textfield__label" for="singupPasswordAgain">Re-Type Password</label>
+                                </div>
+
+                                <button type="submit" class="singup-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Singup</button>
+                            </form>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border clearfix">
+                            <p class="pull-left">Already Have An Account?</p>
+                            <a href="#" class="pull-right mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#loginFormModal" data-dismiss="modal">
+                                Login
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Signup Form End -->
+    <!-- Forgot Form Start -->
+    <div class="modal fade" id="forgotFormModal" tabindex="-1" role="dialog" aria-labelledby="signupFormModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="forgotForm">
+                    <div class="mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <div class="modal--logo">
+                                <img src="img/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <form action="#" method="post" id="forgotForm">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" name="forgotEmail" id="forgotEmail">
+                                    <label class="mdl-textfield__label" for="forgotEmail">E-mail Address</label>
+                                </div>
+
+                                <button type="submit" class="forgot-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Recover</button>
+                            </form>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border clearfix">
+                            <p class="pull-left">No Account?</p>
+                            <a href="#" class="pull-right mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#signupFormModal" data-dismiss="modal">
+                                Create An Account
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Forgot Form End -->
+    <!-- Subscribe Form Start -->
+    <div class="modal fade" id="subscribeFormModal" tabindex="-1" role="dialog" aria-labelledby="subscribeFormModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="subscribeForm">
+                    <div class="mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <div class="modal--logo">
+                                <img src="img/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <form action="#" method="post" id="subscribeForm">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" name="subscribeEmail" id="subscribeEmail">
+                                    <label class="mdl-textfield__label" for="subscribeEmail">E-mail Address</label>
+                                </div>
+
+                                <button type="submit" class="subscribe-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Subscribe Form End -->
+    <!-- Contact Form Start -->
+    <div class="modal fade" id="contactFormModal" tabindex="-1" role="dialog" aria-labelledby="contactFormModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="contactForm">
+                    <div class="mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <div class="modal--logo">
+                                <img src="img/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <form action="sendmail.php" method="post" id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mdl-textfield mdl-js-textfield">
+                                            <input class="mdl-textfield__input" type="text" name="contactName" id="contactName">
+                                            <label class="mdl-textfield__label" for="contactName">Full Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mdl-textfield mdl-js-textfield">
+                                            <input class="mdl-textfield__input" type="text" name="contactEmail" id="contactEmail">
+                                            <label class="mdl-textfield__label" for="contactEmail">E-mail Address</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" name="contactSubject" id="contactSubject">
+                                    <label class="mdl-textfield__label" for="contactSubject">Subject</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <textarea class="mdl-textfield__input" name="contactMessage" id="contactMessage"></textarea>
+                                    <label class="mdl-textfield__label" for="contactMessage">Message</label>
+                                </div>
+
+                                <button type="submit" class="contact-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Form End -->
+
+
+   
+
+</body>
+</html>
+
+
+
+<script src="~/js/jquery.min.js"></script>
+<script src="~/js/jquery-ui.min.js"></script>
+
+
+
+<script src="~/js/bootstrap.min.js"></script>
+<script src="~/js/material.min.js"></script>
+<script src="~/js/jquery.validate.min.js"></script>
+<script src="~/js/mainlogin.js"></script>
+
+
+
+
+
+@RenderSection("Script", true)
+

@@ -141,6 +141,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminPanelController.cs" />
     <Compile Include="Controllers\ArController.cs" />
     <Compile Include="Controllers\EnController.cs" />
     <Compile Include="Controllers\FaController.cs" />
@@ -358,6 +359,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Fa\Cat.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fa\News.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout-Admin.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AdminPanel\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Fa\Search.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
