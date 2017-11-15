@@ -42,14 +42,14 @@ DECLARE @LoopCounter INT = 1, @MaxEmployeeId INT = 18 ,
  
 WHILE(@LoopCounter <= @MaxEmployeeId)
 BEGIN
- 	select top 15 *,(select CategoryID from tblCategories c where c.CategoryID = @LoopCounter )as CID,(select CategoryName from tblCategories c where c.CategoryID = @LoopCounter )as CName from tblNews n  where n.RssID in ( select RssID from tblRss where CategoryID = @LoopCounter ) 
-	order by n.PublishDate desc
+
+	exec GetTopNewsByCategoryName 1,@LoopCounter
 
    SET @LoopCounter  = @LoopCounter  + 1        
 END
 
 
-
+--truncate table TempTopCategoryNews
 
 
 
