@@ -28,7 +28,7 @@
 
 
 
-    @RenderSection("Head",true)
+    @RenderSection("Head", true)
 
     <title>Zoombi</title>
 
@@ -58,7 +58,7 @@
                             <a href="/Ar">العربیه</a>
                         </li>
                         <li>
-                            <a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-toggle="modal" data-target="#loginFormModal"><i class="login-icon fa fa-user"></i>ورود</a>
+                            <a id="LoginInfo" href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-toggle="modal" data-target="#loginFormModal"><i class="login-icon fa fa-user"></i>ورود</a>
                         </li>
                     </ul>
                     <div id="mobile-menu">
@@ -374,7 +374,7 @@
                     </li>
                 </ul>
 
-                </div>
+            </div>
 
         </nav>
 
@@ -393,7 +393,7 @@
 
 
 
-       
+
 
     </div>
     <!-- container -->
@@ -502,18 +502,18 @@
                             </div>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            <form action="#" method="post" id="loginForm">
-                                <div class="mdl-textfield mdl-js-textfield">
-                                    <input class="mdl-textfield__input" type="text" name="loginUsername" id="loginUsername">
-                                    <label class="mdl-textfield__label" for="loginUsername">Username</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield">
-                                    <input class="mdl-textfield__input" type="password" name="loginPassword" id="loginPassword">
-                                    <label class="mdl-textfield__label" for="loginPassword">Password</label>
-                                </div>
 
-                                <button type="submit" class="login-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">ورود</button>
-                            </form>
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <input class="mdl-textfield__input" type="text" name="loginUsername" id="loginUsername">
+                                <label class="mdl-textfield__label" for="loginUsername">Username</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <input class="mdl-textfield__input" type="password" name="loginPassword" id="loginPassword">
+                                <label class="mdl-textfield__label" for="loginPassword">Password</label>
+                            </div>
+
+                            <button type="button" id="btnLogin" class="login-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">ورود</button>
+
                         </div>
                         <div class="mdl-card__actions mdl-card--border clearfix">
                             <a href="#" class="pull-left mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#forgotFormModal" data-dismiss="modal">
@@ -689,7 +689,7 @@
     <!-- Contact Form End -->
 
 
-   
+
 
 </body>
 </html>
@@ -707,7 +707,64 @@
 <script src="~/js/mainlogin.js"></script>
 
 
+<script>
 
+    $(document).ready(function () {
+
+
+
+        $("#btnLogin").click(function () {
+            var username = $("#loginUsername").val();
+            var pass = $("#loginPassword").val();
+
+            //alert(username + pass);
+
+            var q = CheckLogin(username, pass);
+        })
+
+
+        function CheckLogin(username, pass) {
+         
+            $.ajax({
+                type: 'GET',
+                url: '/fa/CheckUser',
+                data: { username: username, pass: pass },
+                cache: false,
+                success: function (result) {
+
+                    var users = jQuery.parseJSON(result);
+                      jQuery.ajax({
+                         type: "POST",
+                         url: "/fa/MyProfile",
+                         dataType: "json",
+                         contentType: "application/json; charset=utf-8",
+                         data: users,
+                         success: function (data)
+                         {
+                             var datavalid = $.parseJSON(data);
+                             console.log(datavalid);
+                             $("#LoginInfo").text();
+
+                         },
+                         failure: function (errMsg) {
+                             alert(errMsg);
+                         }
+                     });
+
+
+                }
+            });
+        }
+    });
+
+
+
+
+
+
+
+
+</script>
 
 
 @RenderSection("Script", true)

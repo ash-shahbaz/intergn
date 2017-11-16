@@ -4,8 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Helpers;
+using System.Web.Script.Serialization;
 
 namespace IGN.Controllers
 {
@@ -59,6 +62,7 @@ namespace IGN.Controllers
         //public ActionResult Login()
         //{
            
+            
         //}
 
         //public ActionResult Register()
@@ -66,11 +70,62 @@ namespace IGN.Controllers
 
         //}
 
-        public ActionResult MyProfile(string id)
+        public string MyProfile(Users u )
         {
-            
-            return View();
+
+            Users user = u;
+            Session["user"] = u;
+            if (u.UserType == 0)
+            {
+                return new JavaScriptSerializer().Serialize(u);
+
+            }
+            else if (u.UserType == 1)
+            {
+                return new JavaScriptSerializer().Serialize(u);
+
+            }
+            else
+            {
+                return new JavaScriptSerializer().Serialize(u);
+            }
         }
+
+
+        public string CheckUser(string username,string pass)
+        {
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync("api/users/"+username +"-" + pass +"").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseString = response.Content.ReadAsStringAsync().Result;
+
+                    //var data =  JsonConvert.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                    //return data;
+                    response.Content = new StringContent(responseString, System.Text.Encoding.UTF8, "application/json");
+
+                    return responseString;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            
+        }
+
+
+
+
+
+
+
+
 
         public ActionResult AboutUs(string id)
         {
