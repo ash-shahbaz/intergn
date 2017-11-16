@@ -154,7 +154,7 @@
 
             function GetTopNewsFromSelectedCategoryName() {
 
-                $.getJSON("http://localhost:13311/api/Categories/1-@ViewBag.CategoryID-$1", function (result) {
+                $.getJSON("http://192.168.1.10:13311/api/Categories/1-@ViewBag.CategoryID-$1", function (result) {
 
                     var allCategory = $.parseJSON(result);
 
@@ -168,7 +168,7 @@
             };
             function Get50TopNews(number) {
                 $("#Top50News").empty();
-                var url = "http://localhost:13311/api/Categories/1-@ViewBag.CategoryID-";
+                var url = "http://192.168.1.10:13311/api/Categories/1-@ViewBag.CategoryID-";
                 var page = number;
                 var combindUrl = url + page;
                 $.getJSON(combindUrl , function (result) {
@@ -189,7 +189,7 @@
 
                  $.ajax({
                      type: "GET",
-                     url: "http://localhost:13311/api/Pageination/1-@ViewBag.CategoryID",
+                     url: "http://192.168.1.10:13311/api/Pageination/1-@ViewBag.CategoryID",
 
                      success: function (data) {
 
