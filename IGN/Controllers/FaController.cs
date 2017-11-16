@@ -70,7 +70,7 @@ namespace IGN.Controllers
 
         //}
 
-        public string MyProfile(Users u )
+        public string Login(Users u )
         {
 
             Users user = u;
@@ -90,7 +90,32 @@ namespace IGN.Controllers
                 return new JavaScriptSerializer().Serialize(u);
             }
         }
+        public ActionResult MyProfile()
+        {
+            
+            if (Session["user"] != null)
+            {
+                Users u = (Users)Session["user"];
+                if (u.UserType == 0)
+                {
+                    return View();
+                }
+                else if(u.UserType == 1)
+                {
+                    return View();
+                }
+                else
+                {
+                    return View();
+                }
 
+            }
+            else
+            {
+                return View("Index");
+            }
+            
+        }
 
         public string CheckUser(string username,string pass)
         {
