@@ -173,6 +173,7 @@
     <Content Include="css\SimpleChart.css" />
     <Content Include="css\style.css" />
     <Content Include="css\styleLogin.css" />
+    <Content Include="css\stylenews.min.css" />
     <Content Include="css\superfish.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
