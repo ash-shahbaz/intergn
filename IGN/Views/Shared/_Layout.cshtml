@@ -1,4 +1,6 @@
-﻿<!doctype html>
+﻿@using IGN.Models;
+
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -58,7 +60,23 @@
                             <a href="/Ar">العربیه</a>
                         </li>
                         <li>
-                            <a id="LoginInfo" href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-toggle="modal" data-target="#loginFormModal"><i class="login-icon fa fa-user"></i>ورود</a>
+
+                            @{
+
+                                string strNickName = "ورود";
+                                if (Session["user"] != null)
+                                {
+                                    Users u = (Users)Session["user"];
+                                    strNickName = u.NickName;
+                                    <a id="Loginned" href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"><i class="login-icon fa fa-user"></i>@strNickName</a>
+                                }
+                                else
+                                {
+                                    <a id="LoginInfo" href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-toggle="modal" data-target="#loginFormModal"><i class="login-icon fa fa-user"></i>@strNickName</a>
+                                }
+
+                             }
+
                         </li>
                     </ul>
                     <div id="mobile-menu">
@@ -233,7 +251,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="http://startific.com">
+                        <a href="../fa/MyProfile">
                             <i class="fa fa-cog fa-lg"></i>
                             <span class="nav-text">شخصی سازی</span>
                         </a>
@@ -735,16 +753,16 @@
                     var users = jQuery.parseJSON(result);
                       jQuery.ajax({
                          type: "POST",
-                         url: "/fa/MyProfile",
+                         url: "/fa/Login",
                          dataType: "json",
                          contentType: "application/json; charset=utf-8",
                          data: users,
                          success: function (data)
                          {
-                             var datavalid = $.parseJSON(data);
-                             console.log(datavalid);
-                             $("#LoginInfo").text();
-
+                          //   console.log(data);
+                            // alert(data.NickName)
+                             $("#LoginInfo").text(data.NickName);
+                             $(".close").click();
                          },
                          failure: function (errMsg) {
                              alert(errMsg);
