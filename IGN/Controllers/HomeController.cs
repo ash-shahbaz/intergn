@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IGN.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,5 +14,34 @@ namespace IGN.Controllers
         {
           return  View("~/Views/Fa/Index.cshtml");
         }
+        public ActionResult Page(string name)
+        {
+
+            if (Session["user"] != null)
+            {
+                Users u = (Users)Session["user"];
+
+                if (u.UserType == 0)
+                {
+
+                    return View();
+                }
+                else if (u.UserType == 1)
+                {
+                    return View();
+                }
+                else
+                {
+                    return View();
+                }
+
+            }
+            else
+            {
+                return View("../Fa/Index");
+            }
+
+        }
+
     }
 }

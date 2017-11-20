@@ -1,13 +1,8 @@
-﻿
+﻿@using IGN.Models
 @{
     Layout = null;
 }
 
-@section Head
-{
-
-
-}
 
 
 
@@ -36,14 +31,13 @@
 
     <link href="~/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/css/stylenews.min.css" rel="stylesheet" />
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 
 
 
 
-        
 
 
+    <script src="~/js/jquery.min.js"></script>
 
 
 
@@ -52,7 +46,7 @@
 
 
 
-<body class="detailsArticle overflow-hidden">
+<body class="detailsArticle overflow-hidden" id="myBodyIf">
 
 
 
@@ -224,7 +218,7 @@
 
 
 
-    <iframe id="myframe" name="myframe" src="//www.varzesh3.com/" class="iframe" frameborder="0"></iframe>
+    
 
 </body>
 
@@ -240,16 +234,41 @@
 
 
 
-@section Script
-    {
+<script>
+
+
+    $(document).ready(function () {
+
+        
+        BindingNewsById(@Utility.NewsID)
+
+        function BindingNewsById(NewsID) {
+
+            $.getJSON("http://192.168.1.10:13311/api/tblNews/" + NewsID + "", function (result) {
+
+
+                //var q = result[0].Link.split("https://");
+                //q1 = q[1].split("http://");
+
+
+                //alert(q1); 
+
+                var $ifra = "<iframe id=\"myframe\" name=\"myframe\" src=\"" + result[0].Link + "\" class=\"iframe\" frameborder=\"0\"></iframe>";
+
+                console.log(result[0].Link);
+                $("#myBodyIf").append($ifra);
+
+
+            });
+        };
+
+    })
 
 
 
 
+</script>
 
 
 
 
-
-
-}

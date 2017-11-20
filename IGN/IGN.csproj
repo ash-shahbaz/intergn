@@ -147,6 +147,7 @@
     <Compile Include="Controllers\FaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\PageController.cs" />
     <Compile Include="Controllers\SyncController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -274,7 +275,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Home\" />
     <Folder Include="Views\Route\" />
   </ItemGroup>
   <ItemGroup>
@@ -357,7 +357,7 @@
     <Content Include="Views\Fa\NewsFavorites.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Fa\MyProfile.cshtml" />
+    <Content Include="Views\Fa\Page.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Fa\Cat.cshtml" />
@@ -373,6 +373,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Fa\Search.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Page.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

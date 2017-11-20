@@ -19,6 +19,15 @@ namespace IGN
                 defaults: new { controller = "Home", action = "Index", name = UrlParameter.Optional }
             );
 
+
+
+            routes.MapRoute(
+              name: "Defausdasdsa",
+              url: "{controller}/{action}/{name}",
+              defaults: new { controller = "Page", action = "Page", name = UrlParameter.Optional }
+          );
+
+
             //routes.MapRoute(
             //    "Default12313123213",
             //    "{controller}/{action}/{Cname}",

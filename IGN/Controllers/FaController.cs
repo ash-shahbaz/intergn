@@ -22,16 +22,14 @@ namespace IGN.Controllers
        
         public ActionResult News(string CategoryName,string NewsID,string Title)
         {
-            ViewBag.Message = "Your contact page.";
-
+            //var q = Utility.GetNewsByNewsID(NewsID);
+           Utility.NewsID = Convert.ToInt32(NewsID);
             return View();
         }
 
         public ActionResult Cat(string name)
         {
-
-            //Utility.ListCategories();
-            ViewBag.CategoryID = name;
+            ViewBag.CategoryName = name;
             return View();
         }
         public ActionResult Search(string name)
@@ -59,22 +57,11 @@ namespace IGN.Controllers
 
 
 
-        //public ActionResult Login()
-        //{
-           
-            
-        //}
-
-        //public ActionResult Register()
-        //{
-
-        //}
-
         public string Login(Users u )
         {
-
             Users user = u;
             Session["user"] = u;
+            Utility.CurrentUser = u;
             if (u.UserType == 0)
             {
                 return new JavaScriptSerializer().Serialize(u);
@@ -90,58 +77,11 @@ namespace IGN.Controllers
                 return new JavaScriptSerializer().Serialize(u);
             }
         }
-        public ActionResult MyProfile()
-        {
-            
-            if (Session["user"] != null)
-            {
-                Users u = (Users)Session["user"];
-                if (u.UserType == 0)
-                {
-                    return View();
-                }
-                else if(u.UserType == 1)
-                {
-                    return View();
-                }
-                else
-                {
-                    return View();
-                }
-
-            }
-            else
-            {
-                return View("Index");
-            }
-            
-        }
+      
 
         public string CheckUser(string username,string pass)
         {
-
-            using (var client = new HttpClient())
-            {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-                var response = client.GetAsync("api/users/"+username +"-" + pass +"").Result;
-                if (response.IsSuccessStatusCode)
-                {
-                    string responseString = response.Content.ReadAsStringAsync().Result;
-
-                    //var data =  JsonConvert.DeserializeObject(response.Content.ReadAsStringAsync().Result);
-                    //return data;
-                    response.Content = new StringContent(responseString, System.Text.Encoding.UTF8, "application/json");
-
-                    return responseString;
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            
+            return Utility.CallApiGetResultCheckUser(username, pass);
         }
 
 

@@ -8,41 +8,65 @@ namespace IGN.Models
 {
     public static class Utility
     {
-        public static Dictionary<string, string> ListCategories()
+        public static Users CurrentUser;
+        public static string CategoryName;
+        public static int NewsID;
+
+
+        public static string CallApiGetResultCheckUser(string username , string pass)
         {
-
-            Dictionary<string, string> lstC = new Dictionary<string, string>();
-
-            var q = GetDataFromUrl("api/tblCategories/2-1");
-
-            //lstC.Add();
-
-            return lstC;
+            using (var client = new HttpClient())
+            {
 
 
+
+                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync("api/users/" + username + "-" + pass + "").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseString = response.Content.ReadAsStringAsync().Result;
+
+                    //var data =  JsonConvert.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                    //return data;
+                    response.Content = new StringContent(responseString, System.Text.Encoding.UTF8, "application/json");
+
+                    return responseString;
+                }
+                else
+                {
+                    return null;
+                }
+            }
         }
 
-        private static string GetDataFromUrl(string url)
+
+        public static string GetNewsByNewsID(string NewsID)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:13311/");
-            // Add an Accept header for JSON format.  
-            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            // List all Names.  
-            HttpResponseMessage response = client.GetAsync(url).Result;  // Blocking call!  
-            if (response.IsSuccessStatusCode)
+            using (var client = new HttpClient())
             {
-                Console.WriteLine("Request Message Information:- \n\n" + response.RequestMessage + "\n");
-                Console.WriteLine("Response Message Header \n\n" + response.Content.Headers + "\n");
-                return response.ToString();
+                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync("api/GettblNews/" + NewsID ).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseString = response.Content.ReadAsStringAsync().Result;
+
+                    //var data =  JsonConvert.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                    //return data;
+                    response.Content = new StringContent(responseString, System.Text.Encoding.UTF8, "application/json");
+
+                    return responseString;
+                }
+                else
+                {
+                    return null;
+                }
             }
-            else
-            {
-                Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
-                return response.ToString();
-            }
-            
         }
+
 
 
     }
