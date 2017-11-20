@@ -37,7 +37,7 @@ jQuery(document).ready(function(){
 	
 	if (jQuery('.accordion-style-2'.length > 0)) {
 		jQuery( ".accordion-style-2" ).accordion({ active: 0 },{ collapsible: true },{ heightStyle: "content" });
-		jQuery(".accordion-style-2 .widget-title span").removeClass("icon-list") .html("+");
+		jQuery(".accordion-style-2 .widget-title span").removeClass("fa fa-rss") .html("+");
 		jQuery(".accordion-style-2 .ui-accordion-header-active span").html("-");
 		jQuery(".accordion-style-2 .widget-title") .click(function(){
 			if (jQuery(this) .next() .is(":hidden")) {
@@ -54,7 +54,7 @@ jQuery(document).ready(function(){
 
 	// toggle
 	if (jQuery('.toggle').length > 0) {
-		jQuery('.toggle .widget-title span').removeClass("icon-list") .html("+");
+		jQuery('.toggle .widget-title span').removeClass("fa fa-rss") .html("+");
 		jQuery('.toggle .widget-title') .next() .hide();
 		jQuery('.toggle .widget-title').click(function(){
 		if (jQuery(this).next() .is(':hidden')) {
