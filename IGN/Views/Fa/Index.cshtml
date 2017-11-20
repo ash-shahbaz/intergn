@@ -14,6 +14,8 @@
 
 <link href="~/css/animate.min.css" rel="stylesheet" />
 
+<link href="~/css/js-image-slider.css" rel="stylesheet" />
+
 
 }
 
@@ -24,7 +26,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>ترند مهمترین اخبار</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>ترند مهمترین اخبار</h2>
                 <div class="tabs card">
                     <div class="row">
                         <div class="col-md-12 text-align-center">
@@ -635,10 +637,51 @@
 
 
 
-            <!-- widget-tab-news -->
+
+            <div id="sliderFrame">
+                <div id="slider">
+                    <a href="http://www.greenoptimizer.com" target="_blank"><img src="~/images/image-slider-1.jpg" alt="عکس شماره اول" /><h4 class="descslider">حکمی که دایی برای بازیکن پرسپولیس داد</h4></a>
+                    <a href="http://www.greenoptimizer.com" target="_blank"><img src="~/images/image-slider-2.jpg" alt="عکس شماره دوم" /><h4 class="descslider">مهاجم جدید استقلال از راه رسید</h4></a>
+                    <a href="http://www.greenoptimizer.com" target="_blank"><img src="~/images/image-slider-3.jpg" alt="عکس شماره سوم" /><h4 class="descslider">حکمی که دایی برای بازیکن پرسپولیس داد</h4></a>
+                    <a href="http://www.greenoptimizer.com" target="_blank"><img src="~/images/image-slider-4.jpg" alt="عکس شماره دو" /><h4 class="descslider">مهاجم جدید استقلال از راه رسید</h4></a>
+                </div>
+                <!--thumbnails-->
+                <div id="thumbs">
+                    <div class="thumb">
+                        <div class="frame"><img src="~/images/thumb1.jpg" /></div>
+                        <div class="thumb-content"><p>عکس شماره اول</p>حکمی که دایی برای بازیکن پرسپولیس داد</div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="thumb">
+                        <div class="frame"><img src="~/images/thumb2.jpg" /></div>
+                        <div class="thumb-content"><p>عکس شماره دوم</p>مهاجم جدید استقلال از راه رسید</div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="thumb">
+                        <div class="frame"><img src="~/images/thumb3.jpg" /></div>
+                        <div class="thumb-content"><p>عکس شماره سوم</p>حکمی که دایی برای بازیکن پرسپولیس داد</div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="thumb">
+                        <div class="frame"><img src="~/images/thumb4.jpg" /></div>
+                        <div class="thumb-content"><p>عکس شماره دو</p>مهاجم جدید استقلال از راه رسید</div>
+                        <div style="clear:both;"></div>
+                    </div>
+                </div>
+                <!--clear above float:left elements. It is required if above #slider is styled as float:left. -->
+                <div style="clear:both;height:0;"></div>
+            </div>
+
+
+
+
+
+
+
+            @*<!-- widget-tab-news -->
             <div class="widget widget-tab-news clearfix card">
                 <div class="pull-left">
-                    <h2 class="widget-title"><span class="icon-list pull-left"></span>مهمترین اخبار</h2>
+                    <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>مهمترین اخبار</h2>
                     <!-- widget-title-2 -->
                     <ul>
                         <li>
@@ -788,7 +831,7 @@
                     </div>
                 </div>
                 <!-- pull-right -->
-            </div>
+            </div>*@
 
 
 
@@ -803,7 +846,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>لینکستان</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>لینکستان</h2>
 
                 <div class="tabs card">
                     <div class="row">
@@ -1218,7 +1261,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>نمودار ترند مهمترین اخبار</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>نمودار ترند مهمترین اخبار</h2>
                 <div class="widget-content">
                     <div class="row">
 
@@ -1264,7 +1307,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>پربازدید ترین اخبار</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>پربازدید ترین اخبار</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -1421,7 +1464,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار افراد مشهور</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اخبار افراد مشهور</h2>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="search-box ">
@@ -1600,7 +1643,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار حوادث</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اخبار حوادث</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -1834,7 +1877,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار سیاسی</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اخبار سیاسی</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -2068,7 +2111,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار ورزشی</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اخبار ورزشی</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -2309,7 +2352,7 @@
         <div class="col-md-8">
 
             <div class="widget newsletter clearfix">
-                <i class="icon-mail pull-left"></i>
+                <i class="fa fa-envelope pull-left"></i>
                 <h2 class="pull-left"><span>خبرنامه</span>مشترک خبرنامه شوید</h2>
                 <div class="newsletter-form pull-right">
                     <form action="/" method="post" />
@@ -2333,7 +2376,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار علمی پزشکی</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اخبار علمی پزشکی</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -2567,7 +2610,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار اقتصادی</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اخبار اقتصادی</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -2801,7 +2844,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار استخدام</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اخبار استخدام</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -3056,7 +3099,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار فرهنگ و هنر</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اخبار فرهنگ و هنر</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -3290,7 +3333,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار فناوری</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اخبار فناوری</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -3530,7 +3573,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار گوناگون</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اخبار گوناگون</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -3764,7 +3807,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار بین المللی</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اخبار بین المللی</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -3998,7 +4041,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار اجتماعی</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اخبار اجتماعی</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -4237,7 +4280,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار گردشگری</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اخبار گردشگری</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -4471,7 +4514,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار سینمایی</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اخبار سینمایی</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -4705,7 +4748,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار تصویری</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اخبار تصویری</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -4961,7 +5004,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار دانلود</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اخبار دانلود</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -5195,7 +5238,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اخبار خودرو</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اخبار خودرو</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -5449,7 +5492,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>اتاق طنز</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اتاق طنز</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -5683,7 +5726,7 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="icon-list pull-left"></span>آشپزی</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>آشپزی</h2>
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -5940,7 +5983,7 @@
 <script src="~/js/imagesloaded.js"></script>
 <script src="~/js/custom.js"></script>
 <script src="~/js/SimpleChart.js"></script>
-
+<script src="~/js/js-image-slider.js"></script>
 
 <script>
     var graphdata1 = {
