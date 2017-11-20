@@ -242,20 +242,33 @@
         
         BindingNewsById(@Utility.NewsID)
 
+      //  window.history.pushState("object or string", "Title", "/test" );
         function BindingNewsById(NewsID) {
 
             $.getJSON("http://192.168.1.10:13311/api/tblNews/" + NewsID + "", function (result) {
 
 
-                //var q = result[0].Link.split("https://");
-                //q1 = q[1].split("http://");
+                var q = result[0].Link.substring(0, 9);
+                var url  = ""
 
+              //  console.log(q);
 
-                //alert(q1); 
+                var splitword = q.split(':');
+                if (splitword == "http") {
 
-                var $ifra = "<iframe id=\"myframe\" name=\"myframe\" src=\"" + result[0].Link + "\" class=\"iframe\" frameborder=\"0\"></iframe>";
+                    url = result[0].Link.substring(6, result[0].Link.length);
+                    
+                }
+                else if (splitword = "https") {
+                    
+                    url = result[0].Link.substring(7, result[0].Link.length );
+                    
+                }
 
-                console.log(result[0].Link);
+                    
+                var $ifra = "<iframe id=\"myframe\" name=\"myframe\" src=\"//" + url + "\" class=\"iframe\" frameborder=\"0\"></iframe>";
+                
+                window.history.pushState("object or string", "Title",  urla);
                 $("#myBodyIf").append($ifra);
 
 
