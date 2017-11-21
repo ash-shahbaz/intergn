@@ -313,3 +313,9 @@ h1 {
 .padding-bottom-5{
     padding-bottom: 5px;
 }
+
+.sendbtn {
+    text-align: -webkit-left;
+    text-align: left;
+    padding: 10px;
+}
