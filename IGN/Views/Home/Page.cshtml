@@ -1,11 +1,12 @@
-﻿@{
+﻿@using IGN.Models;
+@{
     ViewBag.Title = "tags";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @section Head
 {
-<link href="~/css/SimpleChart.css" rel="stylesheet" />
+    <link href="~/css/SimpleChart.css" rel="stylesheet" />
 }
 
 
@@ -14,31 +15,8 @@
     <div class="col-md-2">
 
         <div class="row">
-            <div class="col-md-12">
-                <span>my default lang</span>
-                <ul>
-                    <li>
-                        <a>Eng</a>
-                    </li>
-                    <li>
-                        <a>Fa</a>
-                    </li>
-                    <li>
-                        <a>Ar</a>
-                    </li>
-                </ul>
-                <span>language</span>
-                <ul>
-                    <li>
-                        <a>Eng</a>
-                    </li>
-                    <li>
-                        <a>Fa</a>
-                    </li>
-                    <li>
-                        <a>Ar</a>
-                    </li>
-                </ul>
+            <div class="col-md-12" id="LanguagePages">
+
             </div>
         </div>
 
@@ -162,17 +140,17 @@
 
                     </div>
                     <div class="col-md-7">
-                        <h1 class="text-align-right notranslate" title="احمد شهباز">احمد شهباز</h1>
+                        <h1 class="text-align-right notranslate" title="احمد شهباز" id="PageUserName">احمد شهباز</h1>
                         <div class="margin-top-20">
-                            <span>خوردَنگاه "رستوران" فرنگي سه گوش گريل تهرانپارس، فرجام شرقی، جنب زرین، پ ۱۲۲  دليوري و رزرو ۷۷۷۳۴۶۷۰ جهت اطلاع از منو و قیمت ها👇👇👇</span>
+                            <span id="DescriptionUserID">خوردَنگاه "رستوران" فرنگي سه گوش گريل تهرانپارس، فرجام شرقی، جنب زرین، پ ۱۲۲  دليوري و رزرو ۷۷۷۳۴۶۷۰ جهت اطلاع از منو و قیمت ها👇👇👇</span>
                         </div>
-                        <div class="text-align-left margin-top-20">
-                            <a class="" href="http://instagram.com/" rel="nofollow me noopener noreferrer" target="_blank">t.me/SegooshGrill_Bot</a>
+                        <div class="text-align-left margin-top-20" id="hrefTagSocial">
+                           
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <div class="circle_profile circlepos_profile">
-                            <img class="full_size" src="https://scontent-bom1-1.cdninstagram.com/t51.2885-19/s150x150/14515639_1057647507683045_7496754042371047424_a.jpg" alt="SEGOOSH GRILL | سه گوش گریل">
+                        <div class="circle_profile circlepos_profile" id="ImageDivID">
+                            
                         </div>
 
                     </div>
@@ -1762,58 +1740,110 @@
 
 
     <script>
-        $(function () {
-            $(".sortable").sortable();
-            $(".sortable").disableSelection();
-        });
-    </script>
+
+        //function showDiv(pageid) {
+        //    alert(pageid);
 
 
 
 
-    <script>
-        var graphdata1 = {
-            linecolor: "Random",
-            title: "ماه",
-            values: [
-                { X: "20 مهر", Y: 300 },
-                { X: "21 مهر", Y: 101 },
-                { X: "22 مهر", Y: 310 },
-                { X: "23 مهر", Y: 401 },
-                { X: "24 مهر", Y: 151 },
-                { X: "25 مهر", Y: 205 },
-                { X: "26 مهر", Y: 200 },
-                { X: "27 مهر", Y: 107 },
-                { X: "28 مهر", Y: 201 },
-                { X: "29 مهر", Y: 401 },
-                { X: "30 مهر", Y: 387 },
-                { X: "31 مهر", Y: 318 },
-                { X: "1 آبان", Y: 200 },
-                { X: "2 آبان", Y: 150 },
-                { X: "3 آبان", Y: 140 },
-                { X: "4 آبان", Y: 140 },
-                { X: "5 آبان", Y: 137 },
-                { X: "6 آبان", Y: 181 }
-            ]
-        };
 
-        $(function () {
+        //}
 
-            $("#Hybridgraph").SimpleChart({
-                ChartType: "Hybrid",
-                toolwidth: "50",
-                toolheight: "25",
-                axiscolor: "#E6E6E6",
-                textcolor: "#6E6E6E",
-                showlegends: false,
-                data: [graphdata1],
-                legendsize: "140",
-                legendposition: 'bottom',
-                xaxislabel: 'روز',
-                yaxislabel: 'تعداد اخبار'
+
+         function LoadUserWallPages(pageid) {
+
+             console.log("Hi i am " + pageid);
+             $.getJSON("http://192.168.1.10:13311/api/tblUserWallPages/" + pageid + "-GetPage", function (result) {
+                 console.log(result[0]);
+                 $("#PageUserName").text("@Utility.CurrentUser.Lastname")
+                 $("#DescriptionUserID").text(result[0].Description);
+                 $("#hrefTagSocial").html("<a class=\"\" href=\"#\" rel=\"nofollow me noopener noreferrer\" target=\"_blank\"> " + result[0].TelegramLink + "</a></br > <a class=\"\" href=\"#\" rel=\"nofollow me noopener noreferrer\" target=\"_blank\"> " + result[0].FacebookLink + "</a>");
+                 $("#ImageDivID").html("<img class=\"full_size\" src=\"" + result[0].PageImageUrl + "\" alt=\"" + result[0].Title + "\">");
+
+
+                });
+            };
+
+
+        $(document).ready(function () {
+
+            GetUserPages();
+            function GetUserPages() {
+
+                $.getJSON("http://192.168.1.10:13311/api/tblUserWallPages/@Utility.CurrentUser.UserID-Multi", function (result) {
+
+                    var $span = "<span>صفحه های من به زبان های گوناگون</span>"
+                    var $ulInline = $span + "<ul id=\"ulInline\"></ul>";
+                    $("#LanguagePages").html($ulInline);
+                    $.each(result, function (i, item) {
+                        $("#ulInline").append("<li><a onclick=\"LoadUserWallPages(" + item.UserWallPageID + ");\" href=\"javascript:void(0);\" >" + item.Title + "</a></li>")
+                    });
+                });
+            };
+
+
+
+
+
+            })
+
+
+
+
+            $(function () {
+                $(".sortable").sortable();
+                $(".sortable").disableSelection();
             });
 
-        });
+
+
+
+
+
+
+            var graphdata1 = {
+                linecolor: "Random",
+                title: "ماه",
+                values: [
+                    { X: "20 مهر", Y: 300 },
+                    { X: "21 مهر", Y: 101 },
+                    { X: "22 مهر", Y: 310 },
+                    { X: "23 مهر", Y: 401 },
+                    { X: "24 مهر", Y: 151 },
+                    { X: "25 مهر", Y: 205 },
+                    { X: "26 مهر", Y: 200 },
+                    { X: "27 مهر", Y: 107 },
+                    { X: "28 مهر", Y: 201 },
+                    { X: "29 مهر", Y: 401 },
+                    { X: "30 مهر", Y: 387 },
+                    { X: "31 مهر", Y: 318 },
+                    { X: "1 آبان", Y: 200 },
+                    { X: "2 آبان", Y: 150 },
+                    { X: "3 آبان", Y: 140 },
+                    { X: "4 آبان", Y: 140 },
+                    { X: "5 آبان", Y: 137 },
+                    { X: "6 آبان", Y: 181 }
+                ]
+            };
+
+            $(function () {
+
+                $("#Hybridgraph").SimpleChart({
+                    ChartType: "Hybrid",
+                    toolwidth: "50",
+                    toolheight: "25",
+                    axiscolor: "#E6E6E6",
+                    textcolor: "#6E6E6E",
+                    showlegends: false,
+                    data: [graphdata1],
+                    legendsize: "140",
+                    legendposition: 'bottom',
+                    xaxislabel: 'روز',
+                    yaxislabel: 'تعداد اخبار'
+                });
+
+            });
 
     </script>
 

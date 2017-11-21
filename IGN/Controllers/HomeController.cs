@@ -17,9 +17,9 @@ namespace IGN.Controllers
         public ActionResult Page(string name)
         {
 
-            if (Session["user"] != null)
+            if (Session["user"] != null || Utility.CurrentUser != null)
             {
-                Users u = (Users)Session["user"];
+                Users u = (Users)Utility.CurrentUser;
 
                 if (u.UserType == 0)
                 {
