@@ -3298,7 +3298,7 @@ blockquote {
     margin-top: 5px
 }
 
-.subscribe-form__email {
+.input-style {
     display: inline-block;
     width: calc(100% - 150px);
     height: 28px;
