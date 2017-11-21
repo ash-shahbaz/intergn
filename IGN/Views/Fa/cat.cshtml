@@ -141,7 +141,7 @@
     <script>
         $(document).ready(function () {
 
-            Get50TopNews(1);
+            Get50TopNews(0);
             BindCategoryName();
             GetTopNewsFromSelectedCategoryName();
 
@@ -238,15 +238,14 @@
                      url: "http://192.168.1.10:13311/api/Pageination/1-@ViewBag.CategoryName",
 
                      success: function (data) {
-
-                         console.log("R: " + data);
+                       
 
                          $("#altLists").asPaginator(data
                              , {
 
                                  currentPage: data / 4,
                                  itemsPerPage: 50,
-                                 visibleNum: 10,
+                                 visibleNum: 5,
                                  resizeThrottle: 250,
 
                                  tpl: function () {
@@ -269,8 +268,8 @@
                                      //        alert(this.data)
                                      //    }
                                      //})
-                                     
-                                     Get50TopNews(page);
+                                     var pageid = page - 1;
+                                     Get50TopNews(pageid);
                                  }
                              });
                      }

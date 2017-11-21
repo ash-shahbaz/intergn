@@ -39,9 +39,9 @@ namespace IGN.Controllers
         }
 
 
-        public ActionResult tags(string tagName)
+        public ActionResult tags(string name)
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.TagName = name;
             return View();
         }
 
