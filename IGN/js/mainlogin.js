@@ -82,7 +82,21 @@ Author : themelooks.com
 				}
 			});
 		}
-        
+
+        var loginForm = $('#loginForm');
+
+        if (loginForm.length) {
+            loginForm.validate({
+                rules: {
+                    loginUsername: "required",
+                    loginPassword: "required"
+                },
+                errorPlacement: function (error, element) {
+                    return true;
+                }
+            });
+        }
+
         var contactForm = $('#contactForm');
 		
 		if ( contactForm.length ) {

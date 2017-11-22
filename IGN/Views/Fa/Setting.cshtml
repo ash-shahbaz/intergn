@@ -91,16 +91,14 @@
                 </div>
                 <div class="row margin-top-15">
                     <div class="col-md-9">
-                        <div class="search-box ">
-                            <form class="clearfix subscribe-form__form" />
-                            <span class="form-group">
-                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
-            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
-            this.value = '';" value="تغییر کلمه عبور" />
-                            </span>
 
-                            </form>
-                        </div>
+                        <a id="LoginInfo" href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-toggle="modal" data-target="#ChangePassModal"><i class="login-icon fa fa-user"></i>تغییر</a>
+
+
+
+
+
+
                     </div>
                     <div class="col-md-3">
                         <span>کلمه عبور:</span>
@@ -199,16 +197,16 @@
                 </div>
                 <div class="row margin-top-15">
                     <div class="col-md-9">
-                        <div class="search-box ">
-                            <form class="clearfix subscribe-form__form" />
-                            <span class="form-group">
-                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
-            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
-            this.value = '';" value="آقا" />
-                            </span>
+                        <form>
+                            <div class="">
+                                <select class="">
+                                    <option value=""></option>
+                                    <option value="man">آقا</option>
+                                    <option value="woman">خانم</option>
+                                </select>
+                            </div>
+                        </form>
 
-                            </form>
-                        </div>
                     </div>
                     <div class="col-md-3">
                         <span>جنسیت:</span>
@@ -235,15 +233,8 @@
                 </div>
                 <div class="row margin-top-15">
                     <div class="col-md-9">
-                        <div class="search-box ">
-                            <form class="clearfix subscribe-form__form" />
-                            <span class="form-group">
-                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
-            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
-            this.value = '';" value="خوردَنگاه رستوران فرنگي سه گوش گريل تهرانپارس، فرجام شرقی، جنب زرین، پ ۱۲۲  دليوري و رزرو ۷۷۷۳۴۶۷۰ جهت اطلاع از منو و قیمت ها" />
-                            </span>
-
-                            </form>
+                        <div class="form-group">
+                            <textarea class="form-control">خوردَنگاه رستوران فرنگي سه گوش گريل تهرانپارس، فرجام شرقی، جنب زرین، پ ۱۲۲  دليوري و رزرو ۷۷۷۳۴۶۷۰ جهت اطلاع از منو و قیمت ها</textarea>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -251,27 +242,69 @@
 
                     </div>
                 </div>
-                
-                    
 
-                    <div class="row margin-top-15">
-                        <div class="col-md-12">
-                            <button type="button" class="btn btn-accent shadow subscriber-form-btn">تایید</button>
 
-                        </div>
+
+                <div class="row margin-top-15">
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-accent shadow subscriber-form-btn">تایید</button>
+
                     </div>
+                </div>
 
 
 
 
 
-</div>
+            </div>
         </div>
 
     </div>
 </div>
 
 
+
+    <!-- Change Pass Start -->
+<div class="modal fade" id="ChangePassModal" tabindex="-1" role="dialog" aria-labelledby="ChangePass">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="ChangePass">
+                <div class="mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <div class="modal--logo">
+                            <img src="img/logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="password" name="loginUsername" id="loginUsername">
+                            <label class="mdl-textfield__label" for="loginUsername">کلمه عبور قبلی</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="password" name="loginPassword" id="loginPassword">
+                            <label class="mdl-textfield__label" for="loginPassword">کلمه عبور جدید</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="password" name="loginPassword" id="loginPassword">
+                            <label class="mdl-textfield__label" for="loginPassword">تکرار کلمه عبور جدید</label>
+                        </div>
+
+                        <button type="button" id="btnLogin" class="login-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">تایید</button>
+
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border clearfix">
+                        <a href="#" class="pull-left mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#forgotFormModal" data-dismiss="modal">
+                            رمز عبور خود را فراموش کرده اید؟
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Change Pass End -->
 
 
 @section Script
