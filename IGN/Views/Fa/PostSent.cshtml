@@ -6,3 +6,304 @@
 
 <h2>PostSent</h2>
 
+@{
+    ViewBag.Title = "BackLinkAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section Head
+{
+
+}
+
+
+
+<div class="row">
+    <div class="col-md-2">
+
+        <div class="row">
+            <div class="col-md-12">
+                <span>my default lang</span>
+                <ul>
+                    <li>
+                        <a>Eng</a>
+                    </li>
+                    <li>
+                        <a>Fa</a>
+                    </li>
+                    <li>
+                        <a>Ar</a>
+                    </li>
+                </ul>
+                <span>language</span>
+                <ul>
+                    <li>
+                        <a>Eng</a>
+                    </li>
+                    <li>
+                        <a>Fa</a>
+                    </li>
+                    <li>
+                        <a>Ar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="col-md-10">
+
+        <div class="widget widget-news card">
+            <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اضافه کردن لینک</h2>
+            <div class="widget-content">
+
+                <div class="row">
+                    <div class="col-md-12 text-align-center">
+
+                        <table class="tblhelpadd">
+                            <tbody>
+                                <tr>
+                                    <td class="oddtbllink">
+                                        <p>
+                                            <span>
+                                                لطفا
+                                                قبل از ثبت، به موارد زير توجه کنيد:
+                                            </span>
+
+                                        </p>
+                                        <p>
+                                            <span>"عدم رعايت هر کدام از موارد، منجر به حذف لينک شما خواهد شد"</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="eventbllink">
+                                        <span>
+                                            1. از عدم وجود لينک مورد نظر در فهرست
+                                            <a href="http://www.IGreenNews.com/"> IGreenNews</a>، اطمينان حاصل کنيد. ( از
+                                            طريق <a target="_blank" href="http://www.IGreenNews.com/fa/links">
+                                                جستجوي
+                                            </a> نام و يا آدرس لينک )
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="oddtbllink">
+                                        <span>
+                                            2. لينک مورد نظرتان را فقط يکبار و تنها در يک بخش
+                                            ثبت کنيد و از ثبت مجدد آن با نام بخشهاي مختلف همان سايت خودداری کنيد.
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="eventbllink">
+                                        <span>
+                                            3.نام
+                                            سايت ها و وبلاگ ها بايد دارای عناوين مناسبي باشند و نام هايي مانند:
+                                            کامپيوتر، اينترنت، شعر، آموزش يا مشابه اينها پذيرفته نمي شوند.
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="oddtbllink">
+                                        <span>
+                                            4.
+                                            <a href="http://www.IGreenNews.com">IGreenNews</a>،
+                                            در پذيرش و يا حذف لينکهاي ثبت شده در
+                                            <a href="http://www.IGreenNews.com">اين سايت</a> آزاد است.
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="eventbllink">
+                                        <span>
+                                            5.لطفا تمام موارد را پر نمایید.
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+
+                <div class="row margin-top-15">
+                    <div class="col-md-9">
+
+
+                        <form>
+                            <div class="">
+                                <select class="">
+                                    <option value="">(انتخاب یک دسته بندی)</option>
+                                    <option value="sport">ورزشی</option>
+                                    <option value="politics">سیاسی</option>
+                                    <option value="social">اجتماعی</option>
+                                    <option value="option4">.</option>
+                                    <option value="option5">1</option>
+                                </select>
+                            </div>
+                        </form>
+
+
+                    </div>
+                    <div class="col-md-3">
+                        <span>دسته بندی</span>
+
+                    </div>
+                </div>
+                <div class="row margin-top-15">
+                    <div class="col-md-9">
+                        <div class="search-box ">
+                            <form class="clearfix subscribe-form__form" />
+                            <span class="form-group">
+                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="بهینه سازی سبز" />
+                            </span>
+
+                            </form>
+                        </div>
+                        <div><span>* از جملات توصيفي و تبليغاتي براي نام لينک استفاده نکنيد.</span></div>
+                    </div>
+                    <div class="col-md-3">
+                        <span>نام لينک:</span>
+
+                    </div>
+                </div>
+                <div class="row margin-top-15">
+                    <div class="col-md-9">
+                        <div class="search-box ">
+                            <form class="clearfix subscribe-form__form" />
+                            <span class="form-group">
+                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="http://" />
+                            </span>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <span>آدرس لينک:</span>
+
+                    </div>
+                </div>
+                <div class="row margin-top-15">
+                    <div class="col-md-9">
+                        <div class="search-box ">
+                            <form class="clearfix subscribe-form__form" />
+                            <span class="form-group">
+                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="" />
+                            </span>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <span>ایمیل:</span>
+
+                    </div>
+                </div>
+                <div class="row margin-top-15">
+                    <div class="col-md-9">
+                        <div class="search-box ">
+                            <form class="clearfix subscribe-form__form" />
+                            <span class="form-group">
+                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="" />
+                            </span>
+
+                            </form>
+                        </div>
+                        <div><span>* کلمات را با يک فاصله از هم جدا کنيد. لطفا از ويرگول استفاده نکنيد.</span></div>
+                        <div><span>* کلمات کليدی، صرفا جهت جستجو به کار مي‌روند و نمايش داده نمي‌شوند.</span></div>
+                    </div>
+                    <div class="col-md-3">
+                        <span>کلمات کلیدی:</span>
+
+                    </div>
+                </div>
+                <div class="row margin-top-15">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <textarea class="form-control"></textarea>
+                        </div>
+                        <div><span>* شرح مختصري درباره موضوع فعاليت سايت يا وبلاگ.</span></div>
+                        <div><span>* از جملات تبليغاتي استفاده نکنيد.</span></div>
+                    </div>
+                    <div class="col-md-3">
+                        <span>توصيف:</span>
+
+                    </div>
+                </div>
+                <div class="row margin-top-15">
+                    <div class="col-md-9">
+
+                        <form action="post.php" method="POST" id="my-form">
+                            <div class="g-recaptcha" data-sitekey="6LfDtDkUAAAAAOfFGzsZOHlLizblKjmeFSB4yz8N"></div>
+                        </form>
+
+                    </div>
+                    <div class="col-md-3">
+                        <span>کد امنيتي:</span>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="row margin-top-15">
+                    <div class="col-md-12 sendbtn">
+                        <button id="AddLink" type="button" class="btn btn-accent shadow subscriber-form-btn">ثبت لینک</button>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+@section Script
+    {
+
+
+    <script>
+        $('#my-form').submit(function (e) {
+            e.preventDefault();
+            $this = $(this);
+            $.ajax({
+                type: "POST",
+                url: "123",
+                data: $this.serialize()
+            }).done(function (data) {
+            }).fail(function (jqXHR, textStatus) {
+                alert("Request failed: " + textStatus);
+            });
+        });
+    </script>
+}

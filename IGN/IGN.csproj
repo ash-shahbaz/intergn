@@ -168,6 +168,7 @@
     <Content Include="css\ie.css" />
     <Content Include="css\jquery-ui.css" />
     <Content Include="css\js-image-slider.css" />
+    <Content Include="css\kamadatepicker.min.css" />
     <Content Include="css\main-color-login.css" />
     <Content Include="css\material.min.css" />
     <Content Include="css\pagination.css" />
@@ -206,6 +207,7 @@
     <Content Include="js\jquery.validate.min.js" />
     <Content Include="js\CircleUserJS.js" />
     <Content Include="js\js-image-slider.js" />
+    <Content Include="js\kamadatepicker.min.js" />
     <Content Include="js\mainlogin.js" />
     <Content Include="js\material.min.js" />
     <Content Include="js\pagination.js" />

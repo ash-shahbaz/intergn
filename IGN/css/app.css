@@ -321,7 +321,25 @@ h1 {
 }
 
 
+.oddtbllink {
+    background-color: #F5F5F5;
+    border-left-style: solid;
+    border-left-width: 1;
+    border-right-style: solid;
+    border-right-width: 1;
+    border-top-style: solid;
+    border-top-width: 1;
+}
 
+.eventbllink {
+    background-color: #FFFFFF;
+}
+
+.tblhelpadd {
+    border: 3px double #BCCAE2;
+    border-collapse: collapse;
+    background-color: #F5F5F5;
+}
 
 
 

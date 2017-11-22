@@ -6,7 +6,7 @@
 
 @section Head
 {
-
+    <link href="~/css/kamadatepicker.min.css" rel="stylesheet" />
 }
 
 
@@ -14,34 +14,6 @@
 <div class="row">
     <div class="col-md-2">
 
-        <div class="row">
-            <div class="col-md-12">
-                <span>my default lang</span>
-                <ul>
-                    <li>
-                        <a>Eng</a>
-                    </li>
-                    <li>
-                        <a>Fa</a>
-                    </li>
-                    <li>
-                        <a>Ar</a>
-                    </li>
-                </ul>
-                <span>language</span>
-                <ul>
-                    <li>
-                        <a>Eng</a>
-                    </li>
-                    <li>
-                        <a>Fa</a>
-                    </li>
-                    <li>
-                        <a>Ar</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
 
 
         <div class="row">
@@ -58,7 +30,7 @@
 
         <div class="widget widget-news card">
             <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>جستجو</h2>
-            <div class="widget-content">              
+            <div class="widget-content">
 
                 <div class="row margin-top-15">
                     <div class="col-md-9">
@@ -86,7 +58,7 @@
                         <form>
                             <div class="">
                                 <select class="">
-                                    <option value="">(انتخاب یک دسته بندی)</option>
+                                    <option value="">همه دسته بندی ها</option>
                                     <option value="sport">ورزشی</option>
                                     <option value="politics">سیاسی</option>
                                     <option value="social">اجتماعی</option>
@@ -109,10 +81,26 @@
 
 
                     <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-4 sendbtn">
+                                <button id="AddLink" type="button" class="btn btn-accent shadow subscriber-form-btn">جستجو</button>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="text" id="dateend">
+                            </div>
+                            <div class="col-md-1">
+                                <span>تا</span>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="text" id="datefrom">
+                            </div>
+                            <div class="col-md-1">
+                                <span>از</span>
+                            </div>
+                        </div>
 
-                        تا
 
-                        از
+
 
 
                     </div>
@@ -122,15 +110,6 @@
                     </div>
                 </div>
 
-
-
-
-                <div class="row margin-top-15">
-                    <div class="col-md-12 sendbtn">
-                        <button id="AddLink" type="button" class="btn btn-accent shadow subscriber-form-btn">جستجو</button>
-
-                    </div>
-                </div>
 
 
 
@@ -145,8 +124,290 @@
 
 
 
+<div class="row">
+    <div class="col-md-2">
+
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="col-md-10">
+
+        <div class="widget widget-news card">
+
+            <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>ترند موضوع خبری</h2>
+            <div class="widget-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="Hybridgraph" style="width: 98%; height: 300px">
+                        </div>
+                    </div>
+                </div>
+                <div class="row margin-top-15">
+                    <div class="col-md-3">
+                        <span class="trendtitle">تعداد خبر</span>
+                    </div>
+                    <div class="col-md-3">
+
+                        <span class="trendtitle">تاریخ</span>
+                    </div>
+                    <div class="col-md-3">
+
+                        <span class="trendtitle">دسته بندی</span>
+                    </div>
+                    <div class="col-md-3">
+
+                        <span class="trendtitle">عنوان</span>
+                    </div>
+                </div>
+
+                <div class="row margin-top-15 padding-bottom-20 ">
+                    <div class="col-md-3">
+                        <span>756 خبر</span>
+                    </div>
+                    <div class="col-md-3">
+                        <span>1396/08</span>
+                    </div>
+                    <div class="col-md-3">
+                        <span>ورزشی</span>
+                    </div>
+                    <div class="col-md-3">
+                        <span>طارمی</span>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-2">
+
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+                <a href="#"><img src="~/placeholders/posts/ad2.jpg" alt="" /></a>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="col-md-10">
+
+        <div class="widget widget-news card">
+
+            <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>خبرهای مرتبط در @ViewBag.TagName</h2>
+            <div class="widget-content">
+                <ul class="list-unstyled" id="Top50NewsTag"></ul>
+            </div>
+            <!-- widget content -->
+        </div>
+
+
+    </div>
+</div>
+
+
+
 @section Script
     {
+    <script src="~/js/SimpleChart.js"></script>
+
+    <script src="~/js/kamadatepicker.min.js"></script>
 
 
+<script>
+        $(document).ready(function () {
+
+
+            Get50TopNews(0);
+
+             function Get50TopNews(number) {
+                 $("#Top50NewsTag").empty();
+                var url = "http://192.168.1.10:13311/api/tblHashTags/GetTop50Tag-@ViewBag.TagName-1-";
+                var page = number;
+                var combindUrl = url + page;
+
+                $.getJSON(combindUrl , function (result) {
+
+                    $.each(result, function (i, item) {
+
+                        var time = "14";
+
+                        var splitTitle = item.Title.replace("+", " ").replace("?", " ").replace("*", " ").replace(";", " ").replace(",", " ").replace(".", " ").replace(":", " ").replace("؛", " ").replace("؟", " ").replace("»", " ").replace("«", " ").replace("!", " ").replace("(", " ").replace(")", " ").replace("{", " ").replace("}", " ").replace("[", " ").replace("]", " ").replace("/", " ").replace("-", " ");
+
+                        var SeoUrl = splitTitle.split(" ");
+
+                        var url = "";
+
+                        for (var i = 0; i < SeoUrl.length; i++) {
+
+                            if (url.length > 80) {
+                                break;
+                            } else {
+                                url += SeoUrl[i] + '-';
+                            }
+                        }
+
+                        var $liTopNews = "<li><div class=\"item clearfix\"><div class=\"row\"><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"float-left cursor-pointer\"><i class=\"fa fa-thumbs-o-up Like\" aria-hidden=\"true\"></i><span class=\"font-size-12\">" + item.Likes + "+</span></li></ul></div><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"float-left cursor-pointer\"><i class=\"fa fa-thumbs-o-down UnLike\" aria-hidden=\"true\"></i><span class=\"font-size-12\">" + item.Unlike + "-</span></li></ul></div><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-11\">" + time + " ساعت قبل</li></ul></div><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-12\">" + item.RssName + "</li></ul></div><div class=\"col-md-8 col-xs-8 col-sm-8  no-padding\"><div><div class=\"boxin-right\"><span class=\"fa fa-angle-double-left HomeBoxes\" aria-hidden=\"true\"></span></div><h1 class=\"titleNews\"><a href=\"/fa/News/Sport/" + item.NewsID + "/" + url + "\" target=\"_blank\" >" + item.Title + "</a></h1></div></div></div></div></li>";
+                        $("#Top50NewsTag").append($liTopNews);
+                    });
+                });
+            };
+
+
+              var dataStore = (function () {
+                 var xml;
+
+                 $.ajax({
+                     type: "GET",
+                     url: "http://192.168.1.10:13311/api/Pageination/Tag-@ViewBag.TagName",
+                     success: function (data) {
+
+                         console.log(data);
+                         if (data >= 500) {
+                             data = 500;
+                         }
+
+                         $("#altLists").asPaginator(data
+                             , {
+
+                                 currentPage: data / 4,
+                                 itemsPerPage: 50,
+                                 visibleNum: 4,
+                                 resizeThrottle: 250,
+
+                                 tpl: function () {
+                                     return '<ul>{{first}}{{prev}}{{altLists}}{{next}}{{last}}</ul>';
+                                 },
+                                 components: {
+                                     first: true,
+                                     prev: true,
+                                     next: true,
+                                     last: true,
+                                     altLists: true
+                                 },
+                                 onChange: function (page) {
+                                     //var url = '' + page;
+                                     //console.log('ajax request' + url)
+                                     //$.ajax({
+                                     //    url: url,
+                                     //    dataType: 'json',
+                                     //    success: function (data) {
+                                     //        alert(this.data)
+                                     //    }
+                                     //})
+                                     var pageid = page - 1;
+                                     console.log(pageid);
+                                     Get50TopNews(pageid);
+                                 }
+                             });
+                     }
+                 });
+
+                 return {
+                     getXml: function () {
+                         if (xml) return xml;
+                         // else show some error that it isn't loaded yet;
+                     }
+                 };
+            })();
+
+        });
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+        var graphdata1 = {
+            linecolor: "Random",
+            title: "ماه",
+            values: [
+                { X: "20 مهر", Y: 300 },
+                { X: "21 مهر", Y: 101 },
+                { X: "22 مهر", Y: 310 },
+                { X: "23 مهر", Y: 401 },
+                { X: "24 مهر", Y: 151 },
+                { X: "25 مهر", Y: 205 },
+                { X: "26 مهر", Y: 200 },
+                { X: "27 مهر", Y: 107 },
+                { X: "28 مهر", Y: 201 },
+                { X: "29 مهر", Y: 401 },
+                { X: "30 مهر", Y: 387 },
+                { X: "31 مهر", Y: 318 },
+                { X: "1 آبان", Y: 200 },
+                { X: "2 آبان", Y: 150 },
+                { X: "3 آبان", Y: 140 },
+                { X: "4 آبان", Y: 140 },
+                { X: "5 آبان", Y: 137 },
+                { X: "6 آبان", Y: 181 }
+            ]
+        };
+
+        $(function () {
+
+            $("#Hybridgraph").SimpleChart({
+                ChartType: "Hybrid",
+                toolwidth: "50",
+                toolheight: "25",
+                axiscolor: "#E6E6E6",
+                textcolor: "#6E6E6E",
+                showlegends: false,
+                data: [graphdata1],
+                legendsize: "140",
+                legendposition: 'bottom',
+                xaxislabel: 'روز',
+                yaxislabel: 'تعداد اخبار'
+            });
+
+        });
+
+</script>
+
+
+    <script>
+        kamaDatepicker('datefrom', {
+            nextButtonIcon: "timeir_next.png"
+            , previousButtonIcon: "timeir_prev.png"
+            , forceFarsiDigits: true
+            , markToday: true
+            , markHolidays: true
+            , highlightSelectedDay: true
+            , sync: true
+        });
+
+        kamaDatepicker('dateend', {
+            nextButtonIcon: "timeir_next.png"
+            , previousButtonIcon: "timeir_prev.png"
+            , forceFarsiDigits: true
+            , markToday: true
+            , markHolidays: true
+            , highlightSelectedDay: true
+            , sync: true
+        });
+    </script>
 }
