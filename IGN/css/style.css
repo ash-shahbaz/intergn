@@ -1910,6 +1910,8 @@ ul.page-numbers li:hover {
 
         .widget-title:first-child span {
             padding: 5px !important;
+            position: inherit;
+            height: auto;
         }
 
     .widget-title span {

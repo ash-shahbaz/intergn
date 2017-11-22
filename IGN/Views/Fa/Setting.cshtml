@@ -74,14 +74,9 @@
                 <div class="row margin-top-15">
                     <div class="col-md-9">
                         <div class="search-box ">
-                            <form class="clearfix subscribe-form__form" />
-                            <span class="form-group">
-                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
-            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
-            this.value = '';" value="تغییر تصویر" />
-                            </span>
+                            
+                            <a id="LoginInfo" href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-toggle="modal" data-target="#ChangePassModal"><i class="login-icon fa fa-user"></i>تغییر تصویر</a>
 
-                            </form>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -92,7 +87,7 @@
                 <div class="row margin-top-15">
                     <div class="col-md-9">
 
-                        <a id="LoginInfo" href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-toggle="modal" data-target="#ChangePassModal"><i class="login-icon fa fa-user"></i>تغییر</a>
+                        <a id="LoginInfo" href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-toggle="modal" data-target="#ChangePassModal"><i class="login-icon fa fa-user"></i>تغییر رمز عبور</a>
 
 
 
@@ -215,16 +210,15 @@
                 </div>
                 <div class="row margin-top-15">
                     <div class="col-md-9">
-                        <div class="search-box ">
-                            <form class="clearfix subscribe-form__form" />
-                            <span class="form-group">
-                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
-            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
-            this.value = '';" value="پرایویت" />
-                            </span>
-
-                            </form>
-                        </div>
+                        <form>
+                            <div class="">
+                                <select class="">
+                                    <option value=""></option>
+                                    <option value="Public">عمومی</option>
+                                    <option value="Private">خصوصی</option>
+                                </select>
+                            </div>
+                        </form>
                     </div>
                     <div class="col-md-3">
                         <span>وضعیت اکانت:</span>
