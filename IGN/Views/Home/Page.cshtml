@@ -209,7 +209,7 @@
                         <div class="rkmd-checkbox checkbox-ripple">
                             <span class="md-checkbox">
                                 <i class="size-chkbxico fa fa-desktop fa-lg"></i>
-                                <input id="iTec" class="display-none" type="checkbox">
+                                <input id="iTec" class="display-none ckhTrend" accesskey="5" type="checkbox">
                                 <label for="iTec">فناوری</label>
                             </span>
                         </div>
@@ -218,7 +218,7 @@
                         <div class="rkmd-checkbox checkbox-ripple">
                             <span class="md-checkbox">
                                 <i class="size-chkbxico fa fa-medkit fa-lg"></i>
-                                <input id="iSci" class="display-none" type="checkbox">
+                                <input id="iSci" class="display-none ckhTrend" accesskey="1" type="checkbox">
                                 <label for="iSci">علمی پزشکی</label>
                             </span>
                         </div>
@@ -227,7 +227,7 @@
                         <div class="rkmd-checkbox checkbox-ripple">
                             <span class="md-checkbox">
                                 <i class="size-chkbxico fa fa-address-card-o fa-lg"></i>
-                                <input id="iJob" class="display-none" type="checkbox">
+                                <input id="iJob" class="display-none ckhTrend" accesskey="2" type="checkbox">
                                 <label for="iJob">استخدام</label>
                             </span>
                         </div>
@@ -236,7 +236,7 @@
                         <div class="rkmd-checkbox checkbox-ripple">
                             <span class="md-checkbox">
                                 <i class="size-chkbxico fa fa-picture-o fa-lg"></i>
-                                <input id="iPic" class="display-none" type="checkbox">
+                                <input id="iPic" class="display-none ckhTrend" accesskey="3" type="checkbox">
                                 <label for="iPic">تصویری</label>
                             </span>
                         </div>
@@ -1741,14 +1741,55 @@
 
     <script>
 
-        //function showDiv(pageid) {
-        //    alert(pageid);
 
-
-
-
-
+        //function triggerChange() {
+        //    $(".ckhTrend").trigger("change");
         //}
+        //triggerChange();
+
+        var arrCheckBoxTrend = [];
+        $(".ckhTrend").change(function () {
+
+            var qaccekey = $(this).attr("accessKey");
+
+            var added = false;
+
+            if (arrCheckBoxTrend.length == 0) {
+                arrCheckBoxTrend.push({ arrKey: $(this).attr("accessKey"), arrName: $(this).attr("id") });
+            }
+            else {
+
+
+
+                for (var i = 0; i < arrCheckBoxTrend.length; i++) {
+                    if (arrCheckBoxTrend[i].arrKey == qaccekey) {
+                        remove(arrCheckBoxTrend,i);
+                        added = false;
+                        break;
+                    } else {
+
+                        var ackey = $(this).attr("accessKey");
+                        var id = $(this).attr("id");
+                        arrCheckBoxTrend.push({ arrKey: ackey, arrName: id });
+                        break;
+                    }
+                }
+
+               
+               
+        
+            }
+
+
+            console.log(arrCheckBoxTrend);
+
+            alert("triggered!");
+        });
+
+        function remove(array, element) {
+            const index = array.indexOf(element);
+            array.splice(index, 1);
+        }
 
 
          function LoadUserWallPages(pageid) {
