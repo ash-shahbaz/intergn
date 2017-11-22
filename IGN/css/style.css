@@ -3418,18 +3418,22 @@ blockquote {
     border-bottom: 1px solid black !important;
     font-weight: 500 !important;
 }
-.margin-top-15{
+
+.margin-top-15 {
     margin-top: 15px !important;
 }
+
 .display-none {
-display: none
+    display: none
 }
+
 .size-chkbxico {
     width: auto;
     height: auto;
     top: 1px;
     margin-right: 25px;
 }
+
 .md-checkbox {
     position: relative;
     margin: 16px 0;
@@ -3481,7 +3485,7 @@ display: none
 
 
 
-        /*--------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
 
 
 .circle_profile {
@@ -3553,4 +3557,171 @@ display: none
 
 
 
-/*--------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------start tabs-------------------------------------------------------*/
+
+
+.maintabs {
+    padding: 10px 6px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.sectiontabs {
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+}
+
+
+@media screen and (max-width: 650px) {
+    .lbltabs {
+        font-size: 0;
+    }
+
+        .lbltabs:before {
+            margin: 0;
+            font-size: 18px;
+        }
+
+    .tabLink {
+        font-size: 0;
+    }
+
+        .tabLink:before {
+            margin: 0;
+            font-size: 18px;
+        }
+}
+
+@media screen and (max-width: 400px) {
+    .lbltabs {
+        padding: 15px;
+    }
+
+    .tabLink {
+        padding: 15px;
+    }
+}
+
+/*-----------------*/
+
+.lbltabs {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 5px 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    border: 1px solid transparent;
+}
+
+    .lbltabs:before {
+        font-family: fontawesome;
+        font-weight: normal;
+        margin-left: 10px;
+    }
+
+    .lbltabs[for*='1']:before {
+        content: '\f1cb';
+    }
+
+    .lbltabs[for*='2']:before {
+        content: '\f17d';
+    }
+
+    .lbltabs[for*='3']:before {
+        content: '\f16b';
+    }
+
+    .lbltabs[for*='4']:before {
+        content: '\f1a9';
+    }
+
+    .lbltabs:hover {
+        color: #888;
+        cursor: pointer;
+    }
+
+
+input:checked + .lbltabs {
+    color: #555;
+    border: 1px solid #ddd;
+    border-top: 2px solid orange;
+    border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+    display: block;
+}
+
+/*------------------------------------------------------*/
+.mainLinktabs {
+    padding: 10px 6px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.sectionLinkTabs {
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+}
+
+.tabLink {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 5px 5px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    border: 1px solid transparent;
+}
+
+
+    .tabLink:before {
+        font-family: fontawesome;
+        font-weight: normal;
+        margin-left: 5px;
+    }
+
+    .tabLink[for*='1']:before {
+        content: '\f1cb';
+    }
+
+    .tabLink[for*='2']:before {
+        content: '\f17d';
+    }
+
+    .tabLink[for*='3']:before {
+        content: '\f16b';
+    }
+
+    .tabLink[for*='4']:before {
+        content: '\f1a9';
+    }
+
+    .tabLink:hover {
+        color: #888;
+        cursor: pointer;
+    }
+
+
+input:checked + .tabLink {
+    color: #555;
+    border: 1px solid #ddd;
+    border-top: 2px solid orange;
+    border-bottom: 1px solid #fff;
+}
+
+#tabLink1:checked ~ #Link1,
+#tabLink2:checked ~ #Link2,
+#tabLink3:checked ~ #Link3,
+#tabLink4:checked ~ #Link4 {
+    display: block;
+}
+
+
+/*-------------------------------------------end tabs-------------------------------------------------------*/
