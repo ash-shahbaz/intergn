@@ -4,13 +4,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>PostSent</h2>
-
-@{
-    ViewBag.Title = "BackLinkAdd";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
 
 @section Head
 {
@@ -65,7 +58,7 @@
     <div class="col-md-10">
 
         <div class="widget widget-news card">
-            <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اضافه کردن لینک</h2>
+            <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>ارسال مطلب جدید</h2>
             <div class="widget-content">
 
                 <div class="row">
@@ -83,35 +76,32 @@
 
                                         </p>
                                         <p>
-                                            <span>"عدم رعايت هر کدام از موارد، منجر به حذف لينک شما خواهد شد"</span>
+                                            <span>"عدم رعايت هر کدام از موارد، منجر به حذف پست شما خواهد شد"</span>
                                         </p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="eventbllink">
                                         <span>
-                                            1. از عدم وجود لينک مورد نظر در فهرست
+                                            1. از عدم وجود پست مورد نظر در مطالب
                                             <a href="http://www.IGreenNews.com/"> IGreenNews</a>، اطمينان حاصل کنيد. ( از
                                             طريق <a target="_blank" href="http://www.IGreenNews.com/fa/links">
-                                                جستجوي
-                                            </a> نام و يا آدرس لينک )
+                                                جستجو
+                                            </a> )
                                         </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="oddtbllink">
                                         <span>
-                                            2. لينک مورد نظرتان را فقط يکبار و تنها در يک بخش
-                                            ثبت کنيد و از ثبت مجدد آن با نام بخشهاي مختلف همان سايت خودداری کنيد.
+                                            2. مطلب مورد نظرتان را فقط يکبار ثبت کنيد و از ثبت مجدد آن جدا خودداری کنيد.
                                         </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="eventbllink">
                                         <span>
-                                            3.نام
-                                            سايت ها و وبلاگ ها بايد دارای عناوين مناسبي باشند و نام هايي مانند:
-                                            کامپيوتر، اينترنت، شعر، آموزش يا مشابه اينها پذيرفته نمي شوند.
+                                            3.مطالبی که شامل موارد غیر اخلاقی باشند حذف شده و کاربری که موارد را ارسال کرده باشد تا 24 ساعت قادر به ارسال مطلب نمی باشد.
                                         </span>
                                     </td>
                                 </tr>
@@ -120,7 +110,7 @@
                                         <span>
                                             4.
                                             <a href="http://www.IGreenNews.com">IGreenNews</a>،
-                                            در پذيرش و يا حذف لينکهاي ثبت شده در
+                                            در پذيرش و يا حذف مطالب ثبت شده در
                                             <a href="http://www.IGreenNews.com">اين سايت</a> آزاد است.
                                         </span>
                                     </td>
@@ -141,30 +131,6 @@
 
                 <div class="row margin-top-15">
                     <div class="col-md-9">
-
-
-                        <form>
-                            <div class="">
-                                <select class="">
-                                    <option value="">(انتخاب یک دسته بندی)</option>
-                                    <option value="sport">ورزشی</option>
-                                    <option value="politics">سیاسی</option>
-                                    <option value="social">اجتماعی</option>
-                                    <option value="option4">.</option>
-                                    <option value="option5">1</option>
-                                </select>
-                            </div>
-                        </form>
-
-
-                    </div>
-                    <div class="col-md-3">
-                        <span>دسته بندی</span>
-
-                    </div>
-                </div>
-                <div class="row margin-top-15">
-                    <div class="col-md-9">
                         <div class="search-box ">
                             <form class="clearfix subscribe-form__form" />
                             <span class="form-group">
@@ -178,72 +144,18 @@
                         <div><span>* از جملات توصيفي و تبليغاتي براي نام لينک استفاده نکنيد.</span></div>
                     </div>
                     <div class="col-md-3">
-                        <span>نام لينک:</span>
+                        <span>عنوان:</span>
 
                     </div>
                 </div>
-                <div class="row margin-top-15">
-                    <div class="col-md-9">
-                        <div class="search-box ">
-                            <form class="clearfix subscribe-form__form" />
-                            <span class="form-group">
-                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
-            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
-            this.value = '';" value="http://" />
-                            </span>
 
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <span>آدرس لينک:</span>
-
-                    </div>
-                </div>
-                <div class="row margin-top-15">
-                    <div class="col-md-9">
-                        <div class="search-box ">
-                            <form class="clearfix subscribe-form__form" />
-                            <span class="form-group">
-                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
-            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
-            this.value = '';" value="" />
-                            </span>
-
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <span>ایمیل:</span>
-
-                    </div>
-                </div>
-                <div class="row margin-top-15">
-                    <div class="col-md-9">
-                        <div class="search-box ">
-                            <form class="clearfix subscribe-form__form" />
-                            <span class="form-group">
-                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
-            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
-            this.value = '';" value="" />
-                            </span>
-
-                            </form>
-                        </div>
-                        <div><span>* کلمات را با يک فاصله از هم جدا کنيد. لطفا از ويرگول استفاده نکنيد.</span></div>
-                        <div><span>* کلمات کليدی، صرفا جهت جستجو به کار مي‌روند و نمايش داده نمي‌شوند.</span></div>
-                    </div>
-                    <div class="col-md-3">
-                        <span>کلمات کلیدی:</span>
-
-                    </div>
-                </div>
+               
                 <div class="row margin-top-15">
                     <div class="col-md-9">
                         <div class="form-group">
                             <textarea class="form-control"></textarea>
                         </div>
-                        <div><span>* شرح مختصري درباره موضوع فعاليت سايت يا وبلاگ.</span></div>
+                        <div><span>* شرح مطلب.</span></div>
                         <div><span>* از جملات تبليغاتي استفاده نکنيد.</span></div>
                     </div>
                     <div class="col-md-3">
@@ -270,7 +182,7 @@
 
                 <div class="row margin-top-15">
                     <div class="col-md-12 sendbtn">
-                        <button id="AddLink" type="button" class="btn btn-accent shadow subscriber-form-btn">ثبت لینک</button>
+                        <button id="AddLink" type="button" class="btn btn-accent shadow subscriber-form-btn">ارسال مطلب</button>
 
                     </div>
                 </div>
