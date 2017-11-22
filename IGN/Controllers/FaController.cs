@@ -18,8 +18,12 @@ namespace IGN.Controllers
         {
             return View();
         }
+        public ActionResult NotificationSetting(string name)
+        {
+            ViewBag.CategoryName = name;
+            return View();
+        }
 
-       
         public ActionResult News(string CategoryName,string NewsID,string Title)
         {
             //var q = Utility.GetNewsByNewsID(NewsID);
@@ -53,50 +57,7 @@ namespace IGN.Controllers
             return View();
         }
 
-
-
-
-
-        public string Login(Users u )
-        {
-            Users user = u;
-            Session["user"] = u;
-            Utility.CurrentUser = u;
-            if (u.UserType == 0)
-            {
-                return new JavaScriptSerializer().Serialize(u);
-
-            }
-            else if (u.UserType == 1)
-            {
-                return new JavaScriptSerializer().Serialize(u);
-
-            }
-            else
-            {
-                return new JavaScriptSerializer().Serialize(u);
-            }
-        }
-      
-
-        public string CheckUser(string username,string pass)
-        {
-            return Utility.CallApiGetResultCheckUser(username, pass);
-        }
-
-
-
-
-
-
-
-
-
-        public ActionResult AboutUs(string id)
-        {
-            return View();
-        }
-
+       
         public ActionResult ContactUs(string id)
         {
             return View();
