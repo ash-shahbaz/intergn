@@ -839,7 +839,7 @@
                 data: { username: username, pass: pass },
                 cache: false,
                 success: function (result) {
-                    alert("sada");
+                 
                     var users = $.parseJSON(result);
                     jQuery.ajax({
                         type: "POST",
@@ -848,17 +848,13 @@
                         contentType: "application/json; charset=utf-8",
                         data: users,
                         success: function (data) {
-
-                            if (data != null && data != "undefined") {
-                                $("#LoginInfo").text(data.NickName);
-                                $(".close").click();
-                                $("#LPageID").attr('href', "/Home/Page/" + data.UserName + "")
-                                $("#LoginInfo").append("<i class=\"login- icon fa fa- user\"></i> <i class=\"login-icon fa fa-power-off\" ></i>");
-                            }
-                            
+                  
+                            var url = "/Home/Index";
+                            window.location.href = url; 
 
                         },
                         failure: function (errMsg) {
+                         
                             alert(errMsg);
                         }
                     });
