@@ -63,18 +63,29 @@
 
                             @{
 
-                               
-                                if (Utility.CurrentUser != null )
+
+                                if (Utility.CurrentUser != null)
                                 {
-                                    
-                                    <a id="Loginned" href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"><i class="login-icon fa fa-user"></i>@Utility.CurrentUser.NickName</a>
+
+                                    <a id="Loginned" href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                        <i class="login-icon fa fa-user"></i>
+
+
+                                        @Utility.CurrentUser.NickName
+
+                                        <i class="login-icon fa fa-power-off zindex1000"></i>
+                                    </a>
+
                                 }
                                 else
                                 {
-                                    <a id="LoginInfo" href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-toggle="modal" data-target="#loginFormModal"><i class="login-icon fa fa-user"></i>ورود</a>
+                                    <a id="LoginInfo" href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-toggle="modal" data-target="#loginFormModal">
+                                        <i class="login-icon fa fa-user"></i>ورود
+
+                                    </a>
                                 }
 
-                             }
+                            }
 
                         </li>
                     </ul>
@@ -190,87 +201,152 @@
                 </a>
             </div>
             <div class="scrollbar" id="style-1">
+                @{
 
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-home fa-lg"></i>
-                            <span class="nav-text">خانه</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-user fa-lg"></i>
-                            <span class="nav-text">ورود</span>
-                        </a>
-                    </li>
-                    <li class="darkerlishadow">
-                        @{
-
-                            if (Utility.CurrentUser != null)
-                            {
-                                
-                                <a href="/Home/Page/@Utility.CurrentUser.UserName">
-                                    <i class="fa fa-user-circle-o fa-lg"></i>
-                                    <span class="nav-text">صفحه من</span>
+                    if (Utility.CurrentUser != null)
+                    {
+                        <ul>
+                            <li>
+                                <a href="/Fa/Index">
+                                    <i class="fa fa-home fa-lg"></i>
+                                    <span class="nav-text">خانه</span>
                                 </a>
-                            }
-                            else
-                            {
-                                <a href="#">
-                                    <i class="fa fa-user-circle-o fa-lg"></i>
-                                    <span class="nav-text">صفحه من</span>
+                            </li>
+                            <li>
+                                <a href="/Fa/Setting/@Utility.CurrentUser.UserID">
+                                    <i class="fa fa-user fa-lg"></i>
+                                    <span class="nav-text"> سلام @Utility.CurrentUser.FirstName </span>
                                 </a>
-                            }
+                            </li>
+                            <li class="darkerlishadow">
+                                <a id="LPageID" href="/Home/Page/@Utility.CurrentUser.UserName">
+                                    <i class="fa fa-user-circle-o fa-lg"></i>
+                                    <span class="nav-text">صفحه اجتماعی من</span>
+                                </a>
+                            </li>
+                            <li class="darkerlishadowdown">
+                                <a href="/Fa/NewsFavorites/@Utility.CurrentUser.UserID">
+                                    <i class="fa fa-heart fa-lg"></i>
+                                    <span class="nav-text">علاقه مندی ها</span>
+                                </a>
+                            </li>
 
-                        }
-                    </li>
-                    <li class="darkerlishadowdown">
-                        <a href="#">
-                            <i class="fa fa-heart fa-lg"></i>
-                            <span class="nav-text">علاقه مندی ها</span>
-                        </a>
-                    </li>
+                            <li>
+                                <a href="/Fa/BackLinkAdd/@Utility.CurrentUser.UserID">
+                                    <i class="fa fa-link fa-lg"></i>
+                                    <span class="nav-text">ثبت بک لینک</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Fa/BackLinks/@Utility.CurrentUser.UserID">
+                                    <i class="fa fa-link fa-lg"></i>
+                                    <span class="nav-text">لینکستان</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Fa/PostSent/@Utility.CurrentUser.UserID">
+                                    <i class="fa fa-file-text fa-lg"></i>
+                                    <span class="nav-text">ارسال پست</span>
+                                </a>
+                            </li>
 
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-link fa-lg"></i>
-                            <span class="nav-text">ثبت بک لینک</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-file-text fa-lg"></i>
-                            <span class="nav-text">ارسال پست</span>
-                        </a>
-                    </li>
+                            <li class="darkerlishadow">
+                                <a href="/Fa/NewsFavorites/@Utility.CurrentUser.UserID">
+                                    <i class="fa fa-share-alt fa-lg"></i>
+                                    <span class="nav-text">اشتراک گذاری</span>
+                                </a>
+                            </li>
+                            <li class="darkerlishadowdown">
+                                <a href="/Fa/NotificationSetting/@Utility.CurrentUser.UserID">
+                                    <i class="fa fa-bullhorn fa-lg"></i>
+                                    <span class="nav-text">تنظیم اعلانات</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Fa/MyFriends/@Utility.CurrentUser.UserID">
+                                    <i class="fa fa-users fa-lg"></i>
+                                    <span class="nav-text">دوستان من</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Fa/Setting/@Utility.CurrentUser.UserID">
+                                    <i class="fa fa-cog fa-lg"></i>
+                                    <span class="nav-text">شخصی سازی</span>
+                                </a>
+                            </li>
+                        </ul>
+                    }
+                    else
+                    {
+                        <ul>
+                            <li>
+                                <a href="/Fa/Index">
+                                    <i class="fa fa-home fa-lg"></i>
+                                    <span class="nav-text">خانه</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#loginFormModal">
+                                    <i class="fa fa-user fa-lg"></i>
+                                    <span class="nav-text">ورود</span>
+                                </a>
+                            </li>
+                            <li class="darkerlishadow">
+                                <a href="#" data-toggle="modal" data-target="#loginFormModal">
+                                    <i class="fa fa-user-circle-o fa-lg"></i>
+                                    <span class="nav-text">صفحه اجتماعی من</span>
+                                </a>
 
-                    <li class="darkerlishadow">
-                        <a href="#">
-                            <i class="fa fa-share-alt fa-lg"></i>
-                            <span class="nav-text">اشتراک گذاری</span>
-                        </a>
-                    </li>
-                    <li class="darkerlishadowdown">
+                            </li>
+                            <li class="darkerlishadowdown">
+                                <a href="#" data-toggle="modal" data-target="#loginFormModal">
+                                    <i class="fa fa-heart fa-lg"></i>
+                                    <span class="nav-text">علاقه مندی ها</span>
+                                </a>
+                            </li>
 
-                        <a href="#">
-                            <i class="fa fa-bullhorn fa-lg"></i>
-                            <span class="nav-text">اعلانات</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-users fa-lg"></i>
-                            <span class="nav-text">دوستان من</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../fa/MyProfile">
-                            <i class="fa fa-cog fa-lg"></i>
-                            <span class="nav-text">شخصی سازی</span>
-                        </a>
-                    </li>
-                </ul>
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#loginFormModal">
+                                    <i class="fa fa-link fa-lg"></i>
+                                    <span class="nav-text">ثبت بک لینک</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#loginFormModal">
+                                    <i class="fa fa-file-text fa-lg"></i>
+                                    <span class="nav-text">ارسال پست</span>
+                                </a>
+                            </li>
+
+                            <li class="darkerlishadow">
+                                <a href="#" data-toggle="modal" data-target="#loginFormModal">
+                                    <i class="fa fa-share-alt fa-lg"></i>
+                                    <span class="nav-text">اشتراک گذاری</span>
+                                </a>
+                            </li>
+                            <li class="darkerlishadowdown">
+
+                                <a href="#" data-toggle="modal" data-target="#loginFormModal">
+                                    <i class="fa fa-bullhorn fa-lg"></i>
+                                    <span class="nav-text">تنظیم اعلانات</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#loginFormModal">
+                                    <i class="fa fa-users fa-lg"></i>
+                                    <span class="nav-text">دوستان من</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#loginFormModal">
+                                    <i class="fa fa-cog fa-lg"></i>
+                                    <span class="nav-text">تنظیمات</span>
+                                </a>
+                            </li>
+                        </ul>
+                    }
+
+                }
             </div>
 
         </nav>
@@ -412,19 +488,7 @@
 
 
 
-
-
-
-
-
         @RenderBody()
-
-
-
-
-
-
-
 
 
     </div>
@@ -491,6 +555,7 @@
     </div>
     <!-- bottom-sidebar -->
     <footer id="page-footer">
+        
         <div class="container">
             <div class="">
                 <div class="copy pull-left">
@@ -508,20 +573,17 @@
                 <div class="clearfix"></div>
             </div>
         </div>
+
     </footer>
+
+
     <!-- page footer -->
 
-    <span class="back-to-top fa fa-chevron-up"></span>
-
-
-
-
-
-
-
-
+            <span class="back-to-top fa fa-chevron-up"></span>
 
     <!-- Login Form Start -->
+    
+    
     <div class="modal fade" id="loginFormModal" tabindex="-1" role="dialog" aria-labelledby="loginForm">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -743,7 +805,20 @@
 <script>
 
     $(document).ready(function () {
+        $(".fa-power-off").unbind();
+        $(".fa-power-off").bind('click', function () {
+            
+            $.ajax({
+                type: 'GET',
+                url: '/Home/LogOut',
+                data: {},
+                cache: false,
+                success: function (result) {
 
+                }
+            });
+
+        });
 
 
         $("#btnLogin").click(function () {
@@ -757,37 +832,48 @@
 
 
         function CheckLogin(username, pass) {
-         
+
             $.ajax({
                 type: 'GET',
-                url: '/fa/CheckUser',
+                url: '/Home/CheckUser',
                 data: { username: username, pass: pass },
                 cache: false,
                 success: function (result) {
                     alert("sada");
                     var users = $.parseJSON(result);
-                      jQuery.ajax({
-                         type: "POST",
-                         url: "/fa/Login",
-                         dataType: "json",
-                         contentType: "application/json; charset=utf-8",
-                         data: users,
-                         success: function (data)
-                         {
-                          //   console.log(data);
-                            // alert(data.NickName)
-                             $("#LoginInfo").text(data.NickName);
-                             $(".close").click();
-                         },
-                         failure: function (errMsg) {
-                             alert(errMsg);
-                         }
-                     });
+                    jQuery.ajax({
+                        type: "POST",
+                        url: "/Home/Login",
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        data: users,
+                        success: function (data) {
 
+                            if (data != null && data != "undefined") {
+                                $("#LoginInfo").text(data.NickName);
+                                $(".close").click();
+                                $("#LPageID").attr('href', "/Home/Page/" + data.UserName + "")
+                                $("#LoginInfo").append("<i class=\"login- icon fa fa- user\"></i> <i class=\"login-icon fa fa-power-off\" ></i>");
+                            }
+                            
 
+                        },
+                        failure: function (errMsg) {
+                            alert(errMsg);
+                        }
+                    });
                 }
             });
         }
+
+
+
+
+
+
+
+
+
     });
 
 
