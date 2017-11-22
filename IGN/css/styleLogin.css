@@ -405,6 +405,74 @@ Author : themelooks.com
 }
 
 /*------------------------------------*\
+    7. ChangePass MODAL
+\*------------------------------------*/
+#ChangePassModal {
+    padding: 0 20px;
+}
+
+    #ChangePassModal .modal-dialog {
+        max-width: 360px;
+        margin: 30px auto;
+    }
+
+    #ChangePassModal .modal-content {
+        background-color: transparent;
+    }
+
+.ChangePass .mdl-card {
+    width: auto;
+}
+
+.ChangePass .mdl-card__title {
+    padding-top: 0;
+}
+
+    .ChangePass .mdl-card__title .modal--logo {
+        display: block;
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+        padding: 15px;
+        border-radius: 2px;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    }
+
+.ChangePass .mdl-card__supporting-text {
+    width: 100%;
+}
+
+#ChangePass input {
+    outline: 0;
+}
+
+#ChangePass label {
+    margin-bottom: 0;
+    font-weight: 100;
+    color: #737373;
+}
+
+#ChangePass input.error + label:after {
+    background-color: #ff5252;
+    left: 0;
+    width: 100%;
+    visibility: visible;
+}
+
+#ChangePass .mdl-textfield {
+    width: 100%;
+}
+
+.ChangePass .mdl-card__actions {
+    margin-top: 5px;
+}
+
+    .ChangePass .mdl-card__actions a {
+        font-size: 12px;
+    }
+
+
+/*------------------------------------*\
     8. CONTACT MODAL
 \*------------------------------------*/
 #contactFormModal {
@@ -496,12 +564,17 @@ Author : themelooks.com
         font-size: 11px;
         padding: 0 10px;
     }
-	
-	#banner {
-		position: relative;
-		height: auto;
-		min-height: 100%;
-	}
+    .ChangePass .mdl-card__actions a {
+        font-size: 11px;
+        padding: 0 10px;
+    }
+
+
+     #banner {
+        position: relative;
+        height: auto;
+        min-height: 100%;
+    }
 	.banner-content h2 {
 		font-size: 34px;
 		line-height: 38px;
