@@ -661,16 +661,18 @@
 
             <div id="sliderFrame">
                 <div id="slider">
-                    <a href="http://www.greenoptimizer.com" target="_blank"><img src="~/images/image-slider-1.jpg" alt="عکس شماره اول" /><h4 class="descslider">حکمی که دایی برای بازیکن پرسپولیس داد</h4></a>
-                    <a href="http://www.greenoptimizer.com" target="_blank"><img src="~/images/image-slider-2.jpg" alt="عکس شماره دوم" /><h4 class="descslider">مهاجم جدید استقلال از راه رسید</h4></a>
-                    <a href="http://www.greenoptimizer.com" target="_blank"><img src="~/images/image-slider-3.jpg" alt="عکس شماره سوم" /><h4 class="descslider">حکمی که دایی برای بازیکن پرسپولیس داد</h4></a>
-                    <a href="http://www.greenoptimizer.com" target="_blank"><img src="~/images/image-slider-4.jpg" alt="عکس شماره دو" /><h4 class="descslider">مهاجم جدید استقلال از راه رسید</h4></a>
+                @*<a class="aInSlider" href="http://www.greenoptimizer.com" target="_blank"><img src="~/images/image-slider-2.jpg" alt="عکس شماره دوم" /><h4 class="descslider">مهاجم جدید استقلال از راه رسید</h4></a>
+                <a class="aInSlider" href="http://www.greenoptimizer.com" target="_blank"><img src="~/images/image-slider-2.jpg" alt="عکس شماره دوم" /><h4 class="descslider">مهاجم جدید استقلال از راه رسید</h4></a>
+                <a class="aInSlider" href="http://www.greenoptimizer.com" target="_blank"><img src="~/images/image-slider-3.jpg" alt="عکس شماره سوم" /><h4 class="descslider">حکمی که دایی برای بازیکن پرسپولیس داد</h4></a>
+                <a class="aInSlider" href="http://www.greenoptimizer.com" target="_blank"><img src="~/images/image-slider-4.jpg" alt="عکس شماره دو" /><h4 class="descslider">مهاجم جدید استقلال از راه رسید</h4></a>*@
+               
+                
                 </div>
                 <!--thumbnails-->
                 <div id="thumbs">
-                    <div class="thumb">
-                        <div class="frame"><img src="~/images/thumb1.jpg" /></div>
-                        <div class="thumb-content"><p>عکس شماره اول</p>حکمی که دایی برای بازیکن پرسپولیس داد</div>
+                    @*<div class="thumb">
+                        <div class="frame"><img src="~/images/thumb2.jpg" /></div>
+                        <div class="thumb-content"><p>عکس شماره دوم</p>مهاجم جدید استقلال از راه رسید</div>
                         <div style="clear:both;"></div>
                     </div>
                     <div class="thumb">
@@ -687,7 +689,9 @@
                         <div class="frame"><img src="~/images/thumb4.jpg" /></div>
                         <div class="thumb-content"><p>عکس شماره دو</p>مهاجم جدید استقلال از راه رسید</div>
                         <div style="clear:both;"></div>
-                    </div>
+                    </div>*@
+
+
                 </div>
 
                 <div style="clear:both;height:0;"></div>
@@ -2041,6 +2045,7 @@
 
 
             GetAllNewsTop10();
+            GetTopItemSlider();
 
             function GetAllNewsTop10() {
 
@@ -2053,6 +2058,51 @@
 
                 });
             };
+
+
+
+            function GetTopItemSlider() {
+
+
+                $.getJSON("http://192.168.1.10:13311/api/Slider/1-0", function (result) {
+
+
+                    for (var i = 0; i < result.length; i++) {
+
+                        $.getJSON("http://192.168.1.10:13311/api/tblNews/" + result[i].NewsID + "", function (data) {
+
+                            
+                            var $htmDesc = data[0].Description;
+
+                            //console.log($htmDesc);
+
+
+                            //$("#slider").find()
+                            console.log("--Desc--")
+                            console.log($(data[0].Description))
+
+
+                            var firstImage = $(data[0].Description).find("img:first").attr("src");
+                            console.log("---f Image Find-")
+                            console.log(firstImage);
+
+                            var $taga = "<a href=\"" + data[0].Link + "\" target=\"_blank\"><img src=\"" + firstImage + "\" alt=\"" +"" + "\" /><h4 class=\"descslider\">" + data[0].Title + "</h4></a>";
+                            $("#slider").append($taga);
+
+                            var $thumb = "<div class=\"thumb\"><div class=\"frame\"><img src=\"" + firstImage + "\" /></div><div class=\"thumb-content\"><p>" + "حروف" + "</p>" + "s" + "</div><div style=\"clear:both;\"></div></div>"
+                            $("#thumbs").append($thumb);
+
+
+
+                        });
+
+                    }
+
+
+                });
+
+            }
+
 
 
 
