@@ -4,5 +4,1364 @@
     Layout = "~/Views/Shared/_Layout-Admin.cshtml";
 }
 
-<h2>Index</h2>
+@section Head
+{
 
+}
+
+
+
+
+<div class="main-top">
+
+    <div class="row">
+
+        <div class="col-md-12">
+
+
+            <div class="widget widget-news card">
+
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>نمودار بازدیدها</h2>
+                <div class="widget-content">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-accent shadow subscriber-form-btn">نمایش دادن</button>
+
+                        </div>
+                        <div class="col-md-4">
+                            <form>
+                                <div class="">
+                                    <select class="">
+                                        <option value="day">روز</option>
+                                        <option value="week">هفته</option>
+                                        <option value="mounth">ماه</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4 float-right">
+                            <span>نوع نمایش:</span>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="Hybridgraph" style="width: 98%; height: 300px">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15">
+                        <div class="col-md-5">
+                            <span class="trendtitle">صفحه مورد بازدید</span>
+                        </div>
+                        <div class="col-md-2">
+
+                            <span class="trendtitle">لينک دهنده:</span>
+                        </div>
+                        <div class="col-md-1">
+                            <span class="trendtitle">رزولوشن بازدید کننده</span>
+                        </div>
+                        <div class="col-md-1">
+                            <span class="trendtitle">مرورگر بازدید کننده</span>
+                        </div>
+                        <div class="col-md-1">
+                            <span class="trendtitle">دفعات گذشته بازدید</span>
+                        </div>
+                        <div class="col-md-1">
+
+                            <span class="trendtitle">تاریخ و ساعت</span>
+                        </div>
+
+                        <div class="col-md-1">
+
+                            <span class="trendtitle">کشور و IP</span>
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15 padding-bottom-20 ">
+                        <div class="col-md-5 dir-ltr">
+                            <a class="font-size-10" href=" https://greenoptimizer.com/Home/ArticleDetails/8216|تنظیم-کردن-ارتفاع-و-عرض-Layout-در-اندروید"> https://greenoptimizer.com/Home/ArticleDetails/8216|تنظیم-کردن-ارتفاع-و-عرض-Layout-در-اندروید</a>
+                        </div>
+                        <div class="col-md-2 dir-ltr">
+                            <a class="font-size-10" href="https://www.bing.com">www.bing.com</a>
+                        </div>
+                        <div class="col-md-1">
+                            <span>1680x1050</span>
+                        </div>
+                        <div class="col-md-1">
+                            <span>chormoe</span>
+                        </div>
+                        <div class="col-md-1">
+                            <span>1 بار</span>
+                        </div>
+                        <div class="col-md-1">
+                            <span class="font-size-10">96/9/2 08:37</span>
+                        </div>
+                        <div class="col-md-1">
+                            <span class="font-size-10">5.52.205.172 iran</span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="row ">
+
+        <div class="col-md-4">
+
+            <div class="widget widget-news card">
+
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>مهم ترین ها</h2>
+
+
+
+
+                <main class="mainLinktabs">
+
+                    <input id="tabLink1" type="radio" class="display-none" name="linktabs" checked>
+                    <label class="tabLink" for="tabLink1">موتور جستجو</label>
+
+                    <input id="tabLink2" type="radio" class="display-none" name="linktabs">
+                    <label class="tabLink" for="tabLink2">جستجو در موتور</label>
+
+                    <input id="tabLink3" type="radio" class="display-none" name="linktabs">
+                    <label class="tabLink" for="tabLink3">جستجو در سایت</label>
+
+                    <input id="tabLink4" type="radio" class="display-none" name="linktabs">
+                    <label class="tabLink" for="tabLink4">بیشترین کاربر لاگین</label>
+
+                    <section class="sectionLinkTabs" id="Link1">
+
+                        <div class="widget-content">
+
+                            <div class="row margin-top-15">
+                                <div class="col-md-2">
+                                    <span class="trendtitle">کل</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="trendtitle">ماه</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="trendtitle">هفته</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="trendtitle">دیروز</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="trendtitle">امروز</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="trendtitle">نام</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">2121</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">212</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">12</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">5</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">2</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="font-size-10">google</span>
+                                </div>
+                            </div>
+
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">2121</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">212</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">12</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">5</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">2</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="font-size-10">bing</span>
+                                </div>
+                            </div>
+
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">2121</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">212</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">12</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">5</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">2</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="font-size-10">yahoo</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                    </section>
+
+                    <section class="sectionLinkTabs" id="Link2">
+
+
+                        <div class="widget-content">
+
+                            <div class="row margin-top-15">
+                                <div class="col-md-3">
+                                    <span class="trendtitle">کل</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="trendtitle">ماه</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="trendtitle">هفته</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="trendtitle">امروز</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="trendtitle">عنوان</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-3">
+                                    <span class="font-size-10">2121</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">212</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">12</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">5</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">طارمی</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-3">
+                                    <span class="font-size-10">2121</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">212</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">12</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">5</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">پرسپولیس</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                    </section>
+
+                    <section class="sectionLinkTabs" id="Link3">
+
+                        <div class="widget-content">
+
+                            <div class="row margin-top-15">
+                                <div class="col-md-3">
+                                    <span class="trendtitle">کل</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="trendtitle">ماه</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="trendtitle">هفته</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="trendtitle">امروز</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="trendtitle">عنوان</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-3">
+                                    <span class="font-size-10">2121</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">212</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">12</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">5</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">طارمی</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-3">
+                                    <span class="font-size-10">2121</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">212</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">12</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">5</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">پرسپولیس</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </section>
+
+                    <section class="sectionLinkTabs" id="Link4">
+
+
+
+                        <div class="widget-content">
+
+                            <div class="row margin-top-15">
+                                <div class="col-md-3">
+                                    <span class="trendtitle">کل</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="trendtitle">ماه</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="trendtitle">هفته</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="trendtitle">امروز</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="trendtitle">یوزر</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-3">
+                                    <span class="font-size-10">2121</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">212</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">12</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">5</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">ahmad</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-3 ">
+                                    <span class="font-size-10">2121</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">212</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">12</span>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <span class="font-size-10">5</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">mohammad</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+                    </section>
+
+                </main>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="col-md-4">
+
+            <div class="widget widget-news card">
+
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>اطلاعات بازدیدها</h2>
+
+
+
+                <main class="maintabs">
+
+                    <input id="tab1" type="radio" class="display-none" name="tabs" checked>
+                    <label class="lbltabs" for="tab1">بازدیدهای کلی</label>
+
+
+                    <input id="tab3" type="radio" class="display-none" name="tabs">
+                    <label class="lbltabs" for="tab3">برترین لینک دهنده ها</label>
+
+                    <input id="tab4" type="radio" class="display-none" name="tabs">
+                    <label class="lbltabs" for="tab4">برترین کشورها</label>
+
+                    <section class="sectiontabs" id="content1">
+
+                        <div class="widget-content">
+
+                            <div class="row margin-top-15">
+                                <div class="col-md-3">
+                                    <span class="trendtitle">تعداد نفر</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="trendtitle">بازدید جدید</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="trendtitle">بازدید کل</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="trendtitle">تاریخ</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-3">
+                                    <span class="font-size-10">40</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">6</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">85</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">امروز</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-3">
+                                    <span class="font-size-10">40</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">6</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">85</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">دیروز</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-3">
+                                    <span class="font-size-10">40</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">6</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">85</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">پریروز</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-3">
+                                    <span class="font-size-10">40</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">6</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">85</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">هفته</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-3">
+                                    <span class="font-size-10">40</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">6</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">85</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">ماه</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 padding-bottom-20 ">
+                                <div class="col-md-3">
+                                    <span class="font-size-10">40</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">6</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">85</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="font-size-10">سال</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                    </section>
+
+
+                    <section class="sectiontabs" id="content3">
+
+                        <div class="widget-content">
+
+                            <div class="row margin-top-15">
+                                <div class="col-md-10">
+                                    <span class="trendtitle">آدرس صفحه</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="trendtitle">تعداد</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-10 dir-ltr">
+                                    <a class="font-size-10" href="https://www.google.com">www.google.com</a>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="font-size-10">9 بار</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 padding-bottom-20 ">
+                                <div class="col-md-10 dir-ltr">
+                                    <a class="font-size-10" href="https://www.bing.com">www.bing.com</a>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="font-size-10">4 بار</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </section>
+
+                    <section class="sectiontabs" id="content4">
+
+
+
+                        <div class="widget-content">
+
+                            <div class="row margin-top-15">
+                                <div class="col-md-4">
+                                    <span class="trendtitle">درصد</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="trendtitle">تعداد ورودی</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="trendtitle">کشور</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-4">
+                                    <span class="font-size-10">60%</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="font-size-10">8500</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="font-size-10">ایران</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-4">
+                                    <span class="font-size-10">60%</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="font-size-10">8500</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="font-size-10">آمریکا</span>
+                                </div>
+                            </div>
+
+                            <div class="row margin-top-15 ">
+                                <div class="col-md-4">
+                                    <span class="font-size-10">60%</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="font-size-10">8500</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="font-size-10">انگلیس</span>
+                                </div>
+                            </div>
+
+
+                            <div class="row margin-top-15 padding-bottom-20 ">
+                                <div class="col-md-4">
+                                    <span class="font-size-10">60%</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="font-size-10">8500</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="font-size-10">هند</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </section>
+
+                </main>
+
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="widget widget-news card">
+
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>کلیات</h2>
+
+
+                <div class="widget-content">
+
+                    <div class="row margin-top-15">
+                        <div class="col-md-2">
+                            <span class="trendtitle">کل</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="trendtitle">ماه</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="trendtitle">هفته</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="trendtitle">دیروز</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="trendtitle">امروز</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="trendtitle">تعداد</span>
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15 ">
+                        <div class="col-md-2">
+                            <span>2001</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>400</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>40</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>6</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>8</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="font-size-10">کاربران</span>
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15 ">
+                        <div class="col-md-2">
+                            <span>2001</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>400</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>40</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>6</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>8</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="font-size-10">ورود</span>
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15 ">
+                        <div class="col-md-2">
+                            <span>2001</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>400</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>40</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>6</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>8</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="font-size-10">پست</span>
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15 padding-bottom-20">
+                        <div class="col-md-2">
+                            <span>8895484</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>321501</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>80501</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>11701</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>10501</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="font-size-10">rss ها</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <div class="widget widget-news card">
+
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>تگ ها</h2>
+                <div class="widget-content">
+
+
+                    <div class="row margin-top-15">
+                        <div class="col-md-8">
+                            <form>
+                                <div class="">
+                                    <select class="">
+                                        <option value="">همه</option>
+                                        <option value="sport">ورزشی</option>
+                                        <option value="politics">سیاسی</option>
+                                    </select>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="col-md-4">
+                            <span class="font-size-10">دسته بندی:</span>
+
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15">
+                        <div class="col-md-5">
+                            <form>
+                                <div class="">
+                                    <select class="">
+                                        <option value="">روز</option>
+                                        <option value="">دیروز</option>
+                                        <option value="">هفته</option>
+                                        <option value="">ماه</option>
+                                        <option value="">سال</option>
+                                    </select>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="col-md-3">
+                            <form>
+                                <div class="">
+                                    <select class="">
+                                        <option value="">بیشترین بازدید</option>
+                                        <option value="">کم ترین بازدید</option>
+                                        <option value="">بیشترین رتبه</option>
+                                        <option value="">کمترین رتبه</option>
+                                    </select>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="col-md-4">
+                            <span class="font-size-10">مرتب سازی براساس کلیات:</span>
+                            <input type="radio" />
+
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15">
+                        <div class="col-md-5 dir-ltr">
+
+                            <button type="button" class="btn btn-accent shadow subscriber-form-btn">نمایش</button>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" name="search-text" class="form-control empty input-style width-45" value="5" />
+                        </div>
+                        <div class="col-md-4">
+                            <span class="font-size-10">مرتب سازی براساس یک rate:</span>
+                            <input type="radio" />
+                        </div>
+                    </div>
+
+
+                    <div class="row margin-top-15">
+                        <div class="col-md-2">
+                            <span class="trendtitle">rate</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="trendtitle">تعداد کل</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="trendtitle">تعداد ماه</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="trendtitle">تعداد هفته</span>
+                        </div>
+                        <div class="col-md-1">
+                            <span class="trendtitle">تعداد دیروز</span>
+                        </div>
+                        <div class="col-md-1">
+                            <span class="trendtitle">تعداد روز</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="trendtitle">عنوان</span>
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15 ">
+                        <div class="col-md-2">
+                            <span class="form-group">
+                                <input type="text" name="search-text" class="form-control empty input-style width-45" value="5" />
+                            </span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>2001</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>400</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>40</span>
+                        </div>
+                        <div class="col-md-1">
+                            <span>6</span>
+                        </div>
+                        <div class="col-md-1">
+                            <span>8</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="font-size-10">طارمی</span>
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15 ">
+                        <div class="col-md-2">
+                            <span class="form-group">
+                                <input type="text" name="search-text" class="form-control empty input-style width-45" value="5" />
+                            </span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>2001</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>400</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>40</span>
+                        </div>
+                        <div class="col-md-1">
+                            <span>6</span>
+                        </div>
+                        <div class="col-md-1">
+                            <span>8</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="font-size-10">طارمی</span>
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15 ">
+                        <div class="col-md-2">
+                            <span class="form-group">
+                                <input type="text" name="search-text" class="form-control empty input-style width-45" value="5" />
+                            </span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>2001</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>400</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>40</span>
+                        </div>
+                        <div class="col-md-1">
+                            <span>6</span>
+                        </div>
+                        <div class="col-md-1">
+                            <span>8</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="font-size-10">طارمی</span>
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15 padding-bottom-20 text-align-left">
+                        <div class="col-md-12">
+
+
+                            <button type="button" class="btn btn-accent shadow subscriber-form-btn">اعمال تغییرات جدید</button>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="col-md-6">
+
+            <div class="widget widget-news card">
+
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>پست ها </h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="search-box ">
+                            <form class="clearfix subscribe-form__form" />
+                            <span>فرد مشهور:</span>
+                            <span class="form-group">
+                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="مسی" />
+                            </span>
+                            <button type="button" class="btn btn-accent shadow subscriber-form-btn">جستجو</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="widget-content">
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="item clearfix">
+
+                                <div class="row">
+                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                        <ul class="SourceNews">
+                                            <li>ahmad</li>
+                                        </ul>
+                                        <button type="button" class="btn btn-accent shadow subscriber-form-btn">ویرایش</button>
+                                    </div>
+                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
+                                        <div>
+                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>                                            
+                                            <span class="form-group">
+                                                <input type="text" name="search-text" class="form-control empty input-style " value="مهاجم مسی از راه رسید" />
+                                                <textarea class="form-control margin-10">مهامهاجم مسی از راه رسیدجم مسمهاجم مسی از راه رسیدیمهاجم مسی از راه رسید از راه رسید</textarea>
+                                            </span>
+                                        </div>
+
+                                            
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="item clearfix">
+
+                                <div class="row">
+                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                        <ul class="SourceNews">
+                                            <li>مشرق نیوز</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
+                                        <div>
+                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                            <h1 class="titleNews">
+                                                <a href="#">مسی استقلال از راه رسید</a>
+                                            </h1>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item clearfix">
+
+                                <div class="row">
+                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                        <ul class="SourceNews">
+                                            <li>ahmad</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
+                                        <div>
+                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                            <h1 class="titleNews">
+                                                <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                            </h1>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="row">
+
+
+        <div class="col-md-4">
+
+            <div class="widget widget-news card">
+
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>پربازدید ترین اخبار</h2>
+                <div class="widget-content">
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="item clearfix">
+
+                                <div class="row">
+                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                        <ul class="SourceNews">
+                                            <li>مشرق نیوز</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
+                                        <div>
+                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                            <h1 class="titleNews">
+                                                <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                            </h1>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="item clearfix">
+
+                                <div class="row">
+                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                        <ul class="SourceNews">
+                                            <li>مشرق نیوز</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
+                                        <div>
+                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                            <h1 class="titleNews">
+                                                <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                            </h1>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item clearfix">
+
+                                <div class="row">
+                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                        <ul class="SourceNews">
+                                            <li>مشرق نیوز</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
+                                        <div>
+                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                            <h1 class="titleNews">
+                                                <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                            </h1>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item clearfix">
+
+                                <div class="row">
+                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                        <ul class="SourceNews">
+                                            <li>مشرق نیوز</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
+                                        <div>
+                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                            <h1 class="titleNews">
+                                                <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                            </h1>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item clearfix">
+
+                                <div class="row">
+                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                        <ul class="SourceNews">
+                                            <li>مشرق نیوز</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
+                                        <div>
+                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                            <h1 class="titleNews">
+                                                <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                            </h1>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item clearfix">
+
+                                <div class="row">
+                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                        <ul class="SourceNews">
+                                            <li>مشرق نیوز</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
+                                        <div>
+                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                            <h1 class="titleNews">
+                                                <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                            </h1>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="col-area-2 pull-left">
+
+
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+
+
+
+
+
+    @section Script
+    {
+
+
+        <script src="~/js/SimpleChart.js"></script>
+
+        <script>
+
+
+
+            var graphdata1 = {
+                linecolor: "Random",
+                title: "ماه",
+                values: [
+                    { X: "1", Y: 300 },
+                    { X: "2", Y: 101 },
+                    { X: "3", Y: 310 },
+                    { X: "4", Y: 200 },
+                    { X: "5", Y: 150 },
+                    { X: "6", Y: 140 },
+                    { X: "7", Y: 181 },
+                    { X: "8", Y: 140 },
+                    { X: "9", Y: 181 },
+                    { X: "10", Y: 140 },
+                    { X: "11", Y: 181 },
+                    { X: "12", Y: 140 },
+                    { X: "13", Y: 181 },
+                    { X: "14", Y: 181 },
+                    { X: "15", Y: 140 },
+                    { X: "16", Y: 181 },
+                    { X: "17", Y: 140 },
+                    { X: "18", Y: 181 },
+                    { X: "19", Y: 140 },
+                    { X: "20", Y: 181 },
+                    { X: "21", Y: 181 },
+                    { X: "22", Y: 140 },
+                    { X: "23", Y: 181 },
+                    { X: "24", Y: 181 },
+                    { X: "25", Y: 140 },
+                    { X: "26", Y: 181 },
+                    { X: "27", Y: 140 },
+                    { X: "28", Y: 181 },
+                    { X: "29", Y: 140 },
+                    { X: "30", Y: 181 }
+                ]
+            };
+
+            $(function () {
+
+                $("#Hybridgraph").SimpleChart({
+                    ChartType: "Hybrid",
+                    toolwidth: "50",
+                    toolheight: "25",
+                    axiscolor: "#E6E6E6",
+                    textcolor: "#6E6E6E",
+                    showlegends: false,
+                    data: [graphdata1],
+                    legendsize: "140",
+                    legendposition: 'bottom',
+                    xaxislabel: 'روز',
+                    yaxislabel: 'تعداد بازدید'
+                });
+
+            });
+
+        </script>
+
+
+    }
