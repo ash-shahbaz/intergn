@@ -420,7 +420,8 @@
     <script>
         $(document).ready(function () {
 
-
+            var TagSer = "@ViewBag.TagName";
+              SearchTagInAllNewsByInputKey(TagSer);
             Get50TopNews(0);
 
              function Get50TopNews(number) {
@@ -465,7 +466,7 @@
                      url: "http://192.168.1.10:13311/api/Pageination/Tag-@ViewBag.TagName",
                      success: function (data) {
 
-                         console.log(data);
+                         //console.log(data);
                          if (data >= 500) {
                              data = 500;
                          }
@@ -499,7 +500,7 @@
                                      //    }
                                      //})
                                      var pageid = page - 1;
-                                     console.log(pageid);
+                                     //console.log(pageid);
                                      Get50TopNews(pageid);
                                  }
                              });
@@ -515,60 +516,53 @@
             })();
 
         });
-    </script>
+
+
+        function SearchTagInAllNewsByInputKey(GetName) {
 
 
 
+            $.getJSON("http://192.168.1.10:13311/api/tblNews/SearchedKeyGetCount-" + GetName + "-Day", function (result) {
+
+                
+              
+
+                var DateCharts = [];
+                $.each(result[0], function (key, value) {
+                    DateCharts.push({ X: " روز قبل " + key, Y: value })
+                });
+
+                console.log(DateCharts)
 
 
+                var graphdata1 = {
+                    linecolor: "Random",
+                    title: "ماه",
+                    values: DateCharts
+                };
+
+                //$(function () {
+
+                $("#Hybridgraph").SimpleChart({
+                    ChartType: "Hybrid",
+                    toolwidth: "50",
+                    toolheight: "25",
+                    axiscolor: "#E6E6E6",
+                    textcolor: "#6E6E6E",
+                    showlegends: false,
+                    data: [graphdata1],
+                    legendsize: "140",
+                    legendposition: 'bottom',
+                    xaxislabel: 'روز',
+                    yaxislabel: 'تعداد اخبار'
+                });
+
+                
 
 
-
-
-    <script>
-        var graphdata1 = {
-            linecolor: "Random",
-            title: "ماه",
-            values: [
-                { X: "20 مهر", Y: 300 },
-                { X: "21 مهر", Y: 101 },
-                { X: "22 مهر", Y: 310 },
-                { X: "23 مهر", Y: 401 },
-                { X: "24 مهر", Y: 151 },
-                { X: "25 مهر", Y: 205 },
-                { X: "26 مهر", Y: 200 },
-                { X: "27 مهر", Y: 107 },
-                { X: "28 مهر", Y: 201 },
-                { X: "29 مهر", Y: 401 },
-                { X: "30 مهر", Y: 387 },
-                { X: "31 مهر", Y: 318 },
-                { X: "1 آبان", Y: 200 },
-                { X: "2 آبان", Y: 150 },
-                { X: "3 آبان", Y: 140 },
-                { X: "4 آبان", Y: 140 },
-                { X: "5 آبان", Y: 137 },
-                { X: "6 آبان", Y: 181 }
-            ]
-        };
-
-        $(function () {
-
-            $("#Hybridgraph").SimpleChart({
-                ChartType: "Hybrid",
-                toolwidth: "50",
-                toolheight: "25",
-                axiscolor: "#E6E6E6",
-                textcolor: "#6E6E6E",
-                showlegends: false,
-                data: [graphdata1],
-                legendsize: "140",
-                legendposition: 'bottom',
-                xaxislabel: 'روز',
-                yaxislabel: 'تعداد اخبار'
             });
-
-        });
-
+        }
+   
     </script>
 
 
