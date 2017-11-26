@@ -266,9 +266,9 @@
                 }
 
                     
-                var $ifra = "<iframe id=\"myframe\" name=\"myframe\" src=\"//" + url + "\" class=\"iframe\" frameborder=\"0\"></iframe>";
+                var $ifra = "<iframe id=\"myframe\" name=\"myframe\" src=\"" + result[0].Link + "\" class=\"iframe\" frameborder=\"0\"></iframe>";
                 
-                window.history.pushState("object or string", "Title",  urla);
+                //window.history.pushState("object or string", "Title",  urla);
                 $("#myBodyIf").append($ifra);
 
 

@@ -1,4 +1,4 @@
-﻿
+﻿@using IGN.Controllers;
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -69,140 +69,8 @@
                             <div class="widget widget-news">
 
                                 <div class="widget-content">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>767 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">مسی</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>2001 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">آیفون</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>17617 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">موتورولا</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>7086 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">آمریکا</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>82 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">طارمی</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>797 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">محمد</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
+                                    <ul class="list-unstyled" id="WeekTagNumber">
+                                     
                                     </ul>
                                 </div>
                                 <!-- widget content -->
@@ -217,140 +85,8 @@
                             <div class="widget widget-news">
 
                                 <div class="widget-content">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>7567 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">مسی</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>20501 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">رئیس جمهور</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>17517 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">ایران</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>7506 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">آمریکا</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>222 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">طارمی</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>997 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">محمد</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
+                                    <ul class="list-unstyled" id="MonthTagNumber">
+                                       
                                     </ul>
                                 </div>
                                 <!-- widget content -->
@@ -366,140 +102,8 @@
                             <div class="widget widget-news">
 
                                 <div class="widget-content">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>7567 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">مسی</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>20501 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">رئیس جمهور</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>17517 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">ایران</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>7506 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">آمریکا</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>222 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">طارمی</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item clearfix">
-
-                                                <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                                        <ul class="SourceNews">
-                                                            <li>997 خبر</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                                        <div>
-                                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                                            <h1 class="titleNews">
-                                                                <a href="#">محمد</a>
-                                                            </h1>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
+                                    <ul class="list-unstyled" id="YearTagNumber">
+                                      
                                     </ul>
                                 </div>
                             </div>
@@ -1914,8 +1518,11 @@
 
             GetAllNewsTop10();
             GetTopItemSlider();
-            GetTopTagDay();
-           
+            GetTopTag("Day");
+            GetTopTag("Week");
+            GetTopTag("Month");
+            GetTopTag("Year");
+
 
 
             function GetAllNewsTop10() {
@@ -1930,17 +1537,19 @@
                 });
             };
             
-            function GetTopTagDay() {
+            function GetTopTag(whichType) {
 
-                $.getJSON("http://192.168.1.10:13311/api/tblHashTags/GetTagTop10DWMY-Day", function (result) {
+                $.getJSON("http://192.168.1.10:13311/api/tblHashTags/GetTagTop10DWMY-" + whichType+"", function (result) {
                     
                     for (var i = 0; i < 6; i++) {
                         var url = "/fa/tag/" + result[i].HashtagName; 
-                        $("#DayTagNumber").append("<li><div class=\"item clearfix\" ><div class=\"row\"><div class=\"col-md-3 col-xs-3 col-sm-3 no-padding\"><ul class=\"SourceNews\"><li>" + result[i].repcount + " خبر</li></ul></div><div class=\"col-md-9 col-xs-9 col-sm-9  no-padding\"> <div><div class=\"boxin-right\"><span class=\"fa fa-angle-double-left HomeBoxes\" aria-hidden=\"true\"></span></div><h1 class=\"titleNews\"><a href=\""+url+"\">" + result[i].HashtagName + " </a></h1></div></div></div></div ></li>");
+                        $("#"+ whichType +"TagNumber").append("<li><div class=\"item clearfix\" ><div class=\"row\"><div class=\"col-md-3 col-xs-3 col-sm-3 no-padding\"><ul class=\"SourceNews\"><li>" + result[i].repcount + " خبر</li></ul></div><div class=\"col-md-9 col-xs-9 col-sm-9  no-padding\"> <div><div class=\"boxin-right\"><span class=\"fa fa-angle-double-left HomeBoxes\" aria-hidden=\"true\"></span></div><h1 class=\"titleNews\"><a href=\""+url+"\">" + result[i].HashtagName + " </a></h1></div></div></div></div ></li>");
                     }
-                    $(".txtSearch").val(result[0].HashtagName)
-                    //SearchTagInAllNewsByInputKey(result[0].HashtagName);
-
+                    $(".txtSearch").val(result[0].HashtagName);
+                    if (whichType == "Day") {
+                        SearchTagInAllNewsByInputKey(result[0].HashtagName);
+                    }
+                    
                 });
             };
 
@@ -1981,10 +1590,13 @@
             }
 
             function SearchTagInAllNewsByInputKey(GetName) {
+
+
+
                 $.getJSON("http://192.168.1.10:13311/api/tblNews/SearchedKeyGetCount-" + GetName + "-Day", function (result) {
 
-                    $("#Hybridgraph").html();
 
+                    console.log(result);
 
                     var graphdata1 = {
                         linecolor: "Random",
@@ -2000,7 +1612,7 @@
                     };
 
                     //$(function () {
-
+                 
                         $("#Hybridgraph").SimpleChart({
                             ChartType: "Hybrid",
                             toolwidth: "50",
@@ -2014,6 +1626,14 @@
                             xaxislabel: 'روز',
                             yaxislabel: 'تعداد اخبار'
                         });
+                    
+
+                      
+                      
+
+
+
+                      
 
                     //});
 
@@ -2027,7 +1647,12 @@
 
                 var GetName = $(".txtSearch").val();
                 if (GetName != null && GetName != "") {
-                    SearchTagInAllNewsByInputKey(GetName);
+
+                    
+
+                    var url = "/fa/tags/" + GetName;
+                        window.location.href = url;
+                 
                 }
 
             })
