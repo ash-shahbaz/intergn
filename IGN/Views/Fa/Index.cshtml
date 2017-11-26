@@ -1939,7 +1939,7 @@
                         $("#DayTagNumber").append("<li><div class=\"item clearfix\" ><div class=\"row\"><div class=\"col-md-3 col-xs-3 col-sm-3 no-padding\"><ul class=\"SourceNews\"><li>" + result[i].repcount + " خبر</li></ul></div><div class=\"col-md-9 col-xs-9 col-sm-9  no-padding\"> <div><div class=\"boxin-right\"><span class=\"fa fa-angle-double-left HomeBoxes\" aria-hidden=\"true\"></span></div><h1 class=\"titleNews\"><a href=\""+url+"\">" + result[i].HashtagName + " </a></h1></div></div></div></div ></li>");
                     }
                     $(".txtSearch").val(result[0].HashtagName)
-                    //SearchTagInAllNewsByInputKey(result[0].HashtagName);
+                    SearchTagInAllNewsByInputKey(result[0].HashtagName);
 
                 });
             };

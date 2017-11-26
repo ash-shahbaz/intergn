@@ -3728,6 +3728,7 @@ input:checked + .tabLink {
 .width-45{
     width: 45px;
 }
-.margin-10{
+.textareadesc {
     margin: 10px;
+    width: 400px;
 }

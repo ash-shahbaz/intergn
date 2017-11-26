@@ -6,7 +6,7 @@
 
 @section Head
 {
-
+    <link href="~/css/kamadatepicker.min.css" rel="stylesheet" />
 }
 
 
@@ -1034,21 +1034,7 @@
             <div class="widget widget-news card">
 
                 <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>پست ها </h2>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="search-box ">
-                            <form class="clearfix subscribe-form__form" />
-                            <span>فرد مشهور:</span>
-                            <span class="form-group">
-                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
-            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
-            this.value = '';" value="مسی" />
-                            </span>
-                            <button type="button" class="btn btn-accent shadow subscriber-form-btn">جستجو</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+
 
 
                 <div class="widget-content">
@@ -1061,38 +1047,22 @@
                                         <ul class="SourceNews">
                                             <li>ahmad</li>
                                         </ul>
-                                        <button type="button" class="btn btn-accent shadow subscriber-form-btn">ویرایش</button>
-                                    </div>
-                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
                                         <div>
-                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>                                            
-                                            <span class="form-group">
-                                                <input type="text" name="search-text" class="form-control empty input-style " value="مهاجم مسی از راه رسید" />
-                                                <textarea class="form-control margin-10">مهامهاجم مسی از راه رسیدجم مسمهاجم مسی از راه رسیدیمهاجم مسی از راه رسید از راه رسید</textarea>
-                                            </span>
+                                            <input type="radio" />
+                                            <span class="font-size-10">تایید بدون ویرایش</span>
                                         </div>
-
-                                            
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="item clearfix">
-
-                                <div class="row">
-                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                        <ul class="SourceNews">
-                                            <li>مشرق نیوز</li>
-                                        </ul>
+                                        <div>
+                                            <input type="radio" />
+                                            <span class="font-size-10">تایید همراه ویرایش</span>
+                                        </div>
                                     </div>
                                     <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
                                         <div>
                                             <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                            <h1 class="titleNews">
-                                                <a href="#">مسی استقلال از راه رسید</a>
-                                            </h1>
+                                            <span class="form-group">
+                                                <input type="text" name="search-text" class="form-control empty input-style " value="مهاجم مسی از راه رسید" />
+                                                <textarea class="form-control textareadesc">مهامهاجم مسی از راه رسیدجم مسمهاجم مسی از راه رسیدیمهاجم مسی از راه رسید از راه رسید</textarea>
+                                            </span>
                                         </div>
 
 
@@ -1100,6 +1070,7 @@
                                 </div>
                             </div>
                         </li>
+
                         <li>
                             <div class="item clearfix">
 
@@ -1108,13 +1079,22 @@
                                         <ul class="SourceNews">
                                             <li>ahmad</li>
                                         </ul>
+                                        <div>
+                                            <input type="radio" />
+                                            <span class="font-size-10">تایید بدون ویرایش</span>
+                                        </div>
+                                        <div>
+                                            <input type="radio" />
+                                            <span class="font-size-10">تایید همراه ویرایش</span>
+                                        </div>
                                     </div>
                                     <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
                                         <div>
                                             <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                            <h1 class="titleNews">
-                                                <a href="#">مهاجم جدید استقلال از راه رسید</a>
-                                            </h1>
+                                            <span class="form-group">
+                                                <input type="text" name="search-text" class="form-control empty input-style " value="مهاجم مسی از راه رسید" />
+                                                <textarea class="form-control textareadesc">مهامهاجم مسی از راه رسیدجم مسمهاجم مسی از راه رسیدیمهاجم مسی از راه رسید از راه رسید</textarea>
+                                            </span>
                                         </div>
 
 
@@ -1122,8 +1102,74 @@
                                 </div>
                             </div>
                         </li>
+
                     </ul>
                 </div>
+
+                <div class="row">
+                    <div class="col-md-12 text-align-left">
+                        <button type="button" class="btn btn-accent shadow subscriber-form-btn">تایید</button>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="search-box ">
+                            <form class="clearfix subscribe-form__form" />
+                            <span>جستجو ویرایش متن تایید شده:</span>
+                            <span class="form-group">
+                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="مسی" />
+                            </span>
+                            <button type="button" class="btn btn-accent shadow subscriber-form-btn">جستجو</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="widget-content">
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="item clearfix">
+
+                                <div class="row">
+                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                        <ul class="SourceNews">
+                                            <li>ahmad</li>
+                                        </ul>
+                                        <div>
+                                            <input type="radio" />
+                                            <span class="font-size-10">تایید همراه ویرایش</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
+                                        <div>
+                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                            <span class="form-group">
+                                                <input type="text" name="search-text" class="form-control empty input-style " value="مهاجم مسی از راه رسید" />
+                                                <textarea class="form-control textareadesc">مهامهاجم مسی از راه رسیدجم مسمهاجم مسی از راه رسیدیمهاجم مسی از راه رسید از راه رسید</textarea>
+                                            </span>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-align-left">
+                        <button type="button" class="btn btn-accent shadow subscriber-form-btn">تایید</button>
+
+                    </div>
+                </div>
+
 
             </div>
 
@@ -1139,7 +1185,10 @@
 
             <div class="widget widget-news card">
 
-                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>پربازدید ترین اخبار</h2>
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>لینکستان</h2>
+
+
+
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li>
@@ -1148,15 +1197,124 @@
                                 <div class="row">
                                     <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
                                         <ul class="SourceNews">
-                                            <li>مشرق نیوز</li>
+                                            <li>ahmad</li>
                                         </ul>
+                                        <div>
+                                            <input type="radio" />
+                                            <span class="font-size-10">تایید بدون ویرایش</span>
+                                        </div>
+                                        <div>
+                                            <input type="radio" />
+                                            <span class="font-size-10">تایید همراه ویرایش</span>
+                                        </div>
                                     </div>
                                     <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                        <div>
-                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                            <h1 class="titleNews">
-                                                <a href="#">مهاجم جدید استقلال از راه رسید</a>
-                                            </h1>
+                                        <div class="row margin-top-15">
+                                            <div class="col-md-9">
+
+
+                                                <form>
+                                                    <div class="">
+                                                        <select class="">
+                                                            <option value="">(انتخاب یک دسته بندی)</option>
+                                                            <option value="sport">ورزشی</option>
+                                                            <option value="politics">سیاسی</option>
+                                                            <option value="social">اجتماعی</option>
+                                                            <option value="option4">.</option>
+                                                            <option value="option5">1</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+
+
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>دسته بندی</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="row margin-top-15">
+                                            <div class="col-md-9">
+                                                <div class="search-box ">
+                                                    <form class="clearfix subscribe-form__form" />
+                                                    <span class="form-group">
+                                                        <input type="text" name="search-text" class="form-control empty input-style width-auto" onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="بهینه سازی سبز" />
+                                                    </span>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>نام لينک:</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="row margin-top-15">
+                                            <div class="col-md-9">
+                                                <div class="search-box ">
+                                                    <form class="clearfix subscribe-form__form" />
+                                                    <span class="form-group">
+                                                        <input type="text" name="search-text" class="form-control empty input-style  width-auto" onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="http://" />
+                                                    </span>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>آدرس لينک:</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="row margin-top-15">
+                                            <div class="col-md-9">
+                                                <div class="search-box ">
+                                                    <form class="clearfix subscribe-form__form" />
+                                                    <span class="form-group">
+                                                        <input type="text" name="search-text" class="form-control empty input-style  width-auto" onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="" />
+                                                    </span>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>ایمیل:</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="row margin-top-15">
+                                            <div class="col-md-9">
+                                                <div class="search-box ">
+                                                    <form class="clearfix subscribe-form__form" />
+                                                    <span class="form-group">
+                                                        <input type="text" name="search-text" class="form-control empty input-style width-auto " onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="" />
+                                                    </span>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>کلمات کلیدی:</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="row margin-top-15">
+                                            <div class="col-md-9">
+                                                <div class="form-group">
+                                                    <textarea class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>توصيف:</span>
+
+                                            </div>
                                         </div>
 
 
@@ -1165,24 +1323,239 @@
                             </div>
                         </li>
 
+
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 text-align-left">
+                        <button type="button" class="btn btn-accent shadow subscriber-form-btn">تایید</button>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="search-box ">
+                            <form class="clearfix subscribe-form__form" />
+                            <span>جستجو ویرایش لینک تایید شده:</span>
+                            <span class="form-group">
+                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="بهینه سازی" />
+                            </span>
+                            <button type="button" class="btn btn-accent shadow subscriber-form-btn">جستجو</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="widget-content">
+                    <ul class="list-unstyled">
                         <li>
                             <div class="item clearfix">
 
                                 <div class="row">
                                     <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
                                         <ul class="SourceNews">
-                                            <li>مشرق نیوز</li>
+                                            <li>ahmad</li>
+                                        </ul>
+                                        <div>
+                                            <input type="radio" />
+                                            <span class="font-size-10">تایید همراه ویرایش</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
+                                        <div class="row margin-top-15">
+                                            <div class="col-md-9">
+
+
+                                                <form>
+                                                    <div class="">
+                                                        <select class="">
+                                                            <option value="">(انتخاب یک دسته بندی)</option>
+                                                            <option value="sport">ورزشی</option>
+                                                            <option value="politics">سیاسی</option>
+                                                            <option value="social">اجتماعی</option>
+                                                            <option value="option4">.</option>
+                                                            <option value="option5">1</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+
+
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>دسته بندی</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="row margin-top-15">
+                                            <div class="col-md-9">
+                                                <div class="search-box ">
+                                                    <form class="clearfix subscribe-form__form" />
+                                                    <span class="form-group">
+                                                        <input type="text" name="search-text" class="form-control empty input-style width-auto" onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="بهینه سازی سبز" />
+                                                    </span>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>نام لينک:</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="row margin-top-15">
+                                            <div class="col-md-9">
+                                                <div class="search-box ">
+                                                    <form class="clearfix subscribe-form__form" />
+                                                    <span class="form-group">
+                                                        <input type="text" name="search-text" class="form-control empty input-style  width-auto" onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="http://" />
+                                                    </span>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>آدرس لينک:</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="row margin-top-15">
+                                            <div class="col-md-9">
+                                                <div class="search-box ">
+                                                    <form class="clearfix subscribe-form__form" />
+                                                    <span class="form-group">
+                                                        <input type="text" name="search-text" class="form-control empty input-style  width-auto" onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="" />
+                                                    </span>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>ایمیل:</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="row margin-top-15">
+                                            <div class="col-md-9">
+                                                <div class="search-box ">
+                                                    <form class="clearfix subscribe-form__form" />
+                                                    <span class="form-group">
+                                                        <input type="text" name="search-text" class="form-control empty input-style width-auto " onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="" />
+                                                    </span>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>کلمات کلیدی:</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="row margin-top-15">
+                                            <div class="col-md-9">
+                                                <div class="form-group">
+                                                    <textarea class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>توصيف:</span>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-align-left">
+                        <button type="button" class="btn btn-accent shadow subscriber-form-btn">تایید</button>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="widget widget-news card">
+
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>مطالب بد</h2>
+                <div class="widget-content">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="search-box ">
+                                <form class="clearfix subscribe-form__form" />
+                                <span>نام:</span>
+                                <span class="form-group">
+                                    <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="بد بد" />
+                                </span>
+                                <button type="button" class="btn btn-accent shadow subscriber-form-btn">اضافه کردن</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="search-box ">
+                                <form class="clearfix subscribe-form__form" />
+                                <span>نام:</span>
+                                <span class="form-group">
+                                    <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="بد" />
+                                </span>
+                                <button type="button" class="btn btn-accent shadow subscriber-form-btn">جستجو</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="item clearfix">
+
+                                <div class="row">
+                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                        <ul class="SourceNews">
+                                            <li>
+                                                <button type="button" class="btn btn-accent shadow subscriber-form-btn">حذف کلمه</button>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
                                         <div>
                                             <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
                                             <h1 class="titleNews">
-                                                <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                                <a href="#">بی ادبی</a>
                                             </h1>
                                         </div>
-
-
                                     </div>
                                 </div>
                             </div>
@@ -1193,18 +1566,18 @@
                                 <div class="row">
                                     <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
                                         <ul class="SourceNews">
-                                            <li>مشرق نیوز</li>
+                                            <li>
+                                                <button type="button" class="btn btn-accent shadow subscriber-form-btn">حذف کلمه</button>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
                                         <div>
                                             <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
                                             <h1 class="titleNews">
-                                                <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                                <a href="#">بی ادبی</a>
                                             </h1>
                                         </div>
-
-
                                     </div>
                                 </div>
                             </div>
@@ -1215,18 +1588,18 @@
                                 <div class="row">
                                     <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
                                         <ul class="SourceNews">
-                                            <li>مشرق نیوز</li>
+                                            <li>
+                                                <button type="button" class="btn btn-accent shadow subscriber-form-btn">حذف کلمه</button>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
                                         <div>
                                             <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
                                             <h1 class="titleNews">
-                                                <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                                <a href="#">بی ادبی</a>
                                             </h1>
                                         </div>
-
-
                                     </div>
                                 </div>
                             </div>
@@ -1237,40 +1610,18 @@
                                 <div class="row">
                                     <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
                                         <ul class="SourceNews">
-                                            <li>مشرق نیوز</li>
+                                            <li>
+                                                <button type="button" class="btn btn-accent shadow subscriber-form-btn">حذف کلمه</button>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
                                         <div>
                                             <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
                                             <h1 class="titleNews">
-                                                <a href="#">مهاجم جدید استقلال از راه رسید</a>
+                                                <a href="#">بی ادبی</a>
                                             </h1>
                                         </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item clearfix">
-
-                                <div class="row">
-                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
-                                        <ul class="SourceNews">
-                                            <li>مشرق نیوز</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
-                                        <div>
-                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
-                                            <h1 class="titleNews">
-                                                <a href="#">مهاجم جدید استقلال از راه رسید</a>
-                                            </h1>
-                                        </div>
-
-
                                     </div>
                                 </div>
                             </div>
@@ -1283,16 +1634,416 @@
 
         </div>
 
-        <div class="col-area-2 pull-left">
+
+        <div class="col-md-4">
+
+            <div class="widget widget-news card">
+
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>کاربران</h2>
+
+
+
+                <div class="widget-content">
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="item clearfix">
+
+                                <div class="row">
+                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                        <ul class="SourceNews">
+                                            <li>ahmad</li>
+                                        </ul>
+                                        <div>
+                                            <input type="radio" />
+                                            <span class="font-size-10">تایید</span>
+                                        </div>
+                                        <div>
+                                            <input type="radio" />
+                                            <span class="font-size-10">رد</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
+                                        <div>
+                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                            <span class="form-group">
+                                                <img class="border-radius-50 img" src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-1/c0.3.100.100/p100x100/10363579_626072434150361_4094491022053858030_n.jpg?oh=73f0eb2ab6bc876afd128fdeb6e73519&amp;oe=5AADC99E" alt="" aria-label="ahmad sh" role="img">
+                                            </span>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="item clearfix">
+
+                                <div class="row">
+                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                        <ul class="SourceNews">
+                                            <li>ahmad</li>
+                                        </ul>
+                                        <div>
+                                            <input type="radio" />
+                                            <span class="font-size-10">تایید</span>
+                                        </div>
+                                        <div>
+                                            <input type="radio" />
+                                            <span class="font-size-10">رد</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
+                                        <div>
+                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                            <span class="form-group">
+                                                <img class="border-radius-50 img" src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-1/c0.3.100.100/p100x100/10363579_626072434150361_4094491022053858030_n.jpg?oh=73f0eb2ab6bc876afd128fdeb6e73519&amp;oe=5AADC99E" alt="" aria-label="ahmad sh" role="img">
+                                            </span>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 text-align-left">
+                        <button type="button" class="btn btn-accent shadow subscriber-form-btn">تایید</button>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="search-box ">
+                            <form class="clearfix subscribe-form__form" />
+                            <span>جستجو برای ویرایش یک یوزر:</span>
+                            <span class="form-group">
+                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="ahmad" />
+                            </span>
+                            <button type="button" class="btn btn-accent shadow subscriber-form-btn">جستجو</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="widget-content">
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="item clearfix">
+
+                                <div class="row">
+                                    <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                        <ul class="SourceNews">
+                                            <li>ahmad</li>
+                                        </ul>
+                                        <div>
+                                            <input type="radio" />
+                                            <span class="font-size-10">غیر فعال کردن یوزر</span>
+                                        </div>
+                                        <div>
+                                            <input type="radio" />
+                                            <span class="font-size-10">غیر فعال کردن صفحه</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9 col-xs-9 col-sm-9  no-padding">
+                                        <div>
+                                            <div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div>
+                                            <span class="form-group">
+                                                <img class="border-radius-50 img" src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-1/c0.3.100.100/p100x100/10363579_626072434150361_4094491022053858030_n.jpg?oh=73f0eb2ab6bc876afd128fdeb6e73519&amp;oe=5AADC99E" alt="" aria-label="ahmad sh" role="img">
+                                            </span>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-align-left">
+                        <button type="button" class="btn btn-accent shadow subscriber-form-btn">تایید</button>
+
+                    </div>
+                </div>
+
+
+            </div>
 
 
         </div>
 
-        <div class="clearfix"></div>
+
     </div>
 
 
+    <div class="row">
 
+
+        <div class="col-md-6">
+
+            <div class="widget widget-news card">
+
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span> تعداد کلیک در تبلیغات</h2>
+                <div class="widget-content">
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="search-box ">
+                                <form class="clearfix subscribe-form__form" />
+                                <span>نام:</span>
+                                <span class="form-group">
+                                    <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
+            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+            this.value = '';" value="بد" />
+                                </span>
+                                <button type="button" class="btn btn-accent shadow subscriber-form-btn">جستجو</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15">
+                        <div class="col-md-2">
+                            <span class="trendtitle">کل</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="trendtitle">ماه</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="trendtitle">هفته</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="trendtitle">دیروز</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="trendtitle">امروز</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="trendtitle">عنوان</span>
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15 ">
+                        <div class="col-md-2">
+                            <span>2001</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>400</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>40</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>6</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>8</span>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="font-size-10">صفحه بالا</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+        <div class="col-md-6">
+
+            <div class="widget widget-news card">
+
+                <h2 class="widget-title"><span class="fa fa-rss pull-left"></span> اضافه کردن تبلیغات</h2>
+                <div class="widget-content">
+
+
+                    <div class="row margin-top-15">
+                        <div class="col-md-9">
+                            <div class="search-box ">
+                                <form class="clearfix subscribe-form__form" />
+                                <span class="form-group">
+                                    <input type="text" name="search-text" class="form-control empty input-style " value="چی توز" />
+                                </span>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <span>عنوان:</span>
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15">
+                        <div class="col-md-9">
+                            <div class="search-box ">
+                                <form class="clearfix subscribe-form__form" />
+                                <span class="form-group">
+                                    <input type="text" name="search-text" class="form-control empty input-style " value="بالا صفحه اصلی" />
+                                </span>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <span>محل تبلیغ:</span>
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15">
+
+
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <input type="text" id="dateend">
+                                </div>
+                                <div class="col-md-1">
+                                    <span>تا</span>
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="text" id="datefrom">
+                                </div>
+                                <div class="col-md-1">
+                                    <span>از</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <span>تاریخ</span>
+
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15">
+
+
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <span>روزهای</span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="row margin-top-15">
+
+
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <input type="text" name="search-text" class="form-control empty input-style width-45" value="22" />
+                                </div>
+                                <div class="col-md-1">
+                                    <span>تا</span>
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="text" name="search-text" class="form-control empty input-style width-45" value="18" />
+                                </div>
+                                <div class="col-md-1">
+                                    <span>از</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <span>ساعات</span>
+
+                        </div>
+                    </div>
+                    <div class="row margin-top-15">
+                        <div class="col-md-9">
+
+                        </div>
+                        <div class="col-md-3">
+                            <span>زبان:</span>
+
+                        </div>
+                    </div>
+                    <div class="row margin-top-15">
+                        <div class="col-md-9">
+
+                        </div>
+                        <div class="col-md-3">
+                            <span>دسته بندی:</span>
+
+                        </div>
+                    </div>
+                    <div class="row margin-top-15">
+                        <div class="col-md-9">
+                            <input type="text" name="search-text" class="form-control empty input-style width-auto" value="18" />
+
+                        </div>
+                        <div class="col-md-3">
+                            <span>کلمات کلیدی:</span>
+
+                        </div>
+                    </div>
+                    <div class="row margin-top-15">
+                        <div class="col-md-9">
+                            <input type="text" name="search-text" class="form-control empty input-style width-auto" value="18" />
+                        </div>
+                        <div class="col-md-3">
+                            <span>نهایت تعداد کلیک:</span>
+
+                        </div>
+                    </div>
+                    <div class="row margin-top-15">
+                        <div class="col-md-9">
+                            <form action="/action_page.php">
+                                <input type="file" name="pic" accept="image/*">
+                            </form>
+                        </div>
+                        <div class="col-md-3">
+                            <span>تصویر:</span>
+
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-15">
+                        <div class="col-md-9">
+                            <textarea class="form-control textareadesc">مهامهاجم مسی از راه رسیدجم مسمهاجم مسی از راه رسیدیمهاجم مسی از راه رسید از راه رسید</textarea>
+                        </div>
+                        <div class="col-md-3">
+                            <span>متن:</span>
+
+                        </div>
+                    </div>
+                    <div class="row margin-top-15">
+                        <div class="col-md-12 text-align-left">
+                            <button type="button" class="btn btn-accent shadow subscriber-form-btn">اضافه کردن</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <div class="clearfix"></div>
+    </div>
 
 
 
@@ -1301,10 +2052,35 @@
 
 
         <script src="~/js/SimpleChart.js"></script>
+        <script src="~/js/kamadatepicker.min.js"></script>
+
+
+
 
         <script>
+            kamaDatepicker('datefrom', {
+                nextButtonIcon: "timeir_next.png"
+                , previousButtonIcon: "timeir_prev.png"
+                , forceFarsiDigits: true
+                , markToday: true
+                , markHolidays: true
+                , highlightSelectedDay: true
+                , sync: true
+            });
+
+            kamaDatepicker('dateend', {
+                nextButtonIcon: "timeir_next.png"
+                , previousButtonIcon: "timeir_prev.png"
+                , forceFarsiDigits: true
+                , markToday: true
+                , markHolidays: true
+                , highlightSelectedDay: true
+                , sync: true
+            });
+        </script>
 
 
+        <script>
 
             var graphdata1 = {
                 linecolor: "Random",
