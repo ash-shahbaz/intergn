@@ -528,8 +528,14 @@
               
 
                 var DateCharts = [];
+                var i = 0;
                 $.each(result[0], function (key, value) {
-                    DateCharts.push({ X: " روز قبل " + key, Y: value })
+                    if (i <= 20) {
+                        DateCharts.push({ X:  i + " - " , Y: value })
+                    } else {
+
+                    }
+                    i = i + 1;
                 });
 
                 console.log(DateCharts)
