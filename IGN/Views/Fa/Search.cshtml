@@ -242,7 +242,7 @@
 
              function Get50TopNews(number) {
                  $("#Top50NewsTag").empty();
-                var url = "http://192.168.1.10:13311/api/tblHashTags/GetTop50Tag-@ViewBag.TagName-1-";
+                 var url = "http://192.168.1.10:13311/api/tblHashTags/GetTop50NewsByTag-@ViewBag.TagName-1-";
                 var page = number;
                 var combindUrl = url + page;
 
