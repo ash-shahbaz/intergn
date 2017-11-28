@@ -1,0 +1,27 @@
+﻿.CategoriesNews {
+    font-size: 9px !important;
+    padding-left: 10px;
+}
+
+.Like {
+    width: auto;
+    height: auto;
+    top: auto;
+    font-size: 15px;
+    color: #41882a;
+}
+
+.UnLike {
+    width: auto;
+    height: auto;
+    top: auto;
+    font-size: 15px;
+    color: #e64946;
+}
+
+.titleNews {
+    font-size: 12px !important;
+    margin: 0px;
+    float: right;
+    padding-right: 3px;
+}
