@@ -3725,18 +3725,25 @@ input:checked + .tabLink {
 
 
 /*-------------------------------------------end tabs-------------------------------------------------------*/
-.width-45{
+.width-45 {
     width: 45px;
 }
+
 .textareadesc {
     margin: 10px;
     width: 400px;
 }
-.padding-right-40{
+
+.padding-right-40 {
     padding-right: 40px !important;
 }
+
 .borderbottom-dash {
     border-bottom: 1px dashed !important;
+}
+
+.width-600 {
+    width: 600px;
 }
 /*------------radio btn-----------------*/
 .btnradio {
@@ -3786,6 +3793,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     transform: scale(1);
     opacity: 1;
 }
+
 .size-radiobxico {
     width: auto;
     height: auto;
@@ -3794,4 +3802,32 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     font-size: 15px;
 }
 
+/*--------------------------*/
+.CategoriesNews {
+    font-size: 9px !important;
+    padding-left: 10px;
+}
+
+.Like {
+    width: auto;
+    height: auto;
+    top: auto;
+    font-size: 15px;
+    color: #41882a;
+}
+
+.UnLike {
+    width: auto;
+    height: auto;
+    top: auto;
+    font-size: 15px;
+    color: #e64946;
+}
+
+.titleNews {
+    font-size: 12px !important;
+    margin: 0px;
+    float: right;
+    padding-right: 3px;
+}
 /*--------------------------*/
