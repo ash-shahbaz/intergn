@@ -441,13 +441,13 @@
 
                 SearchTagInAllNewsByInputKey(TagSer, true, CGetID);
                 Get50TopNews(0, true, CGetID);
-                BindPaginations(true)
+                BindPaginations(true, CGetID)
                 console.log("Got It");
             }
             else {
                 SearchTagInAllNewsByInputKey(TagSer, false, -500);
                 Get50TopNews(0, false, -500);
-                BindPaginations(false)
+                BindPaginations(false , -500)
                 console.log("Other Got it")
             }
 
@@ -505,7 +505,7 @@
                                         });
 
 
-                                      
+
 
                 }
                 else {
@@ -545,15 +545,15 @@
 
 
 
-                               
+
 
                 }
 
             };
 
 
-            function BindPaginations(status) {
-               
+            function BindPaginations(status,CID) {
+                if (status == false) {
                       var dataStore = (function () {
                  var xml;
 
@@ -597,11 +597,11 @@
                                      //})
                                      var pageid = page - 1;
                                      //console.log(pageid);
-                                     Get50TopNews(pageid, status, 0);
+                                     Get50TopNews(pageid, false,0);
 
-                                     var url = "/fa/tags/" + CID + "-" + txtSearch;
+                                   //  var url = "/fa/tags/" + CID + "-" + txtSearch;
 
-                                     window.location.href = url;
+                                     //window.location.href = url;
 
                                  }
                              });
@@ -616,7 +616,74 @@
                  };
                     })();
 
-                
+                }
+                else {
+
+
+                          var dataStore = (function () {
+                 var xml;
+
+                 $.ajax({
+                     type: "GET",
+                     url: "http://192.168.1.10:13311/api/Pageination/TagInCatgeory- " + CID + "-" + @ViewBag.TagName +  "",
+                     success: function (data) {
+
+                         //console.log(data);
+                         if (data >= 500) {
+                             data = 500;
+                         }
+
+                         $("#altLists").asPaginator(data
+                             , {
+
+                                 currentPage: data / 4,
+                                 itemsPerPage: 50,
+                                 visibleNum: 4,
+                                 resizeThrottle: 250,
+
+                                 tpl: function () {
+                                     return '<ul>{{first}}{{prev}}{{altLists}}{{next}}{{last}}</ul>';
+                                 },
+                                 components: {
+                                     first: true,
+                                     prev: true,
+                                     next: true,
+                                     last: true,
+                                     altLists: true
+                                 },
+                                 onChange: function (page) {
+                                     //var url = '' + page;
+                                     //console.log('ajax request' + url)
+                                     //$.ajax({
+                                     //    url: url,
+                                     //    dataType: 'json',
+                                     //    success: function (data) {
+                                     //        alert(this.data)
+                                     //    }
+                                     //})
+                                     var pageid = page - 1;
+                                     //console.log(pageid);
+                                     Get50TopNews(pageid, true, @ViewBag.CID);
+
+                                    // var url = "/fa/tags/" + CID + "-" + txtSearch;
+
+                                     //window.location.href = url;
+
+                                 }
+                             });
+                     }
+                 });
+
+                 return {
+                     getXml: function () {
+                         if (xml) return xml;
+                         // else show some error that it isn't loaded yet;
+                     }
+                 };
+                    })();
+
+
+                }
 
             }
 
