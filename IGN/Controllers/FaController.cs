@@ -45,11 +45,22 @@ namespace IGN.Controllers
 
         public ActionResult tags(string name)
         {
-            ViewBag.TagName = name;
-            return View();
+            string[] arr = name.Split('-');
+            if (arr.Length > 1)
+            {
+                ViewBag.CID = arr[0];
+                ViewBag.TagName = arr[1];
+                return View();
+            }
+            else
+            {
+                ViewBag.TagName = name;
+                return View();
+            }
         }
         public ActionResult rss(string name)
         {
+          
             ViewBag.TagName = name;
             return View();
         }

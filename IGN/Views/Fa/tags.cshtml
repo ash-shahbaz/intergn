@@ -41,15 +41,15 @@
                 <div class="row margin-top-15">
                     <div class="col-md-12">
                         <div class="search-box ">
-                            <form class="clearfix subscribe-form__form" />
+
                             <span>تگ:</span>
                             <span class="form-group">
-                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
+                                <input type="text" id="txtSearch" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
             this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
             this.value = '';" value="@ViewBag.TagName" />
                             </span>
-                            <button type="button" class="btn btn-accent shadow subscriber-form-btn">جستجو</button>
-                            </form>
+                            <button type="button" class="btn btn-accent shadow subscriber-form-btn btnSearch">جستجو</button>
+
                         </div>
                     </div>
                 </div>
@@ -57,129 +57,129 @@
 
                 <div class="row ">
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iTec" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iTec">
+                            <input id="iTec" type="radio" name="cRadio" class="inputnone " accesskey="7" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-desktop fa-lg"></i>
-                            <label class="font-size-11"  for="iTec">فناوری</label>
+                            <label class="font-size-11" for="iTec">فناوری</label>
                         </label>
 
                     </div>
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iSci" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iSci">
+                            <input id="iSci" type="radio" name="cRadio" class="inputnone " accesskey="4" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-medkit fa-lg"></i>
-                            <label  class="font-size-11" for="iSci">علمی پزشکی</label>
+                            <label class="font-size-11" for="iSci">علمی پزشکی</label>
                         </label>
                     </div>
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iJob" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iJob">
+                            <input id="iJob" type="radio" name="cRadio" class="inputnone " accesskey="5" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-address-card-o fa-lg"></i>
-                            <label  class="font-size-11" for="iJob">استخدام</label>
+                            <label class="font-size-11" for="iJob">استخدام</label>
                         </label>
                     </div>
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iPic" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iPic">
+                            <input id="iPic" type="radio" name="cRadio" class="inputnone " accesskey="12" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-picture-o fa-lg"></i>
-                            <label  class="font-size-11" for="iPic">تصویری</label>
+                            <label class="font-size-11" for="iPic">تصویری</label>
                         </label>
                     </div>
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iSpo" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iSpo">
+                            <input id="iSpo" type="radio" name="cRadio" class="inputnone " accesskey="1" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-futbol-o fa-lg"></i>
-                            <label  class="font-size-11" for="iSpo">ورزشی</label>
+                            <label class="font-size-11" for="iSpo">ورزشی</label>
                         </label>
                     </div>
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iall" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iall">
+                            <input id="iall" type="radio" name="cRadio" class="inputnone " accesskey="-1" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-futbol-o fa-lg"></i>
-                            <label class="font-size-11"  for="iall">همه</label>
+                            <label class="font-size-11" for="iall">همه</label>
                         </label>
                     </div>
                 </div>
                 <div class="row ">
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iFore" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iFore">
+                            <input id="iFore" type="radio" name="cRadio" class="inputnone " accesskey="10" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-globe fa-lg"></i>
-                            <label class="font-size-11"  for="iFore">بین المللی</label>
+                            <label class="font-size-11" for="iFore">بین المللی</label>
                         </label>
                     </div>
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iSoc" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iSoc">
+                            <input id="iSoc" type="radio" name="cRadio" class="inputnone " accesskey="9" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-puzzle-piece fa-lg"></i>
-                            <label class="font-size-11"  for="iSoc">اجتماعی</label>
+                            <label class="font-size-11" for="iSoc">اجتماعی</label>
                         </label>
                     </div>
 
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iMon" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iMon">
+                            <input id="iMon" type="radio" name="cRadio" class="inputnone " accesskey="6" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-money fa-lg"></i>
-                            <label class="font-size-11"  for="iMon">اقتصادی</label>
+                            <label class="font-size-11" for="iMon">اقتصادی</label>
                         </label>
                     </div>
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iCol" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iCol">
+                            <input id="iCol" type="radio" name="cRadio" class="inputnone " accesskey="8" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-book fa-lg"></i>
-                            <label class="font-size-11"  for="iCol">فرهنگ و هنر</label>
+                            <label class="font-size-11" for="iCol">فرهنگ و هنر</label>
                         </label>
                     </div>
 
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iPol" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iPol">
+                            <input id="iPol" type="radio" name="cRadio" class="inputnone " accesskey="2" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-bomb fa-lg"></i>
-                            <label class="font-size-11"  for="iPol">سیاسی</label>
+                            <label class="font-size-11" for="iPol">سیاسی</label>
                         </label>
                     </div>
 
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iAcc" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iAcc">
+                            <input id="iAcc" type="radio" name="cRadio" class="inputnone " accesskey="3" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-ambulance fa-lg"></i>
-                            <label  class="font-size-11" for="iAcc">حوادث</label>
+                            <label class="font-size-11" for="iAcc">حوادث</label>
                         </label>
                     </div>
 
@@ -188,71 +188,71 @@
 
                 <div class="row ">
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iChef" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iChef">
+                            <input id="iChef" type="radio" name="cRadio" class="inputnone " accesskey="18" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-cutlery fa-lg"></i>
-                            <label class="font-size-11"  for="iChef">آشپزی</label>
+                            <label class="font-size-11" for="iChef">آشپزی</label>
                         </label>
                     </div>
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iDow" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iDow">
+                            <input id="iDow" type="radio" name="cRadio" class="inputnone " accesskey="16" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-download fa-lg"></i>
-                            <label class="font-size-11"  for="iDow">دانلود</label>
+                            <label class="font-size-11" for="iDow">دانلود</label>
                         </label>
                     </div>
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iOth" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iOth">
+                            <input id="iOth" type="radio" name="cRadio" class="inputnone " accesskey="11" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-outdent fa-lg"></i>
-                            <label class="font-size-11"  for="iOth">گوناگون</label>
+                            <label class="font-size-11" for="iOth">گوناگون</label>
                         </label>
                     </div>
 
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iTra" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iTra">
+                            <input id="iTra" type="radio" name="cRadio" class="inputnone " accesskey="14" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-plane fa-lg"></i>
-                            <label class="font-size-11"  for="iTra">گردشگری</label>
+                            <label class="font-size-11" for="iTra">گردشگری</label>
                         </label>
                     </div>
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iCin" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iCin">
+                            <input id="iCin" type="radio" name="cRadio" class="inputnone " accesskey="13" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-film fa-lg"></i>
-                            <label class="font-size-11"  for="iCin">سینمایی</label>
+                            <label class="font-size-11" for="iCin">سینمایی</label>
                         </label>
                     </div>
                     <div class="col-md-2">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iCar" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iCar">
+                            <input id="iCar" type="radio" name="cRadio" class="inputnone " accesskey="15" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
                             <i class="size-radiobxico fa fa-car fa-lg"></i>
-                            <label  class="font-size-11" for="iCar">خودرو</label>
+                            <label class="font-size-11" for="iCar">خودرو</label>
                         </label>
                     </div>
                 </div>
                 <div class="row padding-bottom-20 ">
                     <div class="col-md-12">
-                        <label class="btnradio custom-radio-btn" for="css2">
-                            <input id="iFun" type="radio" name="css" class="inputnone" id="css2" value="transform" />
+                        <label class="btnradio custom-radio-btn" for="iFun">
+                            <input id="iFun" type="radio" name="cRadio" class="inputnone " accesskey="17" value="transform" />
                             <span class="custom-radio-outer">
                                 <span class="custom-radio-inner"></span>
                             </span>
@@ -368,13 +368,7 @@
 
             <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>خبرهای مرتبط در @ViewBag.TagName</h2>
             <div class="widget-content">
-                <ul class="list-unstyled" id="Top50NewsTag">
-             
-                  
-
-
-
-                </ul>
+                <ul class="list-unstyled" id="Top50NewsTag"></ul>
             </div>
             <!-- widget content -->
         </div>
@@ -441,44 +435,126 @@
         $(document).ready(function () {
 
             var TagSer = "@ViewBag.TagName";
-              SearchTagInAllNewsByInputKey(TagSer);
-            Get50TopNews(0);
+            var CGetID = "@ViewBag.CID";
 
-             function Get50TopNews(number) {
-                 $("#Top50NewsTag").empty();
-                 var url = "http://192.168.1.10:13311/api/tblHashTags/GetTop50NewsByTag-@ViewBag.TagName-1-";
-                var page = number;
-                var combindUrl = url + page;
+            if (CGetID != "") {
 
-                $.getJSON(combindUrl , function (result) {
-                    
-                    $.each(result, function (i, item) {
+                SearchTagInAllNewsByInputKey(TagSer, true, CGetID);
+                Get50TopNews(0, true, CGetID);
+                BindPaginations(true)
+                console.log("Got It");
+            }
+            else {
+                SearchTagInAllNewsByInputKey(TagSer, false, -500);
+                Get50TopNews(0, false, -500);
+                BindPaginations(false)
+                console.log("Other Got it")
+            }
 
-                        var time = "14";
 
-                        var splitTitle = item.Title.replace("+", " ").replace("?", " ").replace("*", " ").replace(";", " ").replace(",", " ").replace(".", " ").replace(":", " ").replace("؛", " ").replace("؟", " ").replace("»", " ").replace("«", " ").replace("!", " ").replace("(", " ").replace(")", " ").replace("{", " ").replace("}", " ").replace("[", " ").replace("]", " ").replace("/", " ").replace("-", " ");
 
-                        var SeoUrl = splitTitle.split(" ");
 
-                        var url = "";
+            $(".btnSearch").click(function () {
 
-                        for (var i = 0; i < SeoUrl.length; i++) {
+                var CID = $("input[name=cRadio]:checked").attr('accesskey');
+                var txtSearch = $("#txtSearch").val();
+                if (CID != null && CID != "" && txtSearch != "") {
+                    console.log(CID + txtSearch);
 
-                            if (url.length > 80) {
-                                break;
-                            } else {
-                                url += SeoUrl[i] + '-';
-                            }
-                        }
+                    var url = "/fa/tags/" + CID + "-" + txtSearch;
 
-                        var $liTopNews = "<li><div class=\"item clearfix\"><div class=\"row\"><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"float-left cursor-pointer\"><i class=\"fa fa-thumbs-o-up Like\" aria-hidden=\"true\"></i><span class=\"font-size-12\">" + item.Likes + "+</span></li></ul></div><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"float-left cursor-pointer\"><i class=\"fa fa-thumbs-o-down UnLike\" aria-hidden=\"true\"></i><span class=\"font-size-12\">" + item.Unlike + "-</span></li></ul></div><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-11\">" + time + " ساعت قبل</li></ul></div><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-12\">" + item.RssName + "</li></ul></div><div class=\"col-md-8 col-xs-8 col-sm-8  no-padding\"><div><div class=\"boxin-right\"><span class=\"fa fa-angle-double-left HomeBoxes\" aria-hidden=\"true\"></span></div><h1 class=\"titleNews\"><a href=\"/fa/News/Sport/" + item.NewsID + "/" + url + "\" target=\"_blank\" >" + item.Title + "</a></h1></div></div></div></div></li>";
-                        $("#Top50NewsTag").append($liTopNews);
-                    });
-                });
+                     window.location.href = url;
+                }
+
+            })
+
+
+
+
+            function Get50TopNews(number, status, CID) {
+                if (status == false) {
+                                        $("#Top50NewsTag").empty();
+                                        var url = "http://192.168.1.10:13311/api/tblHashTags/GetTop50NewsByTag-@ViewBag.TagName-1-";
+                                        var page = number;
+                                        var combindUrl = url + page;
+
+                                        $.getJSON(combindUrl , function (result) {
+
+                                            $.each(result, function (i, item) {
+
+                                                var time = "14";
+
+                                                var splitTitle = item.Title.replace("+", " ").replace("?", " ").replace("*", " ").replace(";", " ").replace(",", " ").replace(".", " ").replace(":", " ").replace("؛", " ").replace("؟", " ").replace("»", " ").replace("«", " ").replace("!", " ").replace("(", " ").replace(")", " ").replace("{", " ").replace("}", " ").replace("[", " ").replace("]", " ").replace("/", " ").replace("-", " ");
+
+                                                var SeoUrl = splitTitle.split(" ");
+
+                                                var url = "";
+
+                                                for (var i = 0; i < SeoUrl.length; i++) {
+
+                                                    if (url.length > 80) {
+                                                        break;
+                                                    } else {
+                                                        url += SeoUrl[i] + '-';
+                                                    }
+                                                }
+
+                                                var $liTopNews = "<li><div class=\"item clearfix\"><div class=\"row\"><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"float-left cursor-pointer\"><i class=\"fa fa-thumbs-o-up Like\" aria-hidden=\"true\"></i><span class=\"font-size-12\">" + item.Likes + "+</span></li></ul></div><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"float-left cursor-pointer\"><i class=\"fa fa-thumbs-o-down UnLike\" aria-hidden=\"true\"></i><span class=\"font-size-12\">" + item.Unlike + "-</span></li></ul></div><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-11\">" + time + " ساعت قبل</li></ul></div><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-12\">" + item.RssName + "</li></ul></div><div class=\"col-md-8 col-xs-8 col-sm-8  no-padding\"><div><div class=\"boxin-right\"><span class=\"fa fa-angle-double-left HomeBoxes\" aria-hidden=\"true\"></span></div><h1 class=\"titleNews\"><a href=\"/fa/News/Sport/" + item.NewsID + "/" + url + "\" target=\"_blank\" >" + item.Title + "</a></h1></div></div></div></div></li>";
+                                                $("#Top50NewsTag").append($liTopNews);
+                                            });
+                                        });
+
+
+                                      
+
+                }
+                else {
+                $("#Top50NewsTag").empty();
+                var url = "http://192.168.1.10:13311/api/tblHashTags/GetTop50NewsByTagWithCategory-" + CGetID + "-" +"@ViewBag.TagName-1-";
+                                var page = number;
+                                var combindUrl = url + page;
+
+                                $.getJSON(combindUrl , function (result) {
+
+                                    $.each(result, function (i, item) {
+
+                                        var time = "14";
+
+                                        var splitTitle = item.Title.replace("+", " ").replace("?", " ").replace("*", " ").replace(";", " ").replace(",", " ").replace(".", " ").replace(":", " ").replace("؛", " ").replace("؟", " ").replace("»", " ").replace("«", " ").replace("!", " ").replace("(", " ").replace(")", " ").replace("{", " ").replace("}", " ").replace("[", " ").replace("]", " ").replace("/", " ").replace("-", " ");
+
+                                        var SeoUrl = splitTitle.split(" ");
+
+                                        var url = "";
+
+                                        for (var i = 0; i < SeoUrl.length; i++) {
+
+                                            if (url.length > 80) {
+                                                break;
+                                            } else {
+                                                url += SeoUrl[i] + '-';
+                                            }
+                                        }
+
+                                        var $liTopNews = "<li><div class=\"item clearfix\"><div class=\"row\"><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"float-left cursor-pointer\"><i class=\"fa fa-thumbs-o-up Like\" aria-hidden=\"true\"></i><span class=\"font-size-12\">" + item.Likes + "+</span></li></ul></div><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"float-left cursor-pointer\"><i class=\"fa fa-thumbs-o-down UnLike\" aria-hidden=\"true\"></i><span class=\"font-size-12\">" + item.Unlike + "-</span></li></ul></div><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-11\">" + time + " ساعت قبل</li></ul></div><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-12\">" + item.RssName + "</li></ul></div><div class=\"col-md-8 col-xs-8 col-sm-8  no-padding\"><div><div class=\"boxin-right\"><span class=\"fa fa-angle-double-left HomeBoxes\" aria-hidden=\"true\"></span></div><h1 class=\"titleNews\"><a href=\"/fa/News/Sport/" + item.NewsID + "/" + url + "\" target=\"_blank\" >" + item.Title + "</a></h1></div></div></div></div></li>";
+                                        $("#Top50NewsTag").append($liTopNews);
+                                    });
+                                });
+
+
+
+
+
+
+                               
+
+                }
+
             };
 
 
-              var dataStore = (function () {
+            function BindPaginations(status) {
+               
+                      var dataStore = (function () {
                  var xml;
 
                  $.ajax({
@@ -521,7 +597,12 @@
                                      //})
                                      var pageid = page - 1;
                                      //console.log(pageid);
-                                     Get50TopNews(pageid);
+                                     Get50TopNews(pageid, status, 0);
+
+                                     var url = "/fa/tags/" + CID + "-" + txtSearch;
+
+                                     window.location.href = url;
+
                                  }
                              });
                      }
@@ -533,60 +614,106 @@
                          // else show some error that it isn't loaded yet;
                      }
                  };
-            })();
+                    })();
+
+                
+
+            }
 
         });
 
 
-        function SearchTagInAllNewsByInputKey(GetName) {
+        function SearchTagInAllNewsByInputKey(GetName,status,CID) {
+
+            console.log(GetName + CID + status);
+            if (status == false) {
+                $.getJSON("http://192.168.1.10:13311/api/tblNews/SearchedKeyGetCount-" + GetName + "-Day", function (result) {
 
 
 
-            $.getJSON("http://192.168.1.10:13311/api/tblNews/SearchedKeyGetCount-" + GetName + "-Day", function (result) {
+                    var DateCharts = [];
+                    var i = 0;
+                    $.each(result[0], function (key, value) {
+                        if (i <= 20) {
 
-                
-              
+                            DateCharts.push({ X: i + " - ", Y: value })
+                        }
+                        i = i + 1;
+                    });
 
-                var DateCharts = [];
-                var i = 0;
-                $.each(result[0], function (key, value) {
-                    if (i <= 20) {
 
-                        DateCharts.push({ X:  i + " - " , Y: value })
-                    }
-                    i = i + 1;
+
+                    var graphdata1 = {
+                        linecolor: "Random",
+                        title: "ماه",
+                        values: DateCharts
+                    };
+
+                    //$(function () {
+
+                    $("#Hybridgraph").SimpleChart({
+                        ChartType: "Hybrid",
+                        toolwidth: "50",
+                        toolheight: "25",
+                        axiscolor: "#E6E6E6",
+                        textcolor: "#6E6E6E",
+                        showlegends: false,
+                        data: [graphdata1],
+                        legendsize: "140",
+                        legendposition: 'bottom',
+                        xaxislabel: 'روز',
+                        yaxislabel: 'تعداد اخبار'
+                    });
+
+
+
+
                 });
+            } else {
+                $.getJSON("http://192.168.1.10:13311/api/tblNews/SearchedKeyGetCountCategory-" + GetName + "-" + CID + "-Day", function (result) {
 
-                
+                    var DateCharts = [];
+                    var i = 0;
+                    $.each(result[0], function (key, value) {
+                        if (i <= 20) {
 
-                var graphdata1 = {
-                    linecolor: "Random",
-                    title: "ماه",
-                    values: DateCharts
-                };
+                            DateCharts.push({ X: i + " - ", Y: value })
+                        }
+                        i = i + 1;
+                    });
 
-                //$(function () {
 
-                $("#Hybridgraph").SimpleChart({
-                    ChartType: "Hybrid",
-                    toolwidth: "50",
-                    toolheight: "25",
-                    axiscolor: "#E6E6E6",
-                    textcolor: "#6E6E6E",
-                    showlegends: false,
-                    data: [graphdata1],
-                    legendsize: "140",
-                    legendposition: 'bottom',
-                    xaxislabel: 'روز',
-                    yaxislabel: 'تعداد اخبار'
+
+                    var graphdata1 = {
+                        linecolor: "Random",
+                        title: "ماه",
+                        values: DateCharts
+                    };
+
+                    //$(function () {
+
+                    $("#Hybridgraph").SimpleChart({
+                        ChartType: "Hybrid",
+                        toolwidth: "50",
+                        toolheight: "25",
+                        axiscolor: "#E6E6E6",
+                        textcolor: "#6E6E6E",
+                        showlegends: false,
+                        data: [graphdata1],
+                        legendsize: "140",
+                        legendposition: 'bottom',
+                        xaxislabel: 'روز',
+                        yaxislabel: 'تعداد اخبار'
+                    });
+
+
+
+
                 });
+            }
 
-                
-
-
-            });
         }
-   
+
     </script>
 
 
