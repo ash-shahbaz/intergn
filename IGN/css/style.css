@@ -3732,7 +3732,12 @@ input:checked + .tabLink {
     margin: 10px;
     width: 400px;
 }
-
+.padding-right-40{
+    padding-right: 40px !important;
+}
+.borderbottom-dash {
+    border-bottom: 1px dashed !important;
+}
 /*------------radio btn-----------------*/
 .btnradio {
     font-size: 17px;

@@ -25,7 +25,7 @@
 
 
 
-
+    <link href="~/css/kanNotify.css" rel="stylesheet" />
 
 
 
@@ -502,6 +502,28 @@
                     <div class="widget widget-text">
                         <p>وب سایت IGreenNews با هدف فزونی بخشی و سهولت دستیابی به اخبار توسط کارشناسان حرفه ای تاسیس گردیده است.</p>
                     </div>
+
+
+
+
+
+
+
+                    <div class="well" id="type-btn-bar">
+                        <a class="btn btn-success" data-status="success" data-msg="داداش ایران ریییییییییییییید">notify</a>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
                 </div>
                 <div class="col-md-3">
                     <div class="widget widget_categories">
@@ -544,6 +566,7 @@
                                 <li class="clearfix"><span class="fa fa-map-marker pull-left"></span>تهران، میدان ونک</li>
                                 <li class="clearfix"><span class="fa fa-phone pull-left"></span>+98(021)77166964</li>
                                 <li class="clearfix"><span class="fa fa-envelope pull-left"></span><a href="mailto:info@igreennews.com">info@igreennews.com</a> </li>
+                                <li class="clearfix"><span class="fa fa-rss  pull-left"></span><a href="rss">rss</a> </li>
                             </ul>
                         </div>
                     </div>
@@ -555,7 +578,7 @@
     </div>
     <!-- bottom-sidebar -->
     <footer id="page-footer">
-        
+
         <div class="container">
             <div class="">
                 <div class="copy pull-left">
@@ -579,11 +602,11 @@
 
     <!-- page footer -->
 
-            <span class="back-to-top fa fa-chevron-up"></span>
+    <span class="back-to-top fa fa-chevron-up"></span>
 
     <!-- Login Form Start -->
-    
-    
+
+
     <div class="modal fade" id="loginFormModal" tabindex="-1" role="dialog" aria-labelledby="loginForm">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -599,11 +622,11 @@
 
                             <div class="mdl-textfield mdl-js-textfield">
                                 <input class="mdl-textfield__input" type="text" name="loginUsername" id="loginUsername">
-                                <label class="mdl-textfield__label" for="loginUsername">Username</label>
+                                <label class="mdl-textfield__label" for="loginUsername">نام کاربری</label>
                             </div>
                             <div class="mdl-textfield mdl-js-textfield">
                                 <input class="mdl-textfield__input" type="password" name="loginPassword" id="loginPassword">
-                                <label class="mdl-textfield__label" for="loginPassword">Password</label>
+                                <label class="mdl-textfield__label" for="loginPassword">کلمه عبور</label>
                             </div>
 
                             <button type="button" id="btnLogin" class="login-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">ورود</button>
@@ -639,32 +662,32 @@
                             <form action="#" method="post" id="signupForm">
                                 <div class="mdl-textfield mdl-js-textfield">
                                     <input class="mdl-textfield__input" type="text" name="singupName" id="singupName">
-                                    <label class="mdl-textfield__label" for="singupName">Full Name</label>
+                                    <label class="mdl-textfield__label" for="singupName">نام و نام خانوادگی</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield">
                                     <input class="mdl-textfield__input" type="text" name="singupUsername" id="singupUsername">
-                                    <label class="mdl-textfield__label" for="singupUsername">Username</label>
+                                    <label class="mdl-textfield__label" for="singupUsername">نام کاربری</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield">
                                     <input class="mdl-textfield__input" type="text" name="singupEmail" id="singupEmail">
-                                    <label class="mdl-textfield__label" for="singupEmail">E-mail Address</label>
+                                    <label class="mdl-textfield__label" for="singupEmail">ایمیل</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield">
                                     <input class="mdl-textfield__input" type="password" name="singupPassword" id="singupPassword">
-                                    <label class="mdl-textfield__label" for="singupPassword">Password</label>
+                                    <label class="mdl-textfield__label" for="singupPassword">کلمه عبور</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield">
                                     <input class="mdl-textfield__input" type="password" name="singupPasswordAgain" id="singupPasswordAgain">
-                                    <label class="mdl-textfield__label" for="singupPasswordAgain">Re-Type Password</label>
+                                    <label class="mdl-textfield__label" for="singupPasswordAgain">تکرار کلمه عبور</label>
                                 </div>
 
-                                <button type="submit" class="singup-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Singup</button>
+                                <button type="submit" class="singup-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">ثبت نام</button>
                             </form>
                         </div>
                         <div class="mdl-card__actions mdl-card--border clearfix">
-                            <p class="pull-left">Already Have An Account?</p>
+                            <p class="pull-left">عضو این سایت هستید؟</p>
                             <a href="#" class="pull-right mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#loginFormModal" data-dismiss="modal">
-                                Login
+                                ورود
                             </a>
                         </div>
                     </div>
@@ -689,16 +712,16 @@
                             <form action="#" method="post" id="forgotForm">
                                 <div class="mdl-textfield mdl-js-textfield">
                                     <input class="mdl-textfield__input" type="text" name="forgotEmail" id="forgotEmail">
-                                    <label class="mdl-textfield__label" for="forgotEmail">E-mail Address</label>
+                                    <label class="mdl-textfield__label" for="forgotEmail">ایمیل</label>
                                 </div>
 
-                                <button type="submit" class="forgot-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Recover</button>
+                                <button type="submit" class="forgot-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">ارسال صفحه تغییر کلمه عبور به ایمیل</button>
                             </form>
                         </div>
                         <div class="mdl-card__actions mdl-card--border clearfix">
-                            <p class="pull-left">No Account?</p>
+                            <p class="pull-left">عضو سایت نیستید؟</p>
                             <a href="#" class="pull-right mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#signupFormModal" data-dismiss="modal">
-                                Create An Account
+                                ثبت نام
                             </a>
                         </div>
                     </div>
@@ -723,10 +746,10 @@
                             <form action="#" method="post" id="subscribeForm">
                                 <div class="mdl-textfield mdl-js-textfield">
                                     <input class="mdl-textfield__input" type="text" name="subscribeEmail" id="subscribeEmail">
-                                    <label class="mdl-textfield__label" for="subscribeEmail">E-mail Address</label>
+                                    <label class="mdl-textfield__label" for="subscribeEmail">ایمیل</label>
                                 </div>
 
-                                <button type="submit" class="subscribe-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Subscribe</button>
+                                <button type="submit" class="subscribe-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">اشتراک در خبرنامه</button>
                             </form>
                         </div>
                     </div>
@@ -753,26 +776,26 @@
                                     <div class="col-md-6">
                                         <div class="mdl-textfield mdl-js-textfield">
                                             <input class="mdl-textfield__input" type="text" name="contactName" id="contactName">
-                                            <label class="mdl-textfield__label" for="contactName">Full Name</label>
+                                            <label class="mdl-textfield__label" for="contactName">نام و نام خانوادگی</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mdl-textfield mdl-js-textfield">
                                             <input class="mdl-textfield__input" type="text" name="contactEmail" id="contactEmail">
-                                            <label class="mdl-textfield__label" for="contactEmail">E-mail Address</label>
+                                            <label class="mdl-textfield__label" for="contactEmail">ایمیل</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield">
                                     <input class="mdl-textfield__input" type="text" name="contactSubject" id="contactSubject">
-                                    <label class="mdl-textfield__label" for="contactSubject">Subject</label>
+                                    <label class="mdl-textfield__label" for="contactSubject">موضوع</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield">
                                     <textarea class="mdl-textfield__input" name="contactMessage" id="contactMessage"></textarea>
-                                    <label class="mdl-textfield__label" for="contactMessage">Message</label>
+                                    <label class="mdl-textfield__label" for="contactMessage">متن پیام</label>
                                 </div>
 
-                                <button type="submit" class="contact-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Send</button>
+                                <button type="submit" class="contact-form-submit-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">ارسال</button>
                             </form>
                         </div>
                     </div>
@@ -800,6 +823,8 @@
 <script src="~/js/jquery.validate.min.js"></script>
 <script src="~/js/mainlogin.js"></script>
 
+<script src="~/js/jquery.kanNotify.js"></script>
+
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <script>
@@ -807,7 +832,7 @@
     $(document).ready(function () {
         $(".fa-power-off").unbind();
         $(".fa-power-off").bind('click', function () {
-            
+
             $.ajax({
                 type: 'GET',
                 url: '/Home/LogOut',
@@ -830,6 +855,16 @@
             var q = CheckLogin(username, pass);
         })
 
+        	$('#type-btn-bar .btn').click(function() {
+			var msg = $(this).data('msg');
+			var type = $(this).data('status');
+
+			$.kanNotify.add({
+				msg: msg,
+				type: type
+			});
+		})
+
 
         function CheckLogin(username, pass) {
 
@@ -839,7 +874,7 @@
                 data: { username: username, pass: pass },
                 cache: false,
                 success: function (result) {
-                 
+
                     var users = $.parseJSON(result);
                     jQuery.ajax({
                         type: "POST",
@@ -848,13 +883,13 @@
                         contentType: "application/json; charset=utf-8",
                         data: users,
                         success: function (data) {
-                  
+
                             var url = "/Home/Index";
-                            window.location.href = url; 
+                            window.location.href = url;
 
                         },
                         failure: function (errMsg) {
-                         
+
                             alert(errMsg);
                         }
                     });
@@ -865,12 +900,10 @@
 
 
 
-      
+
 
 
     });
-
-
 
 
 
