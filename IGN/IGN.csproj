@@ -361,9 +361,6 @@
     <Content Include="Views\Fa\NewsFavorites.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Fa\Page.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Fa\Cat.cshtml" />
   </ItemGroup>
   <ItemGroup>
