@@ -531,15 +531,13 @@
                 var i = 0;
                 $.each(result[0], function (key, value) {
                     if (i <= 20) {
-                        DateCharts.push({ X:  i + " - " , Y: value })
-                    } else {
 
+                        DateCharts.push({ X:  i + " - " , Y: value })
                     }
                     i = i + 1;
                 });
 
-                console.log(DateCharts)
-
+                
 
                 var graphdata1 = {
                     linecolor: "Random",

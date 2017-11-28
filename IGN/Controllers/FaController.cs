@@ -48,7 +48,11 @@ namespace IGN.Controllers
             ViewBag.TagName = name;
             return View();
         }
-
+        public ActionResult rss(string name)
+        {
+            ViewBag.TagName = name;
+            return View();
+        }
 
         public ActionResult source(string tagName)
         {
