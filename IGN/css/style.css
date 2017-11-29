@@ -3725,18 +3725,25 @@ input:checked + .tabLink {
 
 
 /*-------------------------------------------end tabs-------------------------------------------------------*/
-.width-45{
+.width-45 {
     width: 45px;
 }
+
 .textareadesc {
     margin: 10px;
     width: 400px;
 }
-.padding-right-40{
+
+.padding-right-40 {
     padding-right: 40px !important;
 }
+
 .borderbottom-dash {
     border-bottom: 1px dashed !important;
+}
+
+.width-600 {
+    width: 600px;
 }
 /*------------radio btn-----------------*/
 .btnradio {
@@ -3786,6 +3793,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     transform: scale(1);
     opacity: 1;
 }
+
 .size-radiobxico {
     width: auto;
     height: auto;
@@ -3793,5 +3801,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     margin-right: 5px;
     font-size: 15px;
 }
+
+/*--------------------------*/
 
 /*--------------------------*/

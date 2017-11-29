@@ -6,6 +6,7 @@
 
 @section Head
 {
+<link href="~/css/pagination.css" rel="stylesheet" />
 
 }
 
@@ -428,6 +429,35 @@
 
 
 
+<div class="row">
+    <div class="col-md-2">
+
+        <div class="row">
+            <div class="col-md-12">
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="col-md-10">
+
+        <div class="align-center margin-bottom-20">
+
+            <div class="example">
+                <div>
+                    <div id="altLists"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>
+
+
 
 
 
@@ -437,6 +467,44 @@
 
 @section Script
     {
+
+<script src="~/js/pagination.js"></script>
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#altLists").asPaginator(200, {
+            currentPage: 8,
+            visibleNum: {
+                0: 2,
+                480: 3,
+                960: 5
+            },
+            tpl: function () {
+                return '<ul>{{first}}{{prev}}{{altLists}}{{next}}{{last}}</ul>';
+            },
+            components: {
+                first: true,
+                prev: true,
+                next: true,
+                last: true,
+                altLists: true
+            },
+            onChange: function (page) {
+                var url = '' + page;
+                console.log('ajax request')
+                $.ajax({
+                    url: url,
+                    dataType: 'json',
+                    success: function (data) {
+                    }
+                })
+            }
+        });
+    });
+</script>
 
 
 
