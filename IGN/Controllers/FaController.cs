@@ -12,10 +12,12 @@ using System.Web.Script.Serialization;
 
 namespace IGN.Controllers
 {
+    
     public class FaController : Controller
     {
         public ActionResult Index()
         {
+
             return View();
         }
         public ActionResult NotificationSetting(string name)
@@ -50,6 +52,7 @@ namespace IGN.Controllers
             {
                 ViewBag.CID = arr[0];
                 ViewBag.TagName = arr[1];
+                ViewBag.Catename = arr[2];
                 return View();
             }
             else
@@ -106,6 +109,7 @@ namespace IGN.Controllers
         {
             return View();
         }
+       
         public ActionResult NewsFavorites(string id)
         {
             return View();
