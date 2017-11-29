@@ -293,7 +293,7 @@
 
         <div class="widget widget-news card">
 
-            <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>ترند موضوع خبری</h2>
+            <h2 class="widget-title"><span class="fa fa-rss pull-left"></span>ترند موضوع خبری @ViewBag.TagName</h2>
             <div class="widget-content">
                 <div class="row">
                     <div class="col-md-12">
@@ -437,24 +437,27 @@
             var TagSer = "@ViewBag.TagName";
             var CGetID = "@ViewBag.CID";
 
-            if (CGetID != "") {
+            if (CGetID != "" && CGetID != null) {
 
+                console.log("Here 1")
                 SearchTagInAllNewsByInputKey(TagSer, true, CGetID);
                 Get50TopNews(0, true, CGetID);
                 BindPaginations(true, CGetID)
                 console.log("Got It");
+
             }
             else {
+
                 SearchTagInAllNewsByInputKey(TagSer, false, -500);
+                console.log("Here 2")
                 Get50TopNews(0, false, -500);
-                BindPaginations(false , -500)
+                BindPaginations(false, -500)
                 console.log("Other Got it")
+
             }
 
 
-
-
-            $(".btnSearch").click(function () {
+            $(".btnSearch").off().on('click', function () {
 
                 var CID = $("input[name=cRadio]:checked").attr('accesskey');
                 var txtSearch = $("#txtSearch").val();
@@ -463,14 +466,14 @@
 
                     var url = "/fa/tags/" + CID + "-" + txtSearch;
 
-                     window.location.href = url;
+                    window.location.href = url;
                 }
 
-            })
+            });
 
 
 
-
+         
             function Get50TopNews(number, status, CID) {
                 if (status == false) {
                                         $("#Top50NewsTag").empty();
@@ -504,9 +507,6 @@
                                             });
                                         });
 
-
-
-
                 }
                 else {
                 $("#Top50NewsTag").empty();
@@ -539,12 +539,6 @@
                                         $("#Top50NewsTag").append($liTopNews);
                                     });
                                 });
-
-
-
-
-
-
 
 
                 }
@@ -597,6 +591,7 @@
                                      //})
                                      var pageid = page - 1;
                                      //console.log(pageid);
+                                     console.log("Here 111")
                                      Get50TopNews(pageid, false,0);
 
                                    //  var url = "/fa/tags/" + CID + "-" + txtSearch;
@@ -625,7 +620,7 @@
 
                  $.ajax({
                      type: "GET",
-                     url: "http://192.168.1.10:13311/api/Pageination/TagInCatgeory- " + CID + "-" + @ViewBag.TagName +  "",
+                     url: "http://192.168.1.10:13311/api/Pageination/TagInCatgeory- " + CID + "-" + "@ViewBag.TagName" +  "",
                      success: function (data) {
 
                          //console.log(data);
@@ -663,7 +658,10 @@
                                      //})
                                      var pageid = page - 1;
                                      //console.log(pageid);
-                                     Get50TopNews(pageid, true, @ViewBag.CID);
+
+
+                                     console.log("Here 2222")
+                                     Get50TopNews(pageid, true, 1);
 
                                     // var url = "/fa/tags/" + CID + "-" + txtSearch;
 
@@ -731,7 +729,7 @@
                         xaxislabel: 'روز',
                         yaxislabel: 'تعداد اخبار'
                     });
-
+                    console.log(result);
 
 
 
