@@ -3742,8 +3742,8 @@ input:checked + .tabLink {
     border-bottom: 1px dashed !important;
 }
 
-.width-600 {
-    width: 600px;
+.width-700 {
+    width: 700px;
 }
 /*------------radio btn-----------------*/
 .btnradio {

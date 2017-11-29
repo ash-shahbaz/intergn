@@ -169,6 +169,7 @@
     <Content Include="css\jquery-ui.css" />
     <Content Include="css\js-image-slider.css" />
     <Content Include="css\kamadatepicker.min.css" />
+    <Content Include="css\kanNotify.css" />
     <Content Include="css\main-color-login.css" />
     <Content Include="css\material.min.css" />
     <Content Include="css\pagination.css" />
@@ -202,6 +203,7 @@
     <Content Include="js\jquery.carousel-6.2.1.js" />
     <Content Include="js\jquery.flexslider.js" />
     <Content Include="js\jquery.form.js" />
+    <Content Include="js\jquery.kanNotify.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\jquery.timeago.js" />
     <Content Include="js\jquery.validate.min.js" />
