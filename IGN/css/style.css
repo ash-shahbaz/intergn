@@ -3802,6 +3802,27 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     font-size: 15px;
 }
 
-/*--------------------------*/
+/*-----------profile page start---------------*/
 
-/*--------------------------*/
+.TNProp ul li a {
+    background-color: #195993;
+    padding: .5em 1.5em;
+    text-decoration: none;
+    color: #FFF;
+    margin: 1em 2px 0;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+    .TNProp ul li a:hover {
+        background-color: #d1d1df
+    }
+
+    
+
+.Ul-links {
+    position: relative;
+    margin-bottom: 0px;
+}
+
+/*-----------profile page end---------------*/
