@@ -16,8 +16,6 @@
 
     <link href="~/css/animate.min.css" rel="stylesheet" />
 
-    <link href="~/css/js-image-slider.css" rel="stylesheet" />
-
 
 
 
@@ -174,33 +172,8 @@
 
 
         </div>
+        <div class="col-md-8">
 
-        <div class="col-md-2">
-            <div class="widget widget-ads">
-                <a href="#"><img src="http://www.shahrekhabar.com/swf/1509793646433.gif" alt="دیجی استایل" width="130" height="300" class="img-responsive"></a>
-
-            </div>
-        </div>
-        <div class="col-md-6">
-
-
-
-
-
-            <div id="sliderFrame">
-                <div id="slider">
-
-
-                </div>
-                <!--thumbnails-->
-                <div id="thumbs">
-
-
-
-                </div>
-
-                <div style="clear:both;height:0;"></div>
-            </div>
 
 
 
@@ -294,14 +267,8 @@
 
         </div>
 
-        <div class="col-md-2">
-            <div class="widget widget-ads">
-                <a href="#"><img src="http://www.shahrekhabar.com/swf/1509793646433.gif" alt="دیجی استایل" width="130" height="300" class="img-responsive"></a>
 
-            </div>
-        </div>
-
-        <div class="col-md-6">
+        <div class="col-md-8">
 
 
             <div class="widget widget-news card">
@@ -1201,7 +1168,7 @@
     <script src="~/js/imagesloaded.js"></script>
     <script src="~/js/custom.js"></script>
     <script src="~/js/SimpleChart.js"></script>
-    <script src="~/js/js-image-slider.js"></script>
+
 
     <script>
       
@@ -1295,34 +1262,6 @@
             });
         };
 
-        function GetTopItemSlider() {
-
-
-            $.getJSON("http://192.168.1.10:13311/api/Slider/1-0", function (result) {
-
-
-                for (var i = 0; i < result.length; i++) {
-
-                    $.getJSON("http://192.168.1.10:13311/api/tblNews/" + result[i].NewsID + "", function (data) {
-
-                        var $htmDesc = data[0].Description;
-
-                        var firstImage = $(data[0].Description).find("img:first").attr("src");
-
-                        var $taga = "<a href=\"" + data[0].Link + "\" target=\"_blank\"><img src=\"" + firstImage + "\" alt=\"" + "" + "\" /><h4 class=\"descslider\">" + data[0].Title + "</h4></a>";
-                        $("#slider").append($taga);
-
-                        var $thumb = "<div class=\"thumb\"><div class=\"frame\"><img src=\"" + firstImage + "\" /></div><div class=\"thumb-content\"><p>" + "حروف" + "</p>" + "s" + "</div><div style=\"clear:both;\"></div></div>"
-                        $("#thumbs").append($thumb);
-
-                    });
-
-                }
-
-
-            });
-
-        }
 
         function SearchTagInAllNewsByInputKey(GetName) {
 
