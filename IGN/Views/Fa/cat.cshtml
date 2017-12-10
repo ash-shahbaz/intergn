@@ -1,4 +1,4 @@
-﻿
+﻿@using IGN.Models;
 @{
     ViewBag.Title = "cat";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -34,9 +34,42 @@
 
         <div class="widget widget-news card">
 
-            <h2 class="widget-title" id="TitleTopNews"><span class="fa fa-rss pull-left"></span></h2>
+            <h2 class="widget-title" id="TitleTopNews"><span class="fa fa-rss pull-left"></span> @ViewBag.CategoryName  در 24 ساعت گذشته </h2>
             <div class="widget-content">
-                <ul class="list-unstyled" id="Top10News"></ul>
+                <ul class="list-unstyled" id="Top10News">
+
+
+                    @{
+
+                        foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == ViewBag.CategoryID))
+                        {
+                            string splitTitle = Utility.CleanTitle(item.Title);
+                            string[] SeoUrl = splitTitle.Split('-');
+
+                            var url = "";
+
+                            for (var i = 0; i < SeoUrl.Length; i++)
+                            {
+
+                                if (url.Length > 80)
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    url += SeoUrl[i] + '-';
+                                }
+                            }
+                            <li><div class="item clearfix"><div class="row"><div class="col-md-1 col-xs-1 col-sm-1 no-padding"><ul class="CategoriesNews"><li class="font-size-11">@item.ViewNumber </li></ul></div><div class="col-md-2 col-xs-2 col-sm-2 no-padding"><ul class="CategoriesNews"><li class="font-size-12">@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9 no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews width-700"><a href="/fa/News/@item.CategoryID/@item.NewsID/@url" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                        }
+
+
+                    }
+
+
+
+
+                </ul>
             </div>
             <!-- widget content -->
         </div>
@@ -69,9 +102,40 @@
 
         <div class="widget widget-news card">
 
-            <h2 class="widget-title" id="titleHeadTop50News"><span class="fa fa-rss pull-left"></span></h2>
+            <h2 class="widget-title" id="titleHeadTop50News"><span class="fa fa-rss pull-left"></span> اخبار  @ViewBag.CategoryName</h2>
             <div class="widget-content">
-                <ul class="list-unstyled" id="Top50News"></ul>
+                <ul class="list-unstyled" id="Top50News">
+
+
+
+                    @{
+                        Utility u = new Utility();
+                        var q = u.GetTop50NewsCategoryByCategoryID(ViewBag.CategoryID, ViewBag.PageNumber);
+
+                        foreach (var item in q)
+                        {
+                            string splitTitle = Utility.CleanTitle(item.Title);
+                            string[] SeoUrl = splitTitle.Split('-');
+
+                            var url = "";
+
+                            for (var i = 0; i < SeoUrl.Length; i++)
+                            {
+
+                                if (url.Length > 80)
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    url += SeoUrl[i] + '-';
+                                }
+                            }
+                            <li><div class="item clearfix"><div class="row"><div class="col-md-1 col-xs-1 col-sm-1 no-padding"><ul class="CategoriesNews"><li class="font-size-11">@item.ViewNumber </li></ul></div><div class="col-md-2 col-xs-2 col-sm-2 no-padding"><ul class="CategoriesNews"><li class="font-size-12">@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9 no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews width-700"><a href="/fa/News/@item.CategoryID/@item.NewsID/@url" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                        }
+                    }
+
+                </ul>
             </div>
         </div>
 
@@ -140,94 +204,8 @@
     <script>
         $(document).ready(function () {
 
-            Get50TopNews(0);
-            BindCategoryName();
-            GetTopNewsFromSelectedCategoryName();
 
 
-
-            function BindCategoryName()
-            {
-                //$.get("http://192.168.1.10:13311/api/tblCategories/1-" + categoryid +"", function (data, status) {
-                //});
-                    $("#TitleTopNews").append("پربیننده ترین اخبار   @ViewBag.CategoryName  در 24 ساعت گذشته ");
-                    $("#titleHeadTop50News").append("اخبار  @ViewBag.CategoryName ");
-
-                    
-            }
-
-
-            
-
-            function GetTopNewsFromSelectedCategoryName() {
-
-                $.getJSON("http://192.168.1.10:13311/api/Categories/1-@ViewBag.CategoryName-$1", function (result) {
-
-                    var allCategory = $.parseJSON(result);
-
-                   
-                    $.each(allCategory, function (i, item) {
-
-                        var time = "10";
-
-
-
-                        var splitTitle = item.Title.replace("+", " ").replace("?", " ").replace("*", " ").replace(";", " ").replace(",", " ").replace(".", " ").replace(":", " ").replace("؛", " ").replace("؟", " ").replace("»", " ").replace("«", " ").replace("!", " ").replace("(", " ").replace(")", " ").replace("{", " ").replace("}", " ").replace("[", " ").replace("]", " ").replace("/", " ").replace("-", " ");
-
-                        var SeoUrl = splitTitle.split(" ");
-
-                        var url = "";
-
-                        for (var i = 0; i < SeoUrl.length; i++) {
-
-                            if (url.length > 80) {
-                                break;
-                            } else {
-                                url += SeoUrl[i] + '-';
-                            }
-                        }
-                        var $liTopNews = "<li><div class=\"item clearfix\"><div class=\"row\"><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-11\">" + time + " ساعت قبل</li></ul></div><div class=\"col-md-2 col-xs-2 col-sm-2 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-12\">" + item.rssname + "</li></ul></div><div class=\"col-md-9 col-xs-9 col-sm-9  no-padding\"><div><div class=\"boxin-right\"><span class=\"fa fa-angle-double-left HomeBoxes\" aria-hidden=\"true\"></span></div><h1 class=\"titleNews width-700\"><a href=\"/fa/News/Sport/" + item.NewsID + "/" + url + "\" target=\"_blank\">" + item.Title + "</a></h1></div></div></div></div></li>";
-                         $("#Top10News").append($liTopNews);
-
-                    });
-                });
-            };
-            function Get50TopNews(number) {
-                $("#Top50News").empty();
-                var url = "http://192.168.1.10:13311/api/Categories/1-@ViewBag.CategoryName-";
-                var page = number;
-                var combindUrl = url + page;
-                $.getJSON(combindUrl , function (result) {
-
-
-
-                    var allCategory = $.parseJSON(result);
-
-
-                    $.each(allCategory, function (i, item) {
-
-                        var time = "14";
-
-                        var splitTitle = item.Title.replace("+", " ").replace("?", " ").replace("*", " ").replace(";", " ").replace(",", " ").replace(".", " ").replace(":", " ").replace("؛", " ").replace("؟", " ").replace("»", " ").replace("«", " ").replace("!", " ").replace("(", " ").replace(")", " ").replace("{", " ").replace("}", " ").replace("[", " ").replace("]", " ").replace("/", " ").replace("-", " ");
-
-                        var SeoUrl = splitTitle.split(" ");
-
-                        var url = "";
-
-                        for (var i = 0; i < SeoUrl.length; i++) {
-
-                            if (url.length > 80) {
-                                break;
-                            } else {
-                                url += SeoUrl[i] + '-';
-                            }
-                        }
-
-                        var $liTopNews = "<li><div class=\"item clearfix\"><div class=\"row\"><div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-11\">" + time + " ساعت قبل</li></ul></div><div class=\"col-md-2 col-xs-2 col-sm-2 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-12\">" + item.RssName + "</li></ul></div><div class=\"col-md-9 col-xs-9 col-sm-9  no-padding\"><div><div class=\"boxin-right\"><span class=\"fa fa-angle-double-left HomeBoxes\" aria-hidden=\"true\"></span></div><h1 class=\"titleNews width-700\"><a href=\"/fa/News/Sport/" + item.NewsID + "/" + url + "\" target=\"_blank\" >" + item.Title + "</a></h1></div></div></div></div></li>";
-                        $("#Top50News").append($liTopNews);
-                    });
-                });
-            };
 
              var dataStore = (function () {
                  var xml;
@@ -237,7 +215,7 @@
                      url: "http://192.168.1.10:13311/api/Pageination/1-@ViewBag.CategoryName",
 
                      success: function (data) {
-                       
+
 
                          $("#altLists").asPaginator(data
                              , {
@@ -258,17 +236,23 @@
                                      altLists: true
                                  },
                                  onChange: function (page) {
-                                     //var url = '' + page;
-                                     //console.log('ajax request' + url)
-                                     //$.ajax({
-                                     //    url: url,
-                                     //    dataType: 'json',
-                                     //    success: function (data) {
-                                     //        alert(this.data)
-                                     //    }
-                                     //})
                                      var pageid = page - 1;
-                                     Get50TopNews(pageid);
+
+
+                                     @*console.log('ajax request')
+                                     $.ajax({
+                                         url: '/Fa/Cat',
+                                         dataType: 'json',
+                                         data: {
+                                             name: JSON.stringify(@ViewBag.CategoryName),
+                                             pid: pageid
+                                         },
+                                         success: function (data) {
+                                             alert(this.data)
+                                         }
+                                     })*@
+
+
                                  }
                              });
                      }

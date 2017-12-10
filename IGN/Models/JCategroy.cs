@@ -5,12 +5,12 @@ using System.Web;
 
 namespace IGN.Models
 {
-    public class JCategroy
+    public class Categroy
     {
         public int CategoryID { get; set; }
         public string CategoryName { get; set; }
-        public int ParrentID { get; set; }
-        public int LanguageID { get; set; }
-        public bool IsDeleted { get; set; }
+        public Nullable<int> ParrentID { get; set; }
+        public Nullable<int> LanguageID { get; set; }
+        public Nullable<bool> IsDeleted { get; set; }
     }
 }

@@ -15,6 +15,7 @@ namespace IGN.Controllers
     
     public class FaController : Controller
     {
+        public static int PageNumber = 0;
         public ActionResult Index()
         {
 
@@ -33,10 +34,24 @@ namespace IGN.Controllers
             return View();
         }
 
-        public ActionResult Cat(string name)
+        public ActionResult Cat(string name,int ? pid = null)
         {
+            if (pid == null)
+            {
+            ViewBag.PageNumber = PageNumber;
             ViewBag.CategoryName = name;
+            ViewBag.CategoryID = Utility.lstCategory.Where(p => p.CategoryName == name).FirstOrDefault().CategoryID;
             return View();
+            }
+            else
+            {
+                PageNumber = Convert.ToInt32(pid);
+                ViewBag.PageNumber = PageNumber;
+                ViewBag.CategoryName = name;
+                ViewBag.CategoryID = Utility.lstCategory.Where(p => p.CategoryName == name).FirstOrDefault().CategoryID;
+                return View();
+
+            }
         }
         public ActionResult Search(string name)
         {
@@ -115,6 +130,12 @@ namespace IGN.Controllers
             return View();
         }
 
+        public ActionResult GetTop50NewsByPageNumber(int PageId)
+        {
+            PageNumber = PageId;
+            ViewBag.PageNumber = PageId;
+            return View("~/Views/fa/cat.cshtml");
+        }
 
         private static T _download_serialized_json_data<T>(string url) where T : new()
         {
