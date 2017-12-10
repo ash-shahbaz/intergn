@@ -167,7 +167,6 @@
     <Content Include="css\icomoon.css" />
     <Content Include="css\ie.css" />
     <Content Include="css\jquery-ui.css" />
-    <Content Include="css\js-image-slider.css" />
     <Content Include="css\kamadatepicker.min.css" />
     <Content Include="css\kanNotify.css" />
     <Content Include="css\main-color-login.css" />
@@ -190,12 +189,6 @@
     <Content Include="images\hoverNext.png" />
     <Content Include="images\hoverPrev.png" />
     <Content Include="images\logo.png" />
-    <Content Include="images\slider\flex-next-2.png" />
-    <Content Include="images\slider\flex-prev-2.png" />
-    <Content Include="images\slider\small-flex-next-2-hover.png" />
-    <Content Include="images\slider\small-flex-next-2.png" />
-    <Content Include="images\slider\small-flex-prev-2-hover.png" />
-    <Content Include="images\slider\small-flex-prev-2.png" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\custom.js" />
     <Content Include="js\imagesloaded.js" />
@@ -208,7 +201,6 @@
     <Content Include="js\jquery.timeago.js" />
     <Content Include="js\jquery.validate.min.js" />
     <Content Include="js\CircleUserJS.js" />
-    <Content Include="js\js-image-slider.js" />
     <Content Include="js\kamadatepicker.min.js" />
     <Content Include="js\mainlogin.js" />
     <Content Include="js\material.min.js" />
