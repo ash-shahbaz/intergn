@@ -3826,3 +3826,120 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 }
 
 /*-----------profile page end---------------*/
+
+
+
+
+/*-----------Agahi start---------------*/
+
+.glyphicon {
+    margin-right: 5px;
+}
+
+.thumbnail {
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.item.list-group-item {
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+    .item.list-group-item:nth-of-type(odd):hover, .item.list-group-item:hover {
+        background: #428bca;
+    }
+
+    .item.list-group-item .list-group-image {
+        margin-right: 10px;
+    }
+
+    .item.list-group-item .thumbnail {
+        margin-bottom: 0px;
+    }
+
+    .item.list-group-item .caption {
+        padding: 9px 9px 0px 9px;
+    }
+
+    .item.list-group-item:nth-of-type(odd) {
+        background: #eeeeee;
+    }
+
+    .item.list-group-item:before, .item.list-group-item:after {
+        display: table;
+        content: " ";
+    }
+
+    .item.list-group-item img {
+        float: left;
+    }
+
+    .item.list-group-item:after {
+        clear: both;
+    }
+
+.list-group-item-text {
+    margin: 0 0 11px;
+}
+
+
+/*-----------Agahi end---------------*/
+
+/*-------------start select--------------*/
+
+
+
+
+
+/*-------------end select--------------*/
+
+
+
+
+
+.font-size-14 {
+    font-size: 14px;
+}
+.padding-top-15 {
+    padding-top: 15px;
+}
+    .no-margin {
+    margin: 0px !important;
+}
+
+.fixedimage {
+    width: 150px !important;
+    height: 150px !important;
+}
+
+.topstyle {
+    background-color: #eeeff1;
+}
+.titletopstyle {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    width: 150px;
+    text-align: -webkit-right;
+    text-align: right;
+    font-size: 14px;
+}
+.well {
+    margin: 0px 15px 10px 15px !important;
+}
+
+
+.card-3 {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+    .card-3:hover {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        border: 1px solid #428bca;
+    }
