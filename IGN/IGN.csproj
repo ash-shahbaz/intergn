@@ -170,6 +170,7 @@
     <Content Include="css\kamadatepicker.min.css" />
     <Content Include="css\kanNotify.css" />
     <Content Include="css\main-color-login.css" />
+    <Content Include="css\material-kit.css" />
     <Content Include="css\material.min.css" />
     <Content Include="css\pagination.css" />
     <Content Include="css\SideBarmenu.css" />
