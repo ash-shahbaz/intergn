@@ -1,4 +1,5 @@
-﻿@{
+﻿@using IGN.Models;
+@{
     ViewBag.Title = "BackLinkAdd";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -18,7 +19,7 @@
 <div class="row">
     <div class="col-md-2">
 
-        <div class="row">
+        @*<div class="row">
             <div class="col-md-12">
                 <span>my default lang</span>
                 <ul>
@@ -45,7 +46,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div>*@
 
 
         <div class="row">
@@ -141,13 +142,16 @@
 
                         <form>
                             <div class="">
-                                <select class="">
-                                    <option value="">(انتخاب یک دسته بندی)</option>
-                                    <option value="sport">ورزشی</option>
-                                    <option value="politics">سیاسی</option>
-                                    <option value="social">اجتماعی</option>
-                                    <option value="option4">.</option>
-                                    <option value="option5">1</option>
+                                <select class="opCategorySearch">
+                                    <option value="">انتخاب</option>
+                                    <option value="-1">همه</option>
+                                    @{
+                                        foreach (var item in Utility.lstCategory)
+                                        {
+                                            <option value="@item.CategoryID">@item.CategoryName</option>
+                                        }
+
+                                    }
                                 </select>
                             </div>
                         </form>
@@ -164,7 +168,7 @@
                         <div class="search-box ">
                             <form class="clearfix subscribe-form__form" />
                             <span class="form-group">
-                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
+                                <input type="text"id="txtTitle" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
             this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
             this.value = '';" value="بهینه سازی سبز" />
                             </span>
@@ -183,7 +187,7 @@
                         <div class="search-box ">
                             <form class="clearfix subscribe-form__form" />
                             <span class="form-group">
-                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
+                                <input type="text" id="txtLinkName" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
             this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
             this.value = '';" value="http://" />
                             </span>
@@ -201,7 +205,7 @@
                         <div class="search-box ">
                             <form class="clearfix subscribe-form__form" />
                             <span class="form-group">
-                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
+                                <input type="text" id="txtEmail" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
             this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
             this.value = '';" value="" />
                             </span>
@@ -219,7 +223,7 @@
                         <div class="search-box ">
                             <form class="clearfix subscribe-form__form" />
                             <span class="form-group">
-                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
+                                <input type="text" name="search-text" id="txtKeyword" class="form-control empty input-style " onblur="if (this.value == '')
             this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
             this.value = '';" value="" />
                             </span>
@@ -237,7 +241,7 @@
                 <div class="row margin-top-15">
                     <div class="col-md-9">
                         <div class="form-group">
-                            <textarea class="form-control"></textarea>
+                            <textarea class="form-control" id="txtDesc"></textarea>
                         </div>
                         <div><span>* شرح مختصري درباره موضوع فعاليت سايت يا وبلاگ.</span></div>
                         <div><span>* از جملات تبليغاتي استفاده نکنيد.</span></div>
@@ -289,6 +293,68 @@
 
 
     <script>
+        var SelectedCateSearch = -1;
+        $('.opCategorySearch').change(function () {
+            var item = $(this);
+            SelectedCateSearch = item.val();
+        });
+        $("#AddLink").click(function () {
+
+
+            
+            var BackLink = {
+                'LikestanID': 0,
+                'UserID': 1,
+                'CategoryID': SelectedCateSearch,
+                'LinkName': $("#txtLinkName").val(), 
+                'Email': $("#txtEmail").val(),
+                'Description': $("#txtDesc").val(),
+                'IsDeleted': false,
+                'LanguageID': '1',
+                'DateRegister': '12-05-2017',
+                'Title': $("#txtTitle").val(),
+                'Keywords': $("#txtKeyword").val()
+
+            };
+
+
+            $.ajax({
+                url: "/Linkestans/Create",
+                type: "Post",
+                data: JSON.stringify(BackLink), //{ Name: name, 
+                // Address: address, DOB: dob },
+                contentType: 'application/json; charset=utf-8',
+                success: function (data) { },
+                error: function () { alert('error'); }
+            });
+
+
+            console.log(BackLink);
+
+            //$.ajax({
+            //    url: "/fa/api/Linkestan/",
+            //    crossDomain: true,
+            //    type: "POST",
+            //    data: BackLink,
+            //    contentType: "application/json",
+            //    success: function (data) {
+            //        console.log(data);
+            //        callback(data);
+            //    }
+            //});
+
+        })
+       
+
+
+
+
+
+
+
+
+
+
         $('#my-form').submit(function (e) {
             e.preventDefault();
             $this = $(this);

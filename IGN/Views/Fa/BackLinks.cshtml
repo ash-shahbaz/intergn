@@ -1,4 +1,6 @@
-﻿
+﻿@using IGN.Models
+@using IGN.Controllers
+
 @{
     ViewBag.Title = "BackLinks";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -39,14 +41,26 @@
                 <div class="row margin-top-15">
                     <div class="col-md-9">
                         <div class="search-box ">
-                            <form class="clearfix subscribe-form__form" />
+                        
                             <span class="form-group">
-                                <input type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')
-            this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
-            this.value = '';" value="بهینه سازی" />
+                                @{
+
+                                    if (ViewBag.Status == 4 || ViewBag.Status == 2)
+                                    {
+                                        <input id="txtSearch" type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+                                 this.value = '';" value="@ViewBag.Keywords" />
+                                    }
+                                    else
+                                    {
+                                        <input id="txtSearch" type="text" name="search-text" class="form-control empty input-style " onblur="if (this.value == '')this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
+                                 this.value = '';" value="بهینه سازی سایت" />
+                                    }
+
+                                }
+                            
                             </span>
 
-                            </form>
+                  
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -61,13 +75,16 @@
 
                         <form>
                             <div class="">
-                                <select class="">
-                                    <option value="All">همه</option>
-                                    <option value="sport">ورزشی</option>
-                                    <option value="politics">سیاسی</option>
-                                    <option value="social">اجتماعی</option>
-                                    <option value="option4">.</option>
-                                    <option value="option5">1</option>
+                                <select class="opCategorySearch">
+                                    <option value="">انتخاب</option>
+                                    <option value="-1">همه</option>
+                                    @{
+                                        foreach (var item in Utility.lstCategory)
+                                        {
+                                            <option  value="@item.CategoryID">@item.CategoryName</option>
+                                        }
+
+                                    }
                                 </select>
                             </div>
                         </form>
@@ -86,7 +103,7 @@
 
                 <div class="row margin-top-15">
                     <div class="col-md-12">
-                        <button type="button" class="btn btn-accent shadow subscriber-form-btn">تایید</button>
+                        <button id="btnSearch" type="button"  class=" btn btn-accent shadow subscriber-form-btn">تایید</button>
 
                     </div>
                 </div>
@@ -125,7 +142,7 @@
                 <div class="row margin-top-15">
                     <div class="col-md-2">
 
-                        <button type="button" class="btn btn-accent shadow subscriber-form-btn">تایید</button>
+                        @*<button type="button" class="btn btn-accent shadow subscriber-form-btn">تایید</button>*@
 
                     </div>
                     <div class="col-md-3">
@@ -133,13 +150,13 @@
 
                         <form>
                             <div class="">
-                                <select class="">
-                                    <option value="">پرامتیازترین</option>
-                                    <option value="">کم امتیاز ترین</option>
-                                    <option value="">قدیمی ترین</option>
-                                    <option value="">جدیدترین</option>
-                                    <option value="">پر بازدیدترین</option>
-                                    <option value="">کم بازدیدترین</option>
+                                <select class="clFilter">
+                                    <option value="1">پرامتیازترین</option>
+                                    <option value="2">کم امتیاز ترین</option>
+                                    <option value="3">قدیمی ترین</option>
+                                    <option value="4">جدیدترین</option>
+                                    <option value="5">پر بازدیدترین</option>
+                                    <option value="6">کم بازدیدترین</option>
                                 </select>
                             </div>
                         </form>
@@ -155,13 +172,16 @@
 
                         <form>
                             <div class="">
-                                <select class="">
-                                    <option value="">همه دسته بندی ها</option>
-                                    <option value="sport">ورزشی</option>
-                                    <option value="politics">سیاسی</option>
-                                    <option value="social">اجتماعی</option>
-                                    <option value="option4">.</option>
-                                    <option value="option5">1</option>
+                                <select class="opCategorySort">
+                                    <option value="">انتخاب</option>
+                                    <option value="-1">همه</option>
+                                    @{
+                                        foreach (var item in Utility.lstCategory)
+                                        {
+                                            <option value="@item.CategoryID">@item.CategoryName</option>
+                                        }
+
+                                    }
                                 </select>
                             </div>
                         </form>
@@ -176,14 +196,11 @@
 
 
                 <div class="row margin-top-15">
-                    <div class="col-md-7">
+                    <div class="col-md-6">
 
                         <span class="trendtitle">شرح فعالیت</span>
                     </div>
-                    <div class="col-md-1">
-
-                        <span class="trendtitle">امتیاز</span>
-                    </div>
+                  
                     <div class="col-md-2">
 
                         <span class="trendtitle">دسته بندی</span>
@@ -192,53 +209,199 @@
 
                         <span class="trendtitle">عنوان</span>
                     </div>
+
+                    <div class="col-md-2">
+
+                        <span class="trendtitle">هشتگ ها</span>
+                    </div>
+
                 </div>
 
-                <div class="row margin-top-15  ">
-                    <div class="col-md-7">
-                        <span>بهینه سازی وبسایت و طراحی سایت و بهینه سازی سئو سایت</span>
-                    </div>
-                    <div class="col-md-1">
-                        <span><span class="fa fa-star width-auto" aria-hidden="true"></span></span>
-                    </div>
-                    <div class="col-md-2">
-                        <span>فناوری</span>
-                    </div>
-                    <div class="col-md-2">
-                        <a href="http://greenoptimizer.com"><span>بهینه سازی وبسایت</span></a>
-                    </div>
-                </div>
+                @{
+                    if(ViewBag.Status == 0) {
+
+                        Linkestan ls = Utility.lstLinkestan.Where(p => p.LikestanID == ViewBag.BackLinkID).FirstOrDefault();
+                        var catename = Utility.lstCategory.Where(p => p.CategoryID == ls.CategoryID).FirstOrDefault().CategoryName;
+                        string[] keywords = ls.Keywords.Split(' ');
+                        <div class="row margin-top-15  ">
+                            <div class="col-md-6">
+                                <span>@ls.Description</span>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="/Fa/BackLinks/Cat-@ls.CategoryID-@catename"><span>@catename</span></a>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="@ls.LinkName"><span>@ls.Title</span></a>
+                            </div>
+                            <div class="col-md-2">
+                                @foreach (var items in keywords)
+                                {
+                                    <a href="/Fa/BackLinks/Key-@items.Substring(1,items.Length - 1) "><span>@items</span></a>
+                                }
+                               
+                            </div>
+
+
+                        </div>
+                     
+                    }
+                    else if (ViewBag.Status == 1)
+                    {
+                        foreach (var item in Utility.lstLinkestan.Where(p=> p.CategoryID == Convert.ToInt32(ViewBag.CateID)))
+                        {
+
+                            var catename = Utility.lstCategory.Where(p => p.CategoryID == item.CategoryID).FirstOrDefault().CategoryName;
+                            string[] keywords = item.Keywords.Split(' ');
+                            <div class="row margin-top-15  ">
+                                <div class="col-md-6">
+                                    <span>@item.Description</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="/Fa/BackLinks/Cat-@item.CategoryID-@catename"><span>@catename</span></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="@item.LinkName"><span>@item.Title</span></a>
+                                </div>
+                                <div class="col-md-2">
+                                    @foreach (var items in keywords)
+                                    {
+                                        <a href="/Fa/BackLinks/Key-@items.Substring(1,items.Length - 1) "><span>@items</span></a>
+                                    }
+
+                                </div>
+
+
+                            </div>
+                        }
+                    }
+                    else if (ViewBag.Status == 2)
+                    {
+                        foreach (var item in Utility.lstLinkestan.Where(p => p.Keywords.Contains(ViewBag.Keywords) ))
+                        {
+
+                            var catename = Utility.lstCategory.Where(p => p.CategoryID == item.CategoryID).FirstOrDefault().CategoryName;
+                            string[] keywords = item.Keywords.Split(' ');
+                            <div class="row margin-top-15  ">
+                                <div class="col-md-6">
+                                    <span>@item.Description</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="/Fa/BackLinks/Cat-@item.CategoryID-@catename"><span>@catename</span></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="@item.LinkName"><span>@item.Title</span></a>
+                                </div>
+                                <div class="col-md-2">
+                                    @foreach (var items in keywords)
+                                    {
+                                        <a href="/Fa/BackLinks/Key-@items.Substring(1,items.Length - 1) "><span>@items</span></a>
+                                    }
+
+                                </div>
+
+
+                            </div>
+                        }
+                    }
+                    else if (ViewBag.Status == 4)
+                    {
+                        foreach (var item in Utility.lstLinkestan.Where(p => p.Keywords.Contains(ViewBag.Keywords) && p.CategoryID == Convert.ToInt32(ViewBag.CateID)))
+                        {
+
+                            var catename = Utility.lstCategory.Where(p => p.CategoryID == item.CategoryID).FirstOrDefault().CategoryName;
+                            string[] keywords = item.Keywords.Split(' ');
+                            <div class="row margin-top-15  ">
+                                <div class="col-md-6">
+                                    <span>@item.Description</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="/Fa/BackLinks/Cat-@item.CategoryID-@catename"><span>@catename</span></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="@item.LinkName"><span>@item.Title</span></a>
+                                </div>
+                                <div class="col-md-2">
+                                    @foreach (var items in keywords)
+                                    {
+                                        <a href="/Fa/BackLinks/Key-@items.Substring(1,items.Length - 1) "><span>@items</span></a>
+                                    }
+
+                                </div>
+
+
+                            </div>
+                        }
+                    }
+                    else if (ViewBag.Status == 3)
+                    {
+                        foreach (var item in Utility.lstLinkestan)
+                        {
+
+                            var catename = Utility.lstCategory.Where(p => p.CategoryID == item.CategoryID).FirstOrDefault().CategoryName;
+                            string[] keywords = item.Keywords.Split(' ');
+                            <div class="row margin-top-15  ">
+                                <div class="col-md-6">
+                                    <span>@item.Description</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="/Fa/BackLinks/Cat-@item.CategoryID-@catename"><span>@catename</span></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="@item.LinkName"><span>@item.Title</span></a>
+                                </div>
+                                <div class="col-md-2">
+                                    @foreach (var items in keywords)
+                                    {
+                                        <a href="/Fa/BackLinks/Key-@items.Substring(1,items.Length - 1) "><span>@items</span></a>
+                                    }
+
+                                </div>
+
+
+                            </div>
+                        }
+                    }
+                    else if (ViewBag.Status == 5)
+                    {
+                        List<Linkestan> lstr = new List<Linkestan>();
+
+                        if (ViewBag.CateID != "")
+                        {
+                            lstr = Utility.lstLinkestan.Where(p => p.CategoryID == Convert.ToInt32(ViewBag.CateID)).ToList();
+                        }
+                        else
+                        {
+                            lstr = Utility.lstLinkestan.ToList();
+                        }
+                        foreach (var item in lstr)
+                        {
+                            var catename = Utility.lstCategory.Where(p => p.CategoryID == item.CategoryID).FirstOrDefault().CategoryName;
+                            string[] keywords = item.Keywords.Split(' ');
+                            <div class="row margin-top-15  ">
+                                <div class="col-md-6">
+                                    <span>@item.Description</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="/Fa/BackLinks/Cat-@item.CategoryID-@catename"><span>@catename</span></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="@item.LinkName"><span>@item.Title</span></a>
+                                </div>
+                                <div class="col-md-2">
+                                    @foreach (var items in keywords)
+                            {
+                                        <a href="/Fa/BackLinks/Key-@items.Substring(1,items.Length - 1) "><span>@items</span></a>
+                                    }
+
+                                </div>
+
+
+                            </div>
+                        }
+                    }
+                }
+                @*padding-bottom-20*@
                
-                <div class="row margin-top-15  ">
-                    <div class="col-md-7">
-                        <span>بهینه سازی وبسایت و طراحی سایت و بهینه سازی سئو سایت</span>
-                    </div>
-                    <div class="col-md-1">
-                        <span><span class="fa fa-star width-auto" aria-hidden="true"></span><span class="fa fa-star width-auto" aria-hidden="true"></span></span>
-                    </div>
-                    <div class="col-md-2">
-                        <span>فناوری</span>
-                    </div>
-                    <div class="col-md-2">
-                        <a href="http://greenoptimizer.com"><span>بهینه سازی وبسایت</span></a>
-                    </div>
-                </div>
-
-
-                <div class="row margin-top-15  padding-bottom-20 ">
-                    <div class="col-md-7">
-                        <span>بهینه سازی وبسایت و طراحی سایت و بهینه سازی سئو سایت</span>
-                    </div>
-                    <div class="col-md-1">
-                        <span><span class="fa fa-star width-auto" aria-hidden="true"></span><span class="fa fa-star width-auto" aria-hidden="true"></span><span class="fa fa-star width-auto" aria-hidden="true"></span></span>
-                    </div>
-                    <div class="col-md-2">
-                        <span>فناوری</span>
-                    </div>
-                    <div class="col-md-2">
-                        <a href="http://greenoptimizer.com"><span>بهینه سازی وبسایت</span></a>
-                    </div>
-                </div>
 
 
             </div>
@@ -291,7 +454,56 @@
 
 
 <script>
+
+   
+
     $(document).ready(function () {
+
+
+
+
+        var SelectedCateSearch = -1;
+        $('.opCategorySearch').change(function () {
+            var item = $(this);
+            SelectedCateSearch = item.val();
+        });
+
+
+        $('.opCategorySort').change(function () {
+            var item = $(this);
+            if (item == -1) {
+                var url = "/Fa/BackLinks/";
+                window.location.href = url;
+            } else {
+            var url = "/Fa/BackLinks/CID-" + item.val();
+            window.location.href = url;
+            }
+        });
+
+
+
+
+
+        $("#btnSearch").click(function () {
+        
+            var GetName = $("#txtSearch").val();
+            if (GetName != null && GetName != "") {
+                if (SelectedCateSearch != -1) {
+                    var url = "/Fa/BackLinks/KeyCat-" + SelectedCateSearch + "-" + GetName;
+                    window.location.href = url;
+                } else {
+                    var url = "/Fa/BackLinks/Key-" + GetName;
+                    window.location.href = url;
+                }
+
+            } else {
+                var url = "/Fa/BackLinks/";
+                window.location.href = url;
+            }
+
+        })
+
+
         $("#altLists").asPaginator(200, {
             currentPage: 8,
             visibleNum: {

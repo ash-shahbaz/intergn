@@ -18,6 +18,7 @@ namespace IGN
 
             Utility.lstNewsItem = Utility.GetAllNews();
             Utility.lstCategory= Utility.GetAllCategroyFromDB();
+            Utility.SyncTags();
 
             UpdateNewsTimer = new System.Timers.Timer(200000);
             // Hook up the Elapsed event for the timer. 

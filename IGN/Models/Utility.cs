@@ -17,6 +17,12 @@ namespace IGN.Models
         public static int NewsID;
         public static List<newsItem> lstNewsItem = new List<newsItem>();
         public static List<Categroy> lstCategory = new List<Categroy>();
+        public static List<TopTag> lstTopTagDay = new List<TopTag>();
+        public static List<TopTag> lstTopTagMonth = new List<TopTag>();
+        public static List<TopTag> lstTopTagYear = new List<TopTag>();
+        public static List<TopTag> lstTopTagWeek = new List<TopTag>();
+        public static List<Linkestan> lstLinkestan = new List<Linkestan>();
+
 
 
 
@@ -52,11 +58,19 @@ namespace IGN.Models
             {
                 lstNewsItem = GetAllNews();
             }
-
-          
-
         }
+        public static void SyncTags()
+        {
+            if (lstTopTagDay.Count == 0)
+            {
+                lstTopTagDay = GetTagTop10DWMY("Day");
+                lstTopTagMonth = GetTagTop10DWMY("Month");
+                lstTopTagWeek = GetTagTop10DWMY("Week");
+                lstTopTagYear = GetTagTop10DWMY("Year");
+                lstLinkestan = GetTopLinkestan();
 
+            }
+        }
         public static void SyncCategory(object sender, ElapsedEventArgs e)
         {
 
@@ -127,6 +141,41 @@ namespace IGN.Models
             }
         }
 
+    
+             public static List<TopTag> GetTagTop10DWMY(string whichType)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync("api/tblHashTags/GetTagTop10DWMY-" + whichType + "").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseString = response.Content.ReadAsStringAsync().Result;
+
+                    //var data =  JsonConvert.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                    //return data;
+                    response.Content = new StringContent(responseString, System.Text.Encoding.UTF8, "application/json");
+
+                    JavaScriptSerializer json_serializer = new JavaScriptSerializer();
+
+                    string json = JsonConvert.SerializeObject(responseString);
+
+                    var q = json_serializer.DeserializeObject(responseString);
+
+
+                    List<TopTag> deserializedProduct = JsonConvert.DeserializeObject<List<TopTag>>(responseString);
+                    return deserializedProduct.Take(10).ToList();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
+        // for string result
         public static List<newsItem> GetAllNewsByCategoryName(string categoryName)
         {
             using (var client = new HttpClient())
@@ -226,6 +275,40 @@ namespace IGN.Models
             }
         }
 
+        public static  List<Linkestan> GetTopLinkestan()
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync("api/tblLinkestans/All-1").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseString = response.Content.ReadAsStringAsync().Result;
+
+                    //var data =  JsonConvert.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                    //return data;
+                    response.Content = new StringContent(responseString, System.Text.Encoding.UTF8, "application/json");
+
+                    JavaScriptSerializer json_serializer = new JavaScriptSerializer();
+
+                    //string json = JsonConvert.SerializeObject(responseString);
+
+                //    string q = json_serializer.DeserializeObject(responseString).ToString();
+
+
+                    List<Linkestan> deserializedProduct = JsonConvert.DeserializeObject<List<Linkestan>>(responseString);
+
+                    return deserializedProduct.ToList();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
     }
 
 
@@ -244,5 +327,35 @@ namespace IGN.Models
         public Nullable<int> RecordType { get; set; }
         public Nullable<int> LanguageID { get; set; }
         public Nullable<int> CategoryID { get; set; }
+    }
+
+    public class TopTag
+    {
+        public string HashtagName { get; set; }
+        public Nullable<int> repcount { get; set; }
+        public Nullable<int> Year { get; set; }
+        public Nullable<int> Month { get; set; }
+        public Nullable<int> Day { get; set; }
+ 
+
+    }
+
+    public class Linkestan
+    {
+        public int LikestanID { get; set; }
+        public Nullable<int> UserID { get; set; }
+        public Nullable<int> CategoryID { get; set; }
+        public string LinkName { get; set; }
+        public string Email { get; set; }
+        public string Description { get; set; }
+        public Nullable<bool> IsDeleted { get; set; }
+        public Nullable<int> LanguageID { get; set; }
+        public Nullable<System.DateTime> DateRegister { get; set; }
+        public string Title { get; set; }
+        public string Keywords { get; set; }
+
+
+
+
     }
 }

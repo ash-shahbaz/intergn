@@ -12,7 +12,7 @@ using System.Web.Script.Serialization;
 
 namespace IGN.Controllers
 {
-    
+
     public class FaController : Controller
     {
         public static int PageNumber = 0;
@@ -27,21 +27,21 @@ namespace IGN.Controllers
             return View();
         }
 
-        public ActionResult News(string CategoryName,string NewsID,string Title)
+        public ActionResult News(string CategoryName, string NewsID, string Title)
         {
             //var q = Utility.GetNewsByNewsID(NewsID);
-           Utility.NewsID = Convert.ToInt32(NewsID);
+            Utility.NewsID = Convert.ToInt32(NewsID);
             return View();
         }
 
-        public ActionResult Cat(string name,int ? pid = null)
+        public ActionResult Cat(string name, int? pid = null)
         {
             if (pid == null)
             {
-            ViewBag.PageNumber = PageNumber;
-            ViewBag.CategoryName = name;
-            ViewBag.CategoryID = Utility.lstCategory.Where(p => p.CategoryName == name).FirstOrDefault().CategoryID;
-            return View();
+                ViewBag.PageNumber = PageNumber;
+                ViewBag.CategoryName = name;
+                ViewBag.CategoryID = Utility.lstCategory.Where(p => p.CategoryName == name).FirstOrDefault().CategoryID;
+                return View();
             }
             else
             {
@@ -78,7 +78,7 @@ namespace IGN.Controllers
         }
         public ActionResult rss(string name)
         {
-          
+
             ViewBag.TagName = name;
             return View();
         }
@@ -90,7 +90,7 @@ namespace IGN.Controllers
             return View();
         }
 
-       
+
         public ActionResult ContactUs(string id)
         {
             return View();
@@ -110,9 +110,61 @@ namespace IGN.Controllers
         }
 
 
-        public ActionResult BackLinks(string id)
+        public ActionResult BackLinks(string name)
         {
-            return View();
+            if (name == null)
+            {
+                ViewBag.Status = 3;
+                return View();
+            }
+            else
+            {
+                string[] arr = name.Split('-');
+
+                if (arr[0] == "Det")
+                {
+                    ViewBag.Status = 0;
+                    ViewBag.BackLinkID = arr[1];
+                    ViewBag.LinkName = arr[2];
+                    return View();
+                }
+                else if (arr[0] == "Cat")
+                {
+                    ViewBag.Status = 1;
+                    ViewBag.CateID = arr[1];
+                    ViewBag.CateName = arr[2];
+
+                    return View();
+                }
+                else if (arr[0] == "CID")
+                {
+                    ViewBag.Status = 5;
+                    ViewBag.CateID = arr[1];
+                    
+
+                    return View();
+                }
+                else if (arr[0] == "Key")
+                {
+                    ViewBag.Status = 2;
+                    ViewBag.Keywords = arr[1];
+                    return View();
+                }
+                else if (arr[0] == "KeyCat")
+                {
+                    ViewBag.Status = 4;
+                    ViewBag.CateID = arr[1];
+                    ViewBag.Keywords = arr[2];
+
+                    return View();
+                }
+                else
+                {
+                    ViewBag.Status = 3;
+
+                    return View();
+                }
+            }
         }
 
         public ActionResult BackLinkAdd(string id)
@@ -124,7 +176,7 @@ namespace IGN.Controllers
         {
             return View();
         }
-       
+
         public ActionResult NewsFavorites(string id)
         {
             return View();

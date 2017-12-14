@@ -240,7 +240,21 @@
                         <div class="widget widget-news">
 
                             <div class="widget-content">
-                                <ul class="list-unstyled" id="DayTagNumber"></ul>
+                                <ul class="list-unstyled" id="DayTagNumber">
+
+                                    @{
+                                        foreach (var item in Utility.lstTopTagDay)
+                                        {
+                                            var url = "/fa/tags/" + item.HashtagName;
+                                            <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.repcount  خبر</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9 no-padding"> <div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="@url">@item.HashtagName</a></h1></div></div></div></div></li>
+
+
+                                        }
+                                    }
+
+
+
+                                </ul>
                             </div>
 
                         </div>
@@ -254,7 +268,24 @@
                         <div class="widget widget-news">
 
                             <div class="widget-content">
-                                <ul class="list-unstyled" id="WeekTagNumber"></ul>
+                                <ul class="list-unstyled" id="WeekTagNumber">
+
+
+                                    @{
+
+                                        foreach (var item in Utility.lstTopTagWeek)
+                                        {
+                                            var url = "/fa/tags/" + item.HashtagName;
+
+                                            <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.repcount  خبر</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9 no-padding"> <div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="@url">@item.HashtagName</a></h1></div></div></div></div></li>
+
+
+                                        }
+
+
+                                    }
+
+                                </ul>
                             </div>
                         </div>
 
@@ -267,7 +298,21 @@
                         <div class="widget widget-news">
 
                             <div class="widget-content">
-                                <ul class="list-unstyled" id="MonthTagNumber"></ul>
+                                <ul class="list-unstyled" id="MonthTagNumber">
+                                    @{
+
+                                        foreach (var item in Utility.lstTopTagMonth)
+                                        {
+                                            var url = "/fa/tags/" + item.HashtagName;
+
+                                            <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.repcount  خبر</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9 no-padding"> <div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="@url">@item.HashtagName</a></h1></div></div></div></div></li>
+
+
+                                        }
+
+
+                                    }
+                                </ul>
                             </div>
                         </div>
 
@@ -279,7 +324,23 @@
 
                         <div class="widget widget-news">
                             <div class="widget-content">
-                                <ul class="list-unstyled" id="YearTagNumber"></ul>
+                                <ul class="list-unstyled" id="YearTagNumber">
+
+                                    @{
+
+                                        foreach (var item in Utility.lstTopTagYear)
+                                        {
+                                            var url = "/fa/tags/" + item.HashtagName;
+
+                                            <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.repcount  خبر</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9 no-padding"> <div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="@url">@item.HashtagName</a></h1></div></div></div></div></li>
+
+
+                                        }
+
+
+                                    }
+
+                                </ul>
                             </div>
                         </div>
 
@@ -373,7 +434,40 @@
                         <div class="widget widget-news">
 
                             <div class="widget-content">
-                                <ul class="list-unstyled" id="LinkestanDay"></ul>
+                                <ul class="list-unstyled" id="LinkestanDay">
+                                    @{
+
+                                        foreach (var item in Utility.lstLinkestan.Take(6).ToList())
+                                        {
+
+                                            var url = "/Fa/Backlinks/Det-" + item.LikestanID + "-" + Utility.CleanTitle(item.Description);
+                                            string[] keywords = item.Keywords.Split(' ');
+                                            <li>
+                                                <div class="item clearfix">
+                                                    <div class="row">
+                                                        <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                                            <ul class="titleNews">
+
+                                                                @foreach (var items in keywords)
+                                                                {
+                                                                    <li>
+
+                                                                        <a href="/Fa/BackLinks/Key-@items.Substring(1,items.Length - 1) "><span>@items</span></a>
+                                                                    </li>
+                                                                }
+
+                                                            </ul>
+                                                        </div><div class="col-md-9 col-xs-9 col-sm-9 no-padding"> <div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="@url">@item.Title</a></h1></div></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        }
+
+
+                                    }
+
+
+                                </ul>
                             </div>
                         </div>
 
@@ -394,7 +488,40 @@
                         <div class="widget widget-news">
 
                             <div class="widget-content">
-                                <ul class="list-unstyled" id="LinkestanMonth"></ul>
+                                <ul class="list-unstyled" id="LinkestanMonth">
+
+                                    @{
+
+                                        foreach (var item in Utility.lstLinkestan.Take(6).ToList())
+                                        {
+
+                                            var url = "/Fa/Backlinks/Det-" + item.LikestanID + "-" + Utility.CleanTitle(item.Description);
+                                            string[] keywords = item.Keywords.Split(' ');
+                                            <li>
+                                                <div class="item clearfix">
+                                                    <div class="row">
+                                                        <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                                            <ul class="titleNews">
+
+                                                                @foreach (var items in keywords)
+                                                                {
+                                                                    <li>
+
+                                                                        <a href="/Fa/BackLinks/Key-@items.Substring(1,items.Length - 1) "><span>@items</span></a>
+                                                                    </li>
+                                                                }
+
+                                                            </ul>
+                                                        </div><div class="col-md-9 col-xs-9 col-sm-9 no-padding"> <div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="@url">@item.Title</a></h1></div></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        }
+
+                                    }
+
+
+                                </ul>
                             </div>
                         </div>
 
@@ -412,7 +539,40 @@
                         <div class="widget widget-news">
 
                             <div class="widget-content">
-                                <ul class="list-unstyled" id="LinkestanConst"></ul>
+                                <ul class="list-unstyled" id="LinkestanConst">
+                                    @{
+
+                                        foreach (var item in Utility.lstLinkestan.Take(6).ToList())
+                                        {
+
+                                            var url = "/Fa/Backlinks/Det-" + item.LikestanID + "-" + Utility.CleanTitle(item.Description);
+                                            string[] keywords = item.Keywords.Split(' ');
+                                            <li>
+                                                <div class="item clearfix">
+                                                    <div class="row">
+                                                        <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                                            <ul class="titleNews">
+
+                                                                @foreach (var items in keywords)
+                                                                {
+                                                                    <li>
+
+                                                                        <a href="/Fa/BackLinks/Key-@items.Substring(1,items.Length - 1) "><span>@items</span></a>
+                                                                    </li>
+                                                                }
+
+                                                            </ul>
+                                                        </div><div class="col-md-9 col-xs-9 col-sm-9 no-padding"> <div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="@url">@item.Title</a></h1></div></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        }
+
+
+                                    }
+
+
+                                </ul>
                             </div>
                         </div>
 
@@ -431,7 +591,40 @@
                         <div class="widget widget-news">
 
                             <div class="widget-content">
-                                <ul class="list-unstyled" id="LinkestanSpecific"></ul>
+                                <ul class="list-unstyled" id="LinkestanSpecific">
+
+
+                                    @{
+                                        foreach (var item in Utility.lstLinkestan.Take(6).ToList())
+                                        {
+
+                                            var url = "/Fa/Backlinks/Det-" + item.LikestanID + "-" + Utility.CleanTitle(item.Description);
+                                            string[] keywords = item.Keywords.Split(' ');
+                                            <li>
+                                                <div class="item clearfix">
+                                                    <div class="row">
+                                                        <div class="col-md-3 col-xs-3 col-sm-3 no-padding">
+                                                            <ul class="titleNews">
+
+                                                                @foreach (var items in keywords)
+                                                                {
+                                                                    <li>
+
+                                                                        <a href="/Fa/BackLinks/Key-@items.Substring(1,items.Length - 1) "><span>@items</span></a>
+                                                                    </li>
+                                                                }
+
+                                                            </ul>
+                                                        </div><div class="col-md-9 col-xs-9 col-sm-9 no-padding"> <div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="@url">@item.Title</a></h1></div></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        }
+
+                                    }
+
+
+                                </ul>
                             </div>
                         </div>
 
@@ -650,15 +843,15 @@
 
 
                         @{
-                            var qs = Utility.lstNewsItem.Where(p=> p.CategoryID == 3);
-                          
+                            var qs = Utility.lstNewsItem.Where(p => p.CategoryID == 3);
+
                             foreach (var item in qs)
                             {
                                 <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                             }
 
-                            
-                            }
+
+                        }
 
 
 
@@ -1204,25 +1397,25 @@
     <script src="~/js/js-image-slider.js"></script>
 
     <script>
-      
 
 
 
-  
+
+
 
         $(document).ready(function () {
 
             $(".fa-rss").click(function () {
 
-                var getCName = $(this).parent().find('a').text().replace(' ','-');
-                
+                var getCName = $(this).parent().find('a').text().replace(' ', '-');
+
                 var getCID = $(this).attr('accesskey');
                 var url = "/fa/rss/" + getCID + "-" + getCName;
-               
+
                 window.location.href = url;
 
             })
-           
+
 
 
             $(".btnSearch").click(function () {
@@ -1230,7 +1423,7 @@
                 var GetName = $(".txtSearch").val();
                 if (GetName != null && GetName != "") {
                     var url = "/fa/tags/" + GetName;
-                        window.location.href = url;
+                    window.location.href = url;
                 }
 
             })
@@ -1241,89 +1434,89 @@
         })
 
         //GetAllNewsTop10();
- 
+
         //GetTopItemSlider();
-        GetTopTag("Day");
-        GetTopTag("Week");
-        GetTopTag("Month");
-        GetTopTag("Year");
+        //GetTopTag("Day");
+        //GetTopTag("Week");
+        //GetTopTag("Month");
+        //GetTopTag("Year");
 
-        GetTopLinkestan("Day");
-        GetTopLinkestan("Month");
-        GetTopLinkestan("Const");
-        GetTopLinkestan("Specific");
-
-
-
-        function GetTopLinkestan(TabName) {
-
-            $.getJSON("http://192.168.1.10:13311/api/tblLinkestans/All-1", function (result) {
-
-                for (var i = 0; i < 6; i++) {
-                    var url = "/fa/linkestan/" + result[i].Description;
-                    $("#Linkestan" + TabName).append("<li><div class=\"item clearfix\" ><div class=\"row\"><div class=\"col-md-3 col-xs-3 col-sm-3 no-padding\"><ul class=\"SourceNews\"><li>" + result[i].Description + " </li></ul></div><div class=\"col-md-9 col-xs-9 col-sm-9  no-padding\"> <div><div class=\"boxin-right\"><span class=\"fa fa-angle-double-left HomeBoxes\" aria-hidden=\"true\"></span></div><h1 class=\"titleNews\"><a href=\"" + url + "\">" + result[i].Description + " </a></h1></div></div></div></div ></li>");
-                }
-
-            });
-        };
+        //GetTopLinkestan("Day");
+        //GetTopLinkestan("Month");
+        //GetTopLinkestan("Const");
+        //GetTopLinkestan("Specific");
 
 
-        function GetAllNewsTop10() {
 
-            $.getJSON("http://192.168.1.10:13311/api/tblNews/All-1", function (result) {
+        //function GetTopLinkestan(TabName) {
 
-                for (var i = 0; i < 19; i++) {
-                    SetAndBindNewsBoxByCateIDAndResult(i, result);
-                }
+        //    $.getJSON("http://192.168.1.10:13311/api/tblLinkestans/All-1", function (result) {
 
-            });
-        };
+        //        for (var i = 0; i < 6; i++) {
+        //            var url = "/fa/linkestan/" + result[i].Description;
+        //            $("#Linkestan" + TabName).append("<li><div class=\"item clearfix\" ><div class=\"row\"><div class=\"col-md-3 col-xs-3 col-sm-3 no-padding\"><ul class=\"SourceNews\"><li>" + result[i].Description + " </li></ul></div><div class=\"col-md-9 col-xs-9 col-sm-9  no-padding\"> <div><div class=\"boxin-right\"><span class=\"fa fa-angle-double-left HomeBoxes\" aria-hidden=\"true\"></span></div><h1 class=\"titleNews\"><a href=\"" + url + "\">" + result[i].Description + " </a></h1></div></div></div></div ></li>");
+        //        }
 
-        function GetTopTag(whichType) {
-
-            $.getJSON("http://192.168.1.10:13311/api/tblHashTags/GetTagTop10DWMY-" + whichType + "", function (result) {
-
-                for (var i = 0; i < 6; i++) {
-                    var url = "/fa/tag/" + result[i].HashtagName;
-                    $("#" + whichType + "TagNumber").append("<li><div class=\"item clearfix\" ><div class=\"row\"><div class=\"col-md-3 col-xs-3 col-sm-3 no-padding\"><ul class=\"SourceNews\"><li>" + result[i].repcount + " خبر</li></ul></div><div class=\"col-md-9 col-xs-9 col-sm-9  no-padding\"> <div><div class=\"boxin-right\"><span class=\"fa fa-angle-double-left HomeBoxes\" aria-hidden=\"true\"></span></div><h1 class=\"titleNews\"><a href=\"" + url + "\">" + result[i].HashtagName + " </a></h1></div></div></div></div ></li>");
-                }
-                $(".txtSearch").val(result[0].HashtagName);
-                if (whichType == "Day") {
-                    SearchTagInAllNewsByInputKey(result[0].HashtagName);
-                }
-
-            });
-        };
-
-        function GetTopItemSlider() {
+        //    });
+        //};
 
 
-            $.getJSON("http://192.168.1.10:13311/api/Slider/1-0", function (result) {
+        //function GetAllNewsTop10() {
+
+        //    $.getJSON("http://192.168.1.10:13311/api/tblNews/All-1", function (result) {
+
+        //        for (var i = 0; i < 19; i++) {
+        //            SetAndBindNewsBoxByCateIDAndResult(i, result);
+        //        }
+
+        //    });
+        //};
+
+        //function GetTopTag(whichType) {
+
+        //    $.getJSON("http://192.168.1.10:13311/api/tblHashTags/GetTagTop10DWMY-" + whichType + "", function (result) {
+
+        //        for (var i = 0; i < 6; i++) {
+        //            var url = "/fa/tag/" + result[i].HashtagName;
+        //            $("#" + whichType + "TagNumber").append("<li><div class=\"item clearfix\" ><div class=\"row\"><div class=\"col-md-3 col-xs-3 col-sm-3 no-padding\"><ul class=\"SourceNews\"><li>" + result[i].repcount + " خبر</li></ul></div><div class=\"col-md-9 col-xs-9 col-sm-9  no-padding\"> <div><div class=\"boxin-right\"><span class=\"fa fa-angle-double-left HomeBoxes\" aria-hidden=\"true\"></span></div><h1 class=\"titleNews\"><a href=\"" + url + "\">" + result[i].HashtagName + " </a></h1></div></div></div></div ></li>");
+        //        }
+        //        $(".txtSearch").val(result[0].HashtagName);
+        //        if (whichType == "Day") {
+        //            SearchTagInAllNewsByInputKey(result[0].HashtagName);
+        //        }
+
+        //    });
+        //};
+
+        //function GetTopItemSlider() {
 
 
-                for (var i = 0; i < result.length; i++) {
-
-                    $.getJSON("http://192.168.1.10:13311/api/tblNews/" + result[i].NewsID + "", function (data) {
-
-                        var $htmDesc = data[0].Description;
-
-                        var firstImage = $(data[0].Description).find("img:first").attr("src");
-
-                        var $taga = "<a href=\"" + data[0].Link + "\" target=\"_blank\"><img src=\"" + firstImage + "\" alt=\"" + "" + "\" /><h4 class=\"descslider\">" + data[0].Title + "</h4></a>";
-                        $("#slider").append($taga);
-
-                        var $thumb = "<div class=\"thumb\"><div class=\"frame\"><img src=\"" + firstImage + "\" /></div><div class=\"thumb-content\"><p>" + "حروف" + "</p>" + "s" + "</div><div style=\"clear:both;\"></div></div>"
-                        $("#thumbs").append($thumb);
-
-                    });
-
-                }
+        //    $.getJSON("http://192.168.1.10:13311/api/Slider/1-0", function (result) {
 
 
-            });
+        //        for (var i = 0; i < result.length; i++) {
 
-        }
+        //            $.getJSON("http://192.168.1.10:13311/api/tblNews/" + result[i].NewsID + "", function (data) {
 
+        //                var $htmDesc = data[0].Description;
+
+        //                var firstImage = $(data[0].Description).find("img:first").attr("src");
+
+        //                var $taga = "<a href=\"" + data[0].Link + "\" target=\"_blank\"><img src=\"" + firstImage + "\" alt=\"" + "" + "\" /><h4 class=\"descslider\">" + data[0].Title + "</h4></a>";
+        //                $("#slider").append($taga);
+
+        //                var $thumb = "<div class=\"thumb\"><div class=\"frame\"><img src=\"" + firstImage + "\" /></div><div class=\"thumb-content\"><p>" + "حروف" + "</p>" + "s" + "</div><div style=\"clear:both;\"></div></div>"
+        //                $("#thumbs").append($thumb);
+
+        //            });
+
+        //        }
+
+
+        //    });
+
+        //}
+        SearchTagInAllNewsByInputKey('استخدام');
         function SearchTagInAllNewsByInputKey(GetName) {
 
 
@@ -1361,20 +1554,20 @@
                 });
 
 
-                
+
 
             });
         }
 
-        
-     
-
-        
 
 
 
 
-       
+
+
+
+
+
 
     </script>
 
