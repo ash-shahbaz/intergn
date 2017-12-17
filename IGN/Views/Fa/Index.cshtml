@@ -559,27 +559,6 @@
 
 
 
-    
-    @*<div class="row">
-        <div class="col-md-12">
-            <div class="widget widget-news card">
-                <h2 class="widget-title"><span class="fa fa-list-ul pull-left"></span>اخبار</h2>
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-        </div>
-    </div>*@
-
-
 
 
     <div class="row">
@@ -656,8 +635,8 @@
                     <input id="newstabLink18" type="radio" class="display-none" name="newslinktabs">
                     <label class="newstabLink" for="newstabLink18">ترند اخبار</label>
 
-                    <input id="newstabLink18" type="radio" class="display-none" name="newslinktabs">
-                    <label class="newstabLink" for="newstabLink18">لینکستان</label>
+                    <input id="newstabLink19" type="radio" class="display-none" name="newslinktabs">
+                    <label class="newstabLink" for="newstabLink19">لینکستان</label>
 
                     <section class="newssectionLinkTabs" id="newsLink1">
                         <div class="row">
@@ -672,7 +651,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 1))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -693,7 +672,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 1))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -723,7 +702,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 2))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
                                             }
@@ -743,7 +722,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 2))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
                                             }
@@ -769,7 +748,7 @@
 
                                                 foreach (var item in qs)
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -790,7 +769,7 @@
 
                                                 foreach (var item in qs)
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -817,7 +796,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 5))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -838,7 +817,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 5))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -866,7 +845,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 6))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -887,7 +866,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 6))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -915,7 +894,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 4))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -936,7 +915,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 4))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -964,7 +943,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 7))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -985,7 +964,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 7))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1013,7 +992,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 8))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1034,7 +1013,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 8))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1062,7 +1041,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 10))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1083,7 +1062,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 10))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1111,7 +1090,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 9))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1133,7 +1112,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 9))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1162,7 +1141,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 11))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1183,7 +1162,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 11))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1211,7 +1190,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 12))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1232,7 +1211,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 12))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1260,7 +1239,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 13))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1282,7 +1261,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 13))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1311,7 +1290,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 14))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1332,7 +1311,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 14))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1360,7 +1339,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 16))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1381,7 +1360,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 16))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1409,7 +1388,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 18))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1430,7 +1409,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 18))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1458,7 +1437,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 15))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1479,7 +1458,7 @@
 
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 15))
                                                 {
-                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.rssname</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
+                                                    <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/fa/News/Accident/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
                                                 }
 
 
@@ -1564,7 +1543,7 @@
 
 
                     </section>
-                    <section class="newssectionLinkTabs" id="newsLink8">
+                    <section class="newssectionLinkTabs" id="newsLink19">
                       
                         <div class="row">
                             <div class="col-md-12 text-align-center">
