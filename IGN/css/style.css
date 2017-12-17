@@ -3743,6 +3743,7 @@ input:checked + .tabLink {
     text-align: center;
     color: #bbb;
     border: 1px solid transparent;
+    font-size: 12px;
 }
 
 
@@ -3782,7 +3783,9 @@ input:checked + .newstabLink {
 #newstabLink14:checked ~ #newsLink14,
 #newstabLink15:checked ~ #newsLink15,
 #newstabLink16:checked ~ #newsLink16,
-#newstabLink17:checked ~ #newsLink17 {
+#newstabLink17:checked ~ #newsLink17,
+#newstabLink18:checked ~ #newsLink18,
+#newstabLink19:checked ~ #newsLink19 {
     display: block;
 }
 
