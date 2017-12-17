@@ -3722,7 +3722,69 @@ input:checked + .tabLink {
 #tabLink4:checked ~ #Link4 {
     display: block;
 }
+/*------------------------Start Tab News------------------------------*/
+.newsmainLinktabs {
+    padding: 10px 6px;
+    margin: 0 auto;
+    background: #fff;
+}
 
+.newssectionLinkTabs {
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+}
+
+.newstabLink {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 5px 5px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    border: 1px solid transparent;
+}
+
+
+    .newstabLink:before {
+        font-family: fontawesome;
+        font-weight: normal;
+        margin-left: 5px;
+    }
+
+
+    .newstabLink:hover {
+        color: #888;
+        cursor: pointer;
+    }
+
+
+input:checked + .newstabLink {
+    color: #555;
+    border: 1px solid #ddd;
+    border-top: 2px solid orange;
+    border-bottom: 1px solid #fff;
+}
+
+#newstabLink1:checked ~ #newsLink1,
+#newstabLink2:checked ~ #newsLink2,
+#newstabLink3:checked ~ #newsLink3,
+#newstabLink4:checked ~ #newsLink4,
+#newstabLink5:checked ~ #newsLink5,
+#newstabLink6:checked ~ #newsLink6,
+#newstabLink7:checked ~ #newsLink7,
+#newstabLink8:checked ~ #newsLink8,
+#newstabLink9:checked ~ #newsLink9,
+#newstabLink10:checked ~ #newsLink10,
+#newstabLink11:checked ~ #newsLink11,
+#newstabLink12:checked ~ #newsLink12,
+#newstabLink13:checked ~ #newsLink13,
+#newstabLink14:checked ~ #newsLink14,
+#newstabLink15:checked ~ #newsLink15,
+#newstabLink16:checked ~ #newsLink16,
+#newstabLink17:checked ~ #newsLink17 {
+    display: block;
+}
 
 /*-------------------------------------------end tabs-------------------------------------------------------*/
 .width-45 {

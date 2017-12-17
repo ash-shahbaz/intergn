@@ -173,7 +173,6 @@
     <Content Include="css\app.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\categories.css" />
-    <Content Include="css\flexslider.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\icomoon.css" />
     <Content Include="css\ie.css" />
