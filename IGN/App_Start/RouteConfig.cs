@@ -33,10 +33,20 @@ namespace IGN
             //    "{controller}/{action}/{Cname}",
             //   defaults: new { controller = "fa", action = "Cat" , Cname  ="" }
             //);
+            routes.MapRoute(
+              "Routingfa1ssad", // Route name
+              "{controller}/دسته_بندی/{cate1}/{cate2}/{cate3}",  // URL with parameters
+              defaults: new { controller = "ads", action = "دسته_بندی" ,  cate2 = UrlParameter.Optional , cate3 = UrlParameter.Optional } 
+              );
+            // Parameter defaults);
+
+
+    
+
 
 
             routes.MapRoute(
-                "Routingfa", // Route name
+                "Routingads", // Route name
                 "{controller}/{action}/{CategoryName}/{NewsID}/{Title}",  // URL with parameters
                 defaults:  new { controller = "fa", action = "News" }
                 );  // Parameter defaults);

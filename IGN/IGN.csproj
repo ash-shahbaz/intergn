@@ -152,6 +152,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AdminPanelController.cs" />
+    <Compile Include="Controllers\AdsController.cs" />
     <Compile Include="Controllers\ArController.cs" />
     <Compile Include="Controllers\EnController.cs" />
     <Compile Include="Controllers\FaController.cs" />
@@ -388,6 +389,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Fa\rss.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Ads\دسته_بندی.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Ads\ثبت_آگهی.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Ads\جزئیات_آگهی.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Ads\آگهی_های_من.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Ads\جستجو_آگهی.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
