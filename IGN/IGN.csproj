@@ -172,6 +172,7 @@
   <ItemGroup>
     <Content Include="css\animate.min.css" />
     <Content Include="css\app.css" />
+    <Content Include="css\bootstrap-select.min.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\categories.css" />
     <Content Include="css\font-awesome.min.css" />
@@ -181,12 +182,15 @@
     <Content Include="css\kamadatepicker.min.css" />
     <Content Include="css\kanNotify.css" />
     <Content Include="css\main-color-login.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\mainselect.css" />
     <Content Include="css\material-kit.css" />
     <Content Include="css\material.min.css" />
     <Content Include="css\pagination.css" />
     <Content Include="css\SideBarmenu.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\SimpleChart.css" />
+    <Content Include="css\slidr.css" />
     <Content Include="css\style.css" />
     <Content Include="css\styleLogin.css" />
     <Content Include="css\stylenews.min.css" />
@@ -201,6 +205,7 @@
     <Content Include="images\hoverNext.png" />
     <Content Include="images\hoverPrev.png" />
     <Content Include="images\logo.png" />
+    <Content Include="js\bootstrap-select.min.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\custom.js" />
     <Content Include="js\imagesloaded.js" />
@@ -215,6 +220,7 @@
     <Content Include="js\CircleUserJS.js" />
     <Content Include="js\kamadatepicker.min.js" />
     <Content Include="js\mainlogin.js" />
+    <Content Include="js\mainselect.js" />
     <Content Include="js\material.min.js" />
     <Content Include="js\pagination.js" />
     <Content Include="js\PIE_IE678.js" />
@@ -271,6 +277,10 @@
     <Content Include="fonts\icomoon_c42a7947.eot" />
     <Content Include="fonts\icomoon_c42a7947.ttf" />
     <Content Include="fonts\icomoon_c42a7947.woff" />
+    <Content Include="SqlScript\add.sql" />
+    <Content Include="SqlScript\SQLQuery13.sql" />
+    <Content Include="SqlScript\SQLQuery2.sql" />
+    <Content Include="SqlScript\Utility.sql" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -4,5 +4,784 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>جزئیات_آگهی</h2>
 
+@section Head
+{
+    <link href="~/css/animate.min.css" rel="stylesheet" />
+<link href="~/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="~/css/main.css">  
+<link rel="stylesheet" href="~/css/mainselect.css">
+<link rel="stylesheet" href="~/css/bootstrap-select.min.css">
+<link rel="stylesheet" href="~/css/slidr.css">   
+}
+
+
+
+
+
+<div class="row search-bar margin-bottom-20">
+    <div class="advanced-search">
+        <form class="search-form" method="get">
+            <div class="col-md-3 col-sm-6 search-col">
+                <button class="btn btn-common btn-search btn-block"><strong>جستجو</strong></button>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 search-col">
+                <div class="input-group-addon search-category-container">
+                    <label class="styled-select location-select">
+                        <select class="dropdown-product selectpicker" name="product-cat">
+                            <option class="" value="New York">تجریش</option>
+                            <option class="" value="0">همه مناطق</option>
+                            <option class="" value="California">میدان ولیعصر</option>
+                            <option class="" value="Washington">ونک</option>
+                            <option class="" value="churches">جنت آباد</option>
+                            <option class="" value="Birmingham">تهرانپارس</option>
+                            <option class="" value="Phoenix">پاسداران</option>
+                            <option class="" value="0">همه مناطق</option>
+                            <option class="" value="eam">میدان امام </option>
+                            <option class="" value="0">همه مناطق</option>
+                            <option class="" value="koh">کوه سنگی</option>
+                            <option class="" value="0">همه مناطق</option>
+                            <option class="" value="bagh">باغ میشه</option>
+
+
+
+
+                        </select>
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 search-col">
+                <div class="input-group-addon search-category-container">
+                    <label class="styled-select">
+                        <select class="dropdown-product selectpicker" name="product-cat">
+                            <option value="0">همه دسته بندی ها</option>
+                            <option class="subitem" value="community"> خودرو</option>
+                            <option value="items-for-sale"> املاک</option>
+                            <option value="jobs"> استخدام</option>
+                            <option value="personals"> حمل و نقل</option>
+                            <option value="training"> خدمات</option>
+                            <option value="real_estate"> ورزش</option>
+                            <option value="services"> کامپیوتر و اینترنت</option>
+                            <option value="vehicles"> چاپ و تبلیغات</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 search-col">
+                <input class="form-control keyword" name="keyword" value="" placeholder="متن جستجو" type="text">
+                <i class="fa fa-search"></i>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div class="section slider">
+    <div class="row">
+        <!-- carousel -->
+        <div class="col-md-7 dir-ltr">
+            <div id="product-carousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#product-carousel" data-slide-to="0" class="active">
+                        <img src="https://static.swappa.com/static/images/categories/prime/category_prime_iphones_square.jpg" alt="Carousel Thumb" class="img-responsive">
+                    </li>
+                    <li data-target="#product-carousel" data-slide-to="1">
+                        <img src="https://www.bhphotovideo.com/images/images2500x2500/zte_a7g331_axon_7_64gb_smartphone_1257204.jpg" alt="Carousel Thumb" class="img-responsive">
+                    </li>
+                    <li data-target="#product-carousel" data-slide-to="2">
+                        <img src="https://images.fastcompany.net/image/upload/w_596,c_limit,q_auto:best,f_auto,fl_lossy/fc/3063398-inline-i-1-why-ill-never-buy-another-iphone.jpg" alt="Carousel Thumb" class="img-responsive">
+                    </li>
+                    <li data-target="#product-carousel" data-slide-to="3">
+                        <img src="https://www.phonedog.com/sites/phonedog.com/files/styles/blog_entry/public/blog/main_image/2017/11/essentialphonereview.jpg?itok=8jt7LfJu" alt="Carousel Thumb" class="img-responsive">
+                    </li>
+                    <li data-target="#product-carousel" data-slide-to="4">
+                        <img src="https://www.androidcentral.com/sites/androidcentral.com/files/styles/xlarge_wm_brw/public/article_images/2017/03/galaxy-s8-s8-plus-together-6.jpg?itok=90qY8yYi" alt="Carousel Thumb" class="img-responsive">
+                    </li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <!-- item -->
+                    <div class="item active">
+                        <div class="carousel-image">
+                            <!-- image-wrapper -->
+                            <img src="https://static.swappa.com/static/images/categories/prime/category_prime_iphones_square.jpg" alt="Featured Image" class="img-responsive">
+                        </div>
+                    </div><!-- item -->
+                    <!-- item -->
+                    <div class="item">
+                        <div class="carousel-image">
+                            <!-- image-wrapper -->
+                            <img src="https://www.bhphotovideo.com/images/images2500x2500/zte_a7g331_axon_7_64gb_smartphone_1257204.jpg" alt="Featured Image" class="img-responsive">
+                        </div>
+                    </div><!-- item -->
+                    <!-- item -->
+                    <div class="item">
+                        <div class="carousel-image">
+                            <!-- image-wrapper -->
+                            <img src="https://images.fastcompany.net/image/upload/w_596,c_limit,q_auto:best,f_auto,fl_lossy/fc/3063398-inline-i-1-why-ill-never-buy-another-iphone.jpg" alt="Featured Image" class="img-responsive">
+                        </div>
+                    </div><!-- item -->
+                    <!-- item -->
+                    <div class="item">
+                        <div class="carousel-image">
+                            <!-- image-wrapper -->
+                            <img src="https://www.phonedog.com/sites/phonedog.com/files/styles/blog_entry/public/blog/main_image/2017/11/essentialphonereview.jpg?itok=8jt7LfJu" alt="Featured Image" class="img-responsive">
+                        </div>
+                    </div><!-- item -->
+                    <!-- item -->
+                    <div class="item">
+                        <div class="carousel-image">
+                            <!-- image-wrapper -->
+                            <img src="https://www.androidcentral.com/sites/androidcentral.com/files/styles/xlarge_wm_brw/public/article_images/2017/03/galaxy-s8-s8-plus-together-6.jpg?itok=90qY8yYi" alt="Featured Image" class="img-responsive">
+                        </div>
+                    </div><!-- item -->
+                </div><!-- carousel-inner -->
+                <!-- Controls -->
+                <a class="left carousel-control" href="#product-carousel" role="button" data-slide="prev">
+                    <i class="fa fa-chevron-left"></i>
+                </a>
+                <a class="right carousel-control" href="#product-carousel" role="button" data-slide="next">
+                    <i class="fa fa-chevron-right"></i>
+                </a><!-- Controls -->
+            </div>
+        </div><!-- Controls -->
+        <!-- slider-text -->
+        <div class="col-md-5">
+            <div class="slider-text">
+                <h2>٩٥٠٬٠٠٠ هزار تومان</h2>
+                <h3 class="title">گوشی اپل 8Plus بدون خط و خش</h3>
+                <p>
+                    <span>ارسال توسط: <a href="#">احمد شهباز</a></span>
+                    <span class="float-left">شماره آگهی:<a href="#" class="time"> ٥٦٧٨٩</a></span>
+                </p>
+                <span class="icon"><i class="fa fa-clock-o"></i><a href="#">٧ مهر ١٢:٢٠</a></span>
+                <span class="icon"><i class="fa fa-map-marker"></i><a href="#">تهران</a></span>
+                <span class="icon float-left"><i class="fa fa-suitcase online"></i><a href="#">فروشنده<strong>(آنلاین)</strong></a></span>
+
+                <!-- short-info -->
+                <div class="short-info">
+                    <h4>چکیده اطلاعات</h4>
+                    <p><strong>وضعیت: </strong><a href="#">نو</a> </p>
+                    <p><strong>برند: </strong><a href="#">اپل</a> </p>
+                    <p><strong>ویژگی ها: </strong><a href="#">Dual Camera,</a> <a href="#">Dual SIM,</a> <a href="#">GSM,</a> <a href="#">مالتی تاچ</a> </p>
+                    <p><strong>مدل: </strong><a href="#">iPhone 8 plus</a></p>
+                </div><!-- short-info -->
+                <!-- contact-with -->
+                <div class="contact-with">
+                    <h4>اطلاعات تماس</h4>
+                    <span class="btn btn-red show-number">
+                        <i class="fa fa-phone-square"></i>
+                        <span class="hide-text">نمایش تلفن</span>
+                        <span class="hide-number">٠٩١٢٧٧٧٣٤٥٦</span>
+                    </span>
+                    <a href="#" class="btn"><i class="fa fa-envelope-square"></i>آغاز گفتگو</a>
+                </div><!-- contact-with -->
+                <!-- social-links -->
+                <div class="social-links">
+                    <h4>به اشتراک گذاری در:</h4>
+                    <ul class="list-inline">
+                        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-tumblr-square"></i></a></li>
+                    </ul>
+                </div><!-- social-links -->
+            </div>
+        </div><!-- slider-text -->
+    </div>
+</div><!-- slider -->
+
+<div class="description-info">
+    <div class="row">
+        <!-- description -->
+        <div class="col-md-8">
+            <div class="description">
+                <h4>توضیحات</h4>
+                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p><br>
+                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری ایجاد کرد.</p>
+            </div>
+        </div><!-- description -->
+        <!-- description-short-info -->
+        <div class="col-md-4">
+            <div class="short-info">
+                <h4>سایر اطلاعات</h4>
+                <!-- social-icon -->
+                <ul>
+                    <li><i class="fa fa-shopping-cart"></i><a href="#">ذخیره در سبد اطلاعات</a></li>
+                    <li><i class="fa fa-user-plus"></i><a href="#">دیگر آگهی های<span>احمد شهباز</span></a></li>
+                    <li><i class="fa fa-print"></i><a href="#">پرینت آگهی</a></li>
+                    <li><i class="fa fa-reply"></i><a href="#">ارسال به دوستان</a></li>
+                    <li><i class="fa fa-heart-o"></i><a href="#">ذخیره در علاقه مندی ها</a></li>
+                    <li><i class="fa fa-exclamation-triangle"></i><a href="#">گزارش این آگهی</a></li>
+                </ul><!-- social-icon -->
+            </div>
+        </div>
+    </div><!-- row -->
+</div><!-- description-info -->	
+
+
+<div class="main-top">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="widget card topstyle">
+
+                <div class="widget-content">
+
+
+                    <div class="padding-top-15">
+                        <div class="well well-sm">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <strong>نمایش به صورت</strong>
+                                    <div class="btn-group">
+                                        <a href="#" id="list" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-th-list">
+                                            </span>لیست
+                                        </a> <a href="#" id="grid" class="btn btn-default btn-sm">
+                                            <span class="glyphicon glyphicon-th"></span>فشرده
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+
+
+
+
+                                    <div class="col-md-3 dropdown">
+                                        <a href="#" class="btn btn-simple dropdown-toggle" data-toggle="dropdown">
+                                            دسته بندی
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">خودرو</a></li>
+                                            <li><a href="#">املاک</a></li>
+                                            <li><a href="#">موبایل</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">تست اول</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">تست دوم</a></li>
+                                        </ul>
+                                    </div>
+
+
+
+
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div id="products" class="row list-group">
+
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/static/thumbnails/1513255937/KBG-Lxgp4.jpg" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/static/thumbnails/1513259442/HJq6-SwqG.jpg" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/static/thumbnails/1513259433/A-X__aXtg.jpg" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/static/thumbnails/1513259429/N2jUczseg.jpg" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/static/thumbnails/1513259418/8V0MbkcIR.jpg" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/static/thumbnails/1513259402/CgjQHoDXf.jpg" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/static/thumbnails/1513259391/Mdq_wiZTh.jpg" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/the-wall/no-picture-thumbnail.9cc0622468342d154e11dda9b7533407.png" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/static/thumbnails/1513259360/jQ0p15_qM.jpg" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/static/thumbnails/1513259355/Ufp0h-9W8.jpg" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/static/thumbnails/1513259353/zieEe22zv.jpg" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/static/thumbnails/1513259345/dazhyi_Ae.jpg" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/static/thumbnails/1513259429/N2jUczseg.jpg" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/static/thumbnails/1513259418/8V0MbkcIR.jpg" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/static/thumbnails/1513259402/CgjQHoDXf.jpg" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/static/thumbnails/1513259391/Mdq_wiZTh.jpg" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/the-wall/no-picture-thumbnail.9cc0622468342d154e11dda9b7533407.png" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item  col-xs-2 col-lg-2 ">
+                                <div class="thumbnail card-3">
+                                    <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/static/thumbnails/1513259360/jQ0p15_qM.jpg" alt="" />
+                                    <div class="caption">
+                                        <h1 class="group inner list-group-item-heading titletopstyle">
+                                            لامبورگینی اونتادور
+                                        </h1>
+                                        <span class="group inner list-group-item-text">
+                                            بسیار تمیز بدون رنگ 8000 کیلومتر
+                                        </span>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-8 no-padding">
+                                                <h3 class="lead font-size-10 text-align-left no-margin">
+                                                    800 میلیون تومان
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 no-padding">
+                                                <h2 class="lead font-size-12 no-margin">
+                                                    قیمت
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+@section Script
+    {
+
+<script src="~/js/bootstrap-select.min.js"></script>
+<script src="~/js/mainselect.js"></script>
+
+
+
+
+
+}

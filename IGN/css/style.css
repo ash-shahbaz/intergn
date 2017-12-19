@@ -3956,13 +3956,59 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 
 /*-----------Agahi end---------------*/
 
-/*-------------start select--------------*/
+
+/* ========================= Start Search=========================*/
+.search-bar {
+    background: rgba(151,151,151,0.33);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.14);
+    border-radius: 5px;
+}
+
+.styled-select {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 220px;
+}
+
+.bootstrap-select.btn-group:not(.input-group-btn), .bootstrap-select.btn-group[class*=col-] {
+    float: none;
+    display: inline-block;
+    margin-left: 0;
+}
+
+.btn-group > .btn:first-child {
+    margin-left: 0;
+}
+
+.bootstrap-select > .dropdown-toggle {
+    width: 100%;
+    padding-right: 25px;
+    z-index: 1;
+}
+
+.search-bar .btn-select {
+    padding: 12px;
+    border-radius: 0;
+    color: #555;
+    background: #fff;
+    text-transform: none;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    text-align: right;
+}
 
 
 
+/* ========================End Search ========================== */
 
-
-/*-------------end select--------------*/
 
 
 
