@@ -3743,6 +3743,7 @@ input:checked + .tabLink {
     text-align: center;
     color: #bbb;
     border: 1px solid transparent;
+    font-size: 12px;
 }
 
 
@@ -3782,7 +3783,9 @@ input:checked + .newstabLink {
 #newstabLink14:checked ~ #newsLink14,
 #newstabLink15:checked ~ #newsLink15,
 #newstabLink16:checked ~ #newsLink16,
-#newstabLink17:checked ~ #newsLink17 {
+#newstabLink17:checked ~ #newsLink17,
+#newstabLink18:checked ~ #newsLink18,
+#newstabLink19:checked ~ #newsLink19 {
     display: block;
 }
 
@@ -4005,3 +4008,11 @@ input:checked + .custom-radio-outer .custom-radio-inner {
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
         border: 1px solid #428bca;
     }
+.sidebartitle {
+    font-family: IRANSans,Calibri;
+    font-size: 14px;
+    color: white;
+}
+.colortitle{
+    background-color: green;
+}
