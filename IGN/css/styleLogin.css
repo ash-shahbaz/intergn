@@ -62,9 +62,9 @@ Author : themelooks.com
 }
 
 /* 1-4 MODAL */
-.modal-dialog {
+/*.modal-dialog {
     width: auto;
-}
+}*/
 .modal-content {
     background-color: transparent;
 }

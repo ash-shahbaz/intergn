@@ -3882,7 +3882,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
         background-color: #d1d1df
     }
 
-    
+
 
 .Ul-links {
     position: relative;
@@ -4229,9 +4229,8 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 
     .megamenu .title {
         border-bottom: 1px solid #CCC;
-        font-size: 14px;
+        font-size: 13px;
         padding: 9px 5px 9px 0px;
-        font-size: 17px;
         color: #424242;
         margin-bottom: 7px;
         text-align: right;
@@ -6350,14 +6349,63 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 
 /*---------------------------------------------------------------End Mega Menu------------------------------------------------------------*/
 
+/***********************************choose the category************************************/
+.btnchoose {
+    padding: 5px 40px !important;
+}
 
+.border-radius-15 {
+    border-radius: 15px;
+}
+
+.form-group .checkbox label, .form-group .radio label, .form-group label {
+    color: black;
+}
+
+.checkbox label, .radio label, label {
+    color: black;
+}
+
+.li-cat {
+    border-bottom: 1px solid #eee;
+    height: 35px;
+}
+
+.choose ul li:hover {
+    color: red;
+    cursor: pointer;
+}
+.choose ul li> span:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.fa-cat-style {
+    height: auto;
+    top: 10px;
+}
+
+.vertical-align-sub {
+    vertical-align: sub
+}
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 400px;
+    }
+}
+.modal .modal-header .close {
+    color: #ff0000;
+}
+/***********************************choose the category************************************/
 .font-size-14 {
     font-size: 14px;
 }
+
 .padding-top-15 {
     padding-top: 15px;
 }
-    .no-margin {
+
+.no-margin {
     margin: 0px !important;
 }
 
@@ -6369,6 +6417,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 .topstyle {
     background-color: #eeeff1;
 }
+
 .titletopstyle {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -6379,6 +6428,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     text-align: right;
     font-size: 14px;
 }
+
 .well {
     margin: 0px 15px 10px 15px !important;
 }
@@ -6387,15 +6437,18 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 .card-3 {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
+
     .card-3:hover {
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
         border: 1px solid #428bca;
     }
+
 .sidebartitle {
     font-family: IRANSans,Calibri;
     font-size: 14px;
     color: white;
 }
-.colortitle{
+
+.colortitle {
     background-color: green;
 }
