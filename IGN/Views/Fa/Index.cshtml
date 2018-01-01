@@ -33,51 +33,8 @@
 
 
                     <div class="padding-top-15">
-                        <div class="well well-sm">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <strong>نمایش به صورت</strong>
-                                    <div class="btn-group">
-                                        <a href="#" id="list" class="btn btn-default btn-sm">
-                                            <span class="glyphicon glyphicon-th-list">
-                                            </span>لیست
-                                        </a> <a href="#" id="grid" class="btn btn-default btn-sm">
-                                            <span class="glyphicon glyphicon-th"></span>فشرده
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-9">
+                  
 
-
-
-
-                                    <div class="col-md-3 dropdown">
-                                        <a href="#" class="btn btn-simple dropdown-toggle" data-toggle="dropdown">
-                                            دسته بندی
-                                            <b class="caret"></b>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">خودرو</a></li>
-                                            <li><a href="#">املاک</a></li>
-                                            <li><a href="#">موبایل</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">تست اول</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">تست دوم</a></li>
-                                        </ul>
-                                    </div>
-
-
-
-
-
-
-
-                                </div>
-
-                            </div>
-
-                        </div>
                         <div id="products" class="row list-group">
 
                             <div class="item  col-xs-2 col-lg-2 ">
@@ -1712,8 +1669,18 @@
 
         $(document).ready(function () {
 
-            $('#list').click(function (event) { event.preventDefault(); $('#products .item').addClass('list-group-item'); });
-            $('#grid').click(function (event) { event.preventDefault(); $('#products .item').removeClass('list-group-item'); $('#products .item').addClass('grid-group-item'); });
+            var widthbrowser = $(window).width();
+            console.log(widthbrowser);
+            if (widthbrowser < 1024) {
+                event.preventDefault(); $('#products .item').addClass('list-group-item');
+            }
+
+            $('#list').click(function (event) {
+                event.preventDefault(); $('#products .item').addClass('list-group-item');
+            });
+            $('#grid').click(function (event) {
+                event.preventDefault(); $('#products .item').removeClass('list-group-item'); $('#products .item').addClass('grid-group-item');
+            });
 
 
             $(".fa-rss").click(function () {

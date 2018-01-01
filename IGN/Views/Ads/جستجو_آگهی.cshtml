@@ -21,39 +21,109 @@
 <div class="row search-bar margin-bottom-20">
     <div class="advanced-search">
         <form class="search-form" method="get">
-            <div class="col-md-3 col-sm-6 search-col">
-                <button class="btn btn-common btn-search btn-block"><strong>جستجو</strong></button>
-            </div>
+            <div class="row">
 
 
-            <div class="col-md-3 col-sm-6 search-col">
-                <div class="input-group-addon search-category-container">
-                    <label class="styled-select location-select">
-                        <select class="dropdown-product selectpicker" name="product-cat">
-                            <option class="" value="New York">تجریش</option>
-                            <option class="" value="0">همه مناطق</option>
-                            <option class="" value="California">میدان ولیعصر</option>
-                            <option class="" value="Washington">ونک</option>
-                            <option class="" value="churches">جنت آباد</option>
-                            <option class="" value="Birmingham">تهرانپارس</option>
-                            <option class="" value="Phoenix">پاسداران</option>
-                            <option class="" value="0">همه مناطق</option>
-                            <option class="" value="eam">میدان امام </option>
-                            <option class="" value="0">همه مناطق</option>
-                            <option class="" value="koh">کوه سنگی</option>
-                            <option class="" value="0">همه مناطق</option>
-                            <option class="" value="bagh">باغ میشه</option>
-
-
-
-
-                        </select>
-                    </label>
+                <div class="col-md-3 col-sm-6 search-col">
+                    <button class="btn btn-common btn-search btn-block"><strong>جستجو</strong></button>
                 </div>
-            </div>
 
-            <div class="col-md-3 col-sm-6 search-col">
-                <div class="input-group-addon search-category-container">
+
+                <div class="col-md-3 col-sm-6 search-col">
+                    <div class="input-group-addon search-category-container">
+                        <label class="styled-select location-select">
+                            <select class="dropdown-product selectpicker" name="product-cat">
+                                <option class="" value="New York">تجریش</option>
+                                <option class="" value="0">همه مناطق</option>
+                                <option class="" value="California">میدان ولیعصر</option>
+                                <option class="" value="Washington">ونک</option>
+                                <option class="" value="churches">جنت آباد</option>
+                                <option class="" value="Birmingham">تهرانپارس</option>
+                                <option class="" value="Phoenix">پاسداران</option>
+                                <option class="" value="0">همه مناطق</option>
+                                <option class="" value="eam">میدان امام </option>
+                                <option class="" value="0">همه مناطق</option>
+                                <option class="" value="koh">کوه سنگی</option>
+                                <option class="" value="0">همه مناطق</option>
+                                <option class="" value="bagh">باغ میشه</option>
+
+
+
+
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 search-col">
+                    <span class=" user-type">
+                        <button type="button" class="btn btn-info btn-lg btnchoose" data-toggle="modal" data-target="#myModal">انتخاب گروه آگهی</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog whitebg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">انتخاب گروه بندی</h4>
+                                        <h5>املاک>فروش املک مسکونی</h5>
+                                    </div>
+                                    <div class="modal-body choose">
+                                        <ul>
+                                            <li class="li-cat">
+                                                <span class="vertical-align-sub">املاک</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
+                                            </li>
+                                            <li class="li-cat">
+                                                <span class="vertical-align-sub">وسایل نقلیه</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
+                                            </li>
+                                            <li class="li-cat">
+                                                <span class="vertical-align-sub">لوازم الکترونیکی</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
+                                            </li>
+                                            <li class="li-cat">
+                                                <span class="vertical-align-sub">لوازم خانگی</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
+                                            </li>
+                                            <li class="li-cat">
+                                                <span class="vertical-align-sub">خدمات</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
+                                            </li>
+                                            <li class="li-cat">
+                                                <span class="vertical-align-sub">لوازم شخصی</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
+                                            </li>
+                                            <li class="li-cat">
+                                                <span class="vertical-align-sub">سرگرمی و فراغت</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
+                                            </li>
+                                            <li class="li-cat">
+                                                <span class="vertical-align-sub">اجتماعی</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
+                                            </li>
+                                            <li class="li-cat">
+                                                <span class="vertical-align-sub">کسب و کار</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
+                                            </li>
+                                            <li class="li-cat">
+                                                <span class="vertical-align-sub">استخدام</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-body choose">
+                                        <ul>
+                                            <li class="li-cat">
+                                                <span class="vertical-align-sub">آپارتمان</span>
+                                            </li>
+                                            <li class="li-cat">
+                                                <span class="vertical-align-sub">خانه و ویلا</span>
+                                            </li>
+                                            <li class="li-cat">
+                                                <span class="vertical-align-sub">زمین و کلنگی</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </span>
+                    @*<div class="input-group-addon search-category-container">
                     <label class="styled-select">
                         <select class="dropdown-product selectpicker" name="product-cat">
                             <option value="0">همه دسته بندی ها</option>
@@ -67,14 +137,28 @@
                             <option value="vehicles"> چاپ و تبلیغات</option>
                         </select>
                     </label>
+                </div>*@
+                </div>
+
+
+                <div class="col-md-3 col-sm-6 search-col">
+                    <input class="form-control keyword" name="keyword" value="" placeholder="متن جستجو" type="text">
+                    <i class="fa fa-search"></i>
                 </div>
             </div>
 
 
-            <div class="col-md-3 col-sm-6 search-col">
-                <input class="form-control keyword" name="keyword" value="" placeholder="متن جستجو" type="text">
-                <i class="fa fa-search"></i>
+            <div class="row">
+                <h5>جزئیات بیشتر</h5>
+                <div></div>
             </div>
+
+
+
+
+
+
+
 
         </form>
     </div>
@@ -104,52 +188,9 @@
 
 
                     <div class="padding-top-15">
-                        <div class="well well-sm">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <strong>نمایش به صورت</strong>
-                                    <div class="btn-group">
-                                        <a href="#" id="list" class="btn btn-default btn-sm">
-                                            <span class="glyphicon glyphicon-th-list">
-                                            </span>لیست
-                                        </a> <a href="#" id="grid" class="btn btn-default btn-sm">
-                                            <span class="glyphicon glyphicon-th"></span>فشرده
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-9">
 
-
-
-
-                                    <div class="col-md-3 dropdown">
-                                        <a href="#" class="btn btn-simple dropdown-toggle" data-toggle="dropdown">
-                                            دسته بندی
-                                            <b class="caret"></b>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">خودرو</a></li>
-                                            <li><a href="#">املاک</a></li>
-                                            <li><a href="#">موبایل</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">تست اول</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">تست دوم</a></li>
-                                        </ul>
-                                    </div>
-
-
-
-
-
-
-
-                                </div>
-
-                            </div>
-
-                        </div>
                         <div id="products" class="row list-group">
+
 
                             <div class="item  col-xs-2 col-lg-2 ">
                                 <div class="thumbnail card-3">
