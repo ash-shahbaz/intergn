@@ -13,11 +13,7 @@ namespace IGN.Controllers
         {
             return View();
         }
-
-        public ActionResult دسته_بندی(string cate1, string cate2, string cate3)
-        {
-            return View();
-        }
+        
 
   
         public ActionResult ثبت_آگهی()

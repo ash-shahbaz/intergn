@@ -401,9 +401,6 @@
     <Content Include="Views\Fa\rss.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Ads\دسته_بندی.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Ads\ثبت_آگهی.cshtml" />
   </ItemGroup>
   <ItemGroup>
