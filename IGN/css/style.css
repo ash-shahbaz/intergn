@@ -6407,6 +6407,146 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     color: #ff0000;
 }
 /***********************************choose the category************************************/
+
+
+
+
+
+
+/***********************************Start Search Ads************************************/
+
+.lbl {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 44px;
+    background: #898989;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .lbl:after {
+        position: absolute;
+        left: -2px;
+        top: -3px;
+        display: block;
+        width: 26px;
+        height: 26px;
+        border-radius: 100px;
+        background: #fff;
+        box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
+        content: '';
+        transition: all 0.3s ease;
+    }
+
+    .lbl:active:after {
+        transform: scale(1.15, 0.85);
+    }
+
+.cbx:checked ~ label {
+    background: #6fbeb5;
+}
+
+    .cbx:checked ~ label:after {
+        left: 20px;
+        background: #179588;
+    }
+
+.cbx:disabled ~ label {
+    background: #d5d5d5;
+    pointer-events: none;
+}
+
+    .cbx:disabled ~ label:after {
+        background: #bcbdbc;
+    }
+
+.hidden {
+    display: none;
+}
+
+.search-btn {
+    width: 200px;
+    float: left;
+}
+
+
+/*--------*/
+@keyframes ripple {
+    0% {
+        box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0);
+    }
+
+    50% {
+        box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0);
+    }
+}
+
+.md-radio {
+    margin: 16px 0;
+}
+
+    .md-radio.md-radio-inline {
+        display: inline-block;
+    }
+
+    .md-radio input[type="radio"] {
+        display: none;
+    }
+
+        .md-radio input[type="radio"]:checked + label:before {
+            border-color: #179588;
+            animation: ripple 0.2s linear forwards;
+        }
+
+        .md-radio input[type="radio"]:checked + label:after {
+            transform: scale(1);
+        }
+
+    .md-radio label {
+        display: inline-block;
+        height: 20px;
+        position: relative;
+        padding: 0 30px;
+        margin-bottom: 0;
+        cursor: pointer;
+        vertical-align: bottom;
+    }
+
+        .md-radio label:before, .md-radio label:after {
+            position: absolute;
+            content: '';
+            border-radius: 50%;
+            transition: all .3s ease;
+            transition-property: transform, border-color;
+        }
+
+        .md-radio label:before {
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(0, 0, 0, 0.54);
+        }
+
+        .md-radio label:after {
+            top: 5px;
+            left: 5px;
+            width: 10px;
+            height: 10px;
+            transform: scale(0);
+            background: #179588;
+        }
+
+
+/***********************************End Search Ads************************************/
+
+
 .font-size-14 {
     font-size: 14px;
 }

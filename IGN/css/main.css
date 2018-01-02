@@ -42,7 +42,7 @@
 
 html,
 body {
-    font-family: Calibri, 'Ubuntu', sans-serif;
+    font-family: 'IRANSans',Calibri, 'Ubuntu', sans-serif;
     font-weight: 400;
     color: #6f6f6f;
     overflow-x: hidden;
@@ -52,7 +52,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Calibri, 'Ubuntu', sans-serif;
+    font-family: 'IRANSans',Calibri, 'Ubuntu', sans-serif;
     font-weight: normal;
     direction: rtl;
 }
@@ -64,7 +64,7 @@ ul {
 }
 
 a {
-    font-family: iransans;
+    font-family: 'IRANSans';
     color: #00a651;
 }
 
@@ -103,7 +103,7 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
 .title {
     line-height: 34px;
     color: #ffffff;
-    font-family: Calibri, 'Ubuntu', sans-serif;
+    font-family: 'IRANSans',Calibri, 'Ubuntu', sans-serif;
     font-weight: 700;
 }
 
@@ -458,7 +458,7 @@ textarea {
         border: none;
         border-radius: 5px 0 0 5px;
         text-transform: capitalize;
-        font-family: Calibri, 'MyriadPro-Regular', sans-serif;
+        font-family: 'IRANSans',Calibri, 'MyriadPro-Regular', sans-serif;
     }
 
 .banner-form input {
@@ -466,7 +466,7 @@ textarea {
     padding: 0 18px 0;
     margin: 0;
     border-radius: 0;
-    font-family: Calibri, 'MyriadPro-Regular', sans-serif;
+    font-family: 'IRANSans',Calibri, 'MyriadPro-Regular', sans-serif;
     border: none;
     margin-left: -4px;
 }
@@ -1985,7 +1985,7 @@ a.verified {
     margin-bottom: 25px;
     border-radius: 3px;
     padding: 20px 35px 35px;
-    font-family: Calibri, 'Devanagari-Regular', sans-serif;
+    font-family: 'IRANSans',Calibri, 'Devanagari-Regular', sans-serif;
 }
 
     .description h4,
@@ -2884,7 +2884,7 @@ a.verified {
 
 .team-member h4 {
     font-size: 20px;
-    font-family: Calibri, 'Signika Negative', sans-serif;
+    font-family: 'IRANSans',Calibri, 'Signika Negative', sans-serif;
     color: #000;
     font-weight: 400;
     margin-top: 15px;
@@ -2924,7 +2924,7 @@ a.verified {
 
 
 .testimonials {
-    font-family: Calibri, 'Signika Negative', sans-serif;
+    font-family: 'IRANSans',Calibri, 'Signika Negative', sans-serif;
     background-color: #fff;
     width: 100%;
     display: inline-block;
@@ -3364,7 +3364,7 @@ a.verified {
     font-size: 16px;
     color: #a4a4a4;
     display: block;
-    font-family: Calibri, 'MyriadPro-Regular', sans-serif;
+    font-family: 'IRANSans',Calibri, 'MyriadPro-Regular', sans-serif;
 }
 
     .home-banner .dropdown.category-dropdown a:hover,
