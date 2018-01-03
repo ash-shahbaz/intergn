@@ -1,4 +1,4 @@
-﻿
+﻿@using IGN.Models;
 @{
     ViewBag.Title = "جستجو_آگهی";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -65,55 +65,18 @@
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                                         <h4 class="modal-title">انتخاب گروه بندی</h4>
-                                        <h5>املاک>فروش املک مسکونی</h5>
+                                        <h5 > <a href="#">دسته بندی :</a>  <span id="RetToLoadCate"> بازگشت </span></h5>
+                                        <br />
+                                        <span id="CatFlow" ></span>
                                     </div>
-                                    <div class="modal-body choose">
-                                        <ul>
-                                            <li class="li-cat">
-                                                <span class="vertical-align-sub">املاک</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                            </li>
-                                            <li class="li-cat">
-                                                <span class="vertical-align-sub">وسایل نقلیه</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                            </li>
-                                            <li class="li-cat">
-                                                <span class="vertical-align-sub">لوازم الکترونیکی</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                            </li>
-                                            <li class="li-cat">
-                                                <span class="vertical-align-sub">لوازم خانگی</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                            </li>
-                                            <li class="li-cat">
-                                                <span class="vertical-align-sub">خدمات</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                            </li>
-                                            <li class="li-cat">
-                                                <span class="vertical-align-sub">لوازم شخصی</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                            </li>
-                                            <li class="li-cat">
-                                                <span class="vertical-align-sub">سرگرمی و فراغت</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                            </li>
-                                            <li class="li-cat">
-                                                <span class="vertical-align-sub">اجتماعی</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                            </li>
-                                            <li class="li-cat">
-                                                <span class="vertical-align-sub">کسب و کار</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                            </li>
-                                            <li class="li-cat">
-                                                <span class="vertical-align-sub">استخدام</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                            </li>
+                                    <div class="modal-body choose ">
+                                        <ul class="Level1"> 
+
+                                          
+
                                         </ul>
                                     </div>
-                                    <div class="modal-body choose">
-                                        <ul>
-                                            <li class="li-cat">
-                                                <span class="vertical-align-sub">آپارتمان</span>
-                                            </li>
-                                            <li class="li-cat">
-                                                <span class="vertical-align-sub">خانه و ویلا</span>
-                                            </li>
-                                            <li class="li-cat">
-                                                <span class="vertical-align-sub">زمین و کلنگی</span>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                 
                                 </div>
 
                             </div>
@@ -837,7 +800,7 @@
                             <div class="item  col-xs-2 col-lg-2 ">
                                 <div class="thumbnail card-3">
                                     <img class="group list-group-image fixedimage" src="https://s100.divarcdn.com/static/thumbnails/1513259360/jQ0p15_qM.jpg" alt="" />
-                                    <div class="caption">
+                                    <div class="caption" >
                                         <h1 class="group inner list-group-item-heading titletopstyle">
                                             لامبورگینی اونتادور
                                         </h1>
@@ -851,7 +814,7 @@
                                                 </h3>
                                             </div>
                                             <div class="col-xs-12 col-md-4 no-padding">
-                                                <h2 class="lead font-size-12 no-margin">
+                                                <h2 class="lead font-size-12 no-margin" >
                                                     قیمت
                                                 </h2>
                                             </div>
@@ -892,7 +855,179 @@
     <script src="~/js/bootstrap-select.min.js"></script>
     <script src="~/js/mainselect.js"></script>
 
+    <script>
+        var arr;
+        $("#RetToLoadCate").click(function () {
+            $(".Level1").empty();
 
+            $("#CatFlow").empty();  
+            LoadCategory();
+
+
+        })   
+
+
+        LoadCategory();
+
+      
+        function LoadCategory() {
+
+            $.ajax({
+                type: "GET",
+                url: "/Sync/ListAgahiCategory",
+                success: function (data) {
+                    var MyData = $.parseJSON(data);
+
+
+                    arr = jQuery.grep(MyData, function (n, i) {
+                        return (n.ParrentID == null);
+                    });
+
+                    //console.log(arr);
+                    //Level 1
+                    for (var i = 0; i < arr.length; i++) {
+                        var classname = "sp" + arr[i].AgahiCategoryID;
+
+                        $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  " + classname + "  \" accesskey=" + arr[i].AgahiCategoryID + ">" + arr[i].AgahiCategoryName + "</span><span class=\"fa fa-arrow-circle-left float-left fa-cat-style\"></span></li>";
+                        $(".Level1").append($li);
+
+                        $("." + classname + " ").click(function () {
+
+
+
+                            var id = $(this).attr("accesskey");
+
+                            var classLevel1 = "lvl" + id;
+
+                            $("#CatFlow").append("<span  class=" + classLevel1 + " accesskey=" + id + " >" + $(this).html() + " >" + "</span>");
+
+                            //$("." + classLevel1 + " ").click(function () {
+
+                            //    var cateID = $(this).attr("accesskey");
+                            //    $(".Level1").empty();
+                            //    arr = jQuery.grep(MyData, function (n, i) {
+                            //        return (n.ParrentID == id);
+                            //    });
+
+                            //    for (var i = 0; i < arr.length; i++) {
+
+                            //        var classname = "sp" + arr[i].AgahiCategoryID;
+                            //        $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  " + classname + "  \" accesskey=" + arr[i].AgahiCategoryID + ">" + arr[i].AgahiCategoryName + "</span><span class=\"fa fa-arrow-circle-left float-left fa-cat-style\"></span></li>";
+                            //        $(".Level1").append($li);
+                            //    }
+
+
+                            //});
+
+                            $(".Level1").empty();
+
+                            arr = jQuery.grep(MyData, function (n, i) {
+                                return (n.ParrentID == id);
+                            });
+
+                            //Level 2
+                            for (var i = 0; i < arr.length; i++) {
+
+                                var classname = "sp" + arr[i].AgahiCategoryID;
+                                
+                                $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  " + classname + "  \" accesskey=" + arr[i].AgahiCategoryID + ">" + arr[i].AgahiCategoryName + "</span><span class=\"fa fa-arrow-circle-left float-left fa-cat-style\"></span></li>";
+
+
+
+                                $(".Level1").append($li);
+
+
+                                $("." + classname + " ").click(function () {
+
+                                    var id = $(this).attr("accesskey");
+
+
+                                    var classLevel2 = "lvl2" + id;
+
+                                    $("#CatFlow").append("<span  class=" + classLevel2 + " accesskey=" + id + " >" + $(this).html() + " >" + "</span>");
+
+                                    //$("." + classLevel2 + " ").click(function () {
+
+                                    //    var cateID = $(this).attr("accesskey");
+                                    //    $(".Level1").empty();
+                                    //    arr = jQuery.grep(MyData, function (n, i) {
+                                    //        return (n.ParrentID == id);
+                                    //    });
+
+                                    //    for (var i = 0; i < arr.length; i++) {
+
+                                    //        var classname = "sp" + arr[i].AgahiCategoryID;
+                                    //        $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  " + classname + "  \" accesskey=" + arr[i].AgahiCategoryID + ">" + arr[i].AgahiCategoryName + "</span><span class=\"fa fa-arrow-circle-left float-left fa-cat-style\"></span></li>";
+                                    //        $(".Level1").append($li);
+                                    //    }
+                                    //});
+
+                                    $(".Level1").empty();
+
+                                    arr = jQuery.grep(MyData, function (n, i) {
+                                        return (n.ParrentID == id);
+                                    });
+
+                                    //Level 3
+                                    for (var i = 0; i < arr.length; i++) {
+
+                                        var classname = "sp" + arr[i].AgahiCategoryID;
+                                        $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  " + classname + "  \" accesskey=" + arr[i].AgahiCategoryID + ">" + arr[i].AgahiCategoryName + "</span></li>";
+                                        $(".Level1").append($li);
+
+
+
+                                        $("." + classname + " ").click(function () {
+                                            var id = $(this).attr("accesskey");
+                                            alert($(this).val());
+                                            alert("BoB")
+                                        })
+
+
+
+                                    }
+                                })
+
+
+
+                            }
+
+                        })
+
+
+                    }
+
+                }
+            });
+        }
+
+        //$(document).ready(function () {
+        //    $(".spCategory").click(function () {
+
+
+        //        var id = $(this).attr("accesskey").val();
+        //        alert(id);
+        //        $(".Level1").empty();
+
+        //        arr = jQuery.grep(MyData, function (n, i) {
+        //            return (n.ParrentID == id);
+        //        });
+
+
+        //        for (var i = 0; i < arr.length; i++) {
+        //            $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  spCategory  \" accesskey=" + MyData[i].AgahiCategoryID + ">" + MyData[i].AgahiCategoryName + "</span><span class=\"fa fa-arrow-circle-left float-left fa-cat-style\"></span></li>";
+        //            $(".Level1").append($li);
+        //        }
+
+
+        //    })
+        //});
+       
+
+       
+     
+
+    </script>
 
 
 

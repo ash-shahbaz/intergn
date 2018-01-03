@@ -10,7 +10,7 @@ using Newtonsoft.Json.Linq;
 
 namespace IGN.Models
 {
-    public  class Utility
+    public class Utility
     {
         public static Users CurrentUser;
         public static string CategoryName;
@@ -22,13 +22,14 @@ namespace IGN.Models
         public static List<TopTag> lstTopTagYear = new List<TopTag>();
         public static List<TopTag> lstTopTagWeek = new List<TopTag>();
         public static List<Linkestan> lstLinkestan = new List<Linkestan>();
+        public static List<AgahiCategory> lstAgaghiCategory = new List<AgahiCategory>();
 
 
 
 
-        public static string CallApiGetResultCheckUser(string username , string pass)
+        public static string CallApiGetResultCheckUser(string username, string pass)
         {
-            
+
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("http://192.168.1.10:13311");
@@ -68,6 +69,7 @@ namespace IGN.Models
                 lstTopTagWeek = GetTagTop10DWMY("Week");
                 lstTopTagYear = GetTagTop10DWMY("Year");
                 lstLinkestan = GetTopLinkestan();
+     
 
             }
         }
@@ -96,7 +98,7 @@ namespace IGN.Models
                 if (response.IsSuccessStatusCode)
                 {
                     string responseString = response.Content.ReadAsStringAsync().Result;
-                    
+
                     response.Content = new StringContent(responseString, System.Text.Encoding.UTF8, "application/json");
 
                     JavaScriptSerializer json_serializer = new JavaScriptSerializer();
@@ -141,8 +143,8 @@ namespace IGN.Models
             }
         }
 
-    
-             public static List<TopTag> GetTagTop10DWMY(string whichType)
+
+        public static List<TopTag> GetTagTop10DWMY(string whichType)
         {
             using (var client = new HttpClient())
             {
@@ -183,7 +185,7 @@ namespace IGN.Models
                 client.BaseAddress = new Uri("http://192.168.1.10:13311");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-                var response = client.GetAsync("api/Categories/1-" + categoryName +"-$1").Result;
+                var response = client.GetAsync("api/Categories/1-" + categoryName + "-$1").Result;
                 if (response.IsSuccessStatusCode)
                 {
                     string responseString = response.Content.ReadAsStringAsync().Result;
@@ -216,7 +218,7 @@ namespace IGN.Models
                 client.BaseAddress = new Uri("http://192.168.1.10:13311");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-                var response = client.GetAsync("api/GettblNews/" + NewsID ).Result;
+                var response = client.GetAsync("api/GettblNews/" + NewsID).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     string responseString = response.Content.ReadAsStringAsync().Result;
@@ -233,7 +235,7 @@ namespace IGN.Models
                 }
             }
         }
-        
+
         public static string CleanTitle(string title)
         {
             return title.Replace("+", " ").Replace("?", " ").Replace("*", " ").Replace(";", " ").Replace(",", " ").Replace(".", " ").Replace(":", " ").Replace("؛", " ").Replace("؟", " ").Replace("»", " ").Replace("«", " ").Replace("!", " ").Replace("(", " ").Replace(")", " ").Replace("{", " ").Replace("}", " ").Replace("[", " ").Replace("]", " ").Replace("/", " ").Replace("-", " ");
@@ -241,7 +243,7 @@ namespace IGN.Models
         }
 
 
-        public List<newsItem> GetTop50NewsCategoryByCategoryID(int CID,int PageID)
+        public List<newsItem> GetTop50NewsCategoryByCategoryID(int CID, int PageID)
         {
             using (var client = new HttpClient())
             {
@@ -275,7 +277,7 @@ namespace IGN.Models
             }
         }
 
-        public static  List<Linkestan> GetTopLinkestan()
+        public static List<Linkestan> GetTopLinkestan()
         {
             using (var client = new HttpClient())
             {
@@ -295,7 +297,7 @@ namespace IGN.Models
 
                     //string json = JsonConvert.SerializeObject(responseString);
 
-                //    string q = json_serializer.DeserializeObject(responseString).ToString();
+                    //    string q = json_serializer.DeserializeObject(responseString).ToString();
 
 
                     List<Linkestan> deserializedProduct = JsonConvert.DeserializeObject<List<Linkestan>>(responseString);
@@ -309,8 +311,49 @@ namespace IGN.Models
             }
         }
 
+
+        public static List<AgahiCategory> GetAgahiCategory()
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync("api/AgahiCategories").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseString = response.Content.ReadAsStringAsync().Result;
+
+                    //var data =  JsonConvert.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                    //return data;
+                    response.Content = new StringContent(responseString, System.Text.Encoding.UTF8, "application/json");
+
+                    JavaScriptSerializer json_serializer = new JavaScriptSerializer();
+
+                    //string json = JsonConvert.SerializeObject(responseString);
+
+                    //    string q = json_serializer.DeserializeObject(responseString).ToString();
+
+
+                    List<AgahiCategory> deserializedProduct = JsonConvert.DeserializeObject<List<AgahiCategory>>(responseString);
+
+                    return deserializedProduct.ToList();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
     }
 
+    public class AgahiCategory
+    {
+        public int AgahiCategoryID { get; set; }
+        public string AgahiCategoryName { get; set; }
+        public Nullable<int> ParrentID { get; set; }
+        public Nullable<int> Priority { get; set; }
+    }
 
     public class newsItem
     {
@@ -336,7 +379,7 @@ namespace IGN.Models
         public Nullable<int> Year { get; set; }
         public Nullable<int> Month { get; set; }
         public Nullable<int> Day { get; set; }
- 
+
 
     }
 
@@ -358,4 +401,8 @@ namespace IGN.Models
 
 
     }
+
+
+
+
 }

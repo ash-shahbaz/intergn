@@ -1,10 +1,12 @@
-﻿using Newtonsoft.Json;
+﻿using IGN.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Net;
 using System.Web;
+using System.Web.Http;
 using System.Web.Mvc;
 using System.Xml;
 
@@ -20,6 +22,14 @@ namespace IGN.Controllers
             JSONString = JsonConvert.SerializeObject(table);
             return JSONString;
         }
+
+
+
+        public string ListAgahiCategory()
+        {
+            return  JsonConvert.SerializeObject(Utility.lstAgaghiCategory);
+        }
+
         public string GetData()
         {
             //using (DbIGNSEntities db = new DbIGNSEntities())
