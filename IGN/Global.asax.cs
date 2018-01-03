@@ -18,6 +18,7 @@ namespace IGN
 
             Utility.lstNewsItem = Utility.GetAllNews();
             Utility.lstCategory= Utility.GetAllCategroyFromDB();
+            Utility.lstAgaghiCategory = Utility.GetAgahiCategory();
             Utility.SyncTags();
 
             UpdateNewsTimer = new System.Timers.Timer(200000);
