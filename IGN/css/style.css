@@ -6560,8 +6560,8 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 }
 
 .fixedimage {
-    width: 150px !important;
-    height: 150px !important;
+    width: 155px !important;
+    height: 155px !important;
 }
 
 .topstyle {
@@ -6569,11 +6569,6 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 }
 
 .titletopstyle {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: inline-block;
-    width: 150px;
     text-align: -webkit-right;
     text-align: right;
     font-size: 14px;
@@ -6604,4 +6599,46 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 }
 .top-1{
     top: 1px;
+}
+.btn-telegram {
+    font-size: 18px !important;
+    color: #0088cc;
+    background-color: white;
+}
+.btn-heart {
+    font-size: 18px !important;
+    color: #f44336;
+    background-color: white;
+}
+.btn-static {
+    font-size: 18px !important;
+    background-color: white !important;
+    color: green !important;
+}
+.btn-thumb {
+    margin: 2px;
+    width: 51px;
+    height: 36px;
+    font-size: 11px;
+    padding: 0px;
+    top: 0px !important
+}
+.caption{
+    height: 80px;
+}
+.nofa {
+    height: 0px;
+    width: 0px;
+    top: 0px;
+}
+.margin-right-5{
+    margin-right: 5px !important;
+}
+.padding-top-8{
+    padding-top: 8px;
+}
+.btn-static-big {
+    width: 106px;
+    top: 0px;
+    background-color: white !important;
 }
