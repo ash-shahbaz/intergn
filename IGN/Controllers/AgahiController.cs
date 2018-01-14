@@ -18,6 +18,10 @@ namespace IGN.Controllers
         {
             return View();
         }
+
+     
+
+
         [ActionName("جزئیات-آگهی")]
         public ActionResult جزئیات_آگهی()
         {
@@ -28,10 +32,16 @@ namespace IGN.Controllers
         {
             return View();
         }
-        [ActionName("جستجو-آگهی")]
-        public ActionResult جستجو_آگهی()
+      
+       
+        [ActionName("جستجو")]
+        public ActionResult جستجو(string name, string id1, string id2)
         {
             return View();
         }
+
+
+
+   
     }
 }
