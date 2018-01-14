@@ -6621,7 +6621,14 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     height: 36px;
     font-size: 11px;
     padding: 0px;
-    top: 0px !important
+    top: 0px !important;
+    font-family: FontAwesome, IRANSans;
+}
+.fa-map-marker:before {
+    padding-left: 5px;
+}
+.fa-clock-o:before {
+    padding-right: 5px;
 }
 .caption{
     height: 80px;
