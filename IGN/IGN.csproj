@@ -380,7 +380,7 @@
     <Content Include="Views\Agahi\آگهی-های-من.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Agahi\جستجو-آگهی.cshtml" />
+    <Content Include="Views\Agahi\جستجو.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

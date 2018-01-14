@@ -21,11 +21,11 @@ namespace IGN
 
 
 
-            routes.MapRoute(
-              name: "Defausdasdsa",
-              url: "{controller}/{action}/{name}",
-              defaults: new { controller = "Page", action = "Page", name = UrlParameter.Optional }
-          );
+          //  routes.MapRoute(
+          //    name: "Defausdasdsa",
+          //    url: "{controller}/{action}/{name}",
+          //    defaults: new { controller = "Page", action = "Page", name = UrlParameter.Optional }
+          //);
 
 
             //routes.MapRoute(
@@ -33,15 +33,18 @@ namespace IGN
             //    "{controller}/{action}/{Cname}",
             //   defaults: new { controller = "fa", action = "Cat" , Cname  ="" }
             //);
+
+
             routes.MapRoute(
-              "Routingfa1ssad", // Route name
-              "{controller}/دسته_بندی/{cate1}/{cate2}/{cate3}",  // URL with parameters
-              defaults: new { controller = "ads", action = "دسته_بندی" ,  cate2 = UrlParameter.Optional , cate3 = UrlParameter.Optional } 
+              "Routing01", // Route name
+              "{controller}/{action}/{name}/{id1}/{id2}",  // URL with parameters
+              defaults: new { controller = "Agahi", action = "جستجو" , name = "" , id1 = UrlParameter.Optional , id2 = UrlParameter.Optional }
               );
-            // Parameter defaults);
 
 
-    
+      
+
+
 
 
 
@@ -51,18 +54,7 @@ namespace IGN
                 defaults:  new { controller = "fa", action = "News" }
                 );  // Parameter defaults);
 
-            routes.MapRoute(
-               "Routingen", // Route name
-               "{controller}/{action}/{CategoryName}/{NewsID}/{Title}",  // URL with parameters
-               defaults: new { controller = "en", action = "category" }
-               );  // Parameter defaults);
-
-            routes.MapRoute(
-               "Routingar", // Route name
-               "{controller}/{action}/{CategoryName}/{NewsID}/{Title}",  // URL with parameters
-               defaults: new { controller = "ar", action = "category" }
-               );  // Parameter defaults);
-
+       
 
 
         }
