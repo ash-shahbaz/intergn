@@ -20,7 +20,7 @@ namespace IGN.Controllers
         {
             PageNumber = PageId;
             ViewBag.PageNumber = PageId;
-            return View("~/Views/fa/cat.cshtml");
+            return View("~/Views/Khabar/دسته-بندی.cshtml");
         }
 
 
@@ -84,10 +84,10 @@ namespace IGN.Controllers
         }
 
         [ActionName("خبر")]
-        public ActionResult خبر(string CategoryName, string NewsID, string Title)
+        public ActionResult خبر(string name, string id1, string id2)
         {
             //var q = Utility.GetNewsByNewsID(NewsID);
-            Utility.NewsID = Convert.ToInt32(NewsID);
+            Utility.NewsID = Convert.ToInt32(id1);
             return View();
         }
 

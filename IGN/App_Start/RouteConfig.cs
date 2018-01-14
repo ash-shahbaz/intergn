@@ -48,11 +48,11 @@ namespace IGN
 
 
 
-            routes.MapRoute(
-                "Routingads", // Route name
-                "{controller}/{action}/{CategoryName}/{NewsID}/{Title}",  // URL with parameters
-                defaults:  new { controller = "fa", action = "News" }
-                );  // Parameter defaults);
+            //routes.MapRoute(
+            //    "Routingads", // Route name
+            //    "{controller}/{action}/{CategoryName}/{NewsID}/{Title}",  // URL with parameters
+            //    defaults:  new { controller = "Khabar", action = "خبر" }
+            //    );  // Parameter defaults);
 
        
 
