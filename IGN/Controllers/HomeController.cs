@@ -11,15 +11,17 @@ namespace IGN.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+
+        
         public ActionResult Index()
         {
-          return  View("~/Views/Fa/Index.cshtml");
+            return View();
         }
         public ActionResult LogOut()
         {
             Session.Abandon();
             Utility.CurrentUser = null;
-            return View("~/Views/Fa/Index.cshtml");
+            return View("~/Views/Home/Index.cshtml");
         }
 
 
@@ -50,34 +52,27 @@ namespace IGN.Controllers
             return Utility.CallApiGetResultCheckUser(username, pass);
         }
 
-        public ActionResult Page(string name)
+
+        [ActionName("تنظیمات")]
+        public ActionResult تنظیمات(string id)
         {
-
-            if (Session["user"] != null || Utility.CurrentUser != null)
-            {
-                Users u = (Users)Utility.CurrentUser;
-
-                if (u.UserType == 0)
-                {
-
-                    return View();
-                }
-                else if (u.UserType == 1)
-                {
-                    return View();
-                }
-                else
-                {
-                    return View();
-                }
-
-            }
-            else
-            {
-                return View("../Fa/Index");
-            }
-
+            return View();
+        }
+        [ActionName("تماس-با-ما")]
+        public ActionResult تماس_با_ما(string id)
+        {
+            return View();
+        }
+        [ActionName("درباره-ما")]
+        public ActionResult درباره_ما(string id)
+        {
+            return View();
         }
 
+        public ActionResult NotificationSetting(string name)
+        {
+            ViewBag.CategoryName = name;
+            return View();
+        }
     }
 }

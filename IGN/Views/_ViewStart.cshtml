@@ -1,24 +1,7 @@
 ﻿@{
     var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
     string cLayout = "";
-    if (controller == "Fa" || controller == "fa" || controller == "FA" || controller == "fA")
-    {
-        cLayout = "~/Views/Shared/_Layout.cshtml";
-    }
-    else if (controller == "En" || controller == "en" || controller == "EN" || controller == "eN")
-    {
-        cLayout = "~/Views/Shared/_Layout_En.cshtml";
-    }
-    else if (controller == "Ar" || controller == "ar" || controller == "AR" || controller == "aR")
-    {
-        cLayout = "~/Views/Shared/_Layout_Ar.cshtml";
-
-    }
-    else if(cLayout == null || cLayout == "")
-    {
-        cLayout = "~/Views/Shared/_Layout.cshtml";
-    }
-
+    cLayout = "~/Views/Shared/_Layout.cshtml";
 
     Layout = cLayout;
 }

@@ -6,30 +6,29 @@ using System.Web.Mvc;
 
 namespace IGN.Controllers
 {
-    public class AdsController : Controller
+    public class AgahiController : Controller
     {
-        // GET: Ads
+        // GET: Agahi
         public ActionResult Index()
         {
             return View();
         }
-        
-
-  
+        [ActionName("ثبت-آگهی")]
         public ActionResult ثبت_آگهی()
         {
             return View();
         }
-
+        [ActionName("جزئیات-آگهی")]
         public ActionResult جزئیات_آگهی()
         {
             return View();
         }
-
+        [ActionName("آگهی-های-من")]
         public ActionResult آگهی_های_من()
         {
             return View();
         }
+        [ActionName("جستجو-آگهی")]
         public ActionResult جستجو_آگهی()
         {
             return View();

@@ -152,14 +152,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AdminPanelController.cs" />
-    <Compile Include="Controllers\AdsController.cs" />
-    <Compile Include="Controllers\ArController.cs" />
-    <Compile Include="Controllers\EnController.cs" />
-    <Compile Include="Controllers\FaController.cs" />
+    <Compile Include="Controllers\AgahiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LinkestansController.cs" />
-    <Compile Include="Controllers\NewsController.cs" />
-    <Compile Include="Controllers\PageController.cs" />
+    <Compile Include="Controllers\KhabarController.cs" />
+    <Compile Include="Controllers\LinkestanController.cs" />
     <Compile Include="Controllers\SyncController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -295,10 +291,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Linkestans\" />
-    <Folder Include="Views\Linkestan\" />
-    <Folder Include="Views\Route\" />
-    <Folder Include="Views\Utility\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -337,53 +329,34 @@
     <Content Include="fonts\FontAwesome.otf" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_Layout_Ar.cshtml" />
-    <Content Include="Views\Shared\_Layout_En.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\En\Index.cshtml" />
+    <Content Include="Views\Home\درباره-ما.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Ar\Index.cshtml" />
+    <Content Include="Views\Home\تماس-با-ما.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Fa\Index.cshtml" />
+    <Content Include="Views\Khabar\منابع-خبری.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Fa\AboutUs.cshtml" />
+    <Content Include="Views\Khabar\tags.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Fa\ContactUs.cshtml" />
+    <Content Include="Views\Home\تنظیمات.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Fa\NewsResource.cshtml" />
+    <Content Include="Views\Linkestan\لینک-ها.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Fa\tags.cshtml" />
+    <Content Include="Views\Linkestan\افزودن-لینک.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Fa\Setting.cshtml" />
+    <Content Include="Views\Khabar\دسته-بندی.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Fa\MyFriends.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Fa\BackLinks.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Fa\PostSent.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Fa\BackLinkAdd.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Fa\NewsFavorites.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Fa\Cat.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Fa\News.cshtml" />
+    <Content Include="Views\Khabar\خبر.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Layout-Admin.cshtml" />
@@ -392,25 +365,22 @@
     <Content Include="Views\AdminPanel\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Fa\Search.cshtml" />
+    <Content Include="Views\Khabar\جستجو.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Page.cshtml" />
+    <Content Include="Views\Khabar\rss.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Fa\rss.cshtml" />
+    <Content Include="Views\Agahi\ثبت-آگهی.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Ads\ثبت_آگهی.cshtml" />
+    <Content Include="Views\Agahi\جزئیات-آگهی.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Ads\جزئیات_آگهی.cshtml" />
+    <Content Include="Views\Agahi\آگهی-های-من.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Ads\آگهی_های_من.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Ads\جستجو_آگهی.cshtml" />
+    <Content Include="Views\Agahi\جستجو-آگهی.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
