@@ -6380,7 +6380,10 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     border-bottom: 1px solid #eee;
     height: 35px;
 }
-
+.li-city {
+    border-bottom: 1px solid #eee;
+    height: 35px;
+}
 .choose ul li:hover {
     color: red;
     cursor: pointer;
@@ -6408,6 +6411,18 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 
 .modal .modal-header .close {
     color: #ff0000;
+}
+.search-col {
+    font-size: 15px;
+    position: absolute;
+    top: 48px;
+    background-color: transparent;
+    color: #444;
+    left: 15px;
+    padding: 15px;
+}
+.display-inline-block {
+    display: inline-block;
 }
 /***********************************choose the category************************************/
 

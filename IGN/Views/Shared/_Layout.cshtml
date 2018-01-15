@@ -31,6 +31,11 @@
 
 
 
+
+
+
+
+
     @RenderSection("Head", true)
 
     <title>Zoombi</title>
@@ -45,54 +50,99 @@
 <body class="kp-home ">
     <header id="header-page ">
 
-   
-
-            <div class="top-header">
-                <div class="container">
-                    <div id="logo">
-                        <a href="/"><img src="~/images/logo.png" alt="logo" /></a>
-                    </div>
-                    <nav class="pull-right">
-                        <ul class="sf-menu" id="main-menu">
-
-                            <li>
-                                <a href="/Agahi/جستجو">جستجو آگهی</a>
-                            </li>
-                            <li>
-                                <a href="/Agahi/آگهی-های-من">آگهی های من</a>
-                            </li>
-                            <li class="current-item-menu">
-                                <a href="/Agahi/ثبت-آگهی">ثبت آگهی رایگان</a>
-                            </li>
-                            <li>
-                                @{
 
 
-                                    if (Utility.CurrentUser != null)
-                                    {
-
-                                        <a id="Loginned" href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                                            <i class="login-icon fa fa-user"></i>
+        <div class="top-header">
+            <div class="container">
+                <div id="logo">
 
 
-                                            @Utility.CurrentUser.NickName
+                    <span class=" user-type">
+                        <button type="button" class="btn btn-info btn-lg btnchoose" data-toggle="modal" data-target="#myCity">انتخاب شهر</button>
 
-                                            <i class="login-icon fa fa-power-off zindex1000"></i>
-                                        </a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="myCity" role="dialog">
+                            <div class="modal-dialog whitebg">
 
-                                    }
-                                    else
-                                    {
-                                        <a id="LoginInfo" href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-toggle="modal" data-target="#loginFormModal">
-                                            <i class="login-icon fa fa-user"></i>ورود
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">انتخاب شهر</h4>
+                                        <input class="form-control keyword" name="keyword" value="" placeholder="جستجو شهر" type="text">
+                                        <i class="search-col fa fa-search"></i>
+                                    </div>
+                                    <div class="modal-body choose">
+                                        <ul>
+                                            <li class="display-inline-block">
+                                                <button type="button" class="btn btn-static-big">تهران</button>
+                                            </li>
+                                            <li class="display-inline-block">
+                                                <button type="button" class="btn btn-static-big">اصفهان</button>
+                                            </li>
+                                            <li class="display-inline-block">
+                                                <button type="button" class="btn btn-static-big">تبریز</button>
+                                            </li>
+                                            <li class="display-inline-block">
+                                                <button type="button" class="btn btn-static-big">مشهد</button>
+                                            </li>
+                                        </ul>
 
-                                        </a>
-                                    }
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </span>
+
+
+
+
+                    <a href="/"><img src="~/images/logo.png" alt="logo" /></a>
+                </div>
+                <nav class="pull-right">
+                    <ul class="sf-menu" id="main-menu">
+                        <li>
+                            <a href="/Agahi/جستجو">جستجو آگهی</a>
+                        </li>
+                        <li>
+                            <a href="/Agahi/آگهی-های-من">آگهی های من</a>
+                        </li>
+                        <li class="current-item-menu">
+                            <a href="/Agahi/ثبت-آگهی">ثبت آگهی رایگان</a>
+                        </li>
+                        <li>
+                            @{
+
+
+                                if (Utility.CurrentUser != null)
+                                {
+
+                                    <a id="Loginned" href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                        <i class="login-icon fa fa-user"></i>
+
+
+                                        @Utility.CurrentUser.NickName
+
+                                        <i class="login-icon fa fa-power-off zindex1000"></i>
+                                    </a>
 
                                 }
+                                else
+                                {
+                                    <a id="LoginInfo" href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-toggle="modal" data-target="#loginFormModal">
+                                        <i class="login-icon fa fa-user"></i>ورود
 
-                            </li>
-                        </ul>
+                                    </a>
+                                }
+
+                            }
+
+                        </li>
+                    </ul>
                     @*    <div id="mobile-menu">
                             <span>Menu</span>
                             <ul id="toggle-view-menu">
@@ -157,708 +207,708 @@
                                 <li class="clearfix"><h3><a href="contact.html">Contact</a></h3></li>
                             </ul><!--toggle-view-menu-->
                         </div>*@<!--mobile-menu-->
-                    </nav>
-                    <div class="clearfix"></div>
-                </div>
-                <!-- container -->
+                </nav>
+                <div class="clearfix"></div>
             </div>
-            <!-- top-header -->
-            <div class="bottom-header">
-                <div class="container wsmenucontainer clearfix">
+            <!-- container -->
+        </div>
+        <!-- top-header -->
+        <div class="bottom-header">
+            <div class="container wsmenucontainer clearfix">
 
-                    <div class="overlapblackbg"></div>
-
-
-                    <div class="wsmobileheader clearfix">
-                        <a id="wsnavtoggle" class="animated-arrow"><span></span></a>
-                        <a class="smallogo"><img src="images/logo.png" width="120" alt="" /></a>
-                        <a class="callusicon" href="tel:123456789"><span class="fa fa-phone"></span></a>
-                    </div>
+                <div class="overlapblackbg"></div>
 
 
-
-                    <div class="header">
-
-                        <!--Main Menu HTML Code-->
-                        <nav class="wsmenu clearfix">
-                            <ul class="mobile-sub wsmenu-list">
-                                
-                                <li>
-                                    <a href="#">املاک<span class="arrow"></span></a>
-                                    <div class="megamenu clearfix">
-                                        <div class="typography-text clearfix">
-
-                                            <div class="col-lg-2 col-sm-12">
-                                            </div>
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">خدمات املاک</a></h3>
-                                                <ul>
-                                                    <li><a href="#">آژانس املاک</a></li>
-                                                    <li><a href="#">مشارکت در ساخت</a></li>
-                                                    <li><a href="#">امور مالی و حقوقی</a></li>
-                                                    <li><a href="#">پیش‌فروش</a></li>
-                                                </ul>
-                                            </div>
+                <div class="wsmobileheader clearfix">
+                    <a id="wsnavtoggle" class="animated-arrow"><span></span></a>
+                    <a class="smallogo"><img src="images/logo.png" width="120" alt="" /></a>
+                    <a class="callusicon" href="tel:123456789"><span class="fa fa-phone"></span></a>
+                </div>
 
 
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">اجاره اداری و تجاری</a></h3>
-                                                <ul>
-                                                    <li><a href="#">دفتر کار، اتاق اداری و مطب</a></li>
-                                                    <li><a href="#">مغازه و غرفه</a></li>
-                                                    <li><a href="#">صنعتی،‌ کشاورزی و تجاری</a></li>
-                                                </ul>
 
-                                            </div>
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="">فروش اداری و تجاری</a></h3>
-                                                <ul>
-                                                    <li><a href="#">دفتر کار، اتاق اداری و مطب</a></li>
-                                                    <li><a href="#">مغازه و غرفه</a></li>
-                                                    <li><a href="#">صنعتی،‌ کشاورزی و تجاری</a></li>
-                                                </ul>
-                                            </div>
+                <div class="header">
 
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="">اجاره مسکونی</a></h3>
-                                                <ul>
-                                                    <li><a href="#">آپارتمان</a></li>
-                                                    <li><a href="#">خانه و ویلا</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="">فروش املاک مسکونی</a></h3>
-                                                <ul>
-                                                    <li><a href="#">آپارتمان</a></li>
-                                                    <li><a href="#">خانه و ویلا</a></li>
-                                                    <li><a href="#">زمین و کلنگی</a></li>
-                                                </ul>
-                                            </div>
+                    <!--Main Menu HTML Code-->
+                    <nav class="wsmenu clearfix">
+                        <ul class="mobile-sub wsmenu-list">
+
+                            <li>
+                                <a href="#">املاک<span class="arrow"></span></a>
+                                <div class="megamenu clearfix">
+                                    <div class="typography-text clearfix">
+
+                                        <div class="col-lg-2 col-sm-12">
+                                        </div>
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">خدمات املاک</a></h3>
+                                            <ul>
+                                                <li><a href="#">آژانس املاک</a></li>
+                                                <li><a href="#">مشارکت در ساخت</a></li>
+                                                <li><a href="#">امور مالی و حقوقی</a></li>
+                                                <li><a href="#">پیش‌فروش</a></li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">اجاره اداری و تجاری</a></h3>
+                                            <ul>
+                                                <li><a href="#">دفتر کار، اتاق اداری و مطب</a></li>
+                                                <li><a href="#">مغازه و غرفه</a></li>
+                                                <li><a href="#">صنعتی،‌ کشاورزی و تجاری</a></li>
+                                            </ul>
 
                                         </div>
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="">فروش اداری و تجاری</a></h3>
+                                            <ul>
+                                                <li><a href="#">دفتر کار، اتاق اداری و مطب</a></li>
+                                                <li><a href="#">مغازه و غرفه</a></li>
+                                                <li><a href="#">صنعتی،‌ کشاورزی و تجاری</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="">اجاره مسکونی</a></h3>
+                                            <ul>
+                                                <li><a href="#">آپارتمان</a></li>
+                                                <li><a href="#">خانه و ویلا</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="">فروش املاک مسکونی</a></h3>
+                                            <ul>
+                                                <li><a href="#">آپارتمان</a></li>
+                                                <li><a href="#">خانه و ویلا</a></li>
+                                                <li><a href="#">زمین و کلنگی</a></li>
+                                            </ul>
+                                        </div>
+
                                     </div>
-                                </li>
+                                </div>
+                            </li>
 
 
 
 
-                                <li>
-                                    <a href="#">وسایل نقلیه<span class="arrow"></span></a>
-                                    <div class="megamenu clearfix">
-                                        <div class="typography-text clearfix">
+                            <li>
+                                <a href="#">وسایل نقلیه<span class="arrow"></span></a>
+                                <div class="megamenu clearfix">
+                                    <div class="typography-text clearfix">
 
 
 
 
 
 
-                                            <div class="col-lg-2 col-sm-12">
-                                            </div>
+                                        <div class="col-lg-2 col-sm-12">
+                                        </div>
 
 
-                                            <div class="col-lg-2 col-sm-12">
+                                        <div class="col-lg-2 col-sm-12">
 
-                                                <h3 class="title"><a href="">قایق و لوازم جانبی</a></h3>
-                                                <ul>
-                                                    <li><a href="#">قایق</a></li>
-                                                    <li><a href="#">لوازم جانبی قایق</a></li>
-                                                </ul>
-                                            </div>
-
-
-                                            <div class="col-lg-3 col-sm-12">
-                                                <h3 class="title"><a href="">موتورسیکلت و لوازم جانبی</a></h3>
-                                                <ul>
-                                                    <li><a href="#">موتورسیکلت</a></li>
-                                                    <li><a href="#">لوازم جانبی موتورسیکلت</a></li>
-                                                </ul>
-                                            </div>
+                                            <h3 class="title"><a href="">قایق و لوازم جانبی</a></h3>
+                                            <ul>
+                                                <li><a href="#">قایق</a></li>
+                                                <li><a href="#">لوازم جانبی قایق</a></li>
+                                            </ul>
+                                        </div>
 
 
-                                            <div class="col-lg-3 col-sm-12">
-                                                <h3 class="title"><a href="">قطعات یدکی و لوازم جانبی خودرو</a></h3>
-                                                <ul>
-                                                    <li><a href="#">لوازم جانبی خودرو سواری</a></li>
-                                                    <li><a href="#">لوازم جانبی خودرو سنگین</a></li>
-                                                </ul>
-                                            </div>
+                                        <div class="col-lg-3 col-sm-12">
+                                            <h3 class="title"><a href="">موتورسیکلت و لوازم جانبی</a></h3>
+                                            <ul>
+                                                <li><a href="#">موتورسیکلت</a></li>
+                                                <li><a href="#">لوازم جانبی موتورسیکلت</a></li>
+                                            </ul>
+                                        </div>
 
 
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="">خودرو</a></h3>
-                                                <ul>
-                                                    <li><a href="#">سواری</a></li>
-                                                    <li><a href="#">سنگین</a></li>
-                                                </ul>
-                                            </div>
+                                        <div class="col-lg-3 col-sm-12">
+                                            <h3 class="title"><a href="">قطعات یدکی و لوازم جانبی خودرو</a></h3>
+                                            <ul>
+                                                <li><a href="#">لوازم جانبی خودرو سواری</a></li>
+                                                <li><a href="#">لوازم جانبی خودرو سنگین</a></li>
+                                            </ul>
+                                        </div>
 
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="">خودرو</a></h3>
+                                            <ul>
+                                                <li><a href="#">سواری</a></li>
+                                                <li><a href="#">سنگین</a></li>
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </li>
+
+
+
+
+                            <li>
+                                <a href="#">لوازم الکترونیکی<span class="arrow"></span></a>
+                                <div class="megamenu clearfix">
+                                    <div class="typography-text clearfix">
+
+
+
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="">تلفن رومیزی</a></h3>
+                                            <ul>
+                                                <li><a href="#">تلفن</a></li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="">کنسول ها و بازی‌ ها</a></h3>
+                                            <ul>
+                                                <li><a href="#">کنسول های بازی</a></li>
+                                                <li><a href="#">بازی های ویدئویی و آنلاین</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="">صوتی و تصویری</a></h3>
+                                            <ul>
+                                                <li><a href="#">فیلم و موسیقی</a></li>
+                                                <li><a href="#">دوربین عکاسی و فیلم‌برداری</a></li>
+                                                <li><a href="#">پخش‌کننده همراه</a></li>
+                                                <li><a href="#">سیستم صوتی خانگی</a></li>
+                                                <li><a href="#">ویدئو و پخش کننده DVD</a></li>
+                                                <li><a href="#">تلویزیون و پروژکتور</a></li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="">رایانه</a></h3>
+                                            <ul>
+                                                <li><a href="#">رایانه همراه</a></li>
+                                                <li><a href="#">رایانه رومیزی</a></li>
+                                                <li><a href="#">قطعات و لوازم جانبی</a></li>
+                                                <li><a href="#">مودم و تجهیزات شبکه</a></li>
+                                                <li><a href="#">پرینتر/اسکنر/کپی/فکس</a></li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="">موبایل و تبلت</a></h3>
+                                            <ul>
+                                                <li><a href="#">گوشی موبایل</a></li>
+                                                <li><a href="#">تبلت</a></li>
+                                                <li><a href="#">لوازم جانبی موبایل و تبلت</a></li>
+                                                <li><a href="#">سیم کارت</a></li>
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </li>
+
+
+                            <li>
+                                <a href="#">لوازم خانگی<span class="arrow"></span></a>
+                                <div class="megamenu clearfix">
+                                    <div class="typography-text clearfix">
+
+
+
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                        </div>
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="">ابزار</a></h3>
+                                            <ul>
+                                                <li><a href="#">نظافت و خیاطی و اتو</a></li>
+                                                <li><a href="#">تعمیرات</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="">ساختمان و حیاط</a></h3>
+                                            <ul>
+                                                <li><a href="#">سرویس بهداشتی و سونا</a></li>
+                                                <li><a href="#">سیستم گرمایشی سرمایشی و گاز</a></li>
+                                                <li><a href="#">آشپزخانه</a></li>
+                                                <li><a href="#">حیاط و ایوان</a></li>
+                                                <li><a href="#">ابزار باغبانی</a></li>
+                                            </ul>
+                                        </div>
+
+
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="">وسایل آشپزخانه</a></h3>
+                                            <ul>
+                                                <li><a href="#">ماشین ظرفشویی</a></li>
+                                                <li><a href="#">یخچال و فریزر</a></li>
+                                                <li><a href="#">وسایل آشپزی و غذاخوری</a></li>
+                                                <li><a href="#">مایکروویو و گاز</a></li>
+                                                <li><a href="#">ماشین لباسشویی و خشک کننده</a></li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="">وسایل و تزئینات خانه</a></h3>
+                                            <ul>
+                                                <li><a href="#">تزئینی و آثار هنری</a></li>
+                                                <li><a href="#">لوازم روشنایی</a></li>
+                                                <li><a href="#">میز و صندلی</a></li>
+                                                <li><a href="#">فرش و گلیم</a></li>
+                                                <li><a href="#">کمد و بوفه</a></li>
+                                                <li><a href="#">پرده و رومیزی</a></li>
+                                                <li><a href="#">تخت و اتاق خواب</a></li>
+                                                <li><a href="#">مبلمان و صندلی راحتی</a></li>
+                                                <li><a href="#">میز تلویزیون و وسایل سیستم پخش</a></li>
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </li>
+
+
+
+                            <li>
+                                <a href="#">خدمات<span class="arrow"></span></a>
+                                <div class="megamenu clearfix">
+                                    <div class="typography-text clearfix">
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+
+                                            <h3 class="title"><a href="">باغبانی و درختکاری</a></h3>
+                                            <h3 class="title"><a href="">نظافت</a></h3>
+                                            <h3 class="title"><a href="">آرایشگری و زیبایی</a></h3>
+                                        </div>
+
+
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="">سرگرمی</a></h3>
+                                            <h3 class="title"><a href="">پیشه و مهارت</a></h3>
+                                            <h3 class="title"><a href="">حمل و نقل</a></h3>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">موتور و ماشین</a></h3>
+                                            <h3 class="title"><a href="#">پذیرایی/مراسم</a></h3>
+                                            <h3 class="title"><a href="#">مالی/حسابداری/بیمه</a></h3>
+                                        </div>
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">خدمات رایانه‌ای و موبایل</a></h3>
+                                            <ul>
+                                                <li><a href="#">فروش دامنه و سایت</a></li>
+                                                <li><a href="#">میزبانی و طراحی سایت</a></li>
+                                                <li><a href="#">خدمات پهنای باند اینترنت</a></li>
+                                                <li><a href="#">خدمات نرم‌افزار و سخت‌افزار کامپیوتر</a></li>
+                                                <li><a href="#">تعمیرات نرم‌افزار و سخت‌افزار گوشی موبایل</a></li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">آموزشی</a></h3>
+                                            <ul>
+                                                <li><a href="#">زبان خارجی</a></li>
+                                                <li><a href="#">دروس مدرسه و دانشگاه</a></li>
+                                                <li><a href="#">نرم افزار</a></li>
+                                                <li><a href="#">هنری</a></li>
+                                                <li><a href="#">ورزشی</a></li>
+                                                <li><a href="#">مشاوره تحصیلی</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+
+
+
+                            <li>
+                                <a href="#">لوازم شخصی<span class="arrow"></span></a>
+                                <div class="megamenu clearfix">
+                                    <div class="typography-text clearfix">
+
+
+
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                        </div>
+
+
+
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">کفش و لباس بچه</a></h3>
+                                            <h3 class="title"><a href="#">آرایشی، بهداشتی و درمانی</a></h3>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">تزیینی</a></h3>
+                                            <ul>
+                                                <li><a href="#">ساعت</a></li>
+                                                <li><a href="#">جواهرات</a></li>
+                                                <li><a href="#">بدلیجات</a></li>
+                                            </ul>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">کیف، کفش و لباس</a></h3>
+                                            <ul>
+                                                <li><a href="#">کیف/کفش/کمربند</a></li>
+                                                <li><a href="#">لباس</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">وسایل بچه و اسباب بازی</a></h3>
+                                            <ul>
+
+                                                <li><a href="#">اسباب بازی</a></li>
+                                                <li><a href="#">کالسکه و لوازم جانبی</a></li>
+                                                <li><a href="#">صندلی بچه</a></li>
+                                                <li><a href="#">اسباب و اثاث بچه</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+
+
+
+                            <li>
+                                <a href="#">سرگرمی و فراغت<span class="arrow"></span></a>
+                                <div class="megamenu clearfix">
+                                    <div class="typography-text clearfix">
+
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">کلکسیون و سرگرمی</a></h3>
+                                            <ul>
+                                                <li><a href="#">سکه، تمبر و اسکناس</a></li>
+                                                <li><a href="#">اشیای عتیقه</a></li>
+                                            </ul>
+
+                                            <h3 class="title"><a href="#">اسباب‌ بازی</a></h3>
+                                            <h3 class="title"><a href="#">تور و چارتر</a></h3>
+                                            <h3 class="title"><a href="#">دوچرخه/اسکیت/اسکوتر</a></h3>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">کتاب و مجله</a></h3>
+                                            <ul>
+                                                <li><a href="#">آموزشی</a></li>
+                                                <li><a href="#">ادبی</a></li>
+                                                <li><a href="#">تاریخی</a></li>
+                                                <li><a href="#">مذهبی</a></li>
+                                                <li><a href="#">مجلات</a></li>
+                                            </ul>
 
                                         </div>
-                                    </div>
-                                </li>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">آلات موسیقی</a></h3>
+                                            <ul>
+                                                <li><a href="#">گیتار، بیس و امپلیفایر</a></li>
+                                                <li><a href="#">سازهای بادی</a></li>
+                                                <li><a href="#">پیانو/کیبورد/آکاردئون</a></li>
+                                                <li><a href="#">سنتی</a></li>
+                                                <li><a href="#">درام و پرکاشن</a></li>
+                                                <li><a href="#">ویولن</a></li>
+                                            </ul>
+                                        </div>
 
 
 
 
-                                <li>
-                                    <a href="#">لوازم الکترونیکی<span class="arrow"></span></a>
-                                    <div class="megamenu clearfix">
-                                        <div class="typography-text clearfix">
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">حیوانات</a></h3>
+                                            <ul>
+                                                <li><a href="#">گربه</a></li>
+                                                <li><a href="#">موش و خرگوش</a></li>
+                                                <li><a href="#">خزنده</a></li>
+                                                <li><a href="#">پرنده</a></li>
+                                                <li><a href="#">ماهی</a></li>
+                                                <li><a href="#">لوازم جانبی</a></li>
+                                                <li><a href="#">حیوانات مزرعه</a></li>
+                                            </ul>
+                                        </div>
 
 
 
 
-
-                                            <div class="col-lg-2 col-sm-12">
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="">تلفن رومیزی</a></h3>
-                                                <ul>
-                                                    <li><a href="#">تلفن</a></li>
-                                                </ul>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="">کنسول ها و بازی‌ ها</a></h3>
-                                                <ul>
-                                                    <li><a href="#">کنسول های بازی</a></li>
-                                                    <li><a href="#">بازی های ویدئویی و آنلاین</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="">صوتی و تصویری</a></h3>
-                                                <ul>
-                                                    <li><a href="#">فیلم و موسیقی</a></li>
-                                                    <li><a href="#">دوربین عکاسی و فیلم‌برداری</a></li>
-                                                    <li><a href="#">پخش‌کننده همراه</a></li>
-                                                    <li><a href="#">سیستم صوتی خانگی</a></li>
-                                                    <li><a href="#">ویدئو و پخش کننده DVD</a></li>
-                                                    <li><a href="#">تلویزیون و پروژکتور</a></li>
-                                                </ul>
-                                            </div>
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">بلیط</a></h3>
+                                            <ul>
+                                                <li><a href="#">کنسرت</a></li>
+                                                <li><a href="#">تئاتر و سینما</a></li>
+                                                <li><a href="#">کارت هدیه و تخفیف</a></li>
+                                                <li><a href="#">اماکن و مسابقات ورزشی</a></li>
+                                                <li><a href="#">ورزشی</a></li>
+                                                <li><a href="#">اتوبوس، مترو و قطار</a></li>
+                                            </ul>
+                                        </div>
 
 
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="">رایانه</a></h3>
-                                                <ul>
-                                                    <li><a href="#">رایانه همراه</a></li>
-                                                    <li><a href="#">رایانه رومیزی</a></li>
-                                                    <li><a href="#">قطعات و لوازم جانبی</a></li>
-                                                    <li><a href="#">مودم و تجهیزات شبکه</a></li>
-                                                    <li><a href="#">پرینتر/اسکنر/کپی/فکس</a></li>
-                                                </ul>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="">موبایل و تبلت</a></h3>
-                                                <ul>
-                                                    <li><a href="#">گوشی موبایل</a></li>
-                                                    <li><a href="#">تبلت</a></li>
-                                                    <li><a href="#">لوازم جانبی موبایل و تبلت</a></li>
-                                                    <li><a href="#">سیم کارت</a></li>
-                                                </ul>
-                                            </div>
-
-
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">ورزش و تناسب اندام</a></h3>
+                                            <ul>
+                                                <li><a href="#">ورزش‌های توپی</a></li>
+                                                <li><a href="#">کوهنوردی و کمپینگ</a></li>
+                                                <li><a href="#">غواصی و ورزش‌های آبی</a></li>
+                                                <li><a href="#">ماهیگیری</a></li>
+                                                <li><a href="#">تجهیزات ورزشی</a></li>
+                                                <li><a href="#">ورزش‌های زمستانی</a></li>
+                                                <li><a href="#">اسب و تجهیزات اسب سواری</a></li>
+                                            </ul>
                                         </div>
                                     </div>
-                                </li>
-
-
-                                <li>
-                                    <a href="#">لوازم خانگی<span class="arrow"></span></a>
-                                    <div class="megamenu clearfix">
-                                        <div class="typography-text clearfix">
+                                </div>
+                            </li>
 
 
 
+                            <li>
+                                <a href="#">اجتماعی<span class="arrow"></span></a>
+                                <div class="megamenu clearfix">
+                                    <div class="typography-text clearfix">
 
 
-                                            <div class="col-lg-2 col-sm-12">
-                                            </div>
 
-
-                                            <div class="col-lg-2 col-sm-12">
-                                            </div>
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="">ابزار</a></h3>
-                                                <ul>
-                                                    <li><a href="#">نظافت و خیاطی و اتو</a></li>
-                                                    <li><a href="#">تعمیرات</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="">ساختمان و حیاط</a></h3>
-                                                <ul>
-                                                    <li><a href="#">سرویس بهداشتی و سونا</a></li>
-                                                    <li><a href="#">سیستم گرمایشی سرمایشی و گاز</a></li>
-                                                    <li><a href="#">آشپزخانه</a></li>
-                                                    <li><a href="#">حیاط و ایوان</a></li>
-                                                    <li><a href="#">ابزار باغبانی</a></li>
-                                                </ul>
-                                            </div>
-
-
-                                            
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="">وسایل آشپزخانه</a></h3>
-                                                <ul>
-                                                    <li><a href="#">ماشین ظرفشویی</a></li>
-                                                    <li><a href="#">یخچال و فریزر</a></li>
-                                                    <li><a href="#">وسایل آشپزی و غذاخوری</a></li>
-                                                    <li><a href="#">مایکروویو و گاز</a></li>
-                                                    <li><a href="#">ماشین لباسشویی و خشک کننده</a></li>
-                                                </ul>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="">وسایل و تزئینات خانه</a></h3>
-                                                <ul>
-                                                    <li><a href="#">تزئینی و آثار هنری</a></li>
-                                                    <li><a href="#">لوازم روشنایی</a></li>
-                                                    <li><a href="#">میز و صندلی</a></li>
-                                                    <li><a href="#">فرش و گلیم</a></li>
-                                                    <li><a href="#">کمد و بوفه</a></li>
-                                                    <li><a href="#">پرده و رومیزی</a></li>
-                                                    <li><a href="#">تخت و اتاق خواب</a></li>
-                                                    <li><a href="#">مبلمان و صندلی راحتی</a></li>
-                                                    <li><a href="#">میز تلویزیون و وسایل سیستم پخش</a></li>
-                                                </ul>
-                                            </div>
-
-
+                                        <div class="col-lg-2 col-sm-12">
                                         </div>
-                                    </div>
-                                </li>
 
 
-
-                                <li>
-                                    <a href="#">خدمات<span class="arrow"></span></a>
-                                    <div class="megamenu clearfix">
-                                        <div class="typography-text clearfix">
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-
-                                                <h3 class="title"><a href="">باغبانی و درختکاری</a></h3>
-                                                <h3 class="title"><a href="">نظافت</a></h3>
-                                                <h3 class="title"><a href="">آرایشگری و زیبایی</a></h3>
-                                            </div>
-
-
-                                         
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="">سرگرمی</a></h3>
-                                                <h3 class="title"><a href="">پیشه و مهارت</a></h3>
-                                                <h3 class="title"><a href="">حمل و نقل</a></h3>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">موتور و ماشین</a></h3>
-                                                <h3 class="title"><a href="#">پذیرایی/مراسم</a></h3>
-                                                <h3 class="title"><a href="#">مالی/حسابداری/بیمه</a></h3>
-                                            </div>
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">خدمات رایانه‌ای و موبایل</a></h3>
-                                                <ul>
-                                                    <li><a href="#">فروش دامنه و سایت</a></li>
-                                                    <li><a href="#">میزبانی و طراحی سایت</a></li>
-                                                    <li><a href="#">خدمات پهنای باند اینترنت</a></li>
-                                                    <li><a href="#">خدمات نرم‌افزار و سخت‌افزار کامپیوتر</a></li>
-                                                    <li><a href="#">تعمیرات نرم‌افزار و سخت‌افزار گوشی موبایل</a></li>
-                                                </ul>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">آموزشی</a></h3>
-                                                <ul>
-                                                    <li><a href="#">زبان خارجی</a></li>
-                                                    <li><a href="#">دروس مدرسه و دانشگاه</a></li>
-                                                    <li><a href="#">نرم افزار</a></li>
-                                                    <li><a href="#">هنری</a></li>
-                                                    <li><a href="#">ورزشی</a></li>
-                                                    <li><a href="#">مشاوره تحصیلی</a></li>
-                                                </ul>
-                                            </div>
-
+                                        <div class="col-lg-2 col-sm-12">
                                         </div>
-                                    </div>
-                                </li>
 
 
-
-                                <li>
-                                    <a href="#">لوازم شخصی<span class="arrow"></span></a>
-                                    <div class="megamenu clearfix">
-                                        <div class="typography-text clearfix">
-
-
-
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                            </div>
-
-
-                                      
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">کفش و لباس بچه</a></h3>
-                                                <h3 class="title"><a href="#">آرایشی، بهداشتی و درمانی</a></h3>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">تزیینی</a></h3>
-                                                <ul>
-                                                    <li><a href="#">ساعت</a></li>
-                                                    <li><a href="#">جواهرات</a></li>
-                                                    <li><a href="#">بدلیجات</a></li>
-                                                </ul>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">کیف، کفش و لباس</a></h3>
-                                                <ul>
-                                                    <li><a href="#">کیف/کفش/کمربند</a></li>
-                                                    <li><a href="#">لباس</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">وسایل بچه و اسباب بازی</a></h3>
-                                                <ul>
-
-                                                    <li><a href="#">اسباب بازی</a></li>
-                                                    <li><a href="#">کالسکه و لوازم جانبی</a></li>
-                                                    <li><a href="#">صندلی بچه</a></li>
-                                                    <li><a href="#">اسباب و اثاث بچه</a></li>
-                                                </ul>
-                                            </div>
-
+                                        <div class="col-lg-2 col-sm-12">
                                         </div>
-                                    </div>
-                                </li>
 
 
 
-                                <li>
-                                    <a href="#">سرگرمی و فراغت<span class="arrow"></span></a>
-                                    <div class="megamenu clearfix">
-                                        <div class="typography-text clearfix">
-
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">کلکسیون و سرگرمی</a></h3>
-                                                <ul>
-                                                    <li><a href="#">سکه، تمبر و اسکناس</a></li>
-                                                    <li><a href="#">اشیای عتیقه</a></li>
-                                                </ul>
-
-                                                <h3 class="title"><a href="#">اسباب‌ بازی</a></h3>
-                                                <h3 class="title"><a href="#">تور و چارتر</a></h3>
-                                                <h3 class="title"><a href="#">دوچرخه/اسکیت/اسکوتر</a></h3>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">کتاب و مجله</a></h3>
-                                                <ul>
-                                                    <li><a href="#">آموزشی</a></li>
-                                                    <li><a href="#">ادبی</a></li>
-                                                    <li><a href="#">تاریخی</a></li>
-                                                    <li><a href="#">مذهبی</a></li>
-                                                    <li><a href="#">مجلات</a></li>
-                                                </ul>
-
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">آلات موسیقی</a></h3>
-                                                <ul>
-                                                    <li><a href="#">گیتار، بیس و امپلیفایر</a></li>
-                                                    <li><a href="#">سازهای بادی</a></li>
-                                                    <li><a href="#">پیانو/کیبورد/آکاردئون</a></li>
-                                                    <li><a href="#">سنتی</a></li>
-                                                    <li><a href="#">درام و پرکاشن</a></li>
-                                                    <li><a href="#">ویولن</a></li>
-                                                </ul>
-                                            </div>
-
-
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">حیوانات</a></h3>
-                                                <ul>
-                                                    <li><a href="#">گربه</a></li>
-                                                    <li><a href="#">موش و خرگوش</a></li>
-                                                    <li><a href="#">خزنده</a></li>
-                                                    <li><a href="#">پرنده</a></li>
-                                                    <li><a href="#">ماهی</a></li>
-                                                    <li><a href="#">لوازم جانبی</a></li>
-                                                    <li><a href="#">حیوانات مزرعه</a></li>
-                                                </ul>
-                                            </div>
-
-
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">بلیط</a></h3>
-                                                <ul>
-                                                    <li><a href="#">کنسرت</a></li>
-                                                    <li><a href="#">تئاتر و سینما</a></li>
-                                                    <li><a href="#">کارت هدیه و تخفیف</a></li>
-                                                    <li><a href="#">اماکن و مسابقات ورزشی</a></li>
-                                                    <li><a href="#">ورزشی</a></li>
-                                                    <li><a href="#">اتوبوس، مترو و قطار</a></li>
-                                                </ul>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">ورزش و تناسب اندام</a></h3>
-                                                <ul>
-                                                    <li><a href="#">ورزش‌های توپی</a></li>
-                                                    <li><a href="#">کوهنوردی و کمپینگ</a></li>
-                                                    <li><a href="#">غواصی و ورزش‌های آبی</a></li>
-                                                    <li><a href="#">ماهیگیری</a></li>
-                                                    <li><a href="#">تجهیزات ورزشی</a></li>
-                                                    <li><a href="#">ورزش‌های زمستانی</a></li>
-                                                    <li><a href="#">اسب و تجهیزات اسب سواری</a></li>
-                                                </ul>
-                                            </div>
+                                        <div class="col-lg-2 col-sm-12">
                                         </div>
-                                    </div>
-                                </li>
 
 
 
-                                <li>
-                                    <a href="#">اجتماعی<span class="arrow"></span></a>
-                                    <div class="megamenu clearfix">
-                                        <div class="typography-text clearfix">
-
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                            </div>
-
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                            </div>
-
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">داوطلبانه</a></h3>
-                                                <ul>
-                                                    <li><a href="#">خیریه و کمک رسانی</a></li>
-                                                    <li><a href="#">تحقیقاتی</a></li>
-                                                </ul>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">رویداد</a></h3>
-                                                <ul>
-                                                    <li><a href="#">حراج</a></li>
-                                                    <li><a href="#">گردهمایی و همایش</a></li>
-                                                    <li><a href="#">موسیقی و تئاتر</a></li>
-                                                    <li><a href="#">ورزشی</a></li>
-                                                </ul>
-                                            </div>
-
-
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">داوطلبانه</a></h3>
+                                            <ul>
+                                                <li><a href="#">خیریه و کمک رسانی</a></li>
+                                                <li><a href="#">تحقیقاتی</a></li>
+                                            </ul>
                                         </div>
-                                    </div>
-                                </li>
 
 
-
-                                <li>
-                                    <a href="#">کسب و کار<span class="arrow"></span></a>
-                                    <div class="megamenu clearfix">
-                                        <div class="typography-text clearfix">
-
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                            </div>
-
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                            </div>
-
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                            </div>
-
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">عمده فروشی</a></h3>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">تجهیزات و ماشین‌آلات</a></h3>
-                                                <ul>
-                                                    <li><a href="#">فروشگاه و مغازه</a></li>
-                                                    <li><a href="#">آرایشگاه و سالن‌های زیبایی</a></li>
-                                                    <li><a href="#">دفتر کار</a></li>
-                                                    <li><a href="#">صنعتی</a></li>
-                                                    <li><a href="#">کافی‌شاپ و رستوران</a></li>
-                                                </ul>
-                                            </div>
-
-
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">رویداد</a></h3>
+                                            <ul>
+                                                <li><a href="#">حراج</a></li>
+                                                <li><a href="#">گردهمایی و همایش</a></li>
+                                                <li><a href="#">موسیقی و تئاتر</a></li>
+                                                <li><a href="#">ورزشی</a></li>
+                                            </ul>
                                         </div>
+
+
                                     </div>
-                                </li>
+                                </div>
+                            </li>
 
 
 
-
-                                <li>
-                                    <a href="#">استخدام<span class="arrow"></span></a>
-                                    <div class="megamenu clearfix">
-                                        <div class="typography-text clearfix">
-
+                            <li>
+                                <a href="#">کسب و کار<span class="arrow"></span></a>
+                                <div class="megamenu clearfix">
+                                    <div class="typography-text clearfix">
 
 
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">هنری و رسانه</a></h3>
-                                            </div>
 
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">درمانی و زیبایی و بهداشتی</a></h3>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">حمل و نقل</a></h3>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">آموزشی</a></h3>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">صنعتی و فنی و مهندسی</a></h3>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">بازاریابی و فروش</a></h3>
-                                            </div>
-
-                                            <div class="cl"></div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">مالی و حسابداری و حقوقی</a></h3>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">رایانه و فناوری اطلاعات</a></h3>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">خدمات فروشگاه و رستوران</a></h3>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">معماری ،عمران و ساختمان</a></h3>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">سرایداری و نظافت</a></h3>
-                                            </div>
-
-
-                                            <div class="col-lg-2 col-sm-12">
-                                                <h3 class="title"><a href="#">اداری و مدیریت</a></h3>
-                                            </div>
-
-
+                                        <div class="col-lg-2 col-sm-12">
                                         </div>
+
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                        </div>
+
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                        </div>
+
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">عمده فروشی</a></h3>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">تجهیزات و ماشین‌آلات</a></h3>
+                                            <ul>
+                                                <li><a href="#">فروشگاه و مغازه</a></li>
+                                                <li><a href="#">آرایشگاه و سالن‌های زیبایی</a></li>
+                                                <li><a href="#">دفتر کار</a></li>
+                                                <li><a href="#">صنعتی</a></li>
+                                                <li><a href="#">کافی‌شاپ و رستوران</a></li>
+                                            </ul>
+                                        </div>
+
+
                                     </div>
-                                </li>
+                                </div>
+                            </li>
 
 
 
-                                <li>
-                                    <a href="#">جستجو<i class="fa fa-search top-1"></i></a>
-                                    <div class="megamenu halfdiv">
-                                        <h3 class="title">کلمه مورد نظر خود را وارد کنید</h3>
-                                        <form name="contact_name" class="menu_form">
-                                            <input type="text" placeholder="پژو سفید">
-                                            <input type="button" value="جستجو">
-                                            <input type="submit" value="انصراف">
-                                        </form>
+
+                            <li>
+                                <a href="#">استخدام<span class="arrow"></span></a>
+                                <div class="megamenu clearfix">
+                                    <div class="typography-text clearfix">
+
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">هنری و رسانه</a></h3>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">درمانی و زیبایی و بهداشتی</a></h3>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">حمل و نقل</a></h3>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">آموزشی</a></h3>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">صنعتی و فنی و مهندسی</a></h3>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">بازاریابی و فروش</a></h3>
+                                        </div>
+
                                         <div class="cl"></div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </nav>
 
-                    </div>
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">مالی و حسابداری و حقوقی</a></h3>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">رایانه و فناوری اطلاعات</a></h3>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">خدمات فروشگاه و رستوران</a></h3>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">معماری ،عمران و ساختمان</a></h3>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">سرایداری و نظافت</a></h3>
+                                        </div>
+
+
+                                        <div class="col-lg-2 col-sm-12">
+                                            <h3 class="title"><a href="#">اداری و مدیریت</a></h3>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </li>
+
+
+
+                            <li>
+                                <a href="#">جستجو<i class="fa fa-search top-1"></i></a>
+                                <div class="megamenu halfdiv">
+                                    <h3 class="title">کلمه مورد نظر خود را وارد کنید</h3>
+                                    <form name="contact_name" class="menu_form">
+                                        <input type="text" placeholder="پژو سفید">
+                                        <input type="button" value="جستجو">
+                                        <input type="submit" value="انصراف">
+                                    </form>
+                                    <div class="cl"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+
                 </div>
-                <!-- container -->
             </div>
-            <!-- bottom-header -->
-</header>
+            <!-- container -->
+        </div>
+        <!-- bottom-header -->
+    </header>
     <!-- header-page -->
     <div id="content" class="container clearfix">
 
