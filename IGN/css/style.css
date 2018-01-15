@@ -6412,7 +6412,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 .modal .modal-header .close {
     color: #ff0000;
 }
-.search-col {
+.search-city {
     font-size: 15px;
     position: absolute;
     top: 48px;
@@ -6510,7 +6510,8 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 }
 
     .md-radio.md-radio-inline {
-        display: inline-block;
+        display: block;
+        margin: 5px;
     }
 
     .md-radio input[type="radio"] {
@@ -6545,7 +6546,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
         }
 
         .md-radio label:before {
-            left: 0;
+            right: 0;
             top: 0;
             width: 20px;
             height: 20px;
@@ -6554,7 +6555,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 
         .md-radio label:after {
             top: 5px;
-            left: 5px;
+            right: 5px;
             width: 10px;
             height: 10px;
             transform: scale(0);
@@ -6680,4 +6681,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     width: 106px;
     top: 0px;
     background-color: white;
+}
+.margin-bottom-10 {
+    margin-bottom: 10px;
 }
