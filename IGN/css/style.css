@@ -6412,7 +6412,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 .modal .modal-header .close {
     color: #ff0000;
 }
-.search-col {
+.search-city {
     font-size: 15px;
     position: absolute;
     top: 48px;
