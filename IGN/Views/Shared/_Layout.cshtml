@@ -69,23 +69,21 @@
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                                         <h4 class="modal-title">انتخاب شهر</h4>
-                                        <input class="form-control keyword" name="keyword" value="" placeholder="جستجو شهر" type="text">
+                                        <input id="s" class="form-control keyword" name="keyword" value="" placeholder="جستجو شهر" type="text">
                                         <i class="search-city fa fa-search"></i>
                                     </div>
                                     <div class="modal-body choose">
-                                        <ul>
-                                            <li class="display-inline-block">
-                                                <button type="button" class="btn btn-static-big">تهران</button>
-                                            </li>
-                                            <li class="display-inline-block">
-                                                <button type="button" class="btn btn-static-big">اصفهان</button>
-                                            </li>
-                                            <li class="display-inline-block">
-                                                <button type="button" class="btn btn-static-big">تبریز</button>
-                                            </li>
-                                            <li class="display-inline-block">
-                                                <button type="button" class="btn btn-static-big">مشهد</button>
-                                            </li>
+                                        <ul class="countryList">
+
+
+                                            @{ foreach (var item in Utility.lstProvinces)
+                                                {
+
+                                                  
+                                                    <li class="display-inline-block"><a class="btn btn-static-big" href="#@item.ProvinceID">@item.ProvinceName</a></li>
+                                                }
+
+                                            }
                                         </ul>
 
 
@@ -1389,6 +1387,18 @@
 
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script>
+    $(document).ready(function () {
+        $('#s').keyup(function () {
+            var valThis = $(this).val().toLowerCase();
+            $('.countryList>li').each(function () {
+                var text = $(this).text().toLowerCase();
+                (text.indexOf(valThis) == 0) ? $(this).show() : $(this).hide();
+            });
+        });
+    });
+</script>
 
 <script>
 
