@@ -23,7 +23,7 @@ namespace IGN.Models
         public static List<TopTag> lstTopTagWeek = new List<TopTag>();
         public static List<Linkestan> lstLinkestan = new List<Linkestan>();
         public static List<AgahiCategory> lstAgaghiCategory = new List<AgahiCategory>();
-
+        public static string CityName = "تهران";
         public static List<tblProvince> lstProvinces = new List<tblProvince>();
 
 

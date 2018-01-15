@@ -35,7 +35,7 @@ namespace IGN.Controllers
       
        
         [ActionName("جستجو")]
-        public ActionResult جستجو(string name, string id1, string id2)
+        public ActionResult جستجو(string name, string id1, string id2,string id3)
         {
             return View();
         }

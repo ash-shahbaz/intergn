@@ -37,8 +37,8 @@ namespace IGN
 
             routes.MapRoute(
               "Routing01", // Route name
-              "{controller}/{action}/{name}/{id1}/{id2}",  // URL with parameters
-              defaults: new { controller = "Agahi", action = "جستجو" , name = "" , id1 = UrlParameter.Optional , id2 = UrlParameter.Optional }
+              "{controller}/{action}/{name}/{id1}/{id2}/{id3}",  // URL with parameters
+              defaults: new { controller = "Agahi", action = "جستجو" , name = "" , id1 = UrlParameter.Optional , id2 = UrlParameter.Optional , id3 = UrlParameter.Optional }
               );
 
 
