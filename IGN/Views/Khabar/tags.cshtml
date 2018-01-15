@@ -477,7 +477,7 @@
                 if (CID != null && CID != "" && txtSearch != "") {
                     console.log(CID + txtSearch);
 
-                    var url = "/fa/tags/" + CID + "-" + txtSearch + "- " + CateName;
+                    var url = "/Khabar/tags/" + CID + "-" + txtSearch + "- " + CateName;
 
                     window.location.href = url;
                 }
@@ -513,7 +513,7 @@
                                                     }
                                                 }
 
-                                                var $liTopNews = "<li><div class=\"item clearfix\"><div class=\"row\"> <div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-11\">" + time + " ساعت قبل</li></ul></div><div class=\"col-md-2 col-xs-2 col-sm-2 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-12\">" + item.RssName + "</li></ul></div><div class=\"col-md-9 col-xs-9 col-sm-9  no-padding\"><div><div class=\"boxin-right\"><span class=\"fa fa-angle-double-left HomeBoxes\" aria-hidden=\"true\"></span></div><h1 class=\"titleNews width-700\"><a href=\"/fa/News/Sport/" + item.NewsID + "/" + url + "\" target=\"_blank\" >" + item.Title + "</a></h1></div></div></div></div></li>";
+                                                var $liTopNews = "<li><div class=\"item clearfix\"><div class=\"row\"> <div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-11\">" + time + " ساعت قبل</li></ul></div><div class=\"col-md-2 col-xs-2 col-sm-2 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-12\">" + item.RssName + "</li></ul></div><div class=\"col-md-9 col-xs-9 col-sm-9  no-padding\"><div><div class=\"boxin-right\"><span class=\"fa fa-angle-double-left HomeBoxes\" aria-hidden=\"true\"></span></div><h1 class=\"titleNews width-700\"><a href=\"/Khabar/خبر/Sport/" + item.NewsID + "/" + url + "\" target=\"_blank\" >" + item.Title + "</a></h1></div></div></div></div></li>";
                                                 $("#Top50NewsTag").append($liTopNews);
                                             });
                                         });
@@ -546,7 +546,7 @@
                                             }
                                         }
 
-                                        var $liTopNews = "<li><div class=\"item clearfix\"><div class=\"row\"> <div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-11\">" + time + " ساعت قبل</li></ul></div><div class=\"col-md-2 col-xs-2 col-sm-2 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-12\">" + item.RssName + "</li></ul></div><div class=\"col-md-9 col-xs-9 col-sm-9  no-padding\"><div><div class=\"boxin-right\"><span class=\"fa fa-angle-double-left HomeBoxes\" aria-hidden=\"true\"></span></div><h1 class=\"titleNews width-700\"><a href=\"/fa/News/Sport/" + item.NewsID + "/" + url + "\" target=\"_blank\" >" + item.Title + "</a></h1></div></div></div></div></li>";
+                                        var $liTopNews = "<li><div class=\"item clearfix\"><div class=\"row\"> <div class=\"col-md-1 col-xs-1 col-sm-1 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-11\">" + time + " ساعت قبل</li></ul></div><div class=\"col-md-2 col-xs-2 col-sm-2 no-padding\"><ul class=\"CategoriesNews\"><li class=\"font-size-12\">" + item.RssName + "</li></ul></div><div class=\"col-md-9 col-xs-9 col-sm-9  no-padding\"><div><div class=\"boxin-right\"><span class=\"fa fa-angle-double-left HomeBoxes\" aria-hidden=\"true\"></span></div><h1 class=\"titleNews width-700\"><a href=\"/Khabar/خبر/Sport/" + item.NewsID + "/" + url + "\" target=\"_blank\" >" + item.Title + "</a></h1></div></div></div></div></li>";
                                         $("#Top50NewsTag").append($liTopNews);
                                     });
                                 });
