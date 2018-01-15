@@ -24,6 +24,7 @@ namespace IGN.Models
         public static List<Linkestan> lstLinkestan = new List<Linkestan>();
         public static List<AgahiCategory> lstAgaghiCategory = new List<AgahiCategory>();
 
+        public static List<tblProvince> lstProvinces = new List<tblProvince>();
 
 
 
@@ -69,7 +70,7 @@ namespace IGN.Models
                 lstTopTagWeek = GetTagTop10DWMY("Week");
                 lstTopTagYear = GetTagTop10DWMY("Year");
                 lstLinkestan = GetTopLinkestan();
-     
+                lstProvinces = GetProvince();
 
             }
         }
@@ -345,6 +346,44 @@ namespace IGN.Models
                 }
             }
         }
+
+
+
+        public static List<tblProvince> GetProvince()
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync("api/Provinces").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseString = response.Content.ReadAsStringAsync().Result;
+
+                    //var data =  JsonConvert.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                    //return data;
+                    response.Content = new StringContent(responseString, System.Text.Encoding.UTF8, "application/json");
+
+                    JavaScriptSerializer json_serializer = new JavaScriptSerializer();
+
+                    //string json = JsonConvert.SerializeObject(responseString);
+
+                    //    string q = json_serializer.DeserializeObject(responseString).ToString();
+
+
+                    List<tblProvince> deserializedProduct = JsonConvert.DeserializeObject<List<tblProvince>>(responseString);
+
+                    return deserializedProduct.ToList();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
+
     }
 
     public class AgahiCategory
@@ -402,7 +441,11 @@ namespace IGN.Models
 
     }
 
-
+    public partial class tblProvince
+    {
+        public int ProvinceID { get; set; }
+        public string ProvinceName { get; set; }
+    }
 
 
 }
