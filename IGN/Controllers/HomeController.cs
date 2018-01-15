@@ -15,8 +15,12 @@ namespace IGN.Controllers
         
         public ActionResult Index()
         {
+
             return View();
         }
+
+      
+
         public ActionResult LogOut()
         {
             Session.Abandon();
