@@ -6685,3 +6685,9 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 .margin-bottom-10 {
     margin-bottom: 10px;
 }
+.numbertxt {
+    width: 90%;
+    text-align: center;
+    text-align: -webkit-center;
+    margin: 5px 0px;
+}

@@ -316,8 +316,8 @@ select.form-control:focus {
 .styled-select .bs-caret {
   display: none;
 }
-.location-select:before {
-  content: "\f278";
+.Price-select:before {
+    content: "\f155";
 }
 .search-category select {
   padding: 12px;
