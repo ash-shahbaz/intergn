@@ -6380,10 +6380,12 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     border-bottom: 1px solid #eee;
     height: 35px;
 }
+
 .li-city {
     border-bottom: 1px solid #eee;
     height: 35px;
 }
+
 .choose ul li:hover {
     color: red;
     cursor: pointer;
@@ -6412,6 +6414,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 .modal .modal-header .close {
     color: #ff0000;
 }
+
 .search-city {
     font-size: 15px;
     position: absolute;
@@ -6421,6 +6424,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     left: 15px;
     padding: 15px;
 }
+
 .display-inline-block {
     display: inline-block;
 }
@@ -6637,8 +6641,8 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 
 .btn-static {
     font-size: 18px !important;
-    background-color: white ;
-    color: green ;
+    background-color: white;
+    color: green;
 }
 
 .btn-thumb {
@@ -6682,12 +6686,22 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     top: 0px;
     background-color: white;
 }
+
 .margin-bottom-10 {
     margin-bottom: 10px;
 }
+
 .numbertxt {
     width: 90%;
     text-align: center;
     text-align: -webkit-center;
     margin: 5px 0px;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 251px !important;
 }
