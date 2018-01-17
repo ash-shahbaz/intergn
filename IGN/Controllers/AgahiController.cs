@@ -37,6 +37,24 @@ namespace IGN.Controllers
         [ActionName("جستجو")]
         public ActionResult جستجو(string name, string id1, string id2,string id3)
         {
+
+            if (id3 == null)
+            {
+                ViewBag.Level1 = id1;
+                ViewBag.Level2 = id2;
+                ViewBag.Level3 = null;
+
+            }
+            else if (id1 == null && id2 == null && id3 == null)
+            {
+                ViewBag.AllStatus = true;
+            }
+            else {
+                ViewBag.Level1 = id1;
+                ViewBag.Level2 = id2;
+                ViewBag.Level3 = id3;
+
+            }
             return View();
         }
 
