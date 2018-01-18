@@ -8,7 +8,11 @@
 @section Head
 {
     <link href="~/css/animate.min.css" rel="stylesheet" />
-    <link href="~/css/main.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/css/main.css">
+    <link rel="stylesheet" href="~/css/mainselect.css">
+    <link rel="stylesheet" href="~/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="~/css/slidr.css">
 }
 
 <div class="main-top">
@@ -25,7 +29,7 @@
 
 
                         <section id="main" class="clearfix ad-details-page">
-                            <div class="adpost-details">
+                            <div >
                                 <div class="row">
 
 
@@ -77,7 +81,7 @@
 
 
                         <section id="main" class="clearfix ad-details-page">
-                            <div class="adpost-details">
+                            <div >
                                 <div class="row">
 
 
@@ -89,10 +93,10 @@
                                         <div class="section thumbnail select-category post-option">
                                             <h4> زیر دسته بندی خود را انتخاب کنید</h4>
 
-                                            <a href=""><i class="fa fa-arrow-right nofa" ></i><span class="padding-right-15"> | وسایل نقلیه</span></a> 
-                                                 
+                                            <a href=""><i class="fa fa-arrow-right nofa"></i><span class="padding-right-15"> | وسایل نقلیه</span></a>
 
-                                        
+
+
                                             <ul role="tablist" class="margin-top-15">
                                                 <li class="">
                                                     <a href="#cat1" aria-controls="cat1" role="tab" data-toggle="tab" aria-expanded="false">
@@ -139,7 +143,7 @@
 
 
                         <section id="main" class="clearfix ad-details-page">
-                            <div class="adpost-details">
+                            <div >
                                 <div class="row">
 
 
@@ -191,7 +195,7 @@
 
                         <!-- main -->
                         <section id="main" class="clearfix ad-details-page">
-                            <div class="adpost-details">
+                            <div>
                                 <div class="row">
 
 
@@ -265,87 +269,31 @@
 
 
                                     <div class="col-md-8">
-                                        <form action="#">
+                                     
                                             <div class="section postdetails thumbnail border-radius-15">
                                                 <h4>جزئیات آگهی<span class="pull-left float-left">* فیلد های اجباری</span></h4>
 
                                                 <div class="row form-group">
                                                     <div class="col-sm-9 user-type">
-                                                        <button type="button" class="btn btn-info btn-lg btnchoose" data-toggle="modal" data-target="#myModal">انتخاب گروه آگهی</button>
 
-                                                        <!-- Modal -->
-                                                        <div class="modal fade" id="myModal" role="dialog">
-                                                            <div class="modal-dialog whitebg">
-
-                                                                <!-- Modal content-->
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                                        <h4 class="modal-title">انتخاب گروه بندی</h4>
-                                                                        <h5>املاک>فروش املک مسکونی</h5>
-                                                                    </div>
-                                                                    <div class="modal-body choose">
-                                                                        <ul>
-                                                                            <li class="li-cat">
-                                                                                <span class="vertical-align-sub">املاک</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                                                            </li>
-                                                                            <li class="li-cat">
-                                                                                <span class="vertical-align-sub">وسایل نقلیه</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                                                            </li>
-                                                                            <li class="li-cat">
-                                                                                <span class="vertical-align-sub">لوازم الکترونیکی</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                                                            </li>
-                                                                            <li class="li-cat">
-                                                                                <span class="vertical-align-sub">لوازم خانگی</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                                                            </li>
-                                                                            <li class="li-cat">
-                                                                                <span class="vertical-align-sub">خدمات</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                                                            </li>
-                                                                            <li class="li-cat">
-                                                                                <span class="vertical-align-sub">لوازم شخصی</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                                                            </li>
-                                                                            <li class="li-cat">
-                                                                                <span class="vertical-align-sub">سرگرمی و فراغت</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                                                            </li>
-                                                                            <li class="li-cat">
-                                                                                <span class="vertical-align-sub">اجتماعی</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                                                            </li>
-                                                                            <li class="li-cat">
-                                                                                <span class="vertical-align-sub">کسب و کار</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                                                            </li>
-                                                                            <li class="li-cat">
-                                                                                <span class="vertical-align-sub">استخدام</span><span class="fa fa-arrow-circle-left float-left fa-cat-style"></span>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="modal-body choose">
-                                                                        <ul>
-                                                                            <li class="li-cat">
-                                                                                <span class="vertical-align-sub">آپارتمان</span>
-                                                                            </li>
-                                                                            <li class="li-cat">
-                                                                                <span class="vertical-align-sub">خانه و ویلا</span>
-                                                                            </li>
-                                                                            <li class="li-cat">
-                                                                                <span class="vertical-align-sub">زمین و کلنگی</span>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-
+                                                        <label>تغییر دسته بندی</label>
                                                     </div>
                                                     <label class="col-sm-3">گروه بندی<span class="required">*</span></label>
                                                 </div>
                                                 <div class="row form-group">
                                                     <div class="col-sm-9 user-type">
-                                                        <input type="radio" name="sellType" value="newsell" id="newsell"> <label for="newsell">خریدار</label>
-                                                        <input type="radio" name="sellType" value="newbuy" id="newbuy"> <label for="newbuy">فروشنده</label>
+                                                        <div class="md-radio md-radio-inline">
+                                                            <input id="6" type="radio" name="g3">
+                                                            <label for="6">درخواست کننده</label>
+                                                        </div>
+                                                        <div class="md-radio md-radio-inline">
+                                                            <input id="7" type="radio" name="g3">
+                                                            <label for="7">ارائه کننده</label>
+                                                        </div>
                                                     </div>
                                                     <label class="col-sm-3">نوع آگهی<span class="required">*</span></label>
                                                 </div>
+                                               
                                                 <div class="row form-group add-title">
                                                     <div class="col-sm-9">
                                                         <input type="text" class="form-control" id="text" placeholder="گوشی اپل مدل 8Plus بدون خط و خش">
@@ -396,7 +344,6 @@
 
                                             </div><!-- section -->
 
-                                        </form><!-- form -->
                                     </div>
 
 
