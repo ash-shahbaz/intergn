@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IGN.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -37,6 +38,17 @@ namespace IGN.Controllers
         [ActionName("جستجو")]
         public ActionResult جستجو(string name, string id1, string id2,string id3)
         {
+
+            if (name != "" && name != null)
+            {
+                var qGetProvince = Utility.lstProvinces.Where(p => p.ProvinceName == name).FirstOrDefault();
+                Utility.PrivinceID = qGetProvince.ProvinceID;
+            }
+            else
+            {
+                Utility.PrivinceID = 8;
+            }
+
 
             if (id3 == null)
             {
