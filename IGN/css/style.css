@@ -6705,3 +6705,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
     width: 251px !important;
 }
+
+.padding-right-15 {
+    padding-right: 15px;
+}
