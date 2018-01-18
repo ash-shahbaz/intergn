@@ -23,29 +23,58 @@
         <form class="search-form" method="get">
             <div class="row margin-bottom-10">
 
-
-
-
+                
                 <div class="col-md-3 search-col">
                     <div class="input-group-addon search-category-container width-100">
                         <label class="styled-select location-select">
                             <select class="dropdown-product selectpicker" name="product-cat">
-                                <option class="" value="New York">تجریش</option>
-                                <option class="" value="0">همه مناطق</option>
-                                <option class="" value="California">میدان ولیعصر</option>
-                                <option class="" value="Washington">ونک</option>
-                                <option class="" value="churches">جنت آباد</option>
-                                <option class="" value="Birmingham">تهرانپارس</option>
-                                <option class="" value="Phoenix">پاسداران</option>
-                                <option class="" value="0">همه مناطق</option>
-                                <option class="" value="eam">میدان امام </option>
-                                <option class="" value="0">همه مناطق</option>
-                                <option class="" value="koh">کوه سنگی</option>
-                                <option class="" value="0">همه مناطق</option>
-                                <option class="" value="bagh">باغ میشه</option>
+
+                                @{   
+                                        foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
+                                        {
+                                            <option class="CitySelect" value="@item.CityID">@item.CityName</option>
+                                        }
+                                   
+                                }
 
 
 
+
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-md-3 search-col">
+                    <div class="input-group-addon search-category-container width-100">
+                        <label class="styled-select location-select">
+                            <select class="dropdown-product selectpicker Regions" name="product-cat">
+
+                                                                @*@{
+
+            if (Utility.PrivinceID == 8)
+            {
+                foreach (var item in Utility.GetRegions("117"))
+                {
+            Utility.GetRegions("117")
+                    <option class="" value="@item.RegionName">@item.RegionName</option>
+                }
+            }
+            else
+            {
+                foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
+                {
+                    <option class="" value="@item.CityName">@item.CityName</option>
+                }
+            }
+
+
+
+
+        }*@
+
+
+                             
 
                             </select>
                         </label>
@@ -83,7 +112,7 @@
                 </div>
 
 
-                <div class="col-md-6 search-col">
+                <div class="col-md-3 search-col">
                     <input class="form-control keyword" name="keyword" value="" placeholder="متن جستجو" type="text">
                     <i class="fa fa-search"></i>
 
@@ -3024,7 +3053,31 @@
     <script src="~/js/bootstrap-select.min.js"></script>
     <script src="~/js/mainselect.js"></script>
 
-    <script>
+    <script> 
+
+        $(".dropdown-toggle").click(function () {
+
+            alert("HI");
+
+
+            $.ajax({
+                type: "GET",
+                url: "/Sync/GetRegionByCityID/" + $(this).val() + "",
+                success: function (data) {
+                    var MyData = $.parseJSON(data);
+
+                    for (var i = 0; i < MyData.length; i++) {
+                        var $li = "<option class=\"\">" + MyData[i].RegionName + "</option>";
+
+                        $(".Regions").append($li);
+                    }
+                }
+            })
+        });
+
+
+
+
         var arr;
         $("#RetToLoadCate").click(function () {
             $(".Level1").empty();
@@ -3034,6 +3087,14 @@
 
 
         })
+
+
+
+       
+
+
+
+
 
 
         LoadCategory();

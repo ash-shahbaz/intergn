@@ -109,5 +109,13 @@ namespace IGN.Controllers
 
         }
 
+
+        public List<tblRegions> GetRegionByCityID(string CityID)
+        {
+
+            return Utility.GetRegions(CityID);
+        }
+
+
     }
 }

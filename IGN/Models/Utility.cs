@@ -23,6 +23,7 @@ namespace IGN.Models
         public static List<TopTag> lstTopTagWeek = new List<TopTag>();
         public static List<Linkestan> lstLinkestan = new List<Linkestan>();
         public static List<AgahiCategory> lstAgaghiCategory = new List<AgahiCategory>();
+        public static int PrivinceID;
         public static string CityName = "تهران";
         public static List<tblProvince> lstProvinces = new List<tblProvince>();
 
@@ -383,6 +384,76 @@ namespace IGN.Models
             }
         }
 
+        public static List<tblCity> GetCites(string ProvinceID)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync("api/Cities/"+ ProvinceID + "").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseString = response.Content.ReadAsStringAsync().Result;
+
+                    //var data =  JsonConvert.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                    //return data;
+                    response.Content = new StringContent(responseString, System.Text.Encoding.UTF8, "application/json");
+
+                    JavaScriptSerializer json_serializer = new JavaScriptSerializer();
+
+                    //string json = JsonConvert.SerializeObject(responseString);
+
+                    //    string q = json_serializer.DeserializeObject(responseString).ToString();
+
+
+                    List<tblCity> deserializedProduct = JsonConvert.DeserializeObject<List<tblCity>>(responseString);
+
+                    return deserializedProduct.ToList();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
+
+       
+
+        public static List<tblRegions> GetRegions(string CityID)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync("api/Regions/" + CityID + "").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseString = response.Content.ReadAsStringAsync().Result;
+
+                    //var data =  JsonConvert.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                    //return data;
+                    response.Content = new StringContent(responseString, System.Text.Encoding.UTF8, "application/json");
+
+                    JavaScriptSerializer json_serializer = new JavaScriptSerializer();
+
+                    //string json = JsonConvert.SerializeObject(responseString);
+
+                    //    string q = json_serializer.DeserializeObject(responseString).ToString();
+
+
+                    List<tblRegions> deserializedProduct = JsonConvert.DeserializeObject<List<tblRegions>>(responseString);
+
+                    return deserializedProduct.ToList();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
 
     }
 
@@ -441,11 +512,29 @@ namespace IGN.Models
 
     }
 
-    public partial class tblProvince
+    public class tblProvince
     {
         public int ProvinceID { get; set; }
         public string ProvinceName { get; set; }
     }
+    public  class tblCity
+    {
+        public int CityID { get; set; }
+        public Nullable<int> ProvinceId { get; set; }
+        public string CityName { get; set; }
+        public Nullable<int> CountryID { get; set; }
+    }
 
+
+
+    public  class tblRegions
+    {
+        public int RegionID { get; set; }
+        public Nullable<int> CityID { get; set; }
+        public string RegionName { get; set; }
+    }
+
+
+   
 
 }

@@ -58,7 +58,7 @@
 
 
                     <span class=" user-type">
-                        <button type="button" class="btn btn-info btn-lg btnchoose" data-toggle="modal" data-target="#myCity">انتخاب شهر</button>
+                        <button type="button" class="btn btn-info btn-lg btnchoose" data-toggle="modal" data-target="#myCity">انتخاب استان</button>
 
                         <!-- Modal -->
                         <div class="modal fade" id="myCity" role="dialog">
@@ -68,15 +68,15 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">انتخاب شهر</h4>
-                                        <input id="s" class="form-control keyword" name="keyword" value="" placeholder="جستجو شهر" type="text">
+                                        <h4 class="modal-title">انتخاب استان</h4>
+                                        <input id="s" class="form-control keyword" name="keyword" value="" placeholder="جستجو استان" type="text">
                                         <i class="search-city fa fa-search"></i>
                                     </div>
                                     <div class="modal-body choose">
                                         <ul class="countryList">
                                             @{ foreach (var item in Utility.lstProvinces)
                                                 {
-                                                    <li class="display-inline-block"><a class="btn btn-static-big" href="#@item.ProvinceID">@item.ProvinceName</a></li>
+                                                    <li class="display-inline-block"><a class="btn btn-static-big" href="/Agahi/جستجو/@item.ProvinceName">@item.ProvinceName</a></li>
                                                 }
                                             }
                                         </ul>
