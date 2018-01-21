@@ -10,9 +10,12 @@
     <link href="~/css/animate.min.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="~/css/main.css">
-    <link rel="stylesheet" href="~/css/mainselect.css">
-    <link rel="stylesheet" href="~/css/bootstrap-select.min.css">
+    @*<link rel="stylesheet" href="~/css/mainselect.css">
+        <link rel="stylesheet" href="~/css/bootstrap-select.min.css">*@
     <link rel="stylesheet" href="~/css/slidr.css">
+
+
+    <link href="~/css/chosen.min.css" rel="stylesheet" />
 }
 
 <div class="main-top">
@@ -29,7 +32,7 @@
 
 
                         <section id="main" class="clearfix ad-details-page">
-                            <div >
+                            <div>
                                 <div class="row">
 
 
@@ -81,7 +84,7 @@
 
 
                         <section id="main" class="clearfix ad-details-page">
-                            <div >
+                            <div>
                                 <div class="row">
 
 
@@ -143,7 +146,7 @@
 
 
                         <section id="main" class="clearfix ad-details-page">
-                            <div >
+                            <div>
                                 <div class="row">
 
 
@@ -197,20 +200,144 @@
                         <section id="main" class="clearfix ad-details-page">
                             <div>
                                 <div class="row">
+                                    <div class="col-md-2"></div>
+
+                                    <div class="col-md-8">
+
+                                        <div class="section postdetails thumbnail border-radius-15">
+                                            <h4>جزئیات آگهی<span class="pull-left float-left">* فیلد های اجباری</span></h4>
+
+                                            <div class="row form-group">
+                                                <div class="col-sm-9 user-type">
+
+                                                    <label>تغییر دسته بندی</label>
+                                                </div>
+                                                <label class="col-sm-3">گروه بندی<span class="required">*</span></label>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-sm-9 user-type">
+                                                    <div class="md-radio md-radio-inline">
+                                                        <input id="6" type="radio" name="g3">
+                                                        <label for="6">درخواست کننده</label>
+                                                    </div>
+                                                    <div class="md-radio md-radio-inline">
+                                                        <input id="7" type="radio" name="g3">
+                                                        <label for="7">ارائه کننده</label>
+                                                    </div>
+                                                </div>
+                                                <label class="col-sm-3">نوع آگهی<span class="required">*</span></label>
+                                            </div>
+
+                                            <div class="row form-group add-title">
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="text" placeholder="گوشی اپل مدل 8Plus بدون خط و خش">
+                                                </div>
+                                                <label class="col-sm-3 label-title">عنوان آگهی<span class="required">*</span></label>
+                                            </div>
+
+                                            <div class="row form-group select-condition">
+                                                <div class="col-sm-9">
+                                                    <input type="radio" name="itemCon" value="new" id="new">
+                                                    <label for="new">نو</label>
+                                                    <input type="radio" name="itemCon" value="used" id="used">
+                                                    <label for="used">کارکرده</label>
+
+
+
+                                                    <select data-placeholder="Choose a Country..." class="select" tabindex="1">
+                                                        <option value=""></option>
+                                                        <option value="United States">United States</option>
+                                                        <option value="United Kingdom">United Kingdom</option>
+                                                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                                                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                                                        <option value="Saint Lucia">Saint Lucia</option>
+                                                        <option value="Saint Martin (French part)">Saint Martin (French part)</option>
+                                                        <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                                                        <option value="Western Sahara">Western Sahara</option>
+                                                        <option value="Yemen">Yemen</option>
+                                                        <option value="Zambia">Zambia</option>
+                                                        <option value="Zimbabwe">Zimbabwe</option>
+                                                    </select>
+
+                                                    <div id="map"></div>
+
+
+                                                </div>
+                                                <label class="col-sm-3">منطقه<span class="required">*</span></label>
+                                            </div>
+                                            <div class="row form-group select-price">
+                                                <div class="col-sm-9">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+
+                                                            <label>هزار تومان</label>
+                                                            <input type="radio" name="price" value="negotiable" id="negotiable">
+                                                            <label for="negotiable">توافقی </label>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control" id="text1">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <label class="col-sm-3 label-title">قیمت<span class="required">*</span></label>
+                                            </div>
+
+                                            <div class="row form-group add-image">
+                                                <div class="col-sm-9">
+                                                    <h5><i class="fa fa-upload" aria-hidden="true"></i>عکس خود را انتخاب کنید<span>شما میتوانید چند تصویر ارسال کنید</span></h5>
+                                                    <div class="upload-section dir-ltr">
+                                                        <label class="upload-image" for="upload-image-one">
+                                                            <input type="file" id="upload-image-one">
+                                                        </label>
+
+                                                        <label class="upload-image" for="upload-image-two">
+                                                            <input type="file" id="upload-image-two">
+                                                        </label>
+                                                        <label class="upload-image" for="upload-image-three">
+                                                            <input type="file" id="upload-image-three">
+                                                        </label>
+
+                                                        <label class="upload-image" for="upload-imagefour">
+                                                            <input type="file" id="upload-imagefour">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <label class="col-sm-3 label-title">تصاویر آگهی</label>
+                                            </div>
 
 
 
 
 
-                                    <div class="col-md-4">
-                                        <div class="section quick-rules thumbnail border-radius-15">
-                                            <h4>عکس آگهی</h4>
-
-                            
 
 
-                                        </div>
 
+                                            <div class="row form-group item-description">
+                                                <div class="col-sm-9">
+                                                    <textarea class="form-control" id="textarea" placeholder="توضیحات کالای مربوطه" rows="8"></textarea>
+                                                </div>
+                                                <label class="col-sm-3 label-title">توضیحات<span class="required">*</span></label>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-9 col-sm-offset-3">
+                                                    <p>١٥٠ حرف</p>
+                                                </div>
+                                            </div>
+
+
+                                        </div><!-- section -->
+
+                                    </div>
+
+                                    <div class="col-md-2"></div>
+
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-8">
                                         <div class="section quick-rules thumbnail border-radius-15">
                                             <h4>جزئیات آگهی</h4>
 
@@ -239,135 +366,59 @@
                                                 </div>
                                                 <label class="col-sm-3 label-title">مدل</label>
                                             </div>
-
-
                                         </div>
+
                                     </div>
+                                    <div class="col-md-2"></div>
+                                </div>
 
-
-
-
+                                <div class="row">
+                                    <div class="col-md-2"></div>
                                     <div class="col-md-8">
-                                     
-                                            <div class="section postdetails thumbnail border-radius-15">
-                                                <h4>جزئیات آگهی<span class="pull-left float-left">* فیلد های اجباری</span></h4>
+                                        <form action="#">
 
+
+                                            <div class="section seller-info thumbnail border-radius-15">
+                                                <h4>اطلاعات فروشنده</h4>
                                                 <div class="row form-group">
-                                                    <div class="col-sm-9 user-type">
-
-                                                        <label>تغییر دسته بندی</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" name="name" class="form-control" placeholder="احمد شهباز">
                                                     </div>
-                                                    <label class="col-sm-3">گروه بندی<span class="required">*</span></label>
+                                                    <label class="col-sm-3 label-title">نام آگهی دهنده<span class="required">*</span></label>
                                                 </div>
                                                 <div class="row form-group">
-                                                    <div class="col-sm-9 user-type">
-                                                        <div class="md-radio md-radio-inline">
-                                                            <input id="6" type="radio" name="g3">
-                                                            <label for="6">درخواست کننده</label>
-                                                        </div>
-                                                        <div class="md-radio md-radio-inline">
-                                                            <input id="7" type="radio" name="g3">
-                                                            <label for="7">ارائه کننده</label>
-                                                        </div>
+                                                    <div class="col-sm-9 dir-ltr">
+                                                        <input type="email" name="email" class="form-control" placeholder="hamshahri@gmail.com">
                                                     </div>
-                                                    <label class="col-sm-3">نوع آگهی<span class="required">*</span></label>
+                                                    <label class="col-sm-3 label-title">آدرس ایمیل<span class="required">*</span></label>
                                                 </div>
-                                               
-                                                <div class="row form-group add-title">
+                                                <div class="row form-group">
+                                                    <div class="col-sm-9 dir-ltr">
+                                                        <input type="text" name="mobileNumber" class="form-control" placeholder="٠٩١٢٣٤٣٤٦٧٨">
+                                                    </div>
+                                                    <label class="col-sm-3 label-title">تلفن همراه<span class="required">*</span></label>
+                                                </div>
+                                                <div class="row form-group">
                                                     <div class="col-sm-9">
-                                                        <input type="text" class="form-control" id="text" placeholder="گوشی اپل مدل 8Plus بدون خط و خش">
+                                                        <input type="text" name="address" class="form-control" placeholder="تهران، میدان ولیعصر...">
                                                     </div>
-                                                    <label class="col-sm-3 label-title">عنوان آگهی<span class="required">*</span></label>
+                                                    <label class="col-sm-3 label-title">آدرس</label>
                                                 </div>
-
-                                                <div class="row form-group select-condition">
-                                                    <div class="col-sm-9">
-                                                        <input type="radio" name="itemCon" value="new" id="new">
-                                                        <label for="new">نو</label>
-                                                        <input type="radio" name="itemCon" value="used" id="used">
-                                                        <label for="used">کارکرده</label>
-                                                    </div>
-                                                    <label class="col-sm-3">وضعیت<span class="required">*</span></label>
-                                                </div>
-                                                <div class="row form-group select-price">
-                                                    <div class="col-sm-9">
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-
-                                                                <label>هزار تومان</label>
-                                                                <input type="radio" name="price" value="negotiable" id="negotiable">
-                                                                <label for="negotiable">توافقی </label>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <input type="text" class="form-control" id="text1">
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <label class="col-sm-3 label-title">قیمت<span class="required">*</span></label>
-                                                </div>
-
-                                                <div class="row form-group add-image">
-                                                    <div class="col-sm-9">
-                                                        <h5><i class="fa fa-upload" aria-hidden="true"></i>عکس خود را انتخاب کنید<span>شما میتوانید چند تصویر ارسال کنید</span></h5>
-                                                        <div class="upload-section dir-ltr">
-                                                            <label class="upload-image" for="upload-image-one">
-                                                                <input type="file" id="upload-image-one">
-                                                            </label>
-
-                                                            <label class="upload-image" for="upload-image-two">
-                                                                <input type="file" id="upload-image-two">
-                                                            </label>
-                                                            <label class="upload-image" for="upload-image-three">
-                                                                <input type="file" id="upload-image-three">
-                                                            </label>
-
-                                                            <label class="upload-image" for="upload-imagefour">
-                                                                <input type="file" id="upload-imagefour">
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <label class="col-sm-3 label-title">تصاویر آگهی</label>
-                                                </div>
-
-
-
-
-
-
-
-
-                                                <div class="row form-group item-description">
-                                                    <div class="col-sm-9">
-                                                        <textarea class="form-control" id="textarea" placeholder="توضیحات کالای مربوطه" rows="8"></textarea>
-                                                    </div>
-                                                    <label class="col-sm-3 label-title">توضیحات<span class="required">*</span></label>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-9 col-sm-offset-3">
-                                                        <p>١٥٠ حرف</p>
-                                                    </div>
-                                                </div>
-
-
                                             </div><!-- section -->
 
-                                    </div>
 
+                                        </form><!-- form -->
+                                    </div>
+                                    <div class="col-md-2"></div>
 
 
 
                                 </div>
 
-
-
                                 <div class="row">
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-8">
 
-
-
-
-
-                                    <div class="col-md-4">
 
                                         <div class="section thumbnail border-radius-15">
                                             <h4>انتخاب نوع آگهی</h4>
@@ -405,54 +456,9 @@
                                             <button type="submit" class="btn btn-primary float-left">ارسال آگهی</button>
                                         </div><!-- section -->
 
-
                                     </div>
-
-
-
-
-                                    <div class="col-md-8">
-                                        <form action="#">
-
-
-                                            <div class="section seller-info thumbnail border-radius-15">
-                                                <h4>اطلاعات فروشنده</h4>
-                                                <div class="row form-group">
-                                                    <div class="col-sm-9">
-                                                        <input type="text" name="name" class="form-control" placeholder="احمد شهباز">
-                                                    </div>
-                                                    <label class="col-sm-3 label-title">نام آگهی دهنده<span class="required">*</span></label>
-                                                </div>
-                                                <div class="row form-group">
-                                                    <div class="col-sm-9 dir-ltr">
-                                                        <input type="email" name="email" class="form-control" placeholder="hamshahri@gmail.com">
-                                                    </div>
-                                                    <label class="col-sm-3 label-title">آدرس ایمیل<span class="required">*</span></label>
-                                                </div>
-                                                <div class="row form-group">
-                                                    <div class="col-sm-9 dir-ltr">
-                                                        <input type="text" name="mobileNumber" class="form-control" placeholder="٠٩١٢٣٤٣٤٦٧٨">
-                                                    </div>
-                                                    <label class="col-sm-3 label-title">تلفن همراه<span class="required">*</span></label>
-                                                </div>
-                                                <div class="row form-group">
-                                                    <div class="col-sm-9">
-                                                        <input type="text" name="address" class="form-control" placeholder="تهران، میدان ولیعصر...">
-                                                    </div>
-                                                    <label class="col-sm-3 label-title">آدرس</label>
-                                                </div>
-                                            </div><!-- section -->
-
-
-                                        </form><!-- form -->
-                                    </div>
-
-
-
-
+                                    <div class="col-md-2"></div>
                                 </div>
-
-
 
 
                             </div>
@@ -479,6 +485,10 @@
 @section Script
     {
 
+    <script src="~/js/chosen.jquery.min.js"></script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-cUJrXFRGl7Xio9Sd3QIvNHml0ZWl_l8"></script>
 
 
     <script>
@@ -489,8 +499,7 @@
 
         $(document).ready(function () {
 
-
-
+            $('select').chosen();
 
         });
 
