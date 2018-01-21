@@ -46,6 +46,7 @@ namespace IGN.Controllers
             }
             else
             {
+                ViewBag.Name = false;
                 Utility.PrivinceID = 8;
             }
 

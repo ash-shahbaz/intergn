@@ -30,11 +30,11 @@
                             <select class="dropdown-product selectpicker" name="product-cat">
 
                                 @{   
-                                        foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
-                                        {
+                                    foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
+                                    {
                                             <option class="CitySelect" value="@item.CityID">@item.CityName</option>
-                                        }
-                                   
+                                    }
+
                                 }
 
 
@@ -112,35 +112,39 @@
                 </div>
 
 
-                <div class="col-md-3 search-col">
+               <div class="col-md-3 search-col">
                     <input class="form-control keyword" name="keyword" value="" placeholder="متن جستجو" type="text">
                     <i class="fa fa-search"></i>
 
                 </div>
             </div>
 
+            @{ if (ViewBag.Name != true)
+                {
 
-            @*------شروع  صفحه اصلی جستجو----------*@
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="field-container radio-field">
-                        <label>نوع</label>
-                        <div class="md-radio md-radio-inline">
-                            <input id="4" type="radio" name="g3" checked>
-                            <label for="4">فرقی نمی کند</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="5" type="radio" name="g3" checked>
-                            <label for="5">فروشی</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="6" type="radio" name="g3">
-                            <label for="6">درخواستی</label>
+                    @*------شروع  صفحه اصلی جستجو----------*@
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="field-container radio-field">
+                                <label>نوع</label>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="4" type="radio" name="g3" checked>
+                                    <label for="4">فرقی نمی کند</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="5" type="radio" name="g3" checked>
+                                    <label for="5">فروشی</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="6" type="radio" name="g3">
+                                    <label for="6">درخواستی</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            @*------پایان صفحه اصلی جستجو----------*@
+                    @*------پایان صفحه اصلی جستجو----------*@
+                }}
+
 
 
 
@@ -150,549 +154,610 @@
 
             @*--------شروع املاک--------*@
 
-            @*--------شروع فروش املاک مسکونی--------*@
-
-            <div class="row">
 
 
+            @{if (ViewBag.Leve1 == "املاک" && ViewBag.Leve2 == "فروش-املاک-مسکونی")
+                {
+                    @*--------شروع فروش املاک مسکونی--------*@
 
-                <div class="col-md-2">
-                    <div class="field-container radio-field">
-                        <label>حومه شهر</label>
-                        <div class="md-radio md-radio-inline">
-                            <input id="4" type="radio" name="g3" checked>
-                            <label for="4">فرقی نمی کند</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="5" type="radio" name="g3" checked>
-                            <label for="5">نیست</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="6" type="radio" name="g3">
-                            <label for="6">هست</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="field-container radio-field">
-                        <label>نوع آگهی دهنده</label>
-                        <div class="md-radio md-radio-inline">
-                            <input id="4" type="radio" name="g3" checked>
-                            <label for="4">همه</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="5" type="radio" name="g3" checked>
-                            <label for="5">شخصی</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="6" type="radio" name="g3">
-                            <label for="6">مشاوراملاک</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="field-container radio-field">
-                        <label>نوع</label>
-                        <div class="md-radio md-radio-inline">
-                            <input id="4" type="radio" name="g3" checked>
-                            <label for="4">فرقی نمی کند</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="5" type="radio" name="g3" checked>
-                            <label for="5">فروشی</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="6" type="radio" name="g3">
-                            <label for="6">درخواستی</label>
-                        </div>
-                    </div>
-                </div>
+                    <div class="row">
 
-                <div class="col-md-3">
 
-                    <div class="field-container int-field">
-                        <label>قیمت کل</label>
-                        <div class="row">
-                            <div class="col-md-12 no-padding">
-                                <div class="input-group-addon search-category-container width-100">
-                                    <label class="styled-select Price-select">
-                                        <select class="dropdown-product selectpicker" name="product-cat">
-                                            <option class="" value="1">مقطوع - تومان</option>
-                                            <option class="" value="2">مجانی</option>
-                                            <option class="" value="3">توافقی</option>
-                                            <option class="" value="3">جهت معاوضه</option>
-                                        </select>
-                                    </label>
+
+                        <div class="col-md-2">
+                            <div class="field-container radio-field">
+                                <label>حومه شهر</label>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="4" type="radio" name="g3" checked>
+                                    <label for="4">فرقی نمی کند</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="5" type="radio" name="g3" checked>
+                                    <label for="5">نیست</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="6" type="radio" name="g3">
+                                    <label for="6">هست</label>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
-                            </div>
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-                <div class="col-md-3">
-
-                    <div class="field-container int-field">
-                        <label>متراژ (متر مربع)</label>
-                        <div class="row">
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
-                            </div>
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-            </div>
-
-            @*-------پایان فروش املاک مسکونی---------*@
-
-            @*--------شروع اجاره مسکونی--------*@
-
-            <div class="row">
-
-                <div class="col-md-3">
-                </div>
-                <div class="col-md-3">
-
-                    <div class="field-container int-field">
-                        <label>اجاره ماهیانه</label>
-                        <div class="row">
-                            <div class="col-md-12 no-padding">
-                                <div class="input-group-addon search-category-container width-100">
-                                    <label class="styled-select Price-select">
-                                        <select class="dropdown-product selectpicker" name="product-cat">
-                                            <option class="" value="1">مقطوع - تومان</option>
-                                            <option class="" value="2">مجانی</option>
-                                            <option class="" value="3">توافقی</option>
-                                            <option class="" value="3">جهت معاوضه</option>
-                                        </select>
-                                    </label>
+                        <div class="col-md-2">
+                            <div class="field-container radio-field">
+                                <label>نوع آگهی دهنده</label>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="4" type="radio" name="g3" checked>
+                                    <label for="4">همه</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="5" type="radio" name="g3" checked>
+                                    <label for="5">شخصی</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="6" type="radio" name="g3">
+                                    <label for="6">مشاوراملاک</label>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
-                            </div>
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-                <div class="col-md-3">
-
-                    <div class="field-container int-field">
-                        <label>ودیعه</label>
-                        <div class="row">
-                            <div class="col-md-12 no-padding">
-                                <div class="input-group-addon search-category-container width-100">
-                                    <label class="styled-select Price-select">
-                                        <select class="dropdown-product selectpicker" name="product-cat">
-                                            <option class="" value="1">مقطوع - تومان</option>
-                                            <option class="" value="2">مجانی</option>
-                                            <option class="" value="3">توافقی</option>
-                                            <option class="" value="3">جهت معاوضه</option>
-                                        </select>
-                                    </label>
+                        <div class="col-md-2">
+                            <div class="field-container radio-field">
+                                <label>نوع</label>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="4" type="radio" name="g3" checked>
+                                    <label for="4">فرقی نمی کند</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="5" type="radio" name="g3" checked>
+                                    <label for="5">فروشی</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="6" type="radio" name="g3">
+                                    <label for="6">درخواستی</label>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+
+                        <div class="col-md-3">
+
+                            <div class="field-container int-field">
+                                <label>قیمت کل</label>
+                                <div class="row">
+                                    <div class="col-md-12 no-padding">
+                                        <div class="input-group-addon search-category-container width-100">
+                                            <label class="styled-select Price-select">
+                                                <select class="dropdown-product selectpicker" name="product-cat">
+                                                    <option class="" value="1">مقطوع - تومان</option>
+                                                    <option class="" value="2">مجانی</option>
+                                                    <option class="" value="3">توافقی</option>
+                                                    <option class="" value="3">جهت معاوضه</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 no-padding">
+                                        <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                                    </div>
+                                    <div class="col-md-6 no-padding">
+                                        <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+
+                        </div>
+
+
+
+                        <div class="col-md-3">
+
+                            <div class="field-container int-field">
+                                <label>متراژ (متر مربع)</label>
+                                <div class="row">
+                                    <div class="col-md-6 no-padding">
+                                        <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                                    </div>
+                                    <div class="col-md-6 no-padding">
+                                        <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
+
+
+
                     </div>
 
-                </div>
+                    @*-------پایان فروش املاک مسکونی---------*@
+                }
 
+            }
 
+           @{if (ViewBag.Leve1 == "املاک" && ViewBag.Leve2 == "اجاره-مسکونی")
+               {
 
-                <div class="col-md-3">
+                @*--------شروع اجاره مسکونی--------*@
 
-                    <div class="field-container int-field">
-                        <label>متراژ (متر مربع)</label>
-                        <div class="row">
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                <div class="row">
+
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
+
+                        <div class="field-container int-field">
+                            <label>اجاره ماهیانه</label>
+                            <div class="row">
+                                <div class="col-md-12 no-padding">
+                                    <div class="input-group-addon search-category-container width-100">
+                                        <label class="styled-select Price-select">
+                                            <select class="dropdown-product selectpicker" name="product-cat">
+                                                <option class="" value="1">مقطوع - تومان</option>
+                                                <option class="" value="2">مجانی</option>
+                                                <option class="" value="3">توافقی</option>
+                                                <option class="" value="3">جهت معاوضه</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-            </div>
-            <div class="row text-align-right">
-
-                <div class="col-md-3"></div>
-                <div class="col-md-3">
-                    <div class="field-container radio-field">
-                        <label>حومه شهر</label>
-                        <div class="md-radio md-radio-inline">
-                            <input id="4" type="radio" name="g3" checked>
-                            <label for="4">فرقی نمی کند</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="5" type="radio" name="g3" checked>
-                            <label for="5">نیست</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="6" type="radio" name="g3">
-                            <label for="6">هست</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="field-container radio-field">
-                        <label>نوع آگهی دهنده</label>
-                        <div class="md-radio md-radio-inline">
-                            <input id="4" type="radio" name="g3" checked>
-                            <label for="4">همه</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="5" type="radio" name="g3" checked>
-                            <label for="5">شخصی</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="6" type="radio" name="g3">
-                            <label for="6">مشاوراملاک</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="field-container radio-field">
-                        <label>نوع</label>
-                        <div class="md-radio md-radio-inline">
-                            <input id="4" type="radio" name="g3" checked>
-                            <label for="4">فرقی نمی کند</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="5" type="radio" name="g3" checked>
-                            <label for="5">فروشی</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="6" type="radio" name="g3">
-                            <label for="6">درخواستی</label>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            @*--------پایان اجاره مسکونی--------*@
-
-            @*--------شروع فروش اداری و تجاری--------*@
-
-            <div class="row">
-
-
-
-                <div class="col-md-2">
-                    <div class="field-container radio-field">
-                        <label>سند اداری</label>
-                        <div class="md-radio md-radio-inline">
-                            <input id="4" type="radio" name="g3" checked>
-                            <label for="4">فرقی نمی کند</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="5" type="radio" name="g3" checked>
-                            <label for="5">ندارد</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="6" type="radio" name="g3">
-                            <label for="6">دارد</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="field-container radio-field">
-                        <label>نوع آگهی دهنده</label>
-                        <div class="md-radio md-radio-inline">
-                            <input id="4" type="radio" name="g3" checked>
-                            <label for="4">همه</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="5" type="radio" name="g3" checked>
-                            <label for="5">شخصی</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="6" type="radio" name="g3">
-                            <label for="6">مشاوراملاک</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="field-container radio-field">
-                        <label>نوع</label>
-                        <div class="md-radio md-radio-inline">
-                            <input id="4" type="radio" name="g3" checked>
-                            <label for="4">فرقی نمی کند</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="5" type="radio" name="g3" checked>
-                            <label for="5">فروشی</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="6" type="radio" name="g3">
-                            <label for="6">درخواستی</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-
-                    <div class="field-container int-field">
-                        <label>قیمت کل</label>
-                        <div class="row">
-                            <div class="col-md-12 no-padding">
-                                <div class="input-group-addon search-category-container width-100">
-                                    <label class="styled-select Price-select">
-                                        <select class="dropdown-product selectpicker" name="product-cat">
-                                            <option class="" value="1">مقطوع - تومان</option>
-                                            <option class="" value="2">مجانی</option>
-                                            <option class="" value="3">توافقی</option>
-                                            <option class="" value="3">جهت معاوضه</option>
-                                        </select>
-                                    </label>
+                            <div class="row">
+                                <div class="col-md-6 no-padding">
+                                    <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                                </div>
+                                <div class="col-md-6 no-padding">
+                                    <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
-                            </div>
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
-                            </div>
-                        </div>
+
                     </div>
 
-                </div>
 
 
+                    <div class="col-md-3">
 
-                <div class="col-md-3">
-
-                    <div class="field-container int-field">
-                        <label>متراژ (متر مربع)</label>
-                        <div class="row">
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                        <div class="field-container int-field">
+                            <label>ودیعه</label>
+                            <div class="row">
+                                <div class="col-md-12 no-padding">
+                                    <div class="input-group-addon search-category-container width-100">
+                                        <label class="styled-select Price-select">
+                                            <select class="dropdown-product selectpicker" name="product-cat">
+                                                <option class="" value="1">مقطوع - تومان</option>
+                                                <option class="" value="2">مجانی</option>
+                                                <option class="" value="3">توافقی</option>
+                                                <option class="" value="3">جهت معاوضه</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-            </div>
-
-            @*---------پایان فروش اداری و تجاری-------*@
-
-            @*--------شروع اجاره اداری و تجاری--------*@
-
-            <div class="row">
-
-                <div class="col-md-3">
-                </div>
-                <div class="col-md-3">
-
-                    <div class="field-container int-field">
-                        <label>اجاره ماهیانه</label>
-                        <div class="row">
-                            <div class="col-md-12 no-padding">
-                                <div class="input-group-addon search-category-container width-100">
-                                    <label class="styled-select Price-select">
-                                        <select class="dropdown-product selectpicker" name="product-cat">
-                                            <option class="" value="1">مقطوع - تومان</option>
-                                            <option class="" value="2">مجانی</option>
-                                            <option class="" value="3">توافقی</option>
-                                            <option class="" value="3">جهت معاوضه</option>
-                                        </select>
-                                    </label>
+                            <div class="row">
+                                <div class="col-md-6 no-padding">
+                                    <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                                </div>
+                                <div class="col-md-6 no-padding">
+                                    <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
-                            </div>
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
-                            </div>
-                        </div>
+
                     </div>
 
-                </div>
 
 
+                    <div class="col-md-3">
 
-                <div class="col-md-3">
-
-                    <div class="field-container int-field">
-                        <label>ودیعه</label>
-                        <div class="row">
-                            <div class="col-md-12 no-padding">
-                                <div class="input-group-addon search-category-container width-100">
-                                    <label class="styled-select Price-select">
-                                        <select class="dropdown-product selectpicker" name="product-cat">
-                                            <option class="" value="1">مقطوع - تومان</option>
-                                            <option class="" value="2">مجانی</option>
-                                            <option class="" value="3">توافقی</option>
-                                            <option class="" value="3">جهت معاوضه</option>
-                                        </select>
-                                    </label>
+                        <div class="field-container int-field">
+                            <label>متراژ (متر مربع)</label>
+                            <div class="row">
+                                <div class="col-md-6 no-padding">
+                                    <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                                </div>
+                                <div class="col-md-6 no-padding">
+                                    <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+
+                    </div>
+
+
+
+                </div>
+                <div class="row text-align-right">
+
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <div class="field-container radio-field">
+                            <label>حومه شهر</label>
+                            <div class="md-radio md-radio-inline">
+                                <input id="4" type="radio" name="g3" checked>
+                                <label for="4">فرقی نمی کند</label>
                             </div>
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                            <div class="md-radio md-radio-inline">
+                                <input id="5" type="radio" name="g3" checked>
+                                <label for="5">نیست</label>
+                            </div>
+                            <div class="md-radio md-radio-inline">
+                                <input id="6" type="radio" name="g3">
+                                <label for="6">هست</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="field-container radio-field">
+                            <label>نوع آگهی دهنده</label>
+                            <div class="md-radio md-radio-inline">
+                                <input id="4" type="radio" name="g3" checked>
+                                <label for="4">همه</label>
+                            </div>
+                            <div class="md-radio md-radio-inline">
+                                <input id="5" type="radio" name="g3" checked>
+                                <label for="5">شخصی</label>
+                            </div>
+                            <div class="md-radio md-radio-inline">
+                                <input id="6" type="radio" name="g3">
+                                <label for="6">مشاوراملاک</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="field-container radio-field">
+                            <label>نوع</label>
+                            <div class="md-radio md-radio-inline">
+                                <input id="4" type="radio" name="g3" checked>
+                                <label for="4">فرقی نمی کند</label>
+                            </div>
+                            <div class="md-radio md-radio-inline">
+                                <input id="5" type="radio" name="g3" checked>
+                                <label for="5">فروشی</label>
+                            </div>
+                            <div class="md-radio md-radio-inline">
+                                <input id="6" type="radio" name="g3">
+                                <label for="6">درخواستی</label>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
+                @*--------پایان اجاره مسکونی--------*@
+               }
+
+        }
+         
+           
+            @{
+                if (ViewBag.Leve1 == "املاک" && ViewBag.Leve2 == "فروش-اداری-و-تجاری")
+                {
+
+                    @*--------شروع فروش اداری و تجاری--------*@
+
+                    <div class="row">
 
 
-                <div class="col-md-3">
 
-                    <div class="field-container int-field">
-                        <label>متراژ (متر مربع)</label>
-                        <div class="row">
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                        <div class="col-md-2">
+                            <div class="field-container radio-field">
+                                <label>سند اداری</label>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="4" type="radio" name="g3" checked>
+                                    <label for="4">فرقی نمی کند</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="5" type="radio" name="g3" checked>
+                                    <label for="5">ندارد</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="6" type="radio" name="g3">
+                                    <label for="6">دارد</label>
+                                </div>
                             </div>
-                            <div class="col-md-6 no-padding">
-                                <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                        </div>
+                        <div class="col-md-2">
+                            <div class="field-container radio-field">
+                                <label>نوع آگهی دهنده</label>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="4" type="radio" name="g3" checked>
+                                    <label for="4">همه</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="5" type="radio" name="g3" checked>
+                                    <label for="5">شخصی</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="6" type="radio" name="g3">
+                                    <label for="6">مشاوراملاک</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="field-container radio-field">
+                                <label>نوع</label>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="4" type="radio" name="g3" checked>
+                                    <label for="4">فرقی نمی کند</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="5" type="radio" name="g3" checked>
+                                    <label for="5">فروشی</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="6" type="radio" name="g3">
+                                    <label for="6">درخواستی</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+
+                            <div class="field-container int-field">
+                                <label>قیمت کل</label>
+                                <div class="row">
+                                    <div class="col-md-12 no-padding">
+                                        <div class="input-group-addon search-category-container width-100">
+                                            <label class="styled-select Price-select">
+                                                <select class="dropdown-product selectpicker" name="product-cat">
+                                                    <option class="" value="1">مقطوع - تومان</option>
+                                                    <option class="" value="2">مجانی</option>
+                                                    <option class="" value="3">توافقی</option>
+                                                    <option class="" value="3">جهت معاوضه</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 no-padding">
+                                        <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                                    </div>
+                                    <div class="col-md-6 no-padding">
+                                        <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-md-3">
+
+                            <div class="field-container int-field">
+                                <label>متراژ (متر مربع)</label>
+                                <div class="row">
+                                    <div class="col-md-6 no-padding">
+                                        <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                                    </div>
+                                    <div class="col-md-6 no-padding">
+                                        <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    @*---------پایان فروش اداری و تجاری-------*@
+
+                }
+
+
+            }
+           
+
+
+            @{
+                if (ViewBag.Leve1 == "املاک" && ViewBag.Leve2 == "اجاره-اداری-و-تجاری")
+                {
+
+
+                    @*--------شروع اجاره اداری و تجاری--------*@
+
+                    <div class="row">
+
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-3">
+
+                            <div class="field-container int-field">
+                                <label>اجاره ماهیانه</label>
+                                <div class="row">
+                                    <div class="col-md-12 no-padding">
+                                        <div class="input-group-addon search-category-container width-100">
+                                            <label class="styled-select Price-select">
+                                                <select class="dropdown-product selectpicker" name="product-cat">
+                                                    <option class="" value="1">مقطوع - تومان</option>
+                                                    <option class="" value="2">مجانی</option>
+                                                    <option class="" value="3">توافقی</option>
+                                                    <option class="" value="3">جهت معاوضه</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 no-padding">
+                                        <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                                    </div>
+                                    <div class="col-md-6 no-padding">
+                                        <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-md-3">
+
+                            <div class="field-container int-field">
+                                <label>ودیعه</label>
+                                <div class="row">
+                                    <div class="col-md-12 no-padding">
+                                        <div class="input-group-addon search-category-container width-100">
+                                            <label class="styled-select Price-select">
+                                                <select class="dropdown-product selectpicker" name="product-cat">
+                                                    <option class="" value="1">مقطوع - تومان</option>
+                                                    <option class="" value="2">مجانی</option>
+                                                    <option class="" value="3">توافقی</option>
+                                                    <option class="" value="3">جهت معاوضه</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 no-padding">
+                                        <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                                    </div>
+                                    <div class="col-md-6 no-padding">
+                                        <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-md-3">
+
+                            <div class="field-container int-field">
+                                <label>متراژ (متر مربع)</label>
+                                <div class="row">
+                                    <div class="col-md-6 no-padding">
+                                        <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                                    </div>
+                                    <div class="col-md-6 no-padding">
+                                        <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="row text-align-right">
+
+                        <div class="col-md-3"></div>
+                        <div class="col-md-3">
+                            <div class="field-container radio-field">
+                                <label>حومه شهر</label>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="4" type="radio" name="g3" checked>
+                                    <label for="4">فرقی نمی کند</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="5" type="radio" name="g3" checked>
+                                    <label for="5">نیست</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="6" type="radio" name="g3">
+                                    <label for="6">هست</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="field-container radio-field">
+                                <label>نوع آگهی دهنده</label>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="4" type="radio" name="g3" checked>
+                                    <label for="4">همه</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="5" type="radio" name="g3" checked>
+                                    <label for="5">شخصی</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="6" type="radio" name="g3">
+                                    <label for="6">مشاوراملاک</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="field-container radio-field">
+                                <label>نوع</label>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="4" type="radio" name="g3" checked>
+                                    <label for="4">فرقی نمی کند</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="5" type="radio" name="g3" checked>
+                                    <label for="5">فروشی</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="6" type="radio" name="g3">
+                                    <label for="6">درخواستی</label>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    @*--------پایان اجاره اداری و تجاری--------*@
+                }
 
-                </div>
+
+            }
 
 
+         @{
 
-            </div>
-            <div class="row text-align-right">
+             if (ViewBag.Leve1 == "املاک" && ViewBag.Leve2 == "خدمات-املاک")
+             {
 
-                <div class="col-md-3"></div>
-                <div class="col-md-3">
-                    <div class="field-container radio-field">
-                        <label>حومه شهر</label>
-                        <div class="md-radio md-radio-inline">
-                            <input id="4" type="radio" name="g3" checked>
-                            <label for="4">فرقی نمی کند</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="5" type="radio" name="g3" checked>
-                            <label for="5">نیست</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="6" type="radio" name="g3">
-                            <label for="6">هست</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="field-container radio-field">
-                        <label>نوع آگهی دهنده</label>
-                        <div class="md-radio md-radio-inline">
-                            <input id="4" type="radio" name="g3" checked>
-                            <label for="4">همه</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="5" type="radio" name="g3" checked>
-                            <label for="5">شخصی</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="6" type="radio" name="g3">
-                            <label for="6">مشاوراملاک</label>
+
+                @*--------شروع - خدمات املاک--------*@
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="field-container radio-field">
+                            <label>نوع آگهی دهنده</label>
+                            <div class="md-radio md-radio-inline">
+                                <input id="4" type="radio" name="g3" checked>
+                                <label for="4">فرقی نمی کند</label>
+                            </div>
+                            <div class="md-radio md-radio-inline">
+                                <input id="5" type="radio" name="g3" checked>
+                                <label for="5">شخصی</label>
+                            </div>
+                            <div class="md-radio md-radio-inline">
+                                <input id="6" type="radio" name="g3">
+                                <label for="6">مشاور املاک</label>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-3">
-                    <div class="field-container radio-field">
-                        <label>نوع</label>
-                        <div class="md-radio md-radio-inline">
-                            <input id="4" type="radio" name="g3" checked>
-                            <label for="4">فرقی نمی کند</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="5" type="radio" name="g3" checked>
-                            <label for="5">فروشی</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="6" type="radio" name="g3">
-                            <label for="6">درخواستی</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @*--------پایان اجاره اداری و تجاری--------*@
+                @*--------پایان - خدمات املاک--------*@
 
-            @*--------شروع - خدمات املاک--------*@
+             }
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="field-container radio-field">
-                        <label>نوع آگهی دهنده</label>
-                        <div class="md-radio md-radio-inline">
-                            <input id="4" type="radio" name="g3" checked>
-                            <label for="4">فرقی نمی کند</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="5" type="radio" name="g3" checked>
-                            <label for="5">شخصی</label>
-                        </div>
-                        <div class="md-radio md-radio-inline">
-                            <input id="6" type="radio" name="g3">
-                            <label for="6">مشاور املاک</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            @*--------پایان - خدمات املاک--------*@
+
+
+        }
+
+           
+
+            @{ 
+                if (ViewBag.Leve1 == "املاک" && ViewBag.Leve2 == "فروش-املاک-مسکونی" &&  ViewBag.Leve3 == "آپارتمان")
+                {
+
+                }
+
+
+
+            }
+
 
             @*--------شروع -فروش املاک مسکونی- آپارتمان +و+ خانه و ویلا--------*@
 
