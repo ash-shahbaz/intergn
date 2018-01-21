@@ -172,6 +172,7 @@
     <Content Include="css\bootstrap-select.min.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\categories.css" />
+    <Content Include="css\chosen.min.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\icomoon.css" />
     <Content Include="css\ie.css" />
@@ -216,6 +217,7 @@
     <Content Include="images\logo.png" />
     <Content Include="js\bootstrap-select.min.js" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\chosen.jquery.min.js" />
     <Content Include="js\custom.js" />
     <Content Include="js\imagesloaded.js" />
     <Content Include="js\jquery-ui.min.js" />
