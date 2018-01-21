@@ -3473,7 +3473,7 @@ blockquote {
     }
 
         .md-checkbox input[type="checkbox"]:checked + label:before {
-            background: #337ab7;
+            background: #179588;
             border: none;
         }
 
@@ -6740,3 +6740,5 @@ background-color: antiquewhite;
 width: 100%;
 height: 200px;
 }
+
+

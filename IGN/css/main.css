@@ -1523,7 +1523,7 @@ a.verified {
         display: none;
     }
 
-    #accordion .panel-body label:before,
+    /*#accordion .panel-body label:before,
     .checkbox label:before {
         position: absolute;
         color: #9e9e9e;
@@ -1543,7 +1543,7 @@ a.verified {
             right: 0;
             left: auto;
             top: 0px !important;
-        }
+        }*/
 
     #accordion .panel-body label.checked:before,
     .checkbox label.checked:before {
