@@ -6742,3 +6742,7 @@ height: 200px;
 }
 
 
+.col-calc-3 {
+    width: calc(100% / 3.1);
+    display: inline-block;
+}
