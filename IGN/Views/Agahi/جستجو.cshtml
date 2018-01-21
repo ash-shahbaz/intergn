@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="~/css/bootstrap-select.min.css">*@
     <link rel="stylesheet" href="~/css/slidr.css">
 
-<link href="~/css/chosen.min.css" rel="stylesheet" />
+    <link href="~/css/chosen.min.css" rel="stylesheet" />
 
 }
 
@@ -29,43 +29,43 @@
 
                 <div class="col-md-3 search-col">
                     @*<div class="input-group-addon search-category-container width-100">
-                        <label class="styled-select location-select">
-                            <select class="dropdown-product selectpicker" name="product-cat">
+                            <label class="styled-select location-select">
+                                <select class="dropdown-product selectpicker" name="product-cat">
 
-                                @{   
-                                    foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
-                                    {
+                                    @{
+                                        foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
+                                        {
+                                                <option class="CitySelect" value="@item.CityID">@item.CityName</option>
+                                    @{
+                                        foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
+                                        {
                                             <option class="CitySelect" value="@item.CityID">@item.CityName</option>
-                                @{
-                                    foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
-                                    {
-                                        <option class="CitySelect" value="@item.CityID">@item.CityName</option>
+
+                                        }
 
                                     }
 
-                                }
 
 
 
+                                </select>
+                            </label>
+                        </div>*@
+                    <select data-placeholder="Choose a Country..." class="select" tabindex="1">
+                        <option value=""></option>
+                        <option value="United States">United States</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                        <option value="Saint Lucia">Saint Lucia</option>
+                        <option value="Saint Martin (French part)">Saint Martin (French part)</option>
+                        <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                        <option value="Western Sahara">Western Sahara</option>
+                        <option value="Yemen">Yemen</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                    </select>
 
-                            </select>
-                        </label>
-                    </div>*@
-                        <select data-placeholder="Choose a Country..." class="select" tabindex="1">
-                            <option value=""></option>
-                            <option value="United States">United States</option>
-                            <option value="United Kingdom">United Kingdom</option>
-                            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-                            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-                            <option value="Saint Lucia">Saint Lucia</option>
-                            <option value="Saint Martin (French part)">Saint Martin (French part)</option>
-                            <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
-                            <option value="Western Sahara">Western Sahara</option>
-                            <option value="Yemen">Yemen</option>
-                            <option value="Zambia">Zambia</option>
-                            <option value="Zimbabwe">Zimbabwe</option>
-                        </select>
-                    
                 </div>
 
                 <div class="col-md-3 ">
@@ -115,7 +115,7 @@
                 </div>
 
 
-               <div class="col-md-3 search-col">
+                <div class="col-md-3 search-col">
                     <input class="form-control keyword" name="keyword" value="" placeholder="متن جستجو" type="text">
                     <i class="fa fa-search"></i>
 
@@ -147,19 +147,97 @@
                     </div>
                     @*------پایان صفحه اصلی جستجو----------*@
                 }
+            }
+
+
+
+
+
+
+
+
+            @{
+
+                string l1 = ViewBag.Level1;
+                string l2 = ViewBag.Level2;
+                string l3 = ViewBag.Level3;
+
+
+                ViewBag.lv1 = l1;
+                ViewBag.lv2 = l2;
+                ViewBag.lv3 = l3;
+
+
+
+
+                switch (l1)
+                {
+                    case "املاک":
+                        {
+
+
+                            Html.RenderPartial("_املاک");
+                            break;
+                        }
+                    case "لوازم-الکترونیکی":
+                        {
+
+                            Html.RenderPartial("_لوازم_الکترونیک");
+                            break;
+                        }
+                    case "وسایل-نقلیه":
+                        {
+                            Html.RenderPartial("_وسایل_نقلیه");
+                            break;
+                        }
+                    case "لوازم-خانگی":
+                        {
+
+                            Html.RenderPartial("_لوازم_کسب_سرگرمی");
+                            break;
+                        }
+                    case "لوازم-شخصی":
+                        {
+                            Html.RenderPartial("_لوازم_کسب_سرگرمی");
+                            break;
+                        }
+                    case "سرگرمی-و-فراغت":
+                        {
+                            Html.RenderPartial("_لوازم_کسب_سرگرمی");
+                            break;
+                        }
+                    case "کسب-و-کار":
+                        {
+                            Html.RenderPartial("_استخدام_اجتماعی_خدمات");
+                            break;
+                        }
+
+                    case "خدمات":
+                        {
+                            Html.RenderPartial("_استخدام_اجتماعی_خدمات");
+                            break;
+                        }
+
+
+                    case "اجتماعی":
+                        {
+                            Html.RenderPartial("_استخدام_اجتماعی_خدمات");
+                            break;
+                        }
+
+                    case "a":
+                        {
+
+                            break;
+                        }
                 }
+                Html.RenderPartial("_مشترک");
+
+
+            }
 
 
 
-
-
-
-
-
-         @{ Html.RenderPartial("_مشترک"); }
-
-
-         
 
         </form>
     </div>
@@ -683,7 +761,7 @@
 @section Script
     {
 
-<script src="~/js/chosen.jquery.min.js"></script>
+    <script src="~/js/chosen.jquery.min.js"></script>
 
     @*<script src="~/js/bootstrap-select.min.js"></script>
         <script src="~/js/mainselect.js"></script>*@
