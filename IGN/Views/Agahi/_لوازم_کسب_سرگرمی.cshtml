@@ -1,0 +1,79 @@
+﻿
+
+
+
+@{
+
+
+    if (ViewBag.Leve1 == "لوازم-خانگی" || ViewBag.Leve1 == "لوازم-شخصی" || ViewBag.Leve1 == "سرگرمی-و-فراغت" || ViewBag.Leve1 == "کسب-و-کار")
+    {
+        @*--------شروع لوازم خانگی و لوازم شخصی و سرگرمی و فراغت و کسب و کار -  تمام سر تیتر ها و جزئیات ها--------*@
+
+        <div class="row">
+
+
+            <div class="col-md-3">
+            </div>
+
+            <div class="col-md-3">
+            </div>
+
+            <div class="col-md-3">
+                <div class="field-container radio-field">
+                    <label>نوع</label>
+                    <div class="md-radio md-radio-inline">
+                        <input id="4" type="radio" name="g3" checked>
+                        <label for="4">فرقی نمی کند</label>
+                    </div>
+                    <div class="md-radio md-radio-inline">
+                        <input id="5" type="radio" name="g3" checked>
+                        <label for="5">فروشی</label>
+                    </div>
+                    <div class="md-radio md-radio-inline">
+                        <input id="6" type="radio" name="g3">
+                        <label for="6">درخواستی</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3">
+
+                <div class="field-container int-field">
+                    <label>قیمت</label>
+                    <div class="row">
+                        <div class="col-md-12 no-padding">
+                            <div class="input-group-addon search-category-container width-100">
+                                <label class="styled-select Price-select">
+                                    <select class="dropdown-product selectpicker" name="product-cat">
+                                        <option class="" value="1">مقطوع - تومان</option>
+                                        <option class="" value="2">مجانی</option>
+                                        <option class="" value="3">توافقی</option>
+                                        <option class="" value="3">جهت معاوضه</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 no-padding">
+                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                        </div>
+                        <div class="col-md-6 no-padding">
+                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+                    @*--------پایان لوازم خانگی  و لوازم شخصی و سرگرمی و فراغت و کسب و کار -  تمام سر تیتر ها و جزئیات ها--------*@
+
+    }
+
+
+
+}

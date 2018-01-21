@@ -398,6 +398,24 @@
   <ItemGroup>
     <Content Include="Views\Agahi\جستجو.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Agahi\_املاک.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Agahi\_وسایل_نقلیه.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Agahi\_لوازم_الکترونیکی.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Agahi\_لوازم_کسب_سرگرمی.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Agahi\_استخدام_اجتماعی_خدمات.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Agahi\_مشترک.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
