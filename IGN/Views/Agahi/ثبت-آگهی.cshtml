@@ -215,6 +215,55 @@
                                                 <label class="col-sm-3">گروه بندی<span class="required">*</span></label>
                                             </div>
                                             <div class="row form-group">
+                                                <div class="col-sm-3 user-type">
+                                                    <select data-placeholder="Choose a Country..." class="select" tabindex="1">
+                                                        <option value=""></option>
+                                                        <option value="United States">United States</option>
+                                                        <option value="United Kingdom">United Kingdom</option>
+                                                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                                                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                                                        <option value="Saint Lucia">Saint Lucia</option>
+                                                        <option value="Saint Martin (French part)">Saint Martin (French part)</option>
+                                                        <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                                                        <option value="Western Sahara">Western Sahara</option>
+                                                        <option value="Yemen">Yemen</option>
+                                                        <option value="Zambia">Zambia</option>
+                                                        <option value="Zimbabwe">Zimbabwe</option>
+                                                    </select>
+                                                </div>
+                                                <label class="col-sm-3">محله<span class="required">*</span></label>
+                                                <div class="col-sm-3 user-type">
+
+                                                    <select data-placeholder="Choose a Country..." class="select" tabindex="1">
+                                                        <option value=""></option>
+                                                        <option value="United States">United States</option>
+                                                        <option value="United Kingdom">United Kingdom</option>
+                                                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                                                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                                                        <option value="Saint Lucia">Saint Lucia</option>
+                                                        <option value="Saint Martin (French part)">Saint Martin (French part)</option>
+                                                        <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                                                        <option value="Western Sahara">Western Sahara</option>
+                                                        <option value="Yemen">Yemen</option>
+                                                        <option value="Zambia">Zambia</option>
+                                                        <option value="Zimbabwe">Zimbabwe</option>
+                                                    </select>
+                                                </div>
+                                                <label class="col-sm-3">شهر<span class="required">*</span></label>
+                                            </div>
+                                            <div class="row form-group select-condition">
+                                                <div class="col-sm-9">
+
+
+                                                    <div id="map" class="mapcreatepage"></div>
+
+
+                                                </div>
+                                                <label class="col-sm-3">انتخاب روی نقشه<span class="required">*</span></label>
+                                            </div>
+
+
+                                            <div class="row form-group">
                                                 <div class="col-sm-9 user-type">
                                                     <div class="md-radio md-radio-inline">
                                                         <input id="6" type="radio" name="g3">
@@ -235,36 +284,7 @@
                                                 <label class="col-sm-3 label-title">عنوان آگهی<span class="required">*</span></label>
                                             </div>
 
-                                            <div class="row form-group select-condition">
-                                                <div class="col-sm-9">
-                                                    <input type="radio" name="itemCon" value="new" id="new">
-                                                    <label for="new">نو</label>
-                                                    <input type="radio" name="itemCon" value="used" id="used">
-                                                    <label for="used">کارکرده</label>
-
-
-
-                                                    <select data-placeholder="Choose a Country..." class="select" tabindex="1">
-                                                        <option value=""></option>
-                                                        <option value="United States">United States</option>
-                                                        <option value="United Kingdom">United Kingdom</option>
-                                                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-                                                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-                                                        <option value="Saint Lucia">Saint Lucia</option>
-                                                        <option value="Saint Martin (French part)">Saint Martin (French part)</option>
-                                                        <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
-                                                        <option value="Western Sahara">Western Sahara</option>
-                                                        <option value="Yemen">Yemen</option>
-                                                        <option value="Zambia">Zambia</option>
-                                                        <option value="Zimbabwe">Zimbabwe</option>
-                                                    </select>
-
-                                                    <div id="map"></div>
-
-
-                                                </div>
-                                                <label class="col-sm-3">منطقه<span class="required">*</span></label>
-                                            </div>
+                                        
                                             <div class="row form-group select-price">
                                                 <div class="col-sm-9">
                                                     <div class="row">
@@ -398,12 +418,6 @@
                                                     </div>
                                                     <label class="col-sm-3 label-title">تلفن همراه<span class="required">*</span></label>
                                                 </div>
-                                                <div class="row form-group">
-                                                    <div class="col-sm-9">
-                                                        <input type="text" name="address" class="form-control" placeholder="تهران، میدان ولیعصر...">
-                                                    </div>
-                                                    <label class="col-sm-3 label-title">آدرس</label>
-                                                </div>
                                             </div><!-- section -->
 
 
@@ -487,8 +501,11 @@
 
     <script src="~/js/chosen.jquery.min.js"></script>
 
+    
+    
+@*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-cUJrXFRGl7Xio9Sd3QIvNHml0ZWl_l8"></script>*@
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-cUJrXFRGl7Xio9Sd3QIvNHml0ZWl_l8"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFj5cITKsUl31yPzUXcxdQrvwRTo8AiVI"></script>
 
 
     <script>
