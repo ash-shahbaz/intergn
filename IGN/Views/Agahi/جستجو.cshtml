@@ -51,19 +51,16 @@
                                 </select>
                             </label>
                         </div>*@
-                    <select data-placeholder="Choose a Country..." class="select" tabindex="1">
+                    <select data-placeholder="شهر را انتخاب کنید ..." class="select" tabindex="1">
                         <option value=""></option>
-                        <option value="United States">United States</option>
-                        <option value="United Kingdom">United Kingdom</option>
-                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-                        <option value="Saint Lucia">Saint Lucia</option>
-                        <option value="Saint Martin (French part)">Saint Martin (French part)</option>
-                        <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
-                        <option value="Western Sahara">Western Sahara</option>
-                        <option value="Yemen">Yemen</option>
-                        <option value="Zambia">Zambia</option>
-                        <option value="Zimbabwe">Zimbabwe</option>
+
+                        @{   foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
+                            {
+                                <option class="CitySelect" value="@item.CityID">@item.CityName</option>
+
+                              }
+                         }
+
                     </select>
 
                 </div>
@@ -72,12 +69,9 @@
 
 
                     <div id="sel-cont">
-                        <select name="select" id="select1" style="width: 350px;" data-placeholder="Your choices" multiple>
-                            <option value="0">Value 1</option>
-                            <option value="1">Value 2</option>
-                            <option value="2">Value 2</option>
-                            <option value="3">Value 3</option>
-                            <option value="4">Value 4</option>
+                        <select name="select" id="select1" style="width: 350px;" data-placeholder="محله را انتخاب کنید ..." multiple>
+                            @*<option value="0">Value 1</option>*@
+                            
                         </select>
                         <br />
                     </div>
@@ -122,8 +116,7 @@
                 </div>
             </div>
 
-            @{ if (ViewBag.Name != true)
-                {
+            @{ 
 
                     @*------شروع  صفحه اصلی جستجو----------*@
                     <div class="row">
@@ -146,91 +139,80 @@
                         </div>
                     </div>
                     @*------پایان صفحه اصلی جستجو----------*@
-                }
-            }
+               
+                    string l1 = ViewBag.Level1;
+                    string l2 = ViewBag.Level2;
+                    string l3 = ViewBag.Level3;
 
 
+                    ViewBag.lv1 = l1;
+                    ViewBag.lv2 = l2;
+                    ViewBag.lv3 = l3;
+
+                    switch (l1)
+                    {
+                        case "املاک":
+                            {
+
+                                Html.RenderPartial("_املاک");
+                                break;
+                            }
+                        case "لوازم-الکترونیکی":
+                            {
+
+                                Html.RenderPartial("_لوازم_الکترونیک");
+                                break;
+                            }
+                        case "وسایل-نقلیه":
+                            {
+                                Html.RenderPartial("_وسایل_نقلیه");
+                                break;
+                            }
+                        case "لوازم-خانگی":
+                            {
+
+                                Html.RenderPartial("_لوازم_کسب_سرگرمی");
+                                break;
+                            }
+                        case "لوازم-شخصی":
+                            {
+                                Html.RenderPartial("_لوازم_کسب_سرگرمی");
+                                break;
+                            }
+                        case "سرگرمی-و-فراغت":
+                            {
+                                Html.RenderPartial("_لوازم_کسب_سرگرمی");
+                                break;
+                            }
+                        case "کسب-و-کار":
+                            {
+                                Html.RenderPartial("_استخدام_اجتماعی_خدمات");
+                                break;
+                            }
+
+                        case "خدمات":
+                            {
+                                Html.RenderPartial("_استخدام_اجتماعی_خدمات");
+                                break;
+                            }
 
 
+                        case "اجتماعی":
+                            {
+                                Html.RenderPartial("_استخدام_اجتماعی_خدمات");
+                                break;
+                            }
+
+                        case "a":
+                            {
+
+                                break;
+                            }
+                    }
+
+            
 
 
-
-
-            @{
-
-                string l1 = ViewBag.Level1;
-                string l2 = ViewBag.Level2;
-                string l3 = ViewBag.Level3;
-
-
-                ViewBag.lv1 = l1;
-                ViewBag.lv2 = l2;
-                ViewBag.lv3 = l3;
-
-
-
-
-                switch (l1)
-                {
-                    case "املاک":
-                        {
-
-
-                            Html.RenderPartial("_املاک");
-                            break;
-                        }
-                    case "لوازم-الکترونیکی":
-                        {
-
-                            Html.RenderPartial("_لوازم_الکترونیک");
-                            break;
-                        }
-                    case "وسایل-نقلیه":
-                        {
-                            Html.RenderPartial("_وسایل_نقلیه");
-                            break;
-                        }
-                    case "لوازم-خانگی":
-                        {
-
-                            Html.RenderPartial("_لوازم_کسب_سرگرمی");
-                            break;
-                        }
-                    case "لوازم-شخصی":
-                        {
-                            Html.RenderPartial("_لوازم_کسب_سرگرمی");
-                            break;
-                        }
-                    case "سرگرمی-و-فراغت":
-                        {
-                            Html.RenderPartial("_لوازم_کسب_سرگرمی");
-                            break;
-                        }
-                    case "کسب-و-کار":
-                        {
-                            Html.RenderPartial("_استخدام_اجتماعی_خدمات");
-                            break;
-                        }
-
-                    case "خدمات":
-                        {
-                            Html.RenderPartial("_استخدام_اجتماعی_خدمات");
-                            break;
-                        }
-
-
-                    case "اجتماعی":
-                        {
-                            Html.RenderPartial("_استخدام_اجتماعی_خدمات");
-                            break;
-                        }
-
-                    case "a":
-                        {
-
-                            break;
-                        }
-                }
                 Html.RenderPartial("_مشترک");
 
 
@@ -769,7 +751,7 @@
     <script>
 
 
-        $(".dropdown-toggle").click(function () {
+        $(".CitySelect").click(function () {
 
             alert("HI");
 
@@ -781,9 +763,9 @@
                     var MyData = $.parseJSON(data);
 
                     for (var i = 0; i < MyData.length; i++) {
-                        var $li = "<option class=\"\">" + MyData[i].RegionName + "</option>";
-
-                        $(".Regions").append($li);
+                        var $li = "<option value=\" " + MyData[i].RegionID  + "\" class=\"\">" + MyData[i].RegionName + "</option>";
+                        
+                        $("#select1").append($li);
                     }
                 }
             })
