@@ -51,7 +51,7 @@
                                 </select>
                             </label>
                         </div>*@
-                    <select data-placeholder="شهر را انتخاب کنید ..." class="select" tabindex="1">
+                    <select data-placeholder="شهر را انتخاب کنید ..." class="ShahrSelect" tabindex="1">
                         <option value=""></option>
 
                         @{   foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
@@ -69,7 +69,7 @@
 
 
                     <div id="sel-cont">
-                        <select name="select" id="select1" style="width: 350px;" data-placeholder="محله را انتخاب کنید ..." multiple>
+                        <select name="mahale" id="mahale" style="width: 350px;" data-placeholder="محله را انتخاب کنید ..." multiple>
                             @*<option value="0">Value 1</option>*@
                             
                         </select>
@@ -750,6 +750,8 @@
 
     <script>
 
+        $("#mahale").chosen();
+        $('ShahrSelect').chosen();
 
         $(".CitySelect").click(function () {
 
@@ -760,14 +762,28 @@
                 type: "GET",
                 url: "/Sync/GetRegionByCityID/" + $(this).val() + "",
                 success: function (data) {
+
                     var MyData = $.parseJSON(data);
 
-                    for (var i = 0; i < MyData.length; i++) {
-                        var $li = "<option value=\" " + MyData[i].RegionID  + "\" class=\"\">" + MyData[i].RegionName + "</option>";
-                        
-                        $("#select1").append($li);
+
+                    if (MyData.length == 0) {
+                        $("#mahale").chosen();
+                        $("#mahale").empty();
+                    
                     }
-                }
+                    else {
+
+                        for (var i = 0; i < MyData.length; i++) {
+                            var $li = "<option value=\" " + MyData[i].RegionID + "\" class=\"\">" + MyData[i].RegionName + "</option>";
+                            $("#mahale").append($li);
+                        }
+                        $("#mahale").chosen();
+                       
+                    }
+                    
+                }, error: function () {
+                    $("#mahale").empty();
+                } 
             })
         });
 
@@ -953,7 +969,7 @@
 
         $(document).ready(function () {
 
-            $('select').chosen();
+            $('ShahrSelect').chosen();
         });
 
     </script>

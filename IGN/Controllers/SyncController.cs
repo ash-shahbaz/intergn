@@ -110,10 +110,10 @@ namespace IGN.Controllers
         }
 
 
-        public List<tblRegions> GetRegionByCityID(string CityID)
+        public string GetRegionByCityID(string name)
         {
 
-            return Utility.GetRegions(CityID);
+            return  JsonConvert.SerializeObject(Utility.GetRegions(name));
         }
 
 
