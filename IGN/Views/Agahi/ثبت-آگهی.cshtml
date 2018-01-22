@@ -11,11 +11,11 @@
 
     <link rel="stylesheet" href="~/css/main.css">
     @*<link rel="stylesheet" href="~/css/mainselect.css">
-    <link rel="stylesheet" href="~/css/bootstrap-select.min.css">*@
+        <link rel="stylesheet" href="~/css/bootstrap-select.min.css">*@
     <link rel="stylesheet" href="~/css/slidr.css">
 
 
- <link href="~/css/hierarchy-select.min.css" rel="stylesheet" />
+    <link href="~/css/hierarchy-select.min.css" rel="stylesheet" />
 
     <link href="~/css/chosen.min.css" rel="stylesheet" />
 }
@@ -1625,11 +1625,20 @@
                                             <div class="row form-group select-price">
                                                 <div class="col-sm-9">
                                                     <div class="row">
-                                                        <div class="col-md-6">
-
-                                                            <label>هزار تومان</label>
-                                                            <input type="radio" name="price" value="negotiable" id="negotiable">
-                                                            <label for="negotiable">توافقی </label>
+                                                        <div class="col-md-3">
+                                         
+                                                            <span class="md-radio md-radio-inline">
+                                                                <input id="6" type="radio" name="g3">
+                                                                <label for="6">توافقی</label>
+                                                            </span>
+                                                            <span class="md-radio md-radio-inline">
+                                                                <input id="7" type="radio" name="g3">
+                                                                <label for="7">اقساط</label>
+                                                            </span>
+ 
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label>هزار تومان</label> 
                                                         </div>
                                                         <div class="col-md-6">
                                                             <input type="text" class="form-control" id="text1">
@@ -1642,15 +1651,24 @@
 
                                             <div class="row form-group select-price">
                                                 <div class="col-sm-9">
-                                                    @*<select data-placeholder="برند" class="select" tabindex="1">
-                                                            <option value=""></option>
-                                                            <option value="1">بنز</option>
-                                                            <option value="1">پراید</option>
-                                                            <option value="1">مزدا3</option>
-                                                            <option value="1">مزدا2</option>
-                                                            <option value="1">پیکانتو</option>
-                                                        </select>*@
+                                                    <div class="row">
+                                                        <div class="col-md-6">
 
+                                                            <label>هزار تومان</label>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control" id="text1">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <label class="col-sm-3 label-title">ماهانه<span class="required">*</span></label>
+                                            </div>
+
+
+
+                                            <div class="row form-group select-price">
+                                                <div class="col-sm-9">
                                                     <div class="btn-group hierarchy-select" data-resize="auto" id="example-one">
                                                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                                             <span class="selected-label pull-left">&nbsp;</span>
@@ -1663,70 +1681,25 @@
                                                             </div>
                                                             <ul class="dropdown-menu inner" role="menu">
                                                                 <li data-value="" data-level="1" data-default-selected="">
-                                                                    <a href="#">All categories</a>
+                                                                    <a href="#">برند</a>
                                                                 </li>
                                                                 <li data-value="1" data-level="1">
-                                                                    <a href="#">Wine</a>
+                                                                    <a href="#">سایپا</a>
                                                                 </li>
                                                                 <li data-value="2" data-level="2">
-                                                                    <a href="#">Color</a>
+                                                                    <a href="#">پراید</a>
                                                                 </li>
-                                                                <li data-value="3" data-level="3">
-                                                                    <a href="#">Red</a>
-                                                                </li>
-                                                                <li data-value="4" data-level="3">
-                                                                    <a href="#">White</a>
-                                                                </li>
-                                                                <li data-value="5" data-level="3">
-                                                                    <a href="#">Rose</a>
-                                                                </li>
-                                                                <li data-value="6" data-level="2">
-                                                                    <a href="#">Country</a>
-                                                                </li>
-                                                                <li data-value="7" data-level="3">
-                                                                    <a href="#">Marokko</a>
-                                                                </li>
-                                                                <li data-value="8" data-level="3">
-                                                                    <a href="#">Russia</a>
-                                                                </li>
-                                                                <li data-value="9" data-level="2">
-                                                                    <a href="#">Sugar Content</a>
-                                                                </li>
-                                                                <li data-value="10" data-level="3">
-                                                                    <a href="#">Semi Sweet</a>
-                                                                </li>
-                                                                <li data-value="11" data-level="3">
-                                                                    <a href="#">Brut</a>
-                                                                </li>
-                                                                <li data-value="12" data-level="2">
-                                                                    <a href="#">Rating</a>
-                                                                </li>
-                                                                <li data-value="13" data-level="2">
-                                                                    <a href="#">Grape Sort</a>
-                                                                </li>
-                                                                <li data-value="14" data-level="3">
-                                                                    <a href="#">Riesling</a>
-                                                                </li>
-                                                                <li data-value="15" data-level="3">
-                                                                    <a href="#">Aleatico</a>
-                                                                </li>
-                                                                <li data-value="16" data-level="3">
-                                                                    <a href="#">Bouchet</a>
+                                                                <li data-value="3" data-level="2">
+                                                                    <a href="#">سراتو</a>
                                                                 </li>
                                                                 <li data-value="17" data-level="1">
-                                                                    <a href="#">Whiskey</a>
+                                                                    <a href="#">کیا</a>
                                                                 </li>
                                                                 <li data-value="18" data-level="2">
-                                                                    <a href="#">Country</a>
+                                                                    <a href="#">سراتو</a>
                                                                 </li>
-                                                                <li data-value="19" data-level="3">
-                                                                    <a href="#">Ireland</a>
-                                                                </li>
-                                                                <li data-value="20" data-level="3">
-                                                                    <a href="#">Kanada</a>
-                                                                </li>
-                                                                <li data-value="21" data-level="3">
-                                                                    <a href="#">Scotland</a>
+                                                                <li data-value="19" data-level="2">
+                                                                    <a href="#">اپتیما</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -1790,199 +1763,149 @@
                                     <div class="col-md-8">
                                         <div class="section quick-rules thumbnail border-radius-15">
                                             <h4>جزئیات خیلی آگهی</h4>
-                                            <div class="row form-group select-price">
-                                                <div class="col-sm-9">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <input type="text" class="form-control" id="text1">
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <select data-placeholder="قرمز" class="select" tabindex="1">
-                                                                <option value=""></option>
-                                                                <option value="1">1</option>
-                                                                <option value="1">2</option>
-                                                                <option value="1">3</option>
-                                                                <option value="1">4</option>
-                                                                <option value="1">5 یا بیشتر</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
+                                                <div class="row select-price col-calc-2">
+                                                    <div class="col-sm-6">
+                                                        <select data-placeholder="کارکرده" class="select" tabindex="1">
+                                                            <option value=""></option>
+                                                            <option value="1">کارکرده</option>
+                                                            <option value="1">صفر</option>
+                                                            <option value="1">کارتکس</option>
+                                                            <option value="1">حواله</option>
+                                                        </select>
 
+                                                    </div>
+                                                    <label class="col-sm-6 label-title">وضعیت</label>
                                                 </div>
-                                                <label class="col-sm-3 label-title">رنگ بدنه</label>
-                                            </div>
-                                            <div class="row form-group select-price">
-                                                <div class="col-sm-9">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <input type="text" class="form-control" id="text1">
+                                                <div class="row select-price col-calc-2">
+                                                    <div class="col-sm-6">
+                                                        <select data-placeholder="سواری" class="select" tabindex="1">
+                                                            <option value=""></option>
+                                                            <option value="1">سدان</option>
+                                                            <option value="1">سواری</option>
+                                                            <option value="1">وانت</option>
+                                                        </select>
+
+                                                    </div>
+                                                    <label class="col-sm-6 label-title">شاسی</label>
+                                                </div>
+                                                <div class="row select-price col-calc-2">
+                                                    <div class="col-sm-6">
+                                                        <select data-placeholder="تک" class="select" tabindex="1">
+                                                            <option value=""></option>
+                                                            <option value="1">تک</option>
+                                                            <option value="1">دو</option>
+                                                        </select>
+
+                                                    </div>
+                                                    <label class="col-sm-6 label-title">دیفرانسیل</label>
+                                                </div>
+                                                <div class="row select-price col-calc-2">
+                                                    <div class="col-sm-6">
+                                                        <select data-placeholder="قرمز" class="select" tabindex="1">
+                                                            <option value=""></option>
+                                                            <option value="1">1</option>
+                                                            <option value="1">2</option>
+                                                            <option value="1">3</option>
+                                                            <option value="1">4</option>
+                                                            <option value="1">5 یا بیشتر</option>
+                                                        </select>
+                                                    </div>
+                                                    <label class="col-sm-6 label-title">رنگ بدنه</label>
+                                                </div>
+                                                <div class="row select-price col-calc-2">
+                                                    <div class="col-sm-6">
+                                                        <select data-placeholder="قرمز" class="select" tabindex="1">
+                                                            <option value=""></option>
+                                                            <option value="1">1</option>
+                                                            <option value="1">2</option>
+                                                            <option value="1">3</option>
+                                                            <option value="1">4</option>
+                                                            <option value="1">5 یا بیشتر</option>
+                                                        </select>
+                                                    </div>
+                                                    <label class="col-sm-6 label-title">رنگ داخل</label>
+                                                </div>
+                                                <div class="row select-price col-calc-2">
+                                                    <div class="col-sm-6">
+                                                        <select data-placeholder="ندارد" class="select" tabindex="1">
+                                                            <option value=""></option>
+                                                            <option value="1">تیپ 5</option>
+                                                            <option value="1">تیپ 2</option>
+                                                            <option value="1">3</option>
+                                                            <option value="1">4</option>
+                                                            <option value="1">5</option>
+                                                        </select>
+                                                    </div>
+                                                    <label class="col-sm-6 label-title">مدل</label>
+                                                </div>
+                                                <div class="row select-price col-calc-2">
+                                                    <div class="col-sm-6">
+                                                        <select data-placeholder="دستی" class="select" tabindex="1">
+                                                            <option value=""></option>
+                                                            <option value="1">اتومات</option>
+                                                            <option value="1">2</option>
+                                                            <option value="1">3</option>
+                                                            <option value="1">4</option>
+                                                            <option value="1">5 یا بیشتر</option>
+                                                        </select>
+                                                    </div>
+                                                    <label class="col-sm-6 label-title">گیربکس</label>
+                                                </div>
+                                                <div class="row select-price col-calc-2">
+                                                    <div class="col-sm-6">
+                                                        <select data-placeholder="بنزین" class="select" tabindex="1">
+                                                            <option value=""></option>
+                                                            <option value="1">1</option>
+                                                            <option value="1">2</option>
+                                                            <option value="1">3</option>
+                                                            <option value="1">4</option>
+                                                            <option value="1">5 یا بیشتر</option>
+                                                        </select>
+                                                    </div>
+                                                    <label class="col-sm-6 label-title">نوع سوخت</label>
+                                                </div>
+                                                <div class="row select-price col-calc-2">
+                                                    <div class="col-sm-6">
+                                                        <select data-placeholder=" بدون رنگ" class="select" tabindex="1">
+                                                            <option value=""></option>
+                                                            <option value="1">بدون رنگ</option>
+                                                            <option value="1">یک لکه رنگ</option>
+                                                        </select>
+
+                                                    </div>
+                                                    <label class="col-sm-6 label-title">وضعیت بدنه</label>
+                                                </div>
+                                                <div class="row select-price col-calc-2">
+                                                    <div class="col-sm-6">
+                                                        <select data-placeholder="پلاک ملی" class="select" tabindex="1">
+                                                            <option value=""></option>
+                                                            <option value="1">گذر موقت</option>
+                                                            <option value="1">پلاک دولتی</option>
+                                                        </select>
+
+                                                    </div>
+                                                    <label class="col-sm-6 label-title">موارد خاص</label>
+                                                </div>
+                                                <div class="row form-group additional">
+                                                    <div class="col-sm-9 checkbox">
+
+                                                        <div class="md-checkbox col-calc-3">
+                                                            <input id="i2" type="checkbox">
+                                                            <label for="i2">سانروف</label>
                                                         </div>
-                                                        <div class="col-md-6">
-                                                            <select data-placeholder="قرمز" class="select" tabindex="1">
-                                                                <option value=""></option>
-                                                                <option value="1">1</option>
-                                                                <option value="1">2</option>
-                                                                <option value="1">3</option>
-                                                                <option value="1">4</option>
-                                                                <option value="1">5 یا بیشتر</option>
-                                                            </select>
+                                                        <div class="md-checkbox col-calc-3">
+                                                            <input id="i3" type="checkbox">
+                                                            <label for="i3">دزدگیر</label>
                                                         </div>
-                                                    </div>
-
-                                                </div>
-                                                <label class="col-sm-3 label-title">رنگ داخل</label>
-                                            </div>
-                                            <div class="row form-group select-price">
-                                                <div class="col-sm-9">
-                                                    <select data-placeholder="ندارد" class="select" tabindex="1">
-                                                        <option value=""></option>
-                                                        <option value="1">1</option>
-                                                        <option value="1">2</option>
-                                                        <option value="1">3</option>
-                                                        <option value="1">4</option>
-                                                        <option value="1">5 یا بیشتر</option>
-                                                    </select>
-                                                </div>
-                                                <label class="col-sm-3 label-title">تیپ</label>
-                                            </div>
-                                            <div class="row form-group select-price">
-                                                <div class="col-sm-9">
-                                                    <select data-placeholder="دستی" class="select" tabindex="1">
-                                                        <option value=""></option>
-                                                        <option value="1">1</option>
-                                                        <option value="1">2</option>
-                                                        <option value="1">3</option>
-                                                        <option value="1">4</option>
-                                                        <option value="1">5 یا بیشتر</option>
-                                                    </select>
-                                                </div>
-                                                <label class="col-sm-3 label-title">گیربکس</label>
-                                            </div>
-                                            <div class="row form-group select-price">
-                                                <div class="col-sm-9">
-                                                    <select data-placeholder="بنزین" class="select" tabindex="1">
-                                                        <option value=""></option>
-                                                        <option value="1">1</option>
-                                                        <option value="1">2</option>
-                                                        <option value="1">3</option>
-                                                        <option value="1">4</option>
-                                                        <option value="1">5 یا بیشتر</option>
-                                                    </select>
-                                                </div>
-                                                <label class="col-sm-3 label-title">نوع سوخت</label>
-                                            </div>
-                                            <div class="row form-group additional">
-                                                <div class="col-sm-9 checkbox">
-
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i2" type="checkbox">
-                                                        <label for="i2">پارکینگ</label>
-                                                    </div>
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i3" type="checkbox">
-                                                        <label for="i3">آسانسور</label>
-                                                    </div>
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i3" type="checkbox">
-                                                        <label for="i3">سرویس ایرانی</label>
-                                                    </div>
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i3" type="checkbox">
-                                                        <label for="i3">سرویس خارجی</label>
-                                                    </div>
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i3" type="checkbox">
-                                                        <label for="i3">بالکن</label>
-                                                    </div>
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i3" type="checkbox">
-                                                        <label for="i3">استخر</label>
-                                                    </div>
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i3" type="checkbox">
-                                                        <label for="i3">زیرزمین</label>
-                                                    </div>
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i3" type="checkbox">
-                                                        <label for="i3">حیاط</label>
-                                                    </div>
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i3" type="checkbox">
-                                                        <label for="i3">سونا</label>
-                                                    </div>
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i3" type="checkbox">
-                                                        <label for="i3">جکوزی</label>
-                                                    </div>
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i3" type="checkbox">
-                                                        <label for="i3">خواب مستر</label>
-                                                    </div>
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i3" type="checkbox">
-                                                        <label for="i3">روف گاردن</label>
-                                                    </div>
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i3" type="checkbox">
-                                                        <label for="i3">چیلر</label>
-                                                    </div>
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i3" type="checkbox">
-                                                        <label for="i3">لابی</label>
-                                                    </div>
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i3" type="checkbox">
-                                                        <label for="i3">سالن بدنسازی</label>
-                                                    </div>
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i3" type="checkbox">
-                                                        <label for="i3">ورثه ای</label>
-                                                    </div>
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i3" type="checkbox">
-                                                        <label for="i3">سند تک برگ</label>
-                                                    </div>
-                                                    <div class="md-checkbox col-calc-3">
-                                                        <input id="i3" type="checkbox">
-                                                        <label for="i3">وام</label>
-                                                    </div>
-                                                </div>
-                                                <label class="col-sm-3 label-title">سایر</label>
-                                            </div>
-
-                                            <div class="row form-group select-price">
-                                                <div class="col-sm-9">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-
-                                                            <label>متر مربع</label>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <input type="text" class="form-control" id="text1">
+                                                        <div class="md-checkbox col-calc-3">
+                                                            <input id="i3" type="checkbox">
+                                                            <label for="i3">سیستم صوتی</label>
                                                         </div>
                                                     </div>
-
+                                                    <label class="col-sm-3 label-title">سایر</label>
                                                 </div>
-                                                <label class="col-sm-3 label-title">زیر بنا</label>
-                                            </div>
-                                            <div class="row form-group select-price">
-                                                <div class="col-sm-9">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
 
-                                                            <label>هزار تومان</label>
-                                                            <input type="radio" name="price" value="negotiable" id="negotiable">
-                                                            <label for="negotiable">ندارد </label>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <input type="text" class="form-control" id="text1">
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <label class="col-sm-3 label-title">مبلغ وام</label>
                                             </div>
-                                        </div>
 
                                     </div>
                                     <div class="col-md-2"></div>
