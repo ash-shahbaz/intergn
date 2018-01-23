@@ -2255,6 +2255,7 @@ ul.page-numbers li:hover {
     cursor: pointer;
     color: #fff;
     position: fixed;
+    top: auto;
 }
 /*==========================================================
     Blog
@@ -6982,9 +6983,11 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 .padding-right-15 {
     padding-right: 15px;
 }
+.width-100Per {
+    width: 100%;
+}
 #sel-cont {
-    width: 600px;
-    margin: 100px auto;
+    width: 100%;
 }
 
     #sel-cont .chosen-container-multi .chosen-choices {
