@@ -1,5 +1,4 @@
-﻿
-<!-- --------شروع وسایل نقلیه-------- -->
+﻿<!-- --------شروع وسایل نقلیه-------- -->
 
 
 @{
@@ -219,8 +218,49 @@
         <!-- --------شروع - خودرو - سواری-------- -->
 
         <div class="row">
+            <div class="col-md-3">
+
+                <div class="field-container int-field">
+                    <label>اقساط ماهانه</label>
+                    <div class="row">
+                        <div class="col-md-6 no-padding">
+                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                        </div>
+                        <div class="col-md-6 no-padding">
+                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
 
+            <div class="col-md-3">
+
+                <div class="field-container int-field">
+                    <label>قیمت</label>
+                    <div class="row">
+                        <div class="col-md-12 no-padding">
+                            <select data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
+                                <option value=""></option>
+                                <option value="1">مقطوع - تومان</option>
+                                <option value="1">مجانی</option>
+                                <option value="1">توافقی</option>
+                                <option value="1">جهت معاوضه</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 no-padding">
+                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                        </div>
+                        <div class="col-md-6 no-padding">
+                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
 
             <div class="col-md-3">
@@ -259,56 +299,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
-            <div class="col-md-3">
-
-                <div class="field-container int-field">
-                    <label>کارکرد (کیلومتر)</label>
-                    <div class="row">
-                        <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
-                        </div>
-                        <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-            <div class="col-md-3">
-
-                <div class="field-container int-field">
-                    <label>قیمت</label>
-                    <div class="row">
-                        <div class="col-md-12 no-padding">
-                            <select data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
-                                <option value=""></option>
-                                <option value="1">مقطوع - تومان</option>
-                                <option value="1">مجانی</option>
-                                <option value="1">توافقی</option>
-                                <option value="1">جهت معاوضه</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
-                        </div>
-                        <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
 
             <div class="col-md-3">
 
@@ -360,31 +350,227 @@
 
             </div>
         </div>
+        <div class="row">
+
+            <div class="col-md-6">
+                <button type="button" class="btn btn-info btn-lg btnchoose float-left">نمایش با جزئیات بیشتر</button>
+            </div>
+            <div class="col-md-3">
+                <div class="field-container radio-field">
+                    <label>نوع</label>
+                    <div class="md-radio md-radio-inline">
+                        <input id="4" type="radio" name="g3" checked>
+                        <label for="4">فرقی نمی کند</label>
+                    </div>
+                    <div class="md-radio md-radio-inline">
+                        <input id="5" type="radio" name="g3" checked>
+                        <label for="5">فروشی</label>
+                    </div>
+                    <div class="md-radio md-radio-inline">
+                        <input id="6" type="radio" name="g3">
+                        <label for="6">درخواستی</label>
+                    </div>
+                    <div class="md-radio md-radio-inline">
+                        <input id="7" type="radio" name="g3">
+                        <label for="7">اجاره ای</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="col-md-3">
+
+                <div class="field-container int-field">
+                    <label>کارکرد (کیلومتر)</label>
                     <div class="row">
-                        <div class="col-md-9">
+                        <div class="col-md-6 no-padding">
+                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
                         </div>
-                        <div class="col-md-3">
-                            <div class="field-container radio-field">
-                                <label>نوع</label>
-                                <div class="md-radio md-radio-inline">
-                                    <input id="4" type="radio" name="g3" checked>
-                                    <label for="4">فرقی نمی کند</label>
-                                </div>
-                                <div class="md-radio md-radio-inline">
-                                    <input id="5" type="radio" name="g3" checked>
-                                    <label for="5">فروشی</label>
-                                </div>
-                                <div class="md-radio md-radio-inline">
-                                    <input id="6" type="radio" name="g3">
-                                    <label for="6">درخواستی</label>
-                                </div>
-                                <div class="md-radio md-radio-inline">
-                                    <input id="7" type="radio" name="g3">
-                                    <label for="7">اجاره ای</label>
-                                </div>
-                            </div>
+                        <div class="col-md-6 no-padding">
+                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
                         </div>
                     </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="row">
+
+
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder="کارکرده" class="select width-100Per" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">کارکرده</option>
+                            <option value="1">صفر</option>
+                            <option value="1">کارتکس</option>
+                            <option value="1">حواله</option>
+                        </select>
+
+                    </div>
+                    <label class="col-sm-6 label-title">وضعیت</label>
+                </div>
+            </div>
+
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder="سواری" class="select width-100Per" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">سدان</option>
+                            <option value="1">سواری</option>
+                            <option value="1">وانت</option>
+                        </select>
+
+                    </div>
+                    <label class="col-sm-6 label-title">شاسی</label>
+                </div>
+            </div>
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder="تک" class="select width-100Per" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">تک</option>
+                            <option value="1">دو</option>
+                        </select>
+
+                    </div>
+                    <label class="col-sm-6 label-title">دیفرانسیل</label>
+                </div>
+            </div>
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder="قرمز" class="select width-100Per" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="1">2</option>
+                            <option value="1">3</option>
+                            <option value="1">4</option>
+                            <option value="1">5 یا بیشتر</option>
+                        </select>
+                    </div>
+                    <label class="col-sm-6 label-title">رنگ بدنه</label>
+                </div>
+            </div>
+            <div class="col-md-3 no-padding">
+                <div class="row ">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder="قرمز" class="select width-100Per" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="1">2</option>
+                            <option value="1">3</option>
+                            <option value="1">4</option>
+                            <option value="1">5 یا بیشتر</option>
+                        </select>
+                    </div>
+                    <label class="col-sm-6 label-title">رنگ داخل</label>
+                </div>
+            </div>
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder="ندارد" class="select width-100Per" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">تیپ 5</option>
+                            <option value="1">تیپ 2</option>
+                            <option value="1">3</option>
+                            <option value="1">4</option>
+                            <option value="1">5</option>
+                        </select>
+                    </div>
+                    <label class="col-sm-6 label-title">مدل</label>
+                </div>
+            </div>
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder="دستی" class="select width-100Per" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">اتومات</option>
+                            <option value="1">2</option>
+                            <option value="1">3</option>
+                            <option value="1">4</option>
+                            <option value="1">5 یا بیشتر</option>
+                        </select>
+                    </div>
+                    <label class="col-sm-6 label-title">گیربکس</label>
+                </div>
+            </div>
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder="بنزین" class="select width-100Per" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="1">2</option>
+                            <option value="1">3</option>
+                            <option value="1">4</option>
+                            <option value="1">5 یا بیشتر</option>
+                        </select>
+                    </div>
+                    <label class="col-sm-6 label-title">نوع سوخت</label>
+                </div>
+            </div>
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder=" بدون رنگ" class="select width-100Per" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">بدون رنگ</option>
+                            <option value="1">یک لکه رنگ</option>
+                        </select>
+
+                    </div>
+                    <label class="col-sm-6 label-title">وضعیت بدنه</label>
+                </div>
+            </div>
+
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder="پلاک ملی" class="select width-100Per" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">گذر موقت</option>
+                            <option value="1">پلاک دولتی</option>
+                        </select>
+
+                    </div>
+                    <label class="col-sm-6 label-title">موارد خاص</label>
+                </div>
+            </div>
+            <div class="row form-group additional">
+                <div class="col-sm-11 checkbox">
+
+                    <div class="md-checkbox col-calc-6">
+                        <input id="i2" type="checkbox">
+                        <label for="i2">سانروف</label>
+                    </div>
+                    <div class="md-checkbox col-calc-6">
+                        <input id="i3" type="checkbox">
+                        <label for="i3">دزدگیر</label>
+                    </div>
+                    <div class="md-checkbox col-calc-6">
+                        <input id="i3" type="checkbox">
+                        <label for="i3">سیستم صوتی</label>
+                    </div>
+                </div>
+                <label class="col-sm-1 label-title">سایر</label>
+            </div>
+
+
+
+        </div>
 
                     <!-- --------پایان - خودرو - سواری-------- -->
 
