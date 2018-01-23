@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="~/css/bootstrap-select.min.css">*@
     <link rel="stylesheet" href="~/css/slidr.css">
 
+<link href="~/css/hierarchy-select.min.css" rel="stylesheet" />
+
     <link href="~/css/chosen.min.css" rel="stylesheet" />
 
 }
@@ -1125,6 +1127,8 @@
 @section Script
     {
 
+<script src="~/js/hierarchy-select.min.js"></script>
+
     <script src="~/js/chosen.jquery.min.js"></script>
 
     @*<script src="~/js/bootstrap-select.min.js"></script>
@@ -1354,6 +1358,12 @@
             $('ShahrSelect').chosen();
 
 
+            $('select').chosen();
+
+
+            $('#example-one').hierarchySelect({
+                width: 200
+            });
 
 
 
