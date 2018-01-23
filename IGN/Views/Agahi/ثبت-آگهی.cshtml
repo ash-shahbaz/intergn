@@ -45,15 +45,14 @@
                                     <div class="col-md-6">
                                         <div class="section thumbnail select-category post-option">
                                             <h4>دسته بندی خود را انتخاب کنید</h4>
-                                            <ul role="tablist">
-                                                <li class="">
+                                            <ul role="tablist" class="TopLevel">
+                                                @*<li class="">
                                                     <a href="#cat1" aria-controls="cat1" role="tab" data-toggle="tab" aria-expanded="false">
 
                                                         املاک
                                                     </a>
                                                 </li>
-
-                                                <li class="link-active active">
+                                                    <li class="link-active active">
                                                     <a href="#cat2" aria-controls="cat2" role="tab" data-toggle="tab" aria-expanded="true">
 
                                                         وسایل نقلیه
@@ -65,7 +64,7 @@
 
                                                         لوازم الکترونیکی
                                                     </a>
-                                                </li>
+                                                </li>*@
 
                                             </ul>
                                         </div>
@@ -85,7 +84,7 @@
 
 
 
-                        <section id="main" class="clearfix ad-details-page">
+                        @*<section id="main1" class="clearfix ad-details-page">
                             <div>
                                 <div class="row">
 
@@ -147,7 +146,7 @@
                         </section>
 
 
-                        <section id="main" class="clearfix ad-details-page">
+                        <section id="main2" class="clearfix ad-details-page">
                             <div>
                                 <div class="row">
 
@@ -193,13 +192,13 @@
                                 </div>
 
                             </div>
-                        </section>
+                        </section>*@
 
 
 
 
                         <!-- main -->
-                        <section id="main" class="clearfix ad-details-page">
+                        <section id="main4" class="clearfix ad-details-page">
                             <div>
                                 <div class="row">
                                     <div class="col-md-2"></div>
@@ -3204,7 +3203,7 @@
     <script src="~/js/hierarchy-select.min.js"></script>
     <script>
 
-
+        var arr;
 
         $(document).ready(function () {
 
@@ -3216,6 +3215,107 @@
             $('#example-one').hierarchySelect({
                 width: 200
             });
+
+
+            LoadCategory();
+
+            function LoadCategory() {
+
+
+                $(".RetClick").remove();
+
+                $.ajax({
+                    type: "GET",
+                    url: "/Sync/ListAgahiCategory",
+                    success: function (data) {
+                        var MyData = $.parseJSON(data);
+
+
+                        arr = jQuery.grep(MyData, function (n, i) {
+                            return (n.ParrentID == null);
+                        });
+
+
+                        for (var i = 0; i < arr.length; i++) {
+                            var classname = "TopLvlCli" + arr[i].AgahiCategoryID;
+                            var li = "<li class=\"\"><a class=\"" + classname + "\" accesskey=\"" + arr[i].AgahiCategoryID +"\" href=\"#cat" + arr[i].AgahiCategoryID + "\" aria-controls=\"cat" + arr[i].AgahiCategoryID + "\" role=\"tab\" data-toggle=\"tab\" aria-expanded=\"false\">" + arr[i].AgahiCategoryName + "</a></li>";
+
+                            $(".TopLevel").append(li);
+
+                            $("." + classname + " ").click(function () {
+
+                                var id = $(this).attr("accesskey");
+
+                                var returnclick = "<a href=\"\"><i class=\"fa fa-arrow-right nofa RetClick\"></i><span class=\"padding-right-15\"> | "+$(this).html() +"</span></a>";
+
+                                $(".TopLevel").before( returnclick );
+                                
+                                $(".TopLevel").empty();
+
+                                arr = jQuery.grep(MyData, function (n, i) {
+                                    return (n.ParrentID == id);
+                                });
+
+                                for (var i = 0; i < arr.length; i++) {
+
+                                    var classMidname = "MidLvlCli" + arr[i].AgahiCategoryID;
+                                    var li = "<li class=\"\"><a class=\"" + classMidname  + "\" accesskey=\"" + arr[i].AgahiCategoryID + "\" href=\"#cat" + arr[i].AgahiCategoryID + "\" aria-controls=\"cat" + arr[i].AgahiCategoryID + "\" role=\"tab\" data-toggle=\"tab\" aria-expanded=\"false\">" + arr[i].AgahiCategoryName + "</a></li>";
+                                    $(".TopLevel").append(li);
+
+
+
+
+                                    $("." + classMidname + " ").click(function () {
+
+
+
+                                        var id = $(this).attr("accesskey");
+
+                                        var returnclick = "<a href=\"\"><i class=\"fa fa-arrow-right nofa RetClick\"></i><span class=\"padding-right-15\"> | " + $(this).html() + "</span></a>";
+
+                                        $(".TopLevel").before(returnclick);
+
+                                        //var classname = "MidLvlCli" + arr[i].AgahiCategoryID;
+                                        $(".TopLevel").empty();
+
+                                        arr = jQuery.grep(MyData, function (n, i) {
+                                            return (n.ParrentID == id);
+                                        });
+
+                                        for (var i = 0; i < arr.length; i++) {
+
+                                            var classLowname = "LowLvlCli" + arr[i].AgahiCategoryID;
+                                            var li = "<li class=\"\"><a class=\"" + classLowname + "\" accesskey=\"" + arr[i].AgahiCategoryID + "\" href=\"#cat" + arr[i].AgahiCategoryID + "\" aria-controls=\"cat" + arr[i].AgahiCategoryID + "\" role=\"tab\" data-toggle=\"tab\" aria-expanded=\"false\">" + arr[i].AgahiCategoryName + "</a></li>";
+                                            $(".TopLevel").append(li);
+
+
+                                        }
+
+
+                                    });
+
+
+
+
+
+
+                                }
+
+                            });
+
+
+
+                        }
+
+                   
+
+                    }
+                });
+            }
+
+
+
+
 
         });
 
