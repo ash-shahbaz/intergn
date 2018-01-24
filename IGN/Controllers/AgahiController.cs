@@ -15,8 +15,20 @@ namespace IGN.Controllers
             return View();
         }
         [ActionName("ثبت-آگهی")]
-        public ActionResult ثبت_آگهی()
+        public ActionResult ثبت_آگهی(string name, string id1,string id2, string id3)
         {
+            if (name != "")
+            {
+                ViewBag.lvl0 = name;
+                ViewBag.lvl1 = id1;
+                ViewBag.lvl2 = id2;
+                ViewBag.CID = id3;
+
+
+
+            }
+
+
             return View();
         }
 
