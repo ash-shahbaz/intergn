@@ -7018,7 +7018,7 @@ height: 200px;
 }
 
 .col-calc-6 {
-    width: calc(100% / 6.1);
+    width: calc(100% / 6.2);
     display: inline-block;
 }
 .col-calc-3 {
