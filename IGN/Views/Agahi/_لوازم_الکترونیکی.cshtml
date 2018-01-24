@@ -1,5 +1,4 @@
-﻿
-<!-- --------شروع لوازم الکترونیکی-------- -->
+﻿<!-- --------شروع لوازم الکترونیکی-------- -->
 @{
 
     string l2 = ViewBag.lv2;
@@ -7,7 +6,7 @@
     if (ViewBag.lv1 == "لوازم-الکترونیکی" && !l2.Contains("رایانه") || !l2.Contains("رایانه-همراه"))
     {
 
-        <!-- --------شروع - تمام سر تیتر و جزئیات لوازم الکترونیکی بجززززز - رایانه - رایانه همراه-------- -->
+                                <!-- --------شروع - لوازم الکترونیکی - لوازم جانبی موبایل و تبلت و سیم کارت و تمام زیر مجموعه های صوتی و تصویری و کنسول ها و بازی ها و رایانه بجزززز رایانه همراه و رومیزی-------- -->
 
         <div class="row">
 
@@ -67,7 +66,7 @@
 
         </div>
 
-                    <!-- --------پایان -  تمام سر تیتر و جزئیات لوازم الکترونیکی بجززززز - رایانه - رایانه همراه-------- -->
+                                <!-- --------پایان - لوازم الکترونیکی - لوازم جانبی موبایل و تبلت و سیم کارت و تمام زیر مجموعه های صوتی و تصویری و کنسول ها و بازی ها و رایانه بجزززز رایانه همراه و رومیزی-------- -->
 
     }
 
@@ -87,15 +86,12 @@
 
     if (ViewBag.lv1 == "لوازم-الکترونیکی" && l2.Contains("رایانه") || l2.Contains("رایانه-همراه"))
     {
+          <!-- --------شروع - لوازم الکترونیکی - گوشی موبایل  و تبلت-------- -->
 
-
-        <!-- --------شروع - رایانه - رایانه همراه-------- -->
 
         <div class="row">
 
 
-            <div class="col-md-3">
-            </div>
 
             <div class="col-md-3">
                 <div class="field-container radio-field">
@@ -115,6 +111,113 @@
                 </div>
             </div>
 
+            <div class="col-md-3">
+                <div class="field-container int-field">
+                    <label>رنگ</label>
+                    <div class="row">
+                        <div class="col-md-12 no-padding">
+                            <select data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
+                                <option value=""></option>
+                                <option value="1">مقطوع - تومان</option>
+                                <option value="1">مجانی</option>
+                                <option value="1">توافقی</option>
+                                <option value="1">جهت معاوضه</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="field-container int-field">
+                    <label>قیمت</label>
+                    <div class="row">
+                        <div class="col-md-12 no-padding">
+                            <select data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
+                                <option value=""></option>
+                                <option value="1">مقطوع - تومان</option>
+                                <option value="1">مجانی</option>
+                                <option value="1">توافقی</option>
+                                <option value="1">جهت معاوضه</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 no-padding">
+                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                        </div>
+                        <div class="col-md-6 no-padding">
+                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="field-container int-field">
+                    <label>برند</label>
+                    <div class="row">
+                        <div class="col-md-12 no-padding">
+                            <select data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
+                                <option value=""></option>
+                                <option value="1">مقطوع - تومان</option>
+                                <option value="1">مجانی</option>
+                                <option value="1">توافقی</option>
+                                <option value="1">جهت معاوضه</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+         <!-- --------پایان - لوازم الکترونیکی - گوشی موبایل  و تبلت-------- -->
+
+        <!-- --------شروع - رایانه - رایانه همراه-------- -->
+
+        <div class="row">
+
+
+            <div class="col-md-3">
+                <div class="field-container radio-field">
+                    <label>نوع</label>
+                    <div class="md-radio md-radio-inline">
+                        <input id="4" type="radio" name="g3" checked>
+                        <label for="4">فرقی نمی کند</label>
+                    </div>
+                    <div class="md-radio md-radio-inline">
+                        <input id="5" type="radio" name="g3" checked>
+                        <label for="5">فروشی</label>
+                    </div>
+                    <div class="md-radio md-radio-inline">
+                        <input id="6" type="radio" name="g3">
+                        <label for="6">درخواستی</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="field-container int-field">
+                    <label>رنگ</label>
+                    <div class="row">
+                        <div class="col-md-12 no-padding">
+                            <select data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
+                                <option value=""></option>
+                                <option value="1">مقطوع - تومان</option>
+                                <option value="1">مجانی</option>
+                                <option value="1">توافقی</option>
+                                <option value="1">جهت معاوضه</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
             <div class="col-md-3">
@@ -164,7 +267,266 @@
 
         </div>
 
+        <div class="row">
+
+
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder="13" class="select" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="1">2</option>
+                            <option value="1">3</option>
+                            <option value="1">4</option>
+                            <option value="1">5 یا بیشتر</option>
+                        </select>
+
+                    </div>
+                    <label class="col-sm-6 label-title">سایز صفحه نمایش</label>
+                </div>
+            </div>
+
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder="ندارد" class="select" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">ندارد</option>
+                            <option value="1">دارد</option>
+                        </select>
+                    </div>
+                    <label class="col-sm-6 label-title">لمسی</label>
+                </div>
+            </div>
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder="2" class="select" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">4</option>
+                            <option value="1">6</option>
+                            <option value="1">8</option>
+                            <option value="1">12 یا بیشتر</option>
+                        </select>
+                    </div>
+                    <label class="col-sm-6 label-title">RAM</label>
+                </div>
+            </div>
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder="بنزین" class="select" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="1">2</option>
+                            <option value="1">3</option>
+                            <option value="1">4</option>
+                            <option value="1">5 یا بیشتر</option>
+                        </select>
+                    </div>
+                    <label class="col-sm-6 label-title">CPU</label>
+                </div>
+            </div>
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder=" بدون رنگ" class="select" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">بدون رنگ</option>
+                            <option value="1">یک لکه رنگ</option>
+                        </select>
+                    </div>
+                    <label class="col-sm-6 label-title">Hard</label>
+                </div>
+            </div>
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder="پلاک ملی" class="select" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">گذر موقت</option>
+                            <option value="1">پلاک دولتی</option>
+                        </select>
+                    </div>
+                    <label class="col-sm-6 label-title">Graphic</label>
+                </div>
+            </div>
+            <div class="row form-group additional">
+                <div class="col-sm-11 checkbox">
+
+                    <div class="md-checkbox col-calc-6">
+                        <input id="i3" type="checkbox">
+                        <label for="i3">ضد آب</label>
+                    </div>
+                    <div class="md-checkbox col-calc-6">
+                        <input id="i3" type="checkbox">
+                        <label for="i3">USB3</label>
+                    </div>
+                    <div class="md-checkbox col-calc-6">
+                        <input id="i3" type="checkbox">
+                        <label for="i3">DVD/RW</label>
+                    </div>
+                    <div class="md-checkbox col-calc-6">
+                        <input id="i3" type="checkbox">
+                        <label for="i3">Camera</label>
+                    </div>
+
+
+                </div>
+                <label class="col-sm-1 label-title">سایر</label>
+            </div>
+
+
+
+        </div>
+
+
                     <!-- --------پایان - رایانه - رایانه همراه-------- -->
+
+
+            <!-- --------شروع - لوازم الکترونیکی - رایانه - رایانه رومیزی-------- -->
+
+
+        <div class="row">
+            <div class="col-md-6">
+            </div>
+
+
+
+            <div class="col-md-3">
+                <div class="field-container radio-field">
+                    <label>نوع</label>
+                    <div class="md-radio md-radio-inline">
+                        <input id="4" type="radio" name="g3" checked>
+                        <label for="4">فرقی نمی کند</label>
+                    </div>
+                    <div class="md-radio md-radio-inline">
+                        <input id="5" type="radio" name="g3" checked>
+                        <label for="5">فروشی</label>
+                    </div>
+                    <div class="md-radio md-radio-inline">
+                        <input id="6" type="radio" name="g3">
+                        <label for="6">درخواستی</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3">
+
+                <div class="field-container int-field">
+                    <label>قیمت</label>
+                    <div class="row">
+                        <div class="col-md-12 no-padding">
+                            <select data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
+                                <option value=""></option>
+                                <option value="1">مقطوع - تومان</option>
+                                <option value="1">مجانی</option>
+                                <option value="1">توافقی</option>
+                                <option value="1">جهت معاوضه</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 no-padding">
+                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                        </div>
+                        <div class="col-md-6 no-padding">
+                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="row">
+
+
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder="2" class="select" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">4</option>
+                            <option value="1">6</option>
+                            <option value="1">8</option>
+                            <option value="1">12 یا بیشتر</option>
+                        </select>
+                    </div>
+                    <label class="col-sm-6 label-title">RAM</label>
+                </div>
+            </div>
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder="بنزین" class="select" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="1">2</option>
+                            <option value="1">3</option>
+                            <option value="1">4</option>
+                            <option value="1">5 یا بیشتر</option>
+                        </select>
+                    </div>
+                    <label class="col-sm-6 label-title">CPU</label>
+                </div>
+            </div>
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder=" بدون رنگ" class="select" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">بدون رنگ</option>
+                            <option value="1">یک لکه رنگ</option>
+                        </select>
+                    </div>
+                    <label class="col-sm-6 label-title">Hard</label>
+                </div>
+            </div>
+            <div class="col-md-3 no-padding">
+                <div class="row">
+                    <div class="col-sm-6 no-padding">
+                        <select data-placeholder="پلاک ملی" class="select" tabindex="1">
+                            <option value=""></option>
+                            <option value="1">گذر موقت</option>
+                            <option value="1">پلاک دولتی</option>
+                        </select>
+                    </div>
+                    <label class="col-sm-6 label-title">Graphic</label>
+                </div>
+            </div>
+            <div class="row form-group additional">
+                <div class="col-sm-11 checkbox">
+
+                    <div class="md-checkbox col-calc-6">
+                        <input id="i3" type="checkbox">
+                        <label for="i3">USB3</label>
+                    </div>
+                    <div class="md-checkbox col-calc-6">
+                        <input id="i3" type="checkbox">
+                        <label for="i3">DVD/RW</label>
+                    </div>
+                    <div class="md-checkbox col-calc-6">
+                        <input id="i3" type="checkbox">
+                        <label for="i3">بلندگو</label>
+                    </div>
+
+
+                </div>
+                <label class="col-sm-1 label-title">سایر</label>
+            </div>
+
+
+
+        </div>
+
+
+                           <!-- --------پایان - لوازم الکترونیکی - رایانه - رایانه رومیزی-------- -->
 
     }
 
