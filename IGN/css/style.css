@@ -6983,9 +6983,11 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 .padding-right-15 {
     padding-right: 15px;
 }
+
 .width-100Per {
     width: 100%;
 }
+
 #sel-cont {
     width: 100%;
 }
@@ -7011,21 +7013,47 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     #sel-cont .chosen-container-active .chosen-choices {
         border: 1px solid #cccccc;
     }
+
 .mapcreatepage {
-background-color: antiquewhite;
-width: 100%;
-height: 200px;
+    background-color: antiquewhite;
+    width: 100%;
+    height: 200px;
 }
 
 .col-calc-6 {
     width: calc(100% / 6.2);
     display: inline-block;
 }
+
 .col-calc-3 {
     width: calc(100% / 3.1);
     display: inline-block;
 }
+
 .col-calc-2 {
     width: calc(100% / 2.1);
     display: inline-block;
 }
+
+@media (max-width:1024px) {
+    #header-page {
+        display: flex;
+        /* Optional, if you want the DIVs 100% width: */
+        flex-direction: column;
+    }
+        #header-page > #top-header {
+            order: 2;
+        }
+
+        #header-page > #bottom-header {
+            order: 1;
+        }
+}
+@media (max-width:768px) {
+    #page-footer {
+        display: none;
+    }
+}
+
+
+
