@@ -7,6 +7,9 @@ using System.Web;
 using System.Web.Script.Serialization;
 using System.Timers;
 using Newtonsoft.Json.Linq;
+using System.Text;
+using System.Security.Cryptography;
+using System.IO;
 
 namespace IGN.Models
 {
@@ -26,7 +29,7 @@ namespace IGN.Models
         public static int PrivinceID;
         public static string CityName = "تهران";
         public static List<tblProvince> lstProvinces = new List<tblProvince>();
-
+        public static List<tblAgahi> lstAgahi = new List<tblAgahi>();
 
 
         public static string CallApiGetResultCheckUser(string username, string pass)
@@ -87,7 +90,41 @@ namespace IGN.Models
 
 
 
+        public static List<tblAgahi> GetAllAgahi()
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync("api/Agahis").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseString = response.Content.ReadAsStringAsync().Result;
 
+                    //var data =  JsonConvert.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                    //return data;
+                    response.Content = new StringContent(responseString, System.Text.Encoding.UTF8, "application/json");
+
+                    JavaScriptSerializer json_serializer = new JavaScriptSerializer();
+
+                    //string json = JsonConvert.SerializeObject(responseString);
+
+                    //    string q = json_serializer.DeserializeObject(responseString).ToString();
+
+
+                    List<tblAgahi> deserializedProduct = JsonConvert.DeserializeObject<List<tblAgahi>>(responseString);
+
+                    return deserializedProduct.ToList();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+
+
+        }
 
         public static List<newsItem> GetAllNews()
         {
@@ -455,6 +492,68 @@ namespace IGN.Models
             }
         }
 
+        public static string CreateMD5(string input)
+        {
+            // Use input string to calculate MD5 hash
+            using (System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create())
+            {
+                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                // Convert the byte array to hexadecimal string
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("X2"));
+                }
+                return sb.ToString();
+            }
+        }
+
+        static readonly string PasswordHash = "P@@Sw0rd";
+        static readonly string SaltKey = "S@LT&KEY";
+        static readonly string VIKey = "@1B2c3D4e5F6g7H8";
+        public static string Encrypt(string plainText)
+        {
+            byte[] plainTextBytes = Encoding.UTF8.GetBytes(plainText);
+
+            byte[] keyBytes = new Rfc2898DeriveBytes(PasswordHash, Encoding.ASCII.GetBytes(SaltKey)).GetBytes(256 / 8);
+            var symmetricKey = new RijndaelManaged() { Mode = CipherMode.CBC, Padding = PaddingMode.Zeros };
+            var encryptor = symmetricKey.CreateEncryptor(keyBytes, Encoding.ASCII.GetBytes(VIKey));
+
+            byte[] cipherTextBytes;
+
+            using (var memoryStream = new MemoryStream())
+            {
+                using (var cryptoStream = new CryptoStream(memoryStream, encryptor, CryptoStreamMode.Write))
+                {
+                    cryptoStream.Write(plainTextBytes, 0, plainTextBytes.Length);
+                    cryptoStream.FlushFinalBlock();
+                    cipherTextBytes = memoryStream.ToArray();
+                    cryptoStream.Close();
+                }
+                memoryStream.Close();
+            }
+            return Convert.ToBase64String(cipherTextBytes);
+        }
+
+        public static string Decrypt(string encryptedText)
+		{
+			byte[] cipherTextBytes = Convert.FromBase64String(encryptedText);
+			byte[] keyBytes = new Rfc2898DeriveBytes(PasswordHash, Encoding.ASCII.GetBytes(SaltKey)).GetBytes(256 / 8);
+			var symmetricKey = new RijndaelManaged() { Mode = CipherMode.CBC, Padding = PaddingMode.None };
+
+			var decryptor = symmetricKey.CreateDecryptor(keyBytes, Encoding.ASCII.GetBytes(VIKey));
+			var memoryStream = new MemoryStream(cipherTextBytes);
+			var cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read);
+			byte[] plainTextBytes = new byte[cipherTextBytes.Length];
+
+			int decryptedByteCount = cryptoStream.Read(plainTextBytes, 0, plainTextBytes.Length);
+			memoryStream.Close();
+			cryptoStream.Close();
+			return Encoding.UTF8.GetString(plainTextBytes, 0, decryptedByteCount).TrimEnd("\0".ToCharArray());
+		}
+
     }
 
     public class AgahiCategory
@@ -534,7 +633,31 @@ namespace IGN.Models
         public string RegionName { get; set; }
     }
 
-
+    public class tblAgahi
+    {
+        public int AgahiID { get; set; }
+        public Nullable<int> CategoryAgahiID { get; set; }
+        public Nullable<int> AgahiServiceID { get; set; }
+        public string AgahiTitle { get; set; }
+        public Nullable<bool> NewOrUsed { get; set; }
+        public string Description { get; set; }
+        public string Keyword { get; set; }
+        public string RegisterDate { get; set; }
+        public Nullable<int> UserID { get; set; }
+        public Nullable<int> AdminUserID { get; set; }
+        public Nullable<System.DateTime> AdminAgreeDate { get; set; }
+        public Nullable<byte> AgahiStatus { get; set; }
+        public Nullable<int> LanguageID { get; set; }
+        public Nullable<int> ProvinceID { get; set; }
+        public Nullable<int> CityID { get; set; }
+        public string Tell { get; set; }
+        public string Mobile { get; set; }
+        public Nullable<int> PriceTypeID { get; set; }
+        public Nullable<decimal> Price { get; set; }
+        public Nullable<int> PlanShowAgahiID { get; set; }
+        public Nullable<bool> HasImage { get; set; }
+        public Nullable<bool> Chatable { get; set; }
+    }
    
 
 }

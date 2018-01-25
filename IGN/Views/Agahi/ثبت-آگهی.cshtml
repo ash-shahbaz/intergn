@@ -29,69 +29,63 @@
                     <div class="padding-top-15">
 
 
+                        @{
+                            if (ViewBag.lvl0 != null && ViewBag.lvl0 != "")
+                            {
+                                //NO
+                            }
+                            else
+                            {
+                                <section id="main" class="clearfix ad-details-page">
+                                    <div>
+                                        <div class="row">
 
 
+                                            <div class="col-md-3">
+
+                                            </div>
 
 
-                        <section id="main" class="clearfix ad-details-page">
-                            <div>
-                                <div class="row">
+                                            <div class="col-md-6">
+
+                                              
+                                                        <div class="section thumbnail select-category post-option">
+                                                            <h4>دسته بندی خود را انتخاب کنید</h4>
+                                                            <ul role="tablist" class="TopLevel"></ul>
+                                                        </div>
+                                                 
 
 
-                                    <div class="col-md-3">
-
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="section thumbnail select-category post-option">
-                                            <h4>دسته بندی خود را انتخاب کنید</h4>
-
-                                            @{
-                                                if (ViewBag.lvl0 != null && ViewBag.lvl0 != "")
-                                                {
-                                                    <ul role="tablist" class="FixLevel">
-                                                       
-                                                                <li class="link-active active">
-                                                                <a href="#cat2" aria-controls="cat2" role="tab" data-toggle="tab" aria-expanded="true">
-                                                                    @ViewBag.lvl0 >> @ViewBag.lvl1 >> @ViewBag.lvl2
-                                                                </a>
-                                                            </li>
-
-                                                           
-
-                                                    </ul>
-                                                }
-                                                else
-                                                {
-                                                    <ul role="tablist" class="TopLevel">
                                                
-                                                    </ul>
 
-                                                }
-                                            }
-                                         
+
+                                            </div>
+
+
+                                            <div class="col-md-3">
+
+                                            </div>
 
 
                                         </div>
-                                    </div>
-
-
-                                    <div class="col-md-3">
 
                                     </div>
+                                </section>
+                                                    }
 
 
-                                </div>
-
-                            </div>
-                        </section>
-
-
+                        }
 
 
 
+                      
 
-                     
+
+
+
+
+
+
 
                         <!-- main -->
                         <section id="main4" class="clearfix ad-details-page">
@@ -100,7 +94,7 @@
                                 @{
 
 
-                                    if (ViewBag.lvl0 != "" && ViewBag.lvl1 != "" && ViewBag.lvl2 != "")
+                                    if (ViewBag.lvl0 != null && ViewBag.lvl1 != "" && ViewBag.lvl2 != "")
                                     {
 
                                         <div class="row">
@@ -114,7 +108,7 @@
                                                     <div class="row form-group">
                                                         <div class="col-sm-9 user-type">
 
-                                                            <label>تغییر دسته بندی</label>
+                                                            <label>@ViewBag.lvl0 >> @ViewBag.lvl1 >> @ViewBag.lvl2      <a href="/Agahi/ثبت-آگهی">تغییر دسته بندی</a></label>
                                                         </div>
                                                         <label class="col-sm-3">گروه بندی<span class="required">*</span></label>
                                                     </div>
@@ -3237,56 +3231,61 @@
 
                                     }
 
-                                    else if (ViewBag.lvl0 == "لوازم خانگی" || ViewBag.lvl0 != "لوازم شخصی" || ViewBag.lvl0 != "سرگرمی و فراغت" || ViewBag.lvl0 != "کسب و کار")
+                                    else if (ViewBag.lvl0 != null)
                                     {
- <!-- --------شروع - لوازم خانگی و لوازم شخصی و سرگرمی و فراغت و کسب و کار  - تمام زیر مجموعه ها-------- -->
 
-                                        <div class="row">
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-8">
-                                                <div class="section quick-rules thumbnail border-radius-15">
-                                                    <h4>جزئیات آگهی</h4>
+                                        if (ViewBag.lvl0 == "لوازم خانگی" || ViewBag.lvl0 != "لوازم شخصی" || ViewBag.lvl0 != "سرگرمی و فراغت" || ViewBag.lvl0 != "کسب و کار")
+                                        {
+                                            <!-- --------شروع - لوازم خانگی و لوازم شخصی و سرگرمی و فراغت و کسب و کار  - تمام زیر مجموعه ها-------- -->
 
-                                                    <div class="row form-group select-price">
-                                                        <div class="col-sm-9">
-                                                            <div class="row">
-                                                                <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-2"></div>
+                                                <div class="col-md-8">
+                                                    <div class="section quick-rules thumbnail border-radius-15">
+                                                        <h4>جزئیات آگهی</h4>
 
-                                                                    <label>هزار تومان</label>
-                                                                    <input type="radio" name="price" value="negotiable" id="negotiable">
-                                                                    <label for="negotiable">توافقی </label>
+                                                        <div class="row form-group select-price">
+                                                            <div class="col-sm-9">
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+
+                                                                        <label>هزار تومان</label>
+                                                                        <input type="radio" name="price" value="negotiable" id="negotiable">
+                                                                        <label for="negotiable">توافقی </label>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <input type="text" class="form-control" id="text1">
+                                                                    </div>
                                                                 </div>
-                                                                <div class="col-md-6">
-                                                                    <input type="text" class="form-control" id="text1">
+
+                                                            </div>
+                                                            <label class="col-sm-3 label-title">قیمت<span class="required">*</span></label>
+                                                        </div>
+
+
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-9 user-type">
+                                                                <div class="md-radio md-radio-inline">
+                                                                    <input id="6" type="radio" name="g3">
+                                                                    <label for="6">فروشی</label>
+                                                                </div>
+                                                                <div class="md-radio md-radio-inline">
+                                                                    <input id="7" type="radio" name="g3">
+                                                                    <label for="7">درخواستی</label>
                                                                 </div>
                                                             </div>
-
+                                                            <label class="col-sm-3">نوع آگهی دهنده<span class="required">*</span></label>
                                                         </div>
-                                                        <label class="col-sm-3 label-title">قیمت<span class="required">*</span></label>
-                                                    </div>
 
-
-                                                    <div class="row form-group">
-                                                        <div class="col-sm-9 user-type">
-                                                            <div class="md-radio md-radio-inline">
-                                                                <input id="6" type="radio" name="g3">
-                                                                <label for="6">فروشی</label>
-                                                            </div>
-                                                            <div class="md-radio md-radio-inline">
-                                                                <input id="7" type="radio" name="g3">
-                                                                <label for="7">درخواستی</label>
-                                                            </div>
-                                                        </div>
-                                                        <label class="col-sm-3">نوع آگهی دهنده<span class="required">*</span></label>
                                                     </div>
 
                                                 </div>
-
+                                                <div class="col-md-2"></div>
                                             </div>
-                                            <div class="col-md-2"></div>
-                                        </div>
 
                                 <!-- --------پایان -لوازم خانگی و لوازم شخصی و سرگرمی و فراغت و کسب و کار - تمام زیر مجموعه ها-------- -->
+                                        }
+
                                     }
                                     else if (ViewBag.lvl0 == "اجتماعی" && ViewBag.lvl0 != "خدمات" && ViewBag.lvl0 != "استخدام")
                                     {
@@ -3326,89 +3325,94 @@
 
 
                                 }
-                            
-                             
-                                <div class="row">
-                                    <div class="col-md-2"></div>
-                                    <div class="col-md-8">
-                                        <form action="#">
+
+                                @{
+                                    if (ViewBag.lvl0 != null)
+                                    {
+                                        <div class="row">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-8">
+                                                <form action="#">
 
 
-                                            <div class="section seller-info thumbnail border-radius-15">
-                                                <h4>اطلاعات فروشنده</h4>
-                                                <div class="row form-group">
-                                                    <div class="col-sm-9">
-                                                        <input type="text" name="name" class="form-control" placeholder="احمد شهباز">
-                                                    </div>
-                                                    <label class="col-sm-3 label-title">نام آگهی دهنده<span class="required">*</span></label>
-                                                </div>
-                                                <div class="row form-group">
-                                                    <div class="col-sm-9 dir-ltr">
-                                                        <input type="email" name="email" class="form-control" placeholder="hamshahri@gmail.com">
-                                                    </div>
-                                                    <label class="col-sm-3 label-title">آدرس ایمیل<span class="required">*</span></label>
-                                                </div>
-                                                <div class="row form-group">
-                                                    <div class="col-sm-9 dir-ltr">
-                                                        <input type="text" name="mobileNumber" class="form-control" placeholder="٠٩١٢٣٤٣٤٦٧٨">
-                                                    </div>
-                                                    <label class="col-sm-3 label-title">تلفن همراه<span class="required">*</span></label>
-                                                </div>
-                                            </div><!-- section -->
+                                                    <div class="section seller-info thumbnail border-radius-15">
+                                                        <h4>اطلاعات فروشنده</h4>
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-9">
+                                                                <input type="text" name="name" class="form-control" placeholder="احمد شهباز">
+                                                            </div>
+                                                            <label class="col-sm-3 label-title">نام آگهی دهنده<span class="required">*</span></label>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-9 dir-ltr">
+                                                                <input type="email" name="email" class="form-control" placeholder="hamshahri@gmail.com">
+                                                            </div>
+                                                            <label class="col-sm-3 label-title">آدرس ایمیل<span class="required">*</span></label>
+                                                        </div>
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-9 dir-ltr">
+                                                                <input type="text" name="mobileNumber" class="form-control" placeholder="٠٩١٢٣٤٣٤٦٧٨">
+                                                            </div>
+                                                            <label class="col-sm-3 label-title">تلفن همراه<span class="required">*</span></label>
+                                                        </div>
+                                                    </div><!-- section -->
 
 
-                                        </form><!-- form -->
-                                    </div>
-                                    <div class="col-md-2"></div>
+                                                </form><!-- form -->
+                                            </div>
+                                            <div class="col-md-2"></div>
 
 
 
-                                </div>
+                                        </div>
 
-                                <div class="row">
-                                    <div class="col-md-2"></div>
-                                    <div class="col-md-8">
-
-
-                                        <div class="section thumbnail border-radius-15">
-                                            <h4>انتخاب نوع آگهی</h4>
-                                            <p>جهت کسب اطلاعات بیشتر میتوانید<a href="#">تعرفه ها</a> را مطالعه نمایید.</p>
-                                            <ul class="premium-options">
-                                                <li class="premium">
-                                                    <input type="radio" name="premiumOption" value="day-one" id="day-one">
-                                                    <label for="day-one">آگهی روزانه</label>
-                                                    <span class="float-price float-left">رایگان</span>
-                                                </li>
-                                                <li class="premium">
-                                                    <input type="radio" name="premiumOption" value="day-two" id="day-two">
-                                                    <label for="day-two">آگهی خاص</label>
-                                                    <span class="float-price float-left">1 هزار تومان</span>
-                                                </li>
-                                                <li class="premium">
-                                                    <input type="radio" name="premiumOption" value="day-three" id="day-three">
-                                                    <label for="day-three">آگهی همراه با تبلیغ در اخبار</label>
-                                                    <span class="float-price float-left">5 هزار تومان</span>
-                                                </li>
-                                                <li class="premium">
-                                                    <input type="radio" name="premiumOption" value="day-four" id="day-four">
-                                                    <label for="day-four">آگهی همراه با تبلیغ در اخبار مرتبط</label>
-                                                    <span class="float-price float-left">10 هزار تومان</span>
-                                                </li>
-                                            </ul>
-                                        </div><!-- section -->
+                                        <div class="row">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-8">
 
 
-                                        <div class="checkbox section agreement accept thumbnail border-radius-15">
-                                            <label for="send">
-                                                <input type="checkbox" name="send" id="send">
-                                                تمام<a href="#">قوانین</a> و <a href="#">مقررات</a> را خوانده ام و قبول دارم
-                                            </label>
-                                            <button type="submit" class="btn btn-primary float-left">ارسال آگهی</button>
-                                        </div><!-- section -->
+                                                <div class="section thumbnail border-radius-15">
+                                                    <h4>انتخاب نوع آگهی</h4>
+                                                    <p>جهت کسب اطلاعات بیشتر میتوانید<a href="#">تعرفه ها</a> را مطالعه نمایید.</p>
+                                                    <ul class="premium-options">
+                                                        <li class="premium">
+                                                            <input type="radio" name="premiumOption" value="day-one" id="day-one">
+                                                            <label for="day-one">آگهی روزانه</label>
+                                                            <span class="float-price float-left">رایگان</span>
+                                                        </li>
+                                                        <li class="premium">
+                                                            <input type="radio" name="premiumOption" value="day-two" id="day-two">
+                                                            <label for="day-two">آگهی خاص</label>
+                                                            <span class="float-price float-left">1 هزار تومان</span>
+                                                        </li>
+                                                        <li class="premium">
+                                                            <input type="radio" name="premiumOption" value="day-three" id="day-three">
+                                                            <label for="day-three">آگهی همراه با تبلیغ در اخبار</label>
+                                                            <span class="float-price float-left">5 هزار تومان</span>
+                                                        </li>
+                                                        <li class="premium">
+                                                            <input type="radio" name="premiumOption" value="day-four" id="day-four">
+                                                            <label for="day-four">آگهی همراه با تبلیغ در اخبار مرتبط</label>
+                                                            <span class="float-price float-left">10 هزار تومان</span>
+                                                        </li>
+                                                    </ul>
+                                                </div><!-- section -->
 
-                                    </div>
-                                    <div class="col-md-2"></div>
-                                </div>
+
+                                                <div class="checkbox section agreement accept thumbnail border-radius-15">
+                                                    <label for="send">
+                                                        <input type="checkbox" name="send" id="send">
+                                                        تمام<a href="#">قوانین</a> و <a href="#">مقررات</a> را خوانده ام و قبول دارم
+                                                    </label>
+                                                    <button type="submit" class="btn btn-primary float-left">ارسال آگهی</button>
+                                                </div><!-- section -->
+
+                                            </div>
+                                            <div class="col-md-2"></div>
+                                        </div>
+
+                                    }
+                                }
 
 
                             </div>
@@ -3485,22 +3489,22 @@
 
                         for (var i = 0; i < arr.length; i++) {
                             var classname = "TopLvlCli" + arr[i].AgahiCategoryID;
-                            var li = "<li class=\"\"><a class=\"" + classname + "\" accesskey=\"" + arr[i].AgahiCategoryID +"\" href=\"#cat" + arr[i].AgahiCategoryID + "\" aria-controls=\"cat" + arr[i].AgahiCategoryID + "\" role=\"tab\" data-toggle=\"tab\" aria-expanded=\"false\">" + arr[i].AgahiCategoryName + "</a></li>";
+                            var li = "<li class=\"\"><a class=\"" + classname + "\" accesskey=\"" + arr[i].AgahiCategoryID + "\" href=\"#cat" + arr[i].AgahiCategoryID + "\" aria-controls=\"cat" + arr[i].AgahiCategoryID + "\" role=\"tab\" data-toggle=\"tab\" aria-expanded=\"false\">" + arr[i].AgahiCategoryName + "</a></li>";
 
                             $(".TopLevel").append(li);
 
                             $("." + classname + " ").click(function () {
 
                                 TopLevelName = $(this).html();
-                              
+
 
 
                                 var id = $(this).attr("accesskey");
 
-                                var returnclick = "<a href=\"\"><i class=\"fa fa-arrow-right nofa RetClick\"></i><span class=\"padding-right-15\"> | "+$(this).html() +" </span></a>";
+                                var returnclick = "<a href=\"\"><i class=\"fa fa-arrow-right nofa RetClick\"></i><span class=\"padding-right-15\"> | " + $(this).html() + " </span></a>";
 
-                                $(".TopLevel").before( returnclick );
-                                
+                                $(".TopLevel").before(returnclick);
+
                                 $(".TopLevel").empty();
 
                                 arr = jQuery.grep(MyData, function (n, i) {
@@ -3510,7 +3514,7 @@
                                 for (var i = 0; i < arr.length; i++) {
 
                                     var classMidname = "MidLvlCli" + arr[i].AgahiCategoryID;
-                                    var li = "<li class=\"\"><a class=\"" + classMidname  + "\" accesskey=\"" + arr[i].AgahiCategoryID + "\" href=\"#cat" + arr[i].AgahiCategoryID + "\" aria-controls=\"cat" + arr[i].AgahiCategoryID + "\" role=\"tab\" data-toggle=\"tab\" aria-expanded=\"false\">" + arr[i].AgahiCategoryName + "</a></li>";
+                                    var li = "<li class=\"\"><a class=\"" + classMidname + "\" accesskey=\"" + arr[i].AgahiCategoryID + "\" href=\"#cat" + arr[i].AgahiCategoryID + "\" aria-controls=\"cat" + arr[i].AgahiCategoryID + "\" role=\"tab\" data-toggle=\"tab\" aria-expanded=\"false\">" + arr[i].AgahiCategoryName + "</a></li>";
                                     $(".TopLevel").append(li);
 
 
@@ -3536,8 +3540,8 @@
                                             return (n.ParrentID == id);
                                         });
 
-                                     
-                                        
+
+
 
                                         for (var i = 0; i < arr.length; i++) {
                                             var classLowname = "LowLvlCli" + arr[i].AgahiCategoryID;
@@ -3561,7 +3565,7 @@
 
                         }
 
-                   
+
 
                     }
                 });

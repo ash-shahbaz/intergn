@@ -27,8 +27,6 @@ namespace IGN.Controllers
 
 
             }
-
-
             return View();
         }
 
@@ -36,8 +34,16 @@ namespace IGN.Controllers
 
 
         [ActionName("جزئیات-آگهی")]
-        public ActionResult جزئیات_آگهی()
+        public ActionResult جزئیات_آگهی(string name)
         {
+
+            string s = Utility.CreateMD5(name);
+
+            //string sd = Utility.Encrypt(name);
+            //string rd = Utility.Decrypt(sd);
+
+
+
             return View();
         }
         [ActionName("آگهی-های-من")]
