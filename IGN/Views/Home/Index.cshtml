@@ -99,7 +99,25 @@
                                                 <div class="row padding-top-8">
                                                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 no-padding">
                                                         <h3 class="lead font-size-10 text-align-left no-margin">
-                                                            @item.Price
+                                                            @{
+                                                                if (item.Price == null)
+                                                                {
+                                                                    if (item.PriceTypeID == 2)
+                                                                    {
+                                                                       <span>توافقی</span> 
+                                                                                                                    }
+                                                                    else if (item.PriceTypeID == 3)
+                                                                    {
+                                                                      <span> جهت معاوضه</span> 
+                                                                                                                    }
+                                                                }
+                                                                else
+                                                                {
+                                                                    @item.Price
+                                                                }
+
+                                                            }
+                                                          
                                                         </h3>
                                                     </div>
                                                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padding">
