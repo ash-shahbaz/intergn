@@ -185,6 +185,7 @@
     <Content Include="css\mainselect.css" />
     <Content Include="css\material-kit.css" />
     <Content Include="css\material.min.css" />
+    <Content Include="css\MobileFooter.css" />
     <Content Include="css\pagination.css" />
     <Content Include="css\SideBarmenu.css" />
     <Content Include="css\responsive.css" />
