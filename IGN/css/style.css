@@ -7057,3 +7057,28 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 
 
 
+.c-corner-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-style: solid;
+    border-color: transparent #d50000 transparent transparent;
+    border-color: rgba(255, 255, 255, 0) #d50000 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+    height: 0;
+    width: 0;
+    border-width: 0 40px 40px 0;
+}
+
+.c-corner-label__text {
+    color: #eee;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    left: 37.1px;
+    top: 4.6px;
+    white-space: nowrap;
+    transform: rotate(45deg);
+    width: 9px;
+    text-align: center;
+    line-height: 2em;
+}
