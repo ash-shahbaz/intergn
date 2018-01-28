@@ -202,8 +202,8 @@
             <!-- container -->
         </div>
         <!-- top-header -->
-        <div id="bottom-header" class="bottom-header">
-            <div class="container wsmenucontainer clearfix">
+        <div id="bottom-header" class="bottom-header nav-container">
+            <div class="container wsmenucontainer clearfix nav">
 
                 <div class="overlapblackbg"></div>
 
@@ -1521,8 +1521,17 @@
         }
 
 
+        
 
+            var nav = $('.nav-container');
 
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 136) {
+                    nav.addClass("f-nav");
+                } else {
+                    nav.removeClass("f-nav");
+                }
+            });
 
 
 
