@@ -647,6 +647,7 @@ namespace IGN.Models
         public Nullable<int> AdminUserID { get; set; }
         public Nullable<System.DateTime> AdminAgreeDate { get; set; }
         public Nullable<byte> AgahiStatus { get; set; }
+        //public System.Data.Entity.Spatial.DbGeography Location { get; set; }
         public Nullable<int> LanguageID { get; set; }
         public Nullable<int> ProvinceID { get; set; }
         public Nullable<int> CityID { get; set; }
@@ -656,7 +657,8 @@ namespace IGN.Models
         public Nullable<decimal> Price { get; set; }
         public Nullable<int> PlanShowAgahiID { get; set; }
         public Nullable<bool> HasImage { get; set; }
-        public Nullable<bool> Chatable { get; set; }
+        public string Chatable { get; set; }
+        public string OnTime { get; set; }
     }
    
 
