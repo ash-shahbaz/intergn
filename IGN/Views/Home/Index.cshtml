@@ -78,7 +78,10 @@
                                                     <div class="row">
                                                         <div class="col-md-12 text-align-right no-padding">
 
-                                                  @*          <button type="button" class="btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="محله" data-container="body">@Utility.GetRegions(item.RegionID.ToString()).FirstOrDefault().RegionName</button>*@
+
+                                           @*                 @{ var q = Utility.GetRegions(item.RegionID.ToString()).FirstOrDefault().RegionName ; }*@
+
+                                                            <button type="button" class="btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="محله" data-container="body">@Utility.GetRegions(item.RegionID.ToString()).FirstOrDefault().RegionName</button>
                                                         </div>
                                                     </div>
 
