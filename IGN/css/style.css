@@ -234,6 +234,8 @@ body {
     line-height: 20px;
     color: #333;
     background-color: #fff;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
 input, button, select, textarea {
