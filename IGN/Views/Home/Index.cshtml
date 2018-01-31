@@ -80,7 +80,7 @@
 
                                            @*                 @{ var q = Utility.GetRegions(item.RegionID.ToString()).FirstOrDefault().RegionName ; }*@
 
-                                                            <button type="button" class="btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="محله" data-container="body">@Utility.GetRegions(item.RegionID.ToString()).FirstOrDefault().RegionName</button>
+                                                            <button type="button" class="btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="محله" data-container="body">@Utility.GetRegionsByRegionID(item.RegionID.ToString()).FirstOrDefault().RegionName</button>
                                                         </div>
                                                     </div>
 
