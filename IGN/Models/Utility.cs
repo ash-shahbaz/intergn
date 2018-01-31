@@ -30,6 +30,12 @@ namespace IGN.Models
         public static string CityName = "تهران";
         public static List<tblProvince> lstProvinces = new List<tblProvince>();
         public static List<tblAgahi> lstAgahi = new List<tblAgahi>();
+        public static List<tblCity> lstCities = new List<tblCity>();
+        public static List<tblRegions> lstRegions = new List<tblRegions>();
+
+
+
+
 
 
         public static string CallApiGetResultCheckUser(string username, string pass)
@@ -74,10 +80,80 @@ namespace IGN.Models
                 lstTopTagWeek = GetTagTop10DWMY("Week");
                 lstTopTagYear = GetTagTop10DWMY("Year");
                 lstLinkestan = GetTopLinkestan();
-                lstProvinces = GetProvince();
+             
+
 
             }
         }
+
+        public static List<tblRegions> GetAllRegions()
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync("api/tblRegion").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseString = response.Content.ReadAsStringAsync().Result;
+
+                    //var data =  JsonConvert.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                    //return data;
+                    response.Content = new StringContent(responseString, System.Text.Encoding.UTF8, "application/json");
+
+                    JavaScriptSerializer json_serializer = new JavaScriptSerializer();
+
+                    //string json = JsonConvert.SerializeObject(responseString);
+
+                    //    string q = json_serializer.DeserializeObject(responseString).ToString();
+
+
+                    List<tblRegions> deserializedProduct = JsonConvert.DeserializeObject<List<tblRegions>>(responseString);
+
+                    return deserializedProduct.ToList();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
+        public static List<tblCity> GetAllCity()
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync("api/Cities").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseString = response.Content.ReadAsStringAsync().Result;
+
+                    //var data =  JsonConvert.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                    //return data;
+                    response.Content = new StringContent(responseString, System.Text.Encoding.UTF8, "application/json");
+
+                    JavaScriptSerializer json_serializer = new JavaScriptSerializer();
+
+                    //string json = JsonConvert.SerializeObject(responseString);
+
+                    //    string q = json_serializer.DeserializeObject(responseString).ToString();
+
+
+                    List<tblCity> deserializedProduct = JsonConvert.DeserializeObject<List<tblCity>>(responseString);
+
+                    return deserializedProduct.ToList();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
         public static void SyncCategory(object sender, ElapsedEventArgs e)
         {
 

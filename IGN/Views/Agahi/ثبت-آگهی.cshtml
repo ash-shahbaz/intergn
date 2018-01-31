@@ -3148,15 +3148,29 @@
             LoadCategory();
 
 
-            $(".Province").click(function () {
-                var id = $(this).val();
-                LoadCityByProvinceID(id);
-            })    
 
-            $(".City").click(function () {
-                var id = $(this).val();
-                LoadRegionByCityID(id);
-            })    
+
+            $(".Province").chosen().change(function (e, params) {
+
+                LoadCityByProvinceID($(this).val());
+            })
+
+            
+
+                
+            $(".City").chosen().change(function (e, params) {
+             
+               
+                LoadRegionByCityID($(this).val());
+            }) 
+
+            //$(".Province").click(function () {
+
+            //})    
+
+            //$(".City").click(function () {
+             
+            //})    
 
 
 
@@ -3165,7 +3179,7 @@
 
                 $.ajax({
                     type: "GET",
-                    url: "/Sync/GetCityByProvinceID",
+                    url: "/Sync/GetCityByProvinceName/" + PrivinceID  +"",
                     success: function (data) {
                         var MyData = $.parseJSON(data);
 
@@ -3177,6 +3191,7 @@
                             var Select = " <option value=\"Reg" + MyData[i].CityID + "\">" + MyData[i].CityName + "</option>";
                             $(".City").append(Select);
                         }
+                        $(".City").chosen();
                     }
                 })
 
@@ -3186,7 +3201,7 @@
             function LoadRegionByCityID(CityID) {
                 $.ajax({
                     type: "GET",
-                    url: "/Sync/GetRegionByCityID",
+                    url: "/Sync/GetRegionByCityName/" + CityID +"",
                     success: function (data) {
                         var MyData = $.parseJSON(data);
 
@@ -3198,8 +3213,10 @@
                             var Select = " <option value=\"Reg" + MyData[i].RegionID + "\">" + MyData[i].RegionName + "</option>";
                             $(".Region").append(Select);
 
-
+                          
                         }
+                        $(".Region").chosen()
+                       
                     }
                 })
             }
