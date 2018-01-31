@@ -1140,288 +1140,285 @@
         $('ShahrSelect').chosen();
 
 
-
-<<<<<<< HEAD
-        
-
-
-        $('.CitySelect').click(function () {
-=======
         $(".CitySelect").chosen().change(function (e, params) {
             alert("1");
         });
 
+        
 
-        $(".CitySelect").click(function () {
->>>>>>> a8855b082b8b233c4bbaebd9eae7ac9b9bc78147
-
-            alert("HI");
+          
 
 
-            $.ajax({
-                type: "GET",
-                url: "/Sync/GetRegionByCityID/" + $(this).val() + "",
-                success: function (data) {
-
-                    var MyData = $.parseJSON(data);
+            $(".CitySelect").click(function () {
 
 
-                    if (MyData.length == 0) {
-                        $("#mahale").chosen();
-                        $("#mahale").empty();
+                alert("HI");
 
-                    }
-                    else {
 
-                        for (var i = 0; i < MyData.length; i++) {
-                            var $li = "<option value=\" " + MyData[i].RegionID + "\" class=\"\">" + MyData[i].RegionName + "</option>";
-                            $("#mahale").append($li);
+                $.ajax({
+                    type: "GET",
+                    url: "/Sync/GetRegionByCityID/" + $(this).val() + "",
+                    success: function (data) {
+
+                        var MyData = $.parseJSON(data);
+
+
+                        if (MyData.length == 0) {
+                            $("#mahale").chosen();
+                            $("#mahale").empty();
+
                         }
-                        $("#mahale").chosen();
+                        else {
 
+                            for (var i = 0; i < MyData.length; i++) {
+                                var $li = "<option value=\" " + MyData[i].RegionID + "\" class=\"\">" + MyData[i].RegionName + "</option>";
+                                $("#mahale").append($li);
+                            }
+                            $("#mahale").chosen();
+
+                        }
+
+                    }, error: function () {
+                        $("#mahale").empty();
                     }
+                })
+            });
 
-                }, error: function () {
-                    $("#mahale").empty();
-                }
+
+
+
+            var arr;
+            $("#RetToLoadCate").click(function () {
+                $(".Level1").empty();
+
+                $("#CatFlow").empty();
+                LoadCategory();
+
+
             })
-        });
 
 
 
 
-        var arr;
-        $("#RetToLoadCate").click(function () {
-            $(".Level1").empty();
 
-            $("#CatFlow").empty();
+
+
+
+
+
             LoadCategory();
 
 
-        })
+            function LoadCategory() {
+
+                $.ajax({
+                    type: "GET",
+                    url: "/Sync/ListAgahiCategory",
+                    success: function (data) {
+                        var MyData = $.parseJSON(data);
+
+
+                        arr = jQuery.grep(MyData, function (n, i) {
+                            return (n.ParrentID == null);
+                        });
+
+                        //console.log(arr);
+                        //Level 1
+                        for (var i = 0; i < arr.length; i++) {
+                            var classname = "sp" + arr[i].AgahiCategoryID;
+
+                            $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  " + classname + "  \" accesskey=" + arr[i].AgahiCategoryID + ">" + arr[i].AgahiCategoryName + "</span><span class=\"fa fa-arrow-circle-left float-left fa-cat-style\"></span></li>";
+                            $(".Level1").append($li);
+
+                            $("." + classname + " ").click(function () {
+
+
+
+                                var id = $(this).attr("accesskey");
+
+                                var classLevel1 = "lvl" + id;
+
+                                $("#CatFlow").append("<span  class=" + classLevel1 + " accesskey=" + id + " >" + $(this).html() + " >" + "</span>");
+
+                                //$("." + classLevel1 + " ").click(function () {
+
+                                //    var cateID = $(this).attr("accesskey");
+                                //    $(".Level1").empty();
+                                //    arr = jQuery.grep(MyData, function (n, i) {
+                                //        return (n.ParrentID == id);
+                                //    });
+
+                                //    for (var i = 0; i < arr.length; i++) {
+
+                                //        var classname = "sp" + arr[i].AgahiCategoryID;
+                                //        $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  " + classname + "  \" accesskey=" + arr[i].AgahiCategoryID + ">" + arr[i].AgahiCategoryName + "</span><span class=\"fa fa-arrow-circle-left float-left fa-cat-style\"></span></li>";
+                                //        $(".Level1").append($li);
+                                //    }
+
+
+                                //});
+
+                                $(".Level1").empty();
+
+                                arr = jQuery.grep(MyData, function (n, i) {
+                                    return (n.ParrentID == id);
+                                });
+
+                                //Level 2
+                                for (var i = 0; i < arr.length; i++) {
+
+                                    var classname = "sp" + arr[i].AgahiCategoryID;
+
+                                    $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  " + classname + "  \" accesskey=" + arr[i].AgahiCategoryID + ">" + arr[i].AgahiCategoryName + "</span><span class=\"fa fa-arrow-circle-left float-left fa-cat-style\"></span></li>";
+
+
+
+                                    $(".Level1").append($li);
+
+
+                                    $("." + classname + " ").click(function () {
+
+                                        var id = $(this).attr("accesskey");
+
+
+                                        var classLevel2 = "lvl2" + id;
+
+                                        $("#CatFlow").append("<span  class=" + classLevel2 + " accesskey=" + id + " >" + $(this).html() + " >" + "</span>");
+
+                                        //$("." + classLevel2 + " ").click(function () {
+
+                                        //    var cateID = $(this).attr("accesskey");
+                                        //    $(".Level1").empty();
+                                        //    arr = jQuery.grep(MyData, function (n, i) {
+                                        //        return (n.ParrentID == id);
+                                        //    });
+
+                                        //    for (var i = 0; i < arr.length; i++) {
+
+                                        //        var classname = "sp" + arr[i].AgahiCategoryID;
+                                        //        $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  " + classname + "  \" accesskey=" + arr[i].AgahiCategoryID + ">" + arr[i].AgahiCategoryName + "</span><span class=\"fa fa-arrow-circle-left float-left fa-cat-style\"></span></li>";
+                                        //        $(".Level1").append($li);
+                                        //    }
+                                        //});
+
+                                        $(".Level1").empty();
+
+                                        arr = jQuery.grep(MyData, function (n, i) {
+                                            return (n.ParrentID == id);
+                                        });
+
+                                        //Level 3
+                                        for (var i = 0; i < arr.length; i++) {
+
+                                            var classname = "sp" + arr[i].AgahiCategoryID;
+                                            $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  " + classname + "  \" accesskey=" + arr[i].AgahiCategoryID + ">" + arr[i].AgahiCategoryName + "</span></li>";
+                                            $(".Level1").append($li);
+
+
+
+                                            $("." + classname + " ").click(function () {
+                                                var id = $(this).attr("accesskey");
+                                                alert($(this).val());
+                                                alert("BoB")
+                                            })
+
+
+
+                                        }
+                                    })
+
+
+
+                                }
+
+                            })
+
+
+                        }
+
+                    }
+                });
+            }
+
+            //$(document).ready(function () {
+            //    $(".spCategory").click(function () {
+
+
+            //        var id = $(this).attr("accesskey").val();
+            //        alert(id);
+            //        $(".Level1").empty();
+
+            //        arr = jQuery.grep(MyData, function (n, i) {
+            //            return (n.ParrentID == id);
+            //        });
+
+
+            //        for (var i = 0; i < arr.length; i++) {
+            //            $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  spCategory  \" accesskey=" + MyData[i].AgahiCategoryID + ">" + MyData[i].AgahiCategoryName + "</span><span class=\"fa fa-arrow-circle-left float-left fa-cat-style\"></span></li>";
+            //            $(".Level1").append($li);
+            //        }
+
+
+            //    })
+            //});
+
+
+
+            $(document).ready(function () {
+
+                $('ShahrSelect').chosen();
+
+
+                $('select').chosen();
+
+
+                $('#example-one').hierarchySelect({
+                    width: 200
+                });
+
+
+
+                $(window).scroll(function () {
+
+
+                    if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+                        // ajax call get data from server and append to the div
+
+                        console.log("GO")
+
+                        console.log("scrollTop:    " + $(window).scrollTop());
+                        console.log("doc Hei:      " + $(document).height())
+
+                        console.log("Win Hei:    " + $(window).height());
+                        console.log("scrollTop After:   " + $(window).scrollTop());
+                        console.log("--------------END-----");
 
 
 
 
 
 
+                        var myBox = "  <div class=\"item  col-xs-3 col-lg-3 \"><div class=\"thumbnail card-3\" ><div class=\"row\"><div class=\"col-xs-5 col-sm-5 col-md-5 col-lg-5 no-padding\"><div class=\"row\"><div class=\"col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding\">                                            <button type=\"button\" class=\"btn fa fa-phone-square  btn-thumb btn-tooltip  btn-static\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"نمایش شماره تماس\" data-container=\"body\"></button></div><div class=\"col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding\"><button type=\"button\" class=\"btn fa fa-share-alt-square   btn-thumb btn-tooltip btn-static\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"به اشتراک گذاری\" data-container=\"body\"></button></div></div><div class=\"row\"><div class=\"col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding\"><button type=\"button\" class=\"btn fa fa-gratipay  btn-thumb btn-tooltip btn-heart\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"اضافه به علاقه مندی ها\" data-container=\"body\"></button></div><div class=\"col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding\"><button type=\"button\" class=\"btn fa fa-telegram btn-thumb btn-tooltip btn-telegram\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"چت تلگرام\" data-container=\"body\"></button></div>                                    </div><div class=\"row\"><div class=\"col-md-12 text-align-right no-padding\"><button type=\"button\" class=\"btn fa fa-clock-o  btn-thumb btn-tooltip btn-static-big\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"ساعات قادر به پاسخگویی\" data-container=\"body\">07:00-21:00</button></div>                                    </div><div class=\"row\"><div class=\"col-md-12 text-align-right no-padding\"><button type=\"button\" class=\"btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"محله\" data-container=\"body\">تهرانپارس</button></div></div></div><div class=\"col-xs-7 col-sm-7 col-md-7 col-lg-7 no-padding\"><img class=\"group list-group-image fixedimage\" src=\"~/images/ads/12.jpg\" alt=\"\" /></div></div><div class=\"caption\"><h1 class=\"group inner list-group-item-heading titletopstyle\">تولید و ساخت انواع سایبان و قطعات</h1><div class=\"row padding-top-8\"><div class=\"col-xs-8 col-sm-8 col-md-8 col-lg-8 no-padding\"><h3 class=\"lead font-size-10 text-align-left no-margin\">800,000,000 تومان</h3></div><div class=\"col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padding\"><i class=\"fa fa-usd nofa\" aria-hidden=\"true\"></i><span class=\"margin-right-5\">قیمت</span></div></div></div></div></div >";
 
 
 
 
-        LoadCategory();
+
+                        $("#products").append(myBox);
+                        $("#products").append(myBox);
+                        $("#products").append(myBox);
+                        $("#products").append(myBox);
+                        $("#products").append(myBox);
 
 
-        function LoadCategory() {
-
-            $.ajax({
-                type: "GET",
-                url: "/Sync/ListAgahiCategory",
-                success: function (data) {
-                    var MyData = $.parseJSON(data);
-
-
-                    arr = jQuery.grep(MyData, function (n, i) {
-                        return (n.ParrentID == null);
-                    });
-
-                    //console.log(arr);
-                    //Level 1
-                    for (var i = 0; i < arr.length; i++) {
-                        var classname = "sp" + arr[i].AgahiCategoryID;
-
-                        $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  " + classname + "  \" accesskey=" + arr[i].AgahiCategoryID + ">" + arr[i].AgahiCategoryName + "</span><span class=\"fa fa-arrow-circle-left float-left fa-cat-style\"></span></li>";
-                        $(".Level1").append($li);
-
-                        $("." + classname + " ").click(function () {
-
-
-
-                            var id = $(this).attr("accesskey");
-
-                            var classLevel1 = "lvl" + id;
-
-                            $("#CatFlow").append("<span  class=" + classLevel1 + " accesskey=" + id + " >" + $(this).html() + " >" + "</span>");
-
-                            //$("." + classLevel1 + " ").click(function () {
-
-                            //    var cateID = $(this).attr("accesskey");
-                            //    $(".Level1").empty();
-                            //    arr = jQuery.grep(MyData, function (n, i) {
-                            //        return (n.ParrentID == id);
-                            //    });
-
-                            //    for (var i = 0; i < arr.length; i++) {
-
-                            //        var classname = "sp" + arr[i].AgahiCategoryID;
-                            //        $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  " + classname + "  \" accesskey=" + arr[i].AgahiCategoryID + ">" + arr[i].AgahiCategoryName + "</span><span class=\"fa fa-arrow-circle-left float-left fa-cat-style\"></span></li>";
-                            //        $(".Level1").append($li);
-                            //    }
-
-
-                            //});
-
-                            $(".Level1").empty();
-
-                            arr = jQuery.grep(MyData, function (n, i) {
-                                return (n.ParrentID == id);
-                            });
-
-                            //Level 2
-                            for (var i = 0; i < arr.length; i++) {
-
-                                var classname = "sp" + arr[i].AgahiCategoryID;
-
-                                $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  " + classname + "  \" accesskey=" + arr[i].AgahiCategoryID + ">" + arr[i].AgahiCategoryName + "</span><span class=\"fa fa-arrow-circle-left float-left fa-cat-style\"></span></li>";
-
-
-
-                                $(".Level1").append($li);
-
-
-                                $("." + classname + " ").click(function () {
-
-                                    var id = $(this).attr("accesskey");
-
-
-                                    var classLevel2 = "lvl2" + id;
-
-                                    $("#CatFlow").append("<span  class=" + classLevel2 + " accesskey=" + id + " >" + $(this).html() + " >" + "</span>");
-
-                                    //$("." + classLevel2 + " ").click(function () {
-
-                                    //    var cateID = $(this).attr("accesskey");
-                                    //    $(".Level1").empty();
-                                    //    arr = jQuery.grep(MyData, function (n, i) {
-                                    //        return (n.ParrentID == id);
-                                    //    });
-
-                                    //    for (var i = 0; i < arr.length; i++) {
-
-                                    //        var classname = "sp" + arr[i].AgahiCategoryID;
-                                    //        $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  " + classname + "  \" accesskey=" + arr[i].AgahiCategoryID + ">" + arr[i].AgahiCategoryName + "</span><span class=\"fa fa-arrow-circle-left float-left fa-cat-style\"></span></li>";
-                                    //        $(".Level1").append($li);
-                                    //    }
-                                    //});
-
-                                    $(".Level1").empty();
-
-                                    arr = jQuery.grep(MyData, function (n, i) {
-                                        return (n.ParrentID == id);
-                                    });
-
-                                    //Level 3
-                                    for (var i = 0; i < arr.length; i++) {
-
-                                        var classname = "sp" + arr[i].AgahiCategoryID;
-                                        $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  " + classname + "  \" accesskey=" + arr[i].AgahiCategoryID + ">" + arr[i].AgahiCategoryName + "</span></li>";
-                                        $(".Level1").append($li);
-
-
-
-                                        $("." + classname + " ").click(function () {
-                                            var id = $(this).attr("accesskey");
-                                            alert($(this).val());
-                                            alert("BoB")
-                                        })
-
-
-
-                                    }
-                                })
-
-
-
-                            }
-
-                        })
 
 
                     }
+                });
 
-                }
+
+
             });
-        }
-
-        //$(document).ready(function () {
-        //    $(".spCategory").click(function () {
-
-
-        //        var id = $(this).attr("accesskey").val();
-        //        alert(id);
-        //        $(".Level1").empty();
-
-        //        arr = jQuery.grep(MyData, function (n, i) {
-        //            return (n.ParrentID == id);
-        //        });
-
-
-        //        for (var i = 0; i < arr.length; i++) {
-        //            $li = "<li class=\"li-cat\"><span class=\"vertical-align-sub  spCategory  \" accesskey=" + MyData[i].AgahiCategoryID + ">" + MyData[i].AgahiCategoryName + "</span><span class=\"fa fa-arrow-circle-left float-left fa-cat-style\"></span></li>";
-        //            $(".Level1").append($li);
-        //        }
-
-
-        //    })
-        //});
-
-
-
-        $(document).ready(function () {
-
-            $('ShahrSelect').chosen();
-
-
-            $('select').chosen();
-
-
-            $('#example-one').hierarchySelect({
-                width: 200
-            });
-
-
-
-            $(window).scroll(function () {
-
-
-                if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-                    // ajax call get data from server and append to the div
-
-                    console.log("GO")
-
-                    console.log("scrollTop:    " + $(window).scrollTop());
-                    console.log("doc Hei:      " + $(document).height())
-
-                    console.log("Win Hei:    " + $(window).height());
-                    console.log("scrollTop After:   " + $(window).scrollTop());
-                    console.log("--------------END-----");
-
-
-
-
-
-
-                    var myBox = "  <div class=\"item  col-xs-3 col-lg-3 \"><div class=\"thumbnail card-3\" ><div class=\"row\"><div class=\"col-xs-5 col-sm-5 col-md-5 col-lg-5 no-padding\"><div class=\"row\"><div class=\"col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding\">                                            <button type=\"button\" class=\"btn fa fa-phone-square  btn-thumb btn-tooltip  btn-static\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"نمایش شماره تماس\" data-container=\"body\"></button></div><div class=\"col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding\"><button type=\"button\" class=\"btn fa fa-share-alt-square   btn-thumb btn-tooltip btn-static\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"به اشتراک گذاری\" data-container=\"body\"></button></div></div><div class=\"row\"><div class=\"col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding\"><button type=\"button\" class=\"btn fa fa-gratipay  btn-thumb btn-tooltip btn-heart\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"اضافه به علاقه مندی ها\" data-container=\"body\"></button></div><div class=\"col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding\"><button type=\"button\" class=\"btn fa fa-telegram btn-thumb btn-tooltip btn-telegram\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"چت تلگرام\" data-container=\"body\"></button></div>                                    </div><div class=\"row\"><div class=\"col-md-12 text-align-right no-padding\"><button type=\"button\" class=\"btn fa fa-clock-o  btn-thumb btn-tooltip btn-static-big\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"ساعات قادر به پاسخگویی\" data-container=\"body\">07:00-21:00</button></div>                                    </div><div class=\"row\"><div class=\"col-md-12 text-align-right no-padding\"><button type=\"button\" class=\"btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"محله\" data-container=\"body\">تهرانپارس</button></div></div></div><div class=\"col-xs-7 col-sm-7 col-md-7 col-lg-7 no-padding\"><img class=\"group list-group-image fixedimage\" src=\"~/images/ads/12.jpg\" alt=\"\" /></div></div><div class=\"caption\"><h1 class=\"group inner list-group-item-heading titletopstyle\">تولید و ساخت انواع سایبان و قطعات</h1><div class=\"row padding-top-8\"><div class=\"col-xs-8 col-sm-8 col-md-8 col-lg-8 no-padding\"><h3 class=\"lead font-size-10 text-align-left no-margin\">800,000,000 تومان</h3></div><div class=\"col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padding\"><i class=\"fa fa-usd nofa\" aria-hidden=\"true\"></i><span class=\"margin-right-5\">قیمت</span></div></div></div></div></div >";
-
-
-
-
-
-                    $("#products").append(myBox);
-                    $("#products").append(myBox);
-                    $("#products").append(myBox);
-                    $("#products").append(myBox);
-                    $("#products").append(myBox);
-
-
-
-
-                }
-            });
-
-
-
-        });
 
     </script>
 
