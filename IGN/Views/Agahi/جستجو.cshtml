@@ -33,25 +33,13 @@
 
 
                     <div id="sel-cont">
-                     
 
-                        @*<select name="mahale" id="mahale" class=" width-100Per" tabindex="2" data-placeholder="محله را انتخاب کنید ..." multiple>
-                            <option value="0">Value 1</option>
-
-                        </select>*@
-
-                        <select data-placeholder="Your Favorite Types of Bear" multiple class="mahale-select width-100Per" tabindex="8">
-                            @*<option value=""></option>*@
-                            @*<option value="1">American Black Bear</option>
-                            <option value="2">Asiatic Black Bear</option>
-                            <option value="3">Brown Bear</option>
-                            <option value="4">Giant Panda</option>
-                            <option selected value="5">Sloth Bear</option>
-                            <option disabled value="6">Sun Bear</option>
-                            <option selected value="7">Polar Bear</option>
-                            <option disabled value="8">Spectacled Bear</option>*@
+                        
+                        <select data-placeholder="محله را انتخاب کنید ..." multiple class="chosen-select mahale-select width-100Per" >
                         </select>
                         <br />
+
+                      
                     </div>
 
                 </div>
@@ -59,7 +47,7 @@
 
 
                 <div class="col-md-2 ">
-                  
+
                     <select data-placeholder="شهر را انتخاب کنید ..." class="chosen-select ShahrSelect width-100Per" tabindex="2">
                         <option value=""></option>
 
@@ -1124,11 +1112,15 @@
     <script src="~/js/chosen.jquery.min.js"></script>
 
 
-
     <script>
 
-        $('.mahale-select').chosen();
+
+
+
+
+        $(".mahale-select").chosen();
         $('ShahrSelect').chosen();
+
 
 
         $(".chosen-select").chosen().change(function (e, params) {
@@ -1140,31 +1132,40 @@
                     var MyData = $.parseJSON(data);
 
 
-                    console.log(MyData);
-
-
                     if (MyData.length == 0) {
-                        $(".mahale-select").chosen();
-                        $(".mahale-select").empty();
+                        $(".mahale-selected").chosen();
+                        $(".mahale-selected").empty();
 
                     }
                     else {
 
                         for (var i = 0; i < MyData.length; i++) {
                             var $li = "<option value=\"" + MyData[i].RegionID + "\" class=\"\">" + MyData[i].RegionName + "</option>";
-                            $(".mahale-select").append($li);
+                            $(".mahale-selected").append($li);
                         }
-                        //$(".mahale-select").chosen();
 
+                        if (MyData.length == 0) {
+                            $(".mahale-select").chosen();
+                            $(".mahale-select").empty();
+
+                        }
+                        else {
+
+                            for (var i = 0; i < MyData.length; i++) {
+                                var $li = "<option value=\"" + MyData[i].RegionID + "\" class=\"\">" + MyData[i].RegionName + "</option>";
+                                $(".mahale-select").append($li);
+                            }
+                            $('.mahale-select').trigger("chosen:updated");
+              
+                        }
                     }
 
                 }
                 , error: function () {
                     $(".mahale-select").empty();
                 }
-            })
-
-        
+            });
+            
         });
 
 
@@ -1349,10 +1350,7 @@
 
         $(document).ready(function () {
 
-            //$('ShahrSelect').chosen();
 
-
-            //$('select').chosen();
 
 
             $('#example-one').hierarchySelect({
