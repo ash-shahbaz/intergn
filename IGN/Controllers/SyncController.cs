@@ -116,6 +116,11 @@ namespace IGN.Controllers
             return  JsonConvert.SerializeObject(Utility.GetRegions(name));
         }
 
+        public string GetCityByProvinceID(string name)
+        {
+
+            return JsonConvert.SerializeObject(Utility.GetCites(name));
+        }
 
     }
 }
