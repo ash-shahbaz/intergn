@@ -122,5 +122,22 @@ namespace IGN.Controllers
             return JsonConvert.SerializeObject(Utility.GetCites(name));
         }
 
+
+        public string GetRegionByCityName(string name)
+        {
+            var q = Utility.lstCities.Where(p => p.CityName == name).FirstOrDefault();
+
+            return JsonConvert.SerializeObject(Utility.lstRegions.Where(p => p.CityID == q.CityID));
+        }
+
+        public string GetCityByProvinceName(string name)
+        {
+
+            var q = Utility.lstProvinces.Where(p => p.ProvinceName == name).FirstOrDefault();
+
+            return JsonConvert.SerializeObject(Utility.lstCities.Where(p=> p.ProvinceId == q.ProvinceID));
+        }
+
+
     }
 }
