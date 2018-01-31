@@ -491,6 +491,40 @@ namespace IGN.Models
                 }
             }
         }
+        public static List<tblRegions> GetRegionsByRegionID(string RegionID)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync("api/tblRegions/" + RegionID + "").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseString = response.Content.ReadAsStringAsync().Result;
+
+                    //var data =  JsonConvert.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                    //return data;
+                    response.Content = new StringContent(responseString, System.Text.Encoding.UTF8, "application/json");
+
+                    JavaScriptSerializer json_serializer = new JavaScriptSerializer();
+
+                    //string json = JsonConvert.SerializeObject(responseString);
+
+                    //    string q = json_serializer.DeserializeObject(responseString).ToString();
+
+
+                    List<tblRegions> deserializedProduct = JsonConvert.DeserializeObject<List<tblRegions>>(responseString);
+
+                    return deserializedProduct.ToList();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
 
         public static string CreateMD5(string input)
         {
