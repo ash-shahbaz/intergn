@@ -213,6 +213,7 @@
     <Content Include="images\ads\8.jpg" />
     <Content Include="images\ads\9.jpg" />
     <Content Include="images\border-right.jpg" />
+    <Content Include="images\chosen-sprite.png" />
     <Content Include="images\hover-tab.png" />
     <Content Include="images\hoverNext.png" />
     <Content Include="images\hoverPrev.png" />
