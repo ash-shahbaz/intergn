@@ -34,12 +34,11 @@
 
                     <div id="sel-cont">
 
-                        
-                        <select data-placeholder="محله را انتخاب کنید ..." multiple class="chosen-select mahale-select width-100Per" >
-                        </select>
+
+                        <select data-placeholder="محله را انتخاب کنید ..." multiple class="mahale-select width-100Per"></select>
                         <br />
 
-                      
+
                     </div>
 
                 </div>
@@ -1133,39 +1132,26 @@
 
 
                     if (MyData.length == 0) {
-                        $(".mahale-selected").chosen();
-                        $(".mahale-selected").empty();
 
+                        $(".mahale-select").empty();
+                        $('.mahale-select').trigger("chosen:updated");
                     }
                     else {
 
                         for (var i = 0; i < MyData.length; i++) {
                             var $li = "<option value=\"" + MyData[i].RegionID + "\" class=\"\">" + MyData[i].RegionName + "</option>";
-                            $(".mahale-selected").append($li);
+                            $(".mahale-select").append($li);
                         }
+                        $('.mahale-select').trigger("chosen:updated");
 
-                        if (MyData.length == 0) {
-                            $(".mahale-select").chosen();
-                            $(".mahale-select").empty();
-
-                        }
-                        else {
-
-                            for (var i = 0; i < MyData.length; i++) {
-                                var $li = "<option value=\"" + MyData[i].RegionID + "\" class=\"\">" + MyData[i].RegionName + "</option>";
-                                $(".mahale-select").append($li);
-                            }
-                            $('.mahale-select').trigger("chosen:updated");
-              
-                        }
                     }
-
                 }
                 , error: function () {
                     $(".mahale-select").empty();
+                    $('.mahale-select').trigger("chosen:updated");
                 }
             });
-            
+
         });
 
 
