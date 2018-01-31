@@ -8,9 +8,7 @@
 {
     <link href="~/css/animate.min.css" rel="stylesheet" />
 
-    @*<link rel="stylesheet" href="~/css/main.css">
-        <link rel="stylesheet" href="~/css/mainselect.css">
-             <link rel="stylesheet" href="~/css/bootstrap-select.min.css">*@
+    @*<link rel="stylesheet" href="~/css/main.css">*@
     <link rel="stylesheet" href="~/css/slidr.css">
 
     <link href="~/css/hierarchy-select.min.css" rel="stylesheet" />
@@ -35,11 +33,13 @@
 
 
                     <div id="sel-cont">
-                        <select name="mahale" id="mahale" class="width-100Per" data-placeholder="محله را انتخاب کنید ..." multiple>
-                            @*<option value="0">Value 1</option>*@
 
+                        
+                        <select data-placeholder="محله را انتخاب کنید ..." multiple class="chosen-select mahale-select width-100Per" >
                         </select>
                         <br />
+
+                      
                     </div>
 
                 </div>
@@ -47,58 +47,18 @@
 
 
                 <div class="col-md-2 ">
-                    @*<div class="input-group-addon search-category-container width-100">
-                            <label class="styled-select location-select">
-                                <select class="dropdown-product selectpicker" name="product-cat">
 
-                                    @{
-                                        foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
-                                        {
-                                                <option class="CitySelect" value="@item.CityID">@item.CityName</option>
-                                    @{
-                                        foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
-                                        {
-                                            <option class="CitySelect" value="@item.CityID">@item.CityName</option>
-
-                                        }
-
-                                    }
-
-
-
-
-                                </select>
-                            </label>
-                        </div>*@
                     <select data-placeholder="شهر را انتخاب کنید ..." class="chosen-select ShahrSelect width-100Per" tabindex="2">
                         <option value=""></option>
 
                         @{   foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
-                                {
-                                    <option value="@item.CityID">@item.CityName</option>
-                                }
+                            {
+                                <option value="@item.CityID">@item.CityName</option>
                             }
+                        }
 
                     </select>
 
-
-
-                    @*<select data-placeholder="Choose a Country..." class="chosen-select" tabindex="2">
-                        <option value=""></option>
-                        <option value="United States">United States</option>
-                        <option value="United Kingdom">United Kingdom</option>
-                        <option value="Afghanistan">Afghanistan</option>
-                        <option value="Aland Islands">Aland Islands</option>
-                        <option value="Albania">Albania</option>
-                        <option value="Algeria">Algeria</option>
-                        <option value="Virgin Islands, British">Virgin Islands, British</option>
-                        <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
-                        <option value="Wallis and Futuna">Wallis and Futuna</option>
-                        <option value="Western Sahara">Western Sahara</option>
-                        <option value="Yemen">Yemen</option>
-                        <option value="Zambia">Zambia</option>
-                        <option value="Zimbabwe">Zimbabwe</option>
-                    </select>*@
 
                 </div>
 
@@ -1152,44 +1112,60 @@
     <script src="~/js/chosen.jquery.min.js"></script>
 
 
-    @*<script src="~/js/bootstrap-select.min.js"></script>
-        <script src="~/js/mainselect.js"></script>*@
-
     <script>
 
-        $("#mahale").chosen();
+
+
+
+
+        $(".mahale-select").chosen();
         $('ShahrSelect').chosen();
 
 
+
         $(".chosen-select").chosen().change(function (e, params) {
-            
+
             $.ajax({
                 type: "GET",
                 url: "/Sync/GetRegionByCityID/" + $(this).val() + "",
                 success: function (data) {
                     var MyData = $.parseJSON(data);
 
-                    //console.log(data);
 
-                    if (data.length == 0) {
-                        $("#mahale").chosen();
-                        $("#mahale").empty();
+                    if (MyData.length == 0) {
+                        $(".mahale-selected").chosen();
+                        $(".mahale-selected").empty();
 
                     }
                     else {
 
-                        for (var i = 0; i < data.length; i++) {
-                            var $li = "<option value=\" " + data[i].RegionID + "\" class=\"\">" + data[i].RegionName + "</option>";
-                            $("#mahale").append($li);
+                        for (var i = 0; i < MyData.length; i++) {
+                            var $li = "<option value=\"" + MyData[i].RegionID + "\" class=\"\">" + MyData[i].RegionName + "</option>";
+                            $(".mahale-selected").append($li);
                         }
-                        $("#mahale").chosen();
 
+                        if (MyData.length == 0) {
+                            $(".mahale-select").chosen();
+                            $(".mahale-select").empty();
+
+                        }
+                        else {
+
+                            for (var i = 0; i < MyData.length; i++) {
+                                var $li = "<option value=\"" + MyData[i].RegionID + "\" class=\"\">" + MyData[i].RegionName + "</option>";
+                                $(".mahale-select").append($li);
+                            }
+                            $('.mahale-select').trigger("chosen:updated");
+              
+                        }
                     }
 
-                }, error: function () {
-                    $("#mahale").empty();
                 }
-            })
+                , error: function () {
+                    $(".mahale-select").empty();
+                }
+            });
+            
         });
 
 
@@ -1374,10 +1350,7 @@
 
         $(document).ready(function () {
 
-            //$('ShahrSelect').chosen();
 
-
-            //$('select').chosen();
 
 
             $('#example-one').hierarchySelect({
