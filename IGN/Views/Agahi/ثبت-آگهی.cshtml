@@ -95,7 +95,7 @@
                                                     </div>
                                                     <div class="row form-group">
                                                         <div class="col-sm-9 user-type">
-                                                            <select data-placeholder="استان را انتخاب کنید" class="select Province" tabindex="1">
+                                                            <select data-placeholder="استان را انتخاب کنید" class="select Province width-100Per" tabindex="1">
                                                                 <option value=""></option>
                                                         
                                                                   @{
@@ -111,7 +111,7 @@
                                                     </div>
                                                     <div class="row form-group">
                                                         <div class="col-sm-3 user-type">
-                                                            <select data-placeholder="نام محله را وارد کنید" class="select Region" tabindex="1">
+                                                            <select data-placeholder="نام محله را وارد کنید" class="select Region width-100Per" tabindex="1">
                                                                 <option value=""></option>
                                                                
                                                                 
@@ -120,7 +120,7 @@
                                                         <label class="col-sm-3">محله<span class="required">*</span></label>
                                                         <div class="col-sm-3 user-type">
 
-                                                            <select data-placeholder="نام شهر را وارد کنید" class="select City" tabindex="1">
+                                                            <select data-placeholder="نام شهر را وارد کنید" class="select City width-100Per" tabindex="1">
                                                                 <option value=""></option>
                                                             
                                                             
@@ -3188,10 +3188,10 @@
                         });
                         for (var i = 0; i < MyData.length; i++) {
 
-                            var Select = " <option value=\"Reg" + MyData[i].CityID + "\">" + MyData[i].CityName + "</option>";
+                            var Select = " <option value=\"" + MyData[i].CityID + "\">" + MyData[i].CityName + "</option>";
                             $(".City").append(Select);
                         }
-                        $(".City").chosen();
+                        $(".City").trigger("chosen:updated");
                     }
                 })
 
@@ -3201,7 +3201,7 @@
             function LoadRegionByCityID(CityID) {
                 $.ajax({
                     type: "GET",
-                    url: "/Sync/GetRegionByCityName/" + CityID +"",
+                    url: "/Sync/GetRegionByCityID/" + CityID +"",
                     success: function (data) {
                         var MyData = $.parseJSON(data);
 
@@ -3210,12 +3210,12 @@
                         });
                         for (var i = 0; i < MyData.length; i++) {
                             
-                            var Select = " <option value=\"Reg" + MyData[i].RegionID + "\">" + MyData[i].RegionName + "</option>";
+                            var Select = " <option value=\"" + MyData[i].RegionID + "\">" + MyData[i].RegionName + "</option>";
                             $(".Region").append(Select);
 
                           
                         }
-                        $(".Region").chosen()
+                        $(".Region").trigger("chosen:updated");
                        
                     }
                 })

@@ -21,7 +21,7 @@ namespace IGN
             Utility.lstAgaghiCategory = Utility.GetAgahiCategory();
             Utility.lstProvinces = Utility. GetProvince();
             Utility.lstCities = Utility.GetAllCity();
-            Utility.lstRegions = Utility. GetAllRegions();
+            Utility.lstRegions = Utility.GetAllRegions();
 
 
             Utility.SyncTags();

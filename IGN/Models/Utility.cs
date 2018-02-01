@@ -93,7 +93,7 @@ namespace IGN.Models
                 client.BaseAddress = new Uri("http://192.168.1.10:13311");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-                var response = client.GetAsync("api/tblRegion").Result;
+                var response = client.GetAsync("api/Regions").Result;
                 if (response.IsSuccessStatusCode)
                 {
                     string responseString = response.Content.ReadAsStringAsync().Result;
