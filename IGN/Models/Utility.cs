@@ -532,7 +532,33 @@ namespace IGN.Models
         }
 
 
-       
+        public static List<tblPriceType> GetPriceType()
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync("api/tblPriceTypes").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseString = response.Content.ReadAsStringAsync().Result;
+
+
+                    response.Content = new StringContent(responseString, System.Text.Encoding.UTF8, "application/json");
+
+                    JavaScriptSerializer json_serializer = new JavaScriptSerializer();
+                    
+                    List<tblPriceType> deserializedProduct = JsonConvert.DeserializeObject<List<tblPriceType>>(responseString);
+
+                    return deserializedProduct.ToList();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
 
         public static List<tblRegions> GetRegions(string CityID)
         {
@@ -734,13 +760,17 @@ namespace IGN.Models
         public Nullable<int> CountryID { get; set; }
     }
 
-
-
-    public  class tblRegions
+    public class tblRegions
     {
         public int RegionID { get; set; }
         public Nullable<int> CityID { get; set; }
         public string RegionName { get; set; }
+    }
+
+    public  class tblPriceType
+    {
+        public Nullable<int> PriceTypeID { get; set; }
+        public string PriceTypeName { get; set; }
     }
 
     public class tblAgahi
