@@ -145,11 +145,11 @@
                                                     <div class="row form-group">
                                                         <div class="col-sm-9 user-type">
                                                             <div class="md-radio md-radio-inline">
-                                                                <input id="6" type="radio" name="g3">
+                                                                <input id="1" type="radio" name="g3" class="InputServiceType" accesskey="0">
                                                                 <label for="6">درخواست کننده</label>
                                                             </div>
                                                             <div class="md-radio md-radio-inline">
-                                                                <input id="7" type="radio" name="g3">
+                                                                <input id="2" type="radio" name="g3" class="InputServiceType" accesskey="1">
                                                                 <label for="7">ارائه کننده</label>
                                                             </div>
                                                         </div>
@@ -158,7 +158,7 @@
 
                                                     <div class="row form-group add-title">
                                                         <div class="col-sm-9">
-                                                            <input type="text" class="form-control" id="text" placeholder="گوشی اپل مدل 8Plus بدون خط و خش">
+                                                            <input type="text" class="form-control TitleAgahi" id="text"  placeholder="گوشی اپل مدل 8Plus بدون خط و خش">
                                                         </div>
                                                         <label class="col-sm-3 label-title">عنوان آگهی<span class="required">*</span></label>
                                                     </div>
@@ -195,7 +195,7 @@
 
                                                     <div class="row form-group item-description">
                                                         <div class="col-sm-9">
-                                                            <textarea class="form-control" id="textarea" placeholder="توضیحات کالای مربوطه" rows="8"></textarea>
+                                                            <textarea class="form-control txtDesc" id="textarea" placeholder="توضیحات کالای مربوطه" rows="8"></textarea>
                                                         </div>
                                                         <label class="col-sm-3 label-title">توضیحات<span class="required">*</span></label>
                                                     </div>
@@ -227,30 +227,40 @@
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
                                                                                             <div class="row">
-                                                                                                <div class="col-md-6">
+                                                                                                <div class="col-md-2">
 
                                                                                                     <label>هزار تومان</label>
-                                                                                                    <input type="radio" name="price" value="negotiable" id="negotiable">
-                                                                                                    <label for="negotiable">توافقی </label>
+                                                                                                  
                                                                                                 </div>
                                                                                                 <div class="col-md-6">
-                                                                                                    <input type="text" class="form-control" id="text1">
+                                                                                                    <input type="text" class="form-control PriceAparteman" id="text1">
+                                                                                                </div>
+                                                                                                <div class="col-md-4">
+                                                                                                    <select data-placeholder="1" class="select DropPriceTypeAparteman" tabindex="1">
+                                                                                                        <option value=""></option>
+                                                                                                        <option value="1">توافقی</option>
+                                                                                                        <option value="2">معاوضه</option>
+                                                                                                        <option value="3">مقطوع</option>
+
+                                                                                                    </select>
                                                                                                 </div>
                                                                                             </div>
 
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">قیمت کل<span class="required">*</span></label>
                                                                                     </div>
+
+
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="50" type="text">
+                                                                                            <input class="form-control keyword numbertxt metrajhAparteman" name="keyword" value="" placeholder="50" type="text">
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">متراژ (متر مربع)<span class="required">*</span></label>
                                                                                     </div>
 
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <select data-placeholder="تعداد اتاق" class="select" tabindex="1">
+                                                                                            <select data-placeholder="تعداد اتاق" class="select TeadadOtaghAparteman" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -265,11 +275,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="6" type="radio" name="g3">
+                                                                                                <input id="ap1" type="radio" name="g4" accesskey="0" class="ServiceTypeAparteman">
                                                                                                 <label for="6">فروشی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="7" type="radio" name="g3">
+                                                                                                <input id="ap2" type="radio" name="g4" accesskey="1" class="ServiceTypeAparteman">
                                                                                                 <label for="7">درخواستی</label>
                                                                                             </div>
                                                                                         </div>
@@ -278,11 +288,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="6" type="radio" name="g3">
+                                                                                                <input id="6" type="radio" name="g5" accesskey="0" class="PersonApratemanOrAmlak">
                                                                                                 <label for="6">شخصی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="7" type="radio" name="g3">
+                                                                                                <input id="7" type="radio" name="g5" accesskey="1" class="PersonApratemanOrAmlak">
                                                                                                 <label for="7">مشاور املاک</label>
                                                                                             </div>
                                                                                         </div>
@@ -292,11 +302,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="6" type="radio" name="g3">
+                                                                                                <input id="6" type="radio" name="g6"  accesskey="0" class="HoomeShahr" >
                                                                                                 <label for="6">نیست</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="7" type="radio" name="g3">
+                                                                                                <input id="7" type="radio" name="g6" accesskey="1"  class="HoomeShahr">
                                                                                                 <label for="7">هست</label>
                                                                                             </div>
                                                                                         </div>
@@ -316,7 +326,7 @@
                                                                                     <h4>جزئیات خیلی آگهی</h4>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <select data-placeholder="1385" class="select" tabindex="1">
+                                                                                            <select data-placeholder="1385" class="select YearBuildAparteman" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -329,7 +339,7 @@
                                                                                     </div>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <select data-placeholder="5" class="select" tabindex="1">
+                                                                                            <select data-placeholder="5" class="select ApartemanFloor" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -342,7 +352,7 @@
                                                                                     </div>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <select data-placeholder="سنگ" class="select" tabindex="1">
+                                                                                            <select data-placeholder="سنگ" class="select JeansKafVahedAparteman" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -353,9 +363,10 @@
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">جنس کف</label>
                                                                                     </div>
+
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <select data-placeholder="بخاری" class="select" tabindex="1">
+                                                                                            <select data-placeholder="بخاری" class="select GarmayeshAparteman" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -378,80 +389,80 @@
                                                                                                 <label for="i3">آسانسور</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">سرویس ایرانی</label>
+                                                                                                <input id="i4" type="checkbox">
+                                                                                                <label for="i4">سرویس ایرانی</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">سرویس خارجی</label>
+                                                                                                <input id="i5" type="checkbox">
+                                                                                                <label for="i5">سرویس فرنگی</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">بالکن</label>
+                                                                                                <input id="i6" type="checkbox">
+                                                                                                <label for="i6">بالکن</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">استخر</label>
+                                                                                                <input id="i7" type="checkbox">
+                                                                                                <label for="i7">استخر</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">زیرزمین</label>
+                                                                                                <input id="i8" type="checkbox">
+                                                                                                <label for="i8">زیرزمین</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">حیاط</label>
+                                                                                                <input id="i9" type="checkbox">
+                                                                                                <label for="i9">حیاط</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">سونا</label>
+                                                                                                <input id="i10" type="checkbox">
+                                                                                                <label for="i10">سونا</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">جکوزی</label>
+                                                                                                <input id="i11" type="checkbox">
+                                                                                                <label for="i11">جکوزی</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">خواب مستر</label>
+                                                                                                <input id="i12" type="checkbox">
+                                                                                                <label for="i12">خواب مستر</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">روف گاردن</label>
+                                                                                                <input id="i13" type="checkbox">
+                                                                                                <label for="i13">روف گاردن</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">چیلر</label>
+                                                                                                <input id="i14" type="checkbox">
+                                                                                                <label for="i14">چیلر</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">باربکیو</label>
+                                                                                                <input id="i15" type="checkbox">
+                                                                                                <label for="i15">باربکیو</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">آلاچیق</label>
+                                                                                                <input id="i15" type="checkbox">
+                                                                                                <label for="i15">آلاچیق</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">لابی</label>
+                                                                                                <input id="i16" type="checkbox">
+                                                                                                <label for="i16">لابی</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">محوطه بازی کودک</label>
+                                                                                                <input id="i17" type="checkbox">
+                                                                                                <label for="i17">محوطه بازی کودک</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">سالن بدنسازی</label>
+                                                                                                <input id="i18" type="checkbox">
+                                                                                                <label for="i18">سالن بدنسازی</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">ورثه ای</label>
+                                                                                                <input id="i18" type="checkbox">
+                                                                                                <label for="i18">ورثه ای</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">سند تک برگ</label>
+                                                                                                <input id="i19" type="checkbox">
+                                                                                                <label for="i19">سند تک برگ</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">وام</label>
+                                                                                                <input id="i20" type="checkbox">
+                                                                                                <label for="i20">وام</label>
                                                                                             </div>
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">سایر</label>
@@ -465,7 +476,7 @@
                                                                                                     <label>متر مربع</label>
                                                                                                 </div>
                                                                                                 <div class="col-md-6">
-                                                                                                    <input type="text" class="form-control" id="text1">
+                                                                                                    <input type="text" class="form-control ZirebanaAparteman" id="text1">
                                                                                                 </div>
                                                                                             </div>
 
@@ -482,7 +493,7 @@
                                                                                                     <label for="negotiable">ندارد </label>
                                                                                                 </div>
                                                                                                 <div class="col-md-6">
-                                                                                                    <input type="text" class="form-control" id="text1">
+                                                                                                    <input type="text" class="form-control vamAparteman" id="text1" >
                                                                                                 </div>
                                                                                             </div>
 
@@ -3338,10 +3349,34 @@
 
 
 
+            var servicetype;
+            var TitleAgahi;
+            var ServiceTypeAparteman;
+
+
+            $(".InputServiceType").click(function () {
+                servicetype = $(this).attr("accesskey");
+            });
+            $(".TitleAgahi").click(function () {
+                TitleAgahi = $(this).attr("accesskey");
+            });
+            $(".ServiceTypeAparteman").click(function () {
+                ServiceTypeAparteman = $(this).attr("accesskey");
+            });
+
+                
+
 
             $("#btnSabt").click(function () {
 
 
+
+
+                var selectedCountry = $(".Province option:selected").val();
+                var selectedCountry = $(".City option:selected").val();
+                var selectedCountry = $(".Region option:selected").val();
+                
+                var txtDesc = $(".txtDesc").val();    
 
 
 
@@ -3349,9 +3384,36 @@
 
                 if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "فروش املاک مسکونی" && "@ViewBag.lvl2" == "آپارتمان" || "@ViewBag.lvl2" == "خانه و ویلا") {
 
+                    var DropPriceTypeAparteman = $(".DropPriceTypeAparteman option:selected").val();
+                    var PriceAparteman = $(".PriceAparteman").val();
+                    var MetrajhAparteman = $(".metrajhAparteman").val();
 
-            
+                    var TeadadOtaghAparteman = $(".TeadadOtaghAparteman option:selected").val();
+                    var PersonApratemanOrAmlak = $(".PersonApratemanOrAmlak").attr("accesskey");
+                    var HoomeShahr = $(".HoomeShahr").attr("accesskey");
 
+                    var YearBuildAparteman = $(".YearBuildAparteman option:selected").val();
+
+                    var ApartemanFloor = $(".ApartemanFloor option:selected").val();
+
+                    var JeansKafVahedAparteman = $(".JeansKafVahedAparteman option:selected").val();;
+                    var GarmayeshAparteman = $(".GarmayeshAparteman option:selected").val();;
+
+
+                    var arrSayer = [];
+                    for (var i = 2; i < 21; i++) {
+
+                        $("#i" + i + "").change(function () {
+                            
+                            arrSayer.push($(this).parent().find("Lable").val());
+                        })
+
+                        var ZirebanaAparteman = $(".ZirebanaAparteman").val();
+                        var vamAparteman = $(".vamAparteman").val();
+
+                    }
+                    
+                    //ServiceTypeAparteman
 
 
 
