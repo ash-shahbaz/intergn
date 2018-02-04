@@ -3426,7 +3426,7 @@
                         AgahiServiceID: servicetype, CategoryAgahiID: CategoryID, AgahiTitle: $(".TitleAgahi").val(),
                         Description: $(".txtDesc").val(), UserID: 10, RegisterDate: null, AdminUserID: 0, AdminAgreeDate: null, AgahiStatus: 0, Location:"",
                         LanguageID: 1, ProvinceID: 10, RegionID: 10, Tell: $(".Tell").val(), Mobile: $(".Mobile").val(),
-                        PriceTypeID: $(".PriceTypeID").val(), Price: $(".PriceAparteman").val(), PlanShowAgahiID: 0, HasImage: true, Chatable: false, OnTime: "10:00-15:00", SpecialAgahi:false
+                        PriceTypeID: $(".PriceTypeID").val(), Price: $(".PriceAparteman").val(), PlanShowAgahiID: 0, HasImage: true, Chatable: "asdas", OnTime: "10:00-15:00", SpecialAgahi:false
                     });
                     //$.ajax({
                     //    type: "Post",
@@ -3436,30 +3436,83 @@
                     //        alert(data);
                     //    }
                     //});
+                    
 
+                    //var qs = $.stringfy(AgahiMelk);
 
+                    //console.log(AgahiMelk);
+                    //console.log(JSON.stringify(AgahiMelk));
 
+                    var AgahiID = 0;
+                    var CategoryAgahiID = CategoryID;
+                    var AgahiServiceID = servicetype;
+                    var AgahiTitle = $(".TitleAgahi").val();
+                    var Description = $(".txtDesc").val();
+                    var RegisterDate = null;
+                    var UserID = 10;
+                    var AdminUserID = 0;
+                    var AdminAgreeDate = null;
+                    var AgahiStatus = 0;
+                    var Location = "";
+                    var LanguageID = 1;
+                    var ProvinceID = 10;
+                    var RegionID = 10;
+                    var Tell = $(".Tell").val();
+                    var Mobile = $(".Mobile").val();
+                    var PriceTypeID = $(".PriceTypeID").val();
+                    var Price = $(".PriceAparteman").val();
+                    var PlanShowAgahiID = 0;
+                    var HasImage = true;
+                    var Chatable = "asdas";
+                    var OnTime = "10:00-15:00";
+                    var SpecialAgahi = false;
 
+                    
                     $.ajax({
-                        type: "POST",
-                        url: "/Agahi/AgahiAdd/",
+                        type: "GET",
+                        url: "/Agahi/AgahiAdd",
                         data: {
-                            AgahiServiceID: 10, CategoryAgahiID: CategoryID, AgahiTitle: $(".TitleAgahi").val(),
-                            Description: $(".txtDesc").val(), UserID: 10, RegisterDate: null, AdminUserID: 0, AdminAgreeDate: null, AgahiStatus: 0, Location: "",
-                            LanguageID: 1, ProvinceID: 10, RegionID: 10, Tell: $(".Tell").val(), Mobile: $(".Mobile").val(),
-                            PriceTypeID: $(".PriceTypeID").val(), Price: $(".PriceAparteman").val(), PlanShowAgahiID: 0, HasImage: true, Chatable: false, OnTime: "10:00-15:00", SpecialAgahi: false},
-                        contentType: "application/json; charset=utf-8",
+                            AgahiID: AgahiID, CategoryAgahiID: CategoryAgahiID, AgahiServiceID: AgahiServiceID, AgahiTitle: AgahiTitle,
+                            Description: Description, RegisterDate: RegisterDate, UserID: UserID, AdminUserID: AdminUserID, AdminAgreeDate: AdminAgreeDate, AgahiStatus: AgahiStatus, Location: Location,
+                            LanguageID: LanguageID, ProvinceID: ProvinceID, RegionID: RegionID, Tell: Tell, Mobile: Mobile,
+                            PriceTypeID: PriceTypeID, Price: Price, PlanShowAgahiID: PlanShowAgahiID, HasImage: HasImage, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi
+                        },
+                        contentType: "text/plain",
                         dataType: "json",
-                        success: function (response) {
-                            alert("Hello: " + response.Name + ".\nCurrent Date and Time: " + response.DateTime);
+                        success: function (data) {
+                            var MyData = $.parseJSON(data);
+
+
+
                         },
-                        failure: function (response) {
-                            alert(response.responseText);
-                        },
-                        error: function (response) {
-                            alert(response.responseText);
+                        error: function (jqxhr) {
+                            alert("Error");
                         }
                     });
+                    //$.ajax({
+                    //    type: "POST",
+                    //    url: "/Agahi/AgahiAdd",
+                    //    data: {
+                    //        AgahiID: AgahiID, CategoryAgahiID: CategoryAgahiID, AgahiServiceID: AgahiServiceID, AgahiTitle: AgahiTitle,
+                    //        Description: Description, RegisterDate: RegisterDate, UserID: UserID, AdminUserID: AdminUserID, AdminAgreeDate: AdminAgreeDate, AgahiStatus: AgahiStatus, Location: Location,
+                    //        LanguageID: LanguageID, ProvinceID: ProvinceID, RegionID: RegionID, Tell: Tell, Mobile: Mobile,
+                    //        PriceTypeID: PriceTypeID, Price: Price, PlanShowAgahiID: PlanShowAgahiID, HasImage: HasImage, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi
+                    //    },
+                    //    contentType: 'application/json; charset=utf-8',
+                    //    dataType: "json",
+                    //    success: function (data) {
+                    //        var MyData = $.parseJSON(data);
+
+
+
+                    //    },
+                    //    error: function (jqxhr) {
+                    //        alert("Error");
+                    //    }
+                    //});
+
+
+
 
                     
 
