@@ -2,8 +2,9 @@
 @{
 
     string l2 = ViewBag.lv2;
+    string l3 = ViewBag.lv3;
 
-    if (ViewBag.lv1 == "لوازم-الکترونیکی" && !l2.Contains("رایانه") || !l2.Contains("رایانه-همراه"))
+    if (ViewBag.lv1 == "لوازم-الکترونیکی" && !l3.Contains("رایانه-همراه") || !l3.Contains("رایانه-رومیزی") || !l3.Contains("گوشی-موبایل") || !l3.Contains("تبلت"))
     {
 
                                 <!-- --------شروع - لوازم الکترونیکی - لوازم جانبی موبایل و تبلت و سیم کارت و تمام زیر مجموعه های صوتی و تصویری و کنسول ها و بازی ها و رایانه بجزززز رایانه همراه و رومیزی-------- -->
@@ -11,10 +12,7 @@
         <div class="row">
 
 
-            <div class="col-md-3">
-            </div>
-
-            <div class="col-md-3">
+            <div class="col-md-6">
             </div>
 
             <div class="col-md-3">
@@ -67,7 +65,7 @@
         </div>
         <div class="row">
             <div class="col-md-8 search-col">
-                <button id="SearchAllAgahi" class="btn btn-common btn-search btn-block search-btn"><strong>جستجو</strong></button>
+                <button id="SearchElectronics" class="btn btn-common btn-search btn-block search-btn"><strong>جستجو</strong></button>
             </div>
             <div class="col-md-2">
                 <div class="row margin-top-20">
@@ -114,12 +112,12 @@
 
 
 
-
 @{
 
 
-    if (ViewBag.lv1 == "لوازم-الکترونیکی" && l2.Contains("رایانه") || l2.Contains("رایانه-همراه"))
+    if (ViewBag.lv1 == "لوازم-الکترونیکی" && l2.Contains("موبایل-و-تبلت") && l3.Contains("گوشی-موبایل") || l3.Contains("تبلت"))
     {
+
           <!-- --------شروع - لوازم الکترونیکی - گوشی موبایل  و تبلت-------- -->
 
 
@@ -211,7 +209,7 @@
 
         <div class="row">
             <div class="col-md-8 search-col">
-                <button id="SearchAllAgahi" class="btn btn-common btn-search btn-block search-btn"><strong>جستجو</strong></button>
+                <button id="SearchMobileTablet" class="btn btn-common btn-search btn-block search-btn"><strong>جستجو</strong></button>
             </div>
             <div class="col-md-2">
                 <div class="row margin-top-20">
@@ -245,8 +243,22 @@
             </div>
         </div>
          <!-- --------پایان - لوازم الکترونیکی - گوشی موبایل  و تبلت-------- -->
+        
+    }
 
-        <!-- --------شروع - رایانه - رایانه همراه-------- -->
+
+
+}
+
+
+
+
+@{
+
+
+    if (ViewBag.lv1 == "لوازم-الکترونیکی" && l2.Contains("رایانه") && l3.Contains("رایانه-همراه"))
+    {
+             <!-- --------شروع - رایانه - رایانه همراه-------- -->
 
         <div class="row">
 
@@ -450,7 +462,7 @@
         </div>
         <div class="row">
             <div class="col-md-8 search-col">
-                <button id="SearchAllAgahi" class="btn btn-common btn-search btn-block search-btn"><strong>جستجو</strong></button>
+                <button id="SearchLapTop" class="btn btn-common btn-search btn-block search-btn"><strong>جستجو</strong></button>
             </div>
             <div class="col-md-2">
                 <div class="row margin-top-20">
@@ -485,9 +497,19 @@
         </div>
 
                     <!-- --------پایان - رایانه - رایانه همراه-------- -->
+    }
 
 
-            <!-- --------شروع - لوازم الکترونیکی - رایانه - رایانه رومیزی-------- -->
+
+}
+
+@{
+
+
+    if (ViewBag.lv1 == "لوازم-الکترونیکی" && l2.Contains("رایانه") && l3.Contains("رایانه-رومیزی"))
+    {
+
+                    <!-- --------شروع - لوازم الکترونیکی - رایانه - رایانه رومیزی-------- -->
 
 
         <div class="row">
@@ -628,7 +650,7 @@
         </div>
         <div class="row">
             <div class="col-md-8 search-col">
-                <button id="SearchAllAgahi" class="btn btn-common btn-search btn-block search-btn"><strong>جستجو</strong></button>
+                <button id="SearchCase" class="btn btn-common btn-search btn-block search-btn"><strong>جستجو</strong></button>
             </div>
             <div class="col-md-2">
                 <div class="row margin-top-20">
@@ -664,11 +686,16 @@
 
                            <!-- --------پایان - لوازم الکترونیکی - رایانه - رایانه رومیزی-------- -->
 
+
+
+
+
     }
 
 
 
 }
+
 
 
 
