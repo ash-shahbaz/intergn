@@ -95,16 +95,18 @@ namespace IGN.Controllers
             return View();
         }
 
-        //public ActionResult AgahiAdd()
-        //{
+        [HttpPost]
+        public JsonResult AgahiAdd(tblAgahi tagahi)
+        {
 
 
+            Utility.AddAgahi(tagahi);
+
+            return Json("Ok");
+
+        }
 
 
-
-        //}
-
-   
     }
    
 }
