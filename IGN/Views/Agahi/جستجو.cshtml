@@ -1482,11 +1482,17 @@
                 var HasFast = false;
             }  
 
-            
-            
 
-            alert(KindSelect);
-
+            $.ajax({
+                type: "GET",
+                url: "/",
+                success: function (data) {
+                    var MyData = $.parseJSON(data);
+                    
+                    
+                    
+                }
+            });
         })
 
 
