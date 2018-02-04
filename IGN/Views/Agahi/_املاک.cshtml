@@ -14,16 +14,16 @@
                 <div class="field-container radio-field">
                     <label>حومه شهر</label>
                     <div class="md-radio md-radio-inline">
-                        <input id="4" type="radio" name="g3" checked>
-                        <label for="4">فرقی نمی کند</label>
+                        <input id="Side-All" type="radio" name="Countryside" checked>
+                        <label for="Side-All">فرقی نمی کند</label>
                     </div>
                     <div class="md-radio md-radio-inline">
-                        <input id="5" type="radio" name="g3" checked>
-                        <label for="5">نیست</label>
+                        <input id="Side-No" type="radio" name="Countryside">
+                        <label for="Side-No">نیست</label>
                     </div>
                     <div class="md-radio md-radio-inline">
-                        <input id="6" type="radio" name="g3">
-                        <label for="6">هست</label>
+                        <input id="Side-Yes" type="radio" name="Countryside">
+                        <label for="Side-Yes">هست</label>
                     </div>
                 </div>
             </div>
@@ -31,16 +31,16 @@
                 <div class="field-container radio-field">
                     <label>نوع آگهی دهنده</label>
                     <div class="md-radio md-radio-inline">
-                        <input id="4" type="radio" name="g3" checked>
-                        <label for="4">همه</label>
+                        <input id="Person-All" type="radio" name="Person" checked>
+                        <label for="Person-All">همه</label>
                     </div>
                     <div class="md-radio md-radio-inline">
-                        <input id="5" type="radio" name="g3" checked>
-                        <label for="5">شخصی</label>
+                        <input id="Person-Self" type="radio" name="Person">
+                        <label for="Person-Self">شخصی</label>
                     </div>
                     <div class="md-radio md-radio-inline">
-                        <input id="6" type="radio" name="g3">
-                        <label for="6">مشاوراملاک</label>
+                        <input id="Person-Prop" type="radio" name="Person">
+                        <label for="Person-Prop">مشاوراملاک</label>
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@
                     <label>قیمت کل</label>
                     <div class="row">
                         <div class="col-md-12 no-padding">
-                            <select data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
+                            <select id="Kind-TotalPrice" data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
                                 <option value=""></option>
                                 <option value="1">مقطوع - تومان</option>
                                 <option value="1">مجانی</option>
@@ -79,10 +79,10 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                            <input id="Untill-TotalPrice" class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
                         </div>
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                            <input id="From-TotalPrice" class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
                         </div>
                     </div>
                 </div>
@@ -97,10 +97,10 @@
                     <label>متراژ (متر مربع)</label>
                     <div class="row">
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                            <input id="Untill-Area" class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
                         </div>
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                            <input id="From-Area" class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
                         </div>
                     </div>
                 </div>
@@ -170,7 +170,7 @@
                     <label>اجاره ماهیانه</label>
                     <div class="row">
                         <div class="col-md-12 no-padding">
-                            <select data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
+                            <select  data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
                                 <option value=""></option>
                                 <option value="1">مقطوع - تومان</option>
                                 <option value="1">مجانی</option>
@@ -228,10 +228,10 @@
                     <label>متراژ (متر مربع)</label>
                     <div class="row">
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                            <input  id="Untill-Area" class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
                         </div>
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                            <input id="From-Area"  class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
                         </div>
                     </div>
                 </div>
@@ -248,16 +248,16 @@
                         <div class="field-container radio-field">
                             <label>حومه شهر</label>
                             <div class="md-radio md-radio-inline">
-                                <input id="4" type="radio" name="g3" checked>
-                                <label for="4">فرقی نمی کند</label>
+                                <input id="Side-All" type="radio" name="Countryside" checked>
+                                <label for="Side-All">فرقی نمی کند</label>
                             </div>
                             <div class="md-radio md-radio-inline">
-                                <input id="5" type="radio" name="g3" checked>
-                                <label for="5">نیست</label>
+                                <input id="Side-No" type="radio" name="Countryside">
+                                <label for="Side-No">نیست</label>
                             </div>
                             <div class="md-radio md-radio-inline">
-                                <input id="6" type="radio" name="g3">
-                                <label for="6">هست</label>
+                                <input id="Side-Yes" type="radio" name="Countryside">
+                                <label for="Side-Yes">هست</label>
                             </div>
                         </div>
                     </div>
@@ -265,16 +265,16 @@
                         <div class="field-container radio-field">
                             <label>نوع آگهی دهنده</label>
                             <div class="md-radio md-radio-inline">
-                                <input id="4" type="radio" name="g3" checked>
-                                <label for="4">همه</label>
+                                <input id="Person-All" type="radio" name="Person" checked>
+                                <label for="Person-All">همه</label>
                             </div>
                             <div class="md-radio md-radio-inline">
-                                <input id="5" type="radio" name="g3" checked>
-                                <label for="5">شخصی</label>
+                                <input id="Person-Self" type="radio" name="Person">
+                                <label for="Person-Self">شخصی</label>
                             </div>
                             <div class="md-radio md-radio-inline">
-                                <input id="6" type="radio" name="g3">
-                                <label for="6">مشاوراملاک</label>
+                                <input id="Person-Prop" type="radio" name="Person">
+                                <label for="Person-Prop">مشاوراملاک</label>
                             </div>
                         </div>
                     </div>
@@ -369,16 +369,16 @@
                 <div class="field-container radio-field">
                     <label>نوع آگهی دهنده</label>
                     <div class="md-radio md-radio-inline">
-                        <input id="4" type="radio" name="g3" checked>
-                        <label for="4">همه</label>
+                        <input id="Person-All" type="radio" name="Person" checked>
+                        <label for="Person-All">همه</label>
                     </div>
                     <div class="md-radio md-radio-inline">
-                        <input id="5" type="radio" name="g3" checked>
-                        <label for="5">شخصی</label>
+                        <input id="Person-Self" type="radio" name="Person">
+                        <label for="Person-Self">شخصی</label>
                     </div>
                     <div class="md-radio md-radio-inline">
-                        <input id="6" type="radio" name="g3">
-                        <label for="6">مشاوراملاک</label>
+                        <input id="Person-Prop" type="radio" name="Person">
+                        <label for="Person-Prop">مشاوراملاک</label>
                     </div>
                 </div>
             </div>
@@ -406,7 +406,7 @@
                     <label>قیمت کل</label>
                     <div class="row">
                         <div class="col-md-12 no-padding">
-                            <select data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
+                            <select id="Kind-TotalPrice" data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
                                 <option value=""></option>
                                 <option value="1">مقطوع - تومان</option>
                                 <option value="1">مجانی</option>
@@ -417,10 +417,10 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                            <input  id="Untill-TotalPrice" class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
                         </div>
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                            <input id="From-TotalPrice" class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
                         </div>
                     </div>
                 </div>
@@ -435,10 +435,10 @@
                     <label>متراژ (متر مربع)</label>
                     <div class="row">
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                            <input id="Untill-Area"  class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
                         </div>
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                            <input id="From-Area"  class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
                         </div>
                     </div>
                 </div>
@@ -569,10 +569,10 @@
                     <label>متراژ (متر مربع)</label>
                     <div class="row">
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                            <input id="Untill-Area"  class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
                         </div>
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                            <input id="From-Area"  class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
                         </div>
                     </div>
                 </div>
@@ -589,16 +589,16 @@
                                 <div class="field-container radio-field">
                                     <label>حومه شهر</label>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="4" type="radio" name="g3" checked>
-                                        <label for="4">فرقی نمی کند</label>
+                                        <input id="Side-All" type="radio" name="Countryside" checked>
+                                        <label for="Side-All">فرقی نمی کند</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="5" type="radio" name="g3" checked>
-                                        <label for="5">نیست</label>
+                                        <input id="Side-No" type="radio" name="Countryside">
+                                        <label for="Side-No">نیست</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="6" type="radio" name="g3">
-                                        <label for="6">هست</label>
+                                        <input id="Side-Yes" type="radio" name="Countryside">
+                                        <label for="Side-Yes">هست</label>
                                     </div>
                                 </div>
                             </div>
@@ -606,16 +606,16 @@
                                 <div class="field-container radio-field">
                                     <label>نوع آگهی دهنده</label>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="4" type="radio" name="g3" checked>
-                                        <label for="4">همه</label>
+                                        <input id="Person-All" type="radio" name="Person" checked>
+                                        <label for="Person-All">همه</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="5" type="radio" name="g3" checked>
-                                        <label for="5">شخصی</label>
+                                        <input id="Person-Self" type="radio" name="Person">
+                                        <label for="Person-Self">شخصی</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="6" type="radio" name="g3">
-                                        <label for="6">مشاوراملاک</label>
+                                        <input id="Person-Prop" type="radio" name="Person">
+                                        <label for="Person-Prop">مشاوراملاک</label>
                                     </div>
                                 </div>
                             </div>
@@ -802,7 +802,7 @@
                                 <option value="1">جهت معاوضه</option>
                             </select>*@
 
-                            <select data-placeholder="مقطوع-تومان" class="kind-Price  width-100Per" tabindex="2">
+                            <select id="Kind-TotalPrice" data-placeholder="مقطوع-تومان" class="kind-Price  width-100Per" tabindex="2">
                                 <option value=""></option>
 
                                 @{   foreach (var item in Utility.GetPriceType())
@@ -818,10 +818,10 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt frominputpriceapart" name="keyword" value="" placeholder="تا" type="text">
+                            <input  id="Untill-TotalPrice" class="form-control keyword numbertxt frominputpriceapart" name="keyword" value="" placeholder="تا" type="text">
                         </div>
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt untillinputpriceapart" name="keyword" value="" placeholder="از" type="text">
+                            <input id="From-TotalPrice" class="form-control keyword numbertxt untillinputpriceapart" name="keyword" value="" placeholder="از" type="text">
                         </div>
                     </div>
                 </div>
@@ -836,10 +836,10 @@
                     <label>متراژ (متر مربع)</label>
                     <div class="row">
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                            <input id="Untill-Area"  class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
                         </div>
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                            <input id="From-Area"  class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
                         </div>
                     </div>
                 </div>
@@ -858,16 +858,16 @@
                                 <div class="field-container radio-field">
                                     <label>حومه شهر</label>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="4" type="radio" name="g3" checked>
-                                        <label for="4">فرقی نمی کند</label>
+                                        <input id="Side-All" type="radio" name="Countryside" checked>
+                                        <label for="Side-All">فرقی نمی کند</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="5" type="radio" name="g3" checked>
-                                        <label for="5">نیست</label>
+                                        <input id="Side-No" type="radio" name="Countryside">
+                                        <label for="Side-No">نیست</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="6" type="radio" name="g3">
-                                        <label for="6">هست</label>
+                                        <input id="Side-Yes" type="radio" name="Countryside">
+                                        <label for="Side-Yes">هست</label>
                                     </div>
                                 </div>
                             </div>
@@ -875,16 +875,16 @@
                                 <div class="field-container radio-field">
                                     <label>نوع آگهی دهنده</label>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="4" type="radio" name="g3" checked>
-                                        <label for="4">همه</label>
+                                        <input id="Person-All" type="radio" name="Person" checked>
+                                        <label for="Person-All">همه</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="5" type="radio" name="g3" checked>
-                                        <label for="5">شخصی</label>
+                                        <input id="Person-Self" type="radio" name="Person">
+                                        <label for="Person-Self">شخصی</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="6" type="radio" name="g3">
-                                        <label for="6">مشاوراملاک</label>
+                                        <input id="Person-Prop" type="radio" name="Person">
+                                        <label for="Person-Prop">مشاوراملاک</label>
                                     </div>
                                 </div>
                             </div>
@@ -1162,16 +1162,16 @@
                 <div class="field-container radio-field">
                     <label>حومه شهر</label>
                     <div class="md-radio md-radio-inline">
-                        <input id="4" type="radio" name="g3" checked>
-                        <label for="4">فرقی نمی کند</label>
+                        <input id="Side-All" type="radio" name="Countryside" checked>
+                        <label for="Side-All">فرقی نمی کند</label>
                     </div>
                     <div class="md-radio md-radio-inline">
-                        <input id="5" type="radio" name="g3" checked>
-                        <label for="5">نیست</label>
+                        <input id="Side-No" type="radio" name="Countryside">
+                        <label for="Side-No">نیست</label>
                     </div>
                     <div class="md-radio md-radio-inline">
-                        <input id="6" type="radio" name="g3">
-                        <label for="6">هست</label>
+                        <input id="Side-Yes" type="radio" name="Countryside">
+                        <label for="Side-Yes">هست</label>
                     </div>
                 </div>
             </div>
@@ -1179,16 +1179,16 @@
                 <div class="field-container radio-field">
                     <label>نوع آگهی دهنده</label>
                     <div class="md-radio md-radio-inline">
-                        <input id="4" type="radio" name="g3" checked>
-                        <label for="4">همه</label>
+                        <input id="Person-All" type="radio" name="Person" checked>
+                        <label for="Person-All">همه</label>
                     </div>
                     <div class="md-radio md-radio-inline">
-                        <input id="5" type="radio" name="g3" checked>
-                        <label for="5">شخصی</label>
+                        <input id="Person-Self" type="radio" name="Person">
+                        <label for="Person-Self">شخصی</label>
                     </div>
                     <div class="md-radio md-radio-inline">
-                        <input id="6" type="radio" name="g3">
-                        <label for="6">مشاوراملاک</label>
+                        <input id="Person-Prop" type="radio" name="Person">
+                        <label for="Person-Prop">مشاوراملاک</label>
                     </div>
                 </div>
             </div>
@@ -1218,7 +1218,7 @@
                     <label>قیمت کل</label>
                     <div class="row">
                         <div class="col-md-12 no-padding">
-                            <select data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
+                            <select id="Kind-TotalPrice" data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
                                 <option value=""></option>
                                 <option value="1">مقطوع - تومان</option>
                                 <option value="1">مجانی</option>
@@ -1229,10 +1229,10 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                            <input id="Untill-TotalPrice"  class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
                         </div>
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                            <input id="From-TotalPrice" class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
                         </div>
                     </div>
                 </div>
@@ -1247,10 +1247,10 @@
                     <label>متراژ (متر مربع)</label>
                     <div class="row">
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                            <input id="Untill-Area"  class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
                         </div>
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                            <input id="From-Area"  class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
                         </div>
                     </div>
                 </div>
@@ -1469,10 +1469,10 @@
                     <label>متراژ (متر مربع)</label>
                     <div class="row">
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                            <input id="Untill-Area"  class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
                         </div>
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                            <input id="From-Area"  class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
                         </div>
                     </div>
                 </div>
@@ -1491,16 +1491,16 @@
                                 <div class="field-container radio-field">
                                     <label>حومه شهر</label>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="4" type="radio" name="g3" checked>
-                                        <label for="4">فرقی نمی کند</label>
+                                        <input id="Side-All" type="radio" name="Countryside" checked>
+                                        <label for="Side-All">فرقی نمی کند</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="5" type="radio" name="g3" checked>
-                                        <label for="5">نیست</label>
+                                        <input id="Side-No" type="radio" name="Countryside">
+                                        <label for="Side-No">نیست</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="6" type="radio" name="g3">
-                                        <label for="6">هست</label>
+                                        <input id="Side-Yes" type="radio" name="Countryside">
+                                        <label for="Side-Yes">هست</label>
                                     </div>
                                 </div>
                             </div>
@@ -1508,16 +1508,16 @@
                                 <div class="field-container radio-field">
                                     <label>نوع آگهی دهنده</label>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="4" type="radio" name="g3" checked>
-                                        <label for="4">همه</label>
+                                        <input id="Person-All" type="radio" name="Person" checked>
+                                        <label for="Person-All">همه</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="5" type="radio" name="g3" checked>
-                                        <label for="5">شخصی</label>
+                                        <input id="Person-Self" type="radio" name="Person">
+                                        <label for="Person-Self">شخصی</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="6" type="radio" name="g3">
-                                        <label for="6">مشاوراملاک</label>
+                                        <input id="Person-Prop" type="radio" name="Person">
+                                        <label for="Person-Prop">مشاوراملاک</label>
                                     </div>
                                 </div>
                             </div>
@@ -1775,7 +1775,7 @@
                     <label>قیمت کل</label>
                     <div class="row">
                         <div class="col-md-12 no-padding">
-                            <select data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
+                            <select id="Kind-TotalPrice" data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
                                 <option value=""></option>
                                 <option value="1">مقطوع - تومان</option>
                                 <option value="1">مجانی</option>
@@ -1786,10 +1786,10 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                            <input  id="Untill-TotalPrice" class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
                         </div>
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                            <input id="From-TotalPrice" class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
                         </div>
                     </div>
                 </div>
@@ -1804,10 +1804,10 @@
                     <label>متراژ (متر مربع)</label>
                     <div class="row">
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                            <input id="Untill-Area"  class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
                         </div>
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                            <input  id="From-Area" class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
                         </div>
                     </div>
                 </div>
@@ -1823,16 +1823,16 @@
                                 <div class="field-container radio-field">
                                     <label>حومه شهر</label>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="4" type="radio" name="g3" checked>
-                                        <label for="4">فرقی نمی کند</label>
+                                        <input id="Side-All" type="radio" name="Countryside" checked>
+                                        <label for="Side-All">فرقی نمی کند</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="5" type="radio" name="g3" checked>
-                                        <label for="5">نیست</label>
+                                        <input id="Side-No" type="radio" name="Countryside">
+                                        <label for="Side-No">نیست</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="6" type="radio" name="g3">
-                                        <label for="6">هست</label>
+                                        <input id="Side-Yes" type="radio" name="Countryside">
+                                        <label for="Side-Yes">هست</label>
                                     </div>
                                 </div>
                             </div>
@@ -1840,16 +1840,16 @@
                                 <div class="field-container radio-field">
                                     <label>نوع آگهی دهنده</label>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="4" type="radio" name="g3" checked>
-                                        <label for="4">همه</label>
+                                        <input id="Person-All" type="radio" name="Person" checked>
+                                        <label for="Person-All">همه</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="5" type="radio" name="g3" checked>
-                                        <label for="5">شخصی</label>
+                                        <input id="Person-Self" type="radio" name="Person">
+                                        <label for="Person-Self">شخصی</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="6" type="radio" name="g3">
-                                        <label for="6">مشاوراملاک</label>
+                                        <input id="Person-Prop" type="radio" name="Person">
+                                        <label for="Person-Prop">مشاوراملاک</label>
                                     </div>
                                 </div>
                             </div>
@@ -2216,10 +2216,10 @@
                     <label>متراژ (متر مربع)</label>
                     <div class="row">
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                            <input id="Untill-Area"  class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
                         </div>
                         <div class="col-md-6 no-padding">
-                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                            <input id="From-Area"  class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
                         </div>
                     </div>
                 </div>
@@ -2239,16 +2239,16 @@
                                 <div class="field-container radio-field">
                                     <label>حومه شهر</label>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="4" type="radio" name="g3" checked>
-                                        <label for="4">فرقی نمی کند</label>
+                                        <input id="Side-All" type="radio" name="Countryside" checked>
+                                        <label for="Side-All">فرقی نمی کند</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="5" type="radio" name="g3" checked>
-                                        <label for="5">نیست</label>
+                                        <input id="Side-No" type="radio" name="Countryside">
+                                        <label for="Side-No">نیست</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="6" type="radio" name="g3">
-                                        <label for="6">هست</label>
+                                        <input id="Side-Yes" type="radio" name="Countryside">
+                                        <label for="Side-Yes">هست</label>
                                     </div>
                                 </div>
                             </div>
@@ -2256,16 +2256,16 @@
                                 <div class="field-container radio-field">
                                     <label>نوع آگهی دهنده</label>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="4" type="radio" name="g3" checked>
-                                        <label for="4">همه</label>
+                                        <input id="Person-All" type="radio" name="Person" checked>
+                                        <label for="Person-All">همه</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="5" type="radio" name="g3" checked>
-                                        <label for="5">شخصی</label>
+                                        <input id="Person-Self" type="radio" name="Person">
+                                        <label for="Person-Self">شخصی</label>
                                     </div>
                                     <div class="md-radio md-radio-inline">
-                                        <input id="6" type="radio" name="g3">
-                                        <label for="6">مشاوراملاک</label>
+                                        <input id="Person-Prop" type="radio" name="Person">
+                                        <label for="Person-Prop">مشاوراملاک</label>
                                     </div>
                                 </div>
                             </div>
