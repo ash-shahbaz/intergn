@@ -1464,7 +1464,7 @@
 
        
         $("#SearchAllAgahi").click(function () {
-
+            var Category = "All";
             var SearchInput = $('#SearchInput').val();
             var ShahrSelect = $(".ShahrSelect").val()
             var MahaleSelect = $(".mahale-select").val()
@@ -1482,11 +1482,22 @@
                 var HasFast = false;
             }  
 
-            
-            
-
-            alert(KindSelect);
-
+            $.ajax({
+                type: "GET",
+                url: "/Search/Search",
+                data: {
+                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
+                },
+                contentType: "text/plain",
+                dataType: "json",
+                success: function (data) {
+                    var MyData = $.parseJSON(data);
+                    
+                    
+                    
+                }
+            });
         })
 
 
