@@ -366,10 +366,10 @@
 
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <select data-placeholder="بخاری" class="select GarmayeshAparteman" tabindex="1">
+                                                                                            <select data-placeholder="سیستم گرمایش آپارتمان " class="select GarmayeshAparteman" tabindex="1">
                                                                                                 <option value=""></option>
-                                                                                                <option value="1">1</option>
-                                                                                                <option value="1">2</option>
+                                                                                                <option value="1">موتورخانه ای</option>
+                                                                                                <option value="1">پکیجی</option>
                                                                                                 <option value="1">3</option>
                                                                                                 <option value="1">4</option>
                                                                                                 <option value="1">5 یا بیشتر</option>
@@ -3349,6 +3349,11 @@
 
 
 
+
+
+
+            var AgahiMelk = [];
+
             var servicetype;
             var TitleAgahi;
             var ServiceTypeAparteman;
@@ -3364,8 +3369,9 @@
                 ServiceTypeAparteman = $(this).attr("accesskey");
             });
 
-                
 
+            
+            
 
             $("#btnSabt").click(function () {
 
@@ -3373,9 +3379,9 @@
 
 
                 var selectedCountry = $(".Province option:selected").val();
-                var selectedCountry = $(".City option:selected").val();
-                var selectedCountry = $(".Region option:selected").val();
-                
+                var selectedCity = $(".City option:selected").val();
+                var selectedRegion = $(".Region option:selected").val();
+                var CategoryID = @ViewBag.lvl2;
                 var txtDesc = $(".txtDesc").val();    
 
 
@@ -3412,9 +3418,10 @@
                         var vamAparteman = $(".vamAparteman").val();
 
                     }
-                    
-                    //ServiceTypeAparteman
 
+                    AgahiMelk.push({ AgahiServiceID = servicetype, CategoryAgahiID = CategoryID, AgahiTitle =  $(".TitleAgahi").val(), Description = $(".txtDesc").val(), UserID = 10, RegisterDate =null, AdminAgreeDate = null, AgahiStatus = 0, LanguageID=1, ProvinceID= ProvinceID, RegionID = RegionID, Tell= $(".Tell").val(), Mobile=$(".Mobile").val(), PriceTypeID = $(".PriceTypeID").val() , })
+
+                    
 
 
                 } else if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "فروش املاک مسکونی" && "@ViewBag.lvl2" == "زمین و کلنگی"){

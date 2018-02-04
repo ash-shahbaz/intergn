@@ -95,8 +95,16 @@ namespace IGN.Controllers
             return View();
         }
 
+        //public ActionResult AgahiAdd()
+        //{
 
+
+
+
+
+        //}
 
    
     }
+   
 }
