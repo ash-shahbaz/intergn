@@ -122,6 +122,11 @@ namespace IGN.Controllers
             return JsonConvert.SerializeObject(Utility.GetCites(name));
         }
 
+        public string GetPriceType()
+        {
+
+            return JsonConvert.SerializeObject(Utility.GetPriceType());
+        }
 
         public string GetRegionByCityName(string name)
         {

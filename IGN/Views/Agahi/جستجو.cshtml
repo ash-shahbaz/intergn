@@ -30,17 +30,12 @@
 
 
                 <div class="col-md-3  ">
-
-
                     <div id="sel-cont">
-
 
                         <select data-placeholder="محله را انتخاب کنید ..." multiple class="mahale-select width-100Per"></select>
                         <br />
 
-
                     </div>
-
                 </div>
 
 
@@ -93,110 +88,156 @@
 
 
                 <div class="col-md-5 ">
-                    <input class="form-control keyword" name="keyword" value="" placeholder="متن جستجو" type="text">
+                    <input id="SearchInput" class="form-control keyword" name="keyword" value="" placeholder="متن جستجو" type="text">
                     <i class="fa fa-search"></i>
 
                 </div>
             </div>
-
+            
             @{
 
-                @*------شروع  صفحه اصلی جستجو----------*@
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="field-container radio-field">
-                            <label>نوع</label>
-                            <div class="md-radio md-radio-inline">
-                                <input id="4" type="radio" name="g3" checked>
-                                <label for="4">فرقی نمی کند</label>
-                            </div>
-                            <div class="md-radio md-radio-inline">
-                                <input id="5" type="radio" name="g3" checked>
-                                <label for="5">فروشی</label>
-                            </div>
-                            <div class="md-radio md-radio-inline">
-                                <input id="6" type="radio" name="g3">
-                                <label for="6">درخواستی</label>
+
+
+                string l1 = ViewBag.Level1;
+                string l2 = ViewBag.Level2;
+                string l3 = ViewBag.Level3;
+
+
+                if (l1 == null && l2 == null && l3 == null)
+                {
+                  <!--   ------شروع  صفحه اصلی جستجو----------   -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="field-container radio-field">
+                                <label>نوع</label>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="Kind-All" type="radio" name="Kind" checked>
+                                    <label for="Kind-All">فرقی نمی کند</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="Kind-Sell" type="radio" name="Kind" >
+                                    <label for="Kind-Sell">فروشی</label>
+                                </div>
+                                <div class="md-radio md-radio-inline">
+                                    <input id="Kind-Need" type="radio" name="Kind">
+                                    <label for="Kind-Need">درخواستی</label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                @*------پایان صفحه اصلی جستجو----------*@
-
-            string l1 = ViewBag.Level1;
-            string l2 = ViewBag.Level2;
-            string l3 = ViewBag.Level3;
-
-
-            ViewBag.lv1 = l1;
-            ViewBag.lv2 = l2;
-            ViewBag.lv3 = l3;
-
-            switch (l1)
-            {
-                case "املاک":
-                    {
-
-                        Html.RenderPartial("_املاک");
-                        break;
-                    }
-                case "لوازم-الکترونیکی":
-                    {
-
-                        Html.RenderPartial("_لوازم_الکترونیکی");
-                        break;
-                    }
-                case "وسایل-نقلیه":
-                    {
-                        Html.RenderPartial("_وسایل_نقلیه");
-                        break;
-                    }
-                case "لوازم-خانگی":
-                    {
-
-                        Html.RenderPartial("_لوازم_کسب_سرگرمی");
-                        break;
-                    }
-                case "لوازم-شخصی":
-                    {
-                        Html.RenderPartial("_لوازم_کسب_سرگرمی");
-                        break;
-                    }
-                case "سرگرمی-و-فراغت":
-                    {
-                        Html.RenderPartial("_لوازم_کسب_سرگرمی");
-                        break;
-                    }
-                case "کسب-و-کار":
-                    {
-                        Html.RenderPartial("_استخدام_اجتماعی_خدمات");
-                        break;
-                    }
-
-                case "خدمات":
-                    {
-                        Html.RenderPartial("_استخدام_اجتماعی_خدمات");
-                        break;
-                    }
-
-
-                case "اجتماعی":
-                    {
-                        Html.RenderPartial("_استخدام_اجتماعی_خدمات");
-                        break;
-                    }
-
-                case "a":
-                    {
-
-                        break;
-                    }
-            }
+                    <div class="row">
+                        <div class="col-md-8 search-col">
+                            <button id="SearchAllAgahi" class="btn btn-common btn-search btn-block search-btn"><strong>جستجو</strong></button>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="row margin-top-20">
+                                <div class="col-md-6">
+                                    <div class="cntr">
+                                        <div class="row ">
+                                            <input type="checkbox" id="HasFast" class="cbx hidden" />
+                                            <label for="HasFast" class="lbl"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-align-left">
+                                    <span>فوری</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="row margin-top-20">
+                                <div class="col-md-6">
+                                    <div class="cntr">
+                                        <div class="row ">
+                                            <input type="checkbox" id="HasImage" class="cbx hidden" />
+                                            <label for="HasImage" class="lbl"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-align-left">
+                                    <span>عکس دار</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  <!--   ------پایان صفحه اصلی جستجو----------   -->
+                }
 
 
 
 
-            Html.RenderPartial("_مشترک");
+
+
+
+                ViewBag.lv1 = l1;
+                ViewBag.lv2 = l2;
+                ViewBag.lv3 = l3;
+
+                switch (l1)
+                {
+                    case "املاک":
+                        {
+
+                            Html.RenderPartial("_املاک");
+                            break;
+                        }
+                    case "لوازم-الکترونیکی":
+                        {
+
+                            Html.RenderPartial("_لوازم_الکترونیکی");
+                            break;
+                        }
+                    case "وسایل-نقلیه":
+                        {
+                            Html.RenderPartial("_وسایل_نقلیه");
+                            break;
+                        }
+                    case "لوازم-خانگی":
+                        {
+
+                            Html.RenderPartial("_لوازم_کسب_سرگرمی");
+                            break;
+                        }
+                    case "لوازم-شخصی":
+                        {
+                            Html.RenderPartial("_لوازم_کسب_سرگرمی");
+                            break;
+                        }
+                    case "سرگرمی-و-فراغت":
+                        {
+                            Html.RenderPartial("_لوازم_کسب_سرگرمی");
+                            break;
+                        }
+                    case "کسب-و-کار":
+                        {
+                            Html.RenderPartial("_استخدام_اجتماعی_خدمات");
+                            break;
+                        }
+
+                    case "خدمات":
+                        {
+                            Html.RenderPartial("_استخدام_اجتماعی_خدمات");
+                            break;
+                        }
+
+
+                    case "اجتماعی":
+                        {
+                            Html.RenderPartial("_استخدام_اجتماعی_خدمات");
+                            break;
+                        }
+
+                    case "a":
+                        {
+
+                            break;
+                        }
+                }
+
+
+
+
+                //Html.RenderPartial("_مشترک");
 
 
             }
@@ -1114,8 +1155,8 @@
     <script>
 
 
-        
-        $(".mahale-select").chosen({ rtl: true }); 
+
+        $(".mahale-select").chosen({ rtl: true });
 
         $(".mahale-select").chosen();
         $('ShahrSelect').chosen();
@@ -1289,6 +1330,7 @@
                                         $("." + classname + " ").click(function () {
                                             var id = $(this).attr("accesskey");
                                             alert($(this).val());
+
                                             alert("BoB")
                                         })
 
@@ -1391,6 +1433,71 @@
 
 
 
+    <script>
+
+
+        $(document).ready(function () {
+
+            $('.kind-Price').chosen();
+
+            $("#detailsellapart").click(function () {
+
+                $('.detailsellapart').toggleClass('display-none');
+
+            });
+
+
+
+            $(".kind-Price").chosen().change(function (e, params) {
+
+
+
+                $(".frominputpriceapart").prop('disabled', true);
+
+
+                $(".untillinputpriceapart").prop('disabled', true);
+
+            });
+
+
+        });
+
+       
+        $("#SearchAllAgahi").click(function () {
+
+            var SearchInput = $('#SearchInput').val();
+            var ShahrSelect = $(".ShahrSelect").val()
+            var MahaleSelect = $(".mahale-select").val()
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var HasImage = "";
+            if ($('#HasImage').is(":checked")) {
+                var HasImage = true;
+            } else {
+                var HasImage = false;
+            }  
+            var HasFast = "";
+            if ($('#HasImage').is(":checked")) {
+                var HasFast = true;
+            } else {
+                var HasFast = false;
+            }  
+
+            
+            
+
+            alert(KindSelect);
+
+        })
+
+
+
+
+
+
+
+
+
+    </script>
 
 
 }
