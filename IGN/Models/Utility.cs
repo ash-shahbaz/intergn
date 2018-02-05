@@ -206,7 +206,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri("http://192.168.1.10:18113");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("/api/tblNews/All-1").Result;
@@ -234,7 +234,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri("http://192.168.1.10:18113");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/tblCategories").Result;
@@ -263,7 +263,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri("http://192.168.1.10:18113");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/tblHashTags/GetTagTop10DWMY-" + whichType + "").Result;
@@ -297,7 +297,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri("http://192.168.1.10:18113");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/Categories/1-" + categoryName + "-$1").Result;
@@ -330,7 +330,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri("http://192.168.1.10:18113");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/GettblNews/" + NewsID).Result;
@@ -362,7 +362,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri("http://192.168.1.10:18113");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/Categories/1-" + CID + "-" + PageID + "").Result;
@@ -396,7 +396,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri("http://192.168.1.10:18113");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/tblLinkestans/All-1").Result;
