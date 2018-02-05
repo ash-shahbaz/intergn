@@ -1841,10 +1841,7 @@
             //External
 
 
-
-
-
-
+            
 
 
             $.ajax({
@@ -1881,7 +1878,28 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
+            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('id');
+            var Person = $('input[type=radio][name=Person]:checked').attr('id');
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('id');
+            var KindTotalPrice = $("#Kind-TotalPrice").val();
+            var UntillTotalPrice = "";
+            var FromTotalPrice = "";
+            if (KindTotalPrice == 2)//مقطوع - تومان
+            { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
+            var UntillArea = $('#Untill-Area').val();
+            var FromArea = $('#From-Area').val();
+            var UntillInfrastructure = $("#Untill-Infrastructure").val();
+            var FromInfrastructure = $("#From-Infrastructure").val();
+            var UntillLoan = $("#Untill-Loan").val();
+            var FromLoan = $("#From-Loan").val();
+            var FloorNumber = $("#Floor-Number").val();
+            var HasHeir = "";
+            if ($('#HasHeir').is(":checked")) { HasHeir = true; } else { HasHeir = false; }
+            var HasSingleDocument = "";
+            if ($('#HasSingleDocument').is(":checked")) { HasSingleDocument = true; } else { HasSingleDocument = false; }
+            var HasLoan = "";
+            if ($('#HasLoan').is(":checked")) { HasLoan = true; } else { HasLoan = false; }
+
 
 
             //External
@@ -1922,7 +1940,67 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
+            var RoomNumber = $('#RoomNumber').val();
+            var KindRentPrice = $("#Kind-RentPrice").val();
+            var UntillRentPrice = "";
+            var FromRentPrice = "";
+            if (KindRentPrice == 2)//مقطوع - تومان
+            { UntillRentPrice = $('#Untill-RentPrice').val(); FromRentPrice = $('#From-RentPrice').val(); }
+            var KindDepositPrice = $("#Kind-DepositPrice").val();
+            var UntillDepositPrice = "";
+            var FromDepositPrice = "";
+            if (KindDepositPrice == 2)//مقطوع - تومان
+            { UntillDepositPrice = $('#Untill-DepositPrice').val(); FromDepositPrice = $('#From-DepositPrice').val(); }
+            var UntillArea = $('#Untill-Area').val();
+            var FromArea = $('#From-Area').val();
+            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('id');
+            var Person = $('input[type=radio][name=Person]:checked').attr('id');
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('id');
+            var UntillYear = $("#Untill-Year").val();
+            var FromYear = $("#From-Year").val();
+            var FloorNumber = $("#Floor-Number").val();
+            var KindBottom = $("#Kind-Bottom").val();
+            var KindHeating = $("#Kind-Heating").val();
+            var HasParking = "";
+            if ($('#HasParking').is(":checked")) { HasParking = true; } else { HasParking = false; }
+            var HasElevator = "";
+            if ($('#HasElevator').is(":checked")) { HasElevator = true; } else { HasElevator = false; }
+            var HasIranianService = "";
+            if ($('#HasIranianService').is(":checked")) { HasIranianService = true; } else { HasIranianService = false; }
+            var HasForeignService = "";
+            if ($('#HasForeignService').is(":checked")) { HasForeignService = true; } else { HasForeignService = false; }
+            var HasBalcony = "";
+            if ($('#HasBalcony').is(":checked")) { HasBalcony = true; } else { HasBalcony = false; }
+            var HasPool = "";
+            if ($('#HasPool').is(":checked")) { HasPool = true; } else { HasPool = false; }
+            var HasUnderground = "";
+            if ($('#HasUnderground').is(":checked")) { HasUnderground = true; } else { HasUnderground = false; }
+            var HasYard = "";
+            if ($('#HasYard').is(":checked")) { HasYard = true; } else { HasYard = false; }
+            var HasSauna = "";
+            if ($('#HasSauna').is(":checked")) { HasSauna = true; } else { HasSauna = false; }
+            var HasJacuzzi = "";
+            if ($('#HasJacuzzi').is(":checked")) { HasJacuzzi = true; } else { HasJacuzzi = false; }
+            var HasSleepMaster = "";
+            if ($('#HasSleepMaster').is(":checked")) { HasSleepMaster = true; } else { HasSleepMaster = false; }
+            var HasRoofGarden = "";
+            if ($('#HasRoofGarden').is(":checked")) { HasRoofGarden = true; } else { HasRoofGarden = false; }
+            var HasChiller = "";
+            if ($('#HasChiller').is(":checked")) { HasChiller = true; } else { HasChiller = false; }
+            var HasBarbecue = "";
+            if ($('#HasBarbecue').is(":checked")) { HasBarbecue = true; } else { HasBarbecue = false; }
+            var HasAltar = "";
+            if ($('#HasAltar').is(":checked")) { HasAltar = true; } else { HasAltar = false; }
+            var HasLobby = "";
+            if ($('#HasLobby').is(":checked")) { HasLobby = true; } else { HasLobby = false; }
+            var HasBabyPlayground = "";
+            if ($('#HasBabyPlayground').is(":checked")) { HasBabyPlayground = true; } else { HasBabyPlayground = false; }
+            var HasGym = "";
+            if ($('#HasGym').is(":checked")) { HasGym = true; } else { HasGym = false; }
+
+
+
+
 
 
             //External
@@ -1967,7 +2045,72 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
+            var RoomNumber = $('#RoomNumber').val();            
+            var KindTotalPrice = $("#Kind-TotalPrice").val();
+            var UntillTotalPrice = "";
+            var FromTotalPrice = "";
+            if (KindTotalPrice == 2)//مقطوع - تومان
+            { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
+            var UntillArea = $('#Untill-Area').val();
+            var FromArea = $('#From-Area').val();
+            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('id');
+            var Person = $('input[type=radio][name=Person]:checked').attr('id');
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('id');
+            var AdminDoc = $('input[type=radio][name=AdminDoc]:checked').attr('id');
+            var UntillInfrastructure = $("#Untill-Infrastructure").val();
+            var FromInfrastructure = $("#From-Infrastructure").val();
+            var UntillLoan = $("#Untill-Loan").val();
+            var FromLoan = $("#From-Loan").val();
+            var UntillYear = $("#Untill-Year").val();
+            var FromYear = $("#From-Year").val();
+            var FloorNumber = $("#Floor-Number").val();
+            var KindBottom = $("#Kind-Bottom").val();
+            var KindHeating = $("#Kind-Heating").val();
+            var HasParking = "";
+            if ($('#HasParking').is(":checked")) { HasParking = true; } else { HasParking = false; }
+            var HasElevator = "";
+            if ($('#HasElevator').is(":checked")) { HasElevator = true; } else { HasElevator = false; }
+            var HasIranianService = "";
+            if ($('#HasIranianService').is(":checked")) { HasIranianService = true; } else { HasIranianService = false; }
+            var HasForeignService = "";
+            if ($('#HasForeignService').is(":checked")) { HasForeignService = true; } else { HasForeignService = false; }
+            var HasBalcony = "";
+            if ($('#HasBalcony').is(":checked")) { HasBalcony = true; } else { HasBalcony = false; }
+            var HasPool = "";
+            if ($('#HasPool').is(":checked")) { HasPool = true; } else { HasPool = false; }
+            var HasUnderground = "";
+            if ($('#HasUnderground').is(":checked")) { HasUnderground = true; } else { HasUnderground = false; }
+            var HasYard = "";
+            if ($('#HasYard').is(":checked")) { HasYard = true; } else { HasYard = false; }
+            var HasSauna = "";
+            if ($('#HasSauna').is(":checked")) { HasSauna = true; } else { HasSauna = false; }
+            var HasJacuzzi = "";
+            if ($('#HasJacuzzi').is(":checked")) { HasJacuzzi = true; } else { HasJacuzzi = false; }
+            var HasSleepMaster = "";
+            if ($('#HasSleepMaster').is(":checked")) { HasSleepMaster = true; } else { HasSleepMaster = false; }
+            var HasRoofGarden = "";
+            if ($('#HasRoofGarden').is(":checked")) { HasRoofGarden = true; } else { HasRoofGarden = false; }
+            var HasChiller = "";
+            if ($('#HasChiller').is(":checked")) { HasChiller = true; } else { HasChiller = false; }
+            var HasBarbecue = "";
+            if ($('#HasBarbecue').is(":checked")) { HasBarbecue = true; } else { HasBarbecue = false; }
+            var HasAltar = "";
+            if ($('#HasAltar').is(":checked")) { HasAltar = true; } else { HasAltar = false; }
+            var HasLobby = "";
+            if ($('#HasLobby').is(":checked")) { HasLobby = true; } else { HasLobby = false; }
+            var HasBabyPlayground = "";
+            if ($('#HasBabyPlayground').is(":checked")) { HasBabyPlayground = true; } else { HasBabyPlayground = false; }
+            var HasGym = "";
+            if ($('#HasGym').is(":checked")) { HasGym = true; } else { HasGym = false; }
+            var HasHeir = "";
+            if ($('#HasHeir').is(":checked")) { HasHeir = true; } else { HasHeir = false; }
+            var HasSingleDocument = "";
+            if ($('#HasSingleDocument').is(":checked")) { HasSingleDocument = true; } else { HasSingleDocument = false; }
+            var HasLoan = "";
+            if ($('#HasLoan').is(":checked")) { HasLoan = true; } else { HasLoan = false; }
+
+
+
 
 
             //External
