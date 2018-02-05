@@ -2289,8 +2289,8 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-
-
+            var KindService = $('input[type=radio][name=KindService]:checked').attr('value');
+            
 
             //External
 
@@ -2328,7 +2328,12 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
+            var KindTotalPrice = $("#Kind-TotalPrice").val();
+            var UntillTotalPrice = "";
+            var FromTotalPrice = "";
+            if (KindTotalPrice == 2)//مقطوع - تومان
+            { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
 
 
             //External
