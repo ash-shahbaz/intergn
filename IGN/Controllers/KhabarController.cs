@@ -87,7 +87,7 @@ namespace IGN.Controllers
         public ActionResult خبر(string name, string id1, string id2)
         {
             //var q = Utility.GetNewsByNewsID(NewsID);
-            Utility.NewsID = Convert.ToInt32(id1);
+            Utility.NewsID = Convert.ToInt32(name);
             return View();
         }
 

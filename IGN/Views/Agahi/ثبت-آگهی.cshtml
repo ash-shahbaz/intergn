@@ -682,14 +682,22 @@
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
                                                                                             <div class="row">
-                                                                                                <div class="col-md-6">
+                                                                                                <div class="col-md-2">
 
                                                                                                     <label>هزار تومان</label>
-                                                                                                    <input type="radio" name="price" value="negotiable" id="negotiable">
-                                                                                                    <label for="negotiable">توافقی </label>
+
                                                                                                 </div>
                                                                                                 <div class="col-md-6">
-                                                                                                    <input type="text" class="form-control" id="text1">
+                                                                                                    <input id="DepositPrice" type="text" class="form-control ">
+                                                                                                </div>
+                                                                                                <div class="col-md-4">
+                                                                                                    <select id="Kind-DepositPrice"  data-placeholder="1" class="select " tabindex="1">
+                                                                                                        <option value=""></option>
+                                                                                                        <option value="1">توافقی</option>
+                                                                                                        <option value="2">معاوضه</option>
+                                                                                                        <option value="3">مقطوع</option>
+
+                                                                                                    </select>
                                                                                                 </div>
                                                                                             </div>
 
@@ -700,14 +708,22 @@
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
                                                                                             <div class="row">
-                                                                                                <div class="col-md-6">
+                                                                                                <div class="col-md-2">
 
                                                                                                     <label>هزار تومان</label>
-                                                                                                    <input type="radio" name="price" value="negotiable" id="negotiable">
-                                                                                                    <label for="negotiable">توافقی </label>
+
                                                                                                 </div>
                                                                                                 <div class="col-md-6">
-                                                                                                    <input type="text" class="form-control" id="text1">
+                                                                                                    <input id="RentPrice" type="text" class="form-control ">
+                                                                                                </div>
+                                                                                                <div class="col-md-4">
+                                                                                                    <select  id="Kind-RentPrice"  data-placeholder="1" class="select " tabindex="1">
+                                                                                                        <option value=""></option>
+                                                                                                        <option value="1">توافقی</option>
+                                                                                                        <option value="2">معاوضه</option>
+                                                                                                        <option value="3">مقطوع</option>
+
+                                                                                                    </select>
                                                                                                 </div>
                                                                                             </div>
 
@@ -738,12 +754,12 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="6" type="radio" name="g3">
-                                                                                                <label for="6">ارائه</label>
+                                                                                                <input id="Kind-Need" type="radio" name="Kind" class="InputServiceType" accesskey="0">
+                                                                                                <label for="Kind-Need">درخواست کننده</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="7" type="radio" name="g3">
-                                                                                                <label for="7">درخواستی</label>
+                                                                                                <input id="Kind-Sell" type="radio" name="Kind" class="InputServiceType" accesskey="1">
+                                                                                                <label for="Kind-Sell">ارائه کننده</label>
                                                                                             </div>
                                                                                         </div>
                                                                                         <label class="col-sm-3">نوع<span class="required">*</span></label>
@@ -789,7 +805,7 @@
                                                                                     <h4>جزئیات خیلی آگهی</h4>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <select data-placeholder="1385" class="select" tabindex="1">
+                                                                                            <select id="Year-Created"   data-placeholder="1385" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -815,7 +831,7 @@
                                                                                     </div>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <select data-placeholder="سنگ" class="select" tabindex="1">
+                                                                                            <select  id="Kind-Bottom" data-placeholder="سنگ" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -828,7 +844,7 @@
                                                                                     </div>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <select data-placeholder="بخاری" class="select" tabindex="1">
+                                                                                            <select  id="Kind-Heating" data-placeholder="بخاری" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -969,9 +985,9 @@
                                                                                     </div>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="50" type="text">
+                                                                                            <input  id="Area" class="form-control keyword numbertxt" name="keyword" value="" placeholder="50" type="text">
                                                                                         </div>
-                                                                                        <label  id="Area" class="col-sm-3 label-title">متراژ (متر مربع)<span class="required">*</span></label>
+                                                                                        <label class="col-sm-3 label-title">متراژ (متر مربع)<span class="required">*</span></label>
                                                                                     </div>
 
                                                                                     <div class="row form-group select-price">
@@ -1017,12 +1033,12 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="6" type="radio" name="g3">
-                                                                                                <label for="6">دارد</label>
+                                                                                                <input id="AdminDoc-No" type="radio" name="AdminDoc">
+                                                                                                <label for="AdminDoc-No">ندارد</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="7" type="radio" name="g3">
-                                                                                                <label for="7">ندارد</label>
+                                                                                                <input id="AdminDoc-Yes" type="radio" name="AdminDoc">
+                                                                                                <label for="AdminDoc-Yes">دارد</label>
                                                                                             </div>
                                                                                         </div>
                                                                                         <label class="col-sm-3">سند اداری<span class="required">*</span></label>
@@ -1054,7 +1070,7 @@
                                                                                     <h4>جزئیات خیلی آگهی</h4>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <select data-placeholder="1385" class="select" tabindex="1">
+                                                                                            <select  id="Year-Created"  data-placeholder="1385" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -1080,7 +1096,7 @@
                                                                                     </div>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <select data-placeholder="سنگ" class="select" tabindex="1">
+                                                                                            <select  id="Kind-Bottom" data-placeholder="سنگ" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -1093,7 +1109,7 @@
                                                                                     </div>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <select data-placeholder="بخاری" class="select" tabindex="1">
+                                                                                            <select  id="Kind-Heating" data-placeholder="بخاری" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -1251,42 +1267,56 @@
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
                                                                                             <div class="row">
-                                                                                                <div class="col-md-6">
+                                                                                                <div class="col-md-2">
 
                                                                                                     <label>هزار تومان</label>
-                                                                                                    <input type="radio" name="price" value="negotiable" id="negotiable">
-                                                                                                    <label for="negotiable">توافقی </label>
+
                                                                                                 </div>
                                                                                                 <div class="col-md-6">
-                                                                                                    <input type="text" class="form-control" id="text1">
+                                                                                                    <input id="DepositPrice" type="text" class="form-control ">
+                                                                                                </div>
+                                                                                                <div class="col-md-4">
+                                                                                                    <select id="Kind-DepositPrice" data-placeholder="1" class="select " tabindex="1">
+                                                                                                        <option value=""></option>
+                                                                                                        <option value="1">توافقی</option>
+                                                                                                        <option value="2">معاوضه</option>
+                                                                                                        <option value="3">مقطوع</option>
+
+                                                                                                    </select>
                                                                                                 </div>
                                                                                             </div>
-
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">ودیعه<span class="required">*</span></label>
                                                                                     </div>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
                                                                                             <div class="row">
-                                                                                                <div class="col-md-6">
+                                                                                                <div class="col-md-2">
 
                                                                                                     <label>هزار تومان</label>
-                                                                                                    <input type="radio" name="price" value="negotiable" id="negotiable">
-                                                                                                    <label for="negotiable">توافقی </label>
+
                                                                                                 </div>
                                                                                                 <div class="col-md-6">
-                                                                                                    <input type="text" class="form-control" id="text1">
+                                                                                                    <input id="RentPrice" type="text" class="form-control ">
+                                                                                                </div>
+                                                                                                <div class="col-md-4">
+                                                                                                    <select id="Kind-RentPrice" data-placeholder="1" class="select " tabindex="1">
+                                                                                                        <option value=""></option>
+                                                                                                        <option value="1">توافقی</option>
+                                                                                                        <option value="2">معاوضه</option>
+                                                                                                        <option value="3">مقطوع</option>
+
+                                                                                                    </select>
                                                                                                 </div>
                                                                                             </div>
-
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">اجاره ماهیانه<span class="required">*</span></label>
                                                                                     </div>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="50" type="text">
+                                                                                            <input  id="Area" class="form-control keyword numbertxt" name="keyword" value="" placeholder="50" type="text">
                                                                                         </div>
-                                                                                        <label  id="Area" class="col-sm-3 label-title">متراژ (متر مربع)<span class="required">*</span></label>
+                                                                                        <label class="col-sm-3 label-title">متراژ (متر مربع)<span class="required">*</span></label>
                                                                                     </div>
 
                                                                                     <div class="row form-group select-price">
@@ -1306,12 +1336,12 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="6" type="radio" name="g3">
-                                                                                                <label for="6">ارائه</label>
+                                                                                                <input id="Kind-Need" type="radio" name="Kind" class="InputServiceType" accesskey="0">
+                                                                                                <label for="Kind-Need">درخواست کننده</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="7" type="radio" name="g3">
-                                                                                                <label for="7">درخواستی</label>
+                                                                                                <input id="Kind-Sell" type="radio" name="Kind" class="InputServiceType" accesskey="1">
+                                                                                                <label for="Kind-Sell">ارائه کننده</label>
                                                                                             </div>
                                                                                         </div>
                                                                                         <label class="col-sm-3">نوع<span class="required">*</span></label>
@@ -1332,12 +1362,12 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="6" type="radio" name="g3">
-                                                                                                <label for="6">دارد</label>
+                                                                                                <input id="AdminDoc-No" type="radio" name="AdminDoc">
+                                                                                                <label for="AdminDoc-No">ندارد</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="7" type="radio" name="g3">
-                                                                                                <label for="7">ندارد</label>
+                                                                                                <input id="AdminDoc-Yes" type="radio" name="AdminDoc">
+                                                                                                <label for="AdminDoc-Yes">دارد</label>
                                                                                             </div>
                                                                                         </div>
                                                                                         <label class="col-sm-3">سند اداری<span class="required">*</span></label>
@@ -1369,7 +1399,7 @@
                                                                                     <h4>جزئیات خیلی آگهی</h4>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <select data-placeholder="1385" class="select" tabindex="1">
+                                                                                            <select  id="Year-Created"  data-placeholder="1385" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -1395,7 +1425,7 @@
                                                                                     </div>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <select data-placeholder="سنگ" class="select" tabindex="1">
+                                                                                            <select  id="Kind-Bottom" data-placeholder="سنگ" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -1408,7 +1438,7 @@
                                                                                     </div>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <select data-placeholder="بخاری" class="select" tabindex="1">
+                                                                                            <select id="Kind-Heating"  data-placeholder="بخاری" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -1584,13 +1614,20 @@
 
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <div class="row">
-                                                                                                <div class="col-md-6">
+                                                                                            <div class="row">                                                                                                
+                                                                                                <div class="col-md-3">
+                                                                                                    <input id="Number-MonthlyInstallment" type="text" class="form-control" >
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+
+                                                                                                    <label>تعداد ماه</label>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
 
                                                                                                     <label>هزار تومان</label>
                                                                                                 </div>
-                                                                                                <div class="col-md-6">
-                                                                                                    <input type="text" class="form-control" id="text1">
+                                                                                                <div class="col-md-3">
+                                                                                                    <input id="MonthlyInstallment" type="text" class="form-control" >
                                                                                                 </div>
                                                                                             </div>
 
@@ -1612,7 +1649,7 @@
                                                                                                     <div class="hs-searchbox">
                                                                                                         <input type="text" class="form-control" autocomplete="off">
                                                                                                     </div>
-                                                                                                    <ul class="dropdown-menu inner" role="menu">
+                                                                                                    <ul  id="Brand-Name"  class="dropdown-menu inner" role="menu">
                                                                                                         <li data-value="" data-level="1" data-default-selected="">
                                                                                                             <a href="#">برند</a>
                                                                                                         </li>
@@ -1643,13 +1680,13 @@
                                                                                     </div>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="50" type="text">
+                                                                                            <input id="CarFunction" class="form-control keyword numbertxt" name="keyword" value="" placeholder="50" type="text">
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">کارکرد(کیلومتر)<span class="required">*</span></label>
                                                                                     </div>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="50" type="text">
+                                                                                            <input id="Year" class="form-control keyword numbertxt" name="keyword" value="" placeholder="50" type="text">
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">سال<span class="required">*</span></label>
                                                                                     </div>
@@ -1699,7 +1736,7 @@
                                                                                     <h4>جزئیات خیلی آگهی</h4>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="کارکرده" class="select" tabindex="1">
+                                                                                            <select  id="Kind-Condition" data-placeholder="کارکرده" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">کارکرده</option>
                                                                                                 <option value="1">صفر</option>
@@ -1712,7 +1749,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="سواری" class="select" tabindex="1">
+                                                                                            <select  id="Kind-Chassis" data-placeholder="سواری" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">سدان</option>
                                                                                                 <option value="1">سواری</option>
@@ -1724,7 +1761,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="تک" class="select" tabindex="1">
+                                                                                            <select id="Kind-Diff"  data-placeholder="تک" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">تک</option>
                                                                                                 <option value="1">دو</option>
@@ -1735,7 +1772,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="قرمز" class="select" tabindex="1">
+                                                                                            <select id="Kind-ColorOut"  data-placeholder="قرمز" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -1748,7 +1785,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="قرمز" class="select" tabindex="1">
+                                                                                            <select  id="Kind-ColorIn" data-placeholder="قرمز" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -1761,7 +1798,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="ندارد" class="select" tabindex="1">
+                                                                                            <select id="Kind-ModelTip"  data-placeholder="ندارد" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">تیپ 5</option>
                                                                                                 <option value="1">تیپ 2</option>
@@ -1774,7 +1811,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="دستی" class="select" tabindex="1">
+                                                                                            <select id="Kind-Gearbox"  data-placeholder="دستی" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">اتومات</option>
                                                                                                 <option value="1">2</option>
@@ -1787,7 +1824,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="بنزین" class="select" tabindex="1">
+                                                                                            <select  id="Kind-Fuel" data-placeholder="بنزین" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -1800,7 +1837,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder=" بدون رنگ" class="select" tabindex="1">
+                                                                                            <select  id="Kind-Crash" data-placeholder=" بدون رنگ" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">بدون رنگ</option>
                                                                                                 <option value="1">یک لکه رنگ</option>
@@ -1811,7 +1848,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="پلاک ملی" class="select" tabindex="1">
+                                                                                            <select  id="Kind-Pelak"  data-placeholder="پلاک ملی" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">گذر موقت</option>
                                                                                                 <option value="1">پلاک دولتی</option>
@@ -1824,16 +1861,16 @@
                                                                                         <div class="col-sm-9 checkbox">
 
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i2" type="checkbox">
-                                                                                                <label for="i2">سانروف</label>
+                                                                                                <input id="HasSunroof" type="checkbox">
+                                                                                                <label for="HasSunroof">سانروف</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">دزدگیر</label>
+                                                                                                <input id="HasAlarm" type="checkbox">
+                                                                                                <label for="HasAlarm">دزدگیر</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">سیستم صوتی</label>
+                                                                                                <input id="HasSound" type="checkbox">
+                                                                                                <label for="HasSound">سیستم صوتی</label>
                                                                                             </div>
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">سایر</label>
@@ -1887,14 +1924,22 @@
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
                                                                                             <div class="row">
-                                                                                                <div class="col-md-6">
+                                                                                                <div class="col-md-3">
+                                                                                                    <input id="Number-MonthlyInstallment" type="text" class="form-control">
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
+
+                                                                                                    <label>تعداد ماه</label>
+                                                                                                </div>
+                                                                                                <div class="col-md-3">
 
                                                                                                     <label>هزار تومان</label>
                                                                                                 </div>
-                                                                                                <div class="col-md-6">
-                                                                                                    <input type="text" class="form-control" id="text1">
+                                                                                                <div class="col-md-3">
+                                                                                                    <input id="MonthlyInstallment" type="text" class="form-control">
                                                                                                 </div>
                                                                                             </div>
+
 
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">ماهانه<span class="required">*</span></label>
@@ -1914,7 +1959,7 @@
                                                                                                     <div class="hs-searchbox">
                                                                                                         <input type="text" class="form-control" autocomplete="off">
                                                                                                     </div>
-                                                                                                    <ul class="dropdown-menu inner" role="menu">
+                                                                                                    <ul  id="Brand-Name" class="dropdown-menu inner" role="menu">
                                                                                                         <li data-value="" data-level="1" data-default-selected="">
                                                                                                             <a href="#">برند</a>
                                                                                                         </li>
@@ -1945,13 +1990,13 @@
                                                                                     </div>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="50" type="text">
+                                                                                            <input id="CarFunction"  class="form-control keyword numbertxt" name="keyword" value="" placeholder="50" type="text">
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">کارکرد(کیلومتر)<span class="required">*</span></label>
                                                                                     </div>
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
-                                                                                            <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="50" type="text">
+                                                                                            <input  id="Year" class="form-control keyword numbertxt" name="keyword" value="" placeholder="50" type="text">
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">سال<span class="required">*</span></label>
                                                                                     </div>
@@ -2000,7 +2045,7 @@
                                                                                     <h4>جزئیات خیلی آگهی</h4>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="کارکرده" class="select" tabindex="1">
+                                                                                            <select id="Kind-Condition"  data-placeholder="کارکرده" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">کارکرده</option>
                                                                                                 <option value="1">صفر</option>
@@ -2013,7 +2058,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="سواری" class="select" tabindex="1">
+                                                                                            <select  id="Kind-Chassis" data-placeholder="سواری" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">سدان</option>
                                                                                                 <option value="1">سواری</option>
@@ -2025,7 +2070,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="تک" class="select" tabindex="1">
+                                                                                            <select  id="Kind-Diff" data-placeholder="تک" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">تک</option>
                                                                                                 <option value="1">دو</option>
@@ -2036,7 +2081,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="قرمز" class="select" tabindex="1">
+                                                                                            <select  id="Kind-ColorOut" data-placeholder="قرمز" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -2049,7 +2094,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="قرمز" class="select" tabindex="1">
+                                                                                            <select  id="Kind-ColorIn" data-placeholder="قرمز" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -2062,7 +2107,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="ندارد" class="select" tabindex="1">
+                                                                                            <select  id="Kind-ModelTip" data-placeholder="ندارد" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">تیپ 5</option>
                                                                                                 <option value="1">تیپ 2</option>
@@ -2075,7 +2120,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="دستی" class="select" tabindex="1">
+                                                                                            <select id="Kind-Gearbox"  data-placeholder="دستی" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">اتومات</option>
                                                                                                 <option value="1">2</option>
@@ -2088,7 +2133,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="بنزین" class="select" tabindex="1">
+                                                                                            <select  id="Kind-Fuel" data-placeholder="بنزین" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -2101,7 +2146,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder=" بدون رنگ" class="select" tabindex="1">
+                                                                                            <select  id="Kind-Crash" data-placeholder=" بدون رنگ" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">بدون رنگ</option>
                                                                                                 <option value="1">یک لکه رنگ</option>
@@ -2112,7 +2157,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="پلاک ملی" class="select" tabindex="1">
+                                                                                            <select  id="Kind-Pelak"  data-placeholder="پلاک ملی" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">گذر موقت</option>
                                                                                                 <option value="1">پلاک دولتی</option>
@@ -2125,16 +2170,16 @@
                                                                                         <div class="col-sm-9 checkbox">
 
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i2" type="checkbox">
-                                                                                                <label for="i2">سانروف</label>
+                                                                                                <input id="HasSunroof" type="checkbox">
+                                                                                                <label for="HasSunroof">سانروف</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">دزدگیر</label>
+                                                                                                <input id="HasAlarm" type="checkbox">
+                                                                                                <label for="HasAlarm">دزدگیر</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">سیستم صوتی</label>
+                                                                                                <input id="HasSound" type="checkbox">
+                                                                                                <label for="HasSound">سیستم صوتی</label>
                                                                                             </div>
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">سایر</label>
@@ -2188,12 +2233,19 @@
                                                                                 <div class="row form-group select-price">
                                                                                     <div class="col-sm-9">
                                                                                         <div class="row">
-                                                                                            <div class="col-md-6">
+                                                                                            <div class="col-md-3">
+                                                                                                <input id="Number-MonthlyInstallment" type="text" class="form-control">
+                                                                                            </div>
+                                                                                            <div class="col-md-3">
+
+                                                                                                <label>تعداد ماه</label>
+                                                                                            </div>
+                                                                                            <div class="col-md-3">
 
                                                                                                 <label>هزار تومان</label>
                                                                                             </div>
-                                                                                            <div class="col-md-6">
-                                                                                                <input type="text" class="form-control" id="text1">
+                                                                                            <div class="col-md-3">
+                                                                                                <input id="MonthlyInstallment" type="text" class="form-control">
                                                                                             </div>
                                                                                         </div>
 
@@ -2215,7 +2267,7 @@
                                                                                                 <div class="hs-searchbox">
                                                                                                     <input type="text" class="form-control" autocomplete="off">
                                                                                                 </div>
-                                                                                                <ul class="dropdown-menu inner" role="menu">
+                                                                                                <ul  id="Brand-Name" class="dropdown-menu inner" role="menu">
                                                                                                     <li data-value="" data-level="1" data-default-selected="">
                                                                                                         <a href="#">برند</a>
                                                                                                     </li>
@@ -2246,13 +2298,13 @@
                                                                                 </div>
                                                                                 <div class="row form-group select-price">
                                                                                     <div class="col-sm-9">
-                                                                                        <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="50" type="text">
+                                                                                        <input  id="CarFunction" class="form-control keyword numbertxt" name="keyword" value="" placeholder="50" type="text">
                                                                                     </div>
                                                                                     <label class="col-sm-3 label-title">کارکرد(کیلومتر)<span class="required">*</span></label>
                                                                                 </div>
                                                                                 <div class="row form-group select-price">
                                                                                     <div class="col-sm-9">
-                                                                                        <input class="form-control keyword numbertxt" name="keyword" value="" placeholder="50" type="text">
+                                                                                        <input  id="Year" class="form-control keyword numbertxt" name="keyword" value="" placeholder="50" type="text">
                                                                                     </div>
                                                                                     <label class="col-sm-3 label-title">سال<span class="required">*</span></label>
                                                                                 </div>
@@ -2301,7 +2353,7 @@
                                                                                     <h4>جزئیات خیلی آگهی</h4>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="کارکرده" class="select" tabindex="1">
+                                                                                            <select  id="Kind-Condition" data-placeholder="کارکرده" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">کارکرده</option>
                                                                                                 <option value="1">صفر</option>
@@ -2314,7 +2366,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="قرمز" class="select" tabindex="1">
+                                                                                            <select  id="Kind-ColorOut" data-placeholder="قرمز" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -2327,7 +2379,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="ندارد" class="select" tabindex="1">
+                                                                                            <select id="Kind-ModelTip"  data-placeholder="ندارد" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">تیپ 5</option>
                                                                                                 <option value="1">تیپ 2</option>
@@ -2340,7 +2392,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="بنزین" class="select" tabindex="1">
+                                                                                            <select id="Kind-Fuel"  data-placeholder="بنزین" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -2353,7 +2405,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder=" بدون رنگ" class="select" tabindex="1">
+                                                                                            <select id="Kind-Crash"  data-placeholder=" بدون رنگ" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">بدون رنگ</option>
                                                                                                 <option value="1">یک لکه رنگ</option>
@@ -2364,7 +2416,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="پلاک ملی" class="select" tabindex="1">
+                                                                                            <select   id="Kind-Pelak" data-placeholder="پلاک ملی" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">گذر موقت</option>
                                                                                                 <option value="1">پلاک دولتی</option>
@@ -2375,10 +2427,12 @@
                                                                                     </div>
                                                                                     <div class="row form-group additional">
                                                                                         <div class="col-sm-9 checkbox">
+                                                                                           
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">دزدگیر</label>
+                                                                                                <input id="HasAlarm" type="checkbox">
+                                                                                                <label for="HasAlarm">دزدگیر</label>
                                                                                             </div>
+                                                                                          
 
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">سایر</label>
@@ -2407,14 +2461,21 @@
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
                                                                                             <div class="row">
-                                                                                                <div class="col-md-6">
+                                                                                                <div class="col-md-2">
 
                                                                                                     <label>هزار تومان</label>
-                                                                                                    <input type="radio" name="price" value="negotiable" id="negotiable">
-                                                                                                    <label for="negotiable">توافقی </label>
+
                                                                                                 </div>
                                                                                                 <div class="col-md-6">
-                                                                                                    <input type="text" class="form-control" id="text1">
+                                                                                                    <input id="TotalPrice" type="text" class="form-control ">
+                                                                                                </div>
+                                                                                                <div class="col-md-4">
+                                                                                                    <select id="Kind-TotalPrice" data-placeholder="1" class="select " tabindex="1">
+                                                                                                        <option value=""></option>
+                                                                                                        <option value="1">توافقی</option>
+                                                                                                        <option value="3">مقطوع</option>
+
+                                                                                                    </select>
                                                                                                 </div>
                                                                                             </div>
 
@@ -2463,17 +2524,23 @@
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
                                                                                             <div class="row">
-                                                                                                <div class="col-md-6">
+                                                                                                <div class="col-md-2">
 
                                                                                                     <label>هزار تومان</label>
-                                                                                                    <input type="radio" name="price" value="negotiable" id="negotiable">
-                                                                                                    <label for="negotiable">توافقی </label>
+
                                                                                                 </div>
                                                                                                 <div class="col-md-6">
-                                                                                                    <input type="text" class="form-control" id="text1">
+                                                                                                    <input id="TotalPrice" type="text" class="form-control ">
+                                                                                                </div>
+                                                                                                <div class="col-md-4">
+                                                                                                    <select id="Kind-TotalPrice" data-placeholder="1" class="select " tabindex="1">
+                                                                                                        <option value=""></option>
+                                                                                                        <option value="1">توافقی</option>
+                                                                                                        <option value="3">مقطوع</option>
+
+                                                                                                    </select>
                                                                                                 </div>
                                                                                             </div>
-
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">قیمت<span class="required">*</span></label>
                                                                                     </div>
@@ -2490,7 +2557,7 @@
                                                                                                     <div class="hs-searchbox">
                                                                                                         <input type="text" class="form-control" autocomplete="off">
                                                                                                     </div>
-                                                                                                    <ul class="dropdown-menu inner" role="menu">
+                                                                                                    <ul id="Brand-Name"  class="dropdown-menu inner" role="menu">
                                                                                                         <li data-value="" data-level="1" data-default-selected="">
                                                                                                             <a href="#">برند</a>
                                                                                                         </li>
@@ -2521,7 +2588,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price ">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="قرمز" class="select" tabindex="1">
+                                                                                            <select id="KindColor"  data-placeholder="قرمز" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -2570,14 +2637,21 @@
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
                                                                                             <div class="row">
-                                                                                                <div class="col-md-6">
+                                                                                                <div class="col-md-2">
 
                                                                                                     <label>هزار تومان</label>
-                                                                                                    <input type="radio" name="price" value="negotiable" id="negotiable">
-                                                                                                    <label for="negotiable">توافقی </label>
+
                                                                                                 </div>
                                                                                                 <div class="col-md-6">
-                                                                                                    <input type="text" class="form-control" id="text1">
+                                                                                                    <input id="TotalPrice" type="text" class="form-control ">
+                                                                                                </div>
+                                                                                                <div class="col-md-4">
+                                                                                                    <select id="Kind-TotalPrice" data-placeholder="1" class="select " tabindex="1">
+                                                                                                        <option value=""></option>
+                                                                                                        <option value="1">توافقی</option>
+                                                                                                        <option value="3">مقطوع</option>
+
+                                                                                                    </select>
                                                                                                 </div>
                                                                                             </div>
 
@@ -2597,7 +2671,7 @@
                                                                                                     <div class="hs-searchbox">
                                                                                                         <input type="text" class="form-control" autocomplete="off">
                                                                                                     </div>
-                                                                                                    <ul class="dropdown-menu inner" role="menu">
+                                                                                                    <ul  id="Brand-Name" class="dropdown-menu inner" role="menu">
                                                                                                         <li data-value="" data-level="1" data-default-selected="">
                                                                                                             <a href="#">برند</a>
                                                                                                         </li>
@@ -2628,7 +2702,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price ">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="قرمز" class="select" tabindex="1">
+                                                                                            <select  id="KindColor" data-placeholder="قرمز" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -2667,7 +2741,7 @@
                                                                                     <h4>جزئیات خیلی آگهی</h4>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="13" class="select" tabindex="1">
+                                                                                            <select id="KindSizeScreen"  data-placeholder="13" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -2680,7 +2754,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="هردو" class="select" tabindex="1">
+                                                                                            <select id="KindTouch"  data-placeholder="هردو" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">ندارد</option>
                                                                                                 <option value="1">دارد</option>
@@ -2690,7 +2764,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="2" class="select" tabindex="1">
+                                                                                            <select id="MeasureRAM"  data-placeholder="2" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">4</option>
                                                                                                 <option value="1">6</option>
@@ -2703,7 +2777,7 @@
 
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="بنزین" class="select" tabindex="1">
+                                                                                            <select  id="MeasureCPU" data-placeholder="بنزین" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -2716,7 +2790,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder=" بدون رنگ" class="select" tabindex="1">
+                                                                                            <select id="MeasureHard"  data-placeholder=" بدون رنگ" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">بدون رنگ</option>
                                                                                                 <option value="1">یک لکه رنگ</option>
@@ -2727,7 +2801,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="پلاک ملی" class="select" tabindex="1">
+                                                                                            <select id="MeasureGraphic"  data-placeholder="پلاک ملی" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">گذر موقت</option>
                                                                                                 <option value="1">پلاک دولتی</option>
@@ -2739,20 +2813,20 @@
                                                                                     <div class="row form-group additional">
                                                                                         <div class="col-sm-9 checkbox">
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">ضد آب</label>
+                                                                                                <input id="HasAntiWater" type="checkbox">
+                                                                                                <label for="HasAntiWater">ضد آب</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">USB3</label>
+                                                                                                <input id="HasUSB3" type="checkbox">
+                                                                                                <label for="HasUSB3">USB3</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">DVD/RW</label>
+                                                                                                <input id="HasDVDRW" type="checkbox">
+                                                                                                <label for="HasDVDRW">DVD/RW</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">Camera</label>
+                                                                                                <input id="HasCamera" type="checkbox">
+                                                                                                <label for="HasCamera">Camera</label>
                                                                                             </div>
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">سایر</label>
@@ -2780,14 +2854,21 @@
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
                                                                                             <div class="row">
-                                                                                                <div class="col-md-6">
+                                                                                                <div class="col-md-2">
 
                                                                                                     <label>هزار تومان</label>
-                                                                                                    <input type="radio" name="price" value="negotiable" id="negotiable">
-                                                                                                    <label for="negotiable">توافقی </label>
+
                                                                                                 </div>
                                                                                                 <div class="col-md-6">
-                                                                                                    <input type="text" class="form-control" id="text1">
+                                                                                                    <input id="TotalPrice" type="text" class="form-control ">
+                                                                                                </div>
+                                                                                                <div class="col-md-4">
+                                                                                                    <select id="Kind-TotalPrice" data-placeholder="1" class="select " tabindex="1">
+                                                                                                        <option value=""></option>
+                                                                                                        <option value="1">توافقی</option>
+                                                                                                        <option value="3">مقطوع</option>
+
+                                                                                                    </select>
                                                                                                 </div>
                                                                                             </div>
 
@@ -2823,7 +2904,7 @@
 
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="2" class="select" tabindex="1">
+                                                                                            <select id="MeasureRAM"  data-placeholder="2" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">4</option>
                                                                                                 <option value="1">6</option>
@@ -2836,7 +2917,7 @@
 
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="بنزین" class="select" tabindex="1">
+                                                                                            <select  id="MeasureCPU" data-placeholder="بنزین" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">1</option>
                                                                                                 <option value="1">2</option>
@@ -2849,7 +2930,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder=" بدون رنگ" class="select" tabindex="1">
+                                                                                            <select  id="MeasureHard" data-placeholder=" بدون رنگ" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">بدون رنگ</option>
                                                                                                 <option value="1">یک لکه رنگ</option>
@@ -2860,7 +2941,7 @@
                                                                                     </div>
                                                                                     <div class="row select-price col-calc-2">
                                                                                         <div class="col-sm-6">
-                                                                                            <select data-placeholder="پلاک ملی" class="select" tabindex="1">
+                                                                                            <select id="MeasureGraphic"  data-placeholder="پلاک ملی" class="select" tabindex="1">
                                                                                                 <option value=""></option>
                                                                                                 <option value="1">گذر موقت</option>
                                                                                                 <option value="1">پلاک دولتی</option>
@@ -2872,17 +2953,18 @@
                                                                                     <div class="row form-group additional">
                                                                                         <div class="col-sm-9 checkbox">
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">USB3</label>
+                                                                                                <input id="HasUSB3" type="checkbox">
+                                                                                                <label for="HasUSB3">USB3</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">DVD/RW</label>
+                                                                                                <input id="HasDVDRW" type="checkbox">
+                                                                                                <label for="HasDVDRW">DVD/RW</label>
                                                                                             </div>
                                                                                             <div class="md-checkbox col-calc-3">
-                                                                                                <input id="i3" type="checkbox">
-                                                                                                <label for="i3">بلندگو</label>
+                                                                                                <input id="HasSpeaker" type="checkbox">
+                                                                                                <label for="HasSpeaker">بلندگو</label>
                                                                                             </div>
+
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">سایر</label>
                                                                                     </div>
@@ -2910,14 +2992,21 @@
                                                                                     <div class="row form-group select-price">
                                                                                         <div class="col-sm-9">
                                                                                             <div class="row">
-                                                                                                <div class="col-md-6">
+                                                                                                <div class="col-md-2">
 
                                                                                                     <label>هزار تومان</label>
-                                                                                                    <input type="radio" name="price" value="negotiable" id="negotiable">
-                                                                                                    <label for="negotiable">توافقی </label>
+
                                                                                                 </div>
                                                                                                 <div class="col-md-6">
-                                                                                                    <input type="text" class="form-control" id="text1">
+                                                                                                    <input id="TotalPrice" type="text" class="form-control ">
+                                                                                                </div>
+                                                                                                <div class="col-md-4">
+                                                                                                    <select id="Kind-TotalPrice" data-placeholder="1" class="select " tabindex="1">
+                                                                                                        <option value=""></option>
+                                                                                                        <option value="1">توافقی</option>
+                                                                                                        <option value="3">مقطوع</option>
+
+                                                                                                    </select>
                                                                                                 </div>
                                                                                             </div>
 
@@ -2967,17 +3056,23 @@
                                                                                         <div class="row form-group select-price">
                                                                                             <div class="col-sm-9">
                                                                                                 <div class="row">
-                                                                                                    <div class="col-md-6">
+                                                                                                    <div class="col-md-2">
 
                                                                                                         <label>هزار تومان</label>
-                                                                                                        <input type="radio" name="price" value="negotiable" id="negotiable">
-                                                                                                        <label for="negotiable">توافقی </label>
+
                                                                                                     </div>
                                                                                                     <div class="col-md-6">
-                                                                                                        <input type="text" class="form-control" id="text1">
+                                                                                                        <input id="TotalPrice" type="text" class="form-control ">
+                                                                                                    </div>
+                                                                                                    <div class="col-md-4">
+                                                                                                        <select id="Kind-TotalPrice" data-placeholder="1" class="select " tabindex="1">
+                                                                                                            <option value=""></option>
+                                                                                                            <option value="1">توافقی</option>
+                                                                                                            <option value="3">مقطوع</option>
+
+                                                                                                        </select>
                                                                                                     </div>
                                                                                                 </div>
-
                                                                                             </div>
                                                                                             <label class="col-sm-3 label-title">قیمت<span class="required">*</span></label>
                                                                                         </div>
