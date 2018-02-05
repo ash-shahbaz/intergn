@@ -1466,9 +1466,9 @@
         $("#SearchAllAgahi").click(function () {
             var Category = "All";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
@@ -1500,22 +1500,36 @@
 
         //شروع فروش املاک مسکونی
         $("#SearchSaleHome").click(function () {
+            //Fixed
             var Category = "All";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('id');
+            var Person = $('input[type=radio][name=Person]:checked').attr('id')
+            var KindTotalPrice = $("#Kind-TotalPrice").val();
+            var UntillTotalPrice = "";
+            var FromTotalPrice = "";
+            if (KindTotalPrice == 2)//مقطوع - تومان
+            { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
+            var UntillArea = $('#Untill-Area').val();
+            var FromArea = $('#From-Area').val();
+            //External
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchAmlak",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
-                    MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
+                    MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast,
+                    Countryside: Countryside, Person: Person, KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice,
+                    FromTotalPrice: FromTotalPrice, UntillArea: UntillArea, FromArea: FromArea
                 },
                 contentType: "text/plain",
                 dataType: "json",
@@ -1533,15 +1547,29 @@
 
         //شروع اجاره مسکونی
         $("#SearchRentHome").click(function () {
+            //Fixed
             var Category = "All";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+            var KindTotalPrice = $("#Kind-TotalPrice").val();
+            var UntillTotalPrice = "";
+            var FromTotalPrice = "";
+            if (KindTotalPrice == 2)//مقطوع - تومان
+            { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
+
+
+
+
+            //External
+
+
 
             $.ajax({
                 type: "GET",
@@ -1569,15 +1597,25 @@
 
         //شروع فروش اداری و تجاری
         $("#SearchSaleOffice").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -1603,15 +1641,24 @@
 
         //شروع اجاره اداری و تجاری
         $("#SearchRentOffice").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -1638,15 +1685,24 @@
 
         //شروع - خدمات املاک
         $("#SearchServicesHouse").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -1671,15 +1727,24 @@
 
         //شروع -فروش املاک مسکونی- آپارتمان +و+ خانه و ویلا
         $("#SearchSaleApartSub").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -1705,15 +1770,24 @@
 
         //شروع -فروش املاک مسکونی- زمین و کلنگی
         $("#SearchSaleLandSub").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -1738,15 +1812,24 @@
 
         //شروع -اجاره مسکونی - تمام زیر مجموعه ها
         $("#SearchRentHouseSub").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -1775,15 +1858,24 @@
 
         //شروع - فروش اداری و تجاری - تمام زیر مجموعه ها
         $("#SearchSaleOfficeSub").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -1810,15 +1902,24 @@
 
         //شروع - اجاره اداری و تجاری - تمام زیر مجموعه ها
         $("#SearchRentOfficeSub").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -1842,15 +1943,24 @@
 
         //شروع - خدمات املاک - تمام زیر مجموعه ها
         $("#SearchServicesHouseSub").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -1874,15 +1984,23 @@
 
         //شروع خدمات و اجتماعی و استخدام
         $("#SearchServicesEmployment").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
 
             $.ajax({
                 type: "GET",
@@ -1906,15 +2024,24 @@
 
         //شروع لوازم خانگی و لوازم شخصی و سرگرمی و فراغت و کسب و کار -  تمام سر تیتر ها و جزئیات ها
         $("#SearchPersonalEntertainment").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -1938,15 +2065,24 @@
 
         //شروع - لوازم الکترونیکی - لوازم جانبی موبایل و تبلت و سیم کارت و تمام زیر مجموعه های صوتی و تصویری و کنسول ها و بازی ها و رایانه بجزززز رایانه همراه و رومیزی
         $("#SearchElectronics").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -1970,15 +2106,24 @@
 
         //شروع - لوازم الکترونیکی - گوشی موبایل  و تبلت
         $("#SearchMobileTablet").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -2002,15 +2147,24 @@
 
         //شروع - رایانه - رایانه همراه
         $("#SearchLapTop").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -2034,15 +2188,24 @@
 
         //شروع - لوازم الکترونیکی - رایانه - رایانه رومیزی
         $("#SearchCase").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -2066,15 +2229,24 @@
 
         //شروع خودرو  +و+ موتورسیکلت و لوازم جانبی
         $("#SearchMotorAccessories").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -2098,15 +2270,24 @@
 
         //شروع قطعات یدکی و لوازم جانبی خودرو  +و+  قایق و لوازم جانبی
         $("#SearchCarBoatAcc").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -2130,15 +2311,24 @@
 
         //شروع - خودرو - سواری
         $("#SearchCarRiding").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -2162,15 +2352,24 @@
 
         //شروع - خودرو - سنگین
         $("#SearchCarHeavy").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -2194,15 +2393,24 @@
 
         //شروع - قطعات یدکی و لوازم جانبی خودرو - تمام زیر مجموعه ها
         $("#SearchVehicleAccessories").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -2226,15 +2434,24 @@
 
         //شروع - موتور سیکلت و لوازم جانبی - موتور سیکلت
         $("#SearchMotorcycle").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -2258,15 +2475,24 @@
 
         //شروع - قطعات یدکی و لوازم جانبی خودرو - تمام زیر مجموعه ها و قایق و لوازم جانبی و لوازم جانبی موتور سیکلت
         $("#SearchAccessoriesDetail").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
@@ -2290,15 +2516,24 @@
 
         //شروع  - قایق و لوازم جانبی - تمام زیر مجموعه ها
         $("#SearchBoatsAccessories").click(function () {
-            var Category = "All";
+            //Fixed
+            var Category = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val()
-            var MahaleSelect = $(".mahale-select").val()
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id')
+            var ShahrSelect = $(".ShahrSelect").val();
+            var MahaleSelect = $(".mahale-select").val();
+            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
+            //Internal
+
+
+
+            //External
+
+
+
 
             $.ajax({
                 type: "GET",
