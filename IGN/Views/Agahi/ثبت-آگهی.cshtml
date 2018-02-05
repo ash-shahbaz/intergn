@@ -101,7 +101,7 @@
                                                                 @{
                                                                     foreach (var item in Utility.lstProvinces)
                                                                     {
-                                                                        <option value="@item.ProvinceName" accesskey="@item.ProvinceID">@item.ProvinceName</option>
+                                                                        <option value="@item.ProvinceName" value="@item.ProvinceID">@item.ProvinceName</option>
                                                                     }
 
                                                                 }
@@ -145,11 +145,11 @@
                                                     <div class="row form-group">
                                                         <div class="col-sm-9 user-type">
                                                             <div class="md-radio md-radio-inline">
-                                                                <input id="Kind-Need" type="radio" name="Kind" class="InputServiceType" accesskey="0">
+                                                                <input id="Kind-Need" type="radio" value="2" name="Kind" class="InputServiceType" >
                                                                 <label for="Kind-Need">درخواست کننده</label>
                                                             </div>
                                                             <div class="md-radio md-radio-inline">
-                                                                <input id="Kind-Sell" type="radio" name="Kind" class="InputServiceType" accesskey="1">
+                                                                <input id="Kind-Sell" type="radio" value="1" name="Kind" class="InputServiceType" >
                                                                 <label for="Kind-Sell">ارائه کننده</label>
                                                             </div>
                                                         </div>
@@ -275,11 +275,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Person-Self" type="radio" name="Person" accesskey="0" class="Person">
+                                                                                                <input id="Person-Self" type="radio" name="Person" value="1" class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Person-Prop" type="radio" name="Person" accesskey="1" class="Person">
+                                                                                                <input id="Person-Prop" type="radio" name="Person"  value="2"  class="Person">
                                                                                                 <label for="Person-Prop">مشاور املاک</label>
                                                                                             </div>
                                                                                         </div>
@@ -289,11 +289,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Side-No" type="radio" name="Countryside" accesskey="0" class="HoomeShahr">
+                                                                                                <input id="Side-No" type="radio" name="Countryside"  value="1"  class="HoomeShahr">
                                                                                                 <label for="Side-No">نیست</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Side-Yes" type="radio" name="Countryside" accesskey="1" class="HoomeShahr">
+                                                                                                <input id="Side-Yes" type="radio" name="Countryside"  value="2"  class="HoomeShahr">
                                                                                                 <label for="Side-Yes">هست</label>
                                                                                             </div>
                                                                                         </div>
@@ -545,11 +545,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind">
+                                                                                                <input id="Kind-Sell" value="1" type="radio" name="Kind">
                                                                                                 <label for="Kind-Sell">فروشی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind">
+                                                                                                <input id="Kind-Need" value="2" type="radio" name="Kind">
                                                                                                 <label for="Kind-Need">درخواستی</label>
                                                                                             </div>
                                                                                         </div>
@@ -558,11 +558,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Person-Self" type="radio" name="Person" accesskey="0" class="Person">
+                                                                                                <input id="Person-Self" type="radio" name="Person"  value="1"  class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Person-Prop" type="radio" name="Person" accesskey="1" class="Person">
+                                                                                                <input id="Person-Prop" type="radio" name="Person"  value="2"  class="Person">
                                                                                                 <label for="Person-Prop">مشاور املاک</label>
                                                                                             </div>
                                                                                         </div>
@@ -572,11 +572,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Side-No" type="radio" name="Countryside" accesskey="0" class="HoomeShahr">
+                                                                                                <input id="Side-No" type="radio" name="Countryside"  value="1"  class="HoomeShahr">
                                                                                                 <label for="Side-No">نیست</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Side-Yes" type="radio" name="Countryside" accesskey="1" class="HoomeShahr">
+                                                                                                <input id="Side-Yes" type="radio" name="Countryside"  value="2"  class="HoomeShahr">
                                                                                                 <label for="Side-Yes">هست</label>
                                                                                             </div>
                                                                                         </div>
@@ -754,11 +754,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind" class="InputServiceType" accesskey="0">
+                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2" class="InputServiceType" >
                                                                                                 <label for="Kind-Need">درخواست کننده</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind" class="InputServiceType" accesskey="1">
+                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1" class="InputServiceType" >
                                                                                                 <label for="Kind-Sell">ارائه کننده</label>
                                                                                             </div>
                                                                                         </div>
@@ -767,11 +767,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Person-Self" type="radio" name="Person" accesskey="0" class="Person">
+                                                                                                <input id="Person-Self" type="radio" name="Person"  value="1"  class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Person-Prop" type="radio" name="Person" accesskey="1" class="Person">
+                                                                                                <input id="Person-Prop" type="radio" name="Person"  value="2"  class="Person">
                                                                                                 <label for="Person-Prop">مشاور املاک</label>
                                                                                             </div>
                                                                                         </div>
@@ -781,11 +781,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Side-No" type="radio" name="Countryside" accesskey="0" class="HoomeShahr">
+                                                                                                <input id="Side-No" type="radio" name="Countryside"  value="1"  class="HoomeShahr">
                                                                                                 <label for="Side-No">نیست</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Side-Yes" type="radio" name="Countryside" accesskey="1" class="HoomeShahr">
+                                                                                                <input id="Side-Yes" type="radio" name="Countryside"  value="2"  class="HoomeShahr">
                                                                                                 <label for="Side-Yes">هست</label>
                                                                                             </div>
                                                                                         </div>
@@ -1007,11 +1007,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind">
+                                                                                                <input id="Kind-Sell" type="radio" value="1" name="Kind">
                                                                                                 <label for="Kind-Sell">فروشی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind">
+                                                                                                <input id="Kind-Need" type="radio" value="2" name="Kind">
                                                                                                 <label for="Kind-Need">درخواستی</label>
                                                                                             </div>
                                                                                         </div>
@@ -1020,11 +1020,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Person-Self" type="radio" name="Person" accesskey="0" class="Person">
+                                                                                                <input id="Person-Self" type="radio" name="Person"  value="1"  class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Person-Prop" type="radio" name="Person" accesskey="1" class="Person">
+                                                                                                <input id="Person-Prop" type="radio" name="Person"  value="2"  class="Person">
                                                                                                 <label for="Person-Prop">مشاور املاک</label>
                                                                                             </div>
                                                                                         </div>
@@ -1033,11 +1033,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="AdminDoc-No" type="radio" name="AdminDoc">
+                                                                                                <input id="AdminDoc-No" type="radio"  value="1"  name="AdminDoc">
                                                                                                 <label for="AdminDoc-No">ندارد</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="AdminDoc-Yes" type="radio" name="AdminDoc">
+                                                                                                <input id="AdminDoc-Yes" type="radio" value="2"  name="AdminDoc">
                                                                                                 <label for="AdminDoc-Yes">دارد</label>
                                                                                             </div>
                                                                                         </div>
@@ -1046,11 +1046,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Side-No" type="radio" name="Countryside" accesskey="0" class="HoomeShahr">
+                                                                                                <input id="Side-No" type="radio" name="Countryside"  value="1"  class="HoomeShahr">
                                                                                                 <label for="Side-No">نیست</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Side-Yes" type="radio" name="Countryside" accesskey="1" class="HoomeShahr">
+                                                                                                <input id="Side-Yes" type="radio" name="Countryside"  value="2"  class="HoomeShahr">
                                                                                                 <label for="Side-Yes">هست</label>
                                                                                             </div>
                                                                                         </div>
@@ -1336,11 +1336,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind" class="InputServiceType" accesskey="0">
+                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2" class="InputServiceType" >
                                                                                                 <label for="Kind-Need">درخواست کننده</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind" class="InputServiceType" accesskey="1">
+                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1" class="InputServiceType" >
                                                                                                 <label for="Kind-Sell">ارائه کننده</label>
                                                                                             </div>
                                                                                         </div>
@@ -1349,11 +1349,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Person-Self" type="radio" name="Person" accesskey="0" class="Person">
+                                                                                                <input id="Person-Self" type="radio" name="Person"  value="1"  class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Person-Prop" type="radio" name="Person" accesskey="1" class="Person">
+                                                                                                <input id="Person-Prop" type="radio" name="Person"  value="2"  class="Person">
                                                                                                 <label for="Person-Prop">مشاور املاک</label>
                                                                                             </div>
                                                                                         </div>
@@ -1362,11 +1362,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="AdminDoc-No" type="radio" name="AdminDoc">
+                                                                                                <input id="AdminDoc-No" type="radio"  value="1"  name="AdminDoc">
                                                                                                 <label for="AdminDoc-No">ندارد</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="AdminDoc-Yes" type="radio" name="AdminDoc">
+                                                                                                <input id="AdminDoc-Yes" type="radio"  value="2"  name="AdminDoc">
                                                                                                 <label for="AdminDoc-Yes">دارد</label>
                                                                                             </div>
                                                                                         </div>
@@ -1375,11 +1375,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Side-No" type="radio" name="Countryside" accesskey="0" class="HoomeShahr">
+                                                                                                <input id="Side-No" type="radio" name="Countryside"  value="1"  class="HoomeShahr">
                                                                                                 <label for="Side-No">نیست</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Side-Yes" type="radio" name="Countryside" accesskey="1" class="HoomeShahr">
+                                                                                                <input id="Side-Yes" type="radio" name="Countryside"  value="2"  class="HoomeShahr">
                                                                                                 <label for="Side-Yes">هست</label>
                                                                                             </div>
                                                                                         </div>
@@ -1552,11 +1552,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Person-Self" type="radio" name="Person" accesskey="0" class="Person">
+                                                                                                <input id="Person-Self" type="radio" name="Person"  value="1"  class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Person-Prop" type="radio" name="Person" accesskey="1" class="Person">
+                                                                                                <input id="Person-Prop" type="radio" name="Person"  value="2"  class="Person">
                                                                                                 <label for="Person-Prop">مشاور املاک</label>
                                                                                             </div>
                                                                                         </div>
@@ -1694,15 +1694,15 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind">
+                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
                                                                                                 <label for="Kind-Sell">فروشی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Rent" type="radio" name="Kind">
+                                                                                                <input id="Kind-Rent" type="radio" name="Kind" value="3">
                                                                                                 <label for="Kind-Rent">اجاره ای</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind">
+                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
                                                                                                 <label for="Kind-Need">درخواستی</label>
                                                                                             </div>
                                                                                         </div>
@@ -1711,11 +1711,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Person-Self" type="radio" name="Person" accesskey="0" class="Person">
+                                                                                                <input id="Person-Self" type="radio" name="Person" value="1" class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Person-Prop" type="radio" name="Person" accesskey="1" class="Person">
+                                                                                                <input id="Person-Prop" type="radio" name="Person" value="2" class="Person">
                                                                                                 <label for="Person-Prop">نمایشگاه خودرو</label>
                                                                                             </div>
                                                                                         </div>
@@ -2004,15 +2004,15 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind">
+                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
                                                                                                 <label for="Kind-Sell">فروشی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Rent" type="radio" name="Kind">
+                                                                                                <input id="Kind-Rent" type="radio" name="Kind" value="3">
                                                                                                 <label for="Kind-Rent">اجاره ای</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind">
+                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
                                                                                                 <label for="Kind-Need">درخواستی</label>
                                                                                             </div>
                                                                                         </div>
@@ -2021,11 +2021,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Person-Self" type="radio" name="Person" accesskey="0" class="Person">
+                                                                                                <input id="Person-Self" type="radio" name="Person" value="1" class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Person-Prop" type="radio" name="Person" accesskey="1" class="Person">
+                                                                                                <input id="Person-Prop" type="radio" name="Person" value="2" class="Person">
                                                                                                 <label for="Person-Prop">نمایشگاه خودرو</label>
                                                                                             </div>
                                                                                         </div>
@@ -2312,15 +2312,15 @@
                                                                                 <div class="row form-group">
                                                                                     <div class="col-sm-9 user-type">
                                                                                         <div class="md-radio md-radio-inline">
-                                                                                            <input id="Kind-Sell" type="radio" name="Kind">
+                                                                                            <input id="Kind-Sell" type="radio" name="Kind" value="1">
                                                                                             <label for="Kind-Sell">فروشی</label>
                                                                                         </div>
                                                                                         <div class="md-radio md-radio-inline">
-                                                                                            <input id="Kind-Rent" type="radio" name="Kind">
+                                                                                            <input id="Kind-Rent" type="radio" name="Kind" value="3">
                                                                                             <label for="Kind-Rent">اجاره ای</label>
                                                                                         </div>
                                                                                         <div class="md-radio md-radio-inline">
-                                                                                            <input id="Kind-Need" type="radio" name="Kind">
+                                                                                            <input id="Kind-Need" type="radio" name="Kind" value="2">
                                                                                             <label for="Kind-Need">درخواستی</label>
                                                                                         </div>
                                                                                     </div>
@@ -2329,11 +2329,11 @@
                                                                                 <div class="row form-group">
                                                                                     <div class="col-sm-9 user-type">
                                                                                         <div class="md-radio md-radio-inline">
-                                                                                            <input id="Person-Self" type="radio" name="Person" accesskey="0" class="Person">
+                                                                                            <input id="Person-Self" type="radio" name="Person" value="1" class="Person">
                                                                                             <label for="Person-Self">شخصی</label>
                                                                                         </div>
                                                                                         <div class="md-radio md-radio-inline">
-                                                                                            <input id="Person-Prop" type="radio" name="Person" accesskey="1" class="Person">
+                                                                                            <input id="Person-Prop" type="radio" name="Person" value="2" class="Person">
                                                                                             <label for="Person-Prop">نمایشگاه خودرو</label>
                                                                                         </div>
                                                                                     </div>
@@ -2486,15 +2486,15 @@
 
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind">
+                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
                                                                                                 <label for="Kind-Sell">فروشی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Rent" type="radio" name="Kind">
+                                                                                                <input id="Kind-Rent" type="radio" name="Kind" value="3">
                                                                                                 <label for="Kind-Rent">اجاره ای</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind">
+                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
                                                                                                 <label for="Kind-Need">درخواستی</label>
                                                                                             </div>
                                                                                         </div>
@@ -2603,11 +2603,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind">
+                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
                                                                                                 <label for="Kind-Sell">فروشی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind">
+                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
                                                                                                 <label for="Kind-Need">درخواستی</label>
                                                                                             </div>
                                                                                         </div>
@@ -2717,11 +2717,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind">
+                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
                                                                                                 <label for="Kind-Sell">فروشی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind">
+                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
                                                                                                 <label for="Kind-Need">درخواستی</label>
                                                                                             </div>
                                                                                         </div>
@@ -2879,11 +2879,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind">
+                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
                                                                                                 <label for="Kind-Sell">فروشی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind">
+                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
                                                                                                 <label for="Kind-Need">درخواستی</label>
                                                                                             </div>
                                                                                         </div>
@@ -3018,11 +3018,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind">
+                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
                                                                                                 <label for="Kind-Sell">فروشی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind">
+                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
                                                                                                 <label for="Kind-Need">درخواستی</label>
                                                                                             </div>
                                                                                         </div>
@@ -3081,11 +3081,11 @@
                                                                                         <div class="row form-group">
                                                                                             <div class="col-sm-9 user-type">
                                                                                                 <div class="md-radio md-radio-inline">
-                                                                                                    <input id="Kind-Sell" type="radio" name="Kind">
+                                                                                                    <input id="Kind-Sell" type="radio" name="Kind" value="1">
                                                                                                     <label for="Kind-Sell">فروشی</label>
                                                                                                 </div>
                                                                                                 <div class="md-radio md-radio-inline">
-                                                                                                    <input id="Kind-Need" type="radio" name="Kind">
+                                                                                                    <input id="Kind-Need" type="radio" name="Kind" value="2">
                                                                                                     <label for="Kind-Need">درخواستی</label>
                                                                                                 </div>
                                                                                             </div>
@@ -3116,11 +3116,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind">
+                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
                                                                                                 <label for="Kind-Sell">فروشی</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind">
+                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
                                                                                                 <label for="Kind-Need">درخواستی</label>
                                                                                             </div>
                                                                                         </div>
@@ -3389,7 +3389,7 @@
 
                         for (var i = 0; i < arr.length; i++) {
                             var classname = "TopLvlCli" + arr[i].AgahiCategoryID;
-                            var li = "<li class=\"\"><a class=\"" + classname + "\" accesskey=\"" + arr[i].AgahiCategoryID + "\" href=\"#cat" + arr[i].AgahiCategoryID + "\" aria-controls=\"cat" + arr[i].AgahiCategoryID + "\" role=\"tab\" data-toggle=\"tab\" aria-expanded=\"false\">" + arr[i].AgahiCategoryName + "</a></li>";
+                            var li = "<li class=\"\"><a class=\"" + classname + "\" value=\"" + arr[i].AgahiCategoryID + "\" href=\"#cat" + arr[i].AgahiCategoryID + "\" aria-controls=\"cat" + arr[i].AgahiCategoryID + "\" role=\"tab\" data-toggle=\"tab\" aria-expanded=\"false\">" + arr[i].AgahiCategoryName + "</a></li>";
 
                             $(".TopLevel").append(li);
 
@@ -3399,7 +3399,7 @@
 
 
 
-                                var id = $(this).attr("accesskey");
+                                var id = $(this).attr("value");
 
                                 var returnclick = "<a href=\"\"><i class=\"fa fa-arrow-right nofa RetClick\"></i><span class=\"padding-right-15\"> | " + $(this).html() + " </span></a>";
 
@@ -3414,7 +3414,7 @@
                                 for (var i = 0; i < arr.length; i++) {
 
                                     var classMidname = "MidLvlCli" + arr[i].AgahiCategoryID;
-                                    var li = "<li class=\"\"><a class=\"" + classMidname + "\" accesskey=\"" + arr[i].AgahiCategoryID + "\" href=\"#cat" + arr[i].AgahiCategoryID + "\" aria-controls=\"cat" + arr[i].AgahiCategoryID + "\" role=\"tab\" data-toggle=\"tab\" aria-expanded=\"false\">" + arr[i].AgahiCategoryName + "</a></li>";
+                                    var li = "<li class=\"\"><a class=\"" + classMidname + "\" value=\"" + arr[i].AgahiCategoryID + "\" href=\"#cat" + arr[i].AgahiCategoryID + "\" aria-controls=\"cat" + arr[i].AgahiCategoryID + "\" role=\"tab\" data-toggle=\"tab\" aria-expanded=\"false\">" + arr[i].AgahiCategoryName + "</a></li>";
                                     $(".TopLevel").append(li);
 
 
@@ -3427,7 +3427,7 @@
 
 
 
-                                        var id = $(this).attr("accesskey");
+                                        var id = $(this).attr("value");
 
                                         var returnclick = "<a href=\"\"><i class=\"fa fa-arrow-right nofa RetClick\"></i><span class=\"padding-right-15\"> | " + $(this).html() + " </span></a>";
 
@@ -3445,7 +3445,7 @@
 
                                         for (var i = 0; i < arr.length; i++) {
                                             var classLowname = "LowLvlCli" + arr[i].AgahiCategoryID;
-                                            var li = "<li class=\"\"><a class=\"" + classLowname + "\" accesskey=\"" + arr[i].AgahiCategoryID + "\" href=\"/Agahi/ثبت-آگهی/" + TopLevelName + "/" + $(this).html() + "/" + arr[i].AgahiCategoryName + "/" + arr[i].AgahiCategoryID + "\" aria-controls=\"cat" + arr[i].AgahiCategoryID + "\"  >" + arr[i].AgahiCategoryName + "</a></li>";
+                                            var li = "<li class=\"\"><a class=\"" + classLowname + "\" value=\"" + arr[i].AgahiCategoryID + "\" href=\"/Agahi/ثبت-آگهی/" + TopLevelName + "/" + $(this).html() + "/" + arr[i].AgahiCategoryName + "/" + arr[i].AgahiCategoryID + "\" aria-controls=\"cat" + arr[i].AgahiCategoryID + "\"  >" + arr[i].AgahiCategoryName + "</a></li>";
                                             $(".TopLevel").append(li);
                                         }
 
@@ -3485,13 +3485,13 @@
 
 
             $(".InputServiceType").click(function () {
-                servicetype = $(this).attr("accesskey");
+                servicetype = $(this).attr("value");
             });
             $(".TitleAgahi").click(function () {
-                TitleAgahi = $(this).attr("accesskey");
+                TitleAgahi = $(this).attr("value");
             });
             $(".ServiceTypeAparteman").click(function () {
-                ServiceTypeAparteman = $(this).attr("accesskey");
+                ServiceTypeAparteman = $(this).attr("value");
             });
 
 
@@ -3522,8 +3522,8 @@
                     var MetrajhAparteman = $("#Area").val();
 
                     var TeadadOtaghAparteman = $(".RoomNumber option:selected").val();
-                    var Person = $(".Person").attr("accesskey");
-                    var HoomeShahr = $(".HoomeShahr").attr("accesskey");
+                    var Person = $(".Person").attr("value");
+                    var HoomeShahr = $(".HoomeShahr").attr("value");
 
                     var YearCreated = $(".Year-Created option:selected").val();
 

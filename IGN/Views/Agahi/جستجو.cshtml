@@ -111,15 +111,15 @@
                             <div class="field-container radio-field">
                                 <label>نوع</label>
                                 <div class="md-radio md-radio-inline">
-                                    <input id="Kind-All" type="radio" name="Kind" checked>
+                                    <input id="Kind-All" type="radio" value="0" name="Kind" checked>
                                     <label for="Kind-All">فرقی نمی کند</label>
                                 </div>
                                 <div class="md-radio md-radio-inline">
-                                    <input id="Kind-Sell" type="radio" name="Kind">
+                                    <input id="Kind-Sell" type="radio" value="1" name="Kind">
                                     <label for="Kind-Sell">فروشی</label>
                                 </div>
                                 <div class="md-radio md-radio-inline">
-                                    <input id="Kind-Need" type="radio" name="Kind">
+                                    <input id="Kind-Need" type="radio" value="2" name="Kind">
                                     <label for="Kind-Need">درخواستی</label>
                                 </div>
                             </div>
@@ -1468,7 +1468,7 @@
             var SearchInput = $('#SearchInput').val();
             var ShahrSelect = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
-            var Kind = $('input[type=radio][name=Kind]:checked').attr('id');
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
             var HasFast = "";
@@ -1510,9 +1510,9 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('id');
-            var Person = $('input[type=radio][name=Person]:checked').attr('id');
-            var Kind = $('input[type=radio][name=Kind]:checked').attr('id');
+            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
+            var Person = $('input[type=radio][name=Person]:checked').attr('value');
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
             var KindTotalPrice = $("#Kind-TotalPrice").val();
             var UntillTotalPrice = "";
             var FromTotalPrice = "";
@@ -1574,9 +1574,9 @@
             { UntillDepositPrice = $('#Untill-DepositPrice').val(); FromDepositPrice = $('#From-DepositPrice').val(); }
             var UntillArea = $('#Untill-Area').val();
             var FromArea = $('#From-Area').val();
-            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('id');
-            var Person = $('input[type=radio][name=Person]:checked').attr('id');
-            var Kind = $('input[type=radio][name=Kind]:checked').attr('id');
+            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
+            var Person = $('input[type=radio][name=Person]:checked').attr('value');
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
 
 
 
@@ -1625,9 +1625,9 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var AdminDoc = $('input[type=radio][name=AdminDoc]:checked').attr('id');
-            var Person = $('input[type=radio][name=Person]:checked').attr('id');
-            var Kind = $('input[type=radio][name=Kind]:checked').attr('id');
+            var AdminDoc = $('input[type=radio][name=AdminDoc]:checked').attr('value');
+            var Person = $('input[type=radio][name=Person]:checked').attr('value');
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
             var KindTotalPrice = $("#Kind-TotalPrice").val();
             var UntillTotalPrice = "";
             var FromTotalPrice = "";
@@ -1688,9 +1688,9 @@
             { UntillDepositPrice = $('#Untill-DepositPrice').val(); FromDepositPrice = $('#From-DepositPrice').val(); }
             var UntillArea = $('#Untill-Area').val();
             var FromArea = $('#From-Area').val();
-            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('id');
-            var Person = $('input[type=radio][name=Person]:checked').attr('id');
-            var Kind = $('input[type=radio][name=Kind]:checked').attr('id');
+            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
+            var Person = $('input[type=radio][name=Person]:checked').attr('value');
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
 
 
             //External
@@ -1733,7 +1733,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var Person = $('input[type=radio][name=Person]:checked').attr('id');
+            var Person = $('input[type=radio][name=Person]:checked').attr('value');
 
 
             //External
@@ -1782,9 +1782,9 @@
             { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
             var UntillArea = $('#Untill-Area').val();
             var FromArea = $('#From-Area').val();
-            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('id');
-            var Person = $('input[type=radio][name=Person]:checked').attr('id');
-            var Kind = $('input[type=radio][name=Kind]:checked').attr('id');
+            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
+            var Person = $('input[type=radio][name=Person]:checked').attr('value');
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
             var UntillInfrastructure = $("#Untill-Infrastructure").val();
             var FromInfrastructure = $("#From-Infrastructure").val();
             var UntillLoan = $("#Untill-Loan").val();
@@ -1878,9 +1878,9 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('id');
-            var Person = $('input[type=radio][name=Person]:checked').attr('id');
-            var Kind = $('input[type=radio][name=Kind]:checked').attr('id');
+            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
+            var Person = $('input[type=radio][name=Person]:checked').attr('value');
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
             var KindTotalPrice = $("#Kind-TotalPrice").val();
             var UntillTotalPrice = "";
             var FromTotalPrice = "";
@@ -1953,9 +1953,9 @@
             { UntillDepositPrice = $('#Untill-DepositPrice').val(); FromDepositPrice = $('#From-DepositPrice').val(); }
             var UntillArea = $('#Untill-Area').val();
             var FromArea = $('#From-Area').val();
-            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('id');
-            var Person = $('input[type=radio][name=Person]:checked').attr('id');
-            var Kind = $('input[type=radio][name=Kind]:checked').attr('id');
+            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
+            var Person = $('input[type=radio][name=Person]:checked').attr('value');
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
             var UntillYear = $("#Untill-Year").val();
             var FromYear = $("#From-Year").val();
             var FloorNumber = $("#Floor-Number").val();
@@ -2053,10 +2053,10 @@
             { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
             var UntillArea = $('#Untill-Area').val();
             var FromArea = $('#From-Area').val();
-            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('id');
-            var Person = $('input[type=radio][name=Person]:checked').attr('id');
-            var Kind = $('input[type=radio][name=Kind]:checked').attr('id');
-            var AdminDoc = $('input[type=radio][name=AdminDoc]:checked').attr('id');
+            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
+            var Person = $('input[type=radio][name=Person]:checked').attr('value');
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
+            var AdminDoc = $('input[type=radio][name=AdminDoc]:checked').attr('value');
             var UntillInfrastructure = $("#Untill-Infrastructure").val();
             var FromInfrastructure = $("#From-Infrastructure").val();
             var UntillLoan = $("#Untill-Loan").val();
@@ -2166,9 +2166,9 @@
             { UntillDepositPrice = $('#Untill-DepositPrice').val(); FromDepositPrice = $('#From-DepositPrice').val(); }
             var UntillArea = $('#Untill-Area').val();
             var FromArea = $('#From-Area').val();
-            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('id');
-            var Person = $('input[type=radio][name=Person]:checked').attr('id');
-            var Kind = $('input[type=radio][name=Kind]:checked').attr('id');
+            var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
+            var Person = $('input[type=radio][name=Person]:checked').attr('value');
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
             var UntillYear = $("#Untill-Year").val();
             var FromYear = $("#From-Year").val();
             var FloorNumber = $("#Floor-Number").val();
@@ -2249,7 +2249,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var Person = $('input[type=radio][name=Person]:checked').attr('id');
+
 
 
             //External
@@ -2289,7 +2289,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
+
 
 
             //External
@@ -2328,7 +2328,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
+
 
 
             //External
@@ -2368,7 +2368,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
+
 
 
             //External
@@ -2408,7 +2408,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
+
 
 
             //External
@@ -2448,7 +2448,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
+
 
 
             //External
@@ -2488,7 +2488,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
+
 
 
             //External
@@ -2528,7 +2528,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
+
 
 
             //External
@@ -2568,7 +2568,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
+
 
 
             //External
@@ -2608,7 +2608,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
+
 
 
             //External
@@ -2648,7 +2648,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
+
 
 
             //External
@@ -2688,7 +2688,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
+
 
 
             //External
@@ -2728,7 +2728,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
+
 
 
             //External
@@ -2768,7 +2768,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
+
 
 
             //External
@@ -2808,7 +2808,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindSelect = $('input[type=radio][name=Kind]:checked').attr('id');
+
 
 
             //External
