@@ -1464,6 +1464,7 @@
 
         //شروع جستجو کلی
         $("#SearchAllAgahi").click(function () {
+            //Fixed
             var Category = "All";
             var SearchInput = $('#SearchInput').val();
             var ShahrSelect = $(".ShahrSelect").val();
@@ -1476,7 +1477,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchAllAgahi",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, Kind: Kind, HasImage, HasImage, HasFast: HasFast
@@ -1529,7 +1530,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/SearchAmlak",
+                url: "/Search/SearchSaleHome",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, Kind: Kind, HasImage, HasImage, HasFast: HasFast,
@@ -1591,7 +1592,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchRentHome",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -1644,7 +1645,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchSaleOffice",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -1700,7 +1701,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchRentOffice",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -1743,7 +1744,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchServicesHouse",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -1846,7 +1847,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchSaleApartSub",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -1909,7 +1910,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchSaleLandSub",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2010,7 +2011,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchRentHouseSub",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2120,7 +2121,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchSaleOfficeSub",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2219,7 +2220,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchRentOfficeSub",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2259,7 +2260,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchServicesHouseSub",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2298,7 +2299,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchServicesEmployment",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2343,7 +2344,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchPersonalEntertainment",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2388,7 +2389,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchElectronics",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2435,7 +2436,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchMobileTablet",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2500,7 +2501,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchLapTop",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2558,7 +2559,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchCase",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2608,7 +2609,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchMotorAccessories",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2654,7 +2655,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchCarBoatAcc",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2725,7 +2726,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchCarRiding",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2796,7 +2797,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchCarHeavy",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2842,7 +2843,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchVehicleAccessories",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2905,7 +2906,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchMotorcycle",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2951,7 +2952,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchAccessoriesDetail",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
@@ -2997,7 +2998,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/Search/Search",
+                url: "/Search/SearchBoatsAccessories",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
                     MahaleSelect: MahaleSelect, KindSelect: KindSelect, HasImage, HasImage, HasFast: HasFast
