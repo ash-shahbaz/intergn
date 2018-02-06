@@ -134,7 +134,42 @@ namespace IGN.Controllers
 
         //Internal
 
+        public int KindTotalPrice { get; set; }
+        public int UntillTotalPrice { get; set; }
+        public int FromTotalPrice { get; set; }
+        public int Area { get; set; }
+        public int RoomNumber { get; set; }
+        public int Countryside { get; set; }
+        public int Person { get; set; }
+        public int FromYear { get; set; }
+        public int FloorNumber { get; set; }
+        public int KindBottom { get; set; }
+        public int KindHeating { get; set; }
 
+        public bool HasParking { get; set; }
+        public bool HasElevator { get; set; }
+        public bool HasIranianService { get; set; }
+        public bool HasForeignService { get; set; }
+        public bool HasBalcony { get; set; }
+        public bool HasPool { get; set; }
+        public bool HasUnderground { get; set; }
+        public bool HasYard { get; set; }
+        public bool HasSauna { get; set; }
+        public bool HasJacuzzi { get; set; }
+        public bool HasSleepMaster { get; set; }
+        public bool HasRoofGarden { get; set; }
+        public bool HasChiller { get; set; }
+        public bool HasBarbecue { get; set; }
+        public bool HasAltar { get; set; }
+        public bool HasLobby { get; set; }
+        public bool HasBabyPlayground { get; set; }
+        public bool HasGym { get; set; }
+        public bool HasHeir { get; set; }
+        public bool HasSingleDocument { get; set; }
+
+        public int Infrastructure { get; set; }
+        public int price { get; set; }
+        public int LoanAmount { get; set; }
     }
 
 
