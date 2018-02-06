@@ -145,11 +145,11 @@
                                                     <div class="row form-group">
                                                         <div class="col-sm-9 user-type">
                                                             <div class="md-radio md-radio-inline">
-                                                                <input id="Kind-Need" type="radio" value="2" name="Kind" class="InputServiceType" >
+                                                                <input id="Kind-Need" type="radio" value="2" name="Kind"   >
                                                                 <label for="Kind-Need">درخواست کننده</label>
                                                             </div>
                                                             <div class="md-radio md-radio-inline">
-                                                                <input id="Kind-Sell" type="radio" value="1" name="Kind" class="InputServiceType" >
+                                                                <input id="Kind-Sell" type="radio" value="1" name="Kind"   >
                                                                 <label for="Kind-Sell">ارائه کننده</label>
                                                             </div>
                                                         </div>
@@ -158,7 +158,7 @@
 
                                                     <div class="row form-group add-title">
                                                         <div class="col-sm-9">
-                                                            <input type="text" class="form-control TitleAgahi" id="text" placeholder="گوشی اپل مدل 8Plus بدون خط و خش">
+                                                            <input id="TitleAgahi" type="text" class="form-control " placeholder="گوشی اپل مدل 8Plus بدون خط و خش">
                                                         </div>
                                                         <label class="col-sm-3 label-title">عنوان آگهی<span class="required">*</span></label>
                                                     </div>
@@ -174,7 +174,6 @@
                                                                 <label class="upload-image" for="upload-image-one">
                                                                     <input type="file" id="upload-image-one">
                                                                 </label>
-
                                                                 <label class="upload-image" for="upload-image-two">
                                                                     <input type="file" id="upload-image-two">
                                                                 </label>
@@ -182,8 +181,8 @@
                                                                     <input type="file" id="upload-image-three">
                                                                 </label>
 
-                                                                <label class="upload-image" for="upload-imagefour">
-                                                                    <input type="file" id="upload-imagefour">
+                                                                <label class="upload-image" for="upload-image-four">
+                                                                    <input type="file" id="upload-image-four">
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -195,7 +194,7 @@
 
                                                     <div class="row form-group item-description">
                                                         <div class="col-sm-9">
-                                                            <textarea class="form-control txtDesc" id="textarea" placeholder="توضیحات کالای مربوطه" rows="8"></textarea>
+                                                            <textarea id="txtDesc" class="form-control"  placeholder="توضیحات کالای مربوطه" rows="8"></textarea>
                                                         </div>
                                                         <label class="col-sm-3 label-title">توضیحات<span class="required">*</span></label>
                                                     </div>
@@ -447,10 +446,6 @@
                                                                                                 <input id="HasSingleDocument" type="checkbox">
                                                                                                 <label for="HasSingleDocument">سند تک برگ</label>
                                                                                             </div>
-                                                                                            <div class="md-checkbox col-calc-3">
-                                                                                                <input id="HasLoan" type="checkbox">
-                                                                                                <label for="HasLoan">وام</label>
-                                                                                            </div>
 
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">سایر</label>
@@ -477,7 +472,7 @@
                                                                                                 <div class="col-md-6">
 
                                                                                                     <label>هزار تومان</label>
-                                                                                                    <input  id="Kind-Loan" type="radio" name="price" value="negotiable">
+                                                                                                    <input  id="Kind-Loan" type="radio" name="price" value="1">
                                                                                                     <label for="Kind-Loan">ندارد </label>
                                                                                                 </div>
                                                                                                 <div class="col-md-6">
@@ -619,10 +614,6 @@
                                                                                                 <input id="HasSingleDocument" type="checkbox">
                                                                                                 <label for="HasSingleDocument">سند تک برگ</label>
                                                                                             </div>
-                                                                                            <div class="md-checkbox col-calc-3">
-                                                                                                <input id="HasLoan" type="checkbox">
-                                                                                                <label for="HasLoan">وام</label>
-                                                                                            </div>
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">سایر</label>
                                                                                     </div>
@@ -648,7 +639,7 @@
                                                                                                 <div class="col-md-6">
 
                                                                                                     <label>هزار تومان</label>
-                                                                                                    <input id="Kind-Loan" type="radio" name="price" value="negotiable">
+                                                                                                    <input id="Kind-Loan" type="radio" name="price" value="1">
                                                                                                     <label for="Kind-Loan">ندارد </label>
                                                                                                 </div>
                                                                                                 <div class="col-md-6">
@@ -754,11 +745,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2" class="InputServiceType" >
+                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2"   >
                                                                                                 <label for="Kind-Need">درخواست کننده</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1" class="InputServiceType" >
+                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1"   >
                                                                                                 <label for="Kind-Sell">ارائه کننده</label>
                                                                                             </div>
                                                                                         </div>
@@ -1203,10 +1194,6 @@
                                                                                                 <input id="HasSingleDocument" type="checkbox">
                                                                                                 <label for="HasSingleDocument">سند تک برگ</label>
                                                                                             </div>
-                                                                                            <div class="md-checkbox col-calc-3">
-                                                                                                <input id="HasLoan" type="checkbox">
-                                                                                                <label for="HasLoan">وام</label>
-                                                                                            </div>
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">سایر</label>
                                                                                     </div>
@@ -1231,7 +1218,7 @@
                                                                                             <div class="row">
                                                                                                 <div class="col-md-6">
                                                                                                     <label>هزار تومان</label>
-                                                                                                    <input id="Kind-Loan" type="radio" name="price" value="negotiable">
+                                                                                                    <input id="Kind-Loan" type="radio" name="price" value="1">
                                                                                                     <label for="Kind-Loan">ندارد </label>
                                                                                                 </div>
                                                                                                 <div class="col-md-6">
@@ -1336,11 +1323,11 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2" class="InputServiceType" >
+                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2"   >
                                                                                                 <label for="Kind-Need">درخواست کننده</label>
                                                                                             </div>
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1" class="InputServiceType" >
+                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1"   >
                                                                                                 <label for="Kind-Sell">ارائه کننده</label>
                                                                                             </div>
                                                                                         </div>
@@ -3170,10 +3157,10 @@
                                                             </div>
                                                             <label class="col-sm-3 label-title">تلفن همراه<span class="required">*</span></label>
                                                         </div>
-                                                    </div><!-- section -->
+                                                    </div>
 
 
-                                                </form><!-- form -->
+                                                </form>
                                             </div>
                                             <div class="col-md-2"></div>
 
@@ -3191,22 +3178,22 @@
                                                     <p>جهت کسب اطلاعات بیشتر میتوانید<a href="#">تعرفه ها</a> را مطالعه نمایید.</p>
                                                     <ul class="premium-options">
                                                         <li class="premium">
-                                                            <input id="Kind-One" type="radio" name="Kind-Ads" value="day-one" >
+                                                            <input id="Kind-One" type="radio" name="Kind-Ads" value="0" >
                                                             <label for="Kind-One">آگهی روزانه</label>
                                                             <span class="float-price float-left">رایگان</span>
                                                         </li>
                                                         <li class="premium">
-                                                            <input id="Kind-Two" type="radio" name="Kind-Ads" value="day-two">
+                                                            <input id="Kind-Two" type="radio" name="Kind-Ads" value="1">
                                                             <label for="Kind-Two">آگهی خاص</label>
                                                             <span class="float-price float-left">1 هزار تومان</span>
                                                         </li>
                                                         <li class="premium">
-                                                            <input id="Kind-Three" type="radio" name="Kind-Ads" value="day-three">
+                                                            <input id="Kind-Three" type="radio" name="Kind-Ads" value="2">
                                                             <label for="Kind-Three">آگهی همراه با تبلیغ در اخبار</label>
                                                             <span class="float-price float-left">5 هزار تومان</span>
                                                         </li>
                                                         <li class="premium">
-                                                            <input id="Kind-Four" type="radio" name="Kind-Ads" value="day-four" >
+                                                            <input id="Kind-Four" type="radio" name="Kind-Ads" value="3" >
                                                             <label for="Kind-Four">آگهی همراه با تبلیغ در اخبار مرتبط</label>
                                                             <span class="float-price float-left">10 هزار تومان</span>
                                                         </li>
@@ -3216,7 +3203,7 @@
 
                                                 <div class="checkbox section agreement accept thumbnail border-radius-15">
                                                     <label for="send">
-                                                        <input id="Accept-Roles" type="checkbox" name="send" >
+                                                        <input id="Accept-Roles" type="checkbox" name="send" value="1">
                                                         تمام<a href="#">قوانین</a> و <a href="#">مقررات</a> را خوانده ام و قبول دارم
                                                     </label>
                                                     <input type="button" id="btnSabt" class="btn btn-primary float-left" value="ارسال آگهی" />
@@ -3278,26 +3265,16 @@
 
             $('select').chosen();
 
-
-
-
             $('#example-one').hierarchySelect({
                 width: 200
             });
 
-
             LoadCategory();
-
-
-
 
             $(".Province").chosen().change(function (e, params) {
 
                 LoadCityByProvinceID($(this).val());
             })
-
-
-
 
             $(".City").chosen().change(function (e, params) {
 
@@ -3305,22 +3282,11 @@
                 LoadRegionByCityID($(this).val());
             })
 
-            //$(".Province").click(function () {
-
-            //})
-
-            //$(".City").click(function () {
-
-            //})
-
-
-
-
             function LoadCityByProvinceID(PrivinceID) {
 
                 $.ajax({
                     type: "GET",
-                    url: "/Sync/GetCityByProvinceName/" + PrivinceID  +"",
+                    url: "/Sync/GetCityByProvinceName/" + PrivinceID + "",
                     success: function (data) {
                         var MyData = $.parseJSON(data);
 
@@ -3342,7 +3308,7 @@
             function LoadRegionByCityID(CityID) {
                 $.ajax({
                     type: "GET",
-                    url: "/Sync/GetRegionByCityID/" + CityID +"",
+                    url: "/Sync/GetRegionByCityID/" + CityID + "",
                     success: function (data) {
                         var MyData = $.parseJSON(data);
 
@@ -3361,13 +3327,6 @@
                     }
                 })
             }
-
-
-
-
-
-
-
 
             function LoadCategory() {
 
@@ -3449,12 +3408,7 @@
                                             $(".TopLevel").append(li);
                                         }
 
-
                                     });
-
-
-
-
 
 
                                 }
@@ -3476,212 +3430,177 @@
 
 
 
-
-            var AgahiMelk = [];
-
-            var servicetype = 0;
-            var TitleAgahi;
-            var ServiceTypeAparteman = 0;
-
-
-            $(".InputServiceType").click(function () {
-                servicetype = $(this).attr("value");
-            });
-            $(".TitleAgahi").click(function () {
-                TitleAgahi = $(this).attr("value");
-            });
-            $(".ServiceTypeAparteman").click(function () {
-                ServiceTypeAparteman = $(this).attr("value");
-            });
-
-
-
-
-
             $("#btnSabt").click(function () {
+                
+                var AcceptRoles = "0";
+                if ($('input[type=radio][name=Accept-Roles]:checked').attr('value') == "1") { AcceptRoles = "1" }
+                
+                if (AcceptRoles == "0") {
+                    alert("لطفا با قوانین سایت موافقت نمایید");
+                }
+                else {
 
+                    //Fixed
+                    var lv0 = @ViewBag.lvl0;
+                    var lv1 = @ViewBag.lvl1 ;
+                    var lv2 = ""
+                    if (@ViewBag.lvl2 != null) { lv2 = @ViewBag.lvl2; }
 
+                    var selectedCountry = $(".Province option:selected").val();
+                    var selectedCity = $(".City option:selected").val();
+                    var selectedRegion = $(".Region option:selected").val();
+                    var googleMap = "";
+                    var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
+                    var TitleAgahi = $("#TitleAgahi").val();
+                    var uploadimageone = "";
+                    if ($('#upload-image-one').is(":checked")) { uploadimageone = ""; } else { uploadimageone = 0; }
+                    var uploadimagetwo = "";
+                    if ($('#upload-image-two').is(":checked")) { uploadimagetwo = ""; } else { uploadimagetwo = 0; }
+                    var uploadimagethree = "";
+                    if ($('#upload-image-three').is(":checked")) { uploadimagethree = ""; } else { uploadimagethree = 0; }
+                    var uploadimagefour = "";
+                    if ($('#upload-image-four').is(":checked")) { uploadimagefour = ""; } else { uploadimagefour = 0; }
+                    var txtDesc = $("#txtDesc").val();
 
+                    var NameAdvertiser = $("#NameAdvertiser").val();
+                    var EmailAdvertiser = $("#EmailAdvertiser").val();
+                    var MobileAdvertiser = $("#MobileAdvertiser").val();
 
-                var selectedCountry = $(".Province option:selected").val();
-                var selectedCity = $(".City option:selected").val();
-                var selectedRegion = $(".Region option:selected").val();
+                    var KindAds = $('input[type=radio][name=Kind-Ads]:checked').attr('value');
 
-                //var CategoryID = @ViewBag.lvl2;
-                var CategoryID = 12;
-                var txtDesc = $(".txtDesc").val();
-
-
-
-
-
-                if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "فروش املاک مسکونی" && "@ViewBag.lvl2" == "آپارتمان" || "@ViewBag.lvl2" == "خانه و ویلا") {
-
-                    var DropPriceTypeAparteman = $("#Kind-TotalPrice option:selected").val();
-                    var TotalPrice = $("#TotalPrice").val();
-                    var MetrajhAparteman = $("#Area").val();
-
-                    var TeadadOtaghAparteman = $(".RoomNumber option:selected").val();
-                    var Person = $(".Person").attr("value");
-                    var HoomeShahr = $(".HoomeShahr").attr("value");
-
-                    var YearCreated = $(".Year-Created option:selected").val();
-
-                    var FloorNumber = $("#Floor-Number option:selected").val();
-
-                    var KindBottom = $("#Kind-Bottom option:selected").val();;
-                    var KindHeating = $("#Kind-Heating option:selected").val();;
-
-
-                    var arrSayer = [];
-                    for (var i = 2; i < 21; i++) {
-
-                        $("#i" + i + "").change(function () {
-
-                            arrSayer.push($(this).parent().find("Lable").val());
-                        })
-
-                        var Infrastructure = $(".Infrastructure").val();
-                        var LoanAmount = $("#Loan-Amount").val();
-
-                    }
-
-
-                    AgahiMelk.push({
-                        AgahiServiceID: servicetype, CategoryAgahiID: CategoryID, AgahiTitle: $(".TitleAgahi").val(),
-                        Description: $(".txtDesc").val(), UserID: 10, RegisterDate: null, AdminUserID: 0, AdminAgreeDate: null, AgahiStatus: 0, Location:"",
-                        LanguageID: 1, ProvinceID: 10, RegionID: 10, Tell: $(".Tell").val(), Mobile: $(".Mobile").val(),
-                        PriceTypeID: $(".PriceTypeID").val(), Price: $("#TotalPrice").val(), PlanShowAgahiID: 0, HasImage: true, Chatable: "asdas", OnTime: "10:00-15:00", SpecialAgahi:false
-                    });
-                    //$.ajax({
-                    //    type: "Post",
-                    //    url: "/Agahi/AddAgahi/" + AgahiMelk + "",
-                    //    success: function (data) {
-                    //        //var MyData = $.parseJSON(data);
-                    //        alert(data);
-                    //    }
-                    //});
-
-
-                    //var qs = $.stringfy(AgahiMelk);
-
-                    //console.log(AgahiMelk);
-                    //console.log(JSON.stringify(AgahiMelk));
-
-                    var AgahiID = 0;
-                    var CategoryAgahiID = CategoryID;
-                    var AgahiServiceID = servicetype;
-                    var AgahiTitle = $(".TitleAgahi").val();
-                    var Description = $(".txtDesc").val();
                     var RegisterDate = null;
                     var UserID = 10;
-                    var AdminUserID = 0;
-                    var AdminAgreeDate = null;
-                    var AgahiStatus = 0;
-                    var Location = "";
                     var LanguageID = 1;
-                    var ProvinceID = 10;
-                    var RegionID = 10;
-                    var Tell = $(".Tell").val();
-                    var Mobile = $(".Mobile").val();
-                    var PriceTypeID = $(".PriceTypeID").val();
-                    var Price = $("#TotalPrice").val();
-                    var PlanShowAgahiID = 0;
-                    var HasImage = true;
+                    
                     var Chatable = "asdas";
                     var OnTime = "10:00-15:00";
                     var SpecialAgahi = false;
 
 
-                    $.ajax({
-                        type: "GET",
-                        url: "/Agahi/AgahiAdd",
-                        data: {
-                            AgahiID: AgahiID, CategoryAgahiID: CategoryAgahiID, AgahiServiceID: AgahiServiceID, AgahiTitle: AgahiTitle,
-                            Description: Description, RegisterDate: RegisterDate, UserID: UserID, AdminUserID: AdminUserID, AdminAgreeDate: AdminAgreeDate, AgahiStatus: AgahiStatus, Location: Location,
-                            LanguageID: LanguageID, ProvinceID: ProvinceID, RegionID: RegionID, Tell: Tell, Mobile: Mobile,
-                            PriceTypeID: PriceTypeID, Price: Price, PlanShowAgahiID: PlanShowAgahiID, HasImage: HasImage, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi
-                        },
-                        contentType: "text/plain",
-                        dataType: "json",
-                        success: function (data) {
-                            var MyData = $.parseJSON(data);
+                    if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "فروش املاک مسکونی" && "@ViewBag.lvl2" == "آپارتمان" || "@ViewBag.lvl2" == "خانه و ویلا") {
+
+                        var KindTotalPrice = $("#Kind-TotalPrice").val();
+                        var UntillTotalPrice = "";
+                        var FromTotalPrice = "";
+                        if (KindTotalPrice == 2)//مقطوع - تومان
+                        { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
+
+                        var Area = $("#Area").val();
+                        var RoomNumber = $("#RoomNumber").val();
+                        var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
+                        var Person = $('input[type=radio][name=Person]:checked').attr('value');
+                        var FromYear = $("#Year-Created").val();
+                        var FloorNumber = $("#Floor-Number").val();
+                        var KindBottom = $("#Kind-Bottom").val();
+                        var KindHeating = $("#Kind-Heating").val();
+                        var HasParking = "";
+                        if ($('#HasParking').is(":checked")) { HasParking = true; } else { HasParking = false; }
+                        var HasElevator = "";
+                        if ($('#HasElevator').is(":checked")) { HasElevator = true; } else { HasElevator = false; }
+                        var HasIranianService = "";
+                        if ($('#HasIranianService').is(":checked")) { HasIranianService = true; } else { HasIranianService = false; }
+                        var HasForeignService = "";
+                        if ($('#HasForeignService').is(":checked")) { HasForeignService = true; } else { HasForeignService = false; }
+                        var HasBalcony = "";
+                        if ($('#HasBalcony').is(":checked")) { HasBalcony = true; } else { HasBalcony = false; }
+                        var HasPool = "";
+                        if ($('#HasPool').is(":checked")) { HasPool = true; } else { HasPool = false; }
+                        var HasUnderground = "";
+                        if ($('#HasUnderground').is(":checked")) { HasUnderground = true; } else { HasUnderground = false; }
+                        var HasYard = "";
+                        if ($('#HasYard').is(":checked")) { HasYard = true; } else { HasYard = false; }
+                        var HasSauna = "";
+                        if ($('#HasSauna').is(":checked")) { HasSauna = true; } else { HasSauna = false; }
+                        var HasJacuzzi = "";
+                        if ($('#HasJacuzzi').is(":checked")) { HasJacuzzi = true; } else { HasJacuzzi = false; }
+                        var HasSleepMaster = "";
+                        if ($('#HasSleepMaster').is(":checked")) { HasSleepMaster = true; } else { HasSleepMaster = false; }
+                        var HasRoofGarden = "";
+                        if ($('#HasRoofGarden').is(":checked")) { HasRoofGarden = true; } else { HasRoofGarden = false; }
+                        var HasChiller = "";
+                        if ($('#HasChiller').is(":checked")) { HasChiller = true; } else { HasChiller = false; }
+                        var HasBarbecue = "";
+                        if ($('#HasBarbecue').is(":checked")) { HasBarbecue = true; } else { HasBarbecue = false; }
+                        var HasAltar = "";
+                        if ($('#HasAltar').is(":checked")) { HasAltar = true; } else { HasAltar = false; }
+                        var HasLobby = "";
+                        if ($('#HasLobby').is(":checked")) { HasLobby = true; } else { HasLobby = false; }
+                        var HasBabyPlayground = "";
+                        if ($('#HasBabyPlayground').is(":checked")) { HasBabyPlayground = true; } else { HasBabyPlayground = false; }
+                        var HasGym = "";
+                        if ($('#HasGym').is(":checked")) { HasGym = true; } else { HasGym = false; }
+                        var HasHeir = "";
+                        if ($('#HasHeir').is(":checked")) { HasHeir = true; } else { HasHeir = false; }
+                        var HasSingleDocument = "";
+                        if ($('#HasSingleDocument').is(":checked")) { HasSingleDocument = true; } else { HasSingleDocument = false; }
+                        var Infrastructure = $("#Infrastructure").val();
+                        var price = "0";
+                        if ($('input[type=radio][name=price]:checked').attr('value') == 1) { price = "1" }
+                        var LoanAmount = $("#Loan-Amount").val();
+
+                        
+                        $.ajax({
+                            type: "GET",
+                            url: "/Agahi/AgahiAdd",
+                            data: {
+
+
+                            },
+                            contentType: "text/plain",
+                            dataType: "json",
+                            success: function (data) {
+                                var MyData = $.parseJSON(data);
 
 
 
-                        },
-                        error: function (jqxhr) {
-                            alert("Error");
-                        }
-                    });
-                    //$.ajax({
-                    //    type: "POST",
-                    //    url: "/Agahi/AgahiAdd",
-                    //    data: {
-                    //        AgahiID: AgahiID, CategoryAgahiID: CategoryAgahiID, AgahiServiceID: AgahiServiceID, AgahiTitle: AgahiTitle,
-                    //        Description: Description, RegisterDate: RegisterDate, UserID: UserID, AdminUserID: AdminUserID, AdminAgreeDate: AdminAgreeDate, AgahiStatus: AgahiStatus, Location: Location,
-                    //        LanguageID: LanguageID, ProvinceID: ProvinceID, RegionID: RegionID, Tell: Tell, Mobile: Mobile,
-                    //        PriceTypeID: PriceTypeID, Price: Price, PlanShowAgahiID: PlanShowAgahiID, HasImage: HasImage, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi
-                    //    },
-                    //    contentType: 'application/json; charset=utf-8',
-                    //    dataType: "json",
-                    //    success: function (data) {
-                    //        var MyData = $.parseJSON(data);
-
-
-
-                    //    },
-                    //    error: function (jqxhr) {
-                    //        alert("Error");
-                    //    }
-                    //});
+                            },
+                            error: function (jqxhr) {
+                                alert("Error");
+                            }
+                        });
 
 
 
 
 
+                    } else if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "فروش املاک مسکونی" && "@ViewBag.lvl2" == "زمین و کلنگی") {
+
+                    } else if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "اجاره اجاره مسکونی") {
+
+                    } else if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "فروش اداری و تجاری") {
+
+                    } else if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "خدمات املاک") {
+
+                    } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "خودرو" && "@ViewBag.lvl2" == "سواری") {
+
+                    } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "خودرو" && "@ViewBag.lvl2" == "سنگین") {
+
+                    } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "موتور سیکلت و لوازم جانبی" && "@ViewBag.lvl2" == "موتور سیکلت") {
+
+                    } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "قطعات یدکی و لوازم جانبی خودرو" || "@ViewBag.lvl2" == "قایل و لوازم جانبی") {
+
+                    } else if ("@ViewBag.lvl0" == "لوازم الکترونیکی" && "@ViewBag.lvl1" == "موبایل  و تبلت") {
+
+                    } else if ("@ViewBag.lvl0" == "لوازم الکترونیکی" && "@ViewBag.lvl1" == "رایانه" && "@ViewBag.lvl2" == "رایانه همراه") {
+
+                    } else if ("@ViewBag.lvl0" == "لوازم الکترونیکی" && "@ViewBag.lvl1" == "رایانه" && "@ViewBag.lvl2" == "رایانه رومیزی") {
+
+                    } else if ("@ViewBag.lvl0" == "لوازم الکترونیکی" && "@ViewBag.lvl1" != "رایانه" && "@ViewBag.lvl2" != "رایانه رومیزی") {
+
+                    } else if ("@ViewBag.lvl0" == "لوازم خانگی" || "@ViewBag.lvl0" != "لوازم شخصی" || "@ViewBag.lvl0" != "سرگرمی و فراغت" || "@ViewBag.lvl0" != "کسب و کار") {
+
+                    } else if ("@ViewBag.lvl0" == "اجتماعی" && "@ViewBag.lvl0" != "خدمات" && "@ViewBag.lvl0" != "استخدام") {
 
 
-                } else if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "فروش املاک مسکونی" && "@ViewBag.lvl2" == "زمین و کلنگی"){
+                    }
 
 
-                    alert("No")
-                } else if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "اجاره اجاره مسکونی") {
-
-                } else if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "فروش اداری و تجاری") {
-
-                } else if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "خدمات املاک") {
-
-                } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "خودرو" && "@ViewBag.lvl2" == "سواری") {
-
-                } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "خودرو" && "@ViewBag.lvl2" == "سنگین") {
-
-                } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "موتور سیکلت و لوازم جانبی" && "@ViewBag.lvl2" == "موتور سیکلت") {
-
-                } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "قطعات یدکی و لوازم جانبی خودرو" || "@ViewBag.lvl2" == "قایل و لوازم جانبی") {
-
-                } else if ("@ViewBag.lvl0" == "لوازم الکترونیکی" && "@ViewBag.lvl1" == "موبایل  و تبلت") {
-
-                } else if ("@ViewBag.lvl0" == "لوازم الکترونیکی" && "@ViewBag.lvl1" == "رایانه" && "@ViewBag.lvl2" == "رایانه همراه") {
-
-                } else if ("@ViewBag.lvl0" == "لوازم الکترونیکی" && "@ViewBag.lvl1" == "رایانه" && "@ViewBag.lvl2" == "رایانه رومیزی") {
-
-                } else if ("@ViewBag.lvl0" == "لوازم الکترونیکی" && "@ViewBag.lvl1" != "رایانه" && "@ViewBag.lvl2" != "رایانه رومیزی") {
-
-                } else if ("@ViewBag.lvl0" == "لوازم خانگی" || "@ViewBag.lvl0" != "لوازم شخصی" || "@ViewBag.lvl0" != "سرگرمی و فراغت" || "@ViewBag.lvl0" != "کسب و کار") {
-
-                } else if ("@ViewBag.lvl0" == "اجتماعی" && "@ViewBag.lvl0" != "خدمات" && "@ViewBag.lvl0" != "استخدام") {
 
 
                 }
+            });
 
-
-
-
-
-            })
-
-
+        
 
 
         });
