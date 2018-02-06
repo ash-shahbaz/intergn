@@ -24,8 +24,6 @@ namespace IGN.Controllers
                 ViewBag.lvl2 = id2;
                 ViewBag.CID = id3;
 
-
-
             }
             return View();
         }
