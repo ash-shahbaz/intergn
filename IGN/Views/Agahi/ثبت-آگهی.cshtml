@@ -134,7 +134,7 @@
 
 
 
-                                                            <div id="googleMap" class="mapcreatepage"></div>
+                                                            <div id="Location" class="mapcreatepage"></div>
 
 
                                                         </div>
@@ -2330,9 +2330,7 @@
                                                                             </div>
 
                                                                         </div>
-                                                                        <div class="col-md-2"></div>
-
-
+                                                                       
                                                                         <div class="row">
                                                                             <div class="col-md-2"></div>
                                                                             <div class="col-md-8">
@@ -3250,7 +3248,7 @@
                 center: new google.maps.LatLng(33, 53),
                 zoom: 5,
             };
-            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+            var map = new google.maps.Map(document.getElementById("Location"), mapProp);
         }
     </script>
 
@@ -3441,25 +3439,25 @@
                 else {
 
                     //Fixed
-                    var lv0 = @ViewBag.lvl0;
-                    var lv1 = @ViewBag.lvl1 ;
+                    var lv0 = "@ViewBag.lvl0";
+                    var lv1 = "@ViewBag.lvl1" ;
                     var lv2 = ""
-                    if (@ViewBag.lvl2 != null) { lv2 = @ViewBag.lvl2; }
+                    if (@ViewBag.lvl2 != null) { lv2 = "@ViewBag.lvl2"; }
 
-                    var selectedCountry = $(".Province option:selected").val();
-                    var selectedCity = $(".City option:selected").val();
-                    var selectedRegion = $(".Region option:selected").val();
-                    var googleMap = "";
+                    var Country = $(".Province option:selected").val();
+                    var City = $(".City option:selected").val();
+                    var Region = $(".Region option:selected").val();
+                    var Location = "";
                     var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
                     var TitleAgahi = $("#TitleAgahi").val();
-                    var uploadimageone = "";
-                    if ($('#upload-image-one').is(":checked")) { uploadimageone = ""; } else { uploadimageone = 0; }
-                    var uploadimagetwo = "";
-                    if ($('#upload-image-two').is(":checked")) { uploadimagetwo = ""; } else { uploadimagetwo = 0; }
-                    var uploadimagethree = "";
-                    if ($('#upload-image-three').is(":checked")) { uploadimagethree = ""; } else { uploadimagethree = 0; }
-                    var uploadimagefour = "";
-                    if ($('#upload-image-four').is(":checked")) { uploadimagefour = ""; } else { uploadimagefour = 0; }
+                    var uploadimageone = "0";
+                    if ($('#upload-image-one').is(":checked")) { uploadimageone = ""; }
+                    var uploadimagetwo = "0";
+                    if ($('#upload-image-two').is(":checked")) { uploadimagetwo = ""; }
+                    var uploadimagethree = "0";
+                    if ($('#upload-image-three').is(":checked")) { uploadimagethree = ""; }
+                    var uploadimagefour = "0";
+                    if ($('#upload-image-four').is(":checked")) { uploadimagefour = ""; } 
                     var txtDesc = $("#txtDesc").val();
 
                     var NameAdvertiser = $("#NameAdvertiser").val();
@@ -3476,7 +3474,10 @@
                     var OnTime = "10:00-15:00";
                     var SpecialAgahi = false;
 
+                  
 
+
+                    //CaseOne
                     if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "فروش املاک مسکونی" && "@ViewBag.lvl2" == "آپارتمان" || "@ViewBag.lvl2" == "خانه و ویلا") {
 
                         var KindTotalPrice = $("#Kind-TotalPrice").val();
@@ -3538,13 +3539,17 @@
                         if ($('input[type=radio][name=price]:checked').attr('value') == 1) { price = "1" }
                         var LoanAmount = $("#Loan-Amount").val();
 
-                        
+
                         $.ajax({
                             type: "GET",
-                            url: "/Agahi/AgahiAdd",
+                            url: "/Agahi/CaseOne",
                             data: {
 
-
+                                lv0: lv0, lv1: lv1 ,lv2: lv2, Country:Country, City:City, Region:Region, Location:Location, Kind:Kind, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone,
+                            uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree, uploadimagefour:uploadimagefour, txtDesc:txtDesc, NameAdvertiser:NameAdvertiser,
+                                EmailAdvertiser:EmailAdvertiser, MobileAdvertiser:MobileAdvertiser, KindAds:KindAds,
+                                    RegisterDate:RegisterDate, UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi
+                    
                             },
                             contentType: "text/plain",
                             dataType: "json",
