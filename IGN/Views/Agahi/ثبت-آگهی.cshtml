@@ -3212,7 +3212,7 @@
 
 
                             </div>
-                        </section><!-- main -->
+                        </section>
 
 
 
@@ -3542,9 +3542,8 @@
                             type: "GET",
                             url: "/Agahi/CaseOne",
                             data: {
-
                                 lv0: lv0, lv1: lv1 ,lv2: lv2, Country:Country, City:City, Region:Region, Location:Location, Kind:Kind, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone,
-                            uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree, uploadimagefour:uploadimagefour, txtDesc:txtDesc, NameAdvertiser:NameAdvertiser,
+                                uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree, uploadimagefour:uploadimagefour, txtDesc:txtDesc, NameAdvertiser:NameAdvertiser,
                                 EmailAdvertiser:EmailAdvertiser, MobileAdvertiser:MobileAdvertiser, KindAds:KindAds,
                                 RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
 
@@ -3575,48 +3574,393 @@
                     } else if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "فروش املاک مسکونی" && "@ViewBag.lvl2" == "زمین و کلنگی") {
                          //CaseTwo	
 
+
+                        $.ajax({
+                            type: "GET",
+                            url: "/Agahi/CaseTwo",
+                            data: {
+                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
+                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
+                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
+                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
+
+                            },
+                            contentType: "text/plain",
+                            dataType: "json",
+                            success: function (data) {
+                                var MyData = $.parseJSON(data);
+
+
+
+                            },
+                            error: function (jqxhr) {
+                                alert("Error");
+                            }
+                        });
                     } else if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "اجاره اجاره مسکونی") {
                          //CaseThree	
 
+
+                        $.ajax({
+                            type: "GET",
+                            url: "/Agahi/CaseThree",
+                            data: {
+                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
+                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
+                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
+                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
+
+                            },
+                            contentType: "text/plain",
+                            dataType: "json",
+                            success: function (data) {
+                                var MyData = $.parseJSON(data);
+
+
+
+                            },
+                            error: function (jqxhr) {
+                                alert("Error");
+                            }
+                        });
                     } else if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "فروش اداری و تجاری") {
                         //CaseFour	
 
+
+                        $.ajax({
+                            type: "GET",
+                            url: "/Agahi/CaseFour",
+                            data: {
+                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
+                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
+                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
+                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
+
+                            },
+                            contentType: "text/plain",
+                            dataType: "json",
+                            success: function (data) {
+                                var MyData = $.parseJSON(data);
+
+
+
+                            },
+                            error: function (jqxhr) {
+                                alert("Error");
+                            }
+                        });
                     } else if (ViewBag.lvl0 == "املاک" && ViewBag.lvl1 == "اجاره اجاره مسکونی") {
                          //CaseFive
-                        
+
+
+                        $.ajax({
+                            type: "GET",
+                            url: "/Agahi/CaseFive",
+                            data: {
+                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
+                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
+                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
+                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
+
+                            },
+                            contentType: "text/plain",
+                            dataType: "json",
+                            success: function (data) {
+                                var MyData = $.parseJSON(data);
+
+
+
+                            },
+                            error: function (jqxhr) {
+                                alert("Error");
+                            }
+                        });
                     } else if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "خدمات املاک") {
                        	//CaseSix
 
+
+                        $.ajax({
+                            type: "GET",
+                            url: "/Agahi/CaseSix",
+                            data: {
+                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
+                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
+                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
+                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
+
+                            },
+                            contentType: "text/plain",
+                            dataType: "json",
+                            success: function (data) {
+                                var MyData = $.parseJSON(data);
+
+
+
+                            },
+                            error: function (jqxhr) {
+                                alert("Error");
+                            }
+                        });
                     } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "خودرو" && "@ViewBag.lvl2" == "سواری") {
                         //CaseSeven
 
+
+                        $.ajax({
+                            type: "GET",
+                            url: "/Agahi/CaseSeven",
+                            data: {
+                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
+                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
+                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
+                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
+
+                            },
+                            contentType: "text/plain",
+                            dataType: "json",
+                            success: function (data) {
+                                var MyData = $.parseJSON(data);
+
+
+
+                            },
+                            error: function (jqxhr) {
+                                alert("Error");
+                            }
+                        });
                     } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "خودرو" && "@ViewBag.lvl2" == "سنگین") {
                         //CaseEight
 
+
+                        $.ajax({
+                            type: "GET",
+                            url: "/Agahi/CaseEight",
+                            data: {
+                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
+                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
+                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
+                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
+
+                            },
+                            contentType: "text/plain",
+                            dataType: "json",
+                            success: function (data) {
+                                var MyData = $.parseJSON(data);
+
+
+
+                            },
+                            error: function (jqxhr) {
+                                alert("Error");
+                            }
+                        });
                     } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "موتور سیکلت و لوازم جانبی" && "@ViewBag.lvl2" == "موتور سیکلت") {
                         //CaseNine
 
+
+                        $.ajax({
+                            type: "GET",
+                            url: "/Agahi/CaseNine",
+                            data: {
+                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
+                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
+                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
+                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
+
+                            },
+                            contentType: "text/plain",
+                            dataType: "json",
+                            success: function (data) {
+                                var MyData = $.parseJSON(data);
+
+
+
+                            },
+                            error: function (jqxhr) {
+                                alert("Error");
+                            }
+                        });
                     } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "قطعات یدکی و لوازم جانبی خودرو" || "@ViewBag.lvl2" == "قایل و لوازم جانبی") {
                         //CaseTen
 
+
+                        $.ajax({
+                            type: "GET",
+                            url: "/Agahi/CaseTen",
+                            data: {
+                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
+                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
+                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
+                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
+
+                            },
+                            contentType: "text/plain",
+                            dataType: "json",
+                            success: function (data) {
+                                var MyData = $.parseJSON(data);
+
+
+
+                            },
+                            error: function (jqxhr) {
+                                alert("Error");
+                            }
+                        });
                     } else if ("@ViewBag.lvl0" == "لوازم الکترونیکی" && "@ViewBag.lvl1" == "موبایل  و تبلت") {
                         //CaseEleven
 
+
+                        $.ajax({
+                            type: "GET",
+                            url: "/Agahi/CaseEleven",
+                            data: {
+                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
+                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
+                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
+                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
+
+                            },
+                            contentType: "text/plain",
+                            dataType: "json",
+                            success: function (data) {
+                                var MyData = $.parseJSON(data);
+
+
+
+                            },
+                            error: function (jqxhr) {
+                                alert("Error");
+                            }
+                        });
                     } else if ("@ViewBag.lvl0" == "لوازم الکترونیکی" && "@ViewBag.lvl1" == "رایانه" && "@ViewBag.lvl2" == "رایانه همراه") {
                         //CaseTwelve
 
+
+                        $.ajax({
+                            type: "GET",
+                            url: "/Agahi/CaseTwelve",
+                            data: {
+                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
+                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
+                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
+                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
+
+                            },
+                            contentType: "text/plain",
+                            dataType: "json",
+                            success: function (data) {
+                                var MyData = $.parseJSON(data);
+
+
+
+                            },
+                            error: function (jqxhr) {
+                                alert("Error");
+                            }
+                        });
                     } else if ("@ViewBag.lvl0" == "لوازم الکترونیکی" && "@ViewBag.lvl1" == "رایانه" && "@ViewBag.lvl2" == "رایانه رومیزی") {
                         //CaseThirteen
 
+
+                        $.ajax({
+                            type: "GET",
+                            url: "/Agahi/CaseThirteen",
+                            data: {
+                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
+                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
+                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
+                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
+
+                            },
+                            contentType: "text/plain",
+                            dataType: "json",
+                            success: function (data) {
+                                var MyData = $.parseJSON(data);
+
+
+
+                            },
+                            error: function (jqxhr) {
+                                alert("Error");
+                            }
+                        });
                     } else if ("@ViewBag.lvl0" == "لوازم الکترونیکی" && "@ViewBag.lvl1" != "رایانه" && "@ViewBag.lvl2" != "رایانه رومیزی") {
                         //CaseFourteen
 
+
+                        $.ajax({
+                            type: "GET",
+                            url: "/Agahi/CaseFourteen",
+                            data: {
+                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
+                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
+                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
+                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
+
+                            },
+                            contentType: "text/plain",
+                            dataType: "json",
+                            success: function (data) {
+                                var MyData = $.parseJSON(data);
+
+
+
+                            },
+                            error: function (jqxhr) {
+                                alert("Error");
+                            }
+                        });
                     } else if ("@ViewBag.lvl0" == "لوازم خانگی" || "@ViewBag.lvl0" != "لوازم شخصی" || "@ViewBag.lvl0" != "سرگرمی و فراغت" || "@ViewBag.lvl0" != "کسب و کار") {
                         //CaseFifteen
 
+
+                        $.ajax({
+                            type: "GET",
+                            url: "/Agahi/CaseFifteen",
+                            data: {
+                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
+                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
+                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
+                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
+
+                            },
+                            contentType: "text/plain",
+                            dataType: "json",
+                            success: function (data) {
+                                var MyData = $.parseJSON(data);
+
+
+
+                            },
+                            error: function (jqxhr) {
+                                alert("Error");
+                            }
+                        });
                     } else if ("@ViewBag.lvl0" == "اجتماعی" && "@ViewBag.lvl0" != "خدمات" && "@ViewBag.lvl0" != "استخدام") {
                         //CaseSixteen
 
+
+                        $.ajax({
+                            type: "GET",
+                            url: "/Agahi/CaseSixteen",
+                            data: {
+                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
+                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
+                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
+                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
+
+                               },
+                            contentType: "text/plain",
+                            dataType: "json",
+                            success: function (data) {
+                                var MyData = $.parseJSON(data);
+
+
+
+                            },
+                            error: function (jqxhr) {
+                                alert("Error");
+                            }
+                        });
                     }
 
 
