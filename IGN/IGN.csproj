@@ -169,6 +169,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Avatars\MsIranPak.png" />
+    <Content Include="Avatars\MsIranPak2.png.jpeg" />
+    <Content Include="Avatars\Project.png" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\app.css" />
     <Content Include="css\bootstrap-select.min.css" />
@@ -223,6 +226,10 @@
     <Content Include="js\bootstrap-select.min.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\chosen.jquery.min.js" />
+    <Content Include="css\Crop\iEdit.css" />
+    <Content Include="js\Crop\iEdit.js" />
+    <Content Include="js\Crop\index.html" />
+    <Content Include="js\Crop\script.js" />
     <Content Include="js\custom.js" />
     <Content Include="js\hierarchy-select.min.js" />
     <Content Include="js\imagesloaded.js" />
@@ -230,6 +237,7 @@
     <Content Include="js\jquery.carousel-6.2.1.js" />
     <Content Include="js\jquery.flexslider.js" />
     <Content Include="js\jquery.form.js" />
+    <Content Include="js\jquery.form.min.js" />
     <Content Include="js\jquery.kanNotify.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\jquery.timeago.js" />
@@ -312,6 +320,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Temp\" />
     <Folder Include="Views\City\" />
     <Folder Include="Views\Search\" />
   </ItemGroup>
@@ -422,6 +431,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Agahi\_مشترک.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="js\jquery.form.min.js.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
