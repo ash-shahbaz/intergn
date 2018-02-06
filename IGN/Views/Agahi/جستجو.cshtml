@@ -2373,7 +2373,12 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
+            var KindTotalPrice = $("#Kind-TotalPrice").val();
+            var UntillTotalPrice = "";
+            var FromTotalPrice = "";
+            if (KindTotalPrice == 2)//مقطوع - تومان
+            { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
 
 
             //External
@@ -2413,8 +2418,15 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-
-
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
+            var KindTotalPrice = $("#Kind-TotalPrice").val();
+            var UntillTotalPrice = "";
+            var FromTotalPrice = "";
+            if (KindTotalPrice == 2)//مقطوع - تومان
+            { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
+            var KindColor = $("#KindColor").val();
+            var KindBrand = $("#KindBrand").val();
+            
 
             //External
 
@@ -2453,6 +2465,31 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
+            var KindTotalPrice = $("#Kind-TotalPrice").val();
+            var UntillTotalPrice = "";
+            var FromTotalPrice = "";
+            if (KindTotalPrice == 2)//مقطوع - تومان
+            { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
+            var KindColor = $("#KindColor").val();
+            var KindBrand = $("#KindBrand").val();
+            var KindSizeScreen = $("#KindSizeScreen").val();
+            var KindTouch = $("#KindTouch").val();
+            var MeasureRAM = $("#MeasureRAM").val();
+            var MeasureCPU = $("#MeasureCPU").val();
+            var MeasureHard = $("#MeasureHard").val();
+            var MeasureGraphic = $("#MeasureGraphic").val();
+            var HasAntiWater = "";
+            if ($('#HasAntiWater').is(":checked")) { HasAntiWater = true; } else { HasAntiWater = false; }
+            var HasUSB3 = "";
+            if ($('#HasUSB3').is(":checked")) { HasUSB3 = true; } else { HasUSB3 = false; }
+            var HasDVDRW = "";
+            if ($('#HasDVDRW').is(":checked")) { HasDVDRW = true; } else { HasDVDRW = false; }
+            var HasCamera = "";
+            if ($('#HasCamera').is(":checked")) { HasCamera = true; } else { HasCamera = false; }
+
+
+
 
 
 
@@ -2493,6 +2530,24 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
+            var KindTotalPrice = $("#Kind-TotalPrice").val();
+            var UntillTotalPrice = "";
+            var FromTotalPrice = "";
+            if (KindTotalPrice == 2)//مقطوع - تومان
+            { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
+            var MeasureRAM = $("#MeasureRAM").val();
+            var MeasureCPU = $("#MeasureCPU").val();
+            var MeasureHard = $("#MeasureHard").val();
+            var MeasureGraphic = $("#MeasureGraphic").val();
+            var HasUSB3 = "";
+            if ($('#HasUSB3').is(":checked")) { HasUSB3 = true; } else { HasUSB3 = false; }
+            var HasDVDRW = "";
+            if ($('#HasDVDRW').is(":checked")) { HasDVDRW = true; } else { HasDVDRW = false; }
+            var HasSpeaker = "";
+            if ($('#HasSpeaker').is(":checked")) { HasSpeaker = true; } else { HasSpeaker = false; }
+
+
 
 
 
@@ -2533,7 +2588,17 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
+            var UntillYear = $("#Untill-Year").val();
+            var FromYear = $("#From-Year").val();
+            var UntillCarFunction = $("#Untill-CarFunction").val();
+            var FromCarFunction = $("#From-CarFunction").val();
+            var KindTotalPrice = $("#Kind-TotalPrice").val();
+            var UntillTotalPrice = "";
+            var FromTotalPrice = "";
+            if (KindTotalPrice == 2)//مقطوع - تومان
+            { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
+            
 
 
             //External
@@ -2573,7 +2638,13 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
+            var KindTotalPrice = $("#Kind-TotalPrice").val();
+            var UntillTotalPrice = "";
+            var FromTotalPrice = "";
+            if (KindTotalPrice == 2)//مقطوع - تومان
+            { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
+            
 
 
             //External
@@ -2613,9 +2684,40 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
+            var UntillMonthlyInstallment = $("#Untill-MonthlyInstallment").val();
+            var FromMonthlyInstallment = $("#From-MonthlyInstallment").val();
+            var UNumberMonthlyInstallment = $("#UNumber-MonthlyInstallment").val();
+            var FNumberMonthlyInstallment = $("#FNumber-MonthlyInstallment").val();
+            var KindTotalPrice = $("#Kind-TotalPrice").val();
+            var UntillTotalPrice = "";
+            var FromTotalPrice = "";
+            if (KindTotalPrice == 2)//مقطوع - تومان
+            { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
+            var UntillYear = $("#Untill-Year").val();
+            var FromYear = $("#From-Year").val();
+            var BrandName = $("#Brand-Name").val();
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
+            var UntillCarFunction = $("#Untill-CarFunction").val();
+            var FromCarFunction = $("#From-CarFunction").val();
+            var KindCondition = $('#Kind-Condition').val();
+            var KindChassis = $('#Kind-Chassis').val();
+            var KindDiff = $('#Kind-Diff').val();
+            var KindColorOut = $('#Kind-ColorOut').val();
+            var KindColorIn = $('#Kind-ColorIn').val();
+            var KindModelTip = $('#Kind-ModelTip').val();
+            var KindGearbox = $('#Kind-Gearbox').val();
+            var KindFuel = $('#Kind-Fuel').val();
+            var KindCrash = $('#Kind-Crash').val();
+            var KindPelak = $('#Kind-Pelak').val();
+            var HasSunroof = "";
+            if ($('#HasSunroof').is(":checked")) { HasSunroof = true; } else { HasSunroof = false; }
+            var HasAlarm = "";
+            if ($('#HasAlarm').is(":checked")) { HasAlarm = true; } else { HasAlarm = false; }
+            var HasSound = "";
+            if ($('#HasSound').is(":checked")) { HasSound = true; } else { HasSound = false; }
 
 
-
+            
             //External
 
 
@@ -2653,6 +2755,37 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
+            var UntillMonthlyInstallment = $("#Untill-MonthlyInstallment").val();
+            var FromMonthlyInstallment = $("#From-MonthlyInstallment").val();
+            var UNumberMonthlyInstallment = $("#UNumber-MonthlyInstallment").val();
+            var FNumberMonthlyInstallment = $("#FNumber-MonthlyInstallment").val();
+            var KindTotalPrice = $("#Kind-TotalPrice").val();
+            var UntillTotalPrice = "";
+            var FromTotalPrice = "";
+            if (KindTotalPrice == 2)//مقطوع - تومان
+            { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
+            var UntillYear = $("#Untill-Year").val();
+            var FromYear = $("#From-Year").val();
+            var BrandName = $("#Brand-Name").val();
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
+            var UntillCarFunction = $("#Untill-CarFunction").val();
+            var FromCarFunction = $("#From-CarFunction").val();
+            var KindCondition = $('#Kind-Condition').val();
+            var KindChassis = $('#Kind-Chassis').val();
+            var KindDiff = $('#Kind-Diff').val();
+            var KindColorOut = $('#Kind-ColorOut').val();
+            var KindColorIn = $('#Kind-ColorIn').val();
+            var KindModelTip = $('#Kind-ModelTip').val();
+            var KindGearbox = $('#Kind-Gearbox').val();
+            var KindFuel = $('#Kind-Fuel').val();
+            var KindCrash = $('#Kind-Crash').val();
+            var KindPelak = $('#Kind-Pelak').val();
+            var HasSunroof = "";
+            if ($('#HasSunroof').is(":checked")) { HasSunroof = true; } else { HasSunroof = false; }
+            var HasAlarm = "";
+            if ($('#HasAlarm').is(":checked")) { HasAlarm = true; } else { HasAlarm = false; }
+            var HasSound = "";
+            if ($('#HasSound').is(":checked")) { HasSound = true; } else { HasSound = false; }
 
 
 
@@ -2693,6 +2826,12 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
+            var KindTotalPrice = $("#Kind-TotalPrice").val();
+            var UntillTotalPrice = "";
+            var FromTotalPrice = "";
+            if (KindTotalPrice == 2)//مقطوع - تومان
+            { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
 
 
 
@@ -2733,7 +2872,30 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-
+            var UntillMonthlyInstallment = $("#Untill-MonthlyInstallment").val();
+            var FromMonthlyInstallment = $("#From-MonthlyInstallment").val();
+            var UNumberMonthlyInstallment = $("#UNumber-MonthlyInstallment").val();
+            var FNumberMonthlyInstallment = $("#FNumber-MonthlyInstallment").val();
+            var KindTotalPrice = $("#Kind-TotalPrice").val();
+            var UntillTotalPrice = "";
+            var FromTotalPrice = "";
+            if (KindTotalPrice == 2)//مقطوع - تومان
+            { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
+            var UntillYear = $("#Untill-Year").val();
+            var FromYear = $("#From-Year").val();
+            var BrandName = $("#Brand-Name").val();
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
+            var UntillCarFunction = $("#Untill-CarFunction").val();
+            var FromCarFunction = $("#From-CarFunction").val();
+            var KindCondition = $('#Kind-Condition').val();
+            var KindColorOut = $('#Kind-ColorOut').val();
+            var KindModelTip = $('#Kind-ModelTip').val();
+            var KindFuel = $('#Kind-Fuel').val();
+            var KindCrash = $('#Kind-Crash').val();
+            var KindPelak = $('#Kind-Pelak').val();
+            var HasAlarm = "";
+            if ($('#HasAlarm').is(":checked")) { HasAlarm = true; } else { HasAlarm = false; }
+            
 
 
             //External
@@ -2773,6 +2935,12 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
+            var KindTotalPrice = $("#Kind-TotalPrice").val();
+            var UntillTotalPrice = "";
+            var FromTotalPrice = "";
+            if (KindTotalPrice == 2)//مقطوع - تومان
+            { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
 
 
 
@@ -2813,6 +2981,12 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
+            var KindTotalPrice = $("#Kind-TotalPrice").val();
+            var UntillTotalPrice = "";
+            var FromTotalPrice = "";
+            if (KindTotalPrice == 2)//مقطوع - تومان
+            { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
 
 
 
