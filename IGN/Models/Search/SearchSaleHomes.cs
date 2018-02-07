@@ -16,7 +16,7 @@ namespace IGN.Models.Search
         public bool HasFast { get; set; }
 
         public int Countryside { get; set; }
-        public int Person { get; set; }
+        public int UserTypeID { get; set; }
         public int KindTotalPrice { get; set; }
         public int UntillTotalPrice { get; set; }
         public int FromTotalPrice { get; set; }

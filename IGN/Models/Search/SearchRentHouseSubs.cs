@@ -25,7 +25,7 @@ namespace IGN.Models.Search
         public int UntillArea { get; set; }
         public int FromArea { get; set; }
         public int Countryside { get; set; }
-        public int Person { get; set; }
+        public int UserTypeID { get; set; }
         public int Kind { get; set; }
         public int UntillYear { get; set; }
         public int FromYear { get; set; }

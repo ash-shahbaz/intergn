@@ -13,11 +13,6 @@ namespace IGN.Models.Search
         public string MahaleSelect { get; set; }
         public bool HasImage { get; set; }
         public bool HasFast { get; set; }
-
-
-
-
-
         public int RoomNumber { get; set; }
         public int KindTotalPrice { get; set; }
         public int UntillTotalPrice { get; set; }
@@ -25,7 +20,7 @@ namespace IGN.Models.Search
         public int UntillArea { get; set; }
         public int FromArea { get; set; }
         public int Countryside { get; set; }
-        public int Person { get; set; }
+        public int UserTypeID { get; set; }
         public int Kind { get; set; }
         public int UntillInfrastructure { get; set; }
         public int FromInfrastructure { get; set; }
