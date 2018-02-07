@@ -15,7 +15,8 @@ namespace IGN.Controllers
         
         public ActionResult Index()
         {
-
+            SearchPostItem.SearchAccessoriesDetails(new Models.Search.SearchAccessoriesDetails { Category = 10, FromTotalPrice = 500, HasFast = true, Kind = 1, HasImage = false, KindTotalPrice = 1, MahaleSelect = "ونک", SearchInput = "پژو", ShahrSelect = 10, UntillTotalPrice = 541540 });
+            SearchPostItem.SearchAllAgahis(new Models.Search.SearchAllAgahis {Category=10,HasFast = false,HasImage=false,Kind= "asd",MahaleSelect = "ونک",SearchInput = "sadasas",ShahrSelect = 10 });
             return View();
         }
 
