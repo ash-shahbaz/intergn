@@ -2284,7 +2284,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var KindService = $('input[type=radio][name=KindService]:checked').attr('value');
+            var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
             
             
 
@@ -2293,7 +2293,7 @@
                 url: "/Search/SearchServicesEmployment",
                 data: {
                     Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
-                    MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast ,KindService: KindService
+                    MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast ,Kind: Kind
                 },
                 contentType: "text/plain",
                 dataType: "json",
