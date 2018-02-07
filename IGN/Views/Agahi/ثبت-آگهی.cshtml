@@ -1,5 +1,4 @@
-﻿
-@using IGN.Models;
+﻿@using IGN.Models;
 @{
     ViewBag.Title = "ثبت آگهی";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -147,45 +146,45 @@
 
 
 
-                                                    
-                                                @if (ViewBag.lvl0 == "وسایل نقلیه")
-                                                {
-                                                    <div class="row form-group">
-                                                        <div class="col-sm-9 user-type">
-                                                            <div class="md-radio md-radio-inline">
-                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
-                                                                <label for="Kind-Sell">فروشی</label>
-                                                            </div>
-                                                            <div class="md-radio md-radio-inline">
-                                                                <input id="Kind-Rent" type="radio" name="Kind" value="3">
-                                                                <label for="Kind-Rent">اجاره ای</label>
-                                                            </div>
-                                                            <div class="md-radio md-radio-inline">
-                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
-                                                                <label for="Kind-Need">درخواستی</label>
-                                                            </div>
-                                                        </div>
-                                                        <label class="col-sm-3">نوع آگهی<span class="required">*</span></label>
-                                                    </div>
-                                                }
-                                                else
-                                                {
-                                                    <div class="row form-group">
-                                                        <div class="col-sm-9 user-type">
-                                                            <div class="md-radio md-radio-inline">
-                                                                <input id="Kind-Need" type="radio" value="2" name="Kind">
-                                                                <label for="Kind-Need">درخواست کننده</label>
-                                                            </div>
-                                                            <div class="md-radio md-radio-inline">
-                                                                <input id="Kind-Sell" type="radio" value="1" name="Kind">
-                                                                <label for="Kind-Sell">ارائه کننده</label>
-                                                            </div>
-                                                        </div>
-                                                        <label class="col-sm-3">نوع آگهی<span class="required">*</span></label>
-                                                    </div>
-                                                }
 
-                                                  
+                                                    @if (ViewBag.lvl0 == "وسایل نقلیه")
+                                                    {
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-9 user-type">
+                                                                <div class="md-radio md-radio-inline">
+                                                                    <input id="Kind-Sell" type="radio" name="Kind" value="1">
+                                                                    <label for="Kind-Sell">فروشی</label>
+                                                                </div>
+                                                                <div class="md-radio md-radio-inline">
+                                                                    <input id="Kind-Rent" type="radio" name="Kind" value="3">
+                                                                    <label for="Kind-Rent">اجاره ای</label>
+                                                                </div>
+                                                                <div class="md-radio md-radio-inline">
+                                                                    <input id="Kind-Need" type="radio" name="Kind" value="2">
+                                                                    <label for="Kind-Need">درخواستی</label>
+                                                                </div>
+                                                            </div>
+                                                            <label class="col-sm-3">نوع آگهی<span class="required">*</span></label>
+                                                        </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="row form-group">
+                                                            <div class="col-sm-9 user-type">
+                                                                <div class="md-radio md-radio-inline">
+                                                                    <input id="Kind-Need" type="radio" value="2" name="Kind">
+                                                                    <label for="Kind-Need">درخواست کننده</label>
+                                                                </div>
+                                                                <div class="md-radio md-radio-inline">
+                                                                    <input id="Kind-Sell" type="radio" value="1" name="Kind">
+                                                                    <label for="Kind-Sell">ارائه کننده</label>
+                                                                </div>
+                                                            </div>
+                                                            <label class="col-sm-3">نوع آگهی<span class="required">*</span></label>
+                                                        </div>
+                                                    }
+
+
 
 
                                                     <div class="row form-group add-title">
@@ -246,7 +245,7 @@
                                                                     }
                                                                     if (ViewBag.lvl0 == "املاک" && ViewBag.lvl1 == "فروش املاک مسکونی" && ViewBag.lvl2 == "آپارتمان" || ViewBag.lvl2 == "خانه و ویلا")
                                                                     {
-                                            <!--  ---------//RegisterSaleApartSub--------------- شروع املاک - فروش املاک مسکونی - آپارتمان +و+ خانه و ویلا -----------------  -->
+                                <!--  ---------//RegisterSaleApartSub--------------- شروع املاک - فروش املاک مسکونی - آپارتمان +و+ خانه و ویلا -----------------  -->
 
                                                                         <div class="row">
                                                                             <div class="col-md-2"></div>
@@ -528,7 +527,7 @@
 
                                                                     else if (ViewBag.lvl0 == "املاک" && ViewBag.lvl1 == "فروش املاک مسکونی" && ViewBag.lvl2 == "زمین و کلنگی")
                                                                     {
-                                    <!--  ---------//RegisterSaleLandSub--------------- شروع املاک - فروش املاک مسکونی - زمین و کلنگی -----------------  -->
+                                <!--  ---------//RegisterSaleLandSub--------------- شروع املاک - فروش املاک مسکونی - زمین و کلنگی -----------------  -->
 
                                                                         <div class="row">
                                                                             <div class="col-md-2"></div>
@@ -682,7 +681,7 @@
                                                                     {
 
 
-                                          <!--  -------- //RegisterRentHouseSub---------------- شروع املاک - اجاره مسکونی - تمام زیر مجموعه ها -----------------  -->
+                                <!--  -------- //RegisterRentHouseSub---------------- شروع املاک - اجاره مسکونی - تمام زیر مجموعه ها -----------------  -->
                                                                         <div class="row">
                                                                             <div class="col-md-2"></div>
                                                                             <div class="col-md-8">
@@ -947,7 +946,7 @@
                                                                     {
 
 
-                                                     <!--  ------------//RegisterSaleOfficeSub------------ شروع املاک - فروش اداری و تجاری - تمام زیر مجموعه ها -----------------  -->
+                                <!--  ------------//RegisterSaleOfficeSub------------ شروع املاک - فروش اداری و تجاری - تمام زیر مجموعه ها -----------------  -->
 
                                                                         <div class="row">
                                                                             <div class="col-md-2"></div>
@@ -1237,7 +1236,7 @@
                                                                     else if (ViewBag.lvl0 == "املاک" && ViewBag.lvl1 == "اجاره اداری و تجاری")
                                                                     {
 
-                                           <!--  --------------//RegisterRentOfficeSub---------- شروع املاک - اجاره اداری و تجاری - تمام زیر مجموعه ها -----------------  -->
+                                <!--  --------------//RegisterRentOfficeSub---------- شروع املاک - اجاره اداری و تجاری - تمام زیر مجموعه ها -----------------  -->
 
                                                                         <div class="row">
                                                                             <div class="col-md-2"></div>
@@ -1508,7 +1507,7 @@
                                                                     else if (ViewBag.lvl0 == "املاک" && ViewBag.lvl1 == "خدمات املاک")
                                                                     {
 
-                                          <!-----//RegisterServicesHouseSub-----شروع - خدمات املاک - تمام زیر مجموعه ها---------->
+                                <!-----//RegisterServicesHouseSub-----شروع - خدمات املاک - تمام زیر مجموعه ها---------->
 
 
                                                                         <div class="row">
@@ -1544,7 +1543,7 @@
                                                                     }
                                                                     else if (ViewBag.lvl0 == "وسایل نقلیه" && ViewBag.lvl1 == "خودرو" && ViewBag.lvl2 == "سواری")
                                                                     {
-                                        <!-- ---//RegisterCarRiding-----شروع - خودرو - سواری-------- -->
+                                <!-- ---//RegisterCarRiding-----شروع - خودرو - سواری-------- -->
 
                                                                         <div class="row">
                                                                             <div class="col-md-2"></div>
@@ -1836,7 +1835,7 @@
                                                                     }
                                                                     else if (ViewBag.lvl0 == "وسایل نقلیه" && ViewBag.lvl1 == "خودرو" && ViewBag.lvl2 == "سنگین")
                                                                     {
-                                          <!-- ---//RegisterCarHeavy-----شروع - خودرو - سنگین-------- -->
+                                <!-- ---//RegisterCarHeavy-----شروع - خودرو - سنگین-------- -->
                                                                         <div class="row">
                                                                             <div class="col-md-2"></div>
                                                                             <div class="col-md-8">
@@ -2129,7 +2128,7 @@
                                                                     else if (ViewBag.lvl0 == "وسایل نقلیه" && ViewBag.lvl1 == "موتور سیکلت و لوازم جانبی" && ViewBag.lvl2 == "موتور سیکلت")
                                                                     {
 
-                                      <!-- ---//RegisterMotorcycle-----شروع - موتور سیکلت و لوازم جانبی - موتور سیکلت-------- -->
+                                <!-- ---//RegisterMotorcycle-----شروع - موتور سیکلت و لوازم جانبی - موتور سیکلت-------- -->
                                                                         <div class="row">
                                                                             <div class="col-md-2"></div>
                                                                             <div class="col-md-8">
@@ -2364,7 +2363,7 @@
                                                                     {
 
 
-  <!-- ---//RegisterAccessoriesDetail-----شروع - قطعات یدکی و لوازم جانبی خودرو - تمام زیر مجموعه ها و قایق و لوازم جانبی و لوازم جانبی موتور سیکلت-------- -->
+                                <!-- ---//RegisterAccessoriesDetail-----شروع - قطعات یدکی و لوازم جانبی خودرو - تمام زیر مجموعه ها و قایق و لوازم جانبی و لوازم جانبی موتور سیکلت-------- -->
 
                                                                         <div class="row">
                                                                             <div class="col-md-2"></div>
@@ -2408,7 +2407,7 @@
                                                                     else if (ViewBag.lvl0 == "لوازم الکترونیکی" && ViewBag.lvl1 == "موبایل  و تبلت")
                                                                     {
 
-                                          <!-- ---//RegisterMobileTablet-----شروع - لوازم الکترونیکی - گوشی موبایل  و تبلت-------- -->
+                                <!-- ---//RegisterMobileTablet-----شروع - لوازم الکترونیکی - گوشی موبایل  و تبلت-------- -->
 
                                                                         <div class="row">
                                                                             <div class="col-md-2"></div>
@@ -2507,7 +2506,7 @@
                                                                     else if (ViewBag.lvl0 == "لوازم الکترونیکی" && ViewBag.lvl1 == "رایانه" && ViewBag.lvl2 == "رایانه همراه")
                                                                     {
 
-                                              <!-- ---//RegisterLapTop-----شروع - لوازم الکترونیکی - رایانه - رایانه همراه-------- -->
+                                <!-- ---//RegisterLapTop-----شروع - لوازم الکترونیکی - رایانه - رایانه همراه-------- -->
 
                                                                         <div class="row">
                                                                             <div class="col-md-2"></div>
@@ -2710,7 +2709,7 @@
                                                                     else if (ViewBag.lvl0 == "لوازم الکترونیکی" && ViewBag.lvl1 == "رایانه" && ViewBag.lvl2 == "رایانه رومیزی")
                                                                     {
 
-                                          <!-- ---//RegisterCase-----شروع - لوازم الکترونیکی - رایانه - رایانه رومیزی-------- -->
+                                <!-- ---//RegisterCase-----شروع - لوازم الکترونیکی - رایانه - رایانه رومیزی-------- -->
 
                                                                         <div class="row">
                                                                             <div class="col-md-2"></div>
@@ -2877,56 +2876,50 @@
                                                                     }
 
                                                                     else if (ViewBag.lvl0 == "لوازم خانگی" || ViewBag.lvl0 != "لوازم شخصی" || ViewBag.lvl0 != "سرگرمی و فراغت" || ViewBag.lvl0 != "کسب و کار")
-                                                                        {
-                                            <!-- -----//RegisterPersonalEntertainment---شروع - لوازم خانگی و لوازم شخصی و سرگرمی و فراغت و کسب و کار  - تمام زیر مجموعه ها-------- -->
+                                                                    {
+                                <!-- -----//RegisterPersonalEntertainment---شروع - لوازم خانگی و لوازم شخصی و سرگرمی و فراغت و کسب و کار  - تمام زیر مجموعه ها-------- -->
 
-                                                                            <div class="row">
-                                                                                <div class="col-md-2"></div>
-                                                                                <div class="col-md-8">
-                                                                                    <div class="section quick-rules thumbnail border-radius-15">
-                                                                                        <h4>جزئیات آگهی</h4>
+                                                                        <div class="row">
+                                                                            <div class="col-md-2"></div>
+                                                                            <div class="col-md-8">
+                                                                                <div class="section quick-rules thumbnail border-radius-15">
+                                                                                    <h4>جزئیات آگهی</h4>
 
-                                                                                        <div class="row form-group select-price">
-                                                                                            <div class="col-sm-9">
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-2">
+                                                                                    <div class="row form-group select-price">
+                                                                                        <div class="col-sm-9">
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-2">
 
-                                                                                                        <label>هزار تومان</label>
+                                                                                                    <label>هزار تومان</label>
 
-                                                                                                    </div>
-                                                                                                    <div class="col-md-6">
-                                                                                                        <input id="TotalPrice" type="text" class="form-control ">
-                                                                                                    </div>
-                                                                                                    <div class="col-md-4">
-                                                                                                        <select id="Kind-TotalPrice" data-placeholder="1" class="select " tabindex="1">
-                                                                                                            <option value=""></option>
-                                                                                                            <option value="1">توافقی</option>
-                                                                                                            <option value="3">مقطوع</option>
+                                                                                                </div>
+                                                                                                <div class="col-md-6">
+                                                                                                    <input id="TotalPrice" type="text" class="form-control ">
+                                                                                                </div>
+                                                                                                <div class="col-md-4">
+                                                                                                    <select id="Kind-TotalPrice" data-placeholder="1" class="select " tabindex="1">
+                                                                                                        <option value=""></option>
+                                                                                                        <option value="1">توافقی</option>
+                                                                                                        <option value="3">مقطوع</option>
 
-                                                                                                        </select>
-                                                                                                    </div>
+                                                                                                    </select>
                                                                                                 </div>
                                                                                             </div>
-                                                                                            <label class="col-sm-3 label-title">قیمت<span class="required">*</span></label>
                                                                                         </div>
-
-
+                                                                                        <label class="col-sm-3 label-title">قیمت<span class="required">*</span></label>
                                                                                     </div>
 
+
                                                                                 </div>
-                                                                                <div class="col-md-2"></div>
+
                                                                             </div>
+                                                                            <div class="col-md-2"></div>
+                                                                        </div>
 
                                                                     }
-                                                                   
-		    <!-- ----//RegisterServicesEmployment----شروع خدمات و اجتماعی و استخدام  ---------->
 
-
-		    <!-- ----//RegisterServicesEmployment----پایان خدمات و اجتماعی و استخدام  ---------->
-
-
-
-
+                                <!-- ----//RegisterServicesEmployment----شروع خدمات و اجتماعی و استخدام  ---------->
+                                <!-- ----//RegisterServicesEmployment----پایان خدمات و اجتماعی و استخدام  ---------->
                                 }
 
                                 @{
@@ -3352,8 +3345,7 @@
                                 uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree, uploadimagefour:uploadimagefour, txtDesc:txtDesc, NameAdvertiser:NameAdvertiser,
                                 EmailAdvertiser:EmailAdvertiser, MobileAdvertiser:MobileAdvertiser, KindAds:KindAds,
                                 RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-
-                    KindTotalPrice: KindTotalPrice, TotalPrice: TotalPrice, Area: Area, RoomNumber: RoomNumber,
+                                                    KindTotalPrice: KindTotalPrice, TotalPrice: TotalPrice, Area: Area, RoomNumber: RoomNumber,
                                     Countryside: Countryside, Person: Person, FromYear: FromYear, FloorNumber: FloorNumber, KindBottom: KindBottom, KindHeating: KindHeating,
                                     HasParking: HasParking, HasElevator: HasElevator, HasIranianService: HasIranianService, HasForeignService: HasForeignService,
                                     HasBalcony: HasBalcony, HasPool: HasPool, HasUnderground: HasUnderground, HasYard: HasYard, HasSauna: HasSauna, HasJacuzzi: HasJacuzzi,
