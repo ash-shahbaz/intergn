@@ -15,6 +15,7 @@
 
 
     <link href="~/css/chosen.min.css" rel="stylesheet" />
+<link href="~/css/leaflet.css" rel="stylesheet" />
 
 }
 
@@ -27,9 +28,14 @@
         <form class="search-form" method="get">
             <div class="row margin-bottom-10">
 
+                <div class="col-md-2 search-col ">
+                    
+                    <button id="ShowMap" type="button" class="btn btn-info btn-lg btnchoose float-left">نمایش روی نقشه</button>
 
+                    
+                </div>
 
-                <div class="col-md-3  ">
+                <div class="col-md-2  ">
                     <div id="sel-cont">
 
                         <select data-placeholder="محله را انتخاب کنید ..." multiple class="mahale-select width-100Per"></select>
@@ -87,7 +93,7 @@
                 </div>
 
 
-                <div class="col-md-5 ">
+                <div class="col-md-4 ">
                     <input id="SearchInput" class="form-control keyword" name="keyword" value="" placeholder="متن جستجو" type="text">
                     <i class="fa fa-search"></i>
 
@@ -255,16 +261,6 @@
 <div class="main-top">
 
 
-
-
-
-
-
-
-
-
-
-
     <div class="row">
         <div class="col-md-12">
             <div class="widget card topstyle">
@@ -273,6 +269,15 @@
 
 
                     <div class="padding-top-15">
+
+
+                        <div class="row ">
+                            <div class="col-md-12">
+                                <div class="LocationStyle " id="map"></div>
+                            </div>
+                        </div>
+
+
 
                         <div id="products" class="row list-group">
 
@@ -1143,16 +1148,67 @@
 
 
 
-
 @section Script
     {
 
+<script src="~/js/leaflet.js"></script>
     <script src="~/js/hierarchy-select.min.js"></script>
 
     <script src="~/js/chosen.jquery.min.js"></script>
 
-
     <script>
+
+
+        $(document).ready(function () {
+
+            var map = L.map('map').setView([35.71, 51.40], 12);
+
+            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            L.marker([35.75, 51.43]).addTo(map)
+                .bindPopup('پراید<br> مدل 95')
+                .openPopup();
+
+            L.marker([35.71, 51.40]).addTo(map)
+                .bindPopup('خودرو بنز<br> مدل 94')
+                .openPopup();
+
+            L.marker([35.65, 51.35]).addTo(map)
+                .bindPopup('پراید<br> مدل 95')
+                .openPopup();
+
+
+
+
+            
+
+            $("#ShowMap").click(function () {
+                
+            })
+
+
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

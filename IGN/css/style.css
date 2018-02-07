@@ -7095,3 +7095,12 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 .display-block{
     display: block;
 }
+
+
+
+/*-------------------------------------------------------------------------------------------------------*/
+.LocationStyle {
+    width: 100%;
+    height: 500px;
+    margin-bottom:10px;
+}

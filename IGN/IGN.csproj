@@ -228,6 +228,7 @@
     <Content Include="css\jquery-ui.css" />
     <Content Include="css\kamadatepicker.min.css" />
     <Content Include="css\kanNotify.css" />
+    <Content Include="css\leaflet.css" />
     <Content Include="css\main-color-login.css" />
     <Content Include="css\main.css" />
     <Content Include="css\mainselect.css" />
@@ -287,6 +288,7 @@
     <Content Include="js\jquery.validate.min.js" />
     <Content Include="js\CircleUserJS.js" />
     <Content Include="js\kamadatepicker.min.js" />
+    <Content Include="js\leaflet.js" />
     <Content Include="js\mainlogin.js" />
     <Content Include="js\mainselect.js" />
     <Content Include="js\material.min.js" />

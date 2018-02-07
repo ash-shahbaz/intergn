@@ -17,6 +17,9 @@
     <link href="~/css/hierarchy-select.min.css" rel="stylesheet" />
 
     <link href="~/css/chosen.min.css" rel="stylesheet" />
+
+<link href="~/css/leaflet.css" rel="stylesheet" />
+
 }
 
 <div class="main-top">
@@ -3036,9 +3039,12 @@
     {
 
     <script src="~/js/chosen.jquery.min.js"></script>
+    
+<script src="~/js/hierarchy-select.min.js"></script>
 
+<script src="~/js/leaflet.js"></script>
 
-    <script>
+    @*<script>
         function myMap() {
             var mapProp = {
                 center: new google.maps.LatLng(33, 53),
@@ -3046,11 +3052,47 @@
             };
             var map = new google.maps.Map(document.getElementById("Location"), mapProp);
         }
-    </script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDefZiWoIs6jGvRyEvRdFieCQqIi9OMyOg&callback=myMap"></script>
 
-    <script src="~/js/hierarchy-select.min.js"></script>
+    </script>*@
+<script language="javascript">
+         var map;
+
+         function init() {
+             map = new L.Map('#Location');
+             L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                 attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+                 maxZoom: 18
+             }).addTo(map);
+             map.attributionControl.setPrefix(''); // Don't show the 'Powered by Leaflet' text.
+
+             // map view before we get the location
+             map.setView(new L.LatLng(51.505, -0.09), 13);
+         }
+
+         function onLocationFound(e) {
+             var radius = e.accuracy / 2;
+             var location = e.latlng
+             L.marker(location).addTo(map)
+             L.circle(location, radius).addTo(map);
+         }
+
+         function onLocationError(e) {
+             alert(e.message);
+         }
+
+         function getLocationLeaflet() {
+             map.on('locationfound', onLocationFound);
+             map.on('locationerror', onLocationError);
+
+             map.locate({ setView: true, maxZoom: 16 });
+         }
+</script>
+
+
+
+
+
     <script>
 
         var arr;
