@@ -1465,9 +1465,9 @@
         //شروع جستجو کلی
         $("#SearchAllAgahi").click(function () {
             //Fixed
-            var Category = "All";
+            var CategoryID = "All";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
             var HasImage = "";
@@ -1479,7 +1479,7 @@
                 type: "GET",
                 url: "/Search/SearchAllAgahi",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, Kind: Kind, HasImage, HasImage, HasFast: HasFast
                 },
                 contentType: "text/plain",
@@ -1502,9 +1502,9 @@
         //شروع فروش املاک مسکونی
         $("#SearchSaleHome").click(function () {
             //Fixed
-            var Category = "All";
+            var CategoryID = "All";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -1529,7 +1529,7 @@
                 type: "GET",
                 url: "/Search/SearchSaleHome",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, Kind: Kind, HasImage, HasImage, HasFast: HasFast,
                     Countryside: Countryside, Person: Person, KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice,
                     FromTotalPrice: FromTotalPrice, UntillArea: UntillArea, FromArea: FromArea
@@ -1551,9 +1551,9 @@
         //شروع اجاره مسکونی
         $("#SearchRentHome").click(function () {
             //Fixed
-            var Category = "All";
+            var CategoryID = "All";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -1583,7 +1583,7 @@
                 type: "GET",
                 url: "/Search/SearchRentHome",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     KindRentPrice: KindRentPrice, UntillRentPrice: UntillRentPrice, FromRentPrice: FromRentPrice, KindDepositPrice: KindDepositPrice
                     , UntillDepositPrice: UntillDepositPrice, FromDepositPrice: FromDepositPrice, UntillArea: UntillArea, FromArea: FromArea,
@@ -1609,9 +1609,9 @@
         //شروع فروش اداری و تجاری
         $("#SearchSaleOffice").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -1635,7 +1635,7 @@
                 type: "GET",
                 url: "/Search/SearchSaleOffice",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     AdminDoc: AdminDoc, Person: Person, Kind: Kind, KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice
                     , FromTotalPrice: FromTotalPrice, UntillArea: UntillArea, FromArea: FromArea
@@ -1658,9 +1658,9 @@
         //شروع اجاره اداری و تجاری
         $("#SearchRentOffice").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -1689,7 +1689,7 @@
                 type: "GET",
                 url: "/Search/SearchRentOffice",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     KindRentPrice: KindRentPrice, UntillRentPrice: UntillRentPrice, FromRentPrice: FromRentPrice, KindDepositPrice: KindDepositPrice,
                     UntillDepositPrice: UntillDepositPrice, FromDepositPrice: FromDepositPrice, UntillArea: UntillArea, FromArea: FromArea,
@@ -1714,9 +1714,9 @@
         //شروع - خدمات املاک
         $("#SearchServicesHouse").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -1731,7 +1731,7 @@
                 type: "GET",
                 url: "/Search/SearchServicesHouse",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast, Person: Person
                 },
                 contentType: "text/plain",
@@ -1751,9 +1751,9 @@
         //شروع -فروش املاک مسکونی- آپارتمان +و+ خانه و ویلا
         $("#SearchSaleApartSub").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -1830,7 +1830,7 @@
                 type: "GET",
                 url: "/Search/SearchSaleApartSub",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice, FromTotalPrice: FromTotalPrice, RoomNumber: RoomNumber,
                     UntillArea: UntillArea, FromArea: FromArea, Countryside: Countryside, Person: Person, Kind: Kind, UntillInfrastructure: UntillInfrastructure,
@@ -1859,9 +1859,9 @@
         //شروع -فروش املاک مسکونی- زمین و کلنگی
         $("#SearchSaleLandSub").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -1895,7 +1895,7 @@
                 type: "GET",
                 url: "/Search/SearchSaleLandSub",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     Countryside: Countryside, Person: Person, Kind: Kind, KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice, FromTotalPrice: FromTotalPrice,
                     UntillArea: UntillArea, FromArea: FromArea, UntillInfrastructure: UntillInfrastructure, FromInfrastructure: FromInfrastructure, UntillLoan: UntillLoan,
@@ -1918,9 +1918,9 @@
         //شروع -اجاره مسکونی - تمام زیر مجموعه ها
         $("#SearchRentHouseSub").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -1990,7 +1990,7 @@
                 type: "GET",
                 url: "/Search/SearchRentHouseSub",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     KindRentPrice: KindRentPrice, UntillRentPrice: UntillRentPrice, FromRentPrice: FromRentPrice, KindDepositPrice: KindDepositPrice,
                     UntillDepositPrice: UntillDepositPrice, FromDepositPrice: FromDepositPrice, RoomNumber: RoomNumber,
@@ -2023,9 +2023,9 @@
         //شروع - فروش اداری و تجاری - تمام زیر مجموعه ها
         $("#SearchSaleOfficeSub").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -2102,7 +2102,7 @@
                 type: "GET",
                 url: "/Search/SearchSaleOfficeSub",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
 
                     KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice, FromTotalPrice: FromTotalPrice, RoomNumber: RoomNumber,
@@ -2134,9 +2134,9 @@
         //شروع - اجاره اداری و تجاری - تمام زیر مجموعه ها
         $("#SearchRentOfficeSub").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -2207,7 +2207,7 @@
                 type: "GET",
                 url: "/Search/SearchRentOfficeSub",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     KindRentPrice: KindRentPrice, UntillRentPrice: UntillRentPrice, FromRentPrice: FromRentPrice, KindDepositPrice: KindDepositPrice,
                     UntillDepositPrice: UntillDepositPrice, FromDepositPrice: FromDepositPrice, RoomNumber: RoomNumber,
@@ -2235,9 +2235,9 @@
         //شروع - خدمات املاک - تمام زیر مجموعه ها
         $("#SearchServicesHouseSub").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -2256,7 +2256,7 @@
                 type: "GET",
                 url: "/Search/SearchServicesHouseSub",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast, Person: Person
                 },
                 contentType: "text/plain",
@@ -2275,9 +2275,9 @@
         //شروع خدمات و اجتماعی و استخدام
         $("#SearchServicesEmployment").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -2292,7 +2292,7 @@
                 type: "GET",
                 url: "/Search/SearchServicesEmployment",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast ,Kind: Kind
                 },
                 contentType: "text/plain",
@@ -2311,9 +2311,9 @@
         //شروع لوازم خانگی و لوازم شخصی و سرگرمی و فراغت و کسب و کار -  تمام سر تیتر ها و جزئیات ها
         $("#SearchPersonalEntertainment").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -2332,7 +2332,7 @@
                 type: "GET",
                 url: "/Search/SearchPersonalEntertainment",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     Kind: Kind, KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice, FromTotalPrice: FromTotalPrice
 
@@ -2353,9 +2353,9 @@
         //شروع - لوازم الکترونیکی - لوازم جانبی موبایل و تبلت و سیم کارت و تمام زیر مجموعه های صوتی و تصویری و کنسول ها و بازی ها و رایانه بجزززز رایانه همراه و رومیزی
         $("#SearchElectronics").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -2375,7 +2375,7 @@
                 type: "GET",
                 url: "/Search/SearchElectronics",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     Kind: Kind, KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice, FromTotalPrice: FromTotalPrice
                 },
@@ -2395,9 +2395,9 @@
         //شروع - لوازم الکترونیکی - گوشی موبایل  و تبلت
         $("#SearchMobileTablet").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -2417,7 +2417,7 @@
                 type: "GET",
                 url: "/Search/SearchMobileTablet",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     Kind: Kind, KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice, FromTotalPrice: FromTotalPrice,
                     KindColor: KindColor, KindBrand: KindBrand
@@ -2438,9 +2438,9 @@
         //شروع - رایانه - رایانه همراه
         $("#SearchLapTop").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -2475,7 +2475,7 @@
                 type: "GET",
                 url: "/Search/SearchLapTop",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     Kind: Kind, KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice, FromTotalPrice: FromTotalPrice,
                     KindColor: KindColor, KindBrand: KindBrand, KindSizeScreen: KindSizeScreen, KindTouch: KindTouch, MeasureRAM: MeasureRAM,
@@ -2498,9 +2498,9 @@
         //شروع - لوازم الکترونیکی - رایانه - رایانه رومیزی
         $("#SearchCase").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -2531,7 +2531,7 @@
                 type: "GET",
                 url: "/Search/SearchCase",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     Kind: Kind, KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice, FromTotalPrice: FromTotalPrice,
                     MeasureRAM: MeasureRAM, MeasureCPU: MeasureCPU, MeasureHard: MeasureHard, MeasureGraphic: MeasureGraphic, HasUSB3: HasUSB3,
@@ -2554,9 +2554,9 @@
         //شروع خودرو  +و+ موتورسیکلت و لوازم جانبی
         $("#SearchMotorAccessories").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -2583,7 +2583,7 @@
                 type: "GET",
                 url: "/Search/SearchMotorAccessories",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     Kind: Kind, UntillYear: UntillYear, FromYear: FromYear, UntillCarFunction: UntillCarFunction, FromCarFunction: FromCarFunction,
                     KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice, FromTotalPrice: FromTotalPrice
@@ -2604,9 +2604,9 @@
         //شروع قطعات یدکی و لوازم جانبی خودرو  +و+  قایق و لوازم جانبی
         $("#SearchCarBoatAcc").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -2625,7 +2625,7 @@
                 type: "GET",
                 url: "/Search/SearchCarBoatAcc",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                 Kind: Kind, KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice, FromTotalPrice: FromTotalPrice
                 },
@@ -2645,9 +2645,9 @@
         //شروع - خودرو - سواری
         $("#SearchCarRiding").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -2693,7 +2693,7 @@
                 type: "GET",
                 url: "/Search/SearchCarRiding",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     UntillMonthlyInstallment: UntillMonthlyInstallment, FromMonthlyInstallment: FromMonthlyInstallment, UNumberMonthlyInstallment: UNumberMonthlyInstallment,
                     FNumberMonthlyInstallment: FNumberMonthlyInstallment, KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice, FromTotalPrice: FromTotalPrice,
@@ -2717,9 +2717,9 @@
         //شروع - خودرو - سنگین
         $("#SearchCarHeavy").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -2764,7 +2764,7 @@
                 type: "GET",
                 url: "/Search/SearchCarHeavy",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     UntillMonthlyInstallment: UntillMonthlyInstallment, FromMonthlyInstallment: FromMonthlyInstallment, UNumberMonthlyInstallment: UNumberMonthlyInstallment,
                     FNumberMonthlyInstallment: FNumberMonthlyInstallment, KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice, FromTotalPrice: FromTotalPrice,
@@ -2789,9 +2789,9 @@
         //شروع - قطعات یدکی و لوازم جانبی خودرو - تمام زیر مجموعه ها
         $("#SearchVehicleAccessories").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -2812,7 +2812,7 @@
                 type: "GET",
                 url: "/Search/SearchVehicleAccessories",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     Kind: Kind, KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice, FromTotalPrice: FromTotalPrice
                 },
@@ -2832,9 +2832,9 @@
         //شروع - موتور سیکلت و لوازم جانبی - موتور سیکلت
         $("#SearchMotorcycle").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -2872,7 +2872,7 @@
                 type: "GET",
                 url: "/Search/SearchMotorcycle",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     UntillMonthlyInstallment: UntillMonthlyInstallment, FromMonthlyInstallment: FromMonthlyInstallment, UNumberMonthlyInstallment: UNumberMonthlyInstallment,
                     FNumberMonthlyInstallment: FNumberMonthlyInstallment, KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice, FromTotalPrice: FromTotalPrice,
@@ -2896,9 +2896,9 @@
         //شروع - قطعات یدکی و لوازم جانبی خودرو - تمام زیر مجموعه ها و قایق و لوازم جانبی و لوازم جانبی موتور سیکلت
         $("#SearchAccessoriesDetail").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -2919,7 +2919,7 @@
                 type: "GET",
                 url: "/Search/SearchAccessoriesDetail",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     Kind: Kind, KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice, FromTotalPrice: FromTotalPrice
                 },
@@ -2939,9 +2939,9 @@
         //شروع  - قایق و لوازم جانبی - تمام زیر مجموعه ها
         $("#SearchBoatsAccessories").click(function () {
             //Fixed
-            var Category = "";
+            var CategoryID = "";
             var SearchInput = $('#SearchInput').val();
-            var ShahrSelect = $(".ShahrSelect").val();
+            var ShahrSelectID = $(".ShahrSelect").val();
             var MahaleSelect = $(".mahale-select").val();
             var HasImage = "";
             if ($('#HasImage').is(":checked")) { HasImage = true; } else { HasImage = false; }
@@ -2960,7 +2960,7 @@
                 type: "GET",
                 url: "/Search/SearchBoatsAccessories",
                 data: {
-                    Category: Category, SearchInput: SearchInput, ShahrSelect: ShahrSelect,
+                    CategoryID: CategoryID, SearchInput: SearchInput, ShahrSelectID: ShahrSelectID,
                     MahaleSelect: MahaleSelect, HasImage, HasImage, HasFast: HasFast,
                     Kind: Kind, KindTotalPrice: KindTotalPrice, UntillTotalPrice: UntillTotalPrice, FromTotalPrice: FromTotalPrice
                 },
