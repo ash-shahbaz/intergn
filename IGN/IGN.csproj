@@ -162,6 +162,22 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AdsRegistration\RegisterServicesEmployments.cs" />
+    <Compile Include="Models\AdsRegistration\RegisterPersonalEntertainments.cs" />
+    <Compile Include="Models\AdsRegistration\RegisterElectronicss.cs" />
+    <Compile Include="Models\AdsRegistration\RegisterCases.cs" />
+    <Compile Include="Models\AdsRegistration\RegisterLapTops.cs" />
+    <Compile Include="Models\AdsRegistration\RegisterMobileTablets.cs" />
+    <Compile Include="Models\AdsRegistration\RegisterAccessoriesDetails.cs" />
+    <Compile Include="Models\AdsRegistration\RegisterMotorcycles.cs" />
+    <Compile Include="Models\AdsRegistration\RegisterCarHeavys.cs" />
+    <Compile Include="Models\AdsRegistration\RegisterCarRidings.cs" />
+    <Compile Include="Models\AdsRegistration\RegisterServicesHouseSubs.cs" />
+    <Compile Include="Models\AdsRegistration\RegisterRentOfficeSubs.cs" />
+    <Compile Include="Models\AdsRegistration\RegisterSaleOfficeSubs.cs" />
+    <Compile Include="Models\AdsRegistration\RegisterRentHouseSubs.cs" />
+    <Compile Include="Models\AdsRegistration\RegisterSaleLandSubs.cs" />
+    <Compile Include="Models\AdsRegistration\RegisterSaleApartSubs.cs" />
     <Compile Include="Models\JCategroy.cs" />
     <Compile Include="Models\SearchPostItem.cs" />
     <Compile Include="Models\Search\SearchAccessoriesDetails.cs" />
