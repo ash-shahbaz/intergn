@@ -142,6 +142,34 @@
                                                     </div>
 
 
+
+
+
+
+
+                                                    
+                                                @if (ViewBag.lvl0 == "وسایل نقلیه")
+                                                {
+                                                    <div class="row form-group">
+                                                        <div class="col-sm-9 user-type">
+                                                            <div class="md-radio md-radio-inline">
+                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
+                                                                <label for="Kind-Sell">فروشی</label>
+                                                            </div>
+                                                            <div class="md-radio md-radio-inline">
+                                                                <input id="Kind-Rent" type="radio" name="Kind" value="3">
+                                                                <label for="Kind-Rent">اجاره ای</label>
+                                                            </div>
+                                                            <div class="md-radio md-radio-inline">
+                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
+                                                                <label for="Kind-Need">درخواستی</label>
+                                                            </div>
+                                                        </div>
+                                                        <label class="col-sm-3">نوع آگهی<span class="required">*</span></label>
+                                                    </div>
+                                                }
+                                                else
+                                                {
                                                     <div class="row form-group">
                                                         <div class="col-sm-9 user-type">
                                                             <div class="md-radio md-radio-inline">
@@ -155,6 +183,10 @@
                                                         </div>
                                                         <label class="col-sm-3">نوع آگهی<span class="required">*</span></label>
                                                     </div>
+                                                }
+
+                                                  
+
 
                                                     <div class="row form-group add-title">
                                                         <div class="col-sm-9">
@@ -541,19 +573,6 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" value="1" type="radio" name="Kind">
-                                                                                                <label for="Kind-Sell">فروشی</label>
-                                                                                            </div>
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" value="2" type="radio" name="Kind">
-                                                                                                <label for="Kind-Need">درخواستی</label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <label class="col-sm-3">نوع<span class="required">*</span></label>
-                                                                                    </div>
-                                                                                    <div class="row form-group">
-                                                                                        <div class="col-sm-9 user-type">
-                                                                                            <div class="md-radio md-radio-inline">
                                                                                                 <input id="Person-Self" type="radio" name="Person" value="1" class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
                                                                                             </div>
@@ -745,19 +764,6 @@
                                                                                         <label class="col-sm-3 label-title">تعداد اتاق<span class="required">*</span></label>
                                                                                     </div>
 
-                                                                                    <div class="row form-group">
-                                                                                        <div class="col-sm-9 user-type">
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
-                                                                                                <label for="Kind-Need">درخواست کننده</label>
-                                                                                            </div>
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
-                                                                                                <label for="Kind-Sell">ارائه کننده</label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <label class="col-sm-3">نوع<span class="required">*</span></label>
-                                                                                    </div>
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
@@ -997,19 +1003,6 @@
                                                                                         <label class="col-sm-3 label-title">تعداد اتاق<span class="required">*</span></label>
                                                                                     </div>
 
-                                                                                    <div class="row form-group">
-                                                                                        <div class="col-sm-9 user-type">
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" value="1" name="Kind">
-                                                                                                <label for="Kind-Sell">فروشی</label>
-                                                                                            </div>
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" value="2" name="Kind">
-                                                                                                <label for="Kind-Need">درخواستی</label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <label class="col-sm-3">نوع<span class="required">*</span></label>
-                                                                                    </div>
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
@@ -1322,19 +1315,6 @@
                                                                                         <label class="col-sm-3 label-title">تعداد اتاق<span class="required">*</span></label>
                                                                                     </div>
 
-                                                                                    <div class="row form-group">
-                                                                                        <div class="col-sm-9 user-type">
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
-                                                                                                <label for="Kind-Need">درخواست کننده</label>
-                                                                                            </div>
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
-                                                                                                <label for="Kind-Sell">ارائه کننده</label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <label class="col-sm-3">نوع<span class="required">*</span></label>
-                                                                                    </div>
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
@@ -1681,23 +1661,6 @@
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
-                                                                                                <label for="Kind-Sell">فروشی</label>
-                                                                                            </div>
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Rent" type="radio" name="Kind" value="3">
-                                                                                                <label for="Kind-Rent">اجاره ای</label>
-                                                                                            </div>
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
-                                                                                                <label for="Kind-Need">درخواستی</label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <label class="col-sm-3">نوع<span class="required">*</span></label>
-                                                                                    </div>
-                                                                                    <div class="row form-group">
-                                                                                        <div class="col-sm-9 user-type">
-                                                                                            <div class="md-radio md-radio-inline">
                                                                                                 <input id="Person-Self" type="radio" name="Person" value="1" class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
                                                                                             </div>
@@ -1988,23 +1951,6 @@
                                                                                         <label class="col-sm-3 label-title">سال<span class="required">*</span></label>
                                                                                     </div>
 
-                                                                                    <div class="row form-group">
-                                                                                        <div class="col-sm-9 user-type">
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
-                                                                                                <label for="Kind-Sell">فروشی</label>
-                                                                                            </div>
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Rent" type="radio" name="Kind" value="3">
-                                                                                                <label for="Kind-Rent">اجاره ای</label>
-                                                                                            </div>
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
-                                                                                                <label for="Kind-Need">درخواستی</label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <label class="col-sm-3">نوع<span class="required">*</span></label>
-                                                                                    </div>
                                                                                     <div class="row form-group">
                                                                                         <div class="col-sm-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
@@ -2299,23 +2245,6 @@
                                                                                 <div class="row form-group">
                                                                                     <div class="col-sm-9 user-type">
                                                                                         <div class="md-radio md-radio-inline">
-                                                                                            <input id="Kind-Sell" type="radio" name="Kind" value="1">
-                                                                                            <label for="Kind-Sell">فروشی</label>
-                                                                                        </div>
-                                                                                        <div class="md-radio md-radio-inline">
-                                                                                            <input id="Kind-Rent" type="radio" name="Kind" value="3">
-                                                                                            <label for="Kind-Rent">اجاره ای</label>
-                                                                                        </div>
-                                                                                        <div class="md-radio md-radio-inline">
-                                                                                            <input id="Kind-Need" type="radio" name="Kind" value="2">
-                                                                                            <label for="Kind-Need">درخواستی</label>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <label class="col-sm-3">نوع<span class="required">*</span></label>
-                                                                                </div>
-                                                                                <div class="row form-group">
-                                                                                    <div class="col-sm-9 user-type">
-                                                                                        <div class="md-radio md-radio-inline">
                                                                                             <input id="Person-Self" type="radio" name="Person" value="1" class="Person">
                                                                                             <label for="Person-Self">شخصی</label>
                                                                                         </div>
@@ -2467,24 +2396,6 @@
                                                                                         </div>
                                                                                         <label class="col-sm-3 label-title">قیمت<span class="required">*</span></label>
                                                                                     </div>
-                                                                                    <div class="row form-group">
-
-                                                                                        <div class="col-sm-9 user-type">
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
-                                                                                                <label for="Kind-Sell">فروشی</label>
-                                                                                            </div>
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Rent" type="radio" name="Kind" value="3">
-                                                                                                <label for="Kind-Rent">اجاره ای</label>
-                                                                                            </div>
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
-                                                                                                <label for="Kind-Need">درخواستی</label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <label class="col-sm-3">نوع آگهی دهنده<span class="required">*</span></label>
-                                                                                    </div>
 
                                                                                 </div>
 
@@ -2582,20 +2493,6 @@
                                                                                             </select>
                                                                                         </div>
                                                                                         <label class="col-sm-6 label-title">رنگ</label>
-                                                                                    </div>
-
-                                                                                    <div class="row form-group">
-                                                                                        <div class="col-sm-9 user-type">
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
-                                                                                                <label for="Kind-Sell">فروشی</label>
-                                                                                            </div>
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
-                                                                                                <label for="Kind-Need">درخواستی</label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <label class="col-sm-3">نوع آگهی دهنده<span class="required">*</span></label>
                                                                                     </div>
 
                                                                                 </div>
@@ -2696,20 +2593,6 @@
                                                                                             </select>
                                                                                         </div>
                                                                                         <label class="col-sm-6 label-title">رنگ</label>
-                                                                                    </div>
-
-                                                                                    <div class="row form-group">
-                                                                                        <div class="col-sm-9 user-type">
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
-                                                                                                <label for="Kind-Sell">فروشی</label>
-                                                                                            </div>
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
-                                                                                                <label for="Kind-Need">درخواستی</label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <label class="col-sm-3">نوع آگهی دهنده<span class="required">*</span></label>
                                                                                     </div>
 
                                                                                 </div>
@@ -2860,20 +2743,6 @@
                                                                                         <label class="col-sm-3 label-title">قیمت<span class="required">*</span></label>
                                                                                     </div>
 
-                                                                                    <div class="row form-group">
-                                                                                        <div class="col-sm-9 user-type">
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
-                                                                                                <label for="Kind-Sell">فروشی</label>
-                                                                                            </div>
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
-                                                                                                <label for="Kind-Need">درخواستی</label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <label class="col-sm-3">نوع آگهی دهنده<span class="required">*</span></label>
-                                                                                    </div>
-
                                                                                 </div>
 
                                                                             </div>
@@ -2998,21 +2867,6 @@
                                                                                     </div>
 
 
-                                                                                    <div class="row form-group">
-                                                                                        <div class="col-sm-9 user-type">
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
-                                                                                                <label for="Kind-Sell">فروشی</label>
-                                                                                            </div>
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
-                                                                                                <label for="Kind-Need">درخواستی</label>
-                                                                                            </div>
-                                                                                        </div>
-
-                                                                                        <label class="col-sm-3">نوع آگهی دهنده<span class="required">*</span></label>
-                                                                                    </div>
-
                                                                                 </div>
 
                                                                             </div>
@@ -3022,10 +2876,7 @@
 
                                                                     }
 
-                                                                    else if (ViewBag.lvl0 != null)
-                                                                    {
-
-                                                                        if (ViewBag.lvl0 == "لوازم خانگی" || ViewBag.lvl0 != "لوازم شخصی" || ViewBag.lvl0 != "سرگرمی و فراغت" || ViewBag.lvl0 != "کسب و کار")
+                                                                    else if (ViewBag.lvl0 == "لوازم خانگی" || ViewBag.lvl0 != "لوازم شخصی" || ViewBag.lvl0 != "سرگرمی و فراغت" || ViewBag.lvl0 != "کسب و کار")
                                                                         {
                                             <!-- -----//CaseFifteen---شروع - لوازم خانگی و لوازم شخصی و سرگرمی و فراغت و کسب و کار  - تمام زیر مجموعه ها-------- -->
 
@@ -3060,62 +2911,18 @@
                                                                                         </div>
 
 
-                                                                                        <div class="row form-group">
-                                                                                            <div class="col-sm-9 user-type">
-                                                                                                <div class="md-radio md-radio-inline">
-                                                                                                    <input id="Kind-Sell" type="radio" name="Kind" value="1">
-                                                                                                    <label for="Kind-Sell">فروشی</label>
-                                                                                                </div>
-                                                                                                <div class="md-radio md-radio-inline">
-                                                                                                    <input id="Kind-Need" type="radio" name="Kind" value="2">
-                                                                                                    <label for="Kind-Need">درخواستی</label>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <label class="col-sm-3">نوع آگهی دهنده<span class="required">*</span></label>
-                                                                                        </div>
-
                                                                                     </div>
 
                                                                                 </div>
                                                                                 <div class="col-md-2"></div>
                                                                             </div>
 
-                                                                        }
-
                                                                     }
-                                                                    else if (ViewBag.lvl0 == "اجتماعی" && ViewBag.lvl0 != "خدمات" && ViewBag.lvl0 != "استخدام")
-                                                                    {
+                                                                   
+		    <!-- ----//CaseSixteen----شروع خدمات و اجتماعی و استخدام  ---------->
+
+
 		    <!-- ----//CaseSixteen----پایان خدمات و اجتماعی و استخدام  ---------->
-
-                                                                        <div class="row">
-                                                                            <div class="col-md-2"></div>
-                                                                            <div class="col-md-8">
-                                                                                <div class="section quick-rules thumbnail border-radius-15">
-                                                                                    <h4>جزئیات آگهی</h4>
-
-
-                                                                                    <div class="row form-group">
-                                                                                        <div class="col-sm-9 user-type">
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Sell" type="radio" name="Kind" value="1">
-                                                                                                <label for="Kind-Sell">فروشی</label>
-                                                                                            </div>
-                                                                                            <div class="md-radio md-radio-inline">
-                                                                                                <input id="Kind-Need" type="radio" name="Kind" value="2">
-                                                                                                <label for="Kind-Need">درخواستی</label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <label class="col-sm-3">نوع آگهی دهنده<span class="required">*</span></label>
-                                                                                    </div>
-
-                                                                                </div>
-
-                                                                            </div>
-                                                                            <div class="col-md-2"></div>
-                                                                        </div>
-
-
-                                                                    }
 
 
 
@@ -3580,7 +3387,6 @@
                         { TotalPrice = $('#TotalPrice').val(); }
 
                         var Area = $("#Area").val();
-                        var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
                         var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
                         var Person = $('input[type=radio][name=Person]:checked').attr('value');
                         var FloorNumber = $("#Floor-Number").val();
@@ -3596,19 +3402,6 @@
                         var LoanAmount = $("#Loan-Amount").val();
 
 
-                      KindTotalPrice
-TotalPrice
-Area
-Kind
-Countryside
-Person
-FloorNumber
-HasHeir
-HasSingleDocument
-Infrastructure
-price
-LoanAmount
-
 
 
                         $.ajax({
@@ -3619,7 +3412,7 @@ LoanAmount
                                 uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
                                 EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
                                 RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,Area:Area,Kind:Kind,Countryside:Countryside,
+KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,Area:Area,Countryside:Countryside,
 Person:Person,FloorNumber:FloorNumber,HasHeir:HasHeir,HasSingleDocument:HasSingleDocument,Infrastructure:Infrastructure,price:price,LoanAmount:LoanAmount
                             },
                             contentType: "text/plain",
@@ -3648,7 +3441,6 @@ Person:Person,FloorNumber:FloorNumber,HasHeir:HasHeir,HasSingleDocument:HasSingl
 
                         var Area = $("#Area").val();
                         var RoomNumber = $("#RoomNumber").val();
-                        var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
                         var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
                         var Person = $('input[type=radio][name=Person]:checked').attr('value');
 
@@ -3696,37 +3488,6 @@ Person:Person,FloorNumber:FloorNumber,HasHeir:HasHeir,HasSingleDocument:HasSingl
 
 
 
-KindDepositPrice
-DepositPrice
-KindRentPrice
-RentPrice
-Area
-RoomNumber
-Kind
-Countryside
-Person
-YearCreated
-FloorNumber
-KindBottom
-KindHeating
-HasParking
-HasElevator
-HasIranianService
-HasForeignService
-HasBalcony
-HasPool
-HasUnderground
-HasYard
-HasSauna
-HasJacuzzi
-HasSleepMaster
-HasRoofGarden
-HasChiller
-HasBarbecue
-HasAltar
-HasLobby
-HasBabyPlayground
-HasGym
 
 
 
@@ -3739,8 +3500,7 @@ HasGym
                                 uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
                                 EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
                                 RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindDepositPrice:KindDepositPrice,DepositPrice:DepositPrice,KindRentPrice:KindRentPrice,RentPrice:RentPrice,Area:Area,RoomNumber:RoomNumber,
-Kind:Kind,Countryside:Countryside,Person:Person,YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeating:KindHeating,
+KindDepositPrice:KindDepositPrice,DepositPrice:DepositPrice,KindRentPrice:KindRentPrice,RentPrice:RentPrice,Area:Area,RoomNumber:RoomNumber,Countryside:Countryside,Person:Person,YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeating:KindHeating,
                    HasParking: HasParking, HasElevator: HasElevator, HasIranianService: HasIranianService, HasForeignService: HasForeignService,
                                     HasBalcony: HasBalcony, HasPool: HasPool, HasUnderground: HasUnderground, HasYard: HasYard, HasSauna: HasSauna, HasJacuzzi: HasJacuzzi,
                                     HasSleepMaster: HasSleepMaster, HasRoofGarden: HasRoofGarden, HasChiller: HasChiller, HasBarbecue: HasBarbecue,
@@ -3770,7 +3530,6 @@ Kind:Kind,Countryside:Countryside,Person:Person,YearCreated:YearCreated,FloorNum
 
                         var Area = $("#Area").val();
                         var RoomNumber = $("#RoomNumber").val();
-                        var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
                         var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
                         var Person = $('input[type=radio][name=Person]:checked').attr('value');
                         var AdminDoc = $('input[type=radio][name=AdminDoc]:checked').attr('value');
@@ -3827,45 +3586,6 @@ Kind:Kind,Countryside:Countryside,Person:Person,YearCreated:YearCreated,FloorNum
 
 
 
-KindTotalPrice
-TotalPrice
-Area
-RoomNumber
-Kind
-Countryside
-Person
-AdminDoc
-YearCreated
-FloorNumber
-KindBottom
-KindHeating
-HasParking
-HasElevator
-HasIranianService
-HasForeignService
-HasBalcony
-HasPool
-HasUnderground
-HasYard
-HasSauna
-HasJacuzzi
-HasSleepMaster
-HasRoofGarden
-HasChiller
-HasBarbecue
-HasAltar
-HasLobby
-HasBabyPlayground
-HasGym
-   HasHeir
-HasSingleDocument
-Infrastructure
-price
-LoanAmount
-
-
-
-
 
 
 
@@ -3879,7 +3599,7 @@ LoanAmount
                                 uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
                                 EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
                                 RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,Area:Area,RoomNumber:RoomNumber,Kind:Kind,Countryside:Countryside,Person:Person,AdminDoc:AdminDoc,
+KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,Area:Area,RoomNumber:RoomNumber,Countryside:Countryside,Person:Person,AdminDoc:AdminDoc,
 YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeating:KindHeating,
                    HasParking: HasParking, HasElevator: HasElevator, HasIranianService: HasIranianService, HasForeignService: HasForeignService,
                                     HasBalcony: HasBalcony, HasPool: HasPool, HasUnderground: HasUnderground, HasYard: HasYard, HasSauna: HasSauna, HasJacuzzi: HasJacuzzi,
@@ -3915,7 +3635,6 @@ YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeatin
 
                         var Area = $("#Area").val();
                         var RoomNumber = $("#RoomNumber").val();
-                        var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
                         var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
                         var Person = $('input[type=radio][name=Person]:checked').attr('value');
                         var AdminDoc = $('input[type=radio][name=AdminDoc]:checked').attr('value');
@@ -3964,44 +3683,6 @@ YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeatin
 
 
 
-KindDepositPrice
-DepositPrice
-KindRentPrice
-RentPrice
-Area
-RoomNumber
-Kind
-Countryside
-Person
-AdminDoc
-YearCreated
-FloorNumber
-KindBottom
-KindHeating
-
-HasParking
-HasElevator
-HasIranianService
-HasForeignService
-HasBalcony: HasBalcony
-HasPool: HasPool,
-HasUnderground: HasUnderground,
-HasYard: HasYard,
-HasSauna
-HasJacuzzi
-HasSleepMaster
-HasRoofGarden
-HasChiller
-HasBarbecue
-HasAltar
-HasLobby
-HasBabyPlayground
-HasGym
-
-
-
-
-
 
 
                         $.ajax({
@@ -4013,7 +3694,7 @@ HasGym
                                 EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
                                 RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
 KindDepositPrice:KindDepositPrice,DepositPrice:DepositPrice,KindRentPrice:KindRentPrice,RentPrice:RentPrice,
-Area:Area,RoomNumber:RoomNumber,Kind:Kind,Countryside:Countryside,Person:Person,AdminDoc:AdminDoc,
+Area:Area,RoomNumber:RoomNumber,Countryside:Countryside,Person:Person,AdminDoc:AdminDoc,
 YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeating:KindHeating,
                    HasParking: HasParking, HasElevator: HasElevator, HasIranianService: HasIranianService, HasForeignService: HasForeignService,
                                     HasBalcony: HasBalcony, HasPool: HasPool, HasUnderground: HasUnderground, HasYard: HasYard, HasSauna: HasSauna, HasJacuzzi: HasJacuzzi,
@@ -4048,7 +3729,7 @@ YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeatin
                                 lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
                                 uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
                                 EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,Person
+                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,Person:Person
 
                             },
                             contentType: "text/plain",
@@ -4080,7 +3761,6 @@ YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeatin
                         var BrandName = $('#Brand-Name').val();
                         var CarFunction = $('#CarFunction').val();
                         var Year = $('#Year').val();
-                        var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
                         var Person = $('input[type=radio][name=Person]:checked').attr('value');
                         var KindCondition = $('#Kind-Condition').val();
                         var KindChassis = $('#Kind-Chassis').val();
@@ -4100,29 +3780,6 @@ YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeatin
                         var HasSound = "";
                         if ($('#HasSound').is(":checked")) { HasSound = true; } else { HasSound = false; }
 
-KindTotalPrice
-TotalPrice
-NumberMonthlyInstallment
-MonthlyInstallment
-BrandName
-CarFunction
-Year
-Kind
-Person
-KindCondition
-KindChassis
-KindDiff
-KindColorOut
-KindColorIn
-KindModelTip
-KindGearbox
-KindFuel
-KindCrash
-KindPelak
-HasSunroof
-HasAlarm
-HasSound
-
 
 
                         $.ajax({
@@ -4134,7 +3791,7 @@ HasSound
                                 EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
                                 RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
 KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,NumberMonthlyInstallment:NumberMonthlyInstallment,MonthlyInstallment:MonthlyInstallment,BrandName:BrandName,CarFunction:CarFunction,
-Year:Year,Kind:Kind,Person:Person,KindCondition:KindCondition,KindChassis:KindChassis,KindDiff:KindDiff,KindColorOut:KindColorOut,KindColorIn:KindColorIn,KindModelTip:KindModelTip,
+Year:Year,Person:Person,KindCondition:KindCondition,KindChassis:KindChassis,KindDiff:KindDiff,KindColorOut:KindColorOut,KindColorIn:KindColorIn,KindModelTip:KindModelTip,
 KindGearbox:KindGearbox,KindFuel:KindFuel,KindCrash:KindCrash,KindPelak:KindPelak,HasSunroof:HasSunroof,HasAlarm:HasAlarm,HasSound:HasSound
                             },
                             contentType: "text/plain",
@@ -4166,7 +3823,6 @@ KindGearbox:KindGearbox,KindFuel:KindFuel,KindCrash:KindCrash,KindPelak:KindPela
                         var BrandName = $('#Brand-Name').val();
                         var CarFunction = $('#CarFunction').val();
                         var Year = $('#Year').val();
-                        var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
                         var Person = $('input[type=radio][name=Person]:checked').attr('value');
                         var KindCondition = $('#Kind-Condition').val();
                         var KindChassis = $('#Kind-Chassis').val();
@@ -4187,30 +3843,6 @@ KindGearbox:KindGearbox,KindFuel:KindFuel,KindCrash:KindCrash,KindPelak:KindPela
                         if ($('#HasSound').is(":checked")) { HasSound = true; } else { HasSound = false; }
 
 
-KindTotalPrice
-TotalPrice
-NumberMonthlyInstallment
-MonthlyInstallment
-BrandName
-CarFunction
-Year
-Kind
-Person
-KindCondition
-KindChassis
-KindDiff
-KindColorOut
-KindColorIn
-KindModelTip
-KindGearbox
-KindFuel
-KindCrash
-KindPelak
-HasSunroof
-HasAlarm
-HasSound
-
-
 
 
                         $.ajax({
@@ -4222,7 +3854,7 @@ HasSound
                                 EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
                                 RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
 KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,NumberMonthlyInstallment:NumberMonthlyInstallment,MonthlyInstallment:MonthlyInstallment,BrandName:BrandName,CarFunction:CarFunction,
-Year:Year,Kind:Kind,Person:Person,KindCondition:KindCondition,KindChassis:KindChassis,KindDiff:KindDiff,KindColorOut:KindColorOut,KindColorIn:KindColorIn,KindModelTip:KindModelTip,
+Year:Year,Person:Person,KindCondition:KindCondition,KindChassis:KindChassis,KindDiff:KindDiff,KindColorOut:KindColorOut,KindColorIn:KindColorIn,KindModelTip:KindModelTip,
 KindGearbox:KindGearbox,KindFuel:KindFuel,KindCrash:KindCrash,KindPelak:KindPelak,HasSunroof:HasSunroof,HasAlarm:HasAlarm,HasSound:HasSound
                             },
                             contentType: "text/plain",
@@ -4254,7 +3886,6 @@ KindGearbox:KindGearbox,KindFuel:KindFuel,KindCrash:KindCrash,KindPelak:KindPela
                         var BrandName = $('#Brand-Name').val();
                         var CarFunction = $('#CarFunction').val();
                         var Year = $('#Year').val();
-                        var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
                         var Person = $('input[type=radio][name=Person]:checked').attr('value');
                         var KindCondition = $('#Kind-Condition').val();
                         var KindColorOut = $('#Kind-ColorOut').val();
@@ -4267,22 +3898,7 @@ KindGearbox:KindGearbox,KindFuel:KindFuel,KindCrash:KindCrash,KindPelak:KindPela
                         if ($('#HasAlarm').is(":checked")) { HasAlarm = true; } else { HasAlarm = false; }
 
 
-KindTotalPrice
-TotalPrice
-NumberMonthlyInstallment
-MonthlyInstallment
-BrandName
-CarFunction
-Year
-Kind
-Person
-KindCondition
-KindColorOut
-KindModelTip
-KindFuel
-KindCrash
-KindPelak
-HasAlarm
+
 
 
                         $.ajax({
@@ -4294,7 +3910,7 @@ HasAlarm
                                 EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
                                 RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
 KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,NumberMonthlyInstallment:NumberMonthlyInstallment,MonthlyInstallment:MonthlyInstallment,BrandName:BrandName,CarFunction:CarFunction,
-Year:Year,Kind:Kind,Person:Person,KindCondition:KindCondition,KindColorOut:KindColorOut,KindModelTip:KindModelTip,KindFuel:KindFuel,KindCrash:KindCrash,KindPelak:KindPelak,HasAlarm:HasAlarm
+Year:Year,Person:Person,KindCondition:KindCondition,KindColorOut:KindColorOut,KindModelTip:KindModelTip,KindFuel:KindFuel,KindCrash:KindCrash,KindPelak:KindPelak,HasAlarm:HasAlarm
                             },
                             contentType: "text/plain",
                             dataType: "json",
@@ -4316,13 +3932,6 @@ Year:Year,Kind:Kind,Person:Person,KindCondition:KindCondition,KindColorOut:KindC
                         if (KindTotalPrice == 2)//مقطوع - تومان
                         { TotalPrice = $('#TotalPrice').val(); }
 
-                        var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
-
-KindTotalPrice
-TotalPrice
-Kind
-
-
 
                         $.ajax({
                             type: "GET",
@@ -4332,7 +3941,7 @@ Kind
                                 uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
                                 EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
                                 RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,Kind:Kind
+KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice
                             },
                             contentType: "text/plain",
                             dataType: "json",
@@ -4357,17 +3966,6 @@ KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,Kind:Kind
                         var BrandName = $('#Brand-Name').val();
                         var KindColor = $('#KindColor').val();
 
-                        var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
-
-KindTotalPrice
-TotalPrice
-BrandName
-KindColor
-Kind
-
-
-
-
 
                         $.ajax({
                             type: "GET",
@@ -4377,7 +3975,7 @@ Kind
                                 uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
                                 EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
                                 RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,BrandName:BrandName,KindColor:KindColor,Kind:Kind
+KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,BrandName:BrandName,KindColor:KindColor
                             },
                             contentType: "text/plain",
                             dataType: "json",
@@ -4403,8 +4001,6 @@ KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,BrandName:BrandName,KindColo
                         var BrandName = $('#Brand-Name').val();
                         var KindColor = $('#KindColor').val();
 
-                        var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
-
                         var KindSizeScreen = $('#KindSizeScreen').val();
                         var KindTouch = $('#KindTouch').val();
                         var MeasureRAM = $('#MeasureRAM').val();
@@ -4422,24 +4018,6 @@ KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,BrandName:BrandName,KindColo
                         if ($('#HasCamera').is(":checked")) { HasCamera = true; } else { HasCamera = false; }
 
 
-KindTotalPrice
-TotalPrice
-BrandName
-KindColor
-Kind
-KindSizeScreen
-KindTouch
-MeasureRAM
-MeasureCPU
-MeasureHard
-MeasureGraphic
-HasAntiWater
-HasUSB3
-HasDVDRW
-HasCamera
-
-
-
 
 
 
@@ -4451,7 +4029,7 @@ HasCamera
                                 uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
                                 EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
                                 RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,BrandName:BrandName,KindColor:KindColor,Kind:Kind,
+KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,BrandName:BrandName,KindColor:KindColor,
 KindSizeScreen:KindSizeScreen,KindTouch:KindTouch,MeasureRAM:MeasureRAM,MeasureCPU:MeasureCPU,MeasureHard:MeasureHard,
 MeasureGraphic:MeasureGraphic,HasAntiWater:HasAntiWater,HasUSB3:HasUSB3,HasDVDRW:HasDVDRW,HasCamera:HasCamera
                             },
@@ -4477,8 +4055,6 @@ MeasureGraphic:MeasureGraphic,HasAntiWater:HasAntiWater,HasUSB3:HasUSB3,HasDVDRW
                         if (KindTotalPrice == 2)//مقطوع - تومان
                         { TotalPrice = $('#TotalPrice').val(); }
 
-                        var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
-
                         var MeasureRAM = $('#MeasureRAM').val();
                         var MeasureCPU = $('#MeasureCPU').val();
                         var MeasureHard = $('#MeasureHard').val();
@@ -4492,18 +4068,6 @@ MeasureGraphic:MeasureGraphic,HasAntiWater:HasAntiWater,HasUSB3:HasUSB3,HasDVDRW
                         if ($('#HasSpeaker').is(":checked")) { HasSpeaker = true; } else { HasSpeaker = false; }
 
 
-KindTotalPrice
-TotalPrice
-Kind
-MeasureRAM
-MeasureCPU
-MeasureHard
-MeasureGraphic
-HasUSB3
-HasDVDRW
-HasSpeaker
-
-
 
                         $.ajax({
                             type: "GET",
@@ -4513,7 +4077,7 @@ HasSpeaker
                                 uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
                                 EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
                                 RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,Kind:Kind,MeasureRAM:MeasureRAM,MeasureCPU:MeasureCPU,MeasureHard:MeasureHard,
+KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,MeasureRAM:MeasureRAM,MeasureCPU:MeasureCPU,MeasureHard:MeasureHard,
 MeasureGraphic:MeasureGraphic,HasUSB3:HasUSB3,HasDVDRW:HasDVDRW,HasSpeaker:HasSpeaker
                             },
                             contentType: "text/plain",
@@ -4538,12 +4102,6 @@ MeasureGraphic:MeasureGraphic,HasUSB3:HasUSB3,HasDVDRW:HasDVDRW,HasSpeaker:HasSp
                         if (KindTotalPrice == 2)//مقطوع - تومان
                         { TotalPrice = $('#TotalPrice').val(); }
 
-                        var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
-
-
-KindTotalPrice
-TotalPrice
-Kind
 
 
 
@@ -4556,7 +4114,7 @@ Kind
                                 uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
                                 EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
                                 RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,Kind:Kind
+KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice
                             },
                             contentType: "text/plain",
                             dataType: "json",
@@ -4578,12 +4136,6 @@ KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,Kind:Kind
                         if (KindTotalPrice == 2)//مقطوع - تومان
                         { TotalPrice = $('#TotalPrice').val(); }
 
-                        var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
-
-KindTotalPrice
-TotalPrice
-Kind
-
 
 
                         $.ajax({
@@ -4594,7 +4146,7 @@ Kind
                                 uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
                                 EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
                                 RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,Kind:Kind
+KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice
                             },
                             contentType: "text/plain",
                             dataType: "json",
@@ -4612,9 +4164,6 @@ KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,Kind:Kind
                         //CaseSixteen
 
 
-                        var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
-
-
 
                         $.ajax({
                             type: "GET",
@@ -4623,7 +4172,7 @@ KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,Kind:Kind
                                 lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
                                 uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
                                 EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,Kind
+                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi
 
                                },
                             contentType: "text/plain",

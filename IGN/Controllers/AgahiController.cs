@@ -299,6 +299,18 @@ namespace IGN.Controllers
 
         //Internal
 
+        public int KindTotalPrice { get; set; }
+        public int TotalPrice { get; set; }
+        public int Area { get; set; }
+        public int Countryside { get; set; }
+        public int Person { get; set; }
+        public int FloorNumber { get; set; }
+        public bool HasHeir { get; set; }
+        public bool HasSingleDocument { get; set; }
+        public int Infrastructure { get; set; }
+        public int price { get; set; }
+        public int LoanAmount { get; set; }
+
     }
 
     public class CaseThrees
@@ -333,6 +345,36 @@ namespace IGN.Controllers
 
         //Internal
 
+        public int KindDepositPrice { get; set; }
+        public int DepositPrice { get; set; }
+        public int KindRentPrice { get; set; }
+        public int RentPrice { get; set; }
+        public int Area { get; set; }
+        public int RoomNumber { get; set; }
+        public int Countryside { get; set; }
+        public int Person { get; set; }
+        public int YearCreated { get; set; }
+        public int FloorNumber { get; set; }
+        public int KindBottom { get; set; }
+        public int KindHeating { get; set; }
+        public bool HasParking { get; set; }
+        public bool HasElevator { get; set; }
+        public bool HasIranianService { get; set; }
+        public bool HasForeignService { get; set; }
+        public bool HasBalcony { get; set; }
+        public bool HasPool { get; set; }
+        public bool HasUnderground { get; set; }
+        public bool HasYard { get; set; }
+        public bool HasSauna { get; set; }
+        public bool HasJacuzzi { get; set; }
+        public bool HasSleepMaster { get; set; }
+        public bool HasRoofGarden { get; set; }
+        public bool HasChiller { get; set; }
+        public bool HasBarbecue { get; set; }
+        public bool HasAltar { get; set; }
+        public bool HasLobby { get; set; }
+        public bool HasBabyPlayground { get; set; }
+        public bool HasGym { get; set; }
     }
 
     public class CaseFourhs
@@ -366,6 +408,44 @@ namespace IGN.Controllers
         public int SpecialAgahi { get; set; }
 
         //Internal
+
+        public int KindTotalPrice { get; set; }
+        public int TotalPrice { get; set; }
+        public int Area { get; set; }
+        public int RoomNumber { get; set; }
+        public int Countryside { get; set; }
+        public int Person { get; set; }
+        public int AdminDoc { get; set; }
+        public int YearCreated { get; set; }
+        public int FloorNumber { get; set; }
+        public int KindBottom { get; set; }
+        public int KindHeating { get; set; }
+        public bool HasParking { get; set; }
+        public bool HasElevator { get; set; }
+        public bool HasIranianService { get; set; }
+        public bool HasForeignService { get; set; }
+        public bool HasBalcony { get; set; }
+        public bool HasPool { get; set; }
+        public bool HasUnderground { get; set; }
+        public bool HasYard { get; set; }
+        public bool HasSauna { get; set; }
+        public bool HasJacuzzi { get; set; }
+        public bool HasSleepMaster { get; set; }
+        public bool HasRoofGarden { get; set; }
+        public bool HasChiller { get; set; }
+        public bool HasBarbecue { get; set; }
+        public bool HasAltar { get; set; }
+        public bool HasLobby { get; set; }
+        public bool HasBabyPlayground { get; set; }
+        public bool HasGym { get; set; }
+        public bool HasHeir { get; set; }
+        public bool HasSingleDocument { get; set; }
+        public int Infrastructure { get; set; }
+        public int price { get; set; }
+        public int LoanAmount { get; set; }
+
+
+
 
     }
 
@@ -401,6 +481,42 @@ namespace IGN.Controllers
 
         //Internal
 
+
+        public int KindDepositPrice { get; set; }
+        public int DepositPrice { get; set; }
+        public int KindRentPrice { get; set; }
+        public int RentPrice { get; set; }
+        public int Area { get; set; }
+        public int RoomNumber { get; set; }
+        public int Countryside { get; set; }
+        public int Person { get; set; }
+        public int AdminDoc { get; set; }
+        public int YearCreated { get; set; }
+        public int FloorNumber { get; set; }
+        public int KindBottom { get; set; }
+        public int KindHeating { get; set; }
+        public bool HasParking { get; set; }
+        public bool HasElevator { get; set; }
+        public bool HasIranianService { get; set; }
+        public bool HasForeignService { get; set; }
+        public bool HasBalcony { get; set; }
+        public bool HasPool { get; set; }
+        public bool HasUnderground { get; set; }
+        public bool HasYard { get; set; }
+        public bool HasSauna { get; set; }
+        public bool HasJacuzzi { get; set; }
+        public bool HasSleepMaster { get; set; }
+        public bool HasRoofGarden { get; set; }
+        public bool HasChiller { get; set; }
+        public bool HasBarbecue { get; set; }
+        public bool HasAltar { get; set; }
+        public bool HasLobby { get; set; }
+        public bool HasBabyPlayground { get; set; }
+        public bool HasGym { get; set; }
+
+
+
+
     }
 
     public class CaseSixs
@@ -434,6 +550,10 @@ namespace IGN.Controllers
         public int SpecialAgahi { get; set; }
 
         //Internal
+
+        public int Person { get; set; }
+
+
 
     }
 
@@ -469,6 +589,32 @@ namespace IGN.Controllers
 
         //Internal
 
+
+        public int KindTotalPrice { get; set; }
+        public int TotalPrice { get; set; }
+        public int NumberMonthlyInstallment { get; set; }
+        public int MonthlyInstallment { get; set; }
+        public int BrandName { get; set; }
+        public int CarFunction { get; set; }
+        public int Year { get; set; }
+        public int Person { get; set; }
+        public int KindCondition { get; set; }
+        public int KindChassis { get; set; }
+        public int KindDiff { get; set; }
+        public int KindColorOut { get; set; }
+        public int KindColorIn { get; set; }
+        public int KindModelTip { get; set; }
+        public int KindGearbox { get; set; }
+        public int KindFuel { get; set; }
+        public int KindCrash { get; set; }
+        public int KindPelak { get; set; }
+        public bool HasSunroof { get; set; }
+        public bool HasAlarm { get; set; }
+        public bool HasSound { get; set; }
+
+
+
+
     }
 
     public class CaseEighths
@@ -502,6 +648,31 @@ namespace IGN.Controllers
         public int SpecialAgahi { get; set; }
 
         //Internal
+
+
+        public int KindTotalPrice { get; set; }
+        public int TotalPrice { get; set; }
+        public int NumberMonthlyInstallment { get; set; }
+        public int MonthlyInstallment { get; set; }
+        public int BrandName { get; set; }
+        public int CarFunction { get; set; }
+        public int Year { get; set; }
+        public int Person { get; set; }
+        public int KindCondition { get; set; }
+        public int KindChassis { get; set; }
+        public int KindDiff { get; set; }
+        public int KindColorOut { get; set; }
+        public int KindColorIn { get; set; }
+        public int KindModelTip { get; set; }
+        public int KindGearbox { get; set; }
+        public int KindFuel { get; set; }
+        public int KindCrash { get; set; }
+        public int KindPelak { get; set; }
+        public bool HasSunroof { get; set; }
+        public bool HasAlarm { get; set; }
+        public bool HasSound { get; set; }
+
+
 
     }
 
@@ -537,6 +708,22 @@ namespace IGN.Controllers
 
         //Internal
 
+        public int KindTotalPrice { get; set; }
+        public int TotalPrice { get; set; }
+        public int NumberMonthlyInstallment { get; set; }
+        public int MonthlyInstallment { get; set; }
+        public int BrandName { get; set; }
+        public int CarFunction { get; set; }
+        public int Year { get; set; }
+        public int Person { get; set; }
+        public int KindCondition { get; set; }
+        public int KindColorOut { get; set; }
+        public int KindModelTip { get; set; }
+        public int KindFuel { get; set; }
+        public int KindCrash { get; set; }
+        public int KindPelak { get; set; }
+        public bool HasAlarm { get; set; }
+
     }
 
     public class CaseTens
@@ -570,6 +757,8 @@ namespace IGN.Controllers
         public int SpecialAgahi { get; set; }
 
         //Internal
+        public int KindTotalPrice { get; set; }
+        public int TotalPrice { get; set; }
 
     }
 
@@ -605,6 +794,12 @@ namespace IGN.Controllers
 
         //Internal
 
+        public int KindTotalPrice { get; set; }
+        public int TotalPrice { get; set; }
+        public int BrandName { get; set; }
+        public int KindColor { get; set; }
+
+
     }
 
     public class CaseTwelves
@@ -638,6 +833,24 @@ namespace IGN.Controllers
         public int SpecialAgahi { get; set; }
 
         //Internal
+
+
+        public int KindTotalPrice { get; set; }
+        public int TotalPrice { get; set; }
+        public int BrandName { get; set; }
+        public int KindColor { get; set; }
+        public int KindSizeScreen { get; set; }
+        public int KindTouch { get; set; }
+        public int MeasureRAM { get; set; }
+        public int MeasureCPU { get; set; }
+        public int MeasureHard { get; set; }
+        public int MeasureGraphic { get; set; }
+        public bool HasAntiWater { get; set; }
+        public bool HasUSB3 { get; set; }
+        public bool HasDVDRW { get; set; }
+        public bool HasCamera { get; set; }
+
+
 
     }
 
@@ -673,6 +886,18 @@ namespace IGN.Controllers
 
         //Internal
 
+
+        public int KindTotalPrice { get; set; }
+        public int TotalPrice { get; set; }
+        public int MeasureRAM { get; set; }
+        public int MeasureCPU { get; set; }
+        public int MeasureHard { get; set; }
+        public int MeasureGraphic { get; set; }
+        public bool HasUSB3 { get; set; }
+        public bool HasDVDRW { get; set; }
+        public bool HasSpeaker { get; set; }
+
+
     }
 
     public class CaseFourteens
@@ -706,6 +931,10 @@ namespace IGN.Controllers
         public int SpecialAgahi { get; set; }
 
         //Internal
+
+        public int KindTotalPrice { get; set; }
+        public int TotalPrice { get; set; }
+
 
     }
 
@@ -741,6 +970,9 @@ namespace IGN.Controllers
 
         //Internal
 
+        public int KindTotalPrice { get; set; }
+        public int TotalPrice { get; set; }
+
     }
 
     public class CaseSixteens
@@ -774,7 +1006,6 @@ namespace IGN.Controllers
         public int SpecialAgahi { get; set; }
 
         //Internal
-
     }
 
 
