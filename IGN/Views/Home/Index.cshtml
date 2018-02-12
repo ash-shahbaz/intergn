@@ -1092,7 +1092,7 @@
                                             @*اخبار ورزشی*@
 
                                             @{
-
+                                                
                                                 foreach (var item in Utility.lstNewsItem.Where(p => p.CategoryID == 1))
                                                 {
                                                     <li><div class="item clearfix"><div class="row"><div class="col-md-3 col-xs-3 col-sm-3 no-padding"><ul class="SourceNews"><li>@item.RegisterDate</li></ul></div><div class="col-md-9 col-xs-9 col-sm-9  no-padding"><div><div class="boxin-right"><span class="fa fa-angle-double-left HomeBoxes" aria-hidden="true"></span></div><h1 class="titleNews"><a href="/Khabar/خبر/ورزشی/@item.NewsID/@item.Title" target="_blank">@item.Title</a></h1></div></div></div></div></li>
