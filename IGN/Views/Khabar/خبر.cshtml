@@ -245,8 +245,8 @@
       //  window.history.pushState("object or string", "Title", "/test" );
         function BindingNewsById(NewsID) {
 
-            $.getJSON("http://192.168.1.10:13311/api/tblNews/" + NewsID + "", function (result) {
-
+            $.getJSON("http://192.168.1.10:18113/api/tblNews/" + NewsID + "", function (result) {
+                alert(NewsID)
 
                 var q = result[0].Link.substring(0, 9);
                 var url  = ""
