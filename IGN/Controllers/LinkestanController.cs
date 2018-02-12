@@ -91,7 +91,7 @@ namespace IGN.Controllers
 
                 using (var client = new HttpClient())
                 {
-                    client.BaseAddress = new Uri("http://192.168.1.10:13311/api/tblLinkestans/PosttblLinkestan");
+                    client.BaseAddress = new Uri(""+ Utility.HostAgahi + "/api/tblLinkestans/PosttblLinkestan");
 
                     //HTTP POST
                     var postTask = client.PostAsJsonAsync<Linkestan>("Linkestan", collection);

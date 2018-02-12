@@ -1,6 +1,7 @@
 ﻿using IGN.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Timers;
 using System.Web;
@@ -15,6 +16,8 @@ namespace IGN
         private static Timer UpdateNewsTimer;
         protected void Application_Start()
         {
+            Utility.HostAgahi = ConfigurationManager.AppSettings["AgahiHostID"];
+            Utility.HostNews = ConfigurationManager.AppSettings["NewsHostID"];
 
             Utility.lstNewsItem = Utility.GetAllNews();
             Utility.lstCategory= Utility.GetAllCategroyFromDB();
@@ -22,6 +25,7 @@ namespace IGN
             Utility.lstProvinces = Utility. GetProvince();
             Utility.lstCities = Utility.GetAllCity();
             Utility.lstRegions = Utility.GetAllRegions();
+          
 
 
             Utility.SyncTags();

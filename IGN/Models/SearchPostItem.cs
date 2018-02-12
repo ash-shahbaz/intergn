@@ -14,7 +14,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri(Utility.HostAgahi);
                 var response = client.PostAsJsonAsync("api/Search", s).Result;
                 if (response.IsSuccessStatusCode)
                 {
@@ -31,7 +31,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {  
-                    client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                    client.BaseAddress = new Uri(Utility.HostAgahi);
                     var response = client.PostAsJsonAsync("api/Search", s).Result;
                     if (response.IsSuccessStatusCode)
                     {

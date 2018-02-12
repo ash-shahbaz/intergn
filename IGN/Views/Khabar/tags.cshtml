@@ -1,4 +1,4 @@
-﻿
+﻿@using IGN.Models
 @{
     ViewBag.Title = "tags";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -440,7 +440,7 @@
 
             var TagSer = "@ViewBag.TagName";
             var CGetID = "@ViewBag.CID";
-            
+
             if (CGetID != "" && CGetID != null) {
 
                 //$("#ch" + CGetID).off().on(
@@ -488,7 +488,7 @@
             function Get50TopNews(number, status, CID) {
                 if (status == false) {
                                         $("#Top50NewsTag").empty();
-                                        var url = "http://192.168.1.10:18113/api/tblHashTags/GetTop50NewsByTag-@ViewBag.TagName-1-";
+                                        var url = "@Utility.HostNews/api/tblHashTags/GetTop50NewsByTag-@ViewBag.TagName-1-";
                                         var page = number;
                                         var combindUrl = url + page;
 
@@ -521,7 +521,7 @@
                 }
                 else {
                 $("#Top50NewsTag").empty();
-                var url = "http://192.168.1.10:18113/api/tblHashTags/GetTop50NewsByTagWithCategory-" + CGetID + "-" +"@ViewBag.TagName-1-";
+                var url = "@Utility.HostNews/api/tblHashTags/GetTop50NewsByTagWithCategory-" + CGetID + "-" +"@ViewBag.TagName-1-";
                                 var page = number;
                                 var combindUrl = url + page;
 
@@ -564,7 +564,7 @@
 
                  $.ajax({
                      type: "GET",
-                     url: "http://192.168.1.10:18113/api/Pageination/Tag-@ViewBag.TagName",
+                     url: "@Utility.HostNews/api/Pageination/Tag-@ViewBag.TagName",
                      success: function (data) {
 
                          $("#CountTagSerached").html(data + "خبر");
@@ -633,7 +633,7 @@
 
                  $.ajax({
                      type: "GET",
-                     url: "http://192.168.1.10:18113/api/Pageination/TagInCatgeory- " + CID + "-" + "@ViewBag.TagName" +  "",
+                     url: "@Utility.HostNews/api/Pageination/TagInCatgeory- " + CID + "-" + "@ViewBag.TagName" +  "",
                      success: function (data) {
                          $("#CountTagSerached").html(data + "خبر");
 
@@ -706,7 +706,7 @@
 
             console.log(GetName + CID + status);
             if (status == false) {
-                $.getJSON("http://192.168.1.10:18113/api/tblNews/SearchedKeyGetCount-" + GetName + "-Day", function (result) {
+                $.getJSON("@Utility.HostNews/api/tblNews/SearchedKeyGetCount-" + GetName + "-Day", function (result) {
 
 
 
@@ -749,7 +749,7 @@
 
                 });
             } else {
-                $.getJSON("http://192.168.1.10:18113/api/tblNews/SearchedKeyGetCountCategory-" + GetName + "-" + CID + "-Day", function (result) {
+                $.getJSON("@Utility.HostNews/api/tblNews/SearchedKeyGetCountCategory-" + GetName + "-" + CID + "-Day", function (result) {
 
                     var DateCharts = [];
                     var i = 0;

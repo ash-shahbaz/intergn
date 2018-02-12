@@ -10,6 +10,7 @@ using Newtonsoft.Json.Linq;
 using System.Text;
 using System.Security.Cryptography;
 using System.IO;
+using System.Configuration;
 
 namespace IGN.Models
 {
@@ -32,10 +33,11 @@ namespace IGN.Models
         public static List<tblAgahi> lstAgahi = new List<tblAgahi>();
         public static List<tblCity> lstCities = new List<tblCity>();
         public static List<tblRegions> lstRegions = new List<tblRegions>();
+        public static string HostAgahi;
+        public static string HostNews;
 
 
-
-
+        
 
 
         public static string CallApiGetResultCheckUser(string username, string pass)
@@ -43,7 +45,7 @@ namespace IGN.Models
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri(Utility.HostAgahi);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/users/" + username + "-" + pass + "").Result;
@@ -90,7 +92,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri(Utility.HostAgahi);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/Regions").Result;
@@ -124,7 +126,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri(Utility.HostAgahi);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/Cities").Result;
@@ -170,7 +172,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri(Utility.HostAgahi);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/Agahis").Result;
@@ -206,7 +208,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:18113");
+                client.BaseAddress = new Uri(Utility.HostNews);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("/api/tblNews/All-1").Result;
@@ -234,7 +236,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:18113");
+                client.BaseAddress = new Uri(Utility.HostNews);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/tblCategories").Result;
@@ -263,7 +265,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:18113");
+                client.BaseAddress = new Uri(Utility.HostNews);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/tblHashTags/GetTagTop10DWMY-" + whichType + "").Result;
@@ -297,7 +299,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:18113");
+                client.BaseAddress = new Uri(Utility.HostNews);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/Categories/1-" + categoryName + "-$1").Result;
@@ -330,7 +332,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:18113");
+                client.BaseAddress = new Uri(Utility.HostNews);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/GettblNews/" + NewsID).Result;
@@ -362,7 +364,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:18113");
+                client.BaseAddress = new Uri(Utility.HostNews);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/Categories/1-" + CID + "-" + PageID + "").Result;
@@ -396,7 +398,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:18113");
+                client.BaseAddress = new Uri(Utility.HostNews);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/tblLinkestans/All-1").Result;
@@ -431,7 +433,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri(Utility.HostAgahi);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/AgahiCategories").Result;
@@ -467,7 +469,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri(Utility.HostAgahi);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/Provinces").Result;
@@ -501,7 +503,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri(Utility.HostAgahi);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/Cities/"+ ProvinceID + "").Result;
@@ -536,7 +538,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri(Utility.HostAgahi);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/tblPriceTypes").Result;
@@ -564,7 +566,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri(Utility.HostAgahi);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/Regions/" + CityID + "").Result;
@@ -597,7 +599,7 @@ namespace IGN.Models
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri(Utility.HostAgahi);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/tblRegions/" + RegionID + "").Result;
@@ -634,7 +636,7 @@ namespace IGN.Models
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://192.168.1.10:13311");
+                client.BaseAddress = new Uri(Utility.HostAgahi);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
                 var response = client.GetAsync("api/tblAgahi/" + ta + "").Result;
