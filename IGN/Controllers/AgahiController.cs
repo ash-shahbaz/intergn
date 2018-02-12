@@ -95,6 +95,51 @@ namespace IGN.Controllers
         }
 
 
+
+        [ActionName("جستجو-اطراف-من")]
+        public ActionResult جستجو_اطراف_من(string name, string id1, string id2, string id3)
+        {
+
+            if (name != "" && name != null)
+            {
+                var qGetProvince = Utility.lstProvinces.Where(p => p.ProvinceName == name).FirstOrDefault();
+                Utility.PrivinceID = qGetProvince.ProvinceID;
+
+                Utility.CityName = name;
+
+                if (id1 == null && id2 == null && id3 == null)
+                {
+                    ViewBag.AllStatus = true;
+
+                }
+                else if (id1 != null && id2 != null && id3 == null)
+                {
+                    ViewBag.Level1 = id1;
+                    ViewBag.Level2 = id2;
+                    ViewBag.Level3 = null;
+
+                }
+                else
+                {
+                    ViewBag.Level1 = id1;
+                    ViewBag.Level2 = id2;
+                    ViewBag.Level3 = id3;
+                }
+
+
+            }
+            else
+            {
+                ViewBag.AllStatus = false;
+                Utility.PrivinceID = 8;
+            }
+
+
+            return View();
+        }
+
+
+
         public JsonResult RegisterSaleApartSub(RegisterSaleApartSubs item)
         {
 

@@ -15,7 +15,7 @@
 
 
     <link href="~/css/chosen.min.css" rel="stylesheet" />
-
+    <link href="~/css/leaflet.css" rel="stylesheet" />
 
 }
 
@@ -29,10 +29,10 @@
             <div class="row margin-bottom-10">
 
                 <div class="col-md-2 search-col ">
-                    
-                    <a id="ShowMap" href="../Agahi/جستجو-اطراف-من" class="btn btn-info btn-lg btnchoose float-left">نمایش روی نقشه</a>
 
-                    
+                    <a id="ShowMap" href="../Agahi/جستجو" class="btn btn-info btn-lg btnchoose float-left">نمایش استاندارد</a>
+
+
                 </div>
 
                 <div class="col-md-2  ">
@@ -269,6 +269,14 @@
 
 
                     <div class="padding-top-15">
+
+
+                        <div class="row ">
+                            <div class="col-md-12">
+                                <div class="LocationStyle " id="map"></div>
+                            </div>
+                        </div>
+
 
 
                         <div id="products" class="row list-group">
@@ -1143,6 +1151,7 @@
 @section Script
     {
 
+    <script src="~/js/leaflet.js"></script>
     <script src="~/js/hierarchy-select.min.js"></script>
 
     <script src="~/js/chosen.jquery.min.js"></script>
@@ -1150,8 +1159,31 @@
     <script>
 
 
-   
-        
+        $(document).ready(function () {
+
+            var map = L.map('map').setView([35.71, 51.40], 12);
+
+            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            L.marker([35.75, 51.43]).addTo(map)
+                .bindPopup('پراید<br> مدل 95')
+                .openPopup();
+
+            L.marker([35.71, 51.40]).addTo(map)
+                .bindPopup('خودرو بنز<br> مدل 94')
+                .openPopup();
+
+            L.marker([35.65, 51.35]).addTo(map)
+                .bindPopup('پراید<br> مدل 95')
+                .openPopup();
+
+
+
+
+
+        });
 
 
 
@@ -1528,7 +1560,7 @@
             { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
             var UntillArea = $('#Untill-Area').val();
             var FromArea = $('#From-Area').val();
-           
+
 
 
 
@@ -1583,9 +1615,9 @@
             var Person = $('input[type=radio][name=Person]:checked').attr('value');
             var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
 
-            
-            
-            
+
+
+
             $.ajax({
                 type: "GET",
                 url: "/Search/SearchRentHome",
@@ -1690,7 +1722,7 @@
             var Person = $('input[type=radio][name=Person]:checked').attr('value');
             var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
 
-            
+
 
             $.ajax({
                 type: "GET",
@@ -1732,7 +1764,7 @@
             //Internal
             var Person = $('input[type=radio][name=Person]:checked').attr('value');
 
-            
+
 
             $.ajax({
                 type: "GET",
@@ -1830,7 +1862,7 @@
             var HasLoan = "";
             if ($('#HasLoan').is(":checked")) { HasLoan = true; } else { HasLoan = false; }
 
-            
+
 
 
             $.ajax({
@@ -1896,7 +1928,7 @@
             if ($('#HasSingleDocument').is(":checked")) { HasSingleDocument = true; } else { HasSingleDocument = false; }
             var HasLoan = "";
             if ($('#HasLoan').is(":checked")) { HasLoan = true; } else { HasLoan = false; }
-            
+
 
             $.ajax({
                 type: "GET",
@@ -1991,7 +2023,7 @@
             if ($('#HasBabyPlayground').is(":checked")) { HasBabyPlayground = true; } else { HasBabyPlayground = false; }
             var HasGym = "";
             if ($('#HasGym').is(":checked")) { HasGym = true; } else { HasGym = false; }
-            
+
 
             $.ajax({
                 type: "GET",
@@ -2039,7 +2071,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var RoomNumber = $('#RoomNumber').val();            
+            var RoomNumber = $('#RoomNumber').val();
             var KindTotalPrice = $("#Kind-TotalPrice").val();
             var UntillTotalPrice = "";
             var FromTotalPrice = "";
@@ -2103,8 +2135,8 @@
             var HasLoan = "";
             if ($('#HasLoan').is(":checked")) { HasLoan = true; } else { HasLoan = false; }
 
-            
-            
+
+
             $.ajax({
                 type: "GET",
                 url: "/Search/SearchSaleOfficeSub",
@@ -2208,7 +2240,7 @@
             var HasGym = "";
             if ($('#HasGym').is(":checked")) { HasGym = true; } else { HasGym = false; }
 
-            
+
 
             $.ajax({
                 type: "GET",
@@ -2254,7 +2286,7 @@
             var Person = $('input[type=radio][name=Person]:checked').attr('value');
 
 
-            
+
 
 
 
@@ -2292,8 +2324,8 @@
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
             var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
-            
-            
+
+
 
             $.ajax({
                 type: "GET",
@@ -2375,7 +2407,7 @@
             var FromTotalPrice = "";
             if (KindTotalPrice == 2)//مقطوع - تومان
             { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
-            
+
 
 
             $.ajax({
@@ -2419,7 +2451,7 @@
             { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
             var KindColor = $("#KindColor").val();
             var KindBrand = $("#KindBrand").val();
-            
+
             $.ajax({
                 type: "GET",
                 url: "/Search/SearchMobileTablet",
@@ -2477,7 +2509,7 @@
             var HasCamera = "";
             if ($('#HasCamera').is(":checked")) { HasCamera = true; } else { HasCamera = false; }
 
-            
+
             $.ajax({
                 type: "GET",
                 url: "/Search/SearchLapTop",
@@ -2532,8 +2564,8 @@
             if ($('#HasSpeaker').is(":checked")) { HasSpeaker = true; } else { HasSpeaker = false; }
 
 
-              
-            
+
+
             $.ajax({
                 type: "GET",
                 url: "/Search/SearchCase",
@@ -2580,9 +2612,9 @@
             var FromTotalPrice = "";
             if (KindTotalPrice == 2)//مقطوع - تومان
             { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
-            
 
-            
+
+
 
 
 
@@ -2626,8 +2658,8 @@
             var FromTotalPrice = "";
             if (KindTotalPrice == 2)//مقطوع - تومان
             { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
-            
-            
+
+
             $.ajax({
                 type: "GET",
                 url: "/Search/SearchCarBoatAcc",
@@ -2765,7 +2797,7 @@
             var HasSound = "";
             if ($('#HasSound').is(":checked")) { HasSound = true; } else { HasSound = false; }
 
-            
+
 
             $.ajax({
                 type: "GET",
@@ -2814,7 +2846,7 @@
 
 
 
-            
+
             $.ajax({
                 type: "GET",
                 url: "/Search/SearchVehicleAccessories",
@@ -2871,9 +2903,9 @@
             var KindPelak = $('#Kind-Pelak').val();
             var HasAlarm = "";
             if ($('#HasAlarm').is(":checked")) { HasAlarm = true; } else { HasAlarm = false; }
-            
 
-            
+
+
 
             $.ajax({
                 type: "GET",
@@ -2919,7 +2951,7 @@
             if (KindTotalPrice == 2)//مقطوع - تومان
             { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
 
-            
+
 
 
             $.ajax({
@@ -2962,7 +2994,7 @@
             if (KindTotalPrice == 2)//مقطوع - تومان
             { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
 
-            
+
             $.ajax({
                 type: "GET",
                 url: "/Search/SearchBoatsAccessories",

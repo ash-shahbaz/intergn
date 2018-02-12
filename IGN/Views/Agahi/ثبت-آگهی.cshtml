@@ -103,7 +103,7 @@
                                                                 @{
                                                                     foreach (var item in Utility.lstProvinces)
                                                                     {
-                                                                        <option value="@item.ProvinceName" value="@item.ProvinceID">@item.ProvinceName</option>
+                                                                        <option  value="@item.ProvinceID">@item.ProvinceName</option>
                                                                     }
 
                                                                 }
@@ -2878,7 +2878,7 @@
 
                                                                     }
 
-                                                                    else if (ViewBag.lvl0 == "لوازم خانگی" || ViewBag.lvl0 != "لوازم شخصی" || ViewBag.lvl0 != "سرگرمی و فراغت" || ViewBag.lvl0 != "کسب و کار")
+                                                                    else if (ViewBag.lvl0 == "لوازم خانگی" || ViewBag.lvl0 == "لوازم شخصی" || ViewBag.lvl0 == "سرگرمی و فراغت" || ViewBag.lvl0 == "کسب و کار")
                                                                     {
                                 <!-- -----//RegisterPersonalEntertainment---شروع - لوازم خانگی و لوازم شخصی و سرگرمی و فراغت و کسب و کار  - تمام زیر مجموعه ها-------- -->
 
@@ -3280,7 +3280,7 @@
                     var lv0 = "@ViewBag.lvl0";
                     var lv1 = "@ViewBag.lvl1" ;
                     var lv2 = ""
-                    if (@ViewBag.lvl2 != null) { lv2 = "@ViewBag.lvl2"; }
+                    if ("@ViewBag.lvl2" != null) { lv2 = "@ViewBag.lvl2"; }
 
                     var Country = $(".Province option:selected").val();
                     var City = $(".City option:selected").val();
