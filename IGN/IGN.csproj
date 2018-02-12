@@ -277,6 +277,11 @@
     <Content Include="js\custom.js" />
     <Content Include="js\hierarchy-select.min.js" />
     <Content Include="js\imagesloaded.js" />
+    <Content Include="js\images\layers-2x.png" />
+    <Content Include="js\images\layers.png" />
+    <Content Include="js\images\marker-icon-2x.png" />
+    <Content Include="js\images\marker-icon.png" />
+    <Content Include="js\images\marker-shadow.png" />
     <Content Include="js\jquery-ui.min.js" />
     <Content Include="js\jquery.carousel-6.2.1.js" />
     <Content Include="js\jquery.flexslider.js" />

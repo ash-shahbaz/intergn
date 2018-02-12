@@ -36,7 +36,7 @@ namespace IGN.Controllers
         public ActionResult جزئیات_آگهی(string name)
         {
 
-            string s = Utility.CreateMD5(name);
+            //string s = Utility.CreateMD5(name);
 
             //string sd = Utility.Encrypt(name);
             //string rd = Utility.Decrypt(sd);
