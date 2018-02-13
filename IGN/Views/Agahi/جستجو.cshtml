@@ -30,7 +30,7 @@
 
                 <div class="col-md-2 search-col ">
                     
-                    <a id="ShowMap" href="../Agahi/جستجو-اطراف-من" class="btn btn-info btn-lg btnchoose float-left">نمایش روی نقشه</a>
+                    <a id="ShowMap" href="../Agahi/جستجو-اطراف-من" class="btn btn-info float-left">نمایش روی نقشه</a>
 
                     
                 </div>
@@ -38,7 +38,7 @@
                 <div class="col-md-2  ">
                     <div id="sel-cont">
 
-                        <select data-placeholder="محله را انتخاب کنید ..." multiple class="mahale-select width-100Per"></select>
+                        <select data-placeholder="همه محله ها" multiple class="mahale-select width-100Per"></select>
                         <br />
 
                     </div>
@@ -48,7 +48,7 @@
 
                 <div class="col-md-2 ">
 
-                    <select data-placeholder="شهر را انتخاب کنید ..." class="chosen-select ShahrSelect width-100Per" tabindex="2">
+                    <select data-placeholder="همه شهر ها" class="chosen-select ShahrSelect width-100Per" tabindex="2">
                         <option value=""></option>
 
                         @{   foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
@@ -64,7 +64,7 @@
 
                 <div class="col-md-2  ">
                     <span class=" user-type">
-                        <button type="button" class="btn btn-info btn-lg btnchoose" data-toggle="modal" data-target="#myModal">انتخاب گروه آگهی</button>
+                        <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">انتخاب گروه آگهی</button>
 
                         <!-- Modal -->
                         <div class="modal fade" id="myModal" role="dialog">
@@ -95,7 +95,7 @@
 
                 <div class="col-md-4 ">
                     <input id="SearchInput" class="form-control keyword" name="keyword" value="" placeholder="متن جستجو" type="text">
-                    <i class="fa fa-search"></i>
+                    <i class="fa fa-search SearchInputIco"></i>
 
                 </div>
             </div>
@@ -115,7 +115,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="field-container radio-field">
-                                <label>نوع</label>
+                                <label>نوع آگهی:</label>
                                 <div class="md-radio md-radio-inline">
                                     <input id="Kind-All" type="radio" value="0" name="Kind" checked>
                                     <label for="Kind-All">فرقی نمی کند</label>
