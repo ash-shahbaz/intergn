@@ -2,7 +2,7 @@
 
 
 @{
-    if (ViewBag.lv1 == "وسایل-نقلیه" && ViewBag.lv2 == "خودرو" || ViewBag.lv2 == "موتورسیکلت-و-لوازم-جانبی")
+    if (ViewBag.lv1 == "وسایل-نقلیه" && ViewBag.lv2 == "موتورسیکلت-و-لوازم-جانبی" && ViewBag.lv3 == null)
     {
         <!-- --------شروع خودرو  +و+ موتورسیکلت و لوازم جانبی-------- -->
 
@@ -155,19 +155,170 @@
         </div>
                     <!-- --------پایان خودرو  +و+ موتورسیکلت و لوازم جانبی-------- -->
     }
-
-
-
 }
 
 
+@{
+    if (ViewBag.lv1 == "وسایل-نقلیه"  && ViewBag.lv2 == "خودرو" && ViewBag.lv3 == null)
+    {
+        <!-- --------شروع خودرو  +و+ موتورسیکلت و لوازم جانبی-------- -->
 
+        <div class="row">
+
+
+            <div class="col-md-3">
+                <div class="field-container radio-field">
+                    <label>نوع</label>
+                    <div class="md-radio md-radio-inline">
+                        <input id="Kind-All" type="radio" value="0" name="Kind" checked>
+                        <label for="Kind-All">فرقی نمی کند</label>
+                    </div>
+                    <div class="md-radio md-radio-inline">
+                        <input id="Kind-Sell" type="radio" value="1" name="Kind">
+                        <label for="Kind-Sell">فروشی</label>
+                    </div>
+                    <div class="md-radio md-radio-inline">
+                        <input id="Kind-Need" type="radio" value="2" name="Kind">
+                        <label for="Kind-Need">درخواستی</label>
+                    </div>
+                    <div class="md-radio md-radio-inline">
+                        <input id="Kind-Rent" type="radio" value="3" name="Kind">
+                        <label for="Kind-Rent">اجاره ای</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="field-container int-field">
+                    <label>سال</label>
+                    <div class="row">
+                        <div class="col-md-12 no-padding">
+                            <select id="Untill-Year" data-placeholder="انتخاب کنید" class="select width-100" tabindex="1">
+                                <option value=""></option>
+                                <option value="2">1396</option>
+                                <option value="3">1395</option>
+                                <option value="3">1394</option>
+                                <option value="3">1393</option>
+                                <option value="3">قبل از 1392</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-align-center">
+                            <label>تا</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 no-padding">
+                            <select id="From-Year" data-placeholder="انتخاب کنید" class="select width-100" tabindex="1">
+                                <option value=""></option>
+                                <option value="2">1396</option>
+                                <option value="3">1395</option>
+                                <option value="3">1394</option>
+                                <option value="3">1393</option>
+                                <option value="3">قبل از 1392</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-md-3">
+
+                <div class="field-container int-field">
+                    <label>کارکرد (کیلومتر)</label>
+                    <div class="row">
+                        <div class="col-md-6 no-padding">
+                            <input id="Untill-CarFunction" class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                        </div>
+                        <div class="col-md-6 no-padding">
+                            <input id="From-CarFunction" class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-3">
+
+                <div class="field-container int-field">
+                    <label>قیمت</label>
+                    <div class="row">
+                        <div class="col-md-12 no-padding">
+                            <select id="Kind-TotalPrice" data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
+                                <option value=""></option>
+                                <option value="1">مقطوع - تومان</option>
+                                <option value="1">مجانی</option>
+                                <option value="1">توافقی</option>
+                                <option value="1">جهت معاوضه</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 no-padding">
+                            <input id="Untill-TotalPrice" class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                        </div>
+                        <div class="col-md-6 no-padding">
+                            <input id="From-TotalPrice" class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 search-col">
+                <button id="SearchMotorAccessories" class="btn btn-common btn-search btn-block search-btn"><strong>جستجو</strong></button>
+            </div>
+            <div class="col-md-2">
+                <div class="row margin-top-20">
+                    <div class="col-md-6">
+                        <div class="cntr">
+                            <div class="row ">
+                                <input type="checkbox" id="HasFast" class="cbx hidden" />
+                                <label for="HasFast" class="lbl"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-align-left">
+                        <span>فوری</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="row margin-top-20">
+                    <div class="col-md-6">
+                        <div class="cntr">
+                            <div class="row ">
+                                <input type="checkbox" id="HasImage" class="cbx hidden" />
+                                <label for="HasImage" class="lbl"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-align-left">
+                        <span>عکس دار</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    <!-- --------پایان خودرو  +و+ موتورسیکلت و لوازم جانبی-------- -->
+    }
+}
 
 
 
 @{
 
-    if (ViewBag.lv1 == "وسایل-نقلیه" && ViewBag.lv2 == "قطعات-یدکی-و-لوازم-جانبی-خودرو" || ViewBag.lv2 == "قایق-و-لوازم-جانبی")
+    if (ViewBag.lv1 == "وسایل-نقلیه" && ViewBag.lv2 == "قطعات-یدکی-و-لوازم-جانبی-خودرو" && ViewBag.lv3 == null)
     {
         <!-- --------شروع قطعات یدکی و لوازم جانبی خودرو  +و+  قایق و لوازم جانبی-------- -->
 
@@ -267,8 +418,6 @@
         </div>
                     <!-- --------پایان قطعات یدکی و لوازم جانبی خودرو  +و+  قایق و لوازم جانبی-------- -->
     }
-
-
 }
 
 
@@ -426,7 +575,7 @@
         <div class="row">
 
             <div class="col-md-6">
-                <button type="button" class="btn btn-info btn-lg btnchoose float-left">نمایش با جزئیات بیشتر</button>
+                <button type="button" id="detailsellapart"  class="btn btn-info btn-lg btnchoose float-left">نمایش با جزئیات بیشتر</button>
             </div>
             <div class="col-md-3">
                 <div class="field-container radio-field">
@@ -474,7 +623,7 @@
 
         </div>
 
-        <div class="row">
+        <div class="row  detailsellapart display-none">
 
 
             <div class="col-md-3 no-padding">
@@ -691,8 +840,7 @@
 
     if (ViewBag.lv1 == "وسایل-نقلیه" && ViewBag.lv2 == "خودرو" && ViewBag.lv3 == "سنگین")
     {
-
-
+        
         <!-- --------شروع - خودرو - سنگین-------- -->
 
         <div class="row">
@@ -837,12 +985,10 @@
 
             </div>
         </div>
-
-
         <div class="row">
 
             <div class="col-md-6">
-                <button type="button" class="btn btn-info btn-lg btnchoose float-left">نمایش با جزئیات بیشتر</button>
+                <button type="button"  id="detailsellapart"  class="btn btn-info btn-lg btnchoose float-left">نمایش با جزئیات بیشتر</button>
             </div>
             <div class="col-md-3">
                 <div class="field-container radio-field">
@@ -889,8 +1035,7 @@
 
 
         </div>
-
-        <div class="row">
+        <div class="row  detailsellapart display-none">
 
 
             <div class="col-md-3 no-padding">
@@ -1097,11 +1242,9 @@
             </div>
         </div>
                     <!-- --------پایان - خودرو - سنگین-------- -->
-
-
+        
     }
-
-
+    
 }
 
 
@@ -1110,126 +1253,7 @@
 @{
 
 
-
-
-    if (ViewBag.lv1 == "وسایل-نقلیه" && ViewBag.lv2 == "قطعات-یدکی-و-لوازم-جانبی-خودرو")
-    {
-
-        <!-- --------شروع - قطعات یدکی و لوازم جانبی خودرو - تمام زیر مجموعه ها-------- -->
-
-        <div class="row">
-
-
-            <div class="col-md-3">
-            </div>
-
-            <div class="col-md-3">
-            </div>
-
-            <div class="col-md-3">
-                <div class="field-container radio-field">
-                    <label>نوع</label>
-                    <div class="md-radio md-radio-inline">
-                        <input id="Kind-All" type="radio"  value="0" name="Kind" checked>
-                        <label for="Kind-All">فرقی نمی کند</label>
-                    </div>
-                    <div class="md-radio md-radio-inline">
-                        <input id="Kind-Sell" type="radio"  value="1" name="Kind">
-                        <label for="Kind-Sell">فروشی</label>
-                    </div>
-                    <div class="md-radio md-radio-inline">
-                        <input id="Kind-Need" type="radio"  value="2" name="Kind">
-                        <label for="Kind-Need">درخواستی</label>
-                    </div>
-                    <div class="md-radio md-radio-inline">
-                        <input id="Kind-Rent" type="radio"  value="3" name="Kind">
-                        <label for="Kind-Rent">اجاره ای</label>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="col-md-3">
-
-                <div class="field-container int-field">
-                    <label>قیمت</label>
-                    <div class="row">
-                        <div class="col-md-12 no-padding">
-                            <select  id="Kind-TotalPrice" data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
-                                <option value=""></option>
-                                <option value="1">مقطوع - تومان</option>
-                                <option value="1">مجانی</option>
-                                <option value="1">توافقی</option>
-                                <option value="1">جهت معاوضه</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 no-padding">
-                            <input  id="Untill-TotalPrice" class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
-                        </div>
-                        <div class="col-md-6 no-padding">
-                            <input  id="From-TotalPrice"  class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 search-col">
-                <button id="SearchVehicleAccessories" class="btn btn-common btn-search btn-block search-btn"><strong>جستجو</strong></button>
-            </div>
-            <div class="col-md-2">
-                <div class="row margin-top-20">
-                    <div class="col-md-6">
-                        <div class="cntr">
-                            <div class="row ">
-                                <input type="checkbox" id="HasFast" class="cbx hidden" />
-                                <label for="HasFast" class="lbl"></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 text-align-left">
-                        <span>فوری</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="row margin-top-20">
-                    <div class="col-md-6">
-                        <div class="cntr">
-                            <div class="row ">
-                                <input type="checkbox" id="HasImage" class="cbx hidden" />
-                                <label for="HasImage" class="lbl"></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 text-align-left">
-                        <span>عکس دار</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-                    <!-- --------پایان  - قطعات یدکی و لوازم جانبی خودرو - تمام زیر مجموعه ها-------- -->
-
-
-    }
-
-}
-
-
-
-
-
-
-@{
-
-
-    if (ViewBag.lv1 == "وسایل-نقلیه" && ViewBag.lv2 == "موتورسیکلت-و-لوازم-جانبی")
+    if (ViewBag.lv1 == "وسایل-نقلیه" && ViewBag.lv2 == "موتورسیکلت-و-لوازم-جانبی" && ViewBag.lv3 == "موتورسیکلت")
     {
        
               <!-- --------شروع - موتور سیکلت و لوازم جانبی - موتور سیکلت-------- -->
@@ -1384,7 +1408,7 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <button type="button" class="btn btn-info btn-lg btnchoose float-left">نمایش با جزئیات بیشتر</button>
+                <button type="button"  id="detailsellapart"  class="btn btn-info btn-lg btnchoose float-left">نمایش با جزئیات بیشتر</button>
             </div>
 
             <div class="col-md-3">
@@ -1430,9 +1454,7 @@
             </div>
 
         </div>
-
-
-        <div class="row">
+        <div class="row  detailsellapart display-none">
 
 
             <div class="col-md-3 no-padding">
@@ -1537,8 +1559,7 @@
 
 
         </div>
-
-        <div class="row">
+         <div class="row">
             <div class="col-md-8 search-col">
                 <button id="SearchMotorcycle" class="btn btn-common btn-search btn-block search-btn"><strong>جستجو</strong></button>
             </div>
@@ -1583,11 +1604,11 @@
 
 
 @{
-        
 
 
-    if (ViewBag.lv1 == "وسایل-نقلیه" && ViewBag.lv2 == "قطعات-یدکی-و-لوازم-جانبی-خودرو" || ViewBag.lv2 == "قایق-و-لوازم-جانبی" || ViewBag.lv3 == "لوازم-جانبی-موتورسیکلت")
-        {
+
+    if (ViewBag.lv1 == "وسایل-نقلیه" && ViewBag.lv2 == "قطعات-یدکی-و-لوازم-جانبی-خودرو" && ViewBag.lv3 != null)
+    {
          <!-- --------شروع - قطعات یدکی و لوازم جانبی خودرو - تمام زیر مجموعه ها و قایق و لوازم جانبی و لوازم جانبی موتور سیکلت-------- -->
 
         <div class="row">
@@ -1687,6 +1708,112 @@
 
 
 
+    }
+
+}
+
+
+@{
+
+
+
+    if (ViewBag.lv1 == "وسایل-نقلیه" && ViewBag.lv3 == "لوازم-جانبی-موتورسیکلت")
+    {
+         <!-- --------شروع - قطعات یدکی و لوازم جانبی خودرو - تمام زیر مجموعه ها و قایق و لوازم جانبی و لوازم جانبی موتور سیکلت-------- -->
+
+        <div class="row">
+
+            <div class="col-md-6"></div>
+            <div class="col-md-3">
+                <div class="field-container radio-field">
+                    <label>نوع</label>
+                    <div class="md-radio md-radio-inline">
+                        <input id="Kind-All" type="radio" value="0" name="Kind" checked>
+                        <label for="Kind-All">فرقی نمی کند</label>
+                    </div>
+                    <div class="md-radio md-radio-inline">
+                        <input id="Kind-Sell" type="radio" value="1" name="Kind">
+                        <label for="Kind-Sell">فروشی</label>
+                    </div>
+                    <div class="md-radio md-radio-inline">
+                        <input id="Kind-Need" type="radio" value="2" name="Kind">
+                        <label for="Kind-Need">درخواستی</label>
+                    </div>
+                    <div class="md-radio md-radio-inline">
+                        <input id="Kind-Rent" type="radio" value="3" name="Kind">
+                        <label for="Kind-Rent">اجاره ای</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3">
+
+                <div class="field-container int-field">
+                    <label>قیمت</label>
+                    <div class="row">
+                        <div class="col-md-12 no-padding">
+                            <select id="Kind-TotalPrice" data-placeholder="مقطوع - تومان" class="select width-100" tabindex="1">
+                                <option value=""></option>
+                                <option value="1">مقطوع - تومان</option>
+                                <option value="1">مجانی</option>
+                                <option value="1">توافقی</option>
+                                <option value="1">جهت معاوضه</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 no-padding">
+                            <input id="Untill-TotalPrice" class="form-control keyword numbertxt" name="keyword" value="" placeholder="تا" type="text">
+                        </div>
+                        <div class="col-md-6 no-padding">
+                            <input id="From-TotalPrice" class="form-control keyword numbertxt" name="keyword" value="" placeholder="از" type="text">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 search-col">
+                <button id="SearchAccessoriesDetail" class="btn btn-common btn-search btn-block search-btn"><strong>جستجو</strong></button>
+            </div>
+            <div class="col-md-2">
+                <div class="row margin-top-20">
+                    <div class="col-md-6">
+                        <div class="cntr">
+                            <div class="row ">
+                                <input type="checkbox" id="HasFast" class="cbx hidden" />
+                                <label for="HasFast" class="lbl"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-align-left">
+                        <span>فوری</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="row margin-top-20">
+                    <div class="col-md-6">
+                        <div class="cntr">
+                            <div class="row ">
+                                <input type="checkbox" id="HasImage" class="cbx hidden" />
+                                <label for="HasImage" class="lbl"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-align-left">
+                        <span>عکس دار</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    <!-- --------پایان - قطعات یدکی و لوازم جانبی خودرو - تمام زیر مجموعه ها و قایق و لوازم جانبی و لوازم جانبی موتور سیکلت-------- -->
+        
     }
 
 }

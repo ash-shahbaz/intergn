@@ -3,7 +3,6 @@
 
 
 
-
 @{
     if (ViewBag.lv1 == "املاک" && ViewBag.lv2 == "فروش-املاک-مسکونی" && ViewBag.lv3 == null)
     {
@@ -1398,7 +1397,7 @@
 
 
 @{
-    if (ViewBag.lv1 == "املاک" && ViewBag.lv2 == "اجاره-مسکونی" && ViewBag.lv3 != "")
+    if (ViewBag.lv1 == "املاک" && ViewBag.lv2 == "اجاره-مسکونی" && ViewBag.lv3 != null)
     {
 
         <!----------شروع -اجاره مسکونی - تمام زیر مجموعه ها---------->
@@ -1503,7 +1502,7 @@
                         <div class="row text-align-right">
 
                             <div class="col-md-3">
-                                <button type="button" class="btn btn-info btn-lg btnchoose float-left">نمایش با جزئیات بیشتر</button>
+                                <button  id="detailsellapart" type="button" class="btn btn-info btn-lg btnchoose float-left">نمایش با جزئیات بیشتر</button>
                             </div>
                             <div class="col-md-3">
                                 <div class="field-container radio-field">
@@ -1560,7 +1559,7 @@
 
                         </div>
 
-                        <div class="row">
+                        <div class="row detailsellapart display-none">
                             <div class="col-md-3 no-padding">
                               
 
@@ -1778,7 +1777,7 @@
 
 
 @{
-    if (ViewBag.lv1 == "املاک" && ViewBag.lv2 == "فروش-اداری-و-تجاری" && ViewBag.lv3 != "")
+    if (ViewBag.lv1 == "املاک" && ViewBag.lv2 == "فروش-اداری-و-تجاری" && ViewBag.lv3 != null)
     {
         <!----------شروع - فروش اداری و تجاری - تمام زیر مجموعه ها ---------->
 
@@ -1786,7 +1785,7 @@
 
 
             <div class="col-md-3">
-                <button type="button" class="btn btn-info btn-lg btnchoose float-left">نمایش با جزئیات بیشتر</button>
+                <button type="button" id="detailsellapart"  class="btn btn-info btn-lg btnchoose float-left">نمایش با جزئیات بیشتر</button>
             </div>
 
             <div class="col-md-3">
@@ -1934,7 +1933,7 @@
                         </div>
 
 
-                        <div class="row">
+                        <div class="row  detailsellapart display-none">
                             <div class="col-md-3">
 
                                 <div class="field-container int-field">
@@ -2190,7 +2189,7 @@
 
 
 @{
-    if (ViewBag.lv1 == "املاک" && ViewBag.lv2 == "اجاره-اداری-و-تجاری" && ViewBag.lv3 != "")
+    if (ViewBag.lv1 == "املاک" && ViewBag.lv2 == "اجاره-اداری-و-تجاری" && ViewBag.lv3 != null)
     {
         <!----------شروع - اجاره اداری و تجاری - تمام زیر مجموعه ها---------->
 
@@ -2295,7 +2294,7 @@
 
 
                             <div class="col-md-3">
-                                <button type="button" class="btn btn-info btn-lg btnchoose float-left">نمایش با جزئیات بیشتر</button>
+                                <button type="button" id="detailsellapart"  class="btn btn-info btn-lg btnchoose float-left">نمایش با جزئیات بیشتر</button>
                             </div>
                             <div class="col-md-3">
                                 <div class="field-container radio-field">
@@ -2352,7 +2351,7 @@
 
                         </div>
 
-                        <div class="row">
+                        <div class="row  detailsellapart display-none">
                             <div class="col-md-3 no-padding">
                               
 
@@ -2565,7 +2564,7 @@
 
 
 @{
-    if (ViewBag.lv1 == "املاک" && ViewBag.lv2 == "خدمات-املاک" && ViewBag.lv3 != "")
+    if (ViewBag.lv1 == "املاک" && ViewBag.lv2 == "خدمات-املاک" && ViewBag.lv3 != null)
     {
 
         <!----------شروع - خدمات املاک - تمام زیر مجموعه ها---------->
