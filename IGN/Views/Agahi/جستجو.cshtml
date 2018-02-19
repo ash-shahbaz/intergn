@@ -20,153 +20,262 @@
 }
 
 
+<div class="row  margin-bottom-20">
 
-<!-- Start Search box -->
+    <div class="col-md-12 no-padding">
 
-<div class="row search-bar margin-bottom-20">
-    <div class="advanced-search">
-        <form class="search-form" method="get">
-            <div class="row margin-bottom-10">
-
-                <div class="col-md-2 search-col ">
-                    
-                    <a id="ShowMap" href="../Agahi/جستجو-اطراف-من" class="btn btn-info float-left">نمایش روی نقشه</a>
-
-                    
-                </div>
-
-                <div class="col-md-2  ">
-                    <div id="sel-cont">
-
-                        <select data-placeholder="همه محله ها" multiple class="mahale-select width-100Per"></select>
-                        <br />
-
-                    </div>
-                </div>
+        <div class="card card-nav-tabs">
+            <div class="header header-success">
+                <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
 
 
 
-                <div class="col-md-2 ">
 
-                    <select data-placeholder="همه شهر ها" class="chosen-select ShahrSelect width-100Per" tabindex="2">
-                        <option value=""></option>
+                        <div class="row margin-bottom-10">
 
-                        @{   foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
-                            {
-                                <option value="@item.CityID">@item.CityName</option>
-                            }
-                        }
+                            <div class="col-md-2 search-col ">
 
-                    </select>
+                                <a id="ShowMap" href="../Agahi/جستجو-اطراف-من" class="btn btn-info float-left">نمایش روی نقشه</a>
 
 
-                </div>
+                            </div>
 
-                <div class="col-md-2  ">
-                    <span class=" user-type">
-                        <button type="button" class="btn btn-info width-100Per" data-toggle="modal" data-target="#myModal">انتخاب گروه آگهی</button>
+                            <div class="col-md-2  ">
+                                <div id="sel-cont">
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="myModal" role="dialog">
-                            <div class="modal-dialog whitebg">
-
-                                <!-- Modal content-->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">انتخاب گروه بندی</h4>
-                                        <h5> <a href="#">دسته بندی :</a>  <span id="RetToLoadCate"> بازگشت </span></h5>
-                                        <br />
-                                        <span id="CatFlow"></span>
-                                    </div>
-                                    <div class="modal-body choose ">
-                                        <ul class="Level1"></ul>
-                                    </div>
+                                    <select data-placeholder="همه محله ها" multiple class="mahale-select width-100Per"></select>
+                                    <br />
 
                                 </div>
+                            </div>
+
+
+
+                            <div class="col-md-2 ">
+
+                                <select data-placeholder="همه شهر ها" class="chosen-select ShahrSelect width-100Per" tabindex="2">
+                                    <option value=""></option>
+
+                                    @{   foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
+                                        {
+                                            <option value="@item.CityID">@item.CityName</option>
+                                        }
+                                    }
+
+                                </select>
+
+
+                            </div>
+
+                            <div class="col-md-2  ">
+                                <span class=" user-type">
+                                    <button type="button" class="btn SelectedCategory width-100Per" data-toggle="modal" data-target="#myModal">انتخاب گروه آگهی</button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal" role="dialog">
+                                        <div class="modal-dialog whitebg">
+
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4 class="modal-title">انتخاب گروه بندی</h4>
+                                                    <h5> <a href="#">دسته بندی :</a>  <span id="RetToLoadCate"> بازگشت </span></h5>
+                                                    <br />
+                                                    <span id="CatFlow"></span>
+                                                </div>
+                                                <div class="modal-body choose ">
+                                                    <ul class="Level1"></ul>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="col-md-4 ">
+                                <input id="SearchInput" class="form-control keyword" name="keyword" value="" placeholder="متن جستجو" type="text">
+                                <i class="fa fa-search SearchInputIco"></i>
 
                             </div>
                         </div>
 
-                    </span>
-
-                </div>
 
 
-                <div class="col-md-4 ">
-                    <input id="SearchInput" class="form-control keyword" name="keyword" value="" placeholder="متن جستجو" type="text">
-                    <i class="fa fa-search SearchInputIco"></i>
 
+
+
+
+
+
+
+
+
+
+                    </div>
                 </div>
             </div>
-
-            @{
-
+            <div class="content">
 
 
-                string l1 = ViewBag.Level1;
-                string l2 = ViewBag.Level2;
-                string l3 = ViewBag.Level3;
+                @{
 
 
-                if (l1 == null && l2 == null && l3 == null)
-                {
+
+                    string l1 = ViewBag.Level1;
+                    string l2 = ViewBag.Level2;
+                    string l3 = ViewBag.Level3;
+
+
+                    if (l1 == null && l2 == null && l3 == null)
+                    {
                   <!--   ------شروع  صفحه اصلی جستجو----------   -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="field-container radio-field">
-                                <label>نوع آگهی:</label>
-                                <div class="md-radio md-radio-inline">
-                                    <input id="Kind-All" type="radio" value="0" name="Kind" checked>
-                                    <label for="Kind-All">فرقی نمی کند</label>
-                                </div>
-                                <div class="md-radio md-radio-inline">
-                                    <input id="Kind-Sell" type="radio" value="1" name="Kind">
-                                    <label for="Kind-Sell">فروشی</label>
-                                </div>
-                                <div class="md-radio md-radio-inline">
-                                    <input id="Kind-Need" type="radio" value="2" name="Kind">
-                                    <label for="Kind-Need">درخواستی</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8 search-col">
-                            <button id="SearchAllAgahi" class="btn btn-common btn-search btn-block search-btn"><strong>جستجو</strong></button>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="row margin-top-20">
-                                <div class="col-md-6">
-                                    <div class="cntr">
-                                        <div class="row ">
-                                            <input type="checkbox" id="HasFast" class="cbx hidden" />
-                                            <label for="HasFast" class="lbl"></label>
-                                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="field-container radio-field">
+                                    <label>نوع آگهی:</label>
+                                    <div class="md-radio md-radio-inline">
+                                        <input id="Kind-All" type="radio" value="0" name="Kind" checked>
+                                        <label for="Kind-All">فرقی نمی کند</label>
+                                    </div>
+                                    <div class="md-radio md-radio-inline">
+                                        <input id="Kind-Sell" type="radio" value="1" name="Kind">
+                                        <label for="Kind-Sell">فروشی</label>
+                                    </div>
+                                    <div class="md-radio md-radio-inline">
+                                        <input id="Kind-Need" type="radio" value="2" name="Kind">
+                                        <label for="Kind-Need">درخواستی</label>
                                     </div>
                                 </div>
-                                <div class="col-md-6 text-align-left">
-                                    <span>فوری</span>
-                                </div>
                             </div>
                         </div>
-                        <div class="col-md-2">
-                            <div class="row margin-top-20">
-                                <div class="col-md-6">
-                                    <div class="cntr">
-                                        <div class="row ">
-                                            <input type="checkbox" id="HasImage" class="cbx hidden" />
-                                            <label for="HasImage" class="lbl"></label>
+                        <div class="row">
+                            <div class="col-md-8 search-col">
+                                <button id="SearchAllAgahi" class="btn btn-common btn-search btn-block search-btn"><strong>جستجو</strong></button>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="row margin-top-20">
+                                    <div class="col-md-6">
+                                        <div class="cntr">
+                                            <div class="row ">
+                                                <input type="checkbox" id="HasFast" class="cbx hidden" />
+                                                <label for="HasFast" class="lbl"></label>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="col-md-6 text-align-left">
+                                        <span>فوری</span>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 text-align-left">
-                                    <span>عکس دار</span>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="row margin-top-20">
+                                    <div class="col-md-6">
+                                        <div class="cntr">
+                                            <div class="row ">
+                                                <input type="checkbox" id="HasImage" class="cbx hidden" />
+                                                <label for="HasImage" class="lbl"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 text-align-left">
+                                        <span>عکس دار</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                   <!--   ------پایان صفحه اصلی جستجو----------   -->
+                    }
+
+
+
+
+
+
+
+                    ViewBag.lv1 = l1;
+                    ViewBag.lv2 = l2;
+                    ViewBag.lv3 = l3;
+
+                    switch (l1)
+                    {
+                        case "املاک":
+                            {
+
+                                Html.RenderPartial("_املاک");
+                                break;
+                            }
+                        case "لوازم-الکترونیکی":
+                            {
+
+                                Html.RenderPartial("_لوازم_الکترونیکی");
+                                break;
+                            }
+                        case "وسایل-نقلیه":
+                            {
+                                Html.RenderPartial("_وسایل_نقلیه");
+                                break;
+                            }
+                        case "لوازم-خانگی":
+                            {
+
+                                Html.RenderPartial("_لوازم_کسب_سرگرمی");
+                                break;
+                            }
+                        case "لوازم-شخصی":
+                            {
+                                Html.RenderPartial("_لوازم_کسب_سرگرمی");
+                                break;
+                            }
+                        case "سرگرمی-و-فراغت":
+                            {
+                                Html.RenderPartial("_لوازم_کسب_سرگرمی");
+                                break;
+                            }
+                        case "کسب-و-کار":
+                            {
+                                Html.RenderPartial("_لوازم_کسب_سرگرمی");
+                                break;
+                            }
+
+                        case "خدمات":
+                            {
+                                Html.RenderPartial("_استخدام_اجتماعی_خدمات");
+                                break;
+                            }
+
+
+                        case "اجتماعی":
+                            {
+                                Html.RenderPartial("_استخدام_اجتماعی_خدمات");
+                                break;
+                            }
+
+                        case "استخدام":
+                            {
+                                Html.RenderPartial("_استخدام_اجتماعی_خدمات");
+                                break;
+                            }
+
+                        case "a":
+                            {
+
+                                break;
+                            }
+                    }
+
+
+
+
+                    //Html.RenderPartial("_مشترک");
+
+
                 }
 
 
@@ -175,92 +284,16 @@
 
 
 
-                ViewBag.lv1 = l1;
-                ViewBag.lv2 = l2;
-                ViewBag.lv3 = l3;
-
-                switch (l1)
-                {
-                    case "املاک":
-                        {
-
-                            Html.RenderPartial("_املاک");
-                            break;
-                        }
-                    case "لوازم-الکترونیکی":
-                        {
-
-                            Html.RenderPartial("_لوازم_الکترونیکی");
-                            break;
-                        }
-                    case "وسایل-نقلیه":
-                        {
-                            Html.RenderPartial("_وسایل_نقلیه");
-                            break;
-                        }
-                    case "لوازم-خانگی":
-                        {
-
-                            Html.RenderPartial("_لوازم_کسب_سرگرمی");
-                            break;
-                        }
-                    case "لوازم-شخصی":
-                        {
-                            Html.RenderPartial("_لوازم_کسب_سرگرمی");
-                            break;
-                        }
-                    case "سرگرمی-و-فراغت":
-                        {
-                            Html.RenderPartial("_لوازم_کسب_سرگرمی");
-                            break;
-                        }
-                    case "کسب-و-کار":
-                        {
-                            Html.RenderPartial("_لوازم_کسب_سرگرمی");
-                            break;
-                        }
-
-                    case "خدمات":
-                        {
-                            Html.RenderPartial("_استخدام_اجتماعی_خدمات");
-                            break;
-                        }
-
-
-                    case "اجتماعی":
-                        {
-                            Html.RenderPartial("_استخدام_اجتماعی_خدمات");
-                            break;
-                        }
-
-                    case "استخدام":
-                        {
-                            Html.RenderPartial("_استخدام_اجتماعی_خدمات");
-                            break;
-                        }
-
-                    case "a":
-                        {
-
-                            break;
-                        }
-                }
 
 
 
 
-                //Html.RenderPartial("_مشترک");
 
-
-            }
-
-
-
-
-        </form>
+            </div>
+        </div>
+        <!-- End Tabs with icons on Card -->
     </div>
 </div>
-
 
 
 
