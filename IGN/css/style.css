@@ -7124,3 +7124,42 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     white-space: nowrap;
     line-height: 34px;
 }
+.SelectStyle {
+    cursor: pointer;
+    word-wrap: break-word;
+    line-height: 1em;
+    white-space: normal;
+    outline: 0;
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+    min-width: 14em;
+    min-height: 2.7142em;
+    background: #FFF;
+    display: inline-block;
+    padding: .78571429em 2.6em .78571429em 1em;
+    color: rgba(0,0,0,.87);
+    box-shadow: none;
+    border: 1px solid rgba(34,36,38,.15);
+    border-radius: 3px;
+    -webkit-transition: box-shadow .1s ease,width .1s ease;
+    transition: box-shadow .1s ease,width .1s ease;
+}
+    .SelectStyle option {
+        white-space: normal;
+        word-wrap: normal;
+        position: relative;
+        cursor: pointer;
+        display: block;
+        border: none;
+        height: auto;
+        text-align: left;
+        border-top: none;
+        line-height: 1em;
+        color: rgba(0,0,0,.87);
+        padding: .71428571rem 1.14285714rem !important;
+        font-size: 1rem;
+        text-transform: none;
+        font-weight: 400;
+        box-shadow: none;
+        -webkit-touch-callout: none;
+    }
