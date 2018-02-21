@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace iGNProject.Models.Search
+namespace IGN.Models.Search
 {
     public class SearchSaleOffices
     {
