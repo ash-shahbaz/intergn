@@ -474,7 +474,7 @@ input[type="search"] {
 }
 
 .form-control:-moz-placeholder, .form-control::-moz-placeholder, .form-control:-ms-input-placeholder, .form-control::-webkit-input-placeholder {
-    color: #999999;
+    color: #000;
     font-size: 12px;
     opacity: 1;
 }
@@ -1388,28 +1388,28 @@ ul.page-numbers li:hover {
             }
 
 .form-control:-moz-placeholder {
-    color: #fff;
+    color: #000;
     font-family: 'IRANSans','Source Sans Pro', sans-serif;
     font-size: 12px;
     opacity: 1;
 }
 
 .form-control::-moz-placeholder {
-    color: #fff;
+    color: #000;
     font-family: 'IRANSans','Source Sans Pro', sans-serif;
     font-size: 12px;
     opacity: 1;
 }
 
 .form-control:-ms-input-placeholder {
-    color: #fff;
+    color: #000;
     font-family: 'IRANSans','Source Sans Pro', sans-serif;
     font-size: 12px;
     opacity: 1;
 }
 
 .form-control::-webkit-input-placeholder {
-    color: #fff;
+    color: #000;
     font-family: 'IRANSans','Source Sans Pro', sans-serif;
     font-size: 12px;
     opacity: 1;
@@ -6460,7 +6460,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
         height: 26px;
         border-radius: 100px;
         background: #fff;
-        box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
+        box-shadow: 1px 2px 3px 2px rgba(0,0,0,0.45);
         content: '';
         transition: all 0.3s ease;
     }
@@ -6494,8 +6494,9 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 .search-btn {
     width: 200px;
     float: left;
+    background-color: #d50000;
+    color: white;
 }
-
 
 /*--------*/
 @keyframes ripple {
@@ -6968,7 +6969,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 }
 
 .numbertxt {
-    width: 90%;
+    width: 95%;
     text-align: center;
     text-align: -webkit-center;
     margin: 5px 0px;
@@ -7126,23 +7127,20 @@ input:checked + .custom-radio-outer .custom-radio-inner {
 }
 .SelectStyle {
     cursor: pointer;
-    word-wrap: break-word;
-    line-height: 1em;
-    white-space: normal;
     outline: 0;
     -webkit-transform: rotateZ(0);
     transform: rotateZ(0);
-    min-width: 14em;
     min-height: 2.7142em;
     background: #FFF;
     display: inline-block;
-    padding: .78571429em 2.6em .78571429em 1em;
+    padding: 5px 5px 5px 5px;
     color: rgba(0,0,0,.87);
     box-shadow: none;
     border: 1px solid rgba(34,36,38,.15);
     border-radius: 3px;
     -webkit-transition: box-shadow .1s ease,width .1s ease;
     transition: box-shadow .1s ease,width .1s ease;
+    font-weight: 400;
 }
     .SelectStyle option {
         white-space: normal;
@@ -7157,9 +7155,62 @@ input:checked + .custom-radio-outer .custom-radio-inner {
         line-height: 1em;
         color: rgba(0,0,0,.87);
         padding: .71428571rem 1.14285714rem !important;
-        font-size: 1rem;
+        font-size: 13px;
         text-transform: none;
         font-weight: 400;
         box-shadow: none;
         -webkit-touch-callout: none;
     }
+
+
+.colorblack{
+color:black;
+}
+.NavBarDetail {
+    margin: 15px 0px 20px 0 !important;
+    min-height: auto;
+    font-size: 15px !important;
+    background-color: #01579B;
+    border-radius: 5px 5px 15px 15px;
+}
+.MapShadow {
+    box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.32), 0 11px 42px -12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------*/
+#ClickDetail {
+    padding: 0px 20px;
+    width: 100%;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.ArrowDetail {
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #fff;
+    transition: all 600ms ease;
+}
+
+#hidden-info {
+    display: none;
+    background-color: #EEEEEE;
+    padding: 10px 20px;
+}
+
+    #hidden-info h3 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+
+/*-------------------------------------------------------------------------------------------------------*/

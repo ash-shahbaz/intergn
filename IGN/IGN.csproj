@@ -267,6 +267,7 @@
     <Content Include="images\hoverNext.png" />
     <Content Include="images\hoverPrev.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\Map_icon.png" />
     <Content Include="js\bootstrap-select.min.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\chosen.jquery.min.js" />
