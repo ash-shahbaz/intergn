@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace IGN.Models.Search
+namespace iGNProject.Models.Search
 {
     public class SearchLapTops
     {
@@ -20,10 +20,17 @@ namespace IGN.Models.Search
         public int KindTotalPrice { get; set; }
         public int UntillTotalPrice { get; set; }
         public int FromTotalPrice { get; set; }
-        public int KindColor { get; set; }
-        public int KindBrand { get; set; }
+
+
+
+        public int ColorID { get; set; }
+        public int BrandID { get; set; }
         public int KindSizeScreen { get; set; }
-        public int KindTouch { get; set; }
+        public bool HasTouch { get; set; }
+
+
+
+
         public int MeasureRAM { get; set; }
         public int MeasureCPU { get; set; }
         public int MeasureHard { get; set; }
@@ -34,6 +41,7 @@ namespace IGN.Models.Search
         public bool HasDVDRW { get; set; }
         public bool HasCamera { get; set; }
 
+        public int CameraMgeaPixel { get; set; }
 
     }
 }

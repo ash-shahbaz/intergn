@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace IGN.Models.Search
+namespace iGNProject.Models.Search
 {
     public class SearchRentOffices
     {
@@ -13,8 +13,6 @@ namespace IGN.Models.Search
         public string MahaleSelect { get; set; }
         public bool HasImage { get; set; }
         public bool HasFast { get; set; }
-
-
         public int KindRentPrice { get; set; }
         public int UntillRentPrice { get; set; }
         public int FromRentPrice { get; set; }

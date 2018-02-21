@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace IGN.Models.Search
+namespace iGNProject.Models.Search
 {
     public class SearchRentHouseSubs
     {
@@ -25,11 +25,17 @@ namespace IGN.Models.Search
         public int UntillArea { get; set; }
         public int FromArea { get; set; }
         public int Countryside { get; set; }
+
+
+
+
         public int UserTypeID { get; set; }
         public int Kind { get; set; }
         public int UntillYear { get; set; }
         public int FromYear { get; set; }
         public int FloorNumber { get; set; }
+
+
         public int KindBottom { get; set; }
         public int KindHeating { get; set; }
 
