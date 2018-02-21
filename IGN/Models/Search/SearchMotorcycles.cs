@@ -22,7 +22,7 @@ namespace IGN.Models.Search
         public int FromTotalPrice { get; set; }
         public int UntillYear { get; set; }
         public int FromYear { get; set; }
-        public int BrandName { get; set; }
+        public int BrandID { get; set; }
         public int Kind { get; set; }
         public int UntillCarFunction { get; set; }
         public int FromCarFunction { get; set; }

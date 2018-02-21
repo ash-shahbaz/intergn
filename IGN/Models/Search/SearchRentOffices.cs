@@ -13,8 +13,6 @@ namespace IGN.Models.Search
         public string MahaleSelect { get; set; }
         public bool HasImage { get; set; }
         public bool HasFast { get; set; }
-
-
         public int KindRentPrice { get; set; }
         public int UntillRentPrice { get; set; }
         public int FromRentPrice { get; set; }

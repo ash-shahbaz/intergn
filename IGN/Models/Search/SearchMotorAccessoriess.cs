@@ -14,8 +14,6 @@ namespace IGN.Models.Search
         public bool HasImage { get; set; }
         public bool HasFast { get; set; }
 
-
-
         public int Kind { get; set; }
         public int UntillYear { get; set; }
         public int FromYear { get; set; }

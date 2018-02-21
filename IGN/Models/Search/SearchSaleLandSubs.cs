@@ -13,7 +13,7 @@ namespace IGN.Models.Search
         public string MahaleSelect { get; set; }
         public bool HasImage { get; set; }
         public bool HasFast { get; set; }
-        public int Countryside { get; set; }
+        public int CitySideTypeID { get; set; }
         public int UserTypeID { get; set; }
         public int Kind { get; set; }
         public int KindTotalPrice { get; set; }

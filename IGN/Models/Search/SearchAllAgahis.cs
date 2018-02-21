@@ -12,7 +12,7 @@ namespace IGN.Models.Search
         public string SearchInput { get; set; }
         public int ShahrSelectID { get; set; }
         public string MahaleSelect { get; set; }
-        public string Kind { get; set; }
+        public int Kind { get; set; }
         public bool HasImage { get; set; }
         public bool HasFast { get; set; }
 

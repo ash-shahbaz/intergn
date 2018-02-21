@@ -14,6 +14,7 @@ namespace IGN.Models.Search
         public bool HasImage { get; set; }
         public bool HasFast { get; set; }
 
+        
 
         public int KindRentPrice { get; set; }
         public int UntillRentPrice { get; set; }
@@ -22,10 +23,9 @@ namespace IGN.Models.Search
         public int KindDepositPrice { get; set; }
         public int UntillDepositPrice { get; set; }
         public int FromDepositPrice { get; set; }
-
         public int UntillArea { get; set; }
         public int FromArea { get; set; }
-        public int Countryside { get; set; }
+        public int CitySideTypeID { get; set; }
         public int UserTypeID { get; set; }
         public int Kind { get; set; }
 
