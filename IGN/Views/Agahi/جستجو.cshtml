@@ -51,8 +51,8 @@
 
                             <div class="col-md-2 ">
 
-                                <select data-placeholder="همه شهر ها" class="chosen-select ShahrSelect width-100Per" tabindex="2">
-                                    <option value=""></option>
+                                <select data-placeholder="همه شهر ها" class="chosen-select ShahrSelect width-100Per"  >
+                                     
 
                                     @{   foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
                                         {
@@ -1480,13 +1480,7 @@
         $(document).ready(function () {
 
             $('.kind-Price').chosen();
-
-            $("#detailsellapart").click(function () {
-
-                $('.detailsellapart').toggleClass('display-none');
-
-            });
-
+            
 
 
             $(".kind-Price").chosen().change(function (e, params) {

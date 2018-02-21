@@ -6543,6 +6543,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
         margin-bottom: 0;
         cursor: pointer;
         vertical-align: bottom;
+        font-size: 13px;
     }
 
         .md-radio label:before, .md-radio label:after {
@@ -7199,6 +7200,7 @@ color:black;
     border-right: 7px solid transparent;
     border-top: 7px solid #fff;
     transition: all 600ms ease;
+    margin-top: 6px;
 }
 
 #hidden-info {
@@ -7214,3 +7216,6 @@ color:black;
 
 
 /*-------------------------------------------------------------------------------------------------------*/
+.margin-top-10{
+    margin-top: 10px;
+}
