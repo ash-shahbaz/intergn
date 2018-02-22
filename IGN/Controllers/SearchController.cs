@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
 using System.Web.Mvc;
 
 namespace IGN.Controllers
@@ -11,170 +12,169 @@ namespace IGN.Controllers
     public class SearchController : Controller
     {
         // GET: Search
-        public List<tblAgahi> SearchAllAgahi(SearchAllAgahis item)
+        public string SearchAllAgahi(SearchAllAgahis item)
         {
-
-            return null;
+            return SearchPostItem.SearchAllAgahis(item);
         }
 
-        public List<tblAgahi> SearchSaleHome(SearchSaleHomes item)
+        public string SearchSaleHome(SearchSaleHomes item)
         {
-            return null;
-        }
-
-
-
-        public List<tblAgahi> SearchRentHome(SearchRentHomes item)
-        {
-            return null;
+            return SearchPostItem.SearchSaleHomes(item);
         }
 
 
 
-        public List<tblAgahi> SearchSaleOffice(SearchSaleOffices item)
+        public string SearchRentHome(SearchRentHomes item)
         {
-            return null;
+            return SearchPostItem.SearchRentHomes(item);
         }
 
 
 
-        public List<tblAgahi> SearchRentOffice(SearchRentOffices item)
+        public string SearchSaleOffice(SearchSaleOffices item)
         {
-            return null;
+            return SearchPostItem.SearchSaleOffices(item);
         }
 
 
 
-        public List<tblAgahi> SearchServicesHouse(SearchServicesHouses item)
+        public string SearchRentOffice(SearchRentOffices item)
         {
-            return null;
+            return SearchPostItem.SearchRentOffices(item);
         }
 
 
 
-        public List<tblAgahi> SearchSaleApartSub(SearchSaleApartSubs item)
+        public string SearchServicesHouse(SearchServicesHouses item)
         {
-            return null;
+            return SearchPostItem.SearchServicesHouses(item);
         }
 
 
 
-        public List<tblAgahi> SearchSaleLandSub(SearchSaleLandSubs item)
+        public string SearchSaleApartSub(SearchSaleApartSubs item)
         {
-            return null;
+            return SearchPostItem.SearchSaleApartSubs(item);
         }
 
 
 
-        public List<tblAgahi> SearchRentHouseSub(SearchRentHouseSubs item)
+        public string SearchSaleLandSub(SearchSaleLandSubs item)
         {
-            return null;
+            return SearchPostItem.SearchSaleLandSubs(item);
         }
 
 
 
-        public List<tblAgahi> SearchSaleOfficeSub(SearchSaleOfficeSubs item)
+        public string SearchRentHouseSub(SearchRentHouseSubs item)
         {
-            return null;
+            return SearchPostItem.SearchRentHouseSubs(item);
         }
 
 
 
-        public List<tblAgahi> SearchRentOfficeSub(SearchRentOfficeSubs item)
+        public string SearchSaleOfficeSub(SearchSaleOfficeSubs item)
         {
-            return null;
+            return SearchPostItem.SearchSaleOfficeSubs(item);
+        }
+
+
+
+        public string SearchRentOfficeSub(SearchRentOfficeSubs item)
+        {
+            return SearchPostItem.SearchRentOfficeSubs(item);
         }
 
 
 
 
-        public List<tblAgahi> SearchServicesHouseSub(SearchServicesHouseSubs item)
+        public string SearchServicesHouseSub(SearchServicesHouseSubs item)
         {
-            return null;
+            return SearchPostItem.SearchServicesHouseSubs(item);
         }
 
 
 
-        public List<tblAgahi> SearchServicesEmployment(SearchServicesEmployments item)
+        public string SearchServicesEmployment(SearchServicesEmployments item)
         {
-            return null;
+            return SearchPostItem.SearchServicesEmployments(item);
         }
 
 
 
-        public List<tblAgahi> SearchPersonalEntertainment(SearchPersonalEntertainments item)
+        public string SearchPersonalEntertainment(SearchPersonalEntertainments item)
         {
-            return null;
+            return SearchPostItem.SearchPersonalEntertainments(item);
         }
 
 
 
-        public List<tblAgahi> SearchElectronics(SearchElectronicss item)
+        public string SearchElectronics(SearchElectronicss item)
         {
-            return null;
+            return SearchPostItem.SearchElectronicss(item);
         }
 
 
 
-        public List<tblAgahi> SearchMobileTablet(SearchMobileTablets item)
+        public string SearchMobileTablet(SearchMobileTablets item)
         {
-            return null;
+            return SearchPostItem.SearchMobileTablets(item);
         }
 
 
 
-        public List<tblAgahi> SearchLapTop(SearchLapTops item)
+        public string SearchLapTop(SearchLapTops item)
         {
-            return null;
+            return SearchPostItem.SearchLapTops(item);
         }
 
 
 
-        public List<tblAgahi> SearchCase(SearchCases item)
+        public string SearchCase(SearchCases item)
         {
-            return null;
+            return SearchPostItem.SearchCases(item);
         }
 
 
 
-        public List<tblAgahi> SearchMotorAccessories(SearchMotorAccessoriess item)
+        public string SearchMotorAccessories(SearchMotorAccessoriess item)
         {
-            return null;
+            return SearchPostItem.SearchMotorAccessoriess(item);
         }
 
 
 
-        public List<tblAgahi> SearchCarBoatAcc(SearchCarBoatAccs item)
+        public string SearchCarBoatAcc(SearchCarBoatAccs item)
         {
-            return null;
+            return SearchPostItem.SearchCarBoatAccs(item);
         }
 
 
 
-        public List<tblAgahi> SearchCarRiding(SearchCarRidings item)
+        public string SearchCarRiding(SearchCarRidings item)
         {
-            return null;
+            return SearchPostItem.SearchCarRidings(item);
         }
 
 
 
-        public List<tblAgahi> SearchCarHeavy(SearchCarHeavys item)
+        public string SearchCarHeavy(SearchCarHeavys item)
         {
-            return null;
+            return SearchPostItem.SearchCarHeavys(item);
         }
 
 
 
-        public List<tblAgahi> SearchVehicleAccessories(SearchVehicleAccessoriess item)
+        public string SearchVehicleAccessories(SearchVehicleAccessoriess item)
         {
-            return null;
+            return SearchPostItem.SearchVehicleAccessoriess(item);
         }
 
 
 
-        public List<tblAgahi> SearchMotorcycle(SearchMotorcycles item)
+        public string SearchMotorcycle(SearchMotorcycles item)
         {
-            return null;
+            return SearchPostItem.SearchMotorcycles(item);
         }
 
 
@@ -187,9 +187,9 @@ namespace IGN.Controllers
 
 
 
-        public List<tblAgahi> SearchBoatsAccessories(SearchBoatsAccessoriess item)
+        public string SearchBoatsAccessories(SearchBoatsAccessoriess item)
         {
-            return null;
+            return SearchPostItem.SearchBoatsAccessoriess(item);
         }
 
 

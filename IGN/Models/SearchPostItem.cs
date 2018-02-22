@@ -52,12 +52,14 @@ namespace IGN.Models
                 var response = client.PostAsJsonAsync("api/SearchBoatsAccessoriess", s).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.Write("Success");
+                   
+                    return response.Content.ReadAsStringAsync().Result;
+
                 }
                 else
-                    Console.Write("Error");
+                    return "Nothing";
 
-                return "OK";
+
 
             }
         }
