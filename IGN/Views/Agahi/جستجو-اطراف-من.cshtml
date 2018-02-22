@@ -49,7 +49,7 @@
                 <div class="col-md-2 ">
 
                     <select data-placeholder="شهر را انتخاب کنید ..." class="chosen-select ShahrSelect width-100Per" tabindex="2">
-                        <option value=""></option>
+                         
 
                         @{   foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
                             {
@@ -1478,12 +1478,7 @@
         $(document).ready(function () {
 
             $('.kind-Price').chosen();
-
-            $("#detailsellapart").click(function () {
-
-                $('.detailsellapart').toggleClass('display-none');
-
-            });
+            
 
 
 

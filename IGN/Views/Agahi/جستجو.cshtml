@@ -32,13 +32,10 @@
 
 
 
-                        <div class="row margin-bottom-10">
+                        <div class="row">
 
-                            <div class="col-md-2 search-col ">
-
-                                <a id="ShowMap" href="../Agahi/جستجو-اطراف-من" class="btn btn-info float-left">نمایش روی نقشه</a>
-
-
+                            <div class="col-md-2 text-align-left">
+                                <a id="ShowMap"  href="../Agahi/جستجو-اطراف-من"><img class="MapShadow" src="~/images/Map_icon.png" /></a>
                             </div>
 
                             <div class="col-md-2  ">
@@ -54,8 +51,8 @@
 
                             <div class="col-md-2 ">
 
-                                <select data-placeholder="همه شهر ها" class="chosen-select ShahrSelect width-100Per" tabindex="2">
-                                    <option value=""></option>
+                                <select data-placeholder="همه شهر ها" class="chosen-select ShahrSelect width-100Per"  >
+                                     
 
                                     @{   foreach (var item in Utility.GetCites(Utility.PrivinceID.ToString()))
                                         {
@@ -1483,13 +1480,7 @@
         $(document).ready(function () {
 
             $('.kind-Price').chosen();
-
-            $("#detailsellapart").click(function () {
-
-                $('.detailsellapart').toggleClass('display-none');
-
-            });
-
+            
 
 
             $(".kind-Price").chosen().change(function (e, params) {
@@ -1565,7 +1556,7 @@
             { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
             var UntillArea = $('#Untill-Area').val();
             var FromArea = $('#From-Area').val();
-           
+
 
 
 
@@ -1620,9 +1611,9 @@
             var Person = $('input[type=radio][name=Person]:checked').attr('value');
             var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
 
-            
-            
-            
+
+
+
             $.ajax({
                 type: "GET",
                 url: "/Search/SearchRentHome",
@@ -1727,7 +1718,7 @@
             var Person = $('input[type=radio][name=Person]:checked').attr('value');
             var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
 
-            
+
 
             $.ajax({
                 type: "GET",
@@ -1769,7 +1760,7 @@
             //Internal
             var Person = $('input[type=radio][name=Person]:checked').attr('value');
 
-            
+
 
             $.ajax({
                 type: "GET",
@@ -1867,7 +1858,7 @@
             var HasLoan = "";
             if ($('#HasLoan').is(":checked")) { HasLoan = true; } else { HasLoan = false; }
 
-            
+
 
 
             $.ajax({
@@ -1933,7 +1924,7 @@
             if ($('#HasSingleDocument').is(":checked")) { HasSingleDocument = true; } else { HasSingleDocument = false; }
             var HasLoan = "";
             if ($('#HasLoan').is(":checked")) { HasLoan = true; } else { HasLoan = false; }
-            
+
 
             $.ajax({
                 type: "GET",
@@ -2028,7 +2019,7 @@
             if ($('#HasBabyPlayground').is(":checked")) { HasBabyPlayground = true; } else { HasBabyPlayground = false; }
             var HasGym = "";
             if ($('#HasGym').is(":checked")) { HasGym = true; } else { HasGym = false; }
-            
+
 
             $.ajax({
                 type: "GET",
@@ -2076,7 +2067,7 @@
             var HasFast = "";
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
-            var RoomNumber = $('#RoomNumber').val();            
+            var RoomNumber = $('#RoomNumber').val();
             var KindTotalPrice = $("#Kind-TotalPrice").val();
             var UntillTotalPrice = "";
             var FromTotalPrice = "";
@@ -2140,8 +2131,8 @@
             var HasLoan = "";
             if ($('#HasLoan').is(":checked")) { HasLoan = true; } else { HasLoan = false; }
 
-            
-            
+
+
             $.ajax({
                 type: "GET",
                 url: "/Search/SearchSaleOfficeSub",
@@ -2245,7 +2236,7 @@
             var HasGym = "";
             if ($('#HasGym').is(":checked")) { HasGym = true; } else { HasGym = false; }
 
-            
+
 
             $.ajax({
                 type: "GET",
@@ -2291,7 +2282,7 @@
             var Person = $('input[type=radio][name=Person]:checked').attr('value');
 
 
-            
+
 
 
 
@@ -2329,8 +2320,8 @@
             if ($('#HasImage').is(":checked")) { HasFast = true; } else { HasFast = false; }
             //Internal
             var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
-            
-            
+
+
 
             $.ajax({
                 type: "GET",
@@ -2412,7 +2403,7 @@
             var FromTotalPrice = "";
             if (KindTotalPrice == 2)//مقطوع - تومان
             { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
-            
+
 
 
             $.ajax({
@@ -2456,7 +2447,7 @@
             { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
             var KindColor = $("#KindColor").val();
             var KindBrand = $("#KindBrand").val();
-            
+
             $.ajax({
                 type: "GET",
                 url: "/Search/SearchMobileTablet",
@@ -2514,7 +2505,7 @@
             var HasCamera = "";
             if ($('#HasCamera').is(":checked")) { HasCamera = true; } else { HasCamera = false; }
 
-            
+
             $.ajax({
                 type: "GET",
                 url: "/Search/SearchLapTop",
@@ -2569,8 +2560,8 @@
             if ($('#HasSpeaker').is(":checked")) { HasSpeaker = true; } else { HasSpeaker = false; }
 
 
-              
-            
+
+
             $.ajax({
                 type: "GET",
                 url: "/Search/SearchCase",
@@ -2617,9 +2608,9 @@
             var FromTotalPrice = "";
             if (KindTotalPrice == 2)//مقطوع - تومان
             { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
-            
 
-            
+
+
 
 
 
@@ -2663,8 +2654,8 @@
             var FromTotalPrice = "";
             if (KindTotalPrice == 2)//مقطوع - تومان
             { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
-            
-            
+
+
             $.ajax({
                 type: "GET",
                 url: "/Search/SearchCarBoatAcc",
@@ -2802,7 +2793,7 @@
             var HasSound = "";
             if ($('#HasSound').is(":checked")) { HasSound = true; } else { HasSound = false; }
 
-            
+
 
             $.ajax({
                 type: "GET",
@@ -2851,7 +2842,7 @@
 
 
 
-            
+
             $.ajax({
                 type: "GET",
                 url: "/Search/SearchVehicleAccessories",
@@ -2908,9 +2899,9 @@
             var KindPelak = $('#Kind-Pelak').val();
             var HasAlarm = "";
             if ($('#HasAlarm').is(":checked")) { HasAlarm = true; } else { HasAlarm = false; }
-            
 
-            
+
+
 
             $.ajax({
                 type: "GET",
@@ -2956,7 +2947,7 @@
             if (KindTotalPrice == 2)//مقطوع - تومان
             { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
 
-            
+
 
 
             $.ajax({
@@ -2999,7 +2990,7 @@
             if (KindTotalPrice == 2)//مقطوع - تومان
             { UntillTotalPrice = $('#Untill-TotalPrice').val(); FromTotalPrice = $('#From-TotalPrice').val(); }
 
-            
+
             $.ajax({
                 type: "GET",
                 url: "/Search/SearchBoatsAccessories",
@@ -3027,6 +3018,33 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+        $(document).ready(function () {
+            $('#ClickDetail').click(function () {
+                if ($('#hidden-info').css("display") == "block") {
+                    $('#hidden-info').slideUp();
+                    $('.ArrowDetail').css('-webkit-transform', 'rotate(0deg)');
+                    $('.ArrowDetail').css('-moz-transform', 'rotate(0deg)');
+                    $('.ArrowDetail').css('transform', 'rotate(0deg)');
+                }
+                else {
+                    $('#hidden-info').slideDown();
+                    $('.ArrowDetail').css('-webkit-transform', 'rotate(180deg)');
+                    $('.ArrowDetail').css('-moz-transform', 'rotate(180deg)');
+                    $('.ArrowDetail').css('transform', 'rotate(180deg)');
+                }
+            });
+           
+        });
 
 
     </script>
