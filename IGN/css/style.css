@@ -3446,7 +3446,7 @@ blockquote {
 
 .md-checkbox {
     position: relative;
-    margin: 16px 0;
+    margin: 10px 0;
 }
 
     .md-checkbox label {
@@ -7024,8 +7024,8 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     height: 300px;
 }
 
-.col-calc-6 {
-    width: calc(100% / 6.2);
+.col-calc-7 {
+    width: calc(100% / 7.3);
     display: inline-block;
 }
 
@@ -7221,4 +7221,8 @@ color:black;
 .margin-top-7 {
     margin-top: 7px;
 }
+.SearchChk {
+    padding-left: 0px;
+    padding-right: 30px;
+    margin-top: 0px;
 }
