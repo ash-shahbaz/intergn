@@ -233,7 +233,7 @@ textarea {
     margin: 0;
 }
 
-.nav li a,
+/*.nav li a,
 .navbar-default .navbar-nav > li > a {
     background-color: transparent;
     font-weight: 500;
@@ -241,7 +241,7 @@ textarea {
     color: #0a0a0a;
     padding: 15px 12px;
     text-transform: uppercase;
-}
+}*/
 
     .nav li a:hover,
     .navbar-default .navbar-nav > li > a:focus,
