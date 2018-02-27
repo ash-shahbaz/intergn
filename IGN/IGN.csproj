@@ -157,6 +157,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhabarController.cs" />
     <Compile Include="Controllers\LinkestanController.cs" />
+    <Compile Include="Controllers\PostAgahiController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\SyncController.cs" />
     <Compile Include="Global.asax.cs">
@@ -179,6 +180,7 @@
     <Compile Include="Models\AdsRegistration\RegisterSaleLandSubs.cs" />
     <Compile Include="Models\AdsRegistration\RegisterSaleApartSubs.cs" />
     <Compile Include="Models\JCategroy.cs" />
+    <Compile Include="Models\PostAgahi.cs" />
     <Compile Include="Models\SearchPostItem.cs" />
     <Compile Include="Models\Search\SearchAccessoriesDetails.cs" />
     <Compile Include="Models\Search\SearchAllAgahis.cs" />
@@ -373,6 +375,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Temp\" />
     <Folder Include="Views\City\" />
+    <Folder Include="Views\PostAgahi\" />
     <Folder Include="Views\Search\" />
   </ItemGroup>
   <ItemGroup>
