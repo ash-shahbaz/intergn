@@ -755,7 +755,7 @@
 
 @{
 
-    if (ViewBag.lv1 == "املاک" && ViewBag.lv2 == "فروش-املاک-مسکونی" && ViewBag.lv3 == "آپارتمان" || ViewBag.lv3 == "خانه-و-ویلا")
+    if (ViewBag.lv1 == "املاک" && ViewBag.lv2 == "فروش-املاک-مسکونی" && ViewBag.lv3 != "زمین-و-کلنگی")
     {
         <!----------شروع -فروش املاک مسکونی- آپارتمان +و+ خانه و ویلا---------->
 
@@ -1438,8 +1438,6 @@
 }
 
 
-
-
 @{
     if (ViewBag.lv1 == "املاک" && ViewBag.lv2 == "اجاره-مسکونی" && ViewBag.lv3 != null)
     {
@@ -1597,10 +1595,7 @@
             </div>
 
         </div>
-
-
-
-
+        
         <div class="navbar NavBarDetail">
             <div id="ClickDetail">جزئیات بیشتر <span class="ArrowDetail"></span></div>
             <div id="hidden-info">
@@ -1785,10 +1780,7 @@
 
             </div>
         </div>
-
-
-
-
+        
         <div class="row">
             <div class="col-md-8 search-col">
                 <button id="SearchRentHouseSub" class="btn btn-common btn-search btn-block search-btn"><strong>جستجو</strong></button>
@@ -2217,9 +2209,7 @@
 
             </div>
         </div>
-
-
-
+        
                 <div class="row">
                     <div class="col-md-8 search-col">
                         <button id="SearchSaleOfficeSub" class="btn btn-common btn-search btn-block search-btn"><strong>جستجو</strong></button>
@@ -2423,9 +2413,7 @@
             </div>
 
         </div>
-
-
-
+        
         <div class="navbar NavBarDetail">
             <div id="ClickDetail">جزئیات بیشتر <span class="ArrowDetail"></span></div>
             <div id="hidden-info">
