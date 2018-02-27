@@ -131,21 +131,15 @@
                                                         </div>
                                                         <label class="col-sm-3">شهر<span class="required">*</span></label>
                                                     </div>
+
                                                     <div class="row form-group select-condition">
                                                         <div class="col-sm-9">
-
-
-
-                                                            <div id="Location" class="mapcreatepage"></div>
+                                                            <div class="mapcreatepage " id="map"></div>
 
 
                                                         </div>
                                                         <label class="col-sm-3">انتخاب روی نقشه<span class="required">*</span></label>
                                                     </div>
-
-
-
-
 
 
 
@@ -3044,49 +3038,36 @@
 
 <script src="~/js/leaflet.js"></script>
 
-    @*<script>
-        function myMap() {
-            var mapProp = {
-                center: new google.maps.LatLng(33, 53),
-                zoom: 5,
-            };
-            var map = new google.maps.Map(document.getElementById("Location"), mapProp);
-        }
 
+<script >
+    
 
-    </script>*@
-<script language="javascript">
-         var map;
+         $(document).ready(function () {
 
-         function init() {
-             map = new L.Map('#Location');
-             L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                 attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-                 maxZoom: 18
+             var map = L.map('map').setView([35.71, 51.40], 12);
+
+             L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                 attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
              }).addTo(map);
-             map.attributionControl.setPrefix(''); // Don't show the 'Powered by Leaflet' text.
 
-             // map view before we get the location
-             map.setView(new L.LatLng(51.505, -0.09), 13);
-         }
+             L.marker([35.75, 51.43]).addTo(map)
+                 .bindPopup('پراید<br> مدل 95')
+                 .openPopup();
 
-         function onLocationFound(e) {
-             var radius = e.accuracy / 2;
-             var location = e.latlng
-             L.marker(location).addTo(map)
-             L.circle(location, radius).addTo(map);
-         }
+             L.marker([35.71, 51.40]).addTo(map)
+                 .bindPopup('خودرو بنز<br> مدل 94')
+                 .openPopup();
 
-         function onLocationError(e) {
-             alert(e.message);
-         }
+             L.marker([35.65, 51.35]).addTo(map)
+                 .bindPopup('پراید<br> مدل 95')
+                 .openPopup();
 
-         function getLocationLeaflet() {
-             map.on('locationfound', onLocationFound);
-             map.on('locationerror', onLocationError);
 
-             map.locate({ setView: true, maxZoom: 16 });
-         }
+
+
+
+         });
+
 </script>
 
 
