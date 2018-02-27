@@ -3446,7 +3446,7 @@ blockquote {
 
 .md-checkbox {
     position: relative;
-    margin: 16px 0;
+    margin: 10px 0;
 }
 
     .md-checkbox label {
@@ -7024,8 +7024,8 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     height: 300px;
 }
 
-.col-calc-6 {
-    width: calc(100% / 6.2);
+.col-calc-7 {
+    width: calc(100% / 7.3);
     display: inline-block;
 }
 
@@ -7131,9 +7131,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     outline: 0;
     -webkit-transform: rotateZ(0);
     transform: rotateZ(0);
-    min-height: 2.7142em;
     background: #FFF;
-    display: inline-block;
     padding: 5px 5px 5px 5px;
     color: rgba(0,0,0,.87);
     box-shadow: none;
@@ -7142,6 +7140,7 @@ input:checked + .custom-radio-outer .custom-radio-inner {
     -webkit-transition: box-shadow .1s ease,width .1s ease;
     transition: box-shadow .1s ease,width .1s ease;
     font-weight: 400;
+    font-size: 12px;
 }
     .SelectStyle option {
         white-space: normal;
@@ -7218,4 +7217,12 @@ color:black;
 /*-------------------------------------------------------------------------------------------------------*/
 .margin-top-10{
     margin-top: 10px;
+}
+.margin-top-7 {
+    margin-top: 7px;
+}
+.SearchChk {
+    padding-left: 0px;
+    padding-right: 30px;
+    margin-top: 0px;
 }
