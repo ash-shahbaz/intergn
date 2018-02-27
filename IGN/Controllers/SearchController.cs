@@ -22,41 +22,31 @@ namespace IGN.Controllers
             return SearchPostItem.SearchSaleHomes(item);
         }
 
-
-
         public string SearchRentHome(SearchRentHomes item)
         {
             return SearchPostItem.SearchRentHomes(item);
         }
-
-
 
         public string SearchSaleOffice(SearchSaleOffices item)
         {
             return SearchPostItem.SearchSaleOffices(item);
         }
 
-
-
         public string SearchRentOffice(SearchRentOffices item)
         {
             return SearchPostItem.SearchRentOffices(item);
         }
 
-
-
         public string SearchServicesHouse(SearchServicesHouses item)
         {
             return SearchPostItem.SearchServicesHouses(item);
         }
-
-
+        
 
         public string SearchSaleApartSub(SearchSaleApartSubs item)
         {
             return SearchPostItem.SearchSaleApartSubs(item);
         }
-
 
 
         public string SearchSaleLandSub(SearchSaleLandSubs item)
