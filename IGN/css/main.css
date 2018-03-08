@@ -1294,27 +1294,6 @@ a.verified {
         display: none;
     }
 
-    /*#accordion .panel-body label:before,
-    .checkbox label:before {
-        position: absolute;
-        color: #9e9e9e;
-        font-size: 16px;
-        content: "\f096";
-        font-family: 'FontAwesome';
-        left: 0;
-        top: 0;
-    }
-
-        .accept label:before, .checkbox label:before{
-            position: absolute;
-            color: #9e9e9e;
-            font-size: 16px;
-            content: "\f096";
-            font-family: 'FontAwesome';
-            right: 0;
-            left: auto;
-            top: 0px !important;
-        }*/
 
     #accordion .panel-body label.checked:before,
     .checkbox label.checked:before {
@@ -2035,7 +2014,7 @@ a.verified {
 
 .checkbox label {
     position: relative;
-    padding-right: 22px;
+    padding-right: 0px;
     color: #000000;
     font-weight: 400;
     margin-right: 35px;
