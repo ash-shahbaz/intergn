@@ -89,14 +89,14 @@
                                                     <h4>جزئیات آگهی<span class="pull-left float-left">* فیلد های اجباری</span></h4>
 
                                                     <div class="row margin-top-10  ">
-                                                        <div class="col-sm-9 user-type">
+                                                        <div class="col-md-9 user-type">
 
                                                             <label>@ViewBag.lvl0 >> @ViewBag.lvl1 >> @ViewBag.lvl2      <a href="/Agahi/ثبت-آگهی">تغییر دسته بندی</a></label>
                                                         </div>
                                                         <label class="col-md-3">گروه بندی<span class="required">*</span></label>
                                                     </div>
                                                     <div class="row margin-top-10  ">
-                                                        <div class="col-sm-9 user-type">
+                                                        <div class="col-md-9 user-type">
                                                             <select data-placeholder="استان را انتخاب کنید" class="selectregister select Province width-100Per"  >
                                                                 <option value=""></option>
 
@@ -133,7 +133,7 @@
                                                     </div>
 
                                                     <div class="row margin-top-10 select-condition">
-                                                        <div class="col-sm-9">
+                                                        <div class="col-md-9">
                                                             <div class="mapcreatepage " id="map"></div>
 
 
@@ -147,7 +147,7 @@
                                                     @if (ViewBag.lvl0 == "وسایل نقلیه")
                                                     {
                                                         <div class="row margin-top-10  ">
-                                                            <div class="col-sm-9 user-type">
+                                                            <div class="col-md-9 user-type">
                                                                 <div class="md-radio md-radio-inline">
                                                                     <input id="Kind-Sell" type="radio" name="Kind" value="1">
                                                                     <label for="Kind-Sell">فروشی</label>
@@ -167,7 +167,7 @@
                                                     else
                                                     {
                                                         <div class="row margin-top-10  ">
-                                                            <div class="col-sm-9 user-type">
+                                                            <div class="col-md-9 user-type">
                                                                 <div class="md-radio md-radio-inline">
                                                                     <input id="Kind-Need" type="radio" value="2" name="Kind">
                                                                     <label for="Kind-Need">درخواست کننده</label>
@@ -185,7 +185,7 @@
 
 
                                                     <div class="row margin-top-10 add-title">
-                                                        <div class="col-sm-9">
+                                                        <div class="col-md-9">
                                                             <input id="TitleAgahi" type="text" class="form-control " placeholder="گوشی اپل مدل 8Plus بدون خط و خش">
                                                         </div>
                                                         <label class="col-md-3 margin-top-8">عنوان آگهی<span class="required">*</span></label>
@@ -196,7 +196,7 @@
 
 
                                                     <div class="row margin-top-10 add-image">
-                                                        <div class="col-sm-9">
+                                                        <div class="col-md-9">
                                                             <h5><i class="fa fa-upload" aria-hidden="true"></i>عکس خود را انتخاب کنید<span>شما میتوانید چند تصویر ارسال کنید</span></h5>
                                                             <div class="upload-section dir-ltr">
                                                                 <label class="upload-image" for="upload-image-one">
@@ -221,13 +221,13 @@
 
 
                                                     <div class="row margin-top-10 item-description">
-                                                        <div class="col-sm-9">
+                                                        <div class="col-md-9">
                                                             <textarea id="txtDesc" class="form-control" placeholder="توضیحات کالای مربوطه" rows="8"></textarea>
                                                         </div>
                                                         <label class="col-md-3 margin-top-8">توضیحات<span class="required">*</span></label>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-sm-9 col-sm-offset-3">
+                                                        <div class="col-md-9 col-md-offset-3">
                                                             <p>١٥٠ حرف</p>
                                                         </div>
                                                     </div>
@@ -299,7 +299,7 @@
                                                                                     </div>
 
                                                                                     <div class="row margin-top-10  ">
-                                                                                        <div class="col-sm-9 user-type">
+                                                                                        <div class="col-md-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
                                                                                                 <input id="Person-Self" type="radio" name="Person" value="1" class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
@@ -313,7 +313,7 @@
                                                                                     </div>
 
                                                                                     <div class="row margin-top-10  ">
-                                                                                        <div class="col-sm-9 user-type">
+                                                                                        <div class="col-md-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
                                                                                                 <input id="Side-No" type="radio" name="Countryside" value="1" class="HoomeShahr">
                                                                                                 <label for="Side-No">نیست</label>
@@ -391,7 +391,7 @@
                                                                                         <label class="col-md-3 margin-top-8">گرمایش</label>
                                                                                     </div>
                                                                                     <div class="row margin-top-10 additional">
-                                                                                        <div class="col-sm-9 checkbox padding-right-40">
+                                                                                        <div class="col-md-9 checkbox padding-right-40">
 
                                                                                             <div class="md-checkbox col-calc-3">
                                                                                                 <input id="HasParking" type="checkbox">
@@ -489,12 +489,20 @@
                                                                                         <label class="col-md-3 margin-top-8">زیر بنا</label>
                                                                                     </div>
                                                                                     <div class="row  ">
-                                                                                                <div class="col-md-6">
-
-                                                                                                    <label>هزار تومان</label>
-                                                                                                    <input id="Kind-Loan" type="radio" name="price" value="1">
-                                                                                                    <label for="Kind-Loan">ندارد </label>
+                                                                                        <div class="col-md-6">
+                                                                                            <div class="row additional">
+                                                                                               
+                                                                                                <div class="col-md-8 checkbox padding-right-40 no-margin">
+                                                                                                    <div class="md-checkbox col-calc-3">
+                                                                                                        <input id="HasExist" type="checkbox">
+                                                                                                        <label for="HasExist">ندارد</label>
+                                                                                                    </div>
                                                                                                 </div>
+                                                                                                <div class="col-md-4 padding-top-8">
+                                                                                                    <label>هزار تومان</label>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
                                                                                                 <div class="col-md-3">
                                                                                                     <input id="Loan-Amount" type="text" class="form-control ">
                                                                                                 </div>
@@ -557,7 +565,7 @@
 
 
                                                                                     <div class="row margin-top-10  ">
-                                                                                        <div class="col-sm-9 user-type">
+                                                                                        <div class="col-md-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
                                                                                                 <input id="Person-Self" type="radio" name="Person" value="1" class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
@@ -571,7 +579,7 @@
                                                                                     </div>
 
                                                                                     <div class="row margin-top-10  ">
-                                                                                        <div class="col-sm-9 user-type">
+                                                                                        <div class="col-md-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
                                                                                                 <input id="Side-No" type="radio" name="Countryside" value="1" class="HoomeShahr">
                                                                                                 <label for="Side-No">نیست</label>
@@ -612,7 +620,7 @@
                                                                                     </div>
 
                                                                                     <div class="row margin-top-10 additional">
-                                                                                        <div class="col-sm-9 checkbox  padding-right-40">
+                                                                                        <div class="col-md-9 checkbox  padding-right-40">
                                                                                             <div class="md-checkbox col-calc-3">
                                                                                                 <input id="HasHeir" type="checkbox">
                                                                                                 <label for="HasHeir">ورثه ای</label>
@@ -638,9 +646,18 @@
                                                                                     <div class="row  margin-top-10  ">
                                                                                                 <div class="col-md-6">
 
-                                                                                                    <label>هزار تومان</label>
-                                                                                                    <input id="Kind-Loan" type="radio" name="price" value="1">
-                                                                                                    <label for="Kind-Loan">ندارد </label>
+                                                                                                    <div class="row additional">
+
+                                                                                                        <div class="col-md-8 checkbox padding-right-40 no-margin">
+                                                                                                            <div class="md-checkbox col-calc-3">
+                                                                                                                <input id="HasExist" type="checkbox">
+                                                                                                                <label for="HasExist">ندارد</label>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-4 padding-top-8">
+                                                                                                            <label>هزار تومان</label>
+                                                                                                        </div>
+                                                                                                    </div>
                                                                                                 </div>
                                                                                                 <div class="col-md-3">
                                                                                                     <input id="Loan-Amount" type="text" class="form-control ">
@@ -670,7 +687,7 @@
 
 
                                                                                     <div class="row  ">
-                                                                                        <div class="col-sm-9">
+                                                                                        <div class="col-md-9">
                                                                                             <div class="row">
                                                                                                 <div class="col-md-2">
 
@@ -696,7 +713,7 @@
                                                                                     </div>
 
                                                                                     <div class="row  ">
-                                                                                        <div class="col-sm-9">
+                                                                                        <div class="col-md-9">
                                                                                             <div class="row">
                                                                                                 <div class="col-md-2">
 
@@ -745,7 +762,7 @@
                                                                                     </div>
 
                                                                                     <div class="row margin-top-10  ">
-                                                                                        <div class="col-sm-9 user-type">
+                                                                                        <div class="col-md-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
                                                                                                 <input id="Person-Self" type="radio" name="Person" value="1" class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
@@ -759,7 +776,7 @@
                                                                                     </div>
 
                                                                                     <div class="row margin-top-10  ">
-                                                                                        <div class="col-sm-9 user-type">
+                                                                                        <div class="col-md-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
                                                                                                 <input id="Side-No" type="radio" name="Countryside" value="1" class="HoomeShahr">
                                                                                                 <label for="Side-No">نیست</label>
@@ -839,7 +856,7 @@
                                                                                         <label class="col-md-3 margin-top-8">گرمایش</label>
                                                                                     </div>
                                                                                     <div class="row margin-top-10 additional">
-                                                                                        <div class="col-sm-9 checkbox  padding-right-40">
+                                                                                        <div class="col-md-9 checkbox  padding-right-40">
 
                                                                                             <div class="md-checkbox col-calc-3">
                                                                                                 <input id="HasParking" type="checkbox">
@@ -989,7 +1006,7 @@
                                                                                     </div>
 
                                                                                     <div class="row margin-top-10  ">
-                                                                                        <div class="col-sm-9 user-type">
+                                                                                        <div class="col-md-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
                                                                                                 <input id="Person-Self" type="radio" name="Person" value="1" class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
@@ -1002,7 +1019,7 @@
                                                                                         <label class="col-md-3">نوع آگهی دهنده<span class="required">*</span></label>
                                                                                     </div>
                                                                                     <div class="row margin-top-10  ">
-                                                                                        <div class="col-sm-9 user-type">
+                                                                                        <div class="col-md-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
                                                                                                 <input id="AdminDoc-No" type="radio" value="1" name="AdminDoc">
                                                                                                 <label for="AdminDoc-No">ندارد</label>
@@ -1015,7 +1032,7 @@
                                                                                         <label class="col-md-3">سند اداری<span class="required">*</span></label>
                                                                                     </div>
                                                                                     <div class="row margin-top-10  ">
-                                                                                        <div class="col-sm-9 user-type">
+                                                                                        <div class="col-md-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
                                                                                                 <input id="Side-No" type="radio" name="Countryside" value="1" class="HoomeShahr">
                                                                                                 <label for="Side-No">نیست</label>
@@ -1096,7 +1113,7 @@
                                                                                         <label class="col-md-3 margin-top-8">گرمایش</label>
                                                                                     </div>
                                                                                     <div class="row margin-top-10 additional">
-                                                                                        <div class="col-sm-9 checkbox  padding-right-40">
+                                                                                        <div class="col-md-9 checkbox  padding-right-40">
 
                                                                                             <div class="md-checkbox col-calc-3">
                                                                                                 <input id="HasParking" type="checkbox">
@@ -1194,9 +1211,18 @@
                                                                                     </div>
                                                                                     <div class="row   margin-top-10 ">
                                                                                                 <div class="col-md-6">
-                                                                                                    <label>هزار تومان</label>
-                                                                                                    <input id="Kind-Loan" type="radio" name="price" value="1">
-                                                                                                    <label for="Kind-Loan">ندارد </label>
+                                                                                                    <div class="row additional">
+
+                                                                                                        <div class="col-md-8 checkbox padding-right-40 no-margin">
+                                                                                                            <div class="md-checkbox col-calc-3">
+                                                                                                                <input id="HasExist" type="checkbox">
+                                                                                                                <label for="HasExist">ندارد</label>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-4 padding-top-8">
+                                                                                                            <label>هزار تومان</label>
+                                                                                                        </div>
+                                                                                                    </div>
                                                                                                 </div>
                                                                                                 <div class="col-md-3">
                                                                                                     <input id="Loan-Amount" type="text" class="form-control ">
@@ -1226,7 +1252,7 @@
 
 
                                                                                     <div class="row  ">
-                                                                                        <div class="col-sm-9">
+                                                                                        <div class="col-md-9">
                                                                                             <div class="row">
                                                                                                 <div class="col-md-2">
 
@@ -1250,7 +1276,7 @@
                                                                                         <label class="col-md-3 margin-top-8">ودیعه<span class="required">*</span></label>
                                                                                     </div>
                                                                                     <div class="row  ">
-                                                                                        <div class="col-sm-9">
+                                                                                        <div class="col-md-9">
                                                                                             <div class="row">
                                                                                                 <div class="col-md-2">
 
@@ -1297,7 +1323,7 @@
                                                                                     </div>
 
                                                                                     <div class="row margin-top-10  ">
-                                                                                        <div class="col-sm-9 user-type">
+                                                                                        <div class="col-md-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
                                                                                                 <input id="Person-Self" type="radio" name="Person" value="1" class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
@@ -1310,7 +1336,7 @@
                                                                                         <label class="col-md-3">نوع آگهی دهنده<span class="required">*</span></label>
                                                                                     </div>
                                                                                     <div class="row margin-top-10  ">
-                                                                                        <div class="col-sm-9 user-type">
+                                                                                        <div class="col-md-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
                                                                                                 <input id="AdminDoc-No" type="radio" value="1" name="AdminDoc">
                                                                                                 <label for="AdminDoc-No">ندارد</label>
@@ -1323,7 +1349,7 @@
                                                                                         <label class="col-md-3">سند اداری<span class="required">*</span></label>
                                                                                     </div>
                                                                                     <div class="row margin-top-10  ">
-                                                                                        <div class="col-sm-9 user-type">
+                                                                                        <div class="col-md-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
                                                                                                 <input id="Side-No" type="radio" name="Countryside" value="1" class="HoomeShahr">
                                                                                                 <label for="Side-No">نیست</label>
@@ -1403,7 +1429,7 @@
                                                                                         <label class="col-md-3 margin-top-8">گرمایش</label>
                                                                                     </div>
                                                                                     <div class="row margin-top-10 additional">
-                                                                                        <div class="col-sm-9 checkbox  padding-right-40">
+                                                                                        <div class="col-md-9 checkbox  padding-right-40">
 
                                                                                             <div class="md-checkbox col-calc-3">
                                                                                                 <input id="HasParking" type="checkbox">
@@ -1503,7 +1529,7 @@
                                                                                     <h4>جزئیات آگهی</h4>
 
                                                                                     <div class="row margin-top-10  ">
-                                                                                        <div class="col-sm-9 user-type">
+                                                                                        <div class="col-md-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
                                                                                                 <input id="Person-Self" type="radio" name="Person" value="1" class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
@@ -1565,7 +1591,7 @@
 
 
                                                                                     <div class="row  margin-top-10  ">
-                                                                                        <div class="col-sm-9">
+                                                                                        <div class="col-md-9">
                                                                                             <div class="row">
                                                                                                 <div class="col-md-3">
                                                                                                     <input id="Number-MonthlyInstallment" type="text" class="form-control">
@@ -1590,7 +1616,7 @@
 
 
                                                                                     <div class="row  margin-top-10  ">
-                                                                                        <div class="col-sm-9">
+                                                                                        <div class="col-md-9">
                                                                                             <div class="btn-group hierarchy-select no-margin" data-resize="auto" id="example-one">
                                                                                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                                                                                     <span class="selected-label pull-left">&nbsp;</span>
@@ -1645,7 +1671,7 @@
                                                                                         <label class="col-md-3 margin-top-8">سال<span class="required">*</span></label>
                                                                                     </div>
                                                                                     <div class="row margin-top-10  ">
-                                                                                        <div class="col-sm-9 user-type">
+                                                                                        <div class="col-md-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
                                                                                                 <input id="Person-Self" type="radio" name="Person" value="1" class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
@@ -1671,7 +1697,7 @@
                                                                                 <div class="section quick-rules thumbnail border-radius-15">
                                                                                     <h4>جزئیات خیلی آگهی</h4>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Condition" data-placeholder="کارکرده" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">کارکرده</option>
@@ -1681,10 +1707,10 @@
                                                                                             </select>
 
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">وضعیت</label>
+                                                                                        <label class="col-md-6 margin-top-8">وضعیت</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Chassis" data-placeholder="سواری" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">سدان</option>
@@ -1693,10 +1719,10 @@
                                                                                             </select>
 
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">شاسی</label>
+                                                                                        <label class="col-md-6 margin-top-8">شاسی</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Diff" data-placeholder="تک" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">تک</option>
@@ -1704,10 +1730,10 @@
                                                                                             </select>
 
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">دیفرانسیل</label>
+                                                                                        <label class="col-md-6 margin-top-8">دیفرانسیل</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-ColorOut" data-placeholder="قرمز" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">1</option>
@@ -1717,10 +1743,10 @@
                                                                                                 <option value="1">5 یا بیشتر</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">رنگ بدنه</label>
+                                                                                        <label class="col-md-6 margin-top-8">رنگ بدنه</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-ColorIn" data-placeholder="قرمز" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">1</option>
@@ -1730,10 +1756,10 @@
                                                                                                 <option value="1">5 یا بیشتر</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">رنگ داخل</label>
+                                                                                        <label class="col-md-6 margin-top-8">رنگ داخل</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-ModelTip" data-placeholder="ندارد" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">تیپ 5</option>
@@ -1743,10 +1769,10 @@
                                                                                                 <option value="1">5</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">مدل</label>
+                                                                                        <label class="col-md-6 margin-top-8">مدل</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Gearbox" data-placeholder="دستی" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">اتومات</option>
@@ -1756,10 +1782,10 @@
                                                                                                 <option value="1">5 یا بیشتر</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">گیربکس</label>
+                                                                                        <label class="col-md-6 margin-top-8">گیربکس</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Fuel" data-placeholder="بنزین" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">1</option>
@@ -1769,10 +1795,10 @@
                                                                                                 <option value="1">5 یا بیشتر</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">نوع سوخت</label>
+                                                                                        <label class="col-md-6 margin-top-8">نوع سوخت</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Crash" data-placeholder=" بدون رنگ" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">بدون رنگ</option>
@@ -1780,10 +1806,10 @@
                                                                                             </select>
 
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">وضعیت بدنه</label>
+                                                                                        <label class="col-md-6 margin-top-8">وضعیت بدنه</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Pelak" data-placeholder="پلاک ملی" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">گذر موقت</option>
@@ -1791,10 +1817,10 @@
                                                                                             </select>
 
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">موارد خاص</label>
+                                                                                        <label class="col-md-6 margin-top-8">موارد خاص</label>
                                                                                     </div>
                                                                                     <div class="row margin-top-10 additional">
-                                                                                        <div class="col-sm-9 checkbox padding-right-40">
+                                                                                        <div class="col-md-9 checkbox padding-right-40">
 
                                                                                             <div class="md-checkbox col-calc-3">
                                                                                                 <input id="HasSunroof" type="checkbox">
@@ -1857,7 +1883,7 @@
 
 
                                                                                     <div class="row  margin-top-10  ">
-                                                                                        <div class="col-sm-9">
+                                                                                        <div class="col-md-9">
                                                                                             <div class="row">
                                                                                                 <div class="col-md-3">
                                                                                                     <input id="Number-MonthlyInstallment" type="text" class="form-control">
@@ -1883,7 +1909,7 @@
 
 
                                                                                     <div class="row  margin-top-10  ">
-                                                                                        <div class="col-sm-9">
+                                                                                        <div class="col-md-9">
                                                                                             <div class="btn-group hierarchy-select no-margin" data-resize="auto" id="example-one">
                                                                                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                                                                                     <span class="selected-label pull-left">&nbsp;</span>
@@ -1939,7 +1965,7 @@
                                                                                     </div>
 
                                                                                     <div class="row margin-top-10  ">
-                                                                                        <div class="col-sm-9 user-type">
+                                                                                        <div class="col-md-9 user-type">
                                                                                             <div class="md-radio md-radio-inline">
                                                                                                 <input id="Person-Self" type="radio" name="Person" value="1" class="Person">
                                                                                                 <label for="Person-Self">شخصی</label>
@@ -1964,7 +1990,7 @@
                                                                                 <div class="section quick-rules thumbnail border-radius-15">
                                                                                     <h4>جزئیات خیلی آگهی</h4>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Condition" data-placeholder="کارکرده" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">کارکرده</option>
@@ -1974,10 +2000,10 @@
                                                                                             </select>
 
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">وضعیت</label>
+                                                                                        <label class="col-md-6 margin-top-8">وضعیت</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Chassis" data-placeholder="سواری" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">سدان</option>
@@ -1986,10 +2012,10 @@
                                                                                             </select>
 
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">شاسی</label>
+                                                                                        <label class="col-md-6 margin-top-8">شاسی</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Diff" data-placeholder="تک" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">تک</option>
@@ -1997,10 +2023,10 @@
                                                                                             </select>
 
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">دیفرانسیل</label>
+                                                                                        <label class="col-md-6 margin-top-8">دیفرانسیل</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-ColorOut" data-placeholder="قرمز" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">1</option>
@@ -2010,10 +2036,10 @@
                                                                                                 <option value="1">5 یا بیشتر</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">رنگ بدنه</label>
+                                                                                        <label class="col-md-6 margin-top-8">رنگ بدنه</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-ColorIn" data-placeholder="قرمز" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">1</option>
@@ -2023,10 +2049,10 @@
                                                                                                 <option value="1">5 یا بیشتر</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">رنگ داخل</label>
+                                                                                        <label class="col-md-6 margin-top-8">رنگ داخل</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-ModelTip" data-placeholder="ندارد" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">تیپ 5</option>
@@ -2036,10 +2062,10 @@
                                                                                                 <option value="1">5</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">مدل</label>
+                                                                                        <label class="col-md-6 margin-top-8">مدل</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Gearbox" data-placeholder="دستی" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">اتومات</option>
@@ -2049,10 +2075,10 @@
                                                                                                 <option value="1">5 یا بیشتر</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">گیربکس</label>
+                                                                                        <label class="col-md-6 margin-top-8">گیربکس</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Fuel" data-placeholder="بنزین" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">1</option>
@@ -2062,10 +2088,10 @@
                                                                                                 <option value="1">5 یا بیشتر</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">نوع سوخت</label>
+                                                                                        <label class="col-md-6 margin-top-8">نوع سوخت</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Crash" data-placeholder=" بدون رنگ" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">بدون رنگ</option>
@@ -2073,10 +2099,10 @@
                                                                                             </select>
 
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">وضعیت بدنه</label>
+                                                                                        <label class="col-md-6 margin-top-8">وضعیت بدنه</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Pelak" data-placeholder="پلاک ملی" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">گذر موقت</option>
@@ -2084,10 +2110,10 @@
                                                                                             </select>
 
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">موارد خاص</label>
+                                                                                        <label class="col-md-6 margin-top-8">موارد خاص</label>
                                                                                     </div>
                                                                                     <div class="row margin-top-10 additional">
-                                                                                        <div class="col-sm-9 checkbox padding-right-40">
+                                                                                        <div class="col-md-9 checkbox padding-right-40">
 
                                                                                             <div class="md-checkbox col-calc-3">
                                                                                                 <input id="HasSunroof" type="checkbox">
@@ -2150,7 +2176,7 @@
 
 
                                                                                 <div class="row  margin-top-10  ">
-                                                                                    <div class="col-sm-9">
+                                                                                    <div class="col-md-9">
                                                                                         <div class="row">
                                                                                             <div class="col-md-3">
                                                                                                 <input id="Number-MonthlyInstallment" type="text" class="form-control">
@@ -2175,7 +2201,7 @@
 
 
                                                                                 <div class="row  margin-top-10  ">
-                                                                                    <div class="col-sm-9">
+                                                                                    <div class="col-md-9">
                                                                                         <div class="btn-group hierarchy-select no-margin" data-resize="auto" id="example-one">
                                                                                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                                                                                 <span class="selected-label pull-left">&nbsp;</span>
@@ -2231,7 +2257,7 @@
                                                                                 </div>
 
                                                                                 <div class="row margin-top-10  ">
-                                                                                    <div class="col-sm-9 user-type">
+                                                                                    <div class="col-md-9 user-type">
                                                                                         <div class="md-radio md-radio-inline">
                                                                                             <input id="Person-Self" type="radio" name="Person" value="1" class="Person">
                                                                                             <label for="Person-Self">شخصی</label>
@@ -2254,7 +2280,7 @@
                                                                                 <div class="section quick-rules thumbnail border-radius-15">
                                                                                     <h4>جزئیات خیلی آگهی</h4>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Condition" data-placeholder="کارکرده" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">کارکرده</option>
@@ -2264,10 +2290,10 @@
                                                                                             </select>
 
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">وضعیت</label>
+                                                                                        <label class="col-md-6 margin-top-8">وضعیت</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-ColorOut" data-placeholder="قرمز" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">1</option>
@@ -2277,10 +2303,10 @@
                                                                                                 <option value="1">5 یا بیشتر</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">رنگ بدنه</label>
+                                                                                        <label class="col-md-6 margin-top-8">رنگ بدنه</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-ModelTip" data-placeholder="ندارد" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">تیپ 5</option>
@@ -2290,10 +2316,10 @@
                                                                                                 <option value="1">5</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">مدل</label>
+                                                                                        <label class="col-md-6 margin-top-8">مدل</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Fuel" data-placeholder="بنزین" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">1</option>
@@ -2303,10 +2329,10 @@
                                                                                                 <option value="1">5 یا بیشتر</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">نوع سوخت</label>
+                                                                                        <label class="col-md-6 margin-top-8">نوع سوخت</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Crash" data-placeholder=" بدون رنگ" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">بدون رنگ</option>
@@ -2314,10 +2340,10 @@
                                                                                             </select>
 
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">وضعیت بدنه</label>
+                                                                                        <label class="col-md-6 margin-top-8">وضعیت بدنه</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="Kind-Pelak" data-placeholder="پلاک ملی" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">گذر موقت</option>
@@ -2325,10 +2351,10 @@
                                                                                             </select>
 
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">موارد خاص</label>
+                                                                                        <label class="col-md-6 margin-top-8">موارد خاص</label>
                                                                                     </div>
                                                                                     <div class="row margin-top-10 additional">
-                                                                                        <div class="col-sm-9 checkbox padding-right-40">
+                                                                                        <div class="col-md-9 checkbox padding-right-40">
 
                                                                                             <div class="md-checkbox col-calc-3">
                                                                                                 <input id="HasAlarm" type="checkbox">
@@ -2361,7 +2387,7 @@
                                                                                     <h4>جزئیات آگهی</h4>
 
                                                                                     <div class="row  ">
-                                                                                        <div class="col-sm-9">
+                                                                                        <div class="col-md-9">
                                                                                             <div class="row">
                                                                                                 <div class="col-md-2">
 
@@ -2405,7 +2431,7 @@
                                                                                     <h4>جزئیات آگهی</h4>
 
                                                                                     <div class="row  ">
-                                                                                        <div class="col-sm-9">
+                                                                                        <div class="col-md-9">
                                                                                             <div class="row">
                                                                                                 <div class="col-md-2">
 
@@ -2429,7 +2455,7 @@
                                                                                     </div>
 
                                                                                     <div class="row  margin-top-10  ">
-                                                                                        <div class="col-sm-9">
+                                                                                        <div class="col-md-9">
                                                                                             <div class="btn-group hierarchy-select no-margin" data-resize="auto" id="example-one">
                                                                                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                                                                                     <span class="selected-label pull-left">&nbsp;</span>
@@ -2470,7 +2496,7 @@
                                                                                         <label class="col-md-3 margin-top-8">برند<span class="required">*</span></label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  ">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="KindColor" data-placeholder="قرمز" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">1</option>
@@ -2480,7 +2506,7 @@
                                                                                                 <option value="1">5 یا بیشتر</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">رنگ</label>
+                                                                                        <label class="col-md-6 margin-top-8">رنگ</label>
                                                                                     </div>
 
                                                                                 </div>
@@ -2504,7 +2530,7 @@
                                                                                     <h4>جزئیات آگهی</h4>
 
                                                                                     <div class="row  ">
-                                                                                        <div class="col-sm-9">
+                                                                                        <div class="col-md-9">
                                                                                             <div class="row">
                                                                                                 <div class="col-md-2">
 
@@ -2529,7 +2555,7 @@
                                                                                     </div>
 
                                                                                     <div class="row  margin-top-10  ">
-                                                                                        <div class="col-sm-9">
+                                                                                        <div class="col-md-9">
                                                                                             <div class="btn-group hierarchy-select no-margin" data-resize="auto" id="example-one">
                                                                                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                                                                                     <span class="selected-label pull-left">&nbsp;</span>
@@ -2570,7 +2596,7 @@
                                                                                         <label class="col-md-3 margin-top-8">برند<span class="required">*</span></label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  ">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="KindColor" data-placeholder="قرمز" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">1</option>
@@ -2580,7 +2606,7 @@
                                                                                                 <option value="1">5 یا بیشتر</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">رنگ</label>
+                                                                                        <label class="col-md-6 margin-top-8">رنگ</label>
                                                                                     </div>
 
                                                                                 </div>
@@ -2595,7 +2621,7 @@
                                                                                 <div class="section quick-rules thumbnail border-radius-15">
                                                                                     <h4>جزئیات خیلی آگهی</h4>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="KindSizeScreen" data-placeholder="13" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">1</option>
@@ -2605,20 +2631,20 @@
                                                                                                 <option value="1">5 یا بیشتر</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">سایز صفحه نمایش</label>
+                                                                                        <label class="col-md-6 margin-top-8">سایز صفحه نمایش</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="KindTouch" data-placeholder="هردو" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">ندارد</option>
                                                                                                 <option value="1">دارد</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">لمسی</label>
+                                                                                        <label class="col-md-6 margin-top-8">لمسی</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="MeasureRAM" data-placeholder="2" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">4</option>
@@ -2627,11 +2653,11 @@
                                                                                                 <option value="1">12 یا بیشتر</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">RAM</label>
+                                                                                        <label class="col-md-6 margin-top-8">RAM</label>
                                                                                     </div>
 
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="MeasureCPU" data-placeholder="بنزین" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">1</option>
@@ -2641,10 +2667,10 @@
                                                                                                 <option value="1">5 یا بیشتر</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">CPU</label>
+                                                                                        <label class="col-md-6 margin-top-8">CPU</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="MeasureHard" data-placeholder=" بدون رنگ" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">بدون رنگ</option>
@@ -2652,10 +2678,10 @@
                                                                                             </select>
 
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">Hard</label>
+                                                                                        <label class="col-md-6 margin-top-8">Hard</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="MeasureGraphic" data-placeholder="پلاک ملی" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">گذر موقت</option>
@@ -2663,10 +2689,10 @@
                                                                                             </select>
 
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">Graphic</label>
+                                                                                        <label class="col-md-6 margin-top-8">Graphic</label>
                                                                                     </div>
                                                                                     <div class="row margin-top-10 additional">
-                                                                                        <div class="col-sm-9 checkbox padding-right-40">
+                                                                                        <div class="col-md-9 checkbox padding-right-40">
                                                                                             <div class="md-checkbox col-calc-3">
                                                                                                 <input id="HasAntiWater" type="checkbox">
                                                                                                 <label for="HasAntiWater">ضد آب</label>
@@ -2707,7 +2733,7 @@
                                                                                     <h4>جزئیات آگهی</h4>
 
                                                                                     <div class="row  ">
-                                                                                        <div class="col-sm-9">
+                                                                                        <div class="col-md-9">
                                                                                             <div class="row">
                                                                                                 <div class="col-md-2">
 
@@ -2744,7 +2770,7 @@
                                                                                     <h4>جزئیات خیلی آگهی</h4>
 
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="MeasureRAM" data-placeholder="2" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">4</option>
@@ -2753,11 +2779,11 @@
                                                                                                 <option value="1">12 یا بیشتر</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">RAM</label>
+                                                                                        <label class="col-md-6 margin-top-8">RAM</label>
                                                                                     </div>
 
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="MeasureCPU" data-placeholder="بنزین" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">1</option>
@@ -2767,10 +2793,10 @@
                                                                                                 <option value="1">5 یا بیشتر</option>
                                                                                             </select>
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">CPU</label>
+                                                                                        <label class="col-md-6 margin-top-8">CPU</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="MeasureHard" data-placeholder=" بدون رنگ" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">بدون رنگ</option>
@@ -2778,10 +2804,10 @@
                                                                                             </select>
 
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">Hard</label>
+                                                                                        <label class="col-md-6 margin-top-8">Hard</label>
                                                                                     </div>
                                                                                     <div class="row  margin-top-10  col-calc-2">
-                                                                                        <div class="col-sm-6">
+                                                                                        <div class="col-md-6">
                                                                                             <select id="MeasureGraphic" data-placeholder="پلاک ملی" class="select width-100  SelectStyle "  >
                                                                                                  
                                                                                                 <option value="1">گذر موقت</option>
@@ -2789,10 +2815,10 @@
                                                                                             </select>
 
                                                                                         </div>
-                                                                                        <label class="col-sm-6 margin-top-8">Graphic</label>
+                                                                                        <label class="col-md-6 margin-top-8">Graphic</label>
                                                                                     </div>
                                                                                     <div class="row margin-top-10 additional">
-                                                                                        <div class="col-sm-9 checkbox padding-right-40">
+                                                                                        <div class="col-md-9 checkbox padding-right-40">
                                                                                             <div class="md-checkbox col-calc-3">
                                                                                                 <input id="HasUSB3" type="checkbox">
                                                                                                 <label for="HasUSB3">USB3</label>
@@ -2830,7 +2856,7 @@
                                                                                     <h4>جزئیات آگهی</h4>
 
                                                                                     <div class="row  ">
-                                                                                        <div class="col-sm-9">
+                                                                                        <div class="col-md-9">
                                                                                             <div class="row">
                                                                                                 <div class="col-md-2">
 
@@ -2875,7 +2901,7 @@
                                                                                     <h4>جزئیات آگهی</h4>
 
                                                                                     <div class="row  ">
-                                                                                        <div class="col-sm-9">
+                                                                                        <div class="col-md-9">
                                                                                             <div class="row">
                                                                                                 <div class="col-md-2">
 
@@ -2930,13 +2956,13 @@
                                                             <label class="col-md-3 margin-top-8">نام آگهی دهنده<span class="required">*</span></label>
                                                         </div>
                                                         <div class="row margin-top-10  ">
-                                                            <div class="col-sm-9 dir-ltr">
+                                                            <div class="col-md-9 dir-ltr">
                                                                 <input id="EmailAdvertiser" type="email" name="email" class="form-control" placeholder="hamshahri@gmail.com">
                                                             </div>
                                                             <label class="col-md-3 margin-top-8">آدرس ایمیل<span class="required">*</span></label>
                                                         </div>
                                                         <div class="row margin-top-10  ">
-                                                            <div class="col-sm-9 dir-ltr">
+                                                            <div class="col-md-9 dir-ltr">
                                                                 <input id="MobileAdvertiser" type="text" name="mobileNumber" class="form-control" placeholder="٠٩١٢٣٤٣٤٦٧٨">
                                                             </div>
                                                             <label class="col-md-3 margin-top-8">تلفن همراه<span class="required">*</span></label>
@@ -2961,7 +2987,7 @@
                                                     <h4>انتخاب نوع آگهی</h4>
                                                     <p>جهت کسب اطلاعات بیشتر میتوانید<a href="#">تعرفه ها</a> را مطالعه نمایید.</p>
                                                     <div class="row margin-top-10  ">
-                                                        <div class="col-sm-12 user-type">
+                                                        <div class="col-md-12 user-type">
                                                             <div class="md-radio md-radio-inline">
                                                                 <input id="Kind-One" type="radio" name="Kind-Ads" value="0">
                                                                 <label for="Kind-One">آگهی روزانه</label>
@@ -3030,41 +3056,6 @@
     <script src="~/js/chosen.jquery.min.js"></script>
     
 <script src="~/js/hierarchy-select.min.js"></script>
-
-<script src="~/js/leaflet.js"></script>
-
-
-<script >
-    
-
-         $(document).ready(function () {
-
-             var map = L.map('map').setView([35.71, 51.40], 12);
-
-             L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-                 attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-             }).addTo(map);
-
-             L.marker([35.75, 51.43]).addTo(map)
-                 .bindPopup('پراید<br> مدل 95')
-                 .openPopup();
-
-             L.marker([35.71, 51.40]).addTo(map)
-                 .bindPopup('خودرو بنز<br> مدل 94')
-                 .openPopup();
-
-             L.marker([35.65, 51.35]).addTo(map)
-                 .bindPopup('پراید<br> مدل 95')
-                 .openPopup();
-
-
-
-
-
-         });
-
-</script>
-
 
 
 
@@ -4214,6 +4205,44 @@ KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice
 
 
     </script>
+
+
+
+<script src="~/js/leaflet.js"></script>
+
+
+<script>
+
+
+        $(document).ready(function () {
+
+            var map = L.map('map').setView([35.71, 51.40], 12);
+
+            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            L.marker([35.75, 51.43]).addTo(map)
+                .bindPopup('پراید<br> مدل 95')
+                .openPopup();
+
+            L.marker([35.71, 51.40]).addTo(map)
+                .bindPopup('خودرو بنز<br> مدل 94')
+                .openPopup();
+
+            L.marker([35.65, 51.35]).addTo(map)
+                .bindPopup('پراید<br> مدل 95')
+                .openPopup();
+
+
+
+
+
+        });
+
+</script>
+
+
 
 
 
