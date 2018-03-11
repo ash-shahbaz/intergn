@@ -2391,7 +2391,8 @@
 
 
                                                                     }
-                                                                    else if (ViewBag.lvl0 == "وسایل نقلیه" && ViewBag.lvl1 == "قطعات یدکی و لوازم جانبی خودرو" || ViewBag.lvl1 == "قایق و لوازم جانبی")
+
+                                                                    else if (ViewBag.lvl0 == "وسایل نقلیه" &&  ViewBag.lvl1 == "قایق و لوازم جانبی" | ViewBag.lvl2 == "لوازم جانبی موتورسیکلت")
                                                                     {
 
 
@@ -2435,7 +2436,7 @@
 
 
                                                                     }
-                                                                    else if (ViewBag.lvl0 == "لوازم الکترونیکی" && ViewBag.lvl1 == "موبایل  و تبلت")
+                                                                    else if (ViewBag.lvl0 == "لوازم الکترونیکی" && ViewBag.lvl1 == "موبایل  و تبلت" && ViewBag.lvl2 == "گوشی موبایل"  | ViewBag.lvl2 == "تبلت")
                                                                     {
 
                                 <!-- ---//RegisterMobileTablet-----شروع - لوازم الکترونیکی - گوشی موبایل  و تبلت-------- -->
@@ -3090,7 +3091,7 @@
             $('selectregister').chosen();
 
             $('.Region').chosen();
-            
+
             $('#example-one').hierarchySelect({
                 width: 200
             });
@@ -3893,7 +3894,7 @@ KindGearbox:KindGearbox,KindFuel:KindFuel,KindCrash:KindCrash,KindPelak:KindPela
                                 alert("Error");
                             }
                         });
-                    } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "موتور سیکلت و لوازم جانبی" && "@ViewBag.lvl2" == "موتور سیکلت") {
+                    } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "موتورسیکلت و لوازم جانبی" && "@ViewBag.lvl2" == "موتورسیکلت") {
                         //RegisterMotorcycle
 
 
@@ -3947,8 +3948,8 @@ Year:Year,Person:Person,KindCondition:KindCondition,KindColorOut:KindColorOut,Ki
                             error: function (jqxhr) {
                                 alert("Error");
                             }
-                        });
-                    } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "قطعات یدکی و لوازم جانبی خودرو" || "@ViewBag.lvl2" == "قایل و لوازم جانبی") {
+                        });  
+                    } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "قایق و لوازم جانبی" || "@ViewBag.lvl2" == "لوازم جانبی موتورسیکلت") {
                         //RegisterAccessoriesDetail
 
                         var KindTotalPrice = $("#Kind-TotalPrice").val();
