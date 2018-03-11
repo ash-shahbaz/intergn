@@ -2436,7 +2436,7 @@
 
 
                                                                     }
-                                                                    else if (ViewBag.lvl0 == "لوازم الکترونیکی" && ViewBag.lvl1 == "موبایل  و تبلت" && ViewBag.lvl2 == "گوشی موبایل"  | ViewBag.lvl2 == "تبلت")
+                                                                    else if (ViewBag.lvl0 == "لوازم الکترونیکی" && ViewBag.lvl1 == "موبایل و تبلت" && ViewBag.lvl2 == "گوشی موبایل" | ViewBag.lvl2 == "تبلت")
                                                                     {
 
                                 <!-- ---//RegisterMobileTablet-----شروع - لوازم الکترونیکی - گوشی موبایل  و تبلت-------- -->
@@ -2737,7 +2737,7 @@
 
 
                                                                     }
-                                                                    else if (ViewBag.lvl0 == "لوازم الکترونیکی" && ViewBag.lvl1 == "رایانه" && ViewBag.lvl2 == "رایانه رومیزی")
+                                                                    else if (ViewBag.lvl0 == "لوازم الکترونیکی" && ViewBag.lvl1 == "رایانه" && ViewBag.lvl2 == "رایانه رومیزی" )
                                                                     {
 
                                 <!-- ---//RegisterCase-----شروع - لوازم الکترونیکی - رایانه - رایانه رومیزی-------- -->
@@ -2859,7 +2859,7 @@
 
 
                                                                     }
-                                                                    else if (ViewBag.lvl0 == "لوازم الکترونیکی" && ViewBag.lvl1 != "رایانه" && ViewBag.lvl2 != "رایانه رومیزی")
+                                                                    else if (ViewBag.lvl0 == "لوازم الکترونیکی" && ViewBag.lvl2 != "رایانه همراه" && ViewBag.lvl2 != "رایانه رومیزی" && ViewBag.lvl2 != "گوشی موبایل" && ViewBag.lvl2 != "تبلت")
                                                                     {
 
                                 <!-- ---//RegisterElectronics-----شروع - لوازم الکترونیکی - لوازم جانبی موبایل و تبلت و سیم کارت و تمام زیر مجموعه های صوتی و تصویری و کنسول ها و بازی ها و رایانه بجزززز رایانه همراه و رومیزی-------- -->
@@ -3948,7 +3948,7 @@ Year:Year,Person:Person,KindCondition:KindCondition,KindColorOut:KindColorOut,Ki
                             error: function (jqxhr) {
                                 alert("Error");
                             }
-                        });  
+                        });
                     } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "قایق و لوازم جانبی" || "@ViewBag.lvl2" == "لوازم جانبی موتورسیکلت") {
                         //RegisterAccessoriesDetail
 
@@ -3980,7 +3980,7 @@ KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice
                                 alert("Error");
                             }
                         });
-                    } else if ("@ViewBag.lvl0" == "لوازم الکترونیکی" && "@ViewBag.lvl1" == "موبایل  و تبلت") {
+                    } else if ("@ViewBag.lvl0" == "لوازم الکترونیکی" && "@ViewBag.lvl1" == "موبایل و تبلت" && "@ViewBag.lvl2" == "گوشی موبایل" | "@ViewBag.lvl2" == "تبلت") {
                         //RegisterMobileTablet
 
 
@@ -4117,7 +4117,7 @@ MeasureGraphic:MeasureGraphic,HasUSB3:HasUSB3,HasDVDRW:HasDVDRW,HasSpeaker:HasSp
                                 alert("Error");
                             }
                         });
-                    } else if ("@ViewBag.lvl0" == "لوازم الکترونیکی" && "@ViewBag.lvl1" != "رایانه" && "@ViewBag.lvl2" != "رایانه رومیزی") {
+                    } else if ("@ViewBag.lvl0" == "لوازم الکترونیکی" && "@ViewBag.lvl2" != "رایانه همراه" && "@ViewBag.lvl2" != "رایانه رومیزی" && "@ViewBag.lvl2" != "گوشی موبایل" && "@ViewBag.lvl2" != "تبلت") {
                         //RegisterElectronics
 
 
