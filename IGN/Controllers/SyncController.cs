@@ -138,7 +138,7 @@ namespace IGN.Controllers
         public string GetCityByProvinceName(string name)
         {
 
-            var q = Utility.lstProvinces.Where(p => p.ProvinceName == name).FirstOrDefault();
+            var q = Utility.lstProvinces.Where(p => p.ProvinceID == Convert.ToInt32( name) ).FirstOrDefault();
 
             return JsonConvert.SerializeObject(Utility.lstCities.Where(p=> p.ProvinceId == q.ProvinceID));
         }
