@@ -112,26 +112,22 @@
                                                         <label class="col-md-3  margin-top-8">استان<span class="required">*</span></label>
                                                     </div>
                                                     <div class="row margin-top-10  ">
-                                                        <div class="col-md-3 user-type">
-                                                            <select data-placeholder="نام محله را وارد کنید" class="selectregister select Region width-100Per"  >
-                                                                <option value=""></option>
-
-
-                                                            </select>
-                                                        </div>
-                                                        <label class="col-md-3  margin-top-8">محله<span class="required">*</span></label>
-                                                        <div class="col-md-3 user-type">
-
+                                                        <div class="col-md-9 user-type">
                                                             <select data-placeholder="نام شهر را وارد کنید" class="selectregister select City width-100Per"  >
                                                                 <option value=""></option>
-
-
 
                                                             </select>
                                                         </div>
                                                         <label class="col-md-3  margin-top-8">شهر<span class="required">*</span></label>
                                                     </div>
-
+                                                    <div class="row margin-top-10  ">
+                                                        <div class="col-md-9 user-type">
+                                                            <select data-placeholder="نام محله را وارد کنید" class="selectregister select Region width-100Per">
+                                                                <option value=""></option>
+                                                            </select>
+                                                        </div>
+                                                        <label class="col-md-3  margin-top-8">محله<span class="required">*</span></label>
+                                                    </div>
                                                     <div class="row margin-top-10 select-condition">
                                                         <div class="col-md-9">
                                                             <div class="mapcreatepage " id="map"></div>
@@ -3076,6 +3072,8 @@
 
             $('selectregister').chosen();
 
+            $('.Region').chosen();
+            
             $('#example-one').hierarchySelect({
                 width: 200
             });
