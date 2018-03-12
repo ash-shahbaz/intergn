@@ -50,14 +50,12 @@
             <div class="container">
                 <div id="logo">
 
-
                     <span class=" user-type">
-                        <button type="button" class="btn btn-info btn-lg btnchoose" data-toggle="modal" data-target="#myCity">انتخاب استان (@Utility.CityName)</button>
+                        <button type="button" class="btn cityheader" data-toggle="modal" data-target="#myCity">@Utility.CityName</button>
 
                         <!-- Modal -->
                         <div class="modal fade" id="myCity" role="dialog">
                             <div class="modal-dialog whitebg">
-
                                 <!-- Modal content-->
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -74,20 +72,12 @@
                                                 }
                                             }
                                         </ul>
-
-
-
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-
                     </span>
-
-
-
-
+                    <span class="fa fa-angle-right cityright"></span>
                     <a href="/"><img src="~/images/logo.png" alt="logo" /></a>
                 </div>
                 <nav class="pull-right">
@@ -98,33 +88,28 @@
                         <li>
                             <a href="/Agahi/آگهی-های-من">آگهی های من</a>
                         </li>
-                        <li class="current-item-menu">
-                            <a href="/Agahi/ثبت-آگهی">ثبت آگهی رایگان</a>
+                        <li class="headerFreeAgahi">
+                            <a class="headerFreeAgahiCol" href="/Agahi/ثبت-آگهی">ثبت آگهی رایگان</a>
                         </li>
                         <li>
                             @{
+                                
+                                        if (Utility.CurrentUser != null)
+                                        {
 
-
-                                if (Utility.CurrentUser != null)
-                                {
-
-                                    <a id="Loginned" href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                                        <i class="login-icon fa fa-user"></i>
-
-
+                                    <a id="Loginned" href="" class="mdl-button  mdl-button--raised headerloginbtn ">
+                           
                                         @Utility.CurrentUser.NickName
-
                                         <i class="login-icon fa fa-power-off zindex1000"></i>
                                     </a>
 
                                 }
                                 else
                                 {
-                                    <a id="LoginInfo" href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-toggle="modal" data-target="#loginFormModal">
-                                        <i class="login-icon fa fa-user"></i>ورود
-
+                                    <a id="LoginInfo" href="" class="mdl-button  mdl-button--raised headerloginbtn " data-toggle="modal" data-target="#loginFormModal">
+                                      ورود
                                     </a>
-                                }
+                            }
 
                             }
 

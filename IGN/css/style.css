@@ -1165,7 +1165,7 @@ ul.page-numbers li:hover {
     }
 
     .top-header nav.pull-right a {
-        color: #e3e3e3 !important;
+        color: #e3e3e3 ;
     }
 /*==========================================================
     Main menu
@@ -1187,7 +1187,7 @@ ul.page-numbers li:hover {
             font-style: normal;
             border: 2px solid transparent;
             padding: 5px 15px;
-            color: #ffffff !important;
+            color: #ffffff ;
             transition: all 1s;
         }
 
@@ -1285,7 +1285,7 @@ ul.page-numbers li:hover {
     position: absolute;
     bottom: 0;
     left: 0;
-    max-height: 40px;
+    max-height: 47px;
 }
 
     #logo img {
@@ -2206,7 +2206,7 @@ ul.page-numbers li:hover {
         }
 
     #page-footer ul {
-        margin: 9.5px 0;
+
     }
 
         #page-footer ul li {
@@ -7237,4 +7237,35 @@ color:black;
 }
 .padding-right-0{
     padding-right: 0px;
+}
+.cityright {
+    font-size: 30px;
+    margin: 0 5px 0 20px;
+    color: #ededed;
+    height: 0px;
+    width: 0px;
+    top: 7px;
+}
+.cityheader {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+    .cityheader :hover {
+        border-color: transparent;
+        border-radius: 0;
+        background-color: green;
+    }
+.headerFreeAgahi {
+    background-color: white !important;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.headerFreeAgahiCol {
+    color: #FF3D00 !important;
+}
+.headerloginbtn {
+    background: transparent;
+    box-shadow: 1px 1px 1px 3px rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
 }
