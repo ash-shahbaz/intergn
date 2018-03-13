@@ -1492,13 +1492,13 @@ a.verified {
 }
 
 #product-carousel .carousel-indicators {
-    bottom: -140px;
+    bottom: -115px;
 }
 
     #product-carousel .carousel-indicators li,
     #product-carousel .carousel-indicators li.active {
-        height: 105px;
-        width: 107px;
+        height: 80px;
+        width: 80px;
         text-indent: inherit;
         border: none !important;
         border-radius: 0;
@@ -1731,6 +1731,7 @@ a.verified {
     border-radius: 3px;
     padding: 20px 35px 35px;
     font-family: 'IRANSans',Calibri, 'Devanagari-Regular', sans-serif;
+    height: 540px;
 }
 
     .description h4,
@@ -1738,6 +1739,7 @@ a.verified {
         font-weight: 500;
         color: #272727;
         margin-bottom: 18px;
+    
     }
 
     .description h4 {
@@ -1748,6 +1750,7 @@ a.verified {
     background-color: #fff;
     border-radius: 3px;
     margin-bottom: 20px;
+    height: 540px;
 }
 
 .description-info .short-info {
@@ -3975,8 +3978,8 @@ display:none !important;
     margin-bottom: 20px;
 }
 .carousel-image{
-    width:100%;
-    height: 500px;
+    width:400px;
+    height: 400px;
 }
 .carousel .carousel-indicators .active {
     margin-top: 10px;
