@@ -233,7 +233,6 @@
     <Content Include="css\leaflet.css" />
     <Content Include="css\main-color-login.css" />
     <Content Include="css\main.css" />
-    <Content Include="css\mainselect.css" />
     <Content Include="css\material-kit.css" />
     <Content Include="css\material.min.css" />
     <Content Include="css\MobileFooter.css" />
@@ -298,7 +297,6 @@
     <Content Include="js\kamadatepicker.min.js" />
     <Content Include="js\leaflet.js" />
     <Content Include="js\mainlogin.js" />
-    <Content Include="js\mainselect.js" />
     <Content Include="js\material.min.js" />
     <Content Include="js\pagination.js" />
     <Content Include="js\PIE_IE678.js" />
