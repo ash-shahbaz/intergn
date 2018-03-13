@@ -1451,10 +1451,10 @@ a.verified {
 .slider {
     background-color: #fff;
     display: inline-block;
-    padding: 33px 30px 51px;
+    padding: 30px 31px 0px;
     border-radius: 4px;
     width: 100%;
-    height: 100%;
+    height: 695px;
 }
 
 .carousel-indicators {
@@ -1507,7 +1507,7 @@ a.verified {
     }
 
         #product-carousel .carousel-indicators li:first-child {
-            margin-left: 0 !important;
+
         }
 
         #product-carousel .carousel-indicators li img {
@@ -1631,9 +1631,7 @@ a.verified {
 .contact-with .btn {
     background-color: #0d79bf;
     color: #fff;
-    margin-right: 17px;
     border: 1px solid transparent;
-    margin-bottom: 17px;
 }
 
 .contact-with .btn-red {
@@ -1667,9 +1665,6 @@ a.verified {
     font-size: 20px;
 }
 
-.social-links li {
-    margin-right: 10px;
-}
 
     .social-links li:last-child {
         margin-right: 0;
@@ -3979,3 +3974,37 @@ display:none !important;
 .margin-bottom-20{
     margin-bottom: 20px;
 }
+.carousel-image{
+    width:100%;
+    height: 500px;
+}
+.carousel .carousel-indicators .active {
+    margin-top: 10px;
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+.img-responsive {
+    width: 100%;
+    height: 100%;
+}
+.TitleDetail {
+    line-height: 34px;
+    color: #000000;
+    font-family: 'IRANSans',Calibri, 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: right;
+}
+.list-inline > li {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.SocialFa {
+    width: 20px;
+    height: 0px;
+    top: 0px;
+}
+.
