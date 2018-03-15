@@ -25,17 +25,28 @@
             <div class="description">
 
 
-                <div class="row margin-bottom-20">
-                    <div class="col-md-6 contact-with text-align-center">
-                        <a href="#" class="btn">گفتگو در تلگرام</a>
+                <div class="row">
+                    <div class="col-md-3 contact-with no-padding text-align-left">
+                        <a href="#" class="btn btndetailtopmap"><i class="fa fa-exclamation-triangle detailinofa"></i>گزارش آگهی</a>
                     </div>
-                    <div class="col-md-6 contact-with  text-align-center">
-                        <span class="btn btn-red show-number">
-                            <span class="hide-text">نمایش تلفن</span>
-                            <span class="hide-number">٠٩١٢٧٧٧٣٤٥٦</span>
-                        </span>
+                    <div class="col-md-3 contact-with  no-padding text-align-right">
+                        <a href="#" class="btn btndetailtopmap"><i class="fa fa-heart-o detailinofa"></i>نشان کردن</a>
+                    </div>
+                    <div class="col-md-6 social-links no-padding ">
+                        <ul class="list-inline text-align-right padding-top-5">
+                            <li><a href="#"><i class="fa fa-facebook-square SocialFa"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter-square SocialFa"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus-square SocialFa"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin-square SocialFa"></i></a></li>
+                            <li><a href="#"><i class="fa fa-tumblr-square SocialFa"></i></a></li>
+                        </ul>
                     </div>
                 </div>
+
+
+
+
+
 
                 <div id="product-carousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
@@ -93,6 +104,16 @@
                     </a>
                 </div>
 
+
+                <div class="row">
+                    <div class="col-md-12 no-padding">
+                        <div class="mapcreatepage " id="map"></div>
+                    </div>
+                </div>
+
+
+
+
             </div>
         </div>
 
@@ -114,6 +135,20 @@
                         </div>
                         <div class="col-md-4 no-padding">
                             <span class="icon"><i class="fa fa-clock-o SocialFa"></i><a href="#">4 ساعت قبل</a></span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row ">
+                        <div class="col-md-6 contact-with text-align-center">
+                            <a href="#" class="btn">گفتگو در تلگرام</a>
+                        </div>
+                        <div class="col-md-6 contact-with  text-align-center">
+                            <span class="btn btn-red show-number">
+                                <span class="hide-text">نمایش تلفن</span>
+                                <span class="hide-number">٠٩١٢٧٧٧٣٤٥٦</span>
+                            </span>
                         </div>
                     </div>
 
@@ -154,33 +189,1955 @@
                     </div>
 
 
+
+                    @{
+
+
+
+                        if (ViewBag.lvl0 == "املاک" && ViewBag.lvl1 == "فروش املاک مسکونی" && ViewBag.lvl2 == "آپارتمان" || ViewBag.lvl2 == "خانه و ویلا")
+                        {
+                                <!--  ---------//RegisterSaleApartSub--------------- شروع املاک - فروش املاک مسکونی - آپارتمان +و+ خانه و ویلا -----------------  -->
+
+
+
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">نیست</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>حومه شهر: </b>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">شخصی</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>نوع آگهی دهنده: </b>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">2</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>تعداد اتاق: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">50 متر</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>متراژ: </b>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">1365</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سال ساخت: </b>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">3</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>طبقه: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">سنگ</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>جنس کف: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>گرمایش: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">20 تومان</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>مبلغ وام: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">200 متر</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>زیربنا: </b>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+
+
+                                        <div class="row additional">
+                                            <div class="col-md-12 checkbox ">
+
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasParking" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasParking">پارکینگ</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasElevator" type="checkbox" disabled="disabled">
+                                                    <label for="HasElevator">آسانسور</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasIranianService" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasIranianService">سرویس ایرانی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasForeignService" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasForeignService">سرویس خارجی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasBalcony" type="checkbox" disabled="disabled">
+                                                    <label for="HasBalcony">بالکن</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasPool" type="checkbox" disabled="disabled">
+                                                    <label for="HasPool">استخر</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasUnderground" type="checkbox" disabled="disabled">
+                                                    <label for="HasUnderground">زیرزمین</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasYard" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasYard">حیاط</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasSauna" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasSauna">سونا</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasJacuzzi" type="checkbox" disabled="disabled">
+                                                    <label for="HasJacuzzi">جکوزی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasSleepMaster" type="checkbox" disabled="disabled">
+                                                    <label for="HasSleepMaster">خواب مستر</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasRoofGarden" type="checkbox" disabled="disabled">
+                                                    <label for="HasRoofGarden">روف گاردن</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasChiller" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasChiller">چیلر</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasBarbecue" type="checkbox" disabled="disabled">
+                                                    <label for="HasBarbecue">باربکیو</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasAltar" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasAltar">آلاچیق</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasLobby" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasLobby">لابی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasBabyPlayground" type="checkbox" disabled="disabled">
+                                                    <label for="HasBabyPlayground">محوطه بازی کودک</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasGym" type="checkbox" disabled="disabled">
+                                                    <label for="HasGym">سالن بدنسازی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasHeir" type="checkbox" disabled="disabled">
+                                                    <label for="HasHeir">ورثه ای</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasSingleDocument" type="checkbox" disabled="disabled">
+                                                    <label for="HasSingleDocument">سند تک برگ</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سایر: </b>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+
+                        }
+
+                        else if (ViewBag.lvl0 == "املاک" && ViewBag.lvl1 == "فروش املاک مسکونی" && ViewBag.lvl2 == "زمین و کلنگی")
+                        {
+                                <!--  ---------//RegisterSaleLandSub--------------- شروع املاک - فروش املاک مسکونی - زمین و کلنگی -----------------  -->
+
+
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">نیست</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>حومه شهر: </b>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">شخصی</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>نوع آگهی دهنده: </b>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">50 متر</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>متراژ: </b>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">3</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>طبقه: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">20 تومان</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>مبلغ وام: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">200 متر</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>زیربنا: </b>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+
+
+                                        <div class="row additional">
+                                            <div class="col-md-12 checkbox ">
+
+
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasHeir" type="checkbox" disabled="disabled">
+                                                    <label for="HasHeir">ورثه ای</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasSingleDocument" type="checkbox" disabled="disabled">
+                                                    <label for="HasSingleDocument">سند تک برگ</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سایر: </b>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+
+                        }
+
+                        else if (ViewBag.lvl0 == "املاک" && ViewBag.lvl1 == "اجاره مسکونی")
+                        {
+                                <!--  -------- //RegisterRentHouseSub---------------- شروع املاک - اجاره مسکونی - تمام زیر مجموعه ها -----------------  -->
+
+
+
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">نیست</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>حومه شهر: </b>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">شخصی</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>نوع آگهی دهنده: </b>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">2</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>تعداد اتاق: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">50 متر</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>متراژ: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">50 میلیون تومان</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>ودیعه: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">1 میلیون تومان</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>اجاره ماهیانه: </b>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">1365</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سال ساخت: </b>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">3</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>طبقه: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">سنگ</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>جنس کف: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>گرمایش: </b>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+
+
+                                        <div class="row additional">
+                                            <div class="col-md-12 checkbox ">
+
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasParking" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasParking">پارکینگ</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasElevator" type="checkbox" disabled="disabled">
+                                                    <label for="HasElevator">آسانسور</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasIranianService" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasIranianService">سرویس ایرانی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasForeignService" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasForeignService">سرویس خارجی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasBalcony" type="checkbox" disabled="disabled">
+                                                    <label for="HasBalcony">بالکن</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasPool" type="checkbox" disabled="disabled">
+                                                    <label for="HasPool">استخر</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasUnderground" type="checkbox" disabled="disabled">
+                                                    <label for="HasUnderground">زیرزمین</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasYard" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasYard">حیاط</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasSauna" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasSauna">سونا</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasJacuzzi" type="checkbox" disabled="disabled">
+                                                    <label for="HasJacuzzi">جکوزی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasSleepMaster" type="checkbox" disabled="disabled">
+                                                    <label for="HasSleepMaster">خواب مستر</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasRoofGarden" type="checkbox" disabled="disabled">
+                                                    <label for="HasRoofGarden">روف گاردن</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasChiller" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasChiller">چیلر</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasBarbecue" type="checkbox" disabled="disabled">
+                                                    <label for="HasBarbecue">باربکیو</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasAltar" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasAltar">آلاچیق</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasLobby" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasLobby">لابی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasBabyPlayground" type="checkbox" disabled="disabled">
+                                                    <label for="HasBabyPlayground">محوطه بازی کودک</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasGym" type="checkbox" disabled="disabled">
+                                                    <label for="HasGym">سالن بدنسازی</label>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سایر: </b>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+
+                        }
+                        else if (ViewBag.lvl0 == "املاک" && ViewBag.lvl1 == "فروش اداری و تجاری")
+                        {
+                                <!--  ------------//RegisterSaleOfficeSub------------ شروع املاک - فروش اداری و تجاری - تمام زیر مجموعه ها -----------------  -->
+
+
+
+
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">نیست</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>حومه شهر: </b>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">شخصی</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>نوع آگهی دهنده: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">دارد</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سند اداری: </b>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">2</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>تعداد اتاق: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">50 متر</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>متراژ: </b>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">1365</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سال ساخت: </b>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">3</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>طبقه: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">سنگ</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>جنس کف: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>گرمایش: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">20 تومان</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>مبلغ وام: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">200 متر</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>زیربنا: </b>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+
+
+                                        <div class="row additional">
+                                            <div class="col-md-12 checkbox ">
+
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasParking" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasParking">پارکینگ</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasElevator" type="checkbox" disabled="disabled">
+                                                    <label for="HasElevator">آسانسور</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasIranianService" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasIranianService">سرویس ایرانی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasForeignService" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasForeignService">سرویس خارجی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasBalcony" type="checkbox" disabled="disabled">
+                                                    <label for="HasBalcony">بالکن</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasPool" type="checkbox" disabled="disabled">
+                                                    <label for="HasPool">استخر</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasUnderground" type="checkbox" disabled="disabled">
+                                                    <label for="HasUnderground">زیرزمین</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasYard" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasYard">حیاط</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasSauna" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasSauna">سونا</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasJacuzzi" type="checkbox" disabled="disabled">
+                                                    <label for="HasJacuzzi">جکوزی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasSleepMaster" type="checkbox" disabled="disabled">
+                                                    <label for="HasSleepMaster">خواب مستر</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasRoofGarden" type="checkbox" disabled="disabled">
+                                                    <label for="HasRoofGarden">روف گاردن</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasChiller" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasChiller">چیلر</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasBarbecue" type="checkbox" disabled="disabled">
+                                                    <label for="HasBarbecue">باربکیو</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasAltar" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasAltar">آلاچیق</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasLobby" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasLobby">لابی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasBabyPlayground" type="checkbox" disabled="disabled">
+                                                    <label for="HasBabyPlayground">محوطه بازی کودک</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasGym" type="checkbox" disabled="disabled">
+                                                    <label for="HasGym">سالن بدنسازی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasHeir" type="checkbox" disabled="disabled">
+                                                    <label for="HasHeir">ورثه ای</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasSingleDocument" type="checkbox" disabled="disabled">
+                                                    <label for="HasSingleDocument">سند تک برگ</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سایر: </b>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+
+                        }
+                        else if (ViewBag.lvl0 == "املاک" && ViewBag.lvl1 == "اجاره اداری و تجاری")
+                        {
+                                <!--  --------------//RegisterRentOfficeSub---------- شروع املاک - اجاره اداری و تجاری - تمام زیر مجموعه ها -----------------  -->
+
+
+
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">نیست</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>حومه شهر: </b>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">شخصی</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>نوع آگهی دهنده: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">ندارد</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سند اداری: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">2</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>تعداد اتاق: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">50 متر</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>متراژ: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">50 میلیون تومان</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>ودیعه: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">1 میلیون تومان</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>اجاره ماهیانه: </b>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">1365</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سال ساخت: </b>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">3</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>طبقه: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">سنگ</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>جنس کف: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>گرمایش: </b>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+
+
+                                        <div class="row additional">
+                                            <div class="col-md-12 checkbox ">
+
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasParking" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasParking">پارکینگ</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasElevator" type="checkbox" disabled="disabled">
+                                                    <label for="HasElevator">آسانسور</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasIranianService" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasIranianService">سرویس ایرانی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasForeignService" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasForeignService">سرویس خارجی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasBalcony" type="checkbox" disabled="disabled">
+                                                    <label for="HasBalcony">بالکن</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasPool" type="checkbox" disabled="disabled">
+                                                    <label for="HasPool">استخر</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasUnderground" type="checkbox" disabled="disabled">
+                                                    <label for="HasUnderground">زیرزمین</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasYard" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasYard">حیاط</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasSauna" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasSauna">سونا</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasJacuzzi" type="checkbox" disabled="disabled">
+                                                    <label for="HasJacuzzi">جکوزی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasSleepMaster" type="checkbox" disabled="disabled">
+                                                    <label for="HasSleepMaster">خواب مستر</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasRoofGarden" type="checkbox" disabled="disabled">
+                                                    <label for="HasRoofGarden">روف گاردن</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasChiller" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasChiller">چیلر</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasBarbecue" type="checkbox" disabled="disabled">
+                                                    <label for="HasBarbecue">باربکیو</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasAltar" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasAltar">آلاچیق</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasLobby" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasLobby">لابی</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasBabyPlayground" type="checkbox" disabled="disabled">
+                                                    <label for="HasBabyPlayground">محوطه بازی کودک</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasGym" type="checkbox" disabled="disabled">
+                                                    <label for="HasGym">سالن بدنسازی</label>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سایر: </b>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+                        }
+                        else if (ViewBag.lvl0 == "املاک" && ViewBag.lvl1 == "خدمات املاک")
+                        {
+                                <!-----//RegisterServicesHouseSub-----شروع - خدمات املاک - تمام زیر مجموعه ها---------->
+
+
+
+                            <div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">شخصی</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>نوع آگهی دهنده: </b>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+
+
+
+
+
+
+                        }
+                        else if (ViewBag.lvl0 == "وسایل نقلیه" && ViewBag.lvl1 == "خودرو" && ViewBag.lvl2 == "سواری")
+                        {
+                                <!-- ---//RegisterCarRiding-----شروع - خودرو - سواری-------- -->
+
+
+
+
+                            <div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">شخصی</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>نوع آگهی دهنده: </b>
+                                    </div>
+                                </div>
+
+                                @if (1 != null){
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">5 میلیون تومان</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>اقساط ماهانه: </b>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">36</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>تعداد قسط ماهانه: </b>
+                                    </div>
+                                </div>
+                                }
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">سایپا</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>برند: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">20000 کیلومتر</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>کیلومتر: </b>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">1389</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سال: </b>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">3</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>وضعیت: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">سنگ</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>شاسی: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>دیفرانسیل: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">20 تومان</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>رنگ بدنه: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">200 متر</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>رنگ داخل: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>مدل: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>گیربکس: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>نوع سوخت: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>وضعیت بدنه: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>موارد خاص: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+
+
+                                        <div class="row additional">
+                                            <div class="col-md-12 checkbox ">
+
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasParking" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasParking">سانروف</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasElevator" type="checkbox" disabled="disabled">
+                                                    <label for="HasElevator">دزدگیر</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasIranianService" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasIranianService">سیستم صوتی</label>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سایر: </b>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+                        }
+                        else if (ViewBag.lvl0 == "وسایل نقلیه" && ViewBag.lvl1 == "خودرو" && ViewBag.lvl2 == "سنگین")
+                        {
+                                <!-- ---//RegisterCarHeavy-----شروع - خودرو - سنگین-------- -->
+
+
+
+                            <div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">شخصی</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>نوع آگهی دهنده: </b>
+                                    </div>
+                                </div>
+
+
+
+                                @if (1 != null)
+                                {
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">5 میلیون تومان</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>اقساط ماهانه: </b>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">36</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>تعداد قسط ماهانه: </b>
+                                    </div>
+                                </div>
+                                }
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">سایپا</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>برند: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">20000 کیلومتر</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>کیلومتر: </b>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">1389</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سال: </b>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">3</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>وضعیت: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">سنگ</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>شاسی: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>دیفرانسیل: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">20 تومان</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>رنگ بدنه: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">200 متر</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>رنگ داخل: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>مدل: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>گیربکس: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>نوع سوخت: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>وضعیت بدنه: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>موارد خاص: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+
+
+                                        <div class="row additional">
+                                            <div class="col-md-12 checkbox ">
+
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasParking" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasParking">سانروف</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasElevator" type="checkbox" disabled="disabled">
+                                                    <label for="HasElevator">دزدگیر</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasIranianService" type="checkbox" checked="checked" disabled="disabled">
+                                                    <label for="HasIranianService">سیستم صوتی</label>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سایر: </b>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+
+                        }
+                        else if (ViewBag.lvl0 == "وسایل نقلیه" && ViewBag.lvl1 == "موتورسیکلت و لوازم جانبی" && ViewBag.lvl2 == "موتورسیکلت")
+                        {
+                                <!-- ---//RegisterMotorcycle-----شروع - موتور سیکلت و لوازم جانبی - موتور سیکلت-------- -->
+
+
+                            <div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">شخصی</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>نوع آگهی دهنده: </b>
+                                    </div>
+                                </div>
+
+
+
+                                @if (1 != null)
+                                {
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">5 میلیون تومان</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>اقساط ماهانه: </b>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">36</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>تعداد قسط ماهانه: </b>
+                                    </div>
+                                </div>
+                                }
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">سایپا</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>برند: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">20000 کیلومتر</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>کیلومتر: </b>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">1389</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سال: </b>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">3</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>وضعیت: </b>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">20 تومان</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>رنگ بدنه: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>مدل: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>نوع سوخت: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>وضعیت بدنه: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>موارد خاص: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+
+
+                                        <div class="row additional">
+                                            <div class="col-md-12 checkbox ">
+
+
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasElevator" type="checkbox" disabled="disabled">
+                                                    <label for="HasElevator">دزدگیر</label>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سایر: </b>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+
+                        }
+
+                        else if (ViewBag.lvl0 == "لوازم الکترونیکی" && ViewBag.lvl1 == "موبایل و تبلت" && ViewBag.lvl2 == "گوشی موبایل" | ViewBag.lvl2 == "تبلت")
+                        {
+                                <!-- ---//RegisterMobileTablet-----شروع - لوازم الکترونیکی - گوشی موبایل  و تبلت-------- -->
+
+
+                            <div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">اپل</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>برند: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">سفید</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>رنگ: </b>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+
+                        }
+                        else if (ViewBag.lvl0 == "لوازم الکترونیکی" && ViewBag.lvl1 == "رایانه" && ViewBag.lvl2 == "رایانه همراه")
+                        {
+                                <!-- ---//RegisterLapTop-----شروع - لوازم الکترونیکی - رایانه - رایانه همراه-------- -->
+
+
+
+                            <div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">اپل</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>برند: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">سفید</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>رنگ: </b>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">3</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سایز صفحه نمایش: </b>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">20 تومان</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>لمسی: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>RAM: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>CPU:</b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>Hard: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>Graphic: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+
+
+                                        <div class="row additional">
+                                            <div class="col-md-12 checkbox ">
+
+
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasElevator" type="checkbox" disabled="disabled">
+                                                    <label for="HasElevator">ضد آب</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasElevator" type="checkbox" disabled="disabled">
+                                                    <label for="HasElevator">USB3</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasElevator" type="checkbox" disabled="disabled">
+                                                    <label for="HasElevator">DVD/RW</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasElevator" type="checkbox" disabled="disabled">
+                                                    <label for="HasElevator">Camera</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سایر: </b>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+
+                        }
+                        else if (ViewBag.lvl0 == "لوازم الکترونیکی" && ViewBag.lvl1 == "رایانه" && ViewBag.lvl2 == "رایانه رومیزی")
+                        {
+                                <!-- ---//RegisterCase-----شروع - لوازم الکترونیکی - رایانه - رایانه رومیزی-------- -->
+
+
+                            <div>
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>RAM: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>CPU:</b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>Hard: </b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-align-right">بخاری</p>
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>Graphic: </b>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-10">
+
+
+                                        <div class="row additional">
+                                            <div class="col-md-12 checkbox ">
+
+
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasElevator" type="checkbox" disabled="disabled">
+                                                    <label for="HasElevator">USB3</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasElevator" type="checkbox" disabled="disabled">
+                                                    <label for="HasElevator">DVD/RW</label>
+                                                </div>
+                                                <div class="md-checkbox col-calc-3">
+                                                    <input id="HasElevator" type="checkbox" disabled="disabled">
+                                                    <label for="HasElevator">بلندگو</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="col-md-2 no-padding">
+                                        <b>سایر: </b>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+                        }
+
+
+
+
+
+
+
+                    }
+
+
                     <div class="row">
-                        <div class="col-md-3 contact-with no-padding text-align-left">
-                            <a href="#" class="btn btndetailtopmap"><i class="fa fa-exclamation-triangle detailinofa"></i>گزارش آگهی</a>
-                        </div>
-                        <div class="col-md-3 contact-with  no-padding text-align-left">
-                            <a href="#" class="btn btndetailtopmap"><i class="fa fa-heart-o detailinofa"></i>نشان کردن</a>
-                        </div>
-                        <div class="col-md-4 social-links">
-                            <ul class="list-inline text-align-right">
-                                <li><a href="#"><i class="fa fa-facebook-square SocialFa"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter-square SocialFa"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus-square SocialFa"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin-square SocialFa"></i></a></li>
-                                <li><a href="#"><i class="fa fa-tumblr-square SocialFa"></i></a></li>
-                            </ul>
+                        <div class="col-md-10">
                         </div>
                         <div class="col-md-2 no-padding">
-                            <b>اشتراک گذاری: </b>
+                            <b>توضیحات: </b>
                         </div>
-
                     </div>
+
+
 
                     <div class="row">
                         <div class="col-md-12 no-padding">
-                            <div class="mapcreatepage " id="map"></div>
+                            <div class="card topstyle ">
+                                <p class="PDescription text-align-right">‌‌ بدون خط و خش تخفیف مصرف</p>
+                            </div>
                         </div>
                     </div>
+
+
+
+
 
                 </div>
 
@@ -190,1165 +2147,11 @@
 </div>
 
 
-<div class="description-info">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="description height-auto">
-                
 
 
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <p class="text-align-right">نیست</p>
-                            </div>
-                            <div class="col-md-3 no-padding">
-                                <b>حومه شهر: </b>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-9">
-                                <p class="text-align-right">شخصی</p>
-                            </div>
-                            <div class="col-md-3 no-padding">
-                                <b>نوع آگهی دهنده: </b>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <p class="text-align-right">2</p>
-                            </div>
-                            <div class="col-md-3 no-padding">
-                                <b>تعداد اتاق: </b>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-9">
-                                <p class="text-align-right">50 متر</p>
-                            </div>
-                            <div class="col-md-3 no-padding">
-                                <b>متراژ: </b>
-                            </div>
-                        </div>
-                    </div>
 
-                </div>
 
-
-
-
-
-
-
-
-
-
-
-                <div class="row">
-                    <div class="col-md-10">
-                    </div>
-                    <div class="col-md-2 ">
-                        <b>توضیحات: </b>
-                    </div>
-                </div>
-
-
-
-                <div class="row">
-                    <div class="col-md-12 no-padding">
-                        <div class="card topstyle ">
-                            <p class="PDescription text-align-right">‌‌ بدون خط و خش تخفیف مصرف</p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-
-
-    </div>
-</div>
-
-
-
-
-<div class="description-info">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="description height-auto">
-
-
-
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <p class="text-align-right">1365</p>
-                            </div>
-                            <div class="col-md-3 no-padding">
-                                <b>سال ساخت: </b>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-9">
-                                <p class="text-align-right">3</p>
-                            </div>
-                            <div class="col-md-3 no-padding">
-                                <b>طبقه: </b>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <p class="text-align-right">سنگ</p>
-                            </div>
-                            <div class="col-md-3 no-padding">
-                                <b>جنس کف: </b>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-9">
-                                <p class="text-align-right">بخاری</p>
-                            </div>
-                            <div class="col-md-3 no-padding">
-                                <b>گرمایش: </b>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <p class="text-align-right">20 تومان</p>
-                            </div>
-                            <div class="col-md-3 no-padding">
-                                <b>مبلغ وام: </b>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <p class="text-align-right">200 متر</p>
-                            </div>
-                            <div class="col-md-3 no-padding">
-                                <b>زیربنا: </b>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-
-
-                <div class="row">
-                    <div class="col-md-10">
-                    </div>
-                    <div class="col-md-2 ">
-                        <b>سایر: </b>
-                    </div>
-                </div>
-
-
-
-                <div class="row">
-                    <div class="col-md-12 ">
-                       
-                        <div class="row additional">
-                            <div class="col-md-12 checkbox ">
-
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasParking" type="checkbox" disabled="disabled" >
-                                    <label for="HasParking">پارکینگ</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasElevator" type="checkbox" disabled="disabled" >
-                                    <label for="HasElevator">آسانسور</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasIranianService" type="checkbox" disabled="disabled" >
-                                    <label for="HasIranianService">سرویس ایرانی</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasForeignService" type="checkbox" disabled="disabled" >
-                                    <label for="HasForeignService">سرویس خارجی</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasBalcony" type="checkbox" disabled="disabled" >
-                                    <label for="HasBalcony">بالکن</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasPool" type="checkbox" disabled="disabled" >
-                                    <label for="HasPool">استخر</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasUnderground" type="checkbox" disabled="disabled" >
-                                    <label for="HasUnderground">زیرزمین</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasYard" type="checkbox" disabled="disabled" >
-                                    <label for="HasYard">حیاط</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasSauna" type="checkbox" disabled="disabled" >
-                                    <label for="HasSauna">سونا</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasJacuzzi" type="checkbox" disabled="disabled" >
-                                    <label for="HasJacuzzi">جکوزی</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasSleepMaster" type="checkbox" disabled="disabled" >
-                                    <label for="HasSleepMaster">خواب مستر</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasRoofGarden" type="checkbox" disabled="disabled" >
-                                    <label for="HasRoofGarden">روف گاردن</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasChiller" type="checkbox" disabled="disabled" >
-                                    <label for="HasChiller">چیلر</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasBarbecue" type="checkbox" disabled="disabled" >
-                                    <label for="HasBarbecue">باربکیو</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasAltar" type="checkbox" disabled="disabled" >
-                                    <label for="HasAltar">آلاچیق</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasLobby" type="checkbox" disabled="disabled" >
-                                    <label for="HasLobby">لابی</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasBabyPlayground" type="checkbox" disabled="disabled" >
-                                    <label for="HasBabyPlayground">محوطه بازی کودک</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasGym" type="checkbox" disabled="disabled" >
-                                    <label for="HasGym">سالن بدنسازی</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasHeir" type="checkbox" disabled="disabled" >
-                                    <label for="HasHeir">ورثه ای</label>
-                                </div>
-                                <div class="md-checkbox col-calc-7">
-                                    <input id="HasSingleDocument" type="checkbox" disabled="disabled" >
-                                    <label for="HasSingleDocument">سند تک برگ</label>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                </div>
-
-
-
-
-
-
-
-            </div>
-        </div>
-
-
-    </div>
-</div>
-
-
-
-<div class="main-top">
-
-
-    <div class="row">
-        <div class="col-md-12">
-            <div class="widget card topstyle">
-
-                <div class="widget-content">
-
-
-                    <div class="padding-top-15">
-
-
-                        <div id="products" class="row list-group">
-
-
-
-
-
-                            <div class="item  col-xs-3 col-lg-3 ">
-                                <a href="/Agahi/جزئیات-آگهی" class="thumbnail card-3">
-                                    <div class="row">
-                                        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 no-padding">
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-phone-square  btn-thumb btn-tooltip  btn-static" data-toggle="tooltip" data-placement="right" title="نمایش شماره تماس" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-share-alt-square   btn-thumb btn-tooltip btn-static" data-toggle="tooltip" data-placement="right" title="به اشتراک گذاری" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-gratipay  btn-thumb btn-tooltip btn-heart" data-toggle="tooltip" data-placement="right" title="اضافه به علاقه مندی ها" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-telegram btn-thumb btn-tooltip btn-telegram" data-toggle="tooltip" data-placement="right" title="چت تلگرام" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-clock-o  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="ساعات قادر به پاسخگویی" data-container="body">07:00-21:00</button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="محله" data-container="body">تهرانپارس</button>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 no-padding">
-                                            <img class="group list-group-image fixedimage" src="~/images/ads/1.jpg" alt="" />
-                                        </div>
-
-
-                                    </div>
-                                    <div class="caption">
-                                        <h1 class="group inner list-group-item-heading titletopstyle">
-                                            تولید و ساخت انواع سایبان و قطعات
-                                        </h1>
-                                        <div class="row padding-top-8">
-                                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 no-padding">
-                                                <h3 class="lead font-size-10 text-align-left no-margin">
-                                                    800,000,000 تومان
-                                                </h3>
-                                            </div>
-                                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padding">
-                                                <i class="fa fa-usd nofa" aria-hidden="true"></i>
-                                                <span class="margin-right-5">قیمت</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-
-                            <div class="item  col-xs-3 col-lg-3 ">
-                                <a href="/Agahi/جزئیات-آگهی" class="thumbnail card-3">
-                                    <div class="row">
-                                        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 no-padding">
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-phone-square  btn-thumb btn-tooltip  btn-static" data-toggle="tooltip" data-placement="right" title="نمایش شماره تماس" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-share-alt-square   btn-thumb btn-tooltip btn-static" data-toggle="tooltip" data-placement="right" title="به اشتراک گذاری" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-gratipay  btn-thumb btn-tooltip btn-heart" data-toggle="tooltip" data-placement="right" title="اضافه به علاقه مندی ها" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-telegram btn-thumb btn-tooltip btn-telegram" data-toggle="tooltip" data-placement="right" title="چت تلگرام" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-clock-o  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="ساعات قادر به پاسخگویی" data-container="body">07:00-21:00</button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="محله" data-container="body">تهرانپارس</button>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 no-padding">
-                                            <img class="group list-group-image fixedimage" src="~/images/ads/2.jpg" alt="" />
-
-                                        </div>
-
-
-                                    </div>
-                                    <div class="caption">
-                                        <h1 class="group inner list-group-item-heading titletopstyle">
-                                            تولید و ساخت انواع سایبان و قطعات
-                                        </h1>
-                                        <div class="row padding-top-8">
-                                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 no-padding">
-                                                <h3 class="lead font-size-10 text-align-left no-margin">
-                                                    800,000,000 تومان
-                                                </h3>
-                                            </div>
-                                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padding">
-                                                <i class="fa fa-usd nofa" aria-hidden="true"></i>
-                                                <span class="margin-right-5">قیمت</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="item  col-xs-3 col-lg-3 ">
-                                <a href="/Agahi/جزئیات-آگهی" class="thumbnail card-3">
-                                    <div class="row">
-                                        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 no-padding">
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-phone-square  btn-thumb btn-tooltip  btn-static" data-toggle="tooltip" data-placement="right" title="نمایش شماره تماس" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-share-alt-square   btn-thumb btn-tooltip btn-static" data-toggle="tooltip" data-placement="right" title="به اشتراک گذاری" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-gratipay  btn-thumb btn-tooltip btn-heart" data-toggle="tooltip" data-placement="right" title="اضافه به علاقه مندی ها" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-telegram btn-thumb btn-tooltip btn-telegram" data-toggle="tooltip" data-placement="right" title="چت تلگرام" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-clock-o  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="ساعات قادر به پاسخگویی" data-container="body">07:00-21:00</button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="محله" data-container="body">تهرانپارس</button>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 no-padding">
-                                            <img class="group list-group-image fixedimage" src="~/images/ads/3.jpg" alt="" />
-
-                                        </div>
-
-
-                                    </div>
-                                    <div class="caption">
-                                        <h1 class="group inner list-group-item-heading titletopstyle">
-                                            تولید و ساخت انواع سایبان و قطعات
-                                        </h1>
-                                        <div class="row padding-top-8">
-                                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 no-padding">
-                                                <h3 class="lead font-size-10 text-align-left no-margin">
-                                                    800,000,000 تومان
-                                                </h3>
-                                            </div>
-                                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padding">
-                                                <i class="fa fa-usd nofa" aria-hidden="true"></i>
-                                                <span class="margin-right-5">قیمت</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="item  col-xs-3 col-lg-3 ">
-                                <a href="/Agahi/جزئیات-آگهی" class="thumbnail card-3">
-                                    <div class="row">
-                                        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 no-padding">
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-phone-square  btn-thumb btn-tooltip  btn-static" data-toggle="tooltip" data-placement="right" title="نمایش شماره تماس" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-share-alt-square   btn-thumb btn-tooltip btn-static" data-toggle="tooltip" data-placement="right" title="به اشتراک گذاری" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-gratipay  btn-thumb btn-tooltip btn-heart" data-toggle="tooltip" data-placement="right" title="اضافه به علاقه مندی ها" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-telegram btn-thumb btn-tooltip btn-telegram" data-toggle="tooltip" data-placement="right" title="چت تلگرام" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-clock-o  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="ساعات قادر به پاسخگویی" data-container="body">07:00-21:00</button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="محله" data-container="body">تهرانپارس</button>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 no-padding">
-                                            <img class="group list-group-image fixedimage" src="~/images/ads/4.jpg" alt="" />
-
-                                        </div>
-
-
-                                    </div>
-                                    <div class="caption">
-                                        <h1 class="group inner list-group-item-heading titletopstyle">
-                                            تولید و ساخت انواع سایبان و قطعات
-                                        </h1>
-                                        <div class="row padding-top-8">
-                                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 no-padding">
-                                                <h3 class="lead font-size-10 text-align-left no-margin">
-                                                    800,000,000 تومان
-                                                </h3>
-                                            </div>
-                                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padding">
-                                                <i class="fa fa-usd nofa" aria-hidden="true"></i>
-                                                <span class="margin-right-5">قیمت</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="item  col-xs-3 col-lg-3 ">
-                                <a href="/Agahi/جزئیات-آگهی" class="thumbnail card-3">
-                                    <div class="row">
-                                        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 no-padding">
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-phone-square  btn-thumb btn-tooltip  btn-static" data-toggle="tooltip" data-placement="right" title="نمایش شماره تماس" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-share-alt-square   btn-thumb btn-tooltip btn-static" data-toggle="tooltip" data-placement="right" title="به اشتراک گذاری" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-gratipay  btn-thumb btn-tooltip btn-heart" data-toggle="tooltip" data-placement="right" title="اضافه به علاقه مندی ها" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-telegram btn-thumb btn-tooltip btn-telegram" data-toggle="tooltip" data-placement="right" title="چت تلگرام" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-clock-o  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="ساعات قادر به پاسخگویی" data-container="body">07:00-21:00</button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="محله" data-container="body">تهرانپارس</button>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 no-padding">
-                                            <img class="group list-group-image fixedimage" src="~/images/ads/5.jpg" alt="" />
-
-                                        </div>
-
-
-                                    </div>
-                                    <div class="caption">
-                                        <h1 class="group inner list-group-item-heading titletopstyle">
-                                            تولید و ساخت انواع سایبان و قطعات
-                                        </h1>
-                                        <div class="row padding-top-8">
-                                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 no-padding">
-                                                <h3 class="lead font-size-10 text-align-left no-margin">
-                                                    800,000,000 تومان
-                                                </h3>
-                                            </div>
-                                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padding">
-                                                <i class="fa fa-usd nofa" aria-hidden="true"></i>
-                                                <span class="margin-right-5">قیمت</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="item  col-xs-3 col-lg-3 ">
-                                <a href="/Agahi/جزئیات-آگهی" class="thumbnail card-3">
-                                    <div class="row">
-                                        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 no-padding">
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-phone-square  btn-thumb btn-tooltip  btn-static" data-toggle="tooltip" data-placement="right" title="نمایش شماره تماس" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-share-alt-square   btn-thumb btn-tooltip btn-static" data-toggle="tooltip" data-placement="right" title="به اشتراک گذاری" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-gratipay  btn-thumb btn-tooltip btn-heart" data-toggle="tooltip" data-placement="right" title="اضافه به علاقه مندی ها" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-telegram btn-thumb btn-tooltip btn-telegram" data-toggle="tooltip" data-placement="right" title="چت تلگرام" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-clock-o  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="ساعات قادر به پاسخگویی" data-container="body">07:00-21:00</button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="محله" data-container="body">تهرانپارس</button>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 no-padding">
-                                            <img class="group list-group-image fixedimage" src="~/images/ads/6.jpg" alt="" />
-
-                                        </div>
-
-
-                                    </div>
-                                    <div class="caption">
-                                        <h1 class="group inner list-group-item-heading titletopstyle">
-                                            تولید و ساخت انواع سایبان و قطعات
-                                        </h1>
-                                        <div class="row padding-top-8">
-                                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 no-padding">
-                                                <h3 class="lead font-size-10 text-align-left no-margin">
-                                                    800,000,000 تومان
-                                                </h3>
-                                            </div>
-                                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padding">
-                                                <i class="fa fa-usd nofa" aria-hidden="true"></i>
-                                                <span class="margin-right-5">قیمت</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="item  col-xs-3 col-lg-3 ">
-                                <a href="/Agahi/جزئیات-آگهی" class="thumbnail card-3">
-                                    <div class="row">
-                                        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 no-padding">
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-phone-square  btn-thumb btn-tooltip  btn-static" data-toggle="tooltip" data-placement="right" title="نمایش شماره تماس" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-share-alt-square   btn-thumb btn-tooltip btn-static" data-toggle="tooltip" data-placement="right" title="به اشتراک گذاری" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-gratipay  btn-thumb btn-tooltip btn-heart" data-toggle="tooltip" data-placement="right" title="اضافه به علاقه مندی ها" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-telegram btn-thumb btn-tooltip btn-telegram" data-toggle="tooltip" data-placement="right" title="چت تلگرام" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-clock-o  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="ساعات قادر به پاسخگویی" data-container="body">07:00-21:00</button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="محله" data-container="body">تهرانپارس</button>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 no-padding">
-                                            <img class="group list-group-image fixedimage" src="~/images/ads/7.jpg" alt="" />
-
-                                        </div>
-
-
-                                    </div>
-                                    <div class="caption">
-                                        <h1 class="group inner list-group-item-heading titletopstyle">
-                                            تولید و ساخت انواع سایبان و قطعات
-                                        </h1>
-                                        <div class="row padding-top-8">
-                                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 no-padding">
-                                                <h3 class="lead font-size-10 text-align-left no-margin">
-                                                    800,000,000 تومان
-                                                </h3>
-                                            </div>
-                                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padding">
-                                                <i class="fa fa-usd nofa" aria-hidden="true"></i>
-                                                <span class="margin-right-5">قیمت</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="item  col-xs-3 col-lg-3 ">
-                                <a href="/Agahi/جزئیات-آگهی" class="thumbnail card-3">
-                                    <div class="row">
-                                        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 no-padding">
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-phone-square  btn-thumb btn-tooltip  btn-static" data-toggle="tooltip" data-placement="right" title="نمایش شماره تماس" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-share-alt-square   btn-thumb btn-tooltip btn-static" data-toggle="tooltip" data-placement="right" title="به اشتراک گذاری" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-gratipay  btn-thumb btn-tooltip btn-heart" data-toggle="tooltip" data-placement="right" title="اضافه به علاقه مندی ها" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-telegram btn-thumb btn-tooltip btn-telegram" data-toggle="tooltip" data-placement="right" title="چت تلگرام" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-clock-o  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="ساعات قادر به پاسخگویی" data-container="body">07:00-21:00</button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="محله" data-container="body">تهرانپارس</button>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 no-padding">
-                                            <img class="group list-group-image fixedimage" src="~/images/ads/8.jpg" alt="" />
-
-                                        </div>
-
-
-                                    </div>
-                                    <div class="caption">
-                                        <h1 class="group inner list-group-item-heading titletopstyle">
-                                            تولید و ساخت انواع سایبان و قطعات
-                                        </h1>
-                                        <div class="row padding-top-8">
-                                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 no-padding">
-                                                <h3 class="lead font-size-10 text-align-left no-margin">
-                                                    800,000,000 تومان
-                                                </h3>
-                                            </div>
-                                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padding">
-                                                <i class="fa fa-usd nofa" aria-hidden="true"></i>
-                                                <span class="margin-right-5">قیمت</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="item  col-xs-3 col-lg-3 ">
-                                <a href="/Agahi/جزئیات-آگهی" class="thumbnail card-3">
-                                    <div class="row">
-                                        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 no-padding">
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-phone-square  btn-thumb btn-tooltip  btn-static" data-toggle="tooltip" data-placement="right" title="نمایش شماره تماس" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-share-alt-square   btn-thumb btn-tooltip btn-static" data-toggle="tooltip" data-placement="right" title="به اشتراک گذاری" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-gratipay  btn-thumb btn-tooltip btn-heart" data-toggle="tooltip" data-placement="right" title="اضافه به علاقه مندی ها" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-telegram btn-thumb btn-tooltip btn-telegram" data-toggle="tooltip" data-placement="right" title="چت تلگرام" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-clock-o  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="ساعات قادر به پاسخگویی" data-container="body">07:00-21:00</button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="محله" data-container="body">تهرانپارس</button>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 no-padding">
-                                            <img class="group list-group-image fixedimage" src="~/images/ads/9.jpg" alt="" />
-
-                                        </div>
-
-
-
-                                    </div>
-                                    <div class="caption">
-                                        <h1 class="group inner list-group-item-heading titletopstyle">
-                                            تولید و ساخت انواع سایبان و قطعات
-                                        </h1>
-                                        <div class="row padding-top-8">
-                                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 no-padding">
-                                                <h3 class="lead font-size-10 text-align-left no-margin">
-                                                    800,000,000 تومان
-                                                </h3>
-                                            </div>
-                                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padding">
-                                                <i class="fa fa-usd nofa" aria-hidden="true"></i>
-                                                <span class="margin-right-5">قیمت</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="item  col-xs-3 col-lg-3 ">
-                                <a href="/Agahi/جزئیات-آگهی" class="thumbnail card-3">
-                                    <div class="row">
-                                        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 no-padding">
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-phone-square  btn-thumb btn-tooltip  btn-static" data-toggle="tooltip" data-placement="right" title="نمایش شماره تماس" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-share-alt-square   btn-thumb btn-tooltip btn-static" data-toggle="tooltip" data-placement="right" title="به اشتراک گذاری" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-gratipay  btn-thumb btn-tooltip btn-heart" data-toggle="tooltip" data-placement="right" title="اضافه به علاقه مندی ها" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-telegram btn-thumb btn-tooltip btn-telegram" data-toggle="tooltip" data-placement="right" title="چت تلگرام" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-clock-o  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="ساعات قادر به پاسخگویی" data-container="body">07:00-21:00</button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="محله" data-container="body">تهرانپارس</button>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 no-padding">
-                                            <img class="group list-group-image fixedimage" src="~/images/ads/10.jpg" alt="" />
-
-                                        </div>
-
-
-
-                                    </div>
-                                    <div class="caption">
-                                        <h1 class="group inner list-group-item-heading titletopstyle">
-                                            تولید و ساخت انواع سایبان و قطعات
-                                        </h1>
-                                        <div class="row padding-top-8">
-                                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 no-padding">
-                                                <h3 class="lead font-size-10 text-align-left no-margin">
-                                                    800,000,000 تومان
-                                                </h3>
-                                            </div>
-                                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padding">
-                                                <i class="fa fa-usd nofa" aria-hidden="true"></i>
-                                                <span class="margin-right-5">قیمت</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="item  col-xs-3 col-lg-3 ">
-                                <a href="/Agahi/جزئیات-آگهی" class="thumbnail card-3">
-                                    <div class="row">
-                                        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 no-padding">
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-phone-square  btn-thumb btn-tooltip  btn-static" data-toggle="tooltip" data-placement="right" title="نمایش شماره تماس" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-share-alt-square   btn-thumb btn-tooltip btn-static" data-toggle="tooltip" data-placement="right" title="به اشتراک گذاری" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-gratipay  btn-thumb btn-tooltip btn-heart" data-toggle="tooltip" data-placement="right" title="اضافه به علاقه مندی ها" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-telegram btn-thumb btn-tooltip btn-telegram" data-toggle="tooltip" data-placement="right" title="چت تلگرام" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-clock-o  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="ساعات قادر به پاسخگویی" data-container="body">07:00-21:00</button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="محله" data-container="body">تهرانپارس</button>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 no-padding">
-                                            <img class="group list-group-image fixedimage" src="~/images/ads/11.jpg" alt="" />
-
-                                        </div>
-
-
-                                    </div>
-                                    <div class="caption">
-                                        <h1 class="group inner list-group-item-heading titletopstyle">
-                                            تولید و ساخت انواع سایبان و قطعات
-                                        </h1>
-                                        <div class="row padding-top-8">
-                                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 no-padding">
-                                                <h3 class="lead font-size-10 text-align-left no-margin">
-                                                    800,000,000 تومان
-                                                </h3>
-                                            </div>
-                                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padding">
-                                                <i class="fa fa-usd nofa" aria-hidden="true"></i>
-                                                <span class="margin-right-5">قیمت</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="item  col-xs-3 col-lg-3 ">
-                                <a href="/Agahi/جزئیات-آگهی" class="thumbnail card-3">
-                                    <div class="row">
-                                        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 no-padding">
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-phone-square  btn-thumb btn-tooltip  btn-static" data-toggle="tooltip" data-placement="right" title="نمایش شماره تماس" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-share-alt-square   btn-thumb btn-tooltip btn-static" data-toggle="tooltip" data-placement="right" title="به اشتراک گذاری" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-gratipay  btn-thumb btn-tooltip btn-heart" data-toggle="tooltip" data-placement="right" title="اضافه به علاقه مندی ها" data-container="body"></button>
-
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding">
-                                                    <button type="button" class="btn fa fa-telegram btn-thumb btn-tooltip btn-telegram" data-toggle="tooltip" data-placement="right" title="چت تلگرام" data-container="body"></button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-clock-o  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="ساعات قادر به پاسخگویی" data-container="body">07:00-21:00</button>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 text-align-right no-padding">
-
-                                                    <button type="button" class="btn fa fa-map-marker  btn-thumb btn-tooltip btn-static-big" data-toggle="tooltip" data-placement="right" title="محله" data-container="body">تهرانپارس</button>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 no-padding">
-                                            <img class="group list-group-image fixedimage" src="~/images/ads/12.jpg" alt="" />
-
-                                        </div>
-
-
-                                    </div>
-                                    <div class="caption">
-                                        <h1 class="group inner list-group-item-heading titletopstyle">
-                                            تولید و ساخت انواع سایبان و قطعات
-                                        </h1>
-                                        <div class="row padding-top-8">
-                                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 no-padding">
-                                                <h3 class="lead font-size-10 text-align-left no-margin">
-                                                    800,000,000 تومان
-                                                </h3>
-                                            </div>
-                                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padding">
-                                                <i class="fa fa-usd nofa" aria-hidden="true"></i>
-                                                <span class="margin-right-5">قیمت</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-
-
-
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-</div>
 
 
 

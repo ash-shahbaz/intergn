@@ -1730,7 +1730,7 @@ a.verified {
     border-radius: 3px;
     padding: 20px 35px 35px;
     font-family: 'IRANSans',Calibri, 'Devanagari-Regular', sans-serif;
-    height: 590px;
+    height: 100%;
 }
 
     .description h4,
@@ -1749,7 +1749,7 @@ a.verified {
     background-color: #fff;
     border-radius: 3px;
     margin-bottom: 20px;
-    height: 590px;
+    min-height: 100%;
 }
 
 .description-info .short-info {
@@ -4030,4 +4030,10 @@ display:none !important;
 }
 .margin-right-15{
     margin-right: 15px;
+}
+.carousel-inner {
+    margin-bottom: 120px;
+}
+.padding-top-5 {
+    padding-top: 5px;
 }
