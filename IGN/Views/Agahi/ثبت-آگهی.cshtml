@@ -3304,12 +3304,15 @@
                     var lv1 = "@ViewBag.lvl1" ;
                     var lv2 = ""
                     if ("@ViewBag.lvl2" != null) { lv2 = "@ViewBag.lvl2"; }
+                    var CategoryID = "";
+                    if( lv2 != "" ) { CategoryID = lv2 } else { CategoryID = lv1 }
+
 
                     var Country = $(".Province option:selected").val();
-                    var City = $(".City option:selected").val();
-                    var Region = $(".Region option:selected").val();
+                    var CityID = $(".City option:selected").val();
+                    var RegionID = $(".Region option:selected").val();
                     var Location = "";
-                    var Kind = $('input[type=radio][name=Kind]:checked').attr('value');
+                    var AgahiServiceID = $('input[type=radio][name=Kind]:checked').attr('value');
                     var TitleAgahi = $("#TitleAgahi").val();
                     var uploadimageone = "0";
                     if ($('#upload-image-one').is(":checked")) { uploadimageone = ""; }
@@ -3319,13 +3322,13 @@
                     if ($('#upload-image-three').is(":checked")) { uploadimagethree = ""; }
                     var uploadimagefour = "0";
                     if ($('#upload-image-four').is(":checked")) { uploadimagefour = ""; }
-                    var txtDesc = $("#txtDesc").val();
+                    var AgahiDescription = $("#txtDesc").val();
 
-                    var NameAdvertiser = $("#NameAdvertiser").val();
-                    var EmailAdvertiser = $("#EmailAdvertiser").val();
-                    var MobileAdvertiser = $("#MobileAdvertiser").val();
+                    var AdvertiserFullName = $("#NameAdvertiser").val();
+                    var AdvertiserEmail = $("#EmailAdvertiser").val();
+                    var AdvertiserMobile = $("#MobileAdvertiser").val();
 
-                    var KindAds = $('input[type=radio][name=Kind-Ads]:checked').attr('value');
+                    var KindAdsID = $('input[type=radio][name=Kind-Ads]:checked').attr('value');
 
                     var RegisterDate = null;
                     var UserID = 10;
@@ -3337,24 +3340,22 @@
 
 
 
-
-
                     if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "فروش املاک مسکونی" && "@ViewBag.lvl2" == "آپارتمان" || "@ViewBag.lvl2" == "خانه و ویلا") {
                         //RegisterSaleApartSub
 
-                        var KindTotalPrice = $("#Kind-TotalPrice").val();
+                        var KindTotalPriceID = $("#Kind-TotalPrice").val();
                         var TotalPrice = "";
-                        if (KindTotalPrice == 2)//مقطوع - تومان
+                        if (KindTotalPriceID == 2)//مقطوع - تومان
                         { TotalPrice = $('#TotalPrice').val(); }
 
                         var Area = $("#Area").val();
                         var RoomNumber = $("#RoomNumber").val();
-                        var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
-                        var Person = $('input[type=radio][name=Person]:checked').attr('value');
+                        var CountrysideID = $('input[type=radio][name=Countryside]:checked').attr('value');
+                        var AdvertiseTypeID = $('input[type=radio][name=Person]:checked').attr('value');
                         var FromYear = $("#Year-Created").val();
                         var FloorNumber = $("#Floor-Number").val();
-                        var KindBottom = $("#Kind-Bottom").val();
-                        var KindHeating = $("#Kind-Heating").val();
+                        var KindBottomID = $("#Kind-Bottom").val();
+                        var KindHeatingID = $("#Kind-Heating").val();
                         var HasParking = "";
                         if ($('#HasParking').is(":checked")) { HasParking = true; } else { HasParking = false; }
                         var HasElevator = "";
@@ -3406,12 +3407,11 @@
                             type: "GET",
                             url: "/Agahi/RegisterSaleApartSub",
                             data: {
-                                lv0: lv0, lv1: lv1 ,lv2: lv2, Country:Country, City:City, Region:Region, Location:Location, Kind:Kind, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone,
-                                uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree, uploadimagefour:uploadimagefour, txtDesc:txtDesc, NameAdvertiser:NameAdvertiser,
-                                EmailAdvertiser:EmailAdvertiser, MobileAdvertiser:MobileAdvertiser, KindAds:KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-                                                    KindTotalPrice: KindTotalPrice, TotalPrice: TotalPrice, Area: Area, RoomNumber: RoomNumber,
-                                    Countryside: Countryside, Person: Person, FromYear: FromYear, FloorNumber: FloorNumber, KindBottom: KindBottom, KindHeating: KindHeating,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
+                                    UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
+                                    KindTotalPriceID: KindTotalPriceID, TotalPrice: TotalPrice, Area: Area, RoomNumber: RoomNumber,
+                                    CountrysideID: CountrysideID, AdvertiseTypeID: AdvertiseTypeID, FromYear: FromYear, FloorNumber: FloorNumber, KindBottomID: KindBottomID, KindHeatingID: KindHeatingID,
                                     HasParking: HasParking, HasElevator: HasElevator, HasIranianService: HasIranianService, HasForeignService: HasForeignService,
                                     HasBalcony: HasBalcony, HasPool: HasPool, HasUnderground: HasUnderground, HasYard: HasYard, HasSauna: HasSauna, HasJacuzzi: HasJacuzzi,
                                     HasSleepMaster: HasSleepMaster, HasRoofGarden: HasRoofGarden, HasChiller: HasChiller, HasBarbecue: HasBarbecue,
@@ -3438,14 +3438,14 @@
                          //RegisterSaleLandSub
 
 
-                        var KindTotalPrice = $("#Kind-TotalPrice").val();
+                        var KindTotalPriceID = $("#Kind-TotalPrice").val();
                         var TotalPrice = "";
-                        if (KindTotalPrice == 2)//مقطوع - تومان
+                        if (KindTotalPriceID == 2)//مقطوع - تومان
                         { TotalPrice = $('#TotalPrice').val(); }
 
                         var Area = $("#Area").val();
-                        var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
-                        var Person = $('input[type=radio][name=Person]:checked').attr('value');
+                        var CountrysideID = $('input[type=radio][name=Countryside]:checked').attr('value');
+                        var AdvertiseTypeID = $('input[type=radio][name=Person]:checked').attr('value');
                         var FloorNumber = $("#Floor-Number").val();
 
                         var HasHeir = "";
@@ -3465,12 +3465,11 @@
                             type: "GET",
                             url: "/Agahi/RegisterSaleLandSub",
                             data: {
-                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
-                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
-                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,Area:Area,Countryside:Countryside,
-Person:Person,FloorNumber:FloorNumber,HasHeir:HasHeir,HasSingleDocument:HasSingleDocument,Infrastructure:Infrastructure,price:price,LoanAmount:LoanAmount
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
+                                    UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
+                                    KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice,Area:Area,CountrysideID:CountrysideID,
+                                    AdvertiseTypeID:AdvertiseTypeID,FloorNumber:FloorNumber,HasHeir:HasHeir,HasSingleDocument:HasSingleDocument,Infrastructure:Infrastructure,price:price,LoanAmount:LoanAmount
                             },
                             contentType: "text/plain",
                             dataType: "json",
@@ -3486,25 +3485,25 @@ Person:Person,FloorNumber:FloorNumber,HasHeir:HasHeir,HasSingleDocument:HasSingl
                         });
                     } else if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "اجاره اجاره مسکونی") {
                          //RegisterRentHouseSub
-                        var KindDepositPrice = $("#Kind-DepositPrice").val();
+                        var KindDepositPriceID = $("#Kind-DepositPrice").val();
                         var DepositPrice = "";
-                        if (KindDepositPrice == 2)//مقطوع - تومان
+                        if (KindDepositPriceID == 2)//مقطوع - تومان
                         { DepositPrice = $('#DepositPrice').val(); }
 
-                        var KindRentPrice = $("#Kind-RentPrice").val();
+                        var KindRentPriceID = $("#Kind-RentPrice").val();
                         var RentPrice = "";
-                        if (KindRentPrice == 2)//مقطوع - تومان
+                        if (KindRentPriceID == 2)//مقطوع - تومان
                         { RentPrice = $('#DepositPrice').val(); }
 
                         var Area = $("#Area").val();
                         var RoomNumber = $("#RoomNumber").val();
-                        var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
-                        var Person = $('input[type=radio][name=Person]:checked').attr('value');
+                        var CountrysideID = $('input[type=radio][name=Countryside]:checked').attr('value');
+                        var AdvertiseTypeID = $('input[type=radio][name=Person]:checked').attr('value');
 
                         var YearCreated = $("#Year-Created").val();
                         var FloorNumber = $("#Floor-Number").val();
-                        var KindBottom = $("#Kind-Bottom").val();
-                        var KindHeating = $("#Kind-Heating").val();
+                        var KindBottomID = $("#Kind-Bottom").val();
+                        var KindHeatingID = $("#Kind-Heating").val();
 
                         var HasParking = "";
                         if ($('#HasParking').is(":checked")) { HasParking = true; } else { HasParking = false; }
@@ -3553,12 +3552,10 @@ Person:Person,FloorNumber:FloorNumber,HasHeir:HasHeir,HasSingleDocument:HasSingl
                             type: "GET",
                             url: "/Agahi/RegisterRentHouseSub",
                             data: {
-                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
-                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
-                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindDepositPrice:KindDepositPrice,DepositPrice:DepositPrice,KindRentPrice:KindRentPrice,RentPrice:RentPrice,Area:Area,RoomNumber:RoomNumber,Countryside:Countryside,Person:Person,YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeating:KindHeating,
-                   HasParking: HasParking, HasElevator: HasElevator, HasIranianService: HasIranianService, HasForeignService: HasForeignService,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
+                                    UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
+                                    KindDepositPriceID:KindDepositPriceID,DepositPrice:DepositPrice,KindRentPriceID:KindRentPriceID,RentPrice:RentPrice,Area:Area,RoomNumber:RoomNumber,CountrysideID:CountrysideID,AdvertiseTypeID:AdvertiseTypeID,YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottomID:KindBottomID,KindHeatingID:KindHeatingID, HasParking: HasParking, HasElevator: HasElevator, HasIranianService: HasIranianService, HasForeignService: HasForeignService,
                                     HasBalcony: HasBalcony, HasPool: HasPool, HasUnderground: HasUnderground, HasYard: HasYard, HasSauna: HasSauna, HasJacuzzi: HasJacuzzi,
                                     HasSleepMaster: HasSleepMaster, HasRoofGarden: HasRoofGarden, HasChiller: HasChiller, HasBarbecue: HasBarbecue,
                                     HasAltar: HasAltar, HasLobby: HasLobby, HasBabyPlayground: HasBabyPlayground, HasGym: HasGym
@@ -3580,21 +3577,21 @@ KindDepositPrice:KindDepositPrice,DepositPrice:DepositPrice,KindRentPrice:KindRe
 
 
 
-                        var KindTotalPrice = $("#Kind-TotalPrice").val();
+                        var KindTotalPriceID = $("#Kind-TotalPrice").val();
                         var TotalPrice = "";
-                        if (KindTotalPrice == 2)//مقطوع - تومان
+                        if (KindTotalPriceID == 2)//مقطوع - تومان
                         { TotalPrice = $('#TotalPrice').val(); }
 
                         var Area = $("#Area").val();
                         var RoomNumber = $("#RoomNumber").val();
-                        var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
-                        var Person = $('input[type=radio][name=Person]:checked').attr('value');
+                        var CountrysideID = $('input[type=radio][name=Countryside]:checked').attr('value');
+                        var AdvertiseTypeID = $('input[type=radio][name=Person]:checked').attr('value');
                         var AdminDoc = $('input[type=radio][name=AdminDoc]:checked').attr('value');
 
                         var YearCreated = $("#Year-Created").val();
                         var FloorNumber = $("#Floor-Number").val();
-                        var KindBottom = $("#Kind-Bottom").val();
-                        var KindHeating = $("#Kind-Heating").val();
+                        var KindBottomID = $("#Kind-Bottom").val();
+                        var KindHeatingID = $("#Kind-Heating").val();
 
                        var HasParking = "";
                         if ($('#HasParking').is(":checked")) { HasParking = true; } else { HasParking = false; }
@@ -3652,17 +3649,16 @@ KindDepositPrice:KindDepositPrice,DepositPrice:DepositPrice,KindRentPrice:KindRe
                             type: "GET",
                             url: "/Agahi/RegisterSaleOfficeSub",
                             data: {
-                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
-                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
-                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,Area:Area,RoomNumber:RoomNumber,Countryside:Countryside,Person:Person,AdminDoc:AdminDoc,
-YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeating:KindHeating,
-                   HasParking: HasParking, HasElevator: HasElevator, HasIranianService: HasIranianService, HasForeignService: HasForeignService,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
+                                    UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
+                                    KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice,Area:Area,RoomNumber:RoomNumber,CountrysideID:CountrysideID,AdvertiseTypeID:AdvertiseTypeID,AdminDoc:AdminDoc,
+                                    YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottomID:KindBottomID,KindHeatingID:KindHeatingID,
+                                    HasParking: HasParking, HasElevator: HasElevator, HasIranianService: HasIranianService, HasForeignService: HasForeignService,
                                     HasBalcony: HasBalcony, HasPool: HasPool, HasUnderground: HasUnderground, HasYard: HasYard, HasSauna: HasSauna, HasJacuzzi: HasJacuzzi,
                                     HasSleepMaster: HasSleepMaster, HasRoofGarden: HasRoofGarden, HasChiller: HasChiller, HasBarbecue: HasBarbecue,
-                                    HasAltar: HasAltar, HasLobby: HasLobby, HasBabyPlayground: HasBabyPlayground, HasGym: HasGym
-   ,HasHeir:HasHeir,HasSingleDocument:HasSingleDocument,Infrastructure:Infrastructure,price:price,LoanAmount:LoanAmount
+                                    HasAltar: HasAltar, HasLobby: HasLobby, HasBabyPlayground: HasBabyPlayground, HasGym: HasGym,
+                                    HasHeir:HasHeir,HasSingleDocument:HasSingleDocument,Infrastructure:Infrastructure,price:price,LoanAmount:LoanAmount
                             },
                             contentType: "text/plain",
                             dataType: "json",
@@ -3680,26 +3676,26 @@ YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeatin
                          //RegisterRentOfficeSub
 
 
-                        var KindDepositPrice = $("#Kind-DepositPrice").val();
+                        var KindDepositPriceID = $("#Kind-DepositPrice").val();
                         var DepositPrice = "";
-                        if (KindDepositPrice == 2)//مقطوع - تومان
+                        if (KindDepositPriceID == 2)//مقطوع - تومان
                         { DepositPrice = $('#DepositPrice').val(); }
 
-                        var KindRentPrice = $("#Kind-RentPrice").val();
+                        var KindRentPriceID = $("#Kind-RentPrice").val();
                         var RentPrice = "";
-                        if (KindRentPrice == 2)//مقطوع - تومان
+                        if (KindRentPriceID == 2)//مقطوع - تومان
                         { RentPrice = $('#DepositPrice').val(); }
 
                         var Area = $("#Area").val();
                         var RoomNumber = $("#RoomNumber").val();
-                        var Countryside = $('input[type=radio][name=Countryside]:checked').attr('value');
-                        var Person = $('input[type=radio][name=Person]:checked').attr('value');
+                        var CountrysideID = $('input[type=radio][name=Countryside]:checked').attr('value');
+                        var AdvertiseTypeID = $('input[type=radio][name=Person]:checked').attr('value');
                         var AdminDoc = $('input[type=radio][name=AdminDoc]:checked').attr('value');
 
                         var YearCreated = $("#Year-Created").val();
                         var FloorNumber = $("#Floor-Number").val();
-                        var KindBottom = $("#Kind-Bottom").val();
-                        var KindHeating = $("#Kind-Heating").val();
+                        var KindBottomID = $("#Kind-Bottom").val();
+                        var KindHeatingID = $("#Kind-Heating").val();
 
                         var HasParking = "";
                         if ($('#HasParking').is(":checked")) { HasParking = true; } else { HasParking = false; }
@@ -3746,14 +3742,13 @@ YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeatin
                             type: "GET",
                             url: "/Agahi/RegisterRentOfficeSub",
                             data: {
-                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
-                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
-                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindDepositPrice:KindDepositPrice,DepositPrice:DepositPrice,KindRentPrice:KindRentPrice,RentPrice:RentPrice,
-Area:Area,RoomNumber:RoomNumber,Countryside:Countryside,Person:Person,AdminDoc:AdminDoc,
-YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeating:KindHeating,
-                   HasParking: HasParking, HasElevator: HasElevator, HasIranianService: HasIranianService, HasForeignService: HasForeignService,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
+                                    UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
+                                    KindDepositPriceID:KindDepositPriceID,DepositPrice:DepositPrice,KindRentPriceID:KindRentPriceID,RentPrice:RentPrice,
+                                    Area:Area,RoomNumber:RoomNumber,CountrysideID:CountrysideID,AdvertiseTypeID:AdvertiseTypeID,AdminDoc:AdminDoc,
+                                    YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottomID:KindBottomID,KindHeatingID:KindHeatingID,
+                                    HasParking: HasParking, HasElevator: HasElevator, HasIranianService: HasIranianService, HasForeignService: HasForeignService,
                                     HasBalcony: HasBalcony, HasPool: HasPool, HasUnderground: HasUnderground, HasYard: HasYard, HasSauna: HasSauna, HasJacuzzi: HasJacuzzi,
                                     HasSleepMaster: HasSleepMaster, HasRoofGarden: HasRoofGarden, HasChiller: HasChiller, HasBarbecue: HasBarbecue,
                                     HasAltar: HasAltar, HasLobby: HasLobby, HasBabyPlayground: HasBabyPlayground, HasGym: HasGym
@@ -3774,7 +3769,7 @@ YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeatin
                        	//RegisterServicesHouseSub
 
 
-                        var Person = $('input[type=radio][name=Person]:checked').attr('value');
+                        var AdvertiseTypeID = $('input[type=radio][name=Person]:checked').attr('value');
 
 
 
@@ -3783,10 +3778,10 @@ YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeatin
                             type: "GET",
                             url: "/Agahi/RegisterServicesHouseSub",
                             data: {
-                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
-                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
-                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,Person:Person
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
+                                    UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
+                                    AdvertiseTypeID:AdvertiseTypeID
 
                             },
                             contentType: "text/plain",
@@ -3806,29 +3801,29 @@ YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeatin
 
 
 
-                        var KindTotalPrice = $("#Kind-TotalPrice").val();
+                        var KindTotalPriceID = $("#Kind-TotalPrice").val();
                         var TotalPrice = "";
-                        if (KindTotalPrice == 2)//مقطوع - تومان
+                        if (KindTotalPriceID == 2)//مقطوع - تومان
                         { TotalPrice = $('#TotalPrice').val(); }
 
                         var NumberMonthlyInstallment = $('#Number-MonthlyInstallment').val();
                         var MonthlyInstallment = $('#MonthlyInstallment').val();
 
 
-                        var BrandName = $('#Brand-Name').val();
+                        var BrandID = $('#Brand-Name').val();
                         var CarFunction = $('#CarFunction').val();
                         var Year = $('#Year').val();
-                        var Person = $('input[type=radio][name=Person]:checked').attr('value');
-                        var KindCondition = $('#Kind-Condition').val();
-                        var KindChassis = $('#Kind-Chassis').val();
-                        var KindDiff = $('#Kind-Diff').val();
-                        var KindColorOut = $('#Kind-ColorOut').val();
-                        var KindColorIn = $('#Kind-ColorIn').val();
-                        var KindModelTip = $('#Kind-ModelTip').val();
+                        var AdvertiseTypeID = $('input[type=radio][name=Person]:checked').attr('value');
+                        var KindConditionID = $('#Kind-Condition').val();
+                        var KindChassisID = $('#Kind-Chassis').val();
+                        var KindDiffID = $('#Kind-Diff').val();
+                        var KindColorOutID = $('#Kind-ColorOut').val();
+                        var KindColorInID = $('#Kind-ColorIn').val();
+                        var KindModelTipID = $('#Kind-ModelTip').val();
                         var KindGearbox = $('#Kind-Gearbox').val();
-                        var KindFuel = $('#Kind-Fuel').val();
-                        var KindCrash = $('#Kind-Crash').val();
-                        var KindPelak = $('#Kind-Pelak').val();
+                        var KindFuelID = $('#Kind-Fuel').val();
+                        var KindCrashID = $('#Kind-Crash').val();
+                        var KindPelakID = $('#Kind-Pelak').val();
 
                         var HasSunroof = "";
                         if ($('#HasSunroof').is(":checked")) { HasSunroof = true; } else { HasSunroof = false; }
@@ -3843,13 +3838,12 @@ YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottom:KindBottom,KindHeatin
                             type: "GET",
                             url: "/Agahi/RegisterCarRiding",
                             data: {
-                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
-                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
-                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,NumberMonthlyInstallment:NumberMonthlyInstallment,MonthlyInstallment:MonthlyInstallment,BrandName:BrandName,CarFunction:CarFunction,
-Year:Year,Person:Person,KindCondition:KindCondition,KindChassis:KindChassis,KindDiff:KindDiff,KindColorOut:KindColorOut,KindColorIn:KindColorIn,KindModelTip:KindModelTip,
-KindGearbox:KindGearbox,KindFuel:KindFuel,KindCrash:KindCrash,KindPelak:KindPelak,HasSunroof:HasSunroof,HasAlarm:HasAlarm,HasSound:HasSound
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
+                                    UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
+                                    KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice,NumberMonthlyInstallment:NumberMonthlyInstallment,MonthlyInstallment:MonthlyInstallment,BrandID:BrandID,CarFunction:CarFunction,
+                                    Year:Year,AdvertiseTypeID:AdvertiseTypeID,KindConditionID:KindConditionID,KindChassisID:KindChassisID,KindDiffID:KindDiffID,KindColorOutID:KindColorOutID,KindColorInID:KindColorInID,KindModelTipID:KindModelTipID,
+                                    KindGearbox:KindGearbox,KindFuelID:KindFuelID,KindCrashID:KindCrashID,KindPelakID:KindPelakID,HasSunroof:HasSunroof,HasAlarm:HasAlarm,HasSound:HasSound
                             },
                             contentType: "text/plain",
                             dataType: "json",
@@ -3868,29 +3862,29 @@ KindGearbox:KindGearbox,KindFuel:KindFuel,KindCrash:KindCrash,KindPelak:KindPela
 
 
 
-                        var KindTotalPrice = $("#Kind-TotalPrice").val();
+                        var KindTotalPriceID = $("#Kind-TotalPrice").val();
                         var TotalPrice = "";
-                        if (KindTotalPrice == 2)//مقطوع - تومان
+                        if (KindTotalPriceID == 2)//مقطوع - تومان
                         { TotalPrice = $('#TotalPrice').val(); }
 
                         var NumberMonthlyInstallment = $('#Number-MonthlyInstallment').val();
                         var MonthlyInstallment = $('#MonthlyInstallment').val();
 
 
-                        var BrandName = $('#Brand-Name').val();
+                        var BrandID = $('#Brand-Name').val();
                         var CarFunction = $('#CarFunction').val();
                         var Year = $('#Year').val();
-                        var Person = $('input[type=radio][name=Person]:checked').attr('value');
-                        var KindCondition = $('#Kind-Condition').val();
-                        var KindChassis = $('#Kind-Chassis').val();
-                        var KindDiff = $('#Kind-Diff').val();
-                        var KindColorOut = $('#Kind-ColorOut').val();
-                        var KindColorIn = $('#Kind-ColorIn').val();
-                        var KindModelTip = $('#Kind-ModelTip').val();
+                        var AdvertiseTypeID = $('input[type=radio][name=Person]:checked').attr('value');
+                        var KindConditionID = $('#Kind-Condition').val();
+                        var KindChassisID = $('#Kind-Chassis').val();
+                        var KindDiffID = $('#Kind-Diff').val();
+                        var KindColorOutID = $('#Kind-ColorOut').val();
+                        var KindColorInID = $('#Kind-ColorIn').val();
+                        var KindModelTipID = $('#Kind-ModelTip').val();
                         var KindGearbox = $('#Kind-Gearbox').val();
-                        var KindFuel = $('#Kind-Fuel').val();
-                        var KindCrash = $('#Kind-Crash').val();
-                        var KindPelak = $('#Kind-Pelak').val();
+                        var KindFuelID = $('#Kind-Fuel').val();
+                        var KindCrashID = $('#Kind-Crash').val();
+                        var KindPelakID = $('#Kind-Pelak').val();
 
                         var HasSunroof = "";
                         if ($('#HasSunroof').is(":checked")) { HasSunroof = true; } else { HasSunroof = false; }
@@ -3906,13 +3900,12 @@ KindGearbox:KindGearbox,KindFuel:KindFuel,KindCrash:KindCrash,KindPelak:KindPela
                             type: "GET",
                             url: "/Agahi/RegisterCarHeavy",
                             data: {
-                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
-                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
-                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,NumberMonthlyInstallment:NumberMonthlyInstallment,MonthlyInstallment:MonthlyInstallment,BrandName:BrandName,CarFunction:CarFunction,
-Year:Year,Person:Person,KindCondition:KindCondition,KindChassis:KindChassis,KindDiff:KindDiff,KindColorOut:KindColorOut,KindColorIn:KindColorIn,KindModelTip:KindModelTip,
-KindGearbox:KindGearbox,KindFuel:KindFuel,KindCrash:KindCrash,KindPelak:KindPelak,HasSunroof:HasSunroof,HasAlarm:HasAlarm,HasSound:HasSound
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
+                                    UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
+                                    KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice,NumberMonthlyInstallment:NumberMonthlyInstallment,MonthlyInstallment:MonthlyInstallment,BrandID:BrandID,CarFunction:CarFunction,
+                                    Year:Year,AdvertiseTypeID:AdvertiseTypeID,KindConditionID:KindConditionID,KindChassisID:KindChassisID,KindDiffID:KindDiffID,KindColorOutID:KindColorOutID,KindColorInID:KindColorInID,KindModelTipID:KindModelTipID,
+                                    KindGearbox:KindGearbox,KindFuelID:KindFuelID,KindCrashID:KindCrashID,KindPelakID:KindPelakID,HasSunroof:HasSunroof,HasAlarm:HasAlarm,HasSound:HasSound
                             },
                             contentType: "text/plain",
                             dataType: "json",
@@ -3931,25 +3924,25 @@ KindGearbox:KindGearbox,KindFuel:KindFuel,KindCrash:KindCrash,KindPelak:KindPela
 
 
 
-                        var KindTotalPrice = $("#Kind-TotalPrice").val();
+                        var KindTotalPriceID = $("#Kind-TotalPrice").val();
                         var TotalPrice = "";
-                        if (KindTotalPrice == 2)//مقطوع - تومان
+                        if (KindTotalPriceID == 2)//مقطوع - تومان
                         { TotalPrice = $('#TotalPrice').val(); }
 
                         var NumberMonthlyInstallment = $('#Number-MonthlyInstallment').val();
                         var MonthlyInstallment = $('#MonthlyInstallment').val();
 
 
-                        var BrandName = $('#Brand-Name').val();
+                        var BrandID = $('#Brand-Name').val();
                         var CarFunction = $('#CarFunction').val();
                         var Year = $('#Year').val();
-                        var Person = $('input[type=radio][name=Person]:checked').attr('value');
-                        var KindCondition = $('#Kind-Condition').val();
-                        var KindColorOut = $('#Kind-ColorOut').val();
-                        var KindModelTip = $('#Kind-ModelTip').val();
-                        var KindFuel = $('#Kind-Fuel').val();
-                        var KindCrash = $('#Kind-Crash').val();
-                        var KindPelak = $('#Kind-Pelak').val();
+                        var AdvertiseTypeID = $('input[type=radio][name=Person]:checked').attr('value');
+                        var KindConditionID = $('#Kind-Condition').val();
+                        var KindColorOutID = $('#Kind-ColorOut').val();
+                        var KindModelTipID = $('#Kind-ModelTip').val();
+                        var KindFuelID = $('#Kind-Fuel').val();
+                        var KindCrashID = $('#Kind-Crash').val();
+                        var KindPelakID = $('#Kind-Pelak').val();
 
                         var HasAlarm = "";
                         if ($('#HasAlarm').is(":checked")) { HasAlarm = true; } else { HasAlarm = false; }
@@ -3962,12 +3955,11 @@ KindGearbox:KindGearbox,KindFuel:KindFuel,KindCrash:KindCrash,KindPelak:KindPela
                             type: "GET",
                             url: "/Agahi/RegisterMotorcycle",
                             data: {
-                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
-                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
-                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,NumberMonthlyInstallment:NumberMonthlyInstallment,MonthlyInstallment:MonthlyInstallment,BrandName:BrandName,CarFunction:CarFunction,
-Year:Year,Person:Person,KindCondition:KindCondition,KindColorOut:KindColorOut,KindModelTip:KindModelTip,KindFuel:KindFuel,KindCrash:KindCrash,KindPelak:KindPelak,HasAlarm:HasAlarm
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
+                                    UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
+                                    KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice,NumberMonthlyInstallment:NumberMonthlyInstallment,MonthlyInstallment:MonthlyInstallment,BrandID:BrandID,CarFunction:CarFunction,
+                                    Year:Year,AdvertiseTypeID:AdvertiseTypeID,KindConditionID:KindConditionID,KindColorOutID:KindColorOutID,KindModelTipID:KindModelTipID,KindFuelID:KindFuelID,KindCrashID:KindCrashID,KindPelakID:KindPelakID,HasAlarm:HasAlarm
                             },
                             contentType: "text/plain",
                             dataType: "json",
@@ -3984,9 +3976,9 @@ Year:Year,Person:Person,KindCondition:KindCondition,KindColorOut:KindColorOut,Ki
                     } else if ("@ViewBag.lvl0" == "وسایل نقلیه" && "@ViewBag.lvl1" == "قایق و لوازم جانبی" || "@ViewBag.lvl2" == "لوازم جانبی موتورسیکلت") {
                         //RegisterAccessoriesDetail
 
-                        var KindTotalPrice = $("#Kind-TotalPrice").val();
+                        var KindTotalPriceID = $("#Kind-TotalPrice").val();
                         var TotalPrice = "";
-                        if (KindTotalPrice == 2)//مقطوع - تومان
+                        if (KindTotalPriceID == 2)//مقطوع - تومان
                         { TotalPrice = $('#TotalPrice').val(); }
 
 
@@ -3994,11 +3986,10 @@ Year:Year,Person:Person,KindCondition:KindCondition,KindColorOut:KindColorOut,Ki
                             type: "GET",
                             url: "/Agahi/RegisterAccessoriesDetail",
                             data: {
-                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
-                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
-                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
+                                    UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
+                                    KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice
                             },
                             contentType: "text/plain",
                             dataType: "json",
@@ -4016,23 +4007,22 @@ KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice
                         //RegisterMobileTablet
 
 
-                        var KindTotalPrice = $("#Kind-TotalPrice").val();
+                        var KindTotalPriceID = $("#Kind-TotalPrice").val();
                         var TotalPrice = "";
-                        if (KindTotalPrice == 2)//مقطوع - تومان
+                        if (KindTotalPriceID == 2)//مقطوع - تومان
                         { TotalPrice = $('#TotalPrice').val(); }
-                        var BrandName = $('#Brand-Name').val();
-                        var KindColor = $('#KindColor').val();
+                        var BrandID = $('#Brand-Name').val();
+                        var KindColorID = $('#KindColor').val();
 
 
                         $.ajax({
                             type: "GET",
                             url: "/Agahi/RegisterMobileTablet",
                             data: {
-                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
-                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
-                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,BrandName:BrandName,KindColor:KindColor
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
+                                    UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
+                                    KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice,BrandID:BrandID,KindColorID:KindColorID
                             },
                             contentType: "text/plain",
                             dataType: "json",
@@ -4051,12 +4041,12 @@ KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,BrandName:BrandName,KindColo
 
 
 
-                        var KindTotalPrice = $("#Kind-TotalPrice").val();
+                        var KindTotalPriceID = $("#Kind-TotalPrice").val();
                         var TotalPrice = "";
-                        if (KindTotalPrice == 2)//مقطوع - تومان
+                        if (KindTotalPriceID == 2)//مقطوع - تومان
                         { TotalPrice = $('#TotalPrice').val(); }
-                        var BrandName = $('#Brand-Name').val();
-                        var KindColor = $('#KindColor').val();
+                        var BrandID = $('#Brand-Name').val();
+                        var KindColorID = $('#KindColor').val();
 
                         var KindSizeScreen = $('#KindSizeScreen').val();
                         var KindTouch = $('#KindTouch').val();
@@ -4082,13 +4072,12 @@ KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,BrandName:BrandName,KindColo
                             type: "GET",
                             url: "/Agahi/RegisterLapTop",
                             data: {
-                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
-                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
-                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,BrandName:BrandName,KindColor:KindColor,
-KindSizeScreen:KindSizeScreen,KindTouch:KindTouch,MeasureRAM:MeasureRAM,MeasureCPU:MeasureCPU,MeasureHard:MeasureHard,
-MeasureGraphic:MeasureGraphic,HasAntiWater:HasAntiWater,HasUSB3:HasUSB3,HasDVDRW:HasDVDRW,HasCamera:HasCamera
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
+                                    UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
+                                    KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice,BrandID:BrandID,KindColorID:KindColorID,
+                                    KindSizeScreen:KindSizeScreen,KindTouch:KindTouch,MeasureRAM:MeasureRAM,MeasureCPU:MeasureCPU,MeasureHard:MeasureHard,
+                                    MeasureGraphic:MeasureGraphic,HasAntiWater:HasAntiWater,HasUSB3:HasUSB3,HasDVDRW:HasDVDRW,HasCamera:HasCamera
                             },
                             contentType: "text/plain",
                             dataType: "json",
@@ -4107,9 +4096,9 @@ MeasureGraphic:MeasureGraphic,HasAntiWater:HasAntiWater,HasUSB3:HasUSB3,HasDVDRW
 
 
 
-                        var KindTotalPrice = $("#Kind-TotalPrice").val();
+                        var KindTotalPriceID = $("#Kind-TotalPrice").val();
                         var TotalPrice = "";
-                        if (KindTotalPrice == 2)//مقطوع - تومان
+                        if (KindTotalPriceID == 2)//مقطوع - تومان
                         { TotalPrice = $('#TotalPrice').val(); }
 
                         var MeasureRAM = $('#MeasureRAM').val();
@@ -4130,12 +4119,11 @@ MeasureGraphic:MeasureGraphic,HasAntiWater:HasAntiWater,HasUSB3:HasUSB3,HasDVDRW
                             type: "GET",
                             url: "/Agahi/RegisterCase",
                             data: {
-                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
-                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
-                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice,MeasureRAM:MeasureRAM,MeasureCPU:MeasureCPU,MeasureHard:MeasureHard,
-MeasureGraphic:MeasureGraphic,HasUSB3:HasUSB3,HasDVDRW:HasDVDRW,HasSpeaker:HasSpeaker
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
+                                    UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
+                                    KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice,MeasureRAM:MeasureRAM,MeasureCPU:MeasureCPU,MeasureHard:MeasureHard,
+                                    MeasureGraphic:MeasureGraphic,HasUSB3:HasUSB3,HasDVDRW:HasDVDRW,HasSpeaker:HasSpeaker
                             },
                             contentType: "text/plain",
                             dataType: "json",
@@ -4154,9 +4142,9 @@ MeasureGraphic:MeasureGraphic,HasUSB3:HasUSB3,HasDVDRW:HasDVDRW,HasSpeaker:HasSp
 
 
 
-                        var KindTotalPrice = $("#Kind-TotalPrice").val();
+                        var KindTotalPriceID = $("#Kind-TotalPrice").val();
                         var TotalPrice = "";
-                        if (KindTotalPrice == 2)//مقطوع - تومان
+                        if (KindTotalPriceID == 2)//مقطوع - تومان
                         { TotalPrice = $('#TotalPrice').val(); }
 
 
@@ -4167,11 +4155,10 @@ MeasureGraphic:MeasureGraphic,HasUSB3:HasUSB3,HasDVDRW:HasDVDRW,HasSpeaker:HasSp
                             type: "GET",
                             url: "/Agahi/RegisterElectronics",
                             data: {
-                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
-                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
-                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
+                                    UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
+                                    KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice
                             },
                             contentType: "text/plain",
                             dataType: "json",
@@ -4188,9 +4175,9 @@ KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice
                     } else if ("@ViewBag.lvl0" == "لوازم خانگی" || "@ViewBag.lvl0" != "لوازم شخصی" || "@ViewBag.lvl0" != "سرگرمی و فراغت" || "@ViewBag.lvl0" != "کسب و کار") {
                         //RegisterPersonalEntertainment
 
-                        var KindTotalPrice = $("#Kind-TotalPrice").val();
+                        var KindTotalPriceID = $("#Kind-TotalPrice").val();
                         var TotalPrice = "";
-                        if (KindTotalPrice == 2)//مقطوع - تومان
+                        if (KindTotalPriceID == 2)//مقطوع - تومان
                         { TotalPrice = $('#TotalPrice').val(); }
 
 
@@ -4199,11 +4186,10 @@ KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice
                             type: "GET",
                             url: "/Agahi/RegisterPersonalEntertainment",
                             data: {
-                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
-                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
-                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi,
-KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
+                                    UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
+                                    KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice
                             },
                             contentType: "text/plain",
                             dataType: "json",
@@ -4226,12 +4212,10 @@ KindTotalPrice:KindTotalPrice,TotalPrice:TotalPrice
                             type: "GET",
                             url: "/Agahi/RegisterServicesEmployment",
                             data: {
-                                lv0: lv0, lv1: lv1, lv2: lv2, Country: Country, City: City, Region: Region, Location: Location, Kind: Kind, TitleAgahi: TitleAgahi, uploadimageone: uploadimageone,
-                                uploadimagetwo: uploadimagetwo, uploadimagethree: uploadimagethree, uploadimagefour: uploadimagefour, txtDesc: txtDesc, NameAdvertiser: NameAdvertiser,
-                                EmailAdvertiser: EmailAdvertiser, MobileAdvertiser: MobileAdvertiser, KindAds: KindAds,
-                                RegisterDate: RegisterDate, UserID: UserID, LanguageID: LanguageID, Chatable: Chatable, OnTime: OnTime, SpecialAgahi: SpecialAgahi
-
-                               },
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
+                                    UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
+                            },
                             contentType: "text/plain",
                             dataType: "json",
                             success: function (data) {

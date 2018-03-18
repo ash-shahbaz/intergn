@@ -10,15 +10,11 @@ namespace IGN.Models.AdsRegistration
     public class RegisterRentHouseSubs
     {
         //Fixed
-        //lvl1 Or lvl2   latest
         public int CategoryID { get; set; }
         public int CityID { get; set; }
         public int RegionID { get; set; }
         public DbGeography Location { get; set; }
 
-
-
-        //Kind => AgahiServiceID
         public int AgahiServiceID { get; set; }
         public string TitleAgahi { get; set; }
         public string uploadimageone { get; set; }
@@ -40,30 +36,18 @@ namespace IGN.Models.AdsRegistration
 
         //Internal
 
-
-        //KindDepositPrice => KindDepositPriceID
+            
         public int KindDepositPriceID { get; set; }
-
-        //int DepositPrice => decimal DepositPrice
         public decimal DepositPrice { get; set; }
-
-        //KindRentPrice => KindRentPriceID
         public int KindRentPriceID { get; set; }
-
-        //int RentPrice => Decimal RentPrice
         public decimal RentPrice { get; set; }
         public int Area { get; set; }
         public int RoomNumber { get; set; }
-
-        //Countryside => CountrysideID
         public int CountrysideID { get; set; }
         public int AdvertiseTypeID { get; set; }
         public int YearCreated { get; set; }
         public int FloorNumber { get; set; }
-        //KindBottom => KindBottomID
         public int KindBottomID { get; set; }
-
-        //KindHeating => KindHeatingID
         public int KindHeatingID { get; set; }
         public bool HasParking { get; set; }
         public bool HasElevator { get; set; }

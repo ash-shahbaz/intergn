@@ -10,13 +10,11 @@ namespace IGN.Models.AdsRegistration
     public class RegisterMotorcycles
     {
         //Fixed
-        //lvl1 Or lvl2   latest
         public int CategoryID { get; set; }
         public int CityID { get; set; }
         public int RegionID { get; set; }
         public DbGeography Location { get; set; }
 
-        //Kind => AgahiServiceID
         public int AgahiServiceID { get; set; }
         public string TitleAgahi { get; set; }
         public string uploadimageone { get; set; }
