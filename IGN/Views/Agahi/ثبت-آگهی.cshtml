@@ -218,7 +218,7 @@
                                                         <div class="col-md-9">
                                                             <textarea id="txtDesc" class="form-control" placeholder="توضیحات کالای مربوطه" rows="8"></textarea>
                                                         </div>
-                                                        <label class="col-md-3 margin-top-8">توضیحات<span class="required">*</span></label>
+                                                        <label class="col-md-3 margin-top-8">توضیحات</label>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-9 col-md-offset-3">
@@ -3290,14 +3290,42 @@
 
 
             $("#btnSabt").click(function () {
-
-                var AcceptRoles = "0";
-                if ($('input[type=radio][name=Accept-Roles]:checked').attr('value') == "1") { AcceptRoles = "1" }
-
-                if (AcceptRoles == "0") {
+                
+                var Country = $(".Province option:selected").val();
+                var CityID = $(".City option:selected").val();
+                var RegionID = $(".Region option:selected").val();
+                var Location = "";
+                var AgahiServiceID = $('input[type=radio][name=Kind]:checked').attr('value');
+                var TitleAgahi = $("#TitleAgahi").val();
+                    
+                
+                var KindAdsID = $('input[type=radio][name=Kind-Ads]:checked').attr('value');    
+                var HasRules = $("#HasRules").is(':checked');
+                var AdvertiserFullName = $("#NameAdvertiser").val();
+                var AdvertiserEmail = $("#EmailAdvertiser").val();
+                var AdvertiserMobile = $("#MobileAdvertiser").val();
+                
+                if (Country == null){
+                    alert("لطفا نام استان آگهی را وارد کنید");
+                } else if (CityID == null){
+                    alert("لطفا نام شهر آگهی را وارد کنید");
+                } else if (RegionID == null){
+                    alert("لطفا نام محله آگهی را وارد کنید");
+                } else if (AgahiServiceID == false){
+                    alert("لطفا نوع آگهی خود را وارد کنید");
+                }else if (TitleAgahi == null){
+                    alert("لطفا عنوان آگهی را وارد کنید");
+                } else if (KindAdsID == false){
+                    alert("لطفا نوع تعرفه آگهی خود را وارد کنید");
+                } else if (HasRules == false) {
                     alert("لطفا با قوانین سایت موافقت نمایید");
-                }
-                else {
+                } else if (AdvertiserFullName == null){
+                    alert("لطفا نام آگهی دهنده را وارد کنید");
+                } else if (AdvertiserEmail == null){
+                    alert("لطفا ایمیل آگهی دهنده را وارد کنید");
+                } else if (AdvertiserMobile == null){
+                    alert("لطفا شماره موبایل را وارد کنید");
+                } else {
 
                     //Fixed
                     var lv0 = "@ViewBag.lvl0";
@@ -3306,14 +3334,7 @@
                     if ("@ViewBag.lvl2" != null) { lv2 = "@ViewBag.lvl2"; }
                     var CategoryID = "";
                     if( lv2 != "" ) { CategoryID = lv2 } else { CategoryID = lv1 }
-
-
-                    var Country = $(".Province option:selected").val();
-                    var CityID = $(".City option:selected").val();
-                    var RegionID = $(".Region option:selected").val();
-                    var Location = "";
-                    var AgahiServiceID = $('input[type=radio][name=Kind]:checked').attr('value');
-                    var TitleAgahi = $("#TitleAgahi").val();
+                   
                     var uploadimageone = "0";
                     if ($('#upload-image-one').is(":checked")) { uploadimageone = ""; }
                     var uploadimagetwo = "0";
@@ -3323,12 +3344,6 @@
                     var uploadimagefour = "0";
                     if ($('#upload-image-four').is(":checked")) { uploadimagefour = ""; }
                     var AgahiDescription = $("#txtDesc").val();
-
-                    var AdvertiserFullName = $("#NameAdvertiser").val();
-                    var AdvertiserEmail = $("#EmailAdvertiser").val();
-                    var AdvertiserMobile = $("#MobileAdvertiser").val();
-
-                    var KindAdsID = $('input[type=radio][name=Kind-Ads]:checked').attr('value');
 
                     var RegisterDate = null;
                     var UserID = 10;
