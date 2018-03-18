@@ -16,6 +16,10 @@ namespace IGN.Models.AdsRegistration
         public DbGeography Location { get; set; }
         public int AgahiServiceID { get; set; }
         public string TitleAgahi { get; set; }
+
+        public string UntillHour { get; set; }
+        public string FromHour { get; set; }
+
         public string uploadimageone { get; set; }
         public string uploadimagetwo { get; set; }
         public string uploadimagethree { get; set; }

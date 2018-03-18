@@ -132,7 +132,7 @@
 
 
                                                         </div>
-                                                        <label class="col-md-3  margin-top-8">انتخاب روی نقشه<span class="required">*</span></label>
+                                                        <label class="col-md-3  margin-top-8">انتخاب روی نقشه</label>
                                                     </div>
 
 
@@ -177,7 +177,24 @@
 
 
 
+                                                    <div class="row margin-top-10 add-title">
+                                                        <div class="col-md-2">                                                            
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <input id="UntillHour" type="text" class="form-control " placeholder="17:00">
+                                                        </div>
+                                                    
+                                                        <div class="col-md-1 margin-top-8 text-align-center">
+                                                            <label>الی</label>
+                                                        </div>
+                                                     
+                                                        <div class="col-md-3">
+                                                            <input id="FromHour" type="text" class="form-control " placeholder="08:00">
+                                                        </div>
+                                                        <label class="col-md-3 margin-top-8">ساعات تماس<span class="required">*</span></label>
+                                                    </div>
 
+                                                    
                                                     <div class="row margin-top-10 add-title">
                                                         <div class="col-md-9">
                                                             <input id="TitleAgahi" type="text" class="form-control " placeholder="گوشی اپل مدل 8Plus بدون خط و خش">
@@ -3297,6 +3314,8 @@
                 var Location = "";
                 var AgahiServiceID = $('input[type=radio][name=Kind]:checked').attr('value');
                 var TitleAgahi = $("#TitleAgahi").val();
+                var UntillHour = $("#UntillHour").val();
+                var FromHour = $("#FromHour").val();
                     
                 
                 var KindAdsID = $('input[type=radio][name=Kind-Ads]:checked').attr('value');    
@@ -3304,7 +3323,9 @@
                 var AdvertiserFullName = $("#NameAdvertiser").val();
                 var AdvertiserEmail = $("#EmailAdvertiser").val();
                 var AdvertiserMobile = $("#MobileAdvertiser").val();
-                
+
+
+
                 if (Country == ""){
                     alert("لطفا نام استان آگهی را وارد کنید");
                 } else if (CityID == ""){
@@ -3313,7 +3334,12 @@
                     alert("لطفا نام محله آگهی را وارد کنید");
                 } else if (AgahiServiceID == undefined){
                     alert("لطفا نوع آگهی خود را وارد کنید");
-                } else if (TitleAgahi == ""){
+                } else if (UntillHour == "") {
+                    alert("لطفا ساعات تماس را تکمیل کنید");
+                } else if (FromHour == "") {
+                    alert("لطفا ساعات تماس را تکمیل کنید");
+                }
+                else if (TitleAgahi == "") {
                     alert("لطفا عنوان آگهی را وارد کنید");
                 } else if (KindAdsID == undefined){
                     alert("لطفا نوع تعرفه آگهی خود را وارد کنید");
@@ -3422,7 +3448,7 @@
                             type: "GET",
                             url: "/Agahi/RegisterSaleApartSub",
                             data: {
-                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID,UntillHour: UntillHour, FromHour:FromHour, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
                                     uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
                                     UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
                                     KindTotalPriceID: KindTotalPriceID, TotalPrice: TotalPrice, Area: Area, RoomNumber: RoomNumber,
@@ -3480,7 +3506,7 @@
                             type: "GET",
                             url: "/Agahi/RegisterSaleLandSub",
                             data: {
-                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID,UntillHour: UntillHour, FromHour:FromHour, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
                                     uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
                                     UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
                                     KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice,Area:Area,CountrysideID:CountrysideID,
@@ -3567,7 +3593,7 @@
                             type: "GET",
                             url: "/Agahi/RegisterRentHouseSub",
                             data: {
-                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID,UntillHour: UntillHour, FromHour:FromHour,TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
                                     uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
                                     UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
                                     KindDepositPriceID:KindDepositPriceID,DepositPrice:DepositPrice,KindRentPriceID:KindRentPriceID,RentPrice:RentPrice,Area:Area,RoomNumber:RoomNumber,CountrysideID:CountrysideID,AdvertiseTypeID:AdvertiseTypeID,YearCreated:YearCreated,FloorNumber:FloorNumber,KindBottomID:KindBottomID,KindHeatingID:KindHeatingID, HasParking: HasParking, HasElevator: HasElevator, HasIranianService: HasIranianService, HasForeignService: HasForeignService,
@@ -3664,7 +3690,7 @@
                             type: "GET",
                             url: "/Agahi/RegisterSaleOfficeSub",
                             data: {
-                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, UntillHour: UntillHour, FromHour:FromHour,TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
                                     uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
                                     UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
                                     KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice,Area:Area,RoomNumber:RoomNumber,CountrysideID:CountrysideID,AdvertiseTypeID:AdvertiseTypeID,AdminDoc:AdminDoc,
@@ -3757,7 +3783,7 @@
                             type: "GET",
                             url: "/Agahi/RegisterRentOfficeSub",
                             data: {
-                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID,UntillHour: UntillHour, FromHour:FromHour, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
                                     uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
                                     UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
                                     KindDepositPriceID:KindDepositPriceID,DepositPrice:DepositPrice,KindRentPriceID:KindRentPriceID,RentPrice:RentPrice,
@@ -3793,7 +3819,7 @@
                             type: "GET",
                             url: "/Agahi/RegisterServicesHouseSub",
                             data: {
-                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID,UntillHour: UntillHour, FromHour:FromHour, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
                                     uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
                                     UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
                                     AdvertiseTypeID:AdvertiseTypeID
@@ -3853,7 +3879,7 @@
                             type: "GET",
                             url: "/Agahi/RegisterCarRiding",
                             data: {
-                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID,UntillHour: UntillHour, FromHour:FromHour, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
                                     uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
                                     UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
                                     KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice,NumberMonthlyInstallment:NumberMonthlyInstallment,MonthlyInstallment:MonthlyInstallment,BrandID:BrandID,CarFunction:CarFunction,
@@ -3915,7 +3941,7 @@
                             type: "GET",
                             url: "/Agahi/RegisterCarHeavy",
                             data: {
-                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID,UntillHour: UntillHour, FromHour:FromHour, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
                                     uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
                                     UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
                                     KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice,NumberMonthlyInstallment:NumberMonthlyInstallment,MonthlyInstallment:MonthlyInstallment,BrandID:BrandID,CarFunction:CarFunction,
@@ -3970,7 +3996,7 @@
                             type: "GET",
                             url: "/Agahi/RegisterMotorcycle",
                             data: {
-                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID,UntillHour: UntillHour, FromHour:FromHour, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
                                     uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
                                     UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
                                     KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice,NumberMonthlyInstallment:NumberMonthlyInstallment,MonthlyInstallment:MonthlyInstallment,BrandID:BrandID,CarFunction:CarFunction,
@@ -4001,7 +4027,7 @@
                             type: "GET",
                             url: "/Agahi/RegisterAccessoriesDetail",
                             data: {
-                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID,UntillHour: UntillHour, FromHour:FromHour, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
                                     uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
                                     UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
                                     KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice
@@ -4034,7 +4060,7 @@
                             type: "GET",
                             url: "/Agahi/RegisterMobileTablet",
                             data: {
-                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID,UntillHour: UntillHour, FromHour:FromHour, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
                                     uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
                                     UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
                                     KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice,BrandID:BrandID,KindColorID:KindColorID
@@ -4087,7 +4113,7 @@
                             type: "GET",
                             url: "/Agahi/RegisterLapTop",
                             data: {
-                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID,UntillHour: UntillHour, FromHour:FromHour, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
                                     uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
                                     UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
                                     KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice,BrandID:BrandID,KindColorID:KindColorID,
@@ -4134,7 +4160,7 @@
                             type: "GET",
                             url: "/Agahi/RegisterCase",
                             data: {
-                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID,UntillHour: UntillHour, FromHour:FromHour, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
                                     uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
                                     UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
                                     KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice,MeasureRAM:MeasureRAM,MeasureCPU:MeasureCPU,MeasureHard:MeasureHard,
@@ -4170,7 +4196,7 @@
                             type: "GET",
                             url: "/Agahi/RegisterElectronics",
                             data: {
-                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID,UntillHour: UntillHour, FromHour:FromHour, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
                                     uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
                                     UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
                                     KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice
@@ -4201,7 +4227,7 @@
                             type: "GET",
                             url: "/Agahi/RegisterPersonalEntertainment",
                             data: {
-                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID,UntillHour: UntillHour, FromHour:FromHour, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
                                     uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
                                     UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
                                     KindTotalPriceID:KindTotalPriceID,TotalPrice:TotalPrice
@@ -4227,7 +4253,7 @@
                             type: "GET",
                             url: "/Agahi/RegisterServicesEmployment",
                             data: {
-                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
+                                    CategoryID:CategoryID, CityID:CityID, RegionID:RegionID, Location:Location, AgahiServiceID:AgahiServiceID,UntillHour: UntillHour, FromHour:FromHour, TitleAgahi:TitleAgahi, uploadimageone:uploadimageone, uploadimagetwo:uploadimagetwo, uploadimagethree:uploadimagethree,
                                     uploadimagefour:uploadimagefour, AgahiDescription:AgahiDescription, AdvertiserFullName:AdvertiserFullName, AdvertiserEmail:AdvertiserEmail, AdvertiserMobile:AdvertiserMobile, KindAdsID:KindAdsID, RegisterDate:RegisterDate,
                                     UserID:UserID, LanguageID:LanguageID, Chatable:Chatable, OnTime:OnTime, SpecialAgahi:SpecialAgahi,
                             },
