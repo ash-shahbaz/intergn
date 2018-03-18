@@ -3305,25 +3305,25 @@
                 var AdvertiserEmail = $("#EmailAdvertiser").val();
                 var AdvertiserMobile = $("#MobileAdvertiser").val();
                 
-                if (Country == null){
+                if (Country == ""){
                     alert("لطفا نام استان آگهی را وارد کنید");
-                } else if (CityID == null){
+                } else if (CityID == ""){
                     alert("لطفا نام شهر آگهی را وارد کنید");
-                } else if (RegionID == null){
+                } else if (RegionID == ""){
                     alert("لطفا نام محله آگهی را وارد کنید");
-                } else if (AgahiServiceID == false){
+                } else if (AgahiServiceID == undefined){
                     alert("لطفا نوع آگهی خود را وارد کنید");
-                }else if (TitleAgahi == null){
+                } else if (TitleAgahi == ""){
                     alert("لطفا عنوان آگهی را وارد کنید");
-                } else if (KindAdsID == false){
+                } else if (KindAdsID == undefined){
                     alert("لطفا نوع تعرفه آگهی خود را وارد کنید");
                 } else if (HasRules == false) {
                     alert("لطفا با قوانین سایت موافقت نمایید");
-                } else if (AdvertiserFullName == null){
+                } else if (AdvertiserFullName == ""){
                     alert("لطفا نام آگهی دهنده را وارد کنید");
-                } else if (AdvertiserEmail == null){
+                } else if (AdvertiserEmail == ""){
                     alert("لطفا ایمیل آگهی دهنده را وارد کنید");
-                } else if (AdvertiserMobile == null){
+                } else if (AdvertiserMobile == ""){
                     alert("لطفا شماره موبایل را وارد کنید");
                 } else {
 
