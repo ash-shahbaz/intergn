@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Spatial;
 using System.Linq;
 using System.Web;
 
@@ -9,54 +10,73 @@ namespace IGN.Models.AdsRegistration
     public class RegisterCarHeavys
     {
         //Fixed
-        public int lv0 { get; set; }
-        public int lv1 { get; set; }
-        public int lv2 { get; set; }
-        public int Country { get; set; }
-        public int City { get; set; }
-        public int Region { get; set; }
-        public string Location { get; set; }
-        public int Kind { get; set; }
+        //lvl1 Or lvl2   latest
+        public int CategoryID { get; set; }
+        public int CityID { get; set; }
+        public int RegionID { get; set; }
+        public DbGeography Location { get; set; }
+
+        //Kind => AgahiServiceID
+        public int AgahiServiceID { get; set; }
         public string TitleAgahi { get; set; }
         public string uploadimageone { get; set; }
         public string uploadimagetwo { get; set; }
         public string uploadimagethree { get; set; }
         public string uploadimagefour { get; set; }
-        public string txtDesc { get; set; }
+        public string AgahiDescription { get; set; }
 
-        public string NameAdvertiser { get; set; }
-        public string EmailAdvertiser { get; set; }
-        public int MobileAdvertiser { get; set; }
-        public int KindAds { get; set; }
-
+        public string AdvertiserFullName { get; set; }
+        public string AdvertiserEmail { get; set; }
+        public string AdvertiserMobile { get; set; }
+        public int KindAdsID { get; set; }
         public string RegisterDate { get; set; }
         public int UserID { get; set; }
         public int LanguageID { get; set; }
-        public int Chatable { get; set; }
+        public bool? Chatable { get; set; }
         public string OnTime { get; set; }
-        public int SpecialAgahi { get; set; }
+        public bool? SpecialAgahi { get; set; }
 
         //Internal
 
 
-        public int KindTotalPrice { get; set; }
-        public int TotalPrice { get; set; }
+        public int KindTotalPriceID { get; set; }
+        public decimal TotalPrice { get; set; }
         public int NumberMonthlyInstallment { get; set; }
         public int MonthlyInstallment { get; set; }
-        public int BrandName { get; set; }
+
+        //BrandName => BrandID 
+        public int BrandID { get; set; }
         public int CarFunction { get; set; }
         public int Year { get; set; }
-        public int Person { get; set; }
-        public int KindCondition { get; set; }
-        public int KindChassis { get; set; }
-        public int KindDiff { get; set; }
-        public int KindColorOut { get; set; }
-        public int KindColorIn { get; set; }
-        public int KindModelTip { get; set; }
-        public int KindGearbox { get; set; }
-        public int KindFuel { get; set; }
-        public int KindCrash { get; set; }
-        public int KindPelak { get; set; }
+
+        //Person => AdvertiseTypeID
+        public int AdvertiseTypeID { get; set; }
+
+        //KindCondition => KindConditionID
+        public int KindConditionID { get; set; }
+        //KindChassis => KindChassisID
+        public int KindChassisID { get; set; }
+        //KindDiff => KindDiffID
+        public int KindDiffID { get; set; }
+        //KindColorOut => KindColorOutID
+        public int KindColorOutID { get; set; }
+
+        //KindColorIn => KindColorInID
+        public int KindColorInID { get; set; }
+
+        //KindModelTip => KindModelTipID
+        public int KindModelTipID { get; set; }
+
+        // int => bool
+        public bool KindGearbox { get; set; }
+
+        //KindFuel => KindFuelID
+        public int KindFuelID { get; set; }
+        //KindCrash => KindCrashID
+        public int KindCrashID { get; set; }
+
+        //KindPelak => KindPelakID
+        public int KindPelakID { get; set; }
         public bool HasSunroof { get; set; }
         public bool HasAlarm { get; set; }
         public bool HasSound { get; set; }
