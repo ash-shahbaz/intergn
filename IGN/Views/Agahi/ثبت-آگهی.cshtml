@@ -181,7 +181,33 @@
                                                         <div class="col-md-2">                                                            
                                                         </div>
                                                         <div class="col-md-3">
-                                                            <input id="UntillHour" type="text" class="form-control " placeholder="17:00">
+                                                            <select id="UntillHour" data-placeholder="تا ساعت" class="select width-100  SelectStyle ">
+                                                                <option value="0">00:00</option>
+                                                                <option value="1">01:00</option>
+                                                                <option value="2">02:00</option>
+                                                                <option value="3">03:00</option>
+                                                                <option value="4">04:00</option>
+                                                                <option value="5">05:00</option>
+                                                                <option value="6">06:00</option>
+                                                                <option value="7">07:00</option>
+                                                                <option value="8">08:00</option>
+                                                                <option value="9">09:00</option>
+                                                                <option value="10">10:00</option>
+                                                                <option value="11">11:00</option>
+                                                                <option value="12">12:00</option>
+                                                                <option value="13">13:00</option>
+                                                                <option value="14">14:00</option>
+                                                                <option value="15">15:00</option>
+                                                                <option value="16">16:00</option>
+                                                                <option value="17">17:00</option>
+                                                                <option value="18">18:00</option>
+                                                                <option value="19">19:00</option>
+                                                                <option value="20">20:00</option>
+                                                                <option value="21">21:00</option>
+                                                                <option value="22">22:00</option>
+                                                                <option value="23">23:00</option>
+                                                                <option value="24">24:00</option>
+                                                            </select>
                                                         </div>
                                                     
                                                         <div class="col-md-1 margin-top-8 text-align-center">
@@ -189,7 +215,33 @@
                                                         </div>
                                                      
                                                         <div class="col-md-3">
-                                                            <input id="FromHour" type="text" class="form-control " placeholder="08:00">
+                                                            <select id="FromHour" data-placeholder="از ساعت" class="select width-100  SelectStyle ">
+                                                                <option value="0">00:00</option>
+                                                                <option value="1">01:00</option>
+                                                                <option value="2">02:00</option>
+                                                                <option value="3">03:00</option>
+                                                                <option value="4">04:00</option>
+                                                                <option value="5">05:00</option>
+                                                                <option value="6">06:00</option>
+                                                                <option value="7">07:00</option>
+                                                                <option value="8">08:00</option>
+                                                                <option value="9">09:00</option>
+                                                                <option value="10">10:00</option>
+                                                                <option value="11">11:00</option>
+                                                                <option value="12">12:00</option>
+                                                                <option value="13">13:00</option>
+                                                                <option value="14">14:00</option>
+                                                                <option value="15">15:00</option>
+                                                                <option value="16">16:00</option>
+                                                                <option value="17">17:00</option>
+                                                                <option value="18">18:00</option>
+                                                                <option value="19">19:00</option>
+                                                                <option value="20">20:00</option>
+                                                                <option value="21">21:00</option>
+                                                                <option value="22">22:00</option>
+                                                                <option value="23">23:00</option>
+                                                                <option value="24">24:00</option>
+                                                            </select>
                                                         </div>
                                                         <label class="col-md-3 margin-top-8">ساعات تماس<span class="required">*</span></label>
                                                     </div>
@@ -3314,8 +3366,8 @@
                 var Location = "";
                 var AgahiServiceID = $('input[type=radio][name=Kind]:checked').attr('value');
                 var TitleAgahi = $("#TitleAgahi").val();
-                var UntillHour = $("#UntillHour").val();
-                var FromHour = $("#FromHour").val();
+                var UntillHour = $("#UntillHour option:selected").val();
+                var FromHour = $("#FromHour option:selected").val();
                     
                 
                 var KindAdsID = $('input[type=radio][name=Kind-Ads]:checked').attr('value');    
