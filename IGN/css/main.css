@@ -4037,3 +4037,11 @@ display:none !important;
 .padding-top-5 {
     padding-top: 5px;
 }
+.margin-left-10 {
+    margin-left: 10px;
+}
+.carousel .carousel-control .material-icons, .carousel .carousel-control .fa {
+    display: block;
+    cursor: pointer;
+    color: white;
+}
