@@ -18,12 +18,10 @@ namespace IGN.Models
                 var response = client.PostAsJsonAsync("api/AddRegisterAccessoriesDetails", s ).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.Write("Success");
+                    return "1";
                 }
                 else
-                    Console.Write("Error");
-
-                return "OK";
+                    return "0";
 
             }
         }
@@ -35,12 +33,10 @@ namespace IGN.Models
                 var response = client.PostAsJsonAsync("api/AddRegisterCarHeavys", s).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.Write("Success");
+                    return "1";
                 }
                 else
-                    Console.Write("Error");
-
-                return "OK";
+                    return "0";
 
             }
         }
@@ -52,12 +48,10 @@ namespace IGN.Models
                 var response = client.PostAsJsonAsync("api/AddRegisterCarRidings", s).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.Write("Success");
+                    return "1";
                 }
                 else
-                    Console.Write("Error");
-
-                return "OK";
+                    return "0";
 
             }
         }
@@ -69,12 +63,10 @@ namespace IGN.Models
                 var response = client.PostAsJsonAsync("api/AddRegisterCases", s).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.Write("Success");
+                    return "1";
                 }
                 else
-                    Console.Write("Error");
-
-                return "OK";
+                    return "0";
 
             }
         }
@@ -86,13 +78,10 @@ namespace IGN.Models
                 var response = client.PostAsJsonAsync("api/AddRegisterElectronicss", s).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.Write("Success");
+                    return "1";
                 }
                 else
-                    Console.Write("Error");
-
-                return "OK";
-
+                    return "0";
             }
         }
 
@@ -104,12 +93,10 @@ namespace IGN.Models
                 var response = client.PostAsJsonAsync("api/AddRegisterLapTops", s).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.Write("Success");
+                    return "1";
                 }
                 else
-                    Console.Write("Error");
-
-                return "OK";
+                    return "0";
 
             }
         }
@@ -122,12 +109,10 @@ namespace IGN.Models
                 var response = client.PostAsJsonAsync("api/AddRegisterMobileTablets", s).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.Write("Success");
+                    return "1";
                 }
                 else
-                    Console.Write("Error");
-
-                return "OK";
+                    return "0";
 
             }
         }
@@ -141,12 +126,10 @@ namespace IGN.Models
                 var response = client.PostAsJsonAsync("api/AddRegisterMotorcycles", s).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.Write("Success");
+                    return "1";
                 }
                 else
-                    Console.Write("Error");
-
-                return "OK";
+                    return "0";
 
             }
         }
@@ -160,13 +143,11 @@ namespace IGN.Models
                 var response = client.PostAsJsonAsync("api/AddRegisterPersonalEntertainments", s).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.Write("Success");
+                    return "1";
                 }
                 else
-                    Console.Write("Error");
-
-                return "OK";
-
+                    return "0";
+                
             }
         }
 
@@ -179,12 +160,10 @@ namespace IGN.Models
                 var response = client.PostAsJsonAsync("api/AddRegisterRentHouseSubs", s).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.Write("Success");
+                    return "1";
                 }
                 else
-                    Console.Write("Error");
-
-                return "OK";
+                    return "0";
 
             }
         }
@@ -198,12 +177,10 @@ namespace IGN.Models
                 var response = client.PostAsJsonAsync("api/AddRegisterRentOfficeSubs", s).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.Write("Success");
+                    return "1";
                 }
                 else
-                    Console.Write("Error");
-
-                return "OK";
+                    return "0";
 
             }
         }
@@ -215,12 +192,10 @@ namespace IGN.Models
                 var response = client.PostAsJsonAsync("api/AddRegisterSaleApartSubs", s).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.Write("Success");
+                    return "1";
                 }
                 else
-                    Console.Write("Error");
-
-                return "OK";
+                    return "0";
 
             }
         }
@@ -232,12 +207,10 @@ namespace IGN.Models
                 var response = client.PostAsJsonAsync("api/AddRegisterSaleLandSubs", s).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.Write("Success");
+                    return "1";
                 }
                 else
-                    Console.Write("Error");
-
-                return "OK";
+                    return "0";
 
             }
         }
@@ -249,12 +222,10 @@ namespace IGN.Models
                 var response = client.PostAsJsonAsync("api/AddRegisterSaleOfficeSubs", s).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.Write("Success");
+                    return "1";
                 }
                 else
-                    Console.Write("Error");
-
-                return "OK";
+                    return "0";
 
             }
         }
@@ -266,12 +237,10 @@ namespace IGN.Models
                 var response = client.PostAsJsonAsync("api/AddRegisterServicesEmployments", s).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.Write("Success");
+                    return "1";
                 }
                 else
-                    Console.Write("Error");
-
-                return "OK";
+                    return "0";
 
             }
         }
@@ -283,11 +252,10 @@ namespace IGN.Models
                 var response = client.PostAsJsonAsync("api/AddRegisterServicesHouseSubs", s).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.Write("Success");
+                    return "1";
                 }
                 else
-                    Console.Write("Error");
-                return "OK";
+                    return "0";
 
             }
         }

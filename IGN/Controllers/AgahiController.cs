@@ -228,6 +228,11 @@ namespace IGN.Controllers
         public JsonResult RegisterPersonalEntertainment(RegisterPersonalEntertainments item)
         {
 
+
+            string result = PostAgahi.AddRegisterPersonalEntertainments(item);
+
+
+            
             return null;
         }
 

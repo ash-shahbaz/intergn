@@ -3359,7 +3359,10 @@
 
 
             $("#btnSabt").click(function () {
-                
+
+
+                console.log("@ViewBag.lvl0");
+
                 var Country = $(".Province option:selected").val();
                 var CityID = $(".City option:selected").val();
                 var RegionID = $(".Region option:selected").val();
@@ -3368,9 +3371,9 @@
                 var TitleAgahi = $("#TitleAgahi").val();
                 var UntillHour = $("#UntillHour option:selected").val();
                 var FromHour = $("#FromHour option:selected").val();
-                    
-                
-                var KindAdsID = $('input[type=radio][name=Kind-Ads]:checked').attr('value');    
+
+
+                var KindAdsID = $('input[type=radio][name=Kind-Ads]:checked').attr('value');
                 var HasRules = $("#HasRules").is(':checked');
                 var AdvertiserFullName = $("#NameAdvertiser").val();
                 var AdvertiserEmail = $("#EmailAdvertiser").val();
@@ -3412,7 +3415,7 @@
                     if ("@ViewBag.lvl2" != null) { lv2 = "@ViewBag.lvl2"; }
                     var CategoryID = "";
                     if( lv2 != "" ) { CategoryID = lv2 } else { CategoryID = lv1 }
-                   
+
                     var uploadimageone = "0";
                     if ($('#upload-image-one').is(":checked")) { uploadimageone = ""; }
                     var uploadimagetwo = "0";
@@ -3765,7 +3768,7 @@
                                 alert("Error");
                             }
                         });
-                    } else if (ViewBag.lvl0 == "املاک" && ViewBag.lvl1 == "اجاره اجاره مسکونی") {
+                    } else if ("@ViewBag.lvl0" == "املاک" && "@ViewBag.lvl1" == "اجاره اجاره مسکونی") {
                          //RegisterRentOfficeSub
 
 
@@ -4299,7 +4302,7 @@
                     } else if ("@ViewBag.lvl0" == "اجتماعی" && "@ViewBag.lvl0" != "خدمات" && "@ViewBag.lvl0" != "استخدام") {
                         //RegisterServicesEmployment
 
-
+                        alert(1);
 
                         $.ajax({
                             type: "GET",
